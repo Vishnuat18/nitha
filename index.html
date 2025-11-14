@@ -7,11 +7,23 @@
     <title>Nitha Aerospace -Home Page</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <style>
         /* Custom styles to handle the specific designs */
+
+        hr {
+            border: none;
+            /* Remove default border */
+            height: 1px;
+            /* Set line thickness */
+            background-color: white;
+            /* White line color */
+            margin: 20px 0;
+            /* Optional: Add spacing */
+        }
 
         /* Hero curve */
         .hero-curve {
@@ -345,13 +357,25 @@
             theme: {
                 extend: {
                     colors: {
-
+                        // --- Your original color ---
                         'brand-partner-btn': '#a7c739',
 
+                        // --- Greens ---
+                        'brand-dark-green': '#3B5833',    // Main dark green (footer, icon bar, headings)
+                        'brand-medium-green': '#6A8A61', // Lighter green (split section)
+                        'brand-deep-green': '#334C2D',    // Very dark green (sub-footer)
+                        'brand-light-mint': '#DDE6DA',   // Light mint banner
+                        'brand-gradient-from': '#4A6D41', // For the gradient section
+
+                        // --- Greys & Neutrals ---
+                        'brand-dark-grey': '#333333',     // Dark text (headings)
+                        'brand-medium-grey': '#666666',   // Lighter text (paragraphs)
+                        'brand-light-grey': '#E0E0E0',    // Light text on dark (footer links)
+                        'brand-off-white': '#F9F9F9',    // Light grey background (specs section)
                     }
                 }
             }
-        }
+        };
     </script>
 </head>
 
@@ -367,7 +391,7 @@
                             d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
                         </path>
                     </svg>
-                    <span><a href="tel:+919578420672">+91 95784 20672</a></span>
+                    <span>Call Us On:<a href="tel:+919578420672">+91 95784 20672</a></span>
                 </a>
                 <a href="mailto:marketing@nithaeroespace.in" class="flex items-center hover:underline">
                     <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -376,7 +400,7 @@
                             d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-4 6v6a2 2 0 01-2 2H7a2 2 0 01-2-2v-6m0-2V6a2 2 0 012-2h10a2 2 0 012 2v6l-3.89 2.59a2 2 0 01-2.22 0L3 12z">
                         </path>
                     </svg>
-                    <span><a href="mailto:marketing@nithaeroespace.in">marketing@nithaaeroespace.in</a></span>
+                    <span><a href="mailto:marketing@nithaeroespace.in">marketing@nithaeroespace.in</a></span>
                 </a>
             </div>
             <div class="hidden md:flex space-x-4">
@@ -388,11 +412,13 @@
 
     <header class="relative">
 
-        <nav class="absolute top-0 left-0 right-0 py-4 px-6 z-20 bg-white shadow-md">
+        <nav class="absolute top-0 left-0 right-0 py-8 px-6 z-20 bg-white ">
             <div class="container mx-auto flex justify-between items-center">
+                <a href="#" class="flex items-center -ml-2">
+                    <div class="flex flex-col items-center">
 
-                <a href="#" class="flex items-center">
-                    <img src="imgs/Screenshot 2025-11-04 120806.png" alt="NITHA Logo" class="object-contain w-20">
+
+                    </div>
                 </a>
 
                 <div class="hidden md:flex items-center space-x-8 text-[15px] ">
@@ -420,60 +446,47 @@
                 </a>
 
                 <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-gray-800"><svg class="w-6 h-6" fill="none"
-                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <button class="text-gray-800"><svg class="w-6 h-6" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M4 6h16M4 12h16m-7 6h7"></path>
                         </svg></button>
-                </div>
-            </div>
-
-            <div id="mobile-menu" class="hidden md:hidden absolute top-[72px] left-0 w-full bg-white shadow-lg z-50">
-                <div class="flex flex-col items-center space-y-4 py-6 text-lg">
-                    <a href="#" class="nav-text hover:text-brand-partner-btn font-semibold">Home</a>
-                    <a href="aboutus.html" class="nav-text hover:text-brand-partner-btn font-semibold">About us</a>
-                    <a href="#" class="nav-text hover:text-brand-partner-btn font-semibold">Fasteners</a>
-                    <a href="#" class="nav-text hover:text-brand-partner-btn font-semibold">Downloads</a>
-                    <a href="contact.html" class="nav-text hover:text-brand-partner-btn font-semibold">Contact us</a>
-                    <a href="#"
-                        class="partner-btn-bg text-white px-6 py-2 rounded-md text-sm font-semibold hover:opacity-90 transition-opacity">
-                        BECOME A PARTNER
-                    </a>
                 </div>
             </div>
         </nav>
 
         <div
             class="relative w-full h-[760px] overflow-hidden flex items-center justify-center text-center text-white \">
+            <img src="imgs/Screenshot 2025-11-04 120806.png" alt="NITHA Logo" class="object-contain -mb-1 z-20 "
+                style="width: 100px; margin-top: -600px; margin-left: -1050px;">
 
-            <img src="imgs/plane.jpg" alt="Industrial pouring molten metal"
+            <img src="imgs/plane.jpg" alt="Industrial pouring molten metal" style="margin-top: 100px;"
                 class="absolute inset-0 w-full h-full object-cover z-0">
-            <div class="hero-overlay absolute inset-0 z-10">
+            <div class=" absolute inset-0 z-10">
+                <div class="relative z-30 container mx-auto px-4 h-full flex items-center justify-start text-white pb-20"
+                    style="left: 46%;">
+                    <div class="max-w-2xl text-left my-2">
+                        <p class="text-xl tracking-widest  font-bold mb-6 mt-5">NITHA Aerospace Private Limited</p>
+                        <p class="text-5xl font-extrabold leading-tight mb-6 "
+                            style=" letter-spacing: -2px ;line-height: 33px; transform: scaleY(1.1);">
+                            A Precision Metalurgical
+                        </p>
+                        <p class="text-5xl font-extrabold leading-tight mb-6 "
+                            style=" letter-spacing: -1px ;line-height: 4px; transform: scaleY(1.1);">Engineering Company
+                        </p>
 
-                <div
-                    class="relative z-30 container mx-auto px-4 h-full flex items-center justify-center lg:justify-start text-white pb-20">
-
-                    <div class="max-w-xl text-justify lg:text-left">
-                        <p class="text-sm tracking-widest mb-2 font-bold mt-10 text-center lg:text-left">NITHAA
-                            Aerospace Private Limited</p>
-                        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4 text-center lg:text-left">
-                            A Precision Metallurgical Engineering Company
-                        </h1>
-                        <p class="text-lg mb-8 opacity-90">
+                        <p class="text-lg opacity-90 py-5">
                             Specializing in Advanced Materials, Product Innovation, and Industrial Research.
                         </p>
-                        <div class="text-center lg:text-left">
-                            <a href="#"
-                                class="inline-flex items-center px-8 py-3 bg-white text-gray-800 font-semibold rounded-md shadow-lg hover:bg-gray-300 transition-colors">
-                                VIEW MORE PRODUCTS
-                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M9 5l7 7-7 7">
-                                    </path>
-                                </svg>
-                            </a>
-                        </div>
+                        <a href="#"
+                            class="inline-flex items-center px-8 py-3 bg-white text-gray-800 font-semibold rounded-md shadow-lg hover:bg-gray-300 transition-colors">
+                            VIEW MORE PRODUCTS
+                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -488,95 +501,154 @@
                 <img src="imgs/Screenshot 2025-11-04 120806.png" alt="Product Range Icon" class="mx-auto h-8 mb-2">
                 <p class="text-sm font-semibold uppercase tracking-wider text-theme-green">Product Range</p>
                 <h2 class="text-4xl font-bold text-gray-900 my-2">Industry Designs, Inspiring Products</h2>
-                <p class="text-gray-600 text-sm leading-relaxed text-justify">
+                <p class="text-gray-600 text-sm leading-relaxed">
                     NAPL is a precision engineering company delivering high-performance fasteners and components to the
                     Automotive, Aerospace, Defence, Oil & Gas, and Motorsport industries worldwide. Our products are
                     renowned for their strength, reliability, and endurance—performing flawlessly under dynamic loads,
-                    vibration, and extreme temperatures.
+                    vibration, and extreme te   mperatures.
                 </p>
             </div>
 
-            <div class="container px-4 md:px-8 py-0 mx-auto"><br><br>
-                <div class="flex flex-wrap items-center justify-center gap-x-2 gap-y-8 md:justify-between">
-                    <div class="flex flex-col items-center w-25">
-                        <div class="flex items-center justify-center w-20 h-20 mb-3 bg-gray-300  hexagon-clip">
-                            <img src="imgs/bolt-removebg-preview.png " alt="">
-                        </div>
-                        <p class="text-xs font-bold text-brand-text-dark">BOLT</p>
-                    </div>
-                    <div class="flex flex-col items-center w-20">
-                        <div class="flex items-center justify-center w-20 h-20 mb-3 bg-gray-300 hexagon-clip">
-                            <img src="imgs/bush-removebg-preview.png" alt="">
-                        </div>
-                        <p class="text-xs font-bold text-brand-text-dark">BUSH</p>
-                    </div>
-                    <div class="flex flex-col items-center w-20">
-                        <div class="flex items-center justify-center w-20 h-20 mb-3 bg-gray-300 hexagon-clip">
-                            <img src="imgs/circlip-removebg-preview (1).png" alt="">
-                        </div>
-                        <p class="text-xs font-bold text-brand-text-dark">CIRCLIPS</p>
-                    </div>
-                    <div class="flex flex-col items-center w-20">
-                        <div class="flex items-center justify-center w-20 h-20 mb-3 bg-gray-300 hexagon-clip">
-                            <img src="imgs/nail-removebg-preview.png" alt="">
-                        </div>
-                        <p class="text-xs font-bold text-brand-text-dark">NAIL</p>
-                    </div>
-                    <div class="flex flex-col items-center w-20">
-                        <div class="flex items-center justify-center w-20 h-20 mb-3 bg-gray-300 hexagon-clip">
-                            <img src="imgs/nuts-removebg-preview.png" alt="">
-                        </div>
-                        <p class="text-xs font-bold text-brand-text-dark">NUT</p>
-                    </div>
-                    <div class="flex flex-col items-center w-20">
-                        <div class="flex items-center justify-center w-20 h-20 mb-3 bg-gray-300 hexagon-clip">
-                            <img src="imgs/pinskeys-removebg-preview.png" alt="">
-                        </div>
-                        <p class="text-xs font-bold text-brand-text-dark">PIN & KEYS</p>
-                    </div>
-                    <div class="flex flex-col items-center w-20">
-                        <div class="flex items-center justify-center w-20 h-20 mb-3 bg-gray-300 hexagon-clip">
-                            <img src="imgs/rivert-removebg-preview.png" alt="">
-                        </div>
-                        <p class="text-xs font-bold text-brand-text-dark">RIVERT</p>
-                    </div>
-                    <div class="flex flex-col items-center w-20">
-                        <div class="flex items-center justify-center w-20 h-20 mb-3 bg-gray-300 hexagon-clip">
-                            <img src="imgs/screw-removebg-preview.png" alt="">
-                        </div>
-                        <p class="text-xs font-bold text-brand-text-dark">SCREW</p>
-                    </div>
-                    <div class="flex flex-col items-center w-20">
-                        <div class="flex items-center justify-center w-20 h-20 mb-3 bg-gray-300 hexagon-clip">
-                            <img src="imgs/spacer-removebg-preview.png" alt="">
-                        </div>
-                        <p class="text-xs font-bold text-center text-brand-text-dark">SPACER & STANDOFF</p>
-                    </div>
-                    <div class="flex flex-col items-center w-20">
-                        <div class="flex items-center justify-center w-20 h-20 mb-3 bg-gray-300 hexagon-clip">
-                            <img src="imgs/stud-removebg-preview.png" alt="">
-                        </div>
-                        <p class="text-xs font-bold text-center text-brand-text-dark">STUD & ROD</p>
-                    </div>
-                    <div class="flex flex-col items-center w-20">
-                        <div class="flex items-center justify-center w-20 h-20 mb-3 bg-gray-300 hexagon-clip">
-                            <img src="imgs/washer-removebg-preview.png" alt="">
-                        </div>
-                        <p class="text-xs font-bold text-brand-text-dark">WASHER</p>
-                    </div>
-                    <div class="flex flex-col items-center w-20">
-                        <div class="flex items-center justify-center w-20 h-20 mb-3 bg-gray-300 hexagon-clip">
-                            <img src="imgs/wires-removebg-preview.png" alt="">
-                        </div>
-                        <p class="text-xs font-bold text-brand-text-dark">WIRES</p>
-                    </div>
+            <div class="container px-8 py-0 mx-auto">
+    <br><br>
+    <div class="flex flex-wrap justify-center gap-4 mb-4">
+
+        <div class="flex flex-col items-center">
+            <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
+                <div class="w-full h-full hexagon-clip flex items-center justify-center">
+                    <img src="imgs/product 1.png" alt="Product Image" class="max-w-full max-h-full object-contain">
                 </div>
             </div>
+            <p class="text-xs font-bold text-brand-text-dark mt-2">BOLT</p>
+        </div>
+
+        <div class="flex flex-col items-center">
+            <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
+                <div class="w-full h-full hexagon-clip flex items-center justify-center">
+                    <img src="imgs/product 2.png" alt="Product Image" class="max-w-full max-h-full object-contain">
+                </div>
+            </div>
+            <p class="text-xs font-bold text-brand-text-dark mt-2">BOLT</p>
+        </div>
+
+        <div class="flex flex-col items-center">
+            <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
+                <div class="w-full h-full hexagon-clip flex items-center justify-center">
+                    <img src="imgs/product 3.png" alt="Product Image" class="max-w-full max-h-full object-contain">
+                </div>
+            </div>
+            <p class="text-xs font-bold text-brand-text-dark mt-2">BOLT</p>
+        </div>
+
+        <div class="flex flex-col items-center">
+            <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
+                <div class="w-full h-full hexagon-clip flex items-center justify-center">
+                    <img src="imgs/product 4.png" alt="Product Image" class="max-w-full max-h-full object-contain">
+                </div>
+            </div>
+            <p class="text-xs font-bold text-brand-text-dark mt-2">BOLT</p>
+        </div>
+
+        <div class="flex flex-col items-center">
+            <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
+                <div class="w-full h-full hexagon-clip flex items-center justify-center">
+                    <img src="imgs/product 5.png" alt="Product Image" class="max-w-full max-h-full object-contain">
+                </div>
+            </div>
+            <p class="text-xs font-bold text-brand-text-dark mt-2">BOLT</p>
+        </div>
+
+        <div class="flex flex-col items-center">
+            <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
+                <div class="w-full h-full hexagon-clip flex items-center justify-center">
+                    <img src="imgs/product 6.png" alt="Product Image" class="max-w-full max-h-full object-contain">
+                </div>
+            </div>
+            <p class="text-xs font-bold text-brand-text-dark mt-2">BOLT</p>
+        </div>
+        <div class="flex flex-col items-center">
+            <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
+                <div class="w-full h-full hexagon-clip flex items-center justify-center">
+                    <img src="imgs/product 7.png" alt="Product Image" class="max-w-full max-h-full object-contain">
+                </div>
+            </div>
+            <p class="text-xs font-bold text-brand-text-dark mt-2">BOLT</p>
+        </div>
+        <div class="flex flex-col items-center">
+            <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
+                <div class="w-full h-full hexagon-clip flex items-center justify-center">
+                    <img src="imgs/product 7.png" alt="Product Image" class="max-w-full max-h-full object-contain">
+                </div>
+            </div>
+            <p class="text-xs font-bold text-brand-text-dark mt-2">BOLT</p>
+        </div>
+    </div>
+
+    <div class="flex flex-wrap justify-center gap-4 mb-4">
+
+        
+
+        <div class="flex flex-col items-center">
+            <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
+                <div class="w-full h-full hexagon-clip flex items-center justify-center">
+                    <img src="imgs/product 8.png" alt="Product Image" class="max-w-full max-h-full object-contain">
+                </div>
+            </div>
+            <p class="text-xs font-bold text-brand-text-dark mt-2">BOLT</p>
+        </div>
+
+        <div class="flex flex-col items-center">
+            <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
+                <div class="w-full h-full hexagon-clip flex items-center justify-center">
+                    <img src="imgs/product 9.png" alt="Product Image" class="max-w-full max-h-full object-contain">
+                </div>
+            </div>
+            <p class="text-xs font-bold text-brand-text-dark mt-2">BOLT</p>
+        </div>
+
+        <div class="flex flex-col items-center">
+            <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
+                <div class="w-full h-full hexagon-clip flex items-center justify-center">
+                    <img src="imgs/product 10.png" alt="Product Image" class="max-w-full max-h-full object-contain">
+                </div>
+            </div>
+            <p class="text-xs font-bold text-brand-text-dark mt-2">BOLT</p>
+        </div>
+
+        <div class="flex flex-col items-center">
+            <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
+                <div class="w-full h-full hexagon-clip flex items-center justify-center">
+                    <img src="imgs/product 11.png" alt="Product Image" class="max-w-full max-h-full object-contain">
+                </div>
+            </div>
+            <p class="text-xs font-bold text-brand-text-dark mt-2">BOLT</p>
+        </div>
+        <div class="flex flex-col items-center">
+            <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
+                <div class="w-full h-full hexagon-clip flex items-center justify-center">
+                    <img src="imgs/product 12.png" alt="Product Image" class="max-w-full max-h-full object-contain">
+                </div>
+            </div>
+            <p class="text-xs font-bold text-brand-text-dark mt-2">BOLT</p>
+        </div>
+
+        <div class="flex flex-col items-center">
+            <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
+                <div class="w-full h-full hexagon-clip flex items-center justify-center">
+                    <img src="imgs/product 13.png" alt="Product Image" class="max-w-full max-h-full object-contain">
+                </div>
+            </div>
+            <p class="text-xs font-bold text-brand-text-dark mt-2">BOLT</p>
+        </div>
+    </div>
+
+  
+</div>
 
         </div>
     </section>
 
-    <section class="relative py-16 lg:py-24 overflow-hidden"><br>
+    <section class="relative py-15 overflow-hidden"><br>
 
         <img src="https://images.unsplash.com/photo-1510525008542-a815a51c4e9c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNjAzNTV8MHwxfGFsbHx8fHx8fHx8fDE3MzU4ODIwMDd8&ixlib=rb-4.0.3&q=80&w=1080"
             alt="Industrial Background" class="contact-bg-image">
@@ -674,7 +746,6 @@
 
 
     </section>
-
     <div class="icon-bar-bg text-white py-8 mt-0">
         <div
             class="container mx-auto px-4 flex flex-col md:flex-row justify-around items-center text-center md:text-left space-y-6 md:space-y-0">
@@ -738,7 +809,7 @@
                     <h2 class="text-4xl font-bold text-gray-900 mb-4 leading-tight">
                         “Building a stronger connected world together.”
                     </h2>
-                    <p class="text-gray-600 mb-6 text-sm leading-relaxed text-justify">
+                    <p class="text-gray-600 mb-6 text-sm leading-relaxed">
                         Our Indo-European R&D laboratories specialize in applied industrial research and the
                         technological advancement of key metal sectors, including aluminium, copper, alloy steel, brass,
                         composites, titanium, and zinc. We offer cutting-edge R&D services and technical solutions for
@@ -764,7 +835,7 @@
                     </p>
                     <h2 class="text-2xl font-bold text-gray-900 my-2">Premium Fasteners designed to meet the highest
                         industrial standards</h2>
-                    <p class="text-gray-600 text-sm leading-relaxed text-justify">
+                    <p class="text-gray-600 text-sm leading-relaxed">
                         With deep expertise in precision threads, tensile strength (800–1200 MPa), and custom
                         tolerances, we ensure every product meets rigorous international quality standards. Our advanced
                         surface treatments—Zinc/Nickel Plating, Moly Coating, and Phosphate Passivation—enhance
@@ -882,7 +953,7 @@
             <div class="text-center max-w-3xl mx-auto mb-24">
                 <p class="text-sm font-semibold uppercase tracking-wider mb-2">WHAT WE DO</p>
                 <h2 class="text-4xl font-bold text-white my-2">Global One-Stop Solution for Engineering Materials</h2>
-                <p class="text-white/80 text-sm leading-relaxed text-center">
+                <p class="text-white/80 text-sm leading-relaxed">
                     From melting to plating, we manage the science behind every layer of metal. Our facilities unite
                     metallurgy, machining, heat treatment, and coating under one roof. Delivering global-grade
                     engineering materials and performance assurance.
@@ -903,8 +974,7 @@
                         <div class="p-6 flex flex-col justify-between flex-grow">
                             <div>
                                 <h3 class="text-lg font-bold uppercase mb-2">CASTING</h3>
-                                <p class="text-xs text-white/80 mb-4 text-justify">Our fastener manufacturing process
-                                    begins with
+                                <p class="text-xs text-white/80 mb-4">Our fastener manufacturing process begins with
                                     high-integrity casting for ferrous, non-ferrous, and superalloy fasteners. This
                                     ensures consistent strength and durability, essential for aerospace, space &
                                     aviation, and oil & gas applications.</p>
@@ -935,8 +1005,7 @@
                         <div class="p-6 flex flex-col justify-between flex-grow">
                             <div>
                                 <h3 class="text-lg font-bold uppercase mb-2">FORGING</h3>
-                                <p class="text-xs text-white/80 mb-4 text-justify">Our forging solutions for fasteners
-                                    that require
+                                <p class="text-xs text-white/80 mb-4">Our forging solutions for fasteners that require
                                     superior grain flow and structural strength. Our forged fasteners are ideal for
                                     high-stress aerospace environments and critical industrial uses where performance is
                                     non-negotiable.</p>
@@ -967,8 +1036,7 @@
                         <div class="p-6 flex flex-col justify-between flex-grow">
                             <div>
                                 <h3 class="text-lg font-bold uppercase mb-2">PRECISION MACHINING</h3>
-                                <p class="text-xs text-white/80 mb-4 text-justify">Equipped with advanced CNC machining
-                                    technology,
+                                <p class="text-xs text-white/80 mb-4">Equipped with advanced CNC machining technology,
                                     we produce precision fasteners with tight tolerances and complex geometries. Our
                                     machining supports aerospace-grade threads such as MJ and UNJF, meeting exacting
                                     aerospace specifications.</p>
@@ -999,8 +1067,7 @@
                         <div class="p-6 flex flex-col justify-between flex-grow">
                             <div>
                                 <h3 class="text-lg font-bold uppercase mb-2">HEAT TREATMENT</h3>
-                                <p class="text-xs text-white/80 mb-4 text-justify">Our in-house heat treatment facility
-                                    enhances the
+                                <p class="text-xs text-white/80 mb-4">Our in-house heat treatment facility enhances the
                                     mechanical properties of our fasteners. Using controlled thermal cycles, we improve
                                     hardness, fatigue strength, and durability — critical for oil & gas, energy, and
                                     aerospace fastener performance.</p>
@@ -1031,8 +1098,7 @@
                         <div class="p-6 flex flex-col justify-between flex-grow">
                             <div>
                                 <h3 class="text-lg font-bold uppercase mb-2">SURFACE TREATMENT</h3>
-                                <p class="text-xs text-white/80 mb-4 text-justify">We provide advanced surface treatment
-                                    solutions
+                                <p class="text-xs text-white/80 mb-4">We provide advanced surface treatment solutions
                                     including plating, passivation, and anti-corrosion coatings. These treatments extend
                                     fastener life in extreme conditions, ensuring compliance with aerospace, marine, and
                                     industrial fastener standards.</p>
@@ -1063,8 +1129,7 @@
                         <div class="p-6 flex flex-col justify-between flex-grow">
                             <div>
                                 <h3 class="text-lg font-bold uppercase mb-2">R&D TESTING</h3>
-                                <p class="text-xs text-white/80 mb-4 text-justify">Our dedicated R&D and testing
-                                    laboratory ensures
+                                <p class="text-xs text-white/80 mb-4">Our dedicated R&D and testing laboratory ensures
                                     every fastener meets the highest quality standards. From tensile strength to
                                     metallurgical analysis, we validate each product for aerospace and critical
                                     industrial applications.</p>
@@ -1087,11 +1152,208 @@
         </div>
 
     </section>
+    <!-- <section class="testimonial-section py-24 relative overflow-hidden">
+        <div class="container mx-auto px-4 relative z-20"><br><br>
+            <div class="text-center max-w-4xl mx-auto">
+                <p class="text-sm font-semibold uppercase tracking-wider text-theme-green">TESTIMONIALS</p>
+                <h2 class="text-4xl font-bold text-gray-900 my-2">What Our Client says About us</h2>
+            </div>
+
+            <div class="relative mt-16">
+                <div id="slider-container" class="overflow-hidden">
+                    <div id="slider-track" class="slider-track flex">
+
+                        <div class="slider-slide p-6">
+                            <div class="bg-white rounded-lg shadow-lg p-8 relative mt-12">
+                                <img src="imgs/suzanne.jpg"
+                                    alt="Suzanne Wantuch"
+                                    class="absolute -top-12 left-8 w-24 h-24 rounded-md object-cover border-4 border-white shadow-lg">
+                                <div class="pl-28">
+                                    <h3 class="text-lg font-bold">Suzanne Wantuch</h3>
+                                    <p class="text-xs text-gray-500">Nov 19, 2023</p>
+                                    <div class="flex text-yellow-400 my-2">
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.959h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.446 1.286 3.959c.3.921-.755 1.688-1.54 1.18l-3.368-2.446-3.368 2.446c-.784.508-1.84-.259-1.54-1.18l1.286-3.959-3.368-2.446c-.783-.57-.381-1.81.588-1.81h4.162l1.286-3.959z" />
+                                        </svg>
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.959h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.446 1.286 3.959c.3.921-.755 1.688-1.54 1.18l-3.368-2.446-3.368 2.446c-.784.508-1.84-.259-1.54-1.18l1.286-3.959-3.368-2.446c-.783-.57-.381-1.81.588-1.81h4.162l1.286-3.959z" />
+                                        </svg>
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.959h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.446 1.286 3.959c.3.921-.755 1.688-1.54 1.18l-3.368-2.446-3.368 2.446c-.784.508-1.84-.259-1.54-1.18l1.286-3.959-3.368-2.446c-.783-.57-.381-1.81.588-1.81h4.162l1.286-3.959z" />
+                                        </svg>
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.959h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.446 1.286 3.959c.3.921-.755 1.688-1.54 1.18l-3.368-2.446-3.368 2.446c-.784.508-1.84-.259-1.54-1.18l1.286-3.959-3.368-2.446c-.783-.57-.381-1.81.588-1.81h4.162l1.286-3.959z" />
+                                        </svg>
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.959h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.446 1.286 3.959c.3.921-.755 1.688-1.54 1.18l-3.368-2.446-3.368 2.446c-.784.508-1.84-.259-1.54-1.18l1.286-3.959-3.368-2.446c-.783-.57-.381-1.81.588-1.81h4.162l1.286-3.959z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <img src="imgs/suzanne1.jfif" alt="Google"
+                                    class="absolute top-8 right-8 w-6 h-6">
+                                <p class="text-sm text-gray-600 mt-4">Mauris eget leo in erat auctor elementum. Vivamus
+                                    facilisis mauris urna, non pharetra ipsum mattis porttitor. Sed consequat volutpat
+                                    nibh ut tempus. Phasellus mi sem, auctor vulputate faucibus vel, pharetra in lacus.
+                                    et, pharetra in lacus. in iaculis enim volutMauris eget leo...</p>
+                            </div>
+                        </div>
+                        <div class="slider-slide p-6">
+                            <div class="bg-white rounded-lg shadow-lg p-8 relative mt-12">
+                                <img src="imgs/suzanne1.jfif"
+                                    alt="Suzanne Wantuch"
+                                    class="absolute -top-12 left-8 w-24 h-24 rounded-md object-cover border-4 border-white shadow-lg">
+                                <div class="pl-28">
+                                    <h3 class="text-lg font-bold">Suzanne Wantuch</h3>
+                                    <p class="text-xs text-gray-500">Nov 19, 2023</p>
+                                    <div class="flex text-yellow-400 my-2">
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.959h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.446 1.286 3.959c.3.921-.755 1.688-1.54 1.18l-3.368-2.446-3.368 2.446c-.784.508-1.84-.259-1.54-1.18l1.286-3.959-3.368-2.446c-.783-.57-.381-1.81.588-1.81h4.162l1.286-3.959z" />
+                                        </svg>
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.959h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.446 1.286 3.959c.3.921-.755 1.688-1.54 1.18l-3.368-2.446-3.368 2.446c-.784.508-1.84-.259-1.54-1.18l1.286-3.959-3.368-2.446c-.783-.57-.381-1.81.588-1.81h4.162l1.286-3.959z" />
+                                        </svg>
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.959h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.446 1.286 3.959c.3.921-.755 1.688-1.54 1.18l-3.368-2.446-3.368 2.446c-.784.508-1.84-.259-1.54-1.18l1.286-3.959-3.368-2.446c-.783-.57-.381-1.81.588-1.81h4.162l1.286-3.959z" />
+                                        </svg>
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.959h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.446 1.286 3.959c.3.921-.755 1.688-1.54 1.18l-3.368-2.446-3.368 2.446c-.784.508-1.84-.259-1.54-1.18l1.286-3.959-3.368-2.446c-.783-.57-.381-1.81.588-1.81h4.162l1.286-3.959z" />
+                                        </svg>
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.959h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.446 1.286 3.959c.3.921-.755 1.688-1.54 1.18l-3.368-2.446-3.368 2.446c-.784.508-1.84-.259-1.54-1.18l1.286-3.959-3.368-2.446c-.783-.57-.381-1.81.588-1.81h4.162l1.286-3.959z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <img src="https://via.placeholder.com/24x24/ffffff/000000?text=G" alt="Google"
+                                    class="absolute top-8 right-8 w-6 h-6">
+                                <p class="text-sm text-gray-600 mt-4">Mauris eget leo in erat auctor elementum. Vivamus
+                                    facilisis mauris urna, non pharetra ipsum mattis porttitor. Sed consequat volutpat
+                                    nibh ut tempus. Phasellus mi sem, auctor vulputate faucibus vel, pharetra in lacus.
+                                    et, pharetra in lacus. in iaculis enim volutMauris eget leo...</p>
+                            </div>
+                        </div>
+
+                        <div class="slider-slide p-6">
+                            <div class="bg-white rounded-lg shadow-lg p-8 relative mt-12">
+                                <img src="imgs/suzanne.jpg"
+                                    alt="Suzanne Wantuch"
+                                    class="absolute -top-12 left-8 w-24 h-24 rounded-md object-cover border-4 border-white shadow-lg">
+                                <div class="pl-28">
+                                    <h3 class="text-lg font-bold">Suzanne Wantuch</h3>
+                                    <p class="text-xs text-gray-500">Nov 19, 2023</p>
+                                    <div class="flex text-yellow-400 my-2">
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.959h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.446 1.286 3.959c.3.921-.755 1.688-1.54 1.18l-3.368-2.446-3.368 2.446c-.784.508-1.84-.259-1.54-1.18l1.286-3.959-3.368-2.446c-.783-.57-.381-1.81.588-1.81h4.162l1.286-3.959z" />
+                                        </svg>
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.959h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.446 1.286 3.959c.3.921-.755 1.688-1.54 1.18l-3.368-2.446-3.368 2.446c-.784.508-1.84-.259-1.54-1.18l1.286-3.959-3.368-2.446c-.783-.57-.381-1.81.588-1.81h4.162l1.286-3.959z" />
+                                        </svg>
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.959h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.446 1.286 3.959c.3.921-.755 1.688-1.54 1.18l-3.368-2.446-3.368 2.446c-.784.508-1.84-.259-1.54-1.18l1.286-3.959-3.368-2.446c-.783-.57-.381-1.81.588-1.81h4.162l1.286-3.959z" />
+                                        </svg>
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.959h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.446 1.286 3.959c.3.921-.755 1.688-1.54 1.18l-3.368-2.446-3.368 2.446c-.784.508-1.84-.259-1.54-1.18l1.286-3.959-3.368-2.446c-.783-.57-.381-1.81.588-1.81h4.162l1.286-3.959z" />
+                                        </svg>
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.959h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.446 1.286 3.959c.3.921-.755 1.688-1.54 1.18l-3.368-2.446-3.368 2.446c-.784.508-1.84-.259-1.54-1.18l1.286-3.959-3.368-2.446c-.783-.57-.381-1.81.588-1.81h4.162l1.286-3.959z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <img src="https://via.placeholder.com/24x24/ffffff/000000?text=G" alt="Google"
+                                    class="absolute top-8 right-8 w-6 h-6">
+                                <p class="text-sm text-gray-600 mt-4">Mauris eget leo in erat auctor elementum. Vivamus
+                                    facilisis mauris urna, non pharetra ipsum mattis porttitor. Sed consequat volutpat
+                                    nibh ut tempus. Phasellus mi sem, auctor vulputate faucibus vel, pharetra in lacus.
+                                    et, pharetra in lacus. in iaculis enim volutMauris eget leo...</p>
+                            </div>
+                        </div>
+
+                        <div class="slider-slide p-6">
+                            <div class="bg-white rounded-lg shadow-lg p-8 relative mt-12">
+                                <img src="imgs/suzanne1.jfif"
+                                    alt="Suzanne Wantuch"
+                                    class="absolute -top-12 left-8 w-24 h-24 rounded-md object-cover border-4 border-white shadow-lg">
+                                <div class="pl-28">
+                                    <h3 class="text-lg font-bold">Suzanne Wantuch</h3>
+                                    <p class="text-xs text-gray-500">Nov 19, 2023</p>
+                                    <div class="flex text-yellow-400 my-2">
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.959h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.446 1.286 3.959c.3.921-.755 1.688-1.54 1.18l-3.368-2.446-3.368 2.446c-.784.508-1.84-.259-1.54-1.18l1.286-3.959-3.368-2.446c-.783-.57-.381-1.81.588-1.81h4.162l1.286-3.959z" />
+                                        </svg>
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.959h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.446 1.286 3.959c.3.921-.755 1.688-1.54 1.18l-3.368-2.446-3.368 2.446c-.784.508-1.84-.259-1.54-1.18l1.286-3.959-3.368-2.446c-.783-.57-.381-1.81.588-1.81h4.162l1.286-3.959z" />
+                                        </svg>
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.959h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.446 1.286 3.959c.3.921-.755 1.688-1.54 1.18l-3.368-2.446-3.368 2.446c-.784.508-1.84-.259-1.54-1.18l1.286-3.959-3.368-2.446c-.783-.57-.381-1.81.588-1.81h4.162l1.286-3.959z" />
+                                        </svg>
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.959h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.446 1.286 3.959c.3.921-.755 1.688-1.54 1.18l-3.368-2.446-3.368 2.446c-.784.508-1.84-.259-1.54-1.18l1.286-3.959-3.368-2.446c-.783-.57-.381-1.81.588-1.81h4.162l1.286-3.959z" />
+                                        </svg>
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.959h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.446 1.286 3.959c.3.921-.755 1.688-1.54 1.18l-3.368-2.446-3.368 2.446c-.784.508-1.84-.259-1.54-1.18l1.286-3.959-3.368-2.446c-.783-.57-.381-1.81.588-1.81h4.162l1.286-3.959z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <img src="https://via.placeholder.com/24x24/ffffff/000000?text=G" alt="Google"
+                                    class="absolute top-8 right-8 w-6 h-6">
+                                <p class="text-sm text-gray-600 mt-4">Mauris eget leo in erat auctor elementum. Vivamus
+                                    facilisis mauris urna, non pharetra ipsum mattis porttitor. Sed consequat volutpat
+                                    nibh ut tempus. Phasellus mi sem, auctor vulputate faucibus vel, pharetra in lacus.
+                                    et, pharetra in lacus. in iaculis enim volutMauris eget leo...</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <button id="prev-slide"
+                    class="absolute top-1/2 left-0 lg:-left-8 -translate-y-1/2 bg-white rounded-full p-3 shadow-lg hover:bg-gray-300 transition z-30">
+                    <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
+                        </path>
+                    </svg>
+                </button>
+                <button id="next-slide"
+                    class="absolute top-1/2 right-0 lg:-right-8 -translate-y-1/2 bg-white rounded-full p-3 shadow-lg hover:bg-gray-300 transition z-30">
+                    <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <div id="slider-dots" class="flex justify-center space-x-2 mt-8 relative z-20">
+                <button class="slider-dot w-3 h-3 bg-light-green rounded-full"></button>
+                <button class="slider-dot w-3 h-3 bg-gray-300 rounded-full"></button>
+            </div>
+        </div>
+    </section>
+ -->
     <br>
-    <section class="pt-18 bg-white">
+    <section class="pt-18 bg-wFhite">
         <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row justify-between items-center mb-12">
-                <div class="text-center md:text-left mb-6 md:mb-0">
+            <div class="flex justify-between items-center mb-12">
+                <div>
                     <p class="text-sm font-semibold uppercase tracking-wider text-theme-green">LATEST NEWS & BLOGS</p>
                     <h2 class="text-4xl font-bold text-gray-900 my-2">News & Blog Insights</h2>
                 </div>
@@ -1113,8 +1375,7 @@
                         <p class="text-xs text-gray-500 mb-2">6. November 2025</p>
                         <h3 class="text-lg font-bold text-gray-900 mb-2">Advancing Precision Metallurgy for Smarter
                             Manufacturing</h3>
-                        <p class="text-sm text-gray-600 mb-4 flex-grow text-justify">We are improving alloy strength and
-                            consistency
+                        <p class="text-sm text-gray-600 mb-4 flex-grow">We are improving alloy strength and consistency
                             through advanced metallurgical processes to support high-quality, reliable manufacturing
                             performance.</p>
                         <a href="#" class="text-theme-green font-semibold text-sm inline-flex items-center">
@@ -1134,8 +1395,7 @@
                         <p class="text-xs text-gray-500 mb-2">6. November 2025</p>
                         <h3 class="text-lg font-bold text-gray-900 mb-2">Boosting Indigenous Production Capabilities
                         </h3>
-                        <p class="text-sm text-gray-600 mb-4 flex-grow text-justify">Our focus is on increasing local
-                            manufacturing
+                        <p class="text-sm text-gray-600 mb-4 flex-grow">Our focus is on increasing local manufacturing
                             capacity, reducing dependency on imports, and supporting a stronger self-reliant industrial
                             ecosystem.</p>
                         <a href="#" class="text-theme-green font-semibold text-sm inline-flex items-center">
@@ -1154,8 +1414,7 @@
                     <div class="p-6 flex flex-col flex-grow">
                         <p class="text-xs text-gray-500 mb-2">6. November 2025</p>
                         <h3 class="text-lg font-bold text-gray-900 mb-2">Innovation in High-Performance Fasteners</h3>
-                        <p class="text-sm text-gray-600 mb-4 flex-grow text-justify">We are developing fasteners
-                            engineered for
+                        <p class="text-sm text-gray-600 mb-4 flex-grow">We are developing fasteners engineered for
                             superior durability, precision, and strength, suitable for heavy industrial and specialized
                             engineering applications.</p>
                         <a href="#" class="text-theme-green font-semibold text-sm inline-flex items-center">
@@ -1174,8 +1433,7 @@
                         <p class="text-xs text-gray-500 mb-2">6. November 2025</p>
                         <h3 class="text-lg font-bold text-gray-900 mb-2">Digital Quality Control for Modern Production
                         </h3>
-                        <p class="text-sm text-gray-600 mb-4 flex-grow text-justify">By integrating automated inspection
-                            and
+                        <p class="text-sm text-gray-600 mb-4 flex-grow">By integrating automated inspection and
                             data-driven monitoring, we enhance quality consistency while reducing production time and
                             wastage.</p>
                         <a href="#" class="text-theme-green font-semibold text-sm inline-flex items-center">
@@ -1196,18 +1454,66 @@
             <h2 class="mb-10 text-sm font-semibold tracking-widest text-center uppercase text-brand-green-title">
                 Our Valuable Customers
             </h2>
-
-            <div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-6 px-4">
-                <img src="imgs/c1.png" alt="KK Processors Logo" class="w-auto h-12 md:h-20">
-                <img src="imgs/c2.png" alt="BHEL Logo" class="w-auto h-12 md:h-12">
-                <img src="imgs/c3.png" alt="Danprel Logo" class="w-auto h-12 md:h-20">
-                <img src="imgs/c4.png" alt="KK Processors Logo" class="w-auto h-8 md:h-8">
-                <img src="imgs/c5.png" alt="BHEL Logo" class="w-auto h-12 md:h-20">
-                <img src="imgs/c6.png" alt="Danprel Logo" class="w-auto h-12 md:h-20">
+            <div class="grid grid-cols-2 gap-x-8 gap-y-6 sm:grid-cols-4 lg:grid-cols-8 items-center justify-between"
+                style="justify-content: space-evenly; display: flex;">
+                <img src="imgs/c1.png" alt="KK Processors Logo" class="w-30 h-20">
+                <img src="imgs/c2.png" alt="BHEL Logo" class="w-auto h-12">
+                <img src="imgs/c3.png" alt="Danprel Logo" class="w-auto h-100">
+                <img src="imgs/c4.png" alt="KK Processors Logo" class="w-auto h-8">
+                <img src="imgs/c5.png" alt="BHEL Logo" class="w-auto h-20">
+                <img src="imgs/c6.png" alt="Danprel Logo" class="w-auto h-20">
             </div>
         </div>
         </div>
     </section>
+
+    <!-- <section
+        class="min-h-[250px] flex items-center justify-center bg-brand-green-bg-stats text-white py-10 overflow-hidden relative z-0">
+        <div class="container px-6 mx-auto">
+            <div class="flex flex-col items-center justify-around gap-4 md:flex-row">
+                <div class="flex flex-col items-center text-center">
+                    <div
+                        class="flex items-center justify-center w-24 h-24 mb-4 rounded-full bg-brand-icon-bg backdrop-blur-sm border border-white/30">
+                        <i class="text-3xl fa-solid fa-cube text-brand-light-text"></i>
+                    </div>
+                    <p class="mb-1 text-4xl font-extrabold text-brand-light-text">227</p>
+                    <p class="text-xs font-semibold uppercase text-brand-dark-text-stats">Total Products</p>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <div
+                        class="flex items-center justify-center w-24 h-24 mb-4 rounded-full bg-brand-icon-bg backdrop-blur-sm border border-white/30">
+                        <i class="text-3xl fa-solid fa-certificate text-brand-light-text"></i>
+                    </div>
+                    <p class="mb-1 text-4xl font-extrabold text-brand-light-text">7</p>
+                    <p class="text-xs font-semibold uppercase text-brand-dark-text-stats">Certificates</p>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <div
+                        class="flex items-center justify-center w-24 h-24 mb-4 rounded-full bg-brand-icon-bg backdrop-blur-sm border border-white/30">
+                        <i class="text-3xl fa-solid fa-users text-brand-light-text"></i>
+                    </div>
+                    <p class="mb-1 text-4xl font-extrabold text-brand-light-text">10+</p>
+                    <p class="text-xs font-semibold uppercase text-brand-dark-text-stats">Employees</p>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <div
+                        class="flex items-center justify-center w-24 h-24 mb-4 rounded-full bg-brand-icon-bg backdrop-blur-sm border border-white/30">
+                        <i class="text-3xl fa-solid fa-handshake text-brand-light-text"></i>
+                    </div>
+                    <p class="mb-1 text-4xl font-extrabold text-brand-light-text">10</p>
+                    <p class="text-xs font-semibold uppercase text-brand-dark-text-stats">Clients</p>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <div
+                        class="flex items-center justify-center w-24 h-24 mb-4 rounded-full bg-brand-icon-bg backdrop-blur-sm border border-white/30">
+                        <i class="text-3xl fa-solid fa-truck-ramp-box text-brand-light-text"></i>
+                    </div>
+                    <p class="mb-1 text-4xl font-extrabold text-brand-light-text">2Lakhs+</p>
+                    <p class="text-xs font-semibold uppercase text-brand-dark-text-stats">Material Delivered</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
 
     <section class="py-10 bg-white">
         <div class="container px-6 mx-auto">
@@ -1267,53 +1573,55 @@
             </div>
         </div>
     </section>
+    <hr>
 
-    <section
-        class="top_box relative z-0 overflow-hidden bg-[#6a9b5f] pb-24 text-white bg-dots w-[90%] md:w-[80%] mx-auto"
-        style="border-radius:10px; min-height: 30vh; z-index: 99; position: relative; box-shadow: 0px 20px 9px black; margin-top: 100px;">
 
-        <div class="absolute inset-0 z-0 bg-right bg-no-repeat bg-cover opacity-30 mix-blend-multiply" style="background-image: url('https://imgs.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=1600&q=80');background-size: cover;    /* make it fill the screen */
-background-repeat: no-repeat;  /* prevent tiling */
-background-position: center;">
+
+    <section class="top_box relative z-0 overflow-hidden bg-[#6a9b5f] pb-24 text-white bg-dots"
+        style="border-radius:10px; top: 50px; position: relative; width: 80%; height: 30vh; z-index: 99; position: relative; left: 9%; box-shadow: 0px 20px 9px black; margin-top: 100px;">
+
+        <div class="absolute inset-0 z-0 bg-right bg-no-repeat bg-cover opacity-30 mix-blend-multiply" style="background-image: url('https://imgs.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=1600&q=80');background-size: cover;       /* make it fill the screen */
+ background-repeat: no-repeat;  /* prevent tiling */
+ background-position: center;">
         </div>
 
-        <div class="top_box container relative z-10 px-6 p-12 md:p-16 mx-auto">
-            <div>
-                <div class="max-w-2xl text-center md:text-left">
+        <div class="top_box container relative z-2 px-6  mx-auto lg:py-20">
+            <div style="position:absolute;top:0 ;">
+                <div class="max-w-2xl">
                     <p class=" text-1xl py-3 font-semibold tracking-wider uppercase">ONE PLATFORM FOR ALL
                         YOUR FASTENERS REQUIREMENTS</p>
-                    <h2 class="text-2xl md:text-4xl font-extrabold tracking-tight uppercase">Which
+                    <h2 class=" text-4xl font-extrabold tracking-tight uppercase md:text-2xl lg:text-2xl">Which
                         products are you looking to buy?</h2>
-                    <p class="mb-4 text-1 font-light">Single window for end-to-end steel sourcing</p>
+                    <p class="mb-4  text-1 font-light">Single window for end-to-end steel sourcing</p>
                     <a href="#"
                         class="inline-flex items-center px-8 py-3 text-sm font-bold text-[#6a9b5f] uppercase bg-white rounded-md shadow-lg transition-transform hover:scale-105">
                         Explore Now
-                        <i class="ml-3 fas fa-arrow-right"></i>
+                        <i class="ml-3  fas fa-arrow-right"></i>
                     </a>
                 </div>
             </div>
+        </div>
     </section>
+    <footer class="relative z-10 pt-32 pb-16 text-gray-300 bg-gradient-to-t from-[#0b180d] via-[#172c19] to-[#1a471c]">
 
-    <footer class="relative z-10 bg-[#344a40] pt-32 pb-16 text-gray-300">
-
-        <div class="absolute top-0 left-0 w-full h-24 bg-inherit rounded-t-[50%] transform -translate-y-1/2"></div>
+        <div class="absolute top-0 left-0 w-1000  h-1004 bg-inherit rounded-t-full transform -translate-y-1/2"></div>
 
         <div class="container px-6 mx-auto">
-            <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-5">
-
-                <div>
+            <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-6 ">
+                <div class="px-2">
                     <div class="flex items-center mb-8 text-2xl font-bold text-white">
-                        <img src="imgs/Screenshot 2025-11-04 120806.png" alt="" style="width: 30px;">
-                        <spanc class="px-2">NAPL</span>
+                        <img src="imgs/Screenshot 2025-11-04 120806.png" alt="" style="width: 100px; height: 100px;">
                     </div>
+                </div>
 
-                    <h3 class="mt-6 mb-4 text-sm font-semibold text-white uppercase">Head office and Factory</h3>
+                <div class="px-1">
+                    <h3 class="mb-6 text-lg font-semibold text-white ">Head Quaters And Office</h3>
                     <p class="text-sm leading-relaxed">Plot no. 140 SIDCO Women Industrial Estate Karuppur,
                         Tamilnadu, India,
                         <br> Salem - 636 011
                     </p>
 
-                    <h3 class="mt-6 mb-4 text-sm font-semibold text-white uppercase">CALL US ON</h3>
+                    <h3 class="mt-6 mb-2 text-sm font-semibold text-white uppercase">CALL US ON</h3>
                     <p class="text-sm leading-relaxed"><a href="tel:+918220538534">+91 82205 38534</a></p>
                     <p class="text-sm leading-relaxed"><a href="tel:+919578420672">+91 95784 20672</a></p>
 
@@ -1324,9 +1632,9 @@ background-position: center;">
                             href="mailto:support@nithaaerospace.in">support@nithaaerospace.in</a></p>
                 </div>
 
-                <div>
-                    <h3 class="mb-6 text-lg font-semibold text-white uppercase">COMPANY</h3>
-                    <ul class="space-y-3 text-sm">
+                <div class="px-8">
+                    <h3 class="mb-6 pc text-lg font-semibold text-white uppercase">COMPANY</h3>
+                    <ul class="space-y- text-sm">
                         <li><a href="index.html" class="transition-colors hover:text-white">Home</a></li>
                         <li><a href="aboutus.html" class="transition-colors hover:text-white">About Us</a></li>
                         <li><a href="#" class="transition-colors hover:text-white">Fasteners</a></li>
@@ -1335,57 +1643,44 @@ background-position: center;">
                     </ul>
                 </div>
 
-                <div>
+                <div class="-1px">
                     <h3 class="mb-6 text-lg font-semibold text-white uppercase">OUR PRODUCTS</h3>
-                    <ul class="grid grid-cols-2 gap-x-4">
-                        <li class="mb-3"><a href="#" class="text-sm transition-colors hover:text-white">Bolt</a>
+                    <ul class="grid grid-cols-1 gap-x-4">
+                        <li class="mb-1"><a href="#" class="text-sm transition-colors hover:text-white">Bolt</a></li>
+                        <li class="mb-1"><a href="#" class="text-sm transition-colors hover:text-white">Bush</a></li>
+                        <li class="mb-1"><a href="#" class="text-sm transition-colors hover:text-white">Circlips</a>
                         </li>
-                        <li class="mb-3"><a href="#" class="text-sm transition-colors hover:text-white">Bush</a>
+                        <li class="mb-1"><a href="#" class="text-sm transition-colors hover:text-white">Nail</a></li>
+                        <li class="mb-1"><a href="#" class="text-sm transition-colors hover:text-white">Nut</a></li>
+                        <li class="mb-1"><a href="#" class="text-sm transition-colors hover:text-white">Pin and Key</a>
                         </li>
-                        <li class="mb-3"><a href="#" class="text-sm transition-colors hover:text-white">Circlips</a>
+                        <li class="mb-1"><a href="#" class="text-sm transition-colors hover:text-white">Rivvert</a></li>
+                        <li class="mb-1"><a href="#" class="text-sm transition-colors hover:text-white">Screw</a></li>
+                        <li class="mb-1"><a href="#" class="text-sm transition-colors hover:text-white">Stud & Rod</a>
                         </li>
-                        <li class="mb-3"><a href="#" class="text-sm transition-colors hover:text-white">Nail</a>
-                        </li>
-                        <li class="mb-3"><a href="#" class="text-sm transition-colors hover:text-white">Nut</a></li>
-                        <li class="mb-3"><a href="#" class="text-sm transition-colors hover:text-white">Pin and
-                                Key</a></li>
-                        <li class="mb-3"><a href="#" class="text-sm transition-colors hover:text-white">Rivvert</a>
-                        </li>
-                        <li class="mb-3"><a href="#" class="text-sm transition-colors hover:text-white">Screw</a>
-                        </li>
-                        <li class="mb-3"><a href="#" class="text-sm transition-colors hover:text-white">Stud & Rod</a>
-                        </li>
-                        <li class="mb-3"><a href="#" class="text-sm transition-colors hover:text-white">Washer</a>
-                        </li>
-                        <li class="mb-3"><a href="#" class="text-sm transition-colors hover:text-white">Hinge</a>
-                        </li>
-                        <li class="mb-3"><a href="#" class="text-sm transition-colors hover:text-white">Latch</a>
-                        </li>
-                        <li class="mb-3"><a href="#" class="text-sm transition-colors hover:text-white">Clamp</a>
-                        </li>
-                        <li class="mb-3"><a href="#" class="text-sm transition-colors hover:text-white">Wires</a>
-                        </li>
-                        <li class="mb-3"><a href="#" class="text-sm transition-colors hover:text-white">Spacer &
+                        <li class="mb-1"><a href="#" class="text-sm transition-colors hover:text-white">Washer</a></li>
+                        <li class="mb-1"><a href="#" class="text-sm transition-colors hover:text-white">Hinge</a></li>
+                        <li class="mb-1"><a href="#" class="text-sm transition-colors hover:text-white">Latch</a></li>
+                        <li class="mb-1"><a href="#" class="text-sm transition-colors hover:text-white">Clamp</a></li>
+                        <li class="mb-1"><a href="#" class="text-sm transition-colors hover:text-white">Wires</a></li>
+                        <li class="mb-1"><a href="#" class="text-sm transition-colors hover:text-white">Spacer &
                                 Standoff</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h3 class="mb-6 text-lg font-semibold text-white uppercase">FACILITIES</h3>
-                    <ul class="grid grid-cols-2 gap-x-4">
-                        <li class="mb-3"><a href="#" class="text-sm transition-colors hover:text-white">Casting</a>
-                        </li>
-                        <li class="mb-3"><a href="#" class="text-sm transition-colors hover:text-white">Forging</a>
-                        </li>
-                        <li class="mb-3"><a href="#" class="text-sm transition-colors hover:text-white">Precision
+                    <ul class="grid grid-cols-1 gap-x-4">
+                        <li class="mb-1"><a href="#" class="text-sm transition-colors hover:text-white">Casting</a></li>
+                        <li class="mb-1"><a href="#" class="text-sm transition-colors hover:text-white">Forging</a></li>
+                        <li class="mb-1"><a href="#" class="text-sm transition-colors hover:text-white">Precision
                                 Machining</a></li>
-                        <li class="mb-3"><a href="#" class="text-sm transition-colors hover:text-white">Heat
+                        <li class="mb-1"><a href="#" class="text-sm transition-colors hover:text-white">Heat
                                 Treatment</a></li>
-                        <li class="mb-3"><a href="#" class="text-sm transition-colors hover:text-white">Surface
+                        <li class="mb-1"><a href="#" class="text-sm transition-colors hover:text-white">Surface
                                 Treatment</a></li>
-                        <li class="mb-3"><a href="#" class="text-sm transition-colors hover:text-white">R&D</a></li>
-                        <li class="mb-3"><a href="#" class="text-sm transition-colors hover:text-white">Testing</a>
-                        </li>
+                        <li class="mb-1"><a href="#" class="text-sm transition-colors hover:text-white">R&D</a></li>
+                        <li class="mb-1"><a href="#" class="text-sm transition-colors hover:text-white">Testing</a></li>
                     </ul>
                 </div>
 
@@ -1401,21 +1696,19 @@ background-position: center;">
                         </button>
                     </form>
 
-                    <div class="flex items-center justify-center  p-2 mt-4" style="width: 150px; height: 150px;">
+                    <div class="flex items-center justify-center p-2 mt-4" style="width: 150px; height: 150px;">
                         <img src="imgs/output-onlinepngtools.png" alt="ISO 9001 Logo" class="object-contain h-full">
                     </div>
                 </div>
-
             </div>
         </div>
     </footer>
+    <div class="relative z-20 py-4 text-gray-400 " style="background: #0b180d; border-top: 1px solid white;">
 
-    <div class="relative z-20 py-12 text-gray-400 bg-gradient-to-r from-[#2a3a31] to-[#212f2a]">
 
-        <div class="absolute top-0 left-0 w-full h-16 bg-inherit rounded-t-[50%] transform -translate-y-1/2"></div>
 
         <div class="container flex flex-col items-center justify-between px-6 mx-auto text-sm md:flex-row">
-            <p class="mb-4 md:mb-0 text-center md:text-left">
+            <p class="mb-4 md:mb-0">
                 www.nithaaerospace.in © Copyright and private limited. All Rights Reserved
             </p>
             <div class="flex space-x-6 text-base">
@@ -1429,16 +1722,6 @@ background-position: center;">
     </div>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-
-            // RESPONSIVE FIX: Added JavaScript for mobile menu toggle
-            const menuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            if (menuButton && mobileMenu) {
-                menuButton.addEventListener('click', () => {
-                    mobileMenu.classList.toggle('hidden');
-                });
-            }
-
             // Check if slider elements exist before running the script
             const track = document.getElementById('slider-track');
             const nextButton = document.getElementById('next-slide');
@@ -1474,14 +1757,8 @@ background-position: center;">
                     currentPage = 0;
                 }
 
-                let transformPercentage = 0;
-                if (slidesPerPage === 1) {
-                    transformPercentage = currentPage * 100; // 1 slide per page, 100% transform
-                } else {
-                    transformPercentage = currentPage * (100 / slidesPerPage); // 2 slides per page, 50% transform
-                }
-                track.style.transform = `translateX(-${transformPercentage}%)`;
-
+                const slideWidthPercentage = 100 / slidesPerPage;
+                track.style.transform = `translateX(-${currentPage * slideWidthPercentage}%)`;
 
                 dots.forEach((dot, index) => {
                     if (index >= pageCount) {
@@ -1520,12 +1797,6 @@ background-position: center;">
             });
 
             window.addEventListener('resize', () => {
-                // Recalculate everything on resize
-                slidesPerPage = window.innerWidth >= 1024 ? 2 : 1;
-                pageCount = Math.ceil(slideCount / slidesPerPage);
-                if (currentPage >= pageCount) {
-                    currentPage = pageCount - 1;
-                }
                 updateSliderPosition();
             });
 
@@ -1537,4 +1808,3 @@ background-position: center;">
 
 
 </html>
-
