@@ -9,10 +9,30 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <style>
         /* Custom styles to handle the specific designs */
+        body {
+            /* This calls the Mona Sans font family */
+            font-family: 'Mona Sans', sans-serif;
+
+            /* This is the key property for "Condensed" */
+            /* 75% is condensed, 100% is normal */
+            font-stretch: 75%;
+
+            /* You can also control the weight */
+            font-weight: 400;
+            /* 400 is Regular, 700 is Bold, etc. */
+        }
+
+        h1 {
+            font-family: 'Mona Sans', sans-serif;
+            font-stretch: 75%;
+            font-weight: 800;
+            /* Extra-bold condensed */
+        }
 
         hr {
             border: none;
@@ -23,6 +43,7 @@
             /* White line color */
             margin: 20px 0;
             /* Optional: Add spacing */
+
         }
 
         /* Hero curve */
@@ -413,7 +434,7 @@
 
     <header class="relative">
 
-        <nav class="absolute top-0 left-40 right-10 py-7 bg-white ">
+        <nav class="absolute top-0 left-40 right-10 py-7 z-50 bg-white ">
             <div class="container mx-auto flex justify-between items-center">
                 <a href="#" class="flex items-center -ml-2">
                     <div class="flex flex-col items-center">
@@ -423,38 +444,34 @@
                 </a>
 
                 <div class="hidden md:flex items-center space-x-8 text-[15px] ">
-                    <a href="#" class="nav-text  hover:text-brand-partner-btn font-semibold">Home</a>
+                    <a href="index.html" class="nav-text hover:text-brand-partner-btn font-semibold">Home</a>
+
                     <a href="aboutus.html" class="nav-text hover:text-brand-partner-btn font-semibold">About us</a>
 
                     <div class="relative group">
-                        <a href="#" class="nav-text hover:text-brand-partner-btn font-semibold">Fasteners <i
-                                class="fas fa-chevron-down text-xs ml-1"></i></a>
+                        <a href="fasteners.html" class="nav-text hover:text-brand-partner-btn font-semibold">
+                            Fasteners <i class="fas fa-chevron-down text-xs ml-1"></i>
+                        </a>
                     </div>
 
                     <div class="relative group">
-                        <a href="#" class="nav-text hover:text-brand-partner-btn font-semibold">Solutions <i
-                                class="fas fa-chevron-down text-xs ml-1"></i></a>
+                        <a href="solutions.html" class="nav-text hover:text-brand-partner-btn font-semibold">
+                            Solutions <i class="fas fa-chevron-down text-xs ml-1"></i>
+                        </a>
                     </div>
 
-                    <a href="#" class="nav-text hover:text-brand-partner-btn font-semibold">Downloads</a>
+                    <a href="downloads.html" class="nav-text hover:text-brand-partner-btn font-semibold">Downloads</a>
+
                     <a href="contact.html" class="nav-text hover:text-brand-partner-btn font-semibold">Contact us</a>
                 </div>
 
-
                 <div class="relative mr-0">
-                    <a href="#"
-                        class="partner-btn-bg text-white px-6  py-2 rounded-md text-sm font-semibold hover:opacity-90 transition-opacity hidden md:block mr-0">
+                    <a href="partner.html"
+                        class="partner-btn-bg text-white px-6 py-2 rounded-md text-sm font-semibold hover:opacity-90 transition-opacity hidden md:block mr-0">
                         BECOME A PARTNER
                     </a>
-
-                    <div class="md:hidden">
-                        <button class="text-gray-800"><svg class="w-6 h-6" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M4 6h16M4 12h16m-7 6h7"></path>
-                            </svg></button>
-                    </div>
                 </div>
+
             </div>
         </nav>
 
@@ -463,8 +480,8 @@
             <img src="imgs/Screenshot 2025-11-04 120806.png" alt="NITHA Logo" class="object-contain -mb-1 z-20 "
                 style="width: 100px; margin-top: -835px; margin-left: -1050px;">
 
-            <img src="imgs/planeconfirm.png" alt="Industrial pouring molten metal"
-                style="margin-top: 100px;" class="absolute inset-0 w-full h-700px  object-cover z-0">
+            <img src="imgs/planeconfirm.png" alt="Industrial pouring molten metal" style="margin-top: 100px;"
+                class="absolute inset-0 w-full h-700px  object-cover z-0">
             <div class=" absolute inset-0 z-10 ">
                 <div class="relative z-30 container mx-auto  px-4 h-full flex items-center justify-start text-white pb-40"
                     style="left: 46%;">
@@ -547,7 +564,8 @@
                                         class="max-w-full max-h-full object-contain">
                                 </div>
                             </div>
-                            <p class="text-xs font-bold text-brand-text-dark mt-2">Nail<p>
+                            <p class="text-xs font-bold text-brand-text-dark mt-2">Nail
+                            <p>
                         </div>
 
                         <div class="flex flex-col items-center">
@@ -672,119 +690,120 @@
     <section class="w-full min-h-screen p-8 sm:p-12 flex items-center justify-center bg-cover bg-center"
         style="background-image: url('imgs/nut.png'); ">
 
-        <div class="w-full max-w-5xl mx-auto grid lg:grid-cols-2 gap-16 items-center " ">
+        <div class="w-full max-w-5xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
 
             <div class=" text-white">
 
-            <img src="imgs/whitenitha-removebg-preview.png" alt="Logo" class="w-16 h-16" />
+                <img src="imgs/whitenitha-removebg-preview.png" alt="Logo" class="w-16 h-16" />
 
-            <p class="text-sm font-semibold tracking-wider uppercase mb-2">
-                ONE PLATFORM FOR ALL YOUR FASTENER REQUIREMENTS
-            </p>
-            <h1 class="text-4xl lg:text-5xl font-black  leading-tight mt-8"
-                style="letter-spacing: -1px; transform: scaleY(1.1) ">
-                Buy Quality Products At The Best Prices From Nitha Aerospace
-            </h1>
-
-            <div class="flex items-center gap-4 mt-8">
-                <img src="imgs/mailwing.png" alt="Email" class="w-16 h-16" />
-                <div>
-                    <p class="text-lg">Email us or Post your requirements</p>
-                    <a href="mailto:marketing@nithaaerospace.in" class="text-xl font-bold">
-                        marketing@nithaaerospace.in
-                    </a>
-                </div>
-            </div>
-
-            <div class="flex items-center gap-4 mt-6">
-                <img src="imgs/pngwing.com.png" alt="WhatsApp" class="w-14 h-14" />
-                <div>
-                    <p class="text-lg">Contact us on WhatsApp or Post your requirements</p>
-                    <a href="tel:+919578420672" class="text-xl font-bold">
-                        +91 95784 20672
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="w-full max-w-lg p-6 sm:p-8  backdrop-blur-lg rounded-lg shadow-2xl border border-white/30 "
-            style="box-shadow: 0px 10px 20px black;">
-
-            <h2 class="text-2xl font-bold text-white" style="letter-spacing: -1px; transform: scaleY(1.1);">Connect With
-                Us Today!</h2>
-            <p class="mt-1 text-sm text-gray-200 mb-6">Share your details and we will contact you shortly</p>
-
-            <form action="#" method="POST" class="space-y-4">
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div>
-                        <input type="text" placeholder="Business Name"
-                            class="w-full bg-white rounded-md border-0 py-2.5 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-500 sm:text-sm">
-                    </div>
-                    <div>
-                        <input type="text" placeholder="First & Last name"
-                            class="w-full bg-white rounded-md border-0 py-2.5 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-500 sm:text-sm">
-                    </div>
-                    <div>
-                        <input type="email" placeholder="Business Email ID"
-                            class="w-full bg-white rounded-md border-0 py-2.5 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-500 sm:text-sm">
-                    </div>
-                    <div>
-                        <input type="tel" placeholder="Mobile Number"
-                            class="w-full bg-white rounded-md border-0 py-2.5 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-500 sm:text-sm">
-                    </div>
-                    <div>
-                        <input type="text" placeholder="Pincode"
-                            class="w-full bg-white rounded-md border-0 py-2.5 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-500 sm:text-sm">
-                    </div>
-                    <div>
-                        <input type="text" placeholder="City"
-                            class="w-full bg-white rounded-md border-0 py-2.5 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-500 sm:text-sm">
-                    </div>
-                    <div>
-                        <select
-                            class="w-full bg-white rounded-md border-0 py-2.5 px-3.5 text-gray-400 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-green-500 sm:text-sm">
-                            <option disabled selected>Products</option>
-                            <option value="prod1">Product 1</option>
-                            <option value="prod2">Product 2</option>
-                        </select>
-                    </div>
-                    <div>
-                        <select
-                            class="w-full bg-white rounded-md border-0 py-2.5 px-3.5 text-gray-400 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-green-500 sm:text-sm">
-                            <option disabled selected>Quantity(in MT)</option>
-                            <option value="1">1 MT</option>
-                            <option value="5">5 MT</option>
-                            <option value="10">10+ MT</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="space-y-3 pt-2">
-                    <div class="flex items-center">
-                        <input id="whatsapp" name="whatsapp" type="checkbox"
-                            class="h-4 w-4 rounded border-gray-300 text-green-600 focus:ring-green-500">
-                        <label for="whatsapp" class="ml-2 block text-sm text-gray-200">Get updates on
-                            WhatsApp</label>
-                    </div>
-                    <div class="flex items-center">
-                        <input id="terms" name="terms" type="checkbox"
-                            class="h-4 w-4 rounded border-gray-300 text-green-600 focus:ring-green-500">
-                        <label for="terms" class="ml-2 block text-sm text-gray-200">Terms & Conditions</label>
-                    </div>
-                </div>
-
-                <p class="text-xs text-gray-300 pt-2">
-                    The personal data shared by you will be used by Nitha aerospace, to connect with you directly or
-                    through its affiliates and partners.
+                <p class="text-sm font-semibold tracking-wider uppercase mb-2">
+                    ONE PLATFORM FOR ALL YOUR FASTENER REQUIREMENTS
                 </p>
+                <h1 class="text-4xl lg:text-5xl font-black  leading-tight mt-8"
+                    style="letter-spacing: -1px; transform: scaleY(1.1) ">
+                    Buy Quality Products At The Best Prices From Nitha Aerospace
+                </h1>
 
-                <button type="submit"
-                    class=" rounded-md bg-green-500 w-300 py-3 px-4 text-sm font-semibold text-white shadow-sm hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-500 mt-6">
-                    SUBMIT A MESSAGE
-                </button>
-            </form>
-        </div>
+                <div class="flex items-center gap-4 mt-8">
+                    <img src="imgs/mailwing.png" alt="Email" class="w-16 h-16" />
+                    <div>
+                        <p class="text-lg">Email us or Post your requirements</p>
+                        <a href="mailto:marketing@nithaaerospace.in" class="text-xl font-bold">
+                            marketing@nithaaerospace.in
+                        </a>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-4 mt-6">
+                    <img src="imgs/pngwing.com.png" alt="WhatsApp" class="w-14 h-14" />
+                    <div>
+                        <p class="text-lg">Contact us on WhatsApp or Post your requirements</p>
+                        <a href="tel:+919578420672" class="text-xl font-bold">
+                            +91 95784 20672
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full max-w-lg p-6 sm:p-8  backdrop-blur-lg rounded-lg shadow-2xl border border-white/30 "
+                style="box-shadow: 0px 10px 20px black;">
+
+                <h2 class="text-2xl font-bold text-white" style="letter-spacing: -1px; transform: scaleY(1.1);">Connect
+                    With
+                    Us Today!</h2>
+                <p class="mt-1 text-sm text-gray-200 mb-6">Share your details and we will contact you shortly</p>
+
+                <form action="#" method="POST" class="space-y-4">
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <input type="text" placeholder="Business Name"
+                                class="w-full bg-white rounded-md border-0 py-2.5 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-500 sm:text-sm">
+                        </div>
+                        <div>
+                            <input type="text" placeholder="First & Last name"
+                                class="w-full bg-white rounded-md border-0 py-2.5 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-500 sm:text-sm">
+                        </div>
+                        <div>
+                            <input type="email" placeholder="Business Email ID"
+                                class="w-full bg-white rounded-md border-0 py-2.5 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-500 sm:text-sm">
+                        </div>
+                        <div>
+                            <input type="tel" placeholder="Mobile Number"
+                                class="w-full bg-white rounded-md border-0 py-2.5 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-500 sm:text-sm">
+                        </div>
+                        <div>
+                            <input type="text" placeholder="Pincode"
+                                class="w-full bg-white rounded-md border-0 py-2.5 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-500 sm:text-sm">
+                        </div>
+                        <div>
+                            <input type="text" placeholder="City"
+                                class="w-full bg-white rounded-md border-0 py-2.5 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-500 sm:text-sm">
+                        </div>
+                        <div>
+                            <select
+                                class="w-full bg-white rounded-md border-0 py-2.5 px-3.5 text-gray-400 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-green-500 sm:text-sm">
+                                <option disabled selected>Products</option>
+                                <option value="prod1">Product 1</option>
+                                <option value="prod2">Product 2</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select
+                                class="w-full bg-white rounded-md border-0 py-2.5 px-3.5 text-gray-400 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-green-500 sm:text-sm">
+                                <option disabled selected>Quantity(in MT)</option>
+                                <option value="1">1 MT</option>
+                                <option value="5">5 MT</option>
+                                <option value="10">10+ MT</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3 pt-2">
+                        <div class="flex items-center">
+                            <input id="whatsapp" name="whatsapp" type="checkbox"
+                                class="h-4 w-4 rounded border-gray-300 text-green-600 focus:ring-green-500">
+                            <label for="whatsapp" class="ml-2 block text-sm text-gray-200">Get updates on
+                                WhatsApp</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input id="terms" name="terms" type="checkbox"
+                                class="h-4 w-4 rounded border-gray-300 text-green-600 focus:ring-green-500">
+                            <label for="terms" class="ml-2 block text-sm text-gray-200">Terms & Conditions</label>
+                        </div>
+                    </div>
+
+                    <p class="text-xs text-gray-300 pt-2">
+                        The personal data shared by you will be used by Nitha aerospace, to connect with you directly or
+                        through its affiliates and partners.
+                    </p>
+
+                    <button type="submit"
+                        class=" rounded-md bg-green-500 w-300 py-3 px-4 text-sm font-semibold text-white shadow-sm hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-500 mt-6">
+                        SUBMIT A MESSAGE
+                    </button>
+                </form>
+            </div>
         </div>
     </section>
     <footer class=" bg-opacity-80">
@@ -792,38 +811,22 @@
             <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 text-center">
 
                 <div class="flex items-center justify-center space-x-2 text-gray-300 text-xs sm:text-sm font-medium">
-                    <svg class="w-5 h-5 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none"
-                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h6m3-3.75l-3 3m0 0l-3-3m3 3V1.5m6 5.25v11.25m6-11.25v11.25m0 0a2.25 2.25 0 0 1-2.25 2.25H4.5A2.25 2.25 0 0 1 2.25 21V5.25A2.25 2.25 0 0 1 4.5 3h15a2.25 2.25 0 0 1 2.25 2.25Z" />
-                    </svg>
+                    <img src="imgs/payment.png" alt="easy" style="width: 60px; height: 60px;">
                     <span>EASY PAYMENT OPTIONS</span>
                 </div>
 
                 <div class="flex items-center justify-center space-x-2 text-gray-300 text-xs sm:text-sm font-medium">
-                    <svg class="w-5 h-5 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none"
-                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182S13.536 6.09 12 7.272s-1.172 1.413 0 2.292m0 2.292.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182S13.536 10.09 12 11.272s-1.172 1.413 0 2.292m0 0-3 2.25m3-2.25 3 2.25M12 6H9c-1.657 0-3 1.343-3 3v6c0 1.657 1.343 3 3 3h6c1.657 0 3-1.343 3-3V9c0-1.657-1.343-3-3-3H12Z" />
-                    </svg>
+                    <img src="imgs/prive.png" alt="p" style="width: 60px; height: 60px;">
                     <span>AFFORDABLE PRICES</span>
                 </div>
 
                 <div class="flex items-center justify-center space-x-2 text-gray-300 text-xs sm:text-sm font-medium">
-                    <svg class="w-5 h-5 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none"
-                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                    </svg>
+                    <img src="imgs/quality.png" alt="easy" style="width: 60px; height: 60px;">
                     <span>QUALITY PRODUCTS ASSURED</span>
                 </div>
 
                 <div class="flex items-center justify-center space-x-2 text-gray-300 text-xs sm:text-sm font-medium">
-                    <svg class="w-5 h-5 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none"
-                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.333 9-6.03 9-11.623 0-1.659-.38-3.218-1.048-4.633A11.959 11.959 0 0 0 12 2.716Z" />
-                    </svg>
+                   <img src="imgs/verified.png" alt="easy" style="width: 60px; height: 60px;">
                     <span>VERIFIED COMPANY</span>
                 </div>
 
@@ -1688,7 +1691,7 @@
         <section class="top_box relative z-[90] overflow-hidden bg-[#6a9b5f] pb-24 text-white bg-dots"
             style="border-radius:10px; width: 80%; height: 30vh; z-index: 99; position: relative; left: 9%; box-shadow: 0px 20px 9px black; margin-top: 20px;">
 
-            <div class="absolute inset-0 z-0 bg-right bg-no-repeat bg-cover opacity-30 mix-blend-multiply" style="background-image: url('https://imgs.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=1600&q=80');background-size: cover;        /* make it fill the screen */
+            <div class="absolute inset-0 z-0 bg-right bg-no-repeat bg-cover opacity-70 mix-blend-multiply" style="background-image: url('imgs/wwu.png'); height: 200px; background-size: cover;        /* make it fill the screen */
 background-repeat: no-repeat;  /* prevent tiling */
 background-position: center;">
             </div>
@@ -1745,7 +1748,7 @@ background-position: center;">
                     </div>
 
                     <div class="px-8">
-                        <h3 class="mb-6 pc text-lg font-semibold text-white uppercase">COMPANY</h3>
+                        <h3 class="mb-6 pc text-lg font-semibold text-white">Company</h3>
                         <ul class="space-y- text-sm">
                             <li><a href="index.html" class="transition-colors hover:text-white">Home</a></li>
                             <li><a href="aboutus.html" class="transition-colors hover:text-white">About Us</a></li>
@@ -1756,7 +1759,7 @@ background-position: center;">
                     </div>
 
                     <div class="-1px">
-                        <h3 class="mb-6 text-lg font-semibold text-white uppercase">OUR PRODUCTS</h3>
+                        <h3 class="mb-6 text-lg font-semibold text-white ">Our Products</h3>
                         <ul class="grid grid-cols-1 gap-x-4">
                             <li class="mb-1"><a href="#" class="text-sm transition-colors hover:text-white">Bolt</a>
                             </li>
@@ -1793,7 +1796,7 @@ background-position: center;">
                     </div>
 
                     <div>
-                        <h3 class="mb-6 text-lg font-semibold text-white uppercase">FACILITIES</h3>
+                        <h3 class="mb-6 text-lg font-semibold text-white uppercase">Facilities</h3>
                         <ul class="grid grid-cols-1 gap-x-4">
                             <li class="mb-1"><a href="#" class="text-sm transition-colors hover:text-white">Casting</a>
                             </li>
