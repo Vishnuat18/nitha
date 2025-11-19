@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Viewport for responsive design, disabling user zoom -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>NITHA Aerospace - About us Page</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="imgs/nithaa-removebg-preview.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script type="text/javascript">
+        function redirectDesktop() {
+            // Check browser window width
+            if (window.innerWidth > 768) {
+                window.location.href = "aboutus.html"; // Change this to your actual desktop filename
+            }
+        }
+
+        // 1. Check immediately when the page loads
+        redirectDesktop();
+
+        // 2. Check whenever the window is resized
+        window.addEventListener('resize', redirectDesktop);
+    </script>
+
+    <script>
+        // MERGED Tailwind config from all parts
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-topbar-green': '#6a9b5f',
+                        'brand-nav-green': '#2e432c',
+                        'brand-partner-btn': '#a7c739',
+                        'brand-text-gray-light': '#d0d6d3',
+                        'brand-green-light': '#a7c739',
+                        'brand-green-dark': '#6a9b5f',
+                        'brand-text-dark': '#2a2a2a',
+                        'brand-text-gray': '#4a4a4a',
+                        'brand-green-bg': '#6a9b5f',
+                        'brand-green-title': '#a7c739',
+                        'brand-text-light': '#f0f3ef',
+                        'brand-text-dim': '#d0d6d3',
+                        'brand-green-bg-stats': '#344a40',
+                        'brand-icon-bg': '#546b5a',
+                        'brand-dark-text-stats': '#c3c9c2',
+                        'brand-border-green': '#6a9b5f',
+                        'brand-mid-green': '#6a9b5f',
+                        'brand-lime-green': '#a7c739',
+                        'brand-gradient-start': '#2a3a31',
+                        'brand-green-career': '#a8c63a',
+                        'brand-green-light-career': '#6f8b2d',
+                        'cert-bg': '#f8fcf3',
+                        'brand-dark-green-compat': '#344a40', // Compatibility for brand-dark-green
+                    },
+                    fontFamily: {
+                        'montserrat': ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        };
+    </script>
+
+    <style>
+        /* Applying the custom font globally */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+            /* Prevent horizontal scroll */
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* --- STYLES FROM ALL PARTS --- */
+        /* Custom clip-path for hexagonal shapes */
+        .hexagon-clip {
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        }
+
+        /* Dot pattern */
+        .bg-dots {
+            background-image: radial-gradient(circle, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
+            background-size: 10px 10px;
+        }
+
+        /* Custom glow effect for circles */
+        .circle-glow {
+            box-shadow:
+                0 0 10px rgba(0, 0, 0, 0.2),
+                inset 0 0 15px rgba(255, 255, 255, 0.1);
+        }
+
+        /* Dot pattern for light backgrounds */
+        .bg-dots-light {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10'%3E%3Crect width='10' height='10' fill='none'/%3E%3Ccircle cx='1' cy='1' r='1' fill='black' fill-opacity='0.1'/%3E%3C/svg%3E");
+        }
+
+        /* Curve Shape */
+        .top-curve {
+            clip-path: url(#top-curve-clip);
+        }
+
+        /* Mobile Menu Transition */
+        #mobile-menu {
+            transition: transform 0.3s ease-in-out;
+            transform: translateX(-100%);
+        }
+
+        #mobile-menu.open {
+            transform: translateX(0);
+        }
+
+        /* Text Shadows for better readability on images */
+        .text-shadow {
+            text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Helper to prevent scrollbar on horizontal scroll sections */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
+        }
+    </style>
+</head>
+
+<body class="bg-white">
+
+    <!-- 1. Mobile Header & Navigation -->
+    <header class="fixed w-full top-0 z-50 bg-white shadow-md">
+        <!-- Top Bar (Mobile) -->
+        <div class="bg-brand-topbar-green text-white text-[10px] py-2 px-4 flex justify-between items-center">
+            <a href="tel:+917092777033" class="inline-flex items-center">
+                <i class="fas fa-phone mr-2"></i>+91 95784 20672
+            </a>
+            <a href="mailto:marketing@nithaaerospace.in" class="inline-flex items-center">
+                <i class="fas fa-envelope mr-2"></i> marketing@nithaaerospace.in
+            </a>
+        </div>
+
+        <!-- Main Nav Bar -->
+        <div class="flex justify-between items-center px-4 py-3">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center">
+                <img src="imgs/Screenshot 2025-11-04 120806.png" alt="NITHA Logo" class="h-12 object-contain">
+            </a>
+
+            <!-- Hamburger Button -->
+            <button id="menu-btn" class="text-brand-nav-green focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Slide-out Mobile Menu -->
+        <div id="mobile-menu"
+            class="fixed inset-0 bg-white z-50 flex flex-col h-screen w-[80%] shadow-2xl border-r border-gray-200">
+            <div class="p-4 flex justify-between items-center border-b">
+                <span class="font-bold text-lg text-brand-nav-green">Menu</span>
+                <button id="close-menu-btn" class="text-gray-500 text-2xl">&times;</button>
+            </div>
+            <div class="flex flex-col p-4 space-y-4 overflow-y-auto">
+                <a href="index.html" class="text-lg font-semibold text-gray-800 border-b pb-2">Home</a>
+                <a href="aboutus.html" class="text-lg font-semibold text-gray-800 border-b pb-2">About Us</a>
+
+                <!-- Dropdown substitute -->
+                <div class="flex flex-col">
+                    <span class="text-lg font-semibold text-gray-800 border-b mb-2">Fasteners</span>
+                    <!-- <div class="pl-4 flex flex-col space-y-2 text-sm text-gray-600">
+                        <a href="#">Bolts & Nuts</a>
+                        <a href="#">Washers</a>
+                        <a href="#">Custom Parts</a>
+                    </div>
+                </div> -->
+
+                    <a href=""
+                        class="text-lg font-semibold text-gray-800 border-b pb-2 mt-4">Solutions</a>
+                    <a href=""
+                        class="text-lg font-semibold text-gray-800 border-b pb-2 mt-4">Downloads</a>
+                    <a href="contact.html" class="text-lg font-semibold text-gray-800 border-b pb-2 mt-4">Contact Us</a>
+
+                    <a href="#"
+                        class="bg-brand-partner-btn text-white text-center py-3 rounded-md font-bold mt-4">
+                        Become A Partner
+                    </a>
+                </div>
+            </div>
+            <!-- Overlay for menu -->
+            <!-- <div id="menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden"></div> -->
+    </header>
+
+    <!-- 2. Mobile Hero Section -->
+    <section class="relative w-full h-[80vh] mt-[88px] overflow-hidden">
+        <!-- Background Image -->
+        <img src="imgs/abt curved.png" alt="Industrial pouring molten metal"
+            class="absolute inset-0 w-full h-full object-cover z-0">
+        <!-- Overlay -->
+        <!-- <div class="absolute inset-0 bg-black/50 z-10"></div> -->
+
+        <!-- Content -->
+        <div class="relative z-20 h-full flex flex-col justify-center text-center text-white px-6">
+            <p class="text-xs tracking-wider  text-white mb-4 font-medium">ABOUT US</p>
+            <h1 class="text-2xl leading-tight font-extrabold mb-6 text-shadow">
+                NITHA AEROSPACE PVT LTD – INDIA'S TRUSTED AEROSPACE AND INDUSTRIAL FASTENER MANUFACTURER.
+            </h1>
+            <p class="text-sm text-white max-w-3xl mx-auto drop-shadow-md leading-relaxed">
+                We deliver precision-engineered superalloy fasteners for Aerospace, Oil & Gas, Shipbuilding, Automotive,
+                and Engineering sectors, built to global standards.
+            </p>
+        </div>
+    </section>
+
+    <main>
+        <section class="py-12 text-center">
+            <div class="container px-6 mx-auto">
+                <p class="mb-3 text-sm font-extrabold tracking-widest text-brand-green-light">Key Sectors</p>
+                <h2 class="text-3xl font-extrabold text-brand-text-dark">Industry Design, Inspiring Products</h2>
+                <p class="max-w-4xl mx-auto mt-4 font-bold text-base text-brand-text-gray">
+                    NAPL's commitment to Quality is reflected in our rigorous R&D and Testing processes.
+                </p>
+            </div>
+        </section>
+
+        <center>
+            <div class="relative w-full max-w-md px-4 mx-auto">
+                <img src="imgs/flower.png" alt="Product sectors diagram" class="w-full h-auto">
+            </div>
+        </center>
+
+        <section class="py-12 text-center bg-white">
+            <div class="container px-6 mx-auto">
+                <h2 class="text-3xl font-[900] text-brand-green-dark leading-tight">
+                    Rooted in India<br>Fastened with Excellence
+                </h2>
+                <p class="max-w-3xl mx-auto mt-4 text-sm text-brand-text-gray text-center leading-relaxed">
+                    NITHA Aerospace Pvt Ltd (NAPL) is a leading advanced manufacturer of superalloy fasteners, based in
+                    Tamil Nadu, India. We specialize in delivering high-strength,
+                    corrosion-resistant, and heat-stable fasteners for demanding sectors.
+                    Fasteners Forged for the Future.
+                </p>
+            </div>
+        </section>
+
+        <!-- Product Hexagons Section (Mobile) -->
+        <section class="py-12 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap justify-center gap-4">
+
+                    <div class="flex flex-col items-center w-[140px]">
+                        <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
+                            <div class="w-full h-full hexagon-clip flex items-center justify-center">
+                                <img src="imgs/bolt.png" alt="Bolt" class="max-w-full max-h-full object-contain">
+                            </div>
+                        </div>
+                        <p class="text-xs font-bold text-brand-text-dark mt-2">Bolt</p>
+                    </div>
+
+                    <div class="flex flex-col items-center w-[140px]">
+                        <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
+                            <div class="w-full h-full hexagon-clip flex items-center justify-center">
+                                <img src="imgs/circlip.png" alt="Circlips" class="max-w-full max-h-full object-contain">
+                            </div>
+                        </div>
+                        <p class="text-xs font-bold text-brand-text-dark mt-2">Circlips</p>
+                    </div>
+
+                    <div class="flex flex-col items-center w-[140px]">
+                        <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
+                            <div class="w-full h-full hexagon-clip flex items-center justify-center">
+                                <img src="imgs/nail.png" alt="Nail" class="max-w-full max-h-full object-contain">
+                            </div>
+                        </div>
+                        <p class="text-xs font-bold text-brand-text-dark mt-2">Nail</p>
+                    </div>
+
+                    <div class="flex flex-col items-center w-[140px]">
+                        <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
+                            <div class="w-full h-full hexagon-clip flex items-center justify-center">
+                                <img src="imgs/nnuts.png" alt="Nut" class="max-w-full max-h-full object-contain">
+                            </div>
+                        </div>
+                        <p class="text-xs font-bold text-brand-text-dark mt-2">Nut</p>
+                    </div>
+
+                    <div class="flex flex-col items-center w-[140px]">
+                        <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
+                            <div class="w-full h-full hexagon-clip flex items-center justify-center">
+                                <img src="imgs/pins.png" alt="Pin & Keys" class="max-w-full max-h-full object-contain">
+                            </div>
+                        </div>
+                        <p class="text-xs font-bold text-brand-text-dark mt-2">Pin & Keys</p>
+                    </div>
+
+                    <div class="flex flex-col items-center w-[140px]">
+                        <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
+                            <div class="w-full h-full hexagon-clip flex items-center justify-center">
+                                <img src="imgs/spacer.png" alt="Spacer & Standoff"
+                                    class="max-w-full max-h-full object-contain">
+                            </div>
+                        </div>
+                        <p class="text-xs font-bold text-brand-text-dark mt-2 text-center">Spacer & Standoff</p>
+                    </div>
+
+                    <div class="flex flex-col items-center w-[140px]">
+                        <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
+                            <div class="w-full h-full hexagon-clip flex items-center justify-center">
+                                <img src="imgs/rivert.png" alt="Rivert" class="max-w-full max-h-full object-contain">
+                            </div>
+                        </div>
+                        <p class="text-xs font-bold text-brand-text-dark mt-2">Rivert</p>
+                    </div>
+
+                    <div class="flex flex-col items-center w-[140px]">
+                        <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
+                            <div class="w-full h-full hexagon-clip flex items-center justify-center">
+                                <img src="imgs/screw.png" alt="Screw" class="max-w-full max-h-full object-contain">
+                            </div>
+                        </div>
+                        <p class="text-xs font-bold text-brand-text-dark mt-2">Screw</p>
+                    </div>
+
+                    <div class="flex flex-col items-center w-[140px]">
+                        <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
+                            <div class="w-full h-full hexagon-clip flex items-center justify-center">
+                                <img src="imgs/stud.png" alt="Stud & Rod" class="max-w-full max-h-full object-contain">
+                            </div>
+                        </div>
+                        <p class="text-xs font-bold text-brand-text-dark mt-2">Stud & Rod</p>
+                    </div>
+
+                    <div class="flex flex-col items-center w-[140px]">
+                        <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
+                            <div class="w-full h-full hexagon-clip flex items-center justify-center">
+                                <img src="imgs/washer.png" alt="Washer" class="max-w-full max-h-full object-contain">
+                            </div>
+                        </div>
+                        <p class="text-xs font-bold text-brand-text-dark mt-2">Washer</p>
+                    </div>
+
+                    <div class="flex flex-col items-center w-[140px]">
+                        <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
+                            <div class="w-full h-full hexagon-clip flex items-center justify-center">
+                                <img src="imgs/wire.png" alt="Wires" class="max-w-full max-h-full object-contain">
+                            </div>
+                        </div>
+                        <p class="text-xs font-bold text-brand-text-dark mt-2">Wires</p>
+                    </div>
+
+                    <div class="flex flex-col items-center w-[140px]">
+                        <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
+                            <div class="w-full h-full hexagon-clip flex items-center justify-center">
+                                <img src="imgs/hinge.png" alt="Hinge" class="max-w-full max-h-full object-contain">
+                            </div>
+                        </div>
+                        <p class="text-xs font-bold text-brand-text-dark mt-2">Hinge</p>
+                    </div>
+
+                    <div class="flex flex-col items-center w-[140px]">
+                        <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
+                            <div class="w-full h-full hexagon-clip flex items-center justify-center">
+                                <img src="imgs/clamp.png" alt="Clamp" class="max-w-full max-h-full object-contain">
+                            </div>
+                        </div>
+                        <p class="text-xs font-bold text-brand-text-dark mt-2">Clamp</p>
+                    </div>
+
+                    <div class="flex flex-col items-center w-[140px]">
+                        <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
+                            <div class="w-full h-full hexagon-clip flex items-center justify-center">
+                                <img src="imgs/latch.png" alt="Latch" class="max-w-full max-h-full object-contain">
+                            </div>
+                        </div>
+                        <p class="text-xs font-bold text-brand-text-dark mt-2">Latch</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Valuable Customers (Mobile) -->
+        <section class="py-8 bg-gray-50 overflow-hidden">
+            <h2 class="text-center text-sm font-bold  text-brand-green-title mb-6 tracking-widest">
+                Our Valuable Customers
+            </h2>
+            <div class="flex overflow-x-auto space-x-8 px-4 pb-4 no-scrollbar items-center">
+                <img src="imgs/c1.png" alt="KK Processors Logo" class="h-10 object-contain flex-shrink-0">
+                <img src="imgs/c2.png" alt="BHEL Logo" class="h-8 object-contain flex-shrink-0">
+                <img src="imgs/c3.png" alt="Danprel Logo" class="h-12 object-contain flex-shrink-0">
+                <img src="imgs/c4.png" alt="KK Processors Logo" class="h-8 object-contain flex-shrink-0">
+                <img src="imgs/c5.png" alt="BHEL Logo" class="h-10 object-contain flex-shrink-0">
+                <img src="imgs/c6.png" alt="Danprel Logo" class="h-10 object-contain flex-shrink-0">
+            </div>
+        </section>
+
+        <!-- About NAPL (Stacked) -->
+        <section class="grid grid-cols-1">
+            <div>
+                <img src="imgs/OIP.webp" alt="Heat treatment of a metal fastener" class="object-cover w-full h-64">
+            </div>
+            <div class="flex flex-col justify-center p-6 bg-brand-green-bg text-brand-text-light">
+                <p class="mb-3 font-bold tracking-widest  text-brand-text-dim text-xs">
+                    About Us
+                </p>
+                <h2 class="mb-6 font-extrabold text-white text-2xl leading-tight">
+                    About NAPL – NITHA Aerospace Private Limited
+                </h2>
+                <div class="space-y-4 text-sm leading-relaxed text-left">
+                    <p>Nitha Aerospace Pvt Ltd (NAPL) is a leading metallurgical fastener manufacturer in India...</p>
+                    <p>As an AS9100D-certified 'fastener supplier', our products are engineered to precise dimensional
+                        tolerances...</p>
+                    <p>At NAPL, we combine advanced manufacturing technologies with rigorous quality control systems...
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vision/Mission (Stacked) -->
+        <section class="py-16 px-6">
+            <div class="container mx-auto">
+                <div class="mb-12 text-center">
+                    <h2 class="text-3xl font-extrabold text-brand-text-dark">Forged with Passion,<br>Built for
+                        India</h2>
+                </div>
+                <div class="grid max-w-6xl gap-12 mx-auto md:grid-cols-1">
+                    <div>
+                        <p
+                            class="mb-4 text-sm font-bold tracking-widest  text-brand-green-dark underline text-center">
+                            Vision</p>
+                        <h3 class="text-xl font-semibold text-gray-500 text-center">
+                            To be the Leading Global Manufacturer of High-Quality Fasteners for
+                            <span class="italic font-bold text-brand-green-dark">Aviation, Space, Defence, Oil & Gas,
+                                Medical, Nuclear and other engineering industries</span>
+                            through Advanced Technology and Innovation.
+                        </h3>
+                    </div>
+                    <div class="flex gap-6">
+                        <div class="w-1 bg-brand-green-dark/30"></div>
+                        <div>
+                            <p class="mb-4 text-sm font-bold tracking-widest  text-brand-green-dark underline">
+                                Mission
+                            </p>
+                            <p class="mb-6 text-brand-text-gray text-sm">
+                                To be a global leader in fasteners manufacturing by setting benchmarks for Quality and
+                                Service followed by
+                                The principles of CPES
+                            </p>
+                            <ul class="space-y-4">
+                                <li class="flex items-center gap-4">
+                                    <div
+                                        class="flex items-center justify-center w-10 h-10 font-bold text-white bg-brand-green-dark hexagon-clip flex-shrink-0">
+                                        C</div><span class="text-base font-semibold text-brand-text-gray">Customer
+                                        Satisfaction</span>
+                                </li>
+                                <li class="flex items-center gap-4">
+                                    <div
+                                        class="flex items-center justify-center w-10 h-10 font-bold text-white bg-brand-green-dark hexagon-clip flex-shrink-0">
+                                        P</div><span class="text-base font-semibold text-brand-text-gray">Performance
+                                        Improvement</span>
+                                </li>
+                                <li class="flex items-center gap-4">
+                                    <div
+                                        class="flex items-center justify-center w-10 h-10 font-bold text-white bg-brand-green-dark hexagon-clip flex-shrink-0">
+                                        E</div><span class="text-base font-semibold text-brand-text-gray">Employee
+                                        Involvement</span>
+                                </li>
+                                <li class="flex items-center gap-4">
+                                    <div
+                                        class="flex items-center justify-center w-10 h-10 font-bold text-white bg-brand-green-dark hexagon-clip flex-shrink-0">
+                                        S</div><span class="text-base font-semibold text-brand-text-gray">Social
+                                        Responsibility</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Minds/Policy (Stacked) -->
+        <section class="py-16 px-6 bg-gray-50/50">
+            <div class="container mx-auto">
+                <div class="grid max-w-6xl gap-10 mx-auto">
+
+                    <div class="space-y-6 text-brand-text-gray">
+                        <h2 class="text-2xl font-bold text-brand-text-dark">The Minds Behind the Materials</h2>
+                        <p class="text-sm leading-relaxed">At NITHA Aerospace Pvt Ltd, our team is the foundation of our
+                            engineering excellence...</p>
+
+                        <div>
+                            <h2 class="mb-6 text-2xl font-bold text-brand-text-dark">IMS-POLICY</h2>
+                            <div class="space-y-4 text-sm leading-relaxed">
+                                <p>We at NITHA Aerospace Private Limited, Manufacture and Supply of Fasteners and
+                                    Machined Components that are committed to meet customer requirements consistently by
+                                    focusing on Quality, Delivery and Response. This is achieved through integrated
+                                    teamwork and continual improvement. </p>
+                                <p>We ensure compliance with the highest industry Standards, applicable Regulatory
+                                    Requirements, and we are dedicated to protecting the environment...</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-10 text-brand-text-gray">
+                        <div>
+                            <h2 class="mb-6 text-2xl font-bold text-brand-text-dark">What Defines Our Leadership?</h2>
+                            <ul class="space-y-3 text-sm">
+                                <li class="flex items-start gap-3"><i
+                                        class="mt-1 text-lg fas fa-check-circle text-brand-green-dark"></i><span>Deep
+                                        domain knowledge in aerospace, metallurgy, and manufacturing</span></li>
+                                <li class="flex items-start gap-3"><i
+                                        class="mt-1 text-lg fas fa-check-circle text-brand-green-dark"></i><span>A
+                                        commitment to indigenization and nation-building</span></li>
+                                <li class="flex items-start gap-3"><i
+                                        class="mt-1 text-lg fas fa-check-circle text-brand-green-dark"></i><span>Decision-making
+                                        grounded in technical data, compliance, and ethics</span></li>
+                                <li class="flex items-start gap-3"><i
+                                        class="mt-1 text-lg fas fa-check-circle text-brand-green-dark"></i><span>On-the-ground
+                                        leadership — not just boardroom presence</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <hr>
+        <!-- Leadership (Stacked) -->
+        <section class="py-16 text-brand-text-gray">
+            <div class="container px-6 mx-auto">
+                <div class="max-w-3xl mx-auto mb-12 text-center">
+                    <p class="mb-3 text-sm font-bold tracking-widest  text-brand-lime-green">Meet Our Leadership Team</p>
+                    <h2 class="text-3xl font-extrabold text-gray-900">Leading with Vision. Delivering with
+                        Precision.</h2>
+                </div>
+                <div class="max-w-6xl mx-auto space-y-12">
+                    <div class="grid items-center gap-10">
+                        <div class="flex justify-center">
+                            <div class="w-64 h-64 bg-brand-border-green p-1 hexagon-clip">
+                                <div class="w-full h-full bg-white hexagon-clip"><img src="imgs/vasa.jpg"
+                                        alt="Vasanth Murugan" class="object-cover w-full h-full hexagon-clip"></div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <h3 class="text-2xl font-extrabold text-gray-900">Vasanth Murugan, <span
+                                    class="font-semibold text-gray-700">Founder & CEO</span></h3>
+                            <p class="mt-2 text-lg font-medium text-gray-700">One Step Forward,</p>
+                            <p class="mt-4 text-gray-600 text-sm leading-relaxed">With a background in heat treatment
+                                Family and
+                                passion towards
+                                Metallurgy...</p>
+                            <p class="mt-3 text-xs text-gray-800"><strong class="font-bold">Expertise:</strong>
+                                Aerospace materials, fastener engineering...</p>
+                        </div>
+                    </div>
+                    <div class="grid items-center gap-10">
+                        <div class="flex justify-center">
+                            <div class="w-64 h-64 bg-brand-border-green p-1 hexagon-clip">
+                                <div class="w-full h-full bg-white p-1 hexagon-clip"><img src="imgs/karthik_ashogan.jpg"
+                                        alt="Maanickavasagam" class="object-cover w-full h-full hexagon-clip"></div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <h3 class="text-xl font-extrabold text-gray-900">Mr. Karthick Asokan M.S (The
+                                Netherlands), MBA
+                                (Defence &Aerospace)- (MoD)Italy
+                            </h3>
+                            <p class="mt-2 text-lg font-medium text-gray-700">Vice President - Nitha
+                                Aerospace
+                                Private Limited and Defence (Global)-India</p>
+                            <p class="mt-4 text-gray-600 text-sm">Ex - Country Head (Torpedo)Leonardo Sp.A-Italy </p>
+                            <p class="mt-3 text-gray-600 text-sm">Philips Innovation Award Winner - The Netherlands.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Values (Stacked) -->
+        <section class="relative bg-brand-dark-green-compat text-white pb-16 pt-32 bg-dots overflow-hidden">
+
+            <!-- Mobile-friendly curves -->
+            <div class="top-curve absolute top-0 left-0 w-full h-[120px] bg-brand-mid-green z-0"></div>
+            <div class="top-curve absolute top-0 left-0 w-full h-[100px] bg-white z-10"></div>
+
+            <div class="container relative z-20 px-6 mx-auto ">
+                <div class="max-w-4xl mx-auto mb-12 text-center">
+                    <p class="mb-3 text-sm font-bold tracking-widest  text-brand-lime-green">Core Values</p>
+                    <h1 class="text-3xl font-extrabold text-white">Our values guide our
+                        decisions
+                    </h1>
+                    <p class="mt-6 text-base text-brand-text-light text-left leading-relaxed">
+                        At Nitha Aerospace Pvt Ltd (NAPL), we don't just manufacture fasteners - we build trust, ensure
+                        reliability,
+                        and uphold standards that define critical industries.
+                    </p>
+                </div>
+
+                <div class="grid gap-10 md:grid-cols-1">
+                    <div class="text-center">
+                        <div
+                            class="relative inline-flex items-center justify-center w-16 h-16 mb-4 bg-brand-lime-green hexagon-clip">
+                            <i class="text-2xl fas fa-clock text-brand-dark-green-compat"></i>
+                        </div>
+                        <h3 class="mb-3 text-lg font-bold text-white">On-time delivery</h3>
+                        <p class="mb-4 text-sm font-semibold text-white">Commitment you can schedule.</p>
+                        <p class="text-sm leading-relaxed text-brand-text-light text-left">
+                            We understand that in aerospace, oil & gas, and infrastructure, delays aren't just costly —
+                            they're critical.
+                        </p>
+                    </div>
+
+                    <div class="text-center">
+                        <div
+                            class="relative inline-flex items-center justify-center w-16 h-16 mb-4 bg-brand-lime-green hexagon-clip">
+                            <i class="text-2xl fas fa-lightbulb text-brand-dark-green-compat"></i>
+                        </div>
+                        <h3 class="mb-3 text-lg font-bold text-white">Reducing Rejections and Rework</h3>
+                        <p class="mb-4 text-sm font-semibold text-white">Zero-defect mindset. Every batch</p>
+                        <p class="text-sm leading-relaxed text-brand-text-light text-left">
+                            Through robust in-process controls and end-to-end quality gates, we minimize variability and
+                            ensure every
+                            part meets specification.
+                        </p>
+                    </div>
+
+                    <div class="text-center">
+                        <div
+                            class="relative inline-flex items-center justify-center w-16 h-16 mb-4 bg-brand-lime-green hexagon-clip">
+                            <i class="text-2xl fas fa-award text-brand-dark-green-compat"></i>
+                        </div>
+                        <h3 class="mb-3 text-lg font-bold text-white">Integrating product Quality,</h3>
+                        <p class="mb-4 text-sm font-semibold text-white">Quality isn’t added later – it starts at
+                            design.
+                        </p>
+                        <p class="text-sm leading-relaxed text-brand-text-light text-left">
+                            From Design to casting, forging to finish, quality is built into every step. We follow
+                            AS9100D,
+                            API Q1 & ISO 9001
+                            protocols for upfront reliability.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Work With Us (Mobile) -->
+        <section class="relative text-white overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img src="imgs/wk1.png" alt="Factory worker" class="object-cover w-full h-full">
+                <div class="absolute inset-0 bg-black/60"></div>
+            </div>
+            <div class="container relative z-10 px-6 py-16 mx-auto text-center">
+                <p class="mb-3 text-sm font-semibold tracking-widest text-brand-green-career">Careers</p>
+                <h2 class="mb-6 text-3xl font-extrabold">Why Work With Us?</h2>
+                <ul class="space-y-3 text-base text-left max-w-xs mx-auto">
+                    <li class="flex items-center"><i
+                            class="mr-3 text-lg fas fa-check-circle text-brand-green-career"></i>Work on
+                        mission-critical components</li>
+                    <li class="flex items-center"><i
+                            class="mr-3 text-lg fas fa-check-circle text-brand-green-career"></i>Collaborate with
+                        experts in metallurgy</li>
+                    <li class="flex items-center"><i
+                            class="mr-3 text-lg fas fa-check-circle text-brand-green-career"></i>Be part of a Make
+                        in India movement</li>
+                </ul>
+                <a href="#"
+                    class="inline-flex items-center px-8 py-3 mt-10 text-sm font-bold text-gray-900 bg-white rounded-md shadow-lg">
+                    Join Our Team <i class="ml-3 fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Certifications (Mobile) -->
+        <section class="py-16 bg-white">
+            <div class="container px-6 mx-auto">
+                <div class="mb-12 text-center">
+                    <p class="mb-2 text-sm font-semibold tracking-widest  text-brand-green-title">
+                        Approvals</p>
+                    <h2 class="text-2xl font-extrabold text-gray-900">Certificaion - In process</h2>
+                </div>
+                <!-- UPDATED Grid to show all 7 certs -->
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="flex flex-col items-center p-4 text-center bg-cert-bg rounded-lg shadow-sm"
+                        style="background: #eff7f1;">
+                        <img src="imgs/iso9001.png" alt="ISO9001:2015 Logo" class="h-16 mb-2">
+                        <h3 class="mb-1 text-xs font-bold text-gray-900">ISO9001:2015</h3>
+                    </div>
+                    <div class="flex flex-col items-center p-4 text-center bg-cert-bg rounded-lg shadow-sm"
+                        style="background: #eff7f1;">
+                        <img src="imgs/apiq.png" alt="APIQ1 Logo" class="h-16 mb-2">
+                        <h3 class="mb-1 text-xs font-bold text-gray-900">APIQ1</h3>
+                    </div>
+                    <div class="flex flex-col items-center p-4 text-center bg-cert-bg rounded-lg shadow-sm"
+                        style="background: #eff7f1;">
+                        <img src="imgs/nabl.png" alt="NABL Logo" class="h-16 mb-2">
+                        <h3 class="mb-1 text-xs font-bold text-gray-900">NABL</h3>
+                    </div>
+                    <div class="flex flex-col items-center p-4 text-center bg-cert-bg rounded-lg shadow-sm"
+                        style="background: #eff7f1;">
+                        <img src="imgs/iso45001.png" alt="ISO45001:2018 Logo" class="h-16 mb-2">
+                        <h3 class="mb-1 text-xs font-bold text-gray-900">ISO45001:2018</h3>
+                    </div>
+                    <div class="flex flex-col items-center p-4 text-center bg-cert-bg rounded-lg shadow-sm"
+                        style="background: #eff7f1;">
+                        <img src="imgs/as9100.png" alt="AS91000 Logo" class="h-16 mb-2">
+                        <h3 class="mb-1 text-xs font-bold text-gray-900">AS91000</h3>
+                    </div>
+                    <div class="flex flex-col items-center p-4 text-center bg-cert-bg rounded-lg shadow-sm"
+                        style="background: #eff7f1;">
+                        <img src="imgs/api20.png" alt="API1 20E Logo" class="h-16 mb-2">
+                        <h3 class="mb-1 text-xs font-bold text-gray-900">API1 20E</h3>
+                    </div>
+                    <div class="flex flex-col items-center p-4 text-center bg-cert-bg rounded-lg shadow-sm"
+                        style="background: #eff7f1;">
+                        <img src="imgs/iso14001.png" alt="ISO14001:2015 Logo" class="h-16 mb-2">
+                        <h3 class="mb-1 text-xs font-bold text-gray-900">ISO14001:2015</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SVG Defs for Curves -->
+        <svg class="absolute w-0 h-0">
+            <defs>
+                <clipPath id="top-curve-clip" clipPathUnits="objectBoundingBox">
+                    <path d="M 0,0 L 1,0 L 1,0.9 C 0.75,0.4 0.25,0.4 0,0.9 Z"></path>
+                </clipPath>
+            </defs>
+        </svg>
+
+        <!-- Pre-Footer CTA (Mobile) -->
+        <section
+            class="relative z-10 overflow-hidden bg-[#6a9b5f] text-white py-12 px-6 text-center -mb-16 w-[90%] mx-auto rounded-lg shadow-xl mt-12">
+            <div class="absolute inset-0 z-0 bg-right bg-no-repeat bg-cover opacity-30 mix-blend-multiply"
+                style="background-image: url('imgs/civil7-1.jpg');">
+            </div>
+            <div class="relative z-2">
+                <p class="text-xs font-semibold tracking-wider ">ONE PLATFORM FOR ALL REQUIREMENTS</p>
+                <h2 class="text-2xl font-extrabold tracking-tight  my-3">Which products are you looking for?
+                </h2>
+                <a href="#"
+                    class="inline-flex items-center px-6 py-3 text-sm font-bold text-[#6a9b5f]  bg-white rounded-md shadow-lg">
+                    Explore Now
+                    <i class="ml-3 fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Full Footer (Responsive) - UPDATED STRUCTURE -->
+        <footer
+            class="relative z-0 pt-32 pb-16 text-gray-300 bg-gradient-to-t from-[#0b180d] via-[#172c19] to-[#1a471c] w-full">
+            <div class="absolute top-0 left-0 w-full h-24 bg-[#1a471c] rounded-[50%] transform -translate-y-1/2">
+            </div>
+            <div class="container px-6 mx-auto">
+                <div class="grid grid-cols-1 gap-8 sm:grid-cols-2">
+
+                    <!-- Column 1: Logo & Address (Takes full width on small, then half) -->
+                    <div class="sm:col-span-2 lg:col-span-1">
+                        <div class="flex items-center mb-4">
+                            <img src="imgs/Screenshot 2025-11-04 120806.png" alt="Nitha Aerospace Logo"
+                                class="h-16 object-contain">
+                        </div>
+                        <h3 class="mb-4 text-md font-semibold text-white">Head Quaters And Office</h3>
+                        <p class="text-sm leading-relaxed">Plot no. 140 SIDCO Women Industrial Estate Karuppur,
+                            Tamilnadu, India,
+                            Salem - 636 011
+                        </p>
+                        <h3 class="mt-4 mb-2 text-sm font-semibold text-white ">CALL US ON</h3>
+                        <p class="text-sm leading-relaxed"><a href="tel:+918220538534">+91 82205 38534</a></p>
+                        <p class="text-sm leading-relaxed"><a href="tel:+919578420672">+91 95784 20672</a></p>
+                        <h3 class="mt-4 mb-2 text-sm font-semibold text-white ">OUR MAILBOX</h3>
+                        <p class="text-sm leading-relaxed"><a
+                                href="mailto:marketing@nithaaerospace.in">marketing@nithaaerospace.in</a></p>
+                        <p class="text-sm leading-relaxed"><a
+                                href="mailto:support@nithaaerospace.in">support@nithaaerospace.in</a></p>
+                    </div>
+
+                    <!-- Link Columns: Use 2-col grid for links -->
+                    <div class="grid grid-cols-2 gap-8">
+                        <!-- Column 2: Company -->
+                        <div>
+                            <h3 class="mb-6 text-md font-semibold text-white">Company</h3>
+                            <ul class="space-y-2 text-sm">
+                                <li><a href="index.html" class="transition-colors hover:text-white">Home</a></li>
+                                <li><a href="aboutus.html" class="transition-colors hover:text-white">About Us</a></li>
+                                <li><a href="#" class="transition-colors hover:text-white">Fasteners</a></li>
+                                <li><a href="#" class="transition-colors hover:text-white">Downloads</a></li>
+                                <li><a href="contact.html" class="transition-colors hover:text-white">Contact us</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Column 4: Facilities Links -->
+                        <div>
+                            <h3 class="mb-6 text-md font-semibold text-white ">Facilities</h3>
+                            <ul class="grid grid-cols-1 gap-y-1 text-sm">
+                                <li><a href="#" class="transition-colors hover:text-white">Casting</a></li>
+                                <li><a href="#" class="transition-colors hover:text-white">Forging</a></li>
+                                <li><a href="#" class="transition-colors hover:text-white">Precision Machining</a></li>
+                                <li><a href="#" class="transition-colors hover:text-white">Heat Treatment</a></li>
+                                <li><a href="#" class="transition-colors hover:text-white">Surface Treatment</a></li>
+                                <li><a href="#" class="transition-colors hover:text-white">R&D</a></li>
+                                <li><a href="#" class="transition-colors hover:text-white">Testing</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Column 3: Products Links -->
+                    <div>
+                        <h3 class="mb-6 text-md font-semibold text-white">Our Products</h3>
+                        <!-- Use 2-col grid for long product list on mobile -->
+                        <ul class="grid grid-cols-2 gap-x-4 gap-y-1 text-sm">
+                            <li><a href="#" class="transition-colors hover:text-white">Bolt</a></li>
+                            <li><a href="#" class="transition-colors hover:text-white">Bush</a></li>
+                            <li><a href="#" class="transition-colors hover:text-white">Circlips</a></li>
+                            <li><a href="#" class="transition-colors hover:text-white">Nail</a></li>
+                            <li><a href="#" class="transition-colors hover:text-white">Nut</a></li>
+                            <li><a href="#" class="transition-colors hover:text-white">Pin and Key</a></li>
+                            <li><a href="#" class="transition-colors hover:text-white">Rivvert</a></li>
+                            <li><a href="#" class="transition-colors hover:text-white">Screw</a></li>
+                            <li><a href="#" class="transition-colors hover:text-white">Stud & Rod</a></li>
+                            <li><a href="#" class="transition-colors hover:text-white">Washer</a></li>
+                            <li><a href="#" class="transition-colors hover:text-white">Hinge</a></li>
+                            <li><a href="#" class="transition-colors hover:text-white">Latch</a></li>
+                            <li><a href="#" class="transition-colors hover:text-white">Clamp</a></li>
+                            <li><a href="#" class="transition-colors hover:text-white">Wires</a></li>
+                            <li><a href="#" class="transition-colors hover:text-white">Spacer & Standoff</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 5: Subscribe (Takes full width on small, then half) -->
+                    <div class="sm:col-span-2 lg:col-span-1">
+                        <h3 class="mb-6 text-md font-semibold text-white ">SUBSCRIBE OUR NEWSLETTER</h3>
+                        <p class="mb-4 text-sm">Be the first to receive the great deals and news</p>
+                        <form>
+                            <input type="email" placeholder="Enter your email address"
+                                class="w-full px-4 py-3 text-sm text-gray-900 rounded-md">
+                            <button type="submit"
+                                class="w-full px-4 py-3 mt-3 text-sm font-semibold text-white  bg-[#709a67] rounded-md transition-colors hover:bg-opacity-90">
+                                Subscribe Now
+                            </button>
+                        </form>
+                        <div class="flex items-center justify-center p-2 mt-4 mx-auto"
+                            style="width: 150px; height: 150px;">
+                            <img src="imgs/output-onlinepngtools.png" alt="ISO 9001 Logo" class="object-contain h-full">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Copyright Bar (Responsive) -->
+        <div class="relative z-20 py-4 text-gray-400 text-center"
+            style="background: #0b180d; border-top: 1px solid #334;">
+            <div class="container px-6 mx-auto text-xs">
+                <p class="mb-4">
+                    www.nithaaerospace.in © Copyright and private limited. All Rights Reserved
+                </p>
+                <div class="flex space-x-6 text-base justify-center">
+                    <a href="#" class="transition-colors hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="transition-colors hover:text-white"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="transition-colors hover:text-white"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="transition-colors hover:text-white"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="transition-colors hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // --- Mobile Menu Logic ---
+            const menuBtn = document.getElementById('menu-btn');
+            const closeMenuBtn = document.getElementById('close-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuOverlay = document.getElementById('menu-overlay');
+
+            function toggleMenu() {
+                mobileMenu.classList.toggle('open');
+                if (mobileMenu.classList.contains('open')) {
+                    menuOverlay.classList.remove('hidden');
+                    document.body.style.overflow = 'hidden'; // Disable scrolling
+                } else {
+                    menuOverlay.classList.add('hidden');
+                    document.body.style.overflow = ''; // Enable scrolling
+                }
+            }
+
+            if (menuBtn) menuBtn.addEventListener('click', toggleMenu);
+            if (closeMenuBtn) closeMenuBtn.addEventListener('click', toggleMenu);
+            if (menuOverlay) menuOverlay.addEventListener('click', toggleMenu);
+
+            console.log("Mobile About Us Page Updated Successfully");
+        });
+    </script>
+</body>
+
+</html>
