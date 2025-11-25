@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Viewport for responsive design, disabling user zoom -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>NITHA Aerospace - Mobile Contact</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="imgs/nithaa-removebg-preview.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script type="text/javascript">
+        function redirectDesktop() {
+            // Check browser window width
+            if (window.innerWidth > 768) {
+                window.location.href = "contact.html"; // Change this to your actual desktop filename
+            }
+        }
+
+        // 1. Check immediately when the page loads
+        redirectDesktop();
+
+        // 2. Check whenever the window is resized
+        window.addEventListener('resize', redirectDesktop);
+    </script>
+
+    <script>
+        // Redirect back to desktop if screen is large
+        if (screen.width > 768) {
+            window.location = "contact.html"; // Assumes desktop file is contact.html
+        }
+
+        // MERGED Tailwind config from all parts
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-topbar-green': '#6a9b5f',
+                        'brand-nav-green': '#2e432c',
+                        'brand-partner-btn': '#6A8A61',
+                        'brand-text-gray-light': '#d0d6d3',
+                        'brand-green-light': '#4a6c4b',
+                        'brand-green-dark': '#6a9b5f',
+                        'brand-text-dark': '#2a2a2a',
+                        'brand-text-gray': '#4a4a4a',
+                        'brand-green-bg': '#6a9b5f',
+                        'brand-green-title': '#a7c739',
+                        'brand-text-light': '#f0f3ef',
+                        'brand-text-dim': '#d0d6d3',
+                        'brand-green-bg-stats': '#344a40',
+                        'brand-icon-bg': '#546b5a',
+                        'brand-dark-text-stats': '#c3c9c2',
+                        'brand-border-green': '#6a9b5f',
+                        'brand-mid-green': '#6a9b5f',
+                        'brand-lime-green': '#a7c739',
+                        'brand-gradient-start': '#2a3a31',
+                        'brand-green-career': '#a8c63a',
+                        'brand-green-light-career': '#a7c739',
+                        'cert-bg': '#f8fcf3',
+                        'brand-gray-input': '#F0F0F0',
+                        'brand-dark-green-compat': '#344a40', // Compatibility
+                    },
+                    fontFamily: {
+                        'montserrat': ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        };
+    </script>
+
+    <style>
+        /* Applying the custom font globally */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+            /* Prevent horizontal scroll */
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Custom clip-path for hexagonal shapes */
+        .hexagon-clip {
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        }
+
+        /* Dot pattern */
+        .bg-dots {
+            background-image: radial-gradient(circle, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
+            background-size: 10px 10px;
+        }
+
+        /* Dot pattern for light backgrounds */
+        .bg-dots-light {
+            background-image: radial-gradient(circle at 1px 1px, #d1d5db 0.5px, transparent 0);
+            background-size: 20px 20px;
+        }
+
+        /* Mobile Menu Transition */
+        #mobile-menu {
+            transition: transform 0.3s ease-in-out;
+            transform: translateX(-100%);
+        }
+
+        #mobile-menu.open {
+            transform: translateX(0);
+        }
+
+        /* Text Shadows for better readability on images */
+        .text-shadow {
+            text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="bg-white">
+
+    <!-- 1. Mobile Header & Navigation -->
+    <header class="fixed w-full top-0 z-50 bg-white shadow-md">
+        <!-- Top Bar (Mobile) -->
+        <div class="bg-brand-topbar-green text-white text-[10px] py-2 px-4 flex justify-between items-center">
+            <a href="tel:+917092777033" class="inline-flex items-center">
+                <i class="fas fa-phone-alt mr-2"></i> +91 95784 20672
+            </a>
+            <a href="mailto:marketing@nithaaerospace.in" class="inline-flex items-center">
+                <i class="fas fa-envelope mr-2"></i> marketing@nithaaerospace.in
+            </a>
+        </div>
+
+        <!-- Main Nav Bar -->
+        <div class="flex justify-between items-center px-4 py-3">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center">
+                <img src="imgs/Screenshot 2025-11-04 120806.png" alt="NITHA Logo" class="h-12 object-contain">
+            </a>
+
+            <!-- Hamburger Button -->
+            <button id="menu-btn" class="text-brand-nav-green focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Slide-out Mobile Menu -->
+        <div id="mobile-menu"
+            class="fixed inset-0 bg-white z-50 flex flex-col h-screen w-[80%] shadow-2xl border-r border-gray-200">
+            <div class="p-4 flex justify-between items-center border-b">
+                <span class="font-bold text-lg text-brand-nav-green">Menu</span>
+                <button id="close-menu-btn" class="text-gray-500 text-2xl">&times;</button>
+            </div>
+            <div class="flex flex-col p-4 space-y-4 overflow-y-auto">
+                <a href="index.html" class="text-lg font-semibold text-gray-800 border-b pb-2">Home</a>
+                <a href="aboutus.html" class="text-lg font-semibold text-gray-800 border-b pb-2">About Us</a>
+
+                <!-- Dropdown substitute -->
+                <div class="flex flex-col">
+                    <span class="text-lg font-semibold text-gray-800 border-b mb-2">Fasteners</span>
+                    <!-- <div class="pl-4 flex flex-col space-y-2 text-sm text-gray-600">
+                        <a href="#">Bolts & Nuts</a>
+                        <a href="#">Washers</a>
+                        <a href="#">Custom Parts</a>
+                    </div> -->
+                </div>
+
+                <a href="" class="text-lg font-semibold text-gray-800 border-b pb-2">Solutions</a>
+                <a href="" class="text-lg font-semibold text-gray-800 border-b pb-2">Downloads</a>
+                <a href="contact.html" class="text-lg font-semibold text-gray-800 border-b pb-2">Contact Us</a>
+
+                <a href="" class="bg-brand-partner-btn text-white text-center py-3 rounded-md font-bold mt-4">
+                    BECOME A PARTNER
+                </a>
+            </div>
+        </div>
+        <!-- Overlay for menu -->
+        <div id="menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden"></div>
+    </header>
+
+    <!-- 2. Mobile Hero Section -->
+    <section class="relative w-full h-[60vh] mt-[88px] overflow-hidden">
+        <!-- Background Image -->
+        <img src="imgs/nutbolt.avif" alt="Nuts and Bolts Background"
+            class="absolute inset-0 w-full h-full object-cover z-0">
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black/60 z-10"></div>
+
+        <!-- Content -->
+        <div class="relative z-20 h-full flex flex-col justify-center text-center text-white px-6">
+            <p class="text-xs tracking-wider uppercase text-white mb-2 font-medium">REACH US ON OUR SUPPORT TEAM</p>
+            <h1 class="text-4xl leading-tight font-extrabold mb-4 text-shadow">
+                CONTACT US
+            </h1>
+            <p class="text-sm text-white max-w-3xl mx-auto font-bold drop-shadow-md">
+                Industry Design, Inspiring Products
+            </p>
+        </div>
+    </section>
+
+    <!-- 3. Main Content (Form + Info) -->
+    <main class="relative z-10">
+        <div class="absolute top-0 right-0 h-full w-1/2 bg-dots-light z-0 opacity-60"></div>
+
+        <div class="relative container mx-auto py-12 px-4 z-10">
+
+            <div class="max-w-6xl w-full mx-auto grid grid-cols-1 gap-12">
+
+                <!-- Form Section -->
+                <div class="bg-white p-6 rounded-lg shadow-2xl">
+                    <div>
+                        <p class="text-sm font-bold text-gray-700 tracking-wider">CONTACT US</p>
+                        <h1 class="text-2xxl font-extrabold text-brand-green-light my-2">CONNECT WITH US TODAY</h1>
+                        <p class="text-gray-600 text-sm">Share your details and we will contact you shortly</p>
+                    </div>
+
+                    <form class="mt-8">
+                        <!-- Mobile: All fields stacked -->
+                        <div class="grid grid-cols-1 gap-4">
+                            <input type="text" placeholder="Business Name"
+                                class="bg-brand-gray-input rounded-md p-3 w-full placeholder-gray-500 border-none ring-0 focus:ring-2 focus:ring-brand-green-light text-sm">
+
+                            <input type="text" placeholder="First & Last name"
+                                class="bg-brand-gray-input rounded-md p-3 w-full placeholder-gray-500 border-none ring-0 focus:ring-2 focus:ring-brand-green-light text-sm">
+
+                            <input type="email" placeholder="Business EMail ID"
+                                class="bg-brand-gray-input rounded-md p-3 w-full placeholder-gray-500 border-none ring-0 focus:ring-2 focus:ring-brand-green-light text-sm">
+
+                            <input type="tel" placeholder="Mobile Number"
+                                class="bg-brand-gray-input rounded-md p-3 w-full placeholder-gray-500 border-none ring-0 focus:ring-2 focus:ring-brand-green-light text-sm">
+
+                            <input type="text" placeholder="Pincode"
+                                class="bg-brand-gray-input rounded-md p-3 w-full placeholder-gray-500 border-none ring-0 focus:ring-2 focus:ring-brand-green-light text-sm">
+
+                            <input type="text" placeholder="City"
+                                class="bg-brand-gray-input rounded-md p-3 w-full placeholder-gray-500 border-none ring-0 focus:ring-2 focus:ring-brand-green-light text-sm">
+
+                            <select
+                                class="bg-brand-gray-input rounded-md p-3 w-full text-gray-500 border-none ring-0 focus:ring-2 focus:ring-brand-green-light text-sm">
+                                <option>Products</option>
+                            </select>
+
+                            <select
+                                class="bg-brand-gray-input rounded-md p-3 w-full text-gray-500 border-none ring-0 focus:ring-2 focus:ring-brand-green-light text-sm">
+                                <option>Quantity (in MT)</option>
+                            </select>
+                        </div>
+
+                        <div class="mt-6 space-y-4">
+                            <div class="flex items-center">
+                                <input id="whatsapp" type="checkbox"
+                                    class="h-4 w-4 rounded text-brand-green-light border-gray-300 focus:ring-brand-green-light">
+                                <label for="whatsapp" class="ml-3 block text-sm text-gray-700">Get updates on
+                                    WhatsApp</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input id="terms" type="checkbox"
+                                    class="h-4 w-4 rounded text-brand-green-light border-gray-300 focus:ring-brand-green-light">
+                                <label for="terms" class="ml-3 block text-sm text-gray-700">Terms & Conditions</label>
+                            </div>
+                        </div>
+
+                        <p class="mt-6 text-xs text-gray-500">
+                            The personal data shared by you will be used by Nitha aerospace to connect with you directly
+                            or
+                            through its affiliates and partners.
+                        </p>
+
+                        <div class="mt-8">
+                            <button type="submit"
+                                class="w-full bg-brand-green-bg text-white font-bold py-3 px-12 rounded-md text-base hover:bg-gray-800 transition duration-300">
+                                Submit a Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Contact Info Section -->
+                <div class="mt-12">
+                    <div class="space-y-8">
+
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="flex-shrink-0 w-14 h-14 bg-brand-green-light rounded-full flex items-center justify-center">
+                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m-1 4h1m-1 4h1m-1 4h1m4-12h1m-1 4h1m-1 4h1m-1 4h1m-1 4h1m4-12h1m-1 4h1m-1 4h1m-1 4h1m-1 4h1">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 text-sm uppercase">Head Office & Factory</h4>
+                                <p class="text-gray-600 mt-1 text-sm leading-relaxed">
+                                    Plot no. 140 SIDCO Women <br>
+                                    Industrial Estate Karuppur, <br>
+                                    Tamilnadu, India, Salem - 636 011
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="flex-shrink-0 w-14 h-14 bg-brand-green-light rounded-full flex items-center justify-center">
+                                <i class="fas fa-envelope w-6 h-6 text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 text-sm">Email us on or post your
+                                    requirements</h4>
+                                <p class="text-gray-600 mt-1 text-sm leading-relaxed">
+                                    bd@nithaaerospace.in <br>
+                                    marketing@nithaaerospace.in
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="flex-shrink-0 w-14 h-14 bg-brand-green-light rounded-full flex items-center justify-center">
+                                <i class="fas fa-phone-alt w-6 h-6 text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 text-sm">Call us on Whatsapp or Phone
+                                </h4>
+                                <p class="text-sm leading-relaxed"><a href="tel:+918220538534">+91 82205 38534</a></p>
+                                <p class="text-sm leading-relaxed"><a href="tel:+919578420672">+91 95784 20672</a></p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Map Section (Mobile) -->
+    <section class="relative py-12 z-10 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 gap-12">
+                <div>
+                    <h2 class="text-xl font-extrabold tracking-wider text-brand-green-light mb-4">Head Office &
+                        Factory</h2>
+                    <div class="rounded-2xl shadow-xl overflow-hidden">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3214.839460698592!2d78.080996!3d11.719864999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTHCsDQzJzExLjUiTiA3OMKwMDQnNTEuNiJF!5e1!3m2!1sen!2sin!4v1762404297644!5m2!1sen!2sin"
+                            width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications (Mobile) -->
+    <section class="py-10 bg-white">
+        <div class="container px-6 mx-auto">
+            <div class="mb-12 mt-16 text-center">
+                <p class="mb-2 text-sm font-extrabold tracking-widest text-brand-green-light "
+                    style=" transform: scaleY(1.1);">
+                    Approvals</p>
+                <h2 class="text-2xl font-extrabold text-gray-900 md:text-4xl">Certificaion - In process</h2>
+            </div>
+            <div class="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-7 sm:gap-6">
+                <div class="flex flex-col items-center p-6 text-center transition-shadow bg-cert-bg rounded-lg shadow-sm hover:shadow-md"
+                    style="background: #eff7f1;">
+                    <img src="imgs/iso9001.png" alt="ISO9001:2015 Logo" class="h-20 mb-4">
+                    <h3 class="mb-1 text-sm font-bold text-gray-900">ISO9001:2015</h3>
+                    <p class="text-xs leading-snug text-gray-600">International Standard for Quality Management</p>
+                </div>
+                <div class="flex flex-col items-center p-6 text-center transition-shadow bg-cert-bg rounded-lg shadow-sm hover:shadow-md"
+                    style="background: #eff7f1;">
+                    <img src="imgs/apiq.png" alt="APIQ1 Logo" class="h-20 mb-4">
+                    <h3 class="mb-1 text-sm font-bold text-gray-900">APIQ1</h3>
+                    <p class="text-xs leading-snug text-gray-600">Quality System Specification for Oil & Gas
+                        Manufacturing</p>
+                </div>
+                <div class="flex flex-col items-center p-6 text-center transition-shadow bg-cert-bg rounded-lg shadow-sm hover:shadow-md"
+                    style="background: #eff7f1;">
+                    <img src="imgs/nabl.png" alt="NABL Logo" class="h-20 mb-4">
+                    <h3 class="mb-1 text-sm font-bold text-gray-900">NABL</h3>
+                    <p class="text-xs leading-snug text-gray-600">Accredited Testing and Calibration Laboratory
+                        under ISO/IEC 17025</p>
+                </div>
+                <div class="flex flex-col items-center p-6 text-center transition-shadow bg-cert-bg rounded-lg shadow-sm hover:shadow-md"
+                    style="background: #eff7f1;">
+                    <img src="imgs/iso45001.png" alt="ISO45001:2018 Logo" class="h-20 mb-4">
+                    <h3 class="mb-1 text-sm font-bold text-gray-900">ISO45001:2018</h3>
+                    <p class="text-xs leading-snug text-gray-600">Occupational Health and Safety Management System
+                    </p>
+                </div>
+                <div class="flex flex-col items-center p-6 text-center transition-shadow bg-cert-bg rounded-lg shadow-sm hover:shadow-md"
+                    style="background: #eff7f1;">
+                    <img src="imgs/as9100.png" alt="AS91000 Logo" class="h-20 mb-4">
+                    <h3 class="mb-1 text-sm font-bold text-gray-900">AS91000</h3>
+                    <p class="text-xs leading-snug text-gray-600">Quality Management System for Aerospace
+                        Manufacturing</p>
+                </div>
+                <div class="flex flex-col items-center p-6 text-center transition-shadow bg-cert-bg rounded-lg shadow-sm hover:shadow-md"
+                    style="background: #eff7f1;">
+                    <img src="imgs/api20.png" alt="API12DE Logo" class="h-20 mb-4">
+                    <h3 class="mb-1 text-sm font-bold text-gray-900">API1 20E</h3>
+                    <p class="text-xs leading-snug text-gray-600">Bolting Specification for Petroleum & Natural Gas
+                        Industries</p>
+                </div>
+                <div class="flex flex-col items-center p-6 text-center transition-shadow bg-cert-bg rounded-lg shadow-sm hover:shadow-md"
+                    style="background: #eff7f1;">
+                    <img src="imgs/iso14001.png" alt="ISO14001:2015 Logo" class="h-20 mb-4">
+                    <h3 class="mb-1 text-sm font-bold text-gray-900">ISO14001:2015</h3>
+                    <p class="text-xs leading-snug text-gray-600">Environmental Management System</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pre-Footer CTA (Mobile) -->
+    <section
+        class="relative z-10 overflow-hidden bg-[#6a9b5f] text-white py-12 px-6 text-center -mb-16 w-[90%] mx-auto rounded-lg shadow-xl mt-12">
+        <div class="absolute inset-0 z-0 bg-right bg-no-repeat bg-cover opacity-30 mix-blend-multiply"
+            style="background-image: url('imgs/civil7-1.jpg');">
+        </div>
+        <div class="relative z-2">
+            <p class="text-xs font-semibold tracking-wider uppercase">ONE PLATFORM FOR ALL REQUIREMENTS</p>
+            <h2 class="text-2xl font-extrabold tracking-tight uppercase my-3">Which products are you looking for?</h2>
+            <a href="#"
+                class="inline-flex items-center px-6 py-3 text-sm font-bold text-[#6a9b5f] uppercase bg-white rounded-md shadow-lg">
+                Explore Now
+                <i class="ml-3 fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Full Footer (Responsive) -->
+    <footer
+        class="relative z-0 pt-32 pb-16 text-gray-300 bg-gradient-to-t from-[#0b180d] via-[#172c19] to-[#1a471c] w-full">
+        <!-- Top curve shape -->
+        <div class="absolute top-0 left-0 w-full h-24 bg-transparent">
+            <div class="w-full h-full bg-[#1a471c] rounded-t-[50%] transform scale-x-150"></div>
+        </div>
+
+        <div class="container px-6 mx-auto relative z-10">
+            <!-- Grid for mobile: stack everything -->
+            <div class="grid grid-cols-1 gap-8">
+
+                <!-- Column 1: Logo & Address -->
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="imgs/Screenshot 2025-11-04 120806.png" alt="Nitha Aerospace Logo"
+                            class="h-16 object-contain">
+                    </div>
+                    <h3 class="mb-4 text-md font-semibold text-white">Head Office & Factory</h3>
+                    <p class="text-sm leading-relaxed">Plot no. 140 SIDCO Women Industrial Estate Karuppur,
+                           Salem, Tamilnadu, India - 636 011
+                    </p>
+
+                    <h3 class="mt-4 mb-2 text-sm font-semibold text-white">Call Us On</h3>
+                    <p class="text-sm leading-relaxed"><a href="tel:+918220538534">+91 82205 38534</a></p>
+                    <p class="text-sm leading-relaxed"><a href="tel:+919578420672">+91 95784 20672</a></p>
+
+                    <h3 class="mt-4 mb-2 text-sm font-semibold text-white ">Our Mailbox</h3>
+                    <p class="text-sm leading-relaxed"><a
+                            href="mailto:marketing@nithaaerospace.in">marketing@nithaaerospace.in</a></p>
+                    <p class="text-sm leading-relaxed"><a
+                            href="mailto:support@nithaaerospace.in">support@nithaaerospace.in</a></p>
+                </div>
+
+                <!-- Link Columns: Use 2-col grid for links -->
+                <div class="grid grid-cols-2 gap-8">
+                    <!-- Column 2: Company -->
+                    <div>
+                        <h3 class="mb-6 text-md font-semibold text-white">Company</h3>
+                        <ul class="space-y-2 text-sm">
+                            <li><a href="index.html" class="transition-colors hover:text-white">Home</a></li>
+                            <li><a href="aboutus.html" class="transition-colors hover:text-white">About Us</a></li>
+                            <li><a href="#" class="transition-colors hover:text-white">Fasteners</a></li>
+                            <li><a href="#" class="transition-colors hover:text-white">Downloads</a></li>
+                            <li><a href="contact.html" class="transition-colors hover:text-white">Contact us</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 4: Facilities Links -->
+                    <div>
+                        <h3 class="mb-6 text-md font-semibold text-white">Facilities</h3>
+                        <ul class="grid grid-cols-1 gap-y-1 text-sm">
+                            <li><a href="#" class="transition-colors hover:text-white">Casting</a></li>
+                            <li><a href="#" class="transition-colors hover:text-white">Forging</a></li>
+                            <li><a href="#" class="transition-colors hover:text-white">Precision Machining</a></li>
+                            <li><a href="#" class="transition-colors hover:text-white">Heat Treatment</a></li>
+                            <li><a href="#" class="transition-colors hover:text-white">Surface Treatment</a></li>
+                            <li><a href="#" class="transition-colors hover:text-white">R&D</a></li>
+                            <li><a href="#" class="transition-colors hover:text-white">Testing</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Column 3: Products Links -->
+                <div>
+                    <h3 class="mb-6 text-md font-semibold text-white">Our Products</h3>
+                    <!-- Use 2-col grid for long product list on mobile -->
+                    <ul class="grid grid-cols-2 gap-x-4 gap-y-1 text-sm">
+                        <li><a href="#" class="transition-colors hover:text-white">Bolt</a></li>
+                        <li><a href="#" class="transition-colors hover:text-white">Bush</a></li>
+                        <li><a href="#" class="transition-colors hover:text-white">Circlips</a></li>
+                        <li><a href="#" class="transition-colors hover:text-white">Nail</a></li>
+                        <li><a href="#" class="transition-colors hover:text-white">Nut</a></li>
+                        <li><a href="#" class="transition-colors hover:text-white">Pin and Key</a></li>
+                        <li><a href="#" class="transition-colors hover:text-white">Rivvert</a></li>
+                        <li><a href="#" class="transition-colors hover:text-white">Screw</a></li>
+                        <li><a href="#" class="transition-colors hover:text-white">Stud & Rod</a></li>
+                        <li><a href="#" class="transition-colors hover:text-white">Washer</a></li>
+                        <li><a href="#" class="transition-colors hover:text-white">Hinge</a></li>
+                        <li><a href="#" class="transition-colors hover:text-white">Latch</a></li>
+                        <li><a href="#" class="transition-colors hover:text-white">Clamp</a></li>
+                        <li><a href="#" class="transition-colors hover:text-white">Wires</a></li>
+                        <li><a href="#" class="transition-colors hover:text-white">Spacer & Standoff</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 5: Subscribe -->
+                <div> 
+                    <h3 class="mb-6 text-md font-semibold text-white">Subscribe Our Newsletter</h3>
+                    <p class="mb-4 text-sm">Be the first to receive the great deals and news</p>
+                    <form>
+                        <input type="email" placeholder="Enter your email address"
+                            class="w-full px-4 py-3 text-sm text-gray-900 rounded-md">
+                        <button type="submit"
+                            class="w-full px-4 py-3 mt-3 text-sm font-semibold text-white uppercase bg-[#709a67] rounded-md transition-colors hover:bg-opacity-90">
+                            Subscribe Now
+                        </button>
+                    </form>
+                    <div class="flex items-center justify-center p-2 mt-4"
+                        style="width: 150px; height: 150px; margin: auto;">
+                        <img src="imgs/output-onlinepngtools.png" alt="ISO 9001 Logo" class="object-contain h-full">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Copyright Bar (Responsive) -->
+    <div class="relative z-20 py-4 text-gray-400 text-center" style="background: #0b180d; border-top: 1px solid #334;">
+        <div class="container px-6 mx-auto text-xs">
+            <p class="mb-4">
+                www.nithaaerospace.in © Copyright and private limited. All Rights Reserved
+            </p>
+            <div class="flex space-x-6 text-base justify-center">
+                <a href="#" class="transition-colors hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="transition-colors hover:text-white"><i class="fab fa-google-plus-g"></i></a>
+                <a href="#" class="transition-colors hover:text-white"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="transition-colors hover:text-white"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="transition-colors hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Mobile Menu Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // --- Mobile Menu Logic ---
+            const menuBtn = document.getElementById('menu-btn');
+            const closeMenuBtn = document.getElementById('close-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuOverlay = document.getElementById('menu-overlay');
+
+            function toggleMenu() {
+                mobileMenu.classList.toggle('open');
+                if (mobileMenu.classList.contains('open')) {
+                    menuOverlay.classList.remove('hidden');
+                    document.body.style.overflow = 'hidden'; // Disable scrolling
+                } else {
+                    menuOverlay.classList.add('hidden');
+                    document.body.style.overflow = ''; // Enable scrolling
+                }
+            }
+
+            if (menuBtn) menuBtn.addEventListener('click', toggleMenu);
+            if (closeMenuBtn) closeMenuBtn.addEventListener('click', toggleMenu);
+            if (menuOverlay) menuOverlay.addEventListener('click', toggleMenu);
+
+            console.log("Mobile Contact Page Loaded Successfully");
+        });
+    </script>
+</body>
+
+</html>
