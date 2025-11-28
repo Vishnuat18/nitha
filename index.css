@@ -1,0 +1,259 @@
+/*
+    Targeting specific dimensions for responsiveness:
+    13.54 inches wide ≈ 1300px
+    7.64 inches high ≈ 733px
+*/
+@media (min-width: 1280px) and (max-width: 1350px) and (min-height: 700px) {
+
+    /* --- General Layout Adjustments for 1300px width --- */
+    .container {
+        /* Ensure containers maximize space effectively in this specific resolution */
+        max-width: 1200px !important;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    /* Adjust main navigation to fit a narrower window if original used excessive margins */
+    header nav.absolute {
+        left: 2rem !important;
+        /* Resetting the left: 40 */
+        right: 2rem !important;
+        /* Resetting the right: 10 */
+    }
+
+    /* --- Hero Section Adjustment --- */
+    .relative.w-full.h-\[1000px\] {
+        /* Reduce the height slightly to fit the shorter vertical space (733px target) */
+        height: 800px !important;
+    }
+
+    /* Ensure the logo position is sane on this screen size */
+    .relative.w-full.h-\[1000px\]>img:first-child {
+        margin-top: -650px !important;
+        /* Move logo up a bit */
+        margin-left: -500px !important;
+        /* Move logo left to center with container */
+    }
+
+    /* Adjust Hero text positioning to be central/aligned without magic numbers */
+    .relative.z-30.container.mx-auto.px-4.h-full {
+        left: 0 !important;
+        /* Remove inline left: 46% */
+        justify-content: center;
+        /* Center horizontally in the container */
+    }
+
+    .relative.z-30.container.mx-auto.px-4.h-full .max-w-2xl.text-left {
+        text-align: center !important;
+        /* Center the text block itself */
+    }
+
+    /* --- Call to Action Box (Before Footer) Adjustment --- */
+    .top_box.relative.z-\[90\] {
+        /* Adjust width and center it properly for this screen size */
+        width: 90% !important;
+        left: 5% !important;
+        height: 25vh !important;
+        /* Ensuring it respects the smaller screen height */
+    }
+
+    .top_box .top_box.container {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    /* --- Secondary Sections (e.g., Image/Text Split) --- */
+    /* Adjust padding for the section containing the manufacturing process video and text */
+    section.relative.z-20.py-24.px-24 {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+
+    /* Increase gap for better visual separation in a wide layout */
+    .grid.lg\:grid-cols-2 {
+        gap: 2rem;
+    }
+
+    /* Use Tailwind container for centering within the viewport */
+    .container {
+        max-width: 1200px !important;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    /* Target the Hero Section specifically */
+    .relative.w-full.h-\[1000px\] {
+        height: 800px !important;
+        /* Reduce height for tablet-like desktop view */
+    }
+
+    /* Ensure the Hero text block is correctly aligned right and respects text-right alignment */
+    .relative.z-30.container.mx-auto.px-4.h-full {
+        /* This container is now set to justify-end in HTML, ensuring right alignment */
+        padding-right: 2rem;
+        /* Add some padding from the right edge */
+    }
+
+    /* Ensure the text within the container is right-aligned */
+    .relative.z-30.container.mx-auto.px-4.h-full .max-w-2xl.text-right {
+        text-align: right !important;
+    }
+
+    /* Center text (like the VIEW MORE PRODUCTS button text) which might have inline centering */
+    .relative.z-30.container.mx-auto.px-4.h-full .max-w-2xl.text-right .inline-flex {
+        display: inline-flex;
+        margin-left: auto;
+        /* Push the button right */
+        margin-right: 0;
+    }
+
+    /* Fix the floating CTA box above the footer */
+    .top_box.relative.z-\[90\] {
+        width: 90% !important;
+        left: 5% !important;
+        height: 250px !important;
+        /* Ensure content aligns right or centers appropriately within the small box */
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .top_box .top_box.container .max-w-2xl {
+        text-align: left;
+    }
+
+    #logo {
+        margin-right: 600px;
+    }
+
+    #hero-container {
+        margin-left: 500px;
+        margin-top: 200px;
+    }
+
+    #product {
+        margin-top: 100px;
+    }
+
+    #msg-footer {
+        width: 1300px;
+    }
+
+    #f-image {
+        margin-top: 30px;
+        height: 200px;
+        background-size: cover;
+    }
+
+    /* --- General Layout Adjustments for 1300px width --- */
+    .container {
+        /* Limits the main container width for better look at 1300px */
+        max-width: 1200px !important;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    /* Adjust main navigation to fit the specific screen without absolute positioning errors */
+    header nav.absolute {
+        left: 0 !important;
+        right: 0 !important;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    /* --- Hero Section Adjustment for 1300px wide / 733px tall display --- */
+    .relative.w-full.h-\[1000px\] {
+        /* Reducing the height to fit the shorter vertical space (approx 733px) */
+        height: 800px !important;
+    }
+
+    /* Ensure the Hero text container justifies its content to the right (as requested) */
+    .relative.z-30.container.mx-auto.px-4.h-full {
+        justify-content: flex-end !important;
+        padding-right: 2rem;
+    }
+
+    /* Ensure the text itself is right-aligned (needed because inner div uses max-w-2xl) */
+    .relative.z-30.container.mx-auto.px-4.h-full .max-w-2xl.text-left {
+        text-align: right !important;
+    }
+
+    /* Push the "VIEW MORE PRODUCTS" button to the right */
+    .relative.z-30.container.mx-auto.px-4.h-full .max-w-2xl.text-right .inline-flex {
+        margin-left: auto;
+        margin-right: 0;
+    }
+
+    /* --- Footer CTA Box Adjustment --- */
+    .top_box.relative.z-\[90\] {
+        /* Makes the floating box centered and slightly smaller to fit the screen */
+        width: 90% !important;
+        left: 5% !important;
+        height: 250px !important;
+        box-shadow: 0px 10px 20px black;
+        margin-top: 50px;
+    }
+
+    .top_box .top_box.container {
+        /* Reset vertical padding within the smaller box */
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    /* 1. Main Container (The image size you want the whole section to be) */
+    #cta-fasteners-box {
+        /* Adjust fixed/magic dimensions for the target viewport */
+        width: 90% !important; 
+        height: 250px !important; /* Set a specific height for the whole box */
+        margin-top: 50px !important; /* Adjust spacing below previous section */
+        padding-bottom: 0 !important; /* Remove original large padding-bottom */
+    }
+
+    /* 2. Background Image Wrapper */
+    #cta-image-wrapper {
+        /* Make the image wrapper fill the whole #cta-fasteners-box */
+        height: 100% !important; 
+        background-size: cover !important; /* Ensures the image fills the box without tiling */
+        opacity: 0.8 !important; /* Increase opacity for image visibility */
+    }
+
+    /* 3. Content Positioning (Text and Button) */
+    #cta-content-container {
+        /* Make the content container fill the height of the section */
+        height: 100% !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        display: flex; /* Use flex to control alignment */
+        align-items: center; /* Vertically center the content */
+    }
+
+    /* 4. Absolute positioned Text Wrapper fix */
+    #cta-text-wrapper {
+        /* Remove absolute positioning and let it flow inside #cta-content-container */
+        position: static !important;
+        top: auto !important;
+    }
+
+    #msg-bar-wrapper {
+        /* Overrides max-width to force full viewport width */
+        max-width: 100% !important; 
+        /* Reset horizontal margins/padding that might be centering it */
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    
+    /* Ensure the icon grid inside is restricted/centered to keep icons readable */
+    #msg-bar-wrapper > div.grid {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 1rem; /* Re-add padding inside the full-width bar */
+        padding-right: 1rem;
+    }
+
+}
