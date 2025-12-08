@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Inspiring Products</title>
+    <!-- Load Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        /* Custom Tailwind Configuration */
+        :root {
+            --brand-primary: #008080; /* Teal/Green for active selection */
+            --brand-text-dark: #1f2937; /* Gray-900 */
+        }
+
+        .hexagon-clip {
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        }
+
+        .product-card {
+            cursor: pointer;
+          /*   transition: transform 0.2s, box-shadow 0.2s; */
+            /* Compacted card look */
+            width: 130px; 
+            margin-right: 10px;
+        }
+
+        .product-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 12px -3px rgba(0, 0, 0, 0.1), 0 3px 5px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Custom styles for the search bar active item */
+        .category-active {
+            background-color: var(--brand-primary);
+            color: white;
+            font-weight: 600;
+            border-radius: 0.5rem;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* Light gray background for body */
+        }
+
+        /* Ensure smooth sub-menu transition when showing/hiding */
+        .sub-menu {
+            transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-primary': 'var(--brand-primary)',
+                        'brand-text-dark': 'var(--brand-text-dark)',
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="min-h-screen flex flex-col">
+        <!-- Header (Mimicking the top bar from the image) -->
+        <header class="bg-white shadow-md p-4 sticky top-0 z-10">
+            <h1 class="text-2xl font-extrabold text-brand-primary">ALL PRODUCTS</h1>
+        </header>
+
+        <!-- Main Content Area: Sidebar (Left) and Product Display (Right) -->
+        <div class="flex flex-1 flex-col lg:flex-row bg-white">
+
+            <!-- Sidebar (Left Column - 1/4 width on desktop, full width on mobile) -->
+            <div id="sidebar"
+                class="lg:w-1/4 w-full p-4 lg:p-6 border-r border-gray-200 bg-gray-50 flex-shrink-0">
+
+                <h2 class="text-lg font-bold text-gray-800 mb-3">Search Term(s)</h2>
+
+                <!-- Search Input -->
+                <div class="relative mb-6">
+                    <input type="text" id="productSearch" onkeyup="handleSearchAndFilter()"
+                        class="w-full p-2 pl-10 border border-gray-300 rounded-lg focus:ring-brand-primary focus:border-brand-primary"
+                        placeholder="Search product name or code">
+                    <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                        <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                    </span>
+                </div>
+
+                <!-- Category List -->
+                <div id="categoryList">
+                    <!-- Categories will be rendered here by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Product Display Area (Right Column - 3/4 width on desktop, full width on mobile) -->
+            <div id="content" class="lg:w-3/4 w-full p-4 lg:p-6">
+                <!-- Product Description Block -->
+                <div class="mb-6">
+                    <h2 class="text-2xl lg:text-3xl font-extrabold text-brand-text-dark mb-3 border-b-2 border-brand-primary pb-1 inline-block">PRODUCT RANGE</h2>
+                    <h3 class="text-lg lg:text-xl font-semibold text-brand-primary mb-3">Our Inspiring Products</h3>
+                    <p class="text-gray-600 text-sm lg:text-base mb-3">
+                        We are happy to introduce Nitha Aerospace Pvt Ltd (NAPL), the pioneering industry 4.0 startup specializing in superalloy fasteners in steel city of Tamilnadu. NAPL combines advanced production processes with proprietary superalloy formulations to deliver fasteners. We are happy to introduce Nitha Aerospace Pvt Ltd (NAPL), the pioneering industry 4.0 startup specializing in superalloy fasteners in steel city of Tamilnadu. NAPL combines advanced production processes with proprietary superalloy formulations to deliver fasteners. We are happy to introduce Nitha Aerations to deliver fasteners.
+                    </p>
+                    <p class="text-gray-600 text-sm lg:text-base mb-6">
+                        Tamilnadu. NAPL combines advanced production processes with proprietary superalloy formulations to deliver fasteners. We are happy to introduce Nitha Aerospace Pvt Ltd (NAPL), the pioneering industry 4.0 startup specializing in superalloy fasteners in steel city of Tamilnadu. NAPL combines advanced production processes with proprietary superalloy formulations to deliver fasteners.
+                    </p>
+                </div>
+
+                <!-- Product Grid - Replicating the provided structure -->
+                <div class="container mx-auto">
+                    <div id="productGrid" class="flex flex-wrap justify-center lg:justify-start gap-10">
+                        <!-- Products will be rendered here by JavaScript -->
+                    </div>
+                    <div id="noResults" class="hidden text-center text-gray-500 mt-10">
+                        No products found matching your search.
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <script>
+        // Data structure for all product categories, including placeholder codes and image paths
+        const productData = [
+            { name: 'Bolt', code: 'A001', display_name: 'BOLT', count: 503, image_alt: 'Bolt Fastener', subcategories: [
+                { name: 'Anchor Bolt (133)', code: 'A001-10', link: '#' },
+                { name: 'Cup Square Bolt (133)', code: 'A001-20', link: '#' },
+                { name: 'Eye Bolt (133)', code: 'A001-30', link: '#' },
+                { name: 'Flange Bolt (133)', code: 'A001-40', link: '#' },
+                { name: 'Hex Socket Head Capital Screw (133)', code: 'A001-50', link: '#' },
+                { name: 'High Tensile Bolt (133)', code: 'A001-60', link: '#' },
+                { name: 'J Bolt (133)', code: 'A001-70', link: '#' },
+                { name: 'Serrated Flange Bolt (133)', code: 'A001-80', link: '#' },
+                { name: 'Square Head Bolt (133)', code: 'A001-90', link: '#' },
+                { name: 'Structural Bolt (133)', code: 'A001-91', link: '#' },
+                { name: 'U Bolt (133)', code: 'A001-92', link: '#' },
+            ], image_url: "imgs/bolt.png" },
+            
+            { name: 'Bush', code: 'A002', display_name: 'BUSH', count: 503, image_alt: 'Bush Bearing', subcategories: [
+                { name: 'Plain Bush (10)', code: 'A002-10', link: '#' },
+                { name: 'Flanged Bush (20)', code: 'A002-20', link: '#' },
+                { name: 'Split Bush (30)', code: 'A002-30', link: '#' },
+            ], image_url: "imgs/bush.png" }, // Placeholder bush image added for completeness
+            
+            { name: 'Circlips', code: 'A003', display_name: 'CIRCLIPS', count: 503, image_alt: 'Circlips Retaining Ring', subcategories: [
+                { name: 'External Circlips (10)', code: 'A003-10', link: '#' },
+                { name: 'Internal Circlips (20)', code: 'A003-20', link: '#' },
+                { name: 'E-Clips (30)', code: 'A003-30', link: '#' },
+            ], image_url: "imgs/circlip.png" },
+
+            { name: 'Nail', code: 'A004', display_name: 'NAIL', count: 503, image_alt: 'Nail Fastener', subcategories: [
+                { name: 'Common Nail (10)', code: 'A004-10', link: '#' },
+                { name: 'Finishing Nail (20)', code: 'A004-20', link: '#' },
+                { name: 'Roofing Nail (30)', code: 'A004-30', link: '#' },
+            ], image_url: "imgs/nail.png" },
+            
+            { name: 'Nut', code: 'A005', display_name: 'NUT', count: 503, image_alt: 'Nut Fastener', subcategories: [
+                { name: 'Hex Nut (10)', code: 'A005-10', link: '#' },
+                { name: 'Lock Nut (20)', code: 'A005-20', link: '#' },
+                { name: 'Wing Nut (30)', code: 'A005-30', link: '#' },
+            ], image_url: "imgs/nnuts.png" },
+
+            { name: 'Pin & Keys', code: 'A006', display_name: 'PIN & KEYS', count: 503, image_alt: 'Pin and Key Fastener', subcategories: [
+                { name: 'Dowel Pin (10)', code: 'A006-10', link: '#' },
+                { name: 'Cotter Pin (20)', code: 'A006-20', link: '#' },
+                { name: 'Woodruff Key (30)', code: 'A006-30', link: '#' },
+            ], image_url: "imgs/pins.png" },
+            
+            { name: 'Rivet', code: 'A008', display_name: 'RIVET', count: 503, image_alt: 'Rivet Fastener', subcategories: [
+                { name: 'Blind Rivet (10)', code: 'A008-10', link: '#' },
+                { name: 'Solid Rivet (20)', code: 'A008-20', link: '#' },
+                { name: 'Tubular Rivet (30)', code: 'A008-30', link: '#' },
+            ], image_url: "imgs/rivert.png" },
+            
+            { name: 'Screw', code: 'A009', display_name: 'SCREW', count: 503, image_alt: 'Screw Fastener', subcategories: [
+                { name: 'Machine Screw (10)', code: 'A009-10', link: '#' },
+                { name: 'Wood Screw (20)', code: 'A009-20', link: '#' },
+                { name: 'Self-Tapping Screw (30)', code: 'A009-30', link: '#' },
+            ], image_url: "imgs/screw.png" },
+
+            { name: 'Spacer & Standoff', code: 'A010', display_name: 'SPACER & STANDOFF', count: 503, image_alt: 'Spacer and Standoff Hardware', subcategories: [
+                { name: 'Nylon Spacer (10)', code: 'A010-10', link: '#' },
+                { name: 'Brass Standoff (20)', code: 'A010-20', link: '#' },
+                { name: 'Aluminum Spacer (30)', code: 'A010-30', link: '#' },
+            ], image_url: "imgs/spacer.png" },
+
+            { name: 'Stud & Rod', code: 'A011', display_name: 'STUD & ROD', count: 503, image_alt: 'Stud and Rod Threaded', subcategories: [
+                { name: 'Threaded Rod (10)', code: 'A011-10', link: '#' },
+                { name: 'Welding Stud (20)', code: 'A011-20', link: '#' },
+                { name: 'Double End Stud (30)', code: 'A011-30', link: '#' },
+            ], image_url: "imgs/stud.png" },
+
+            { name: 'Washer', code: 'A012', display_name: 'WASHER', count: 503, image_alt: 'Washer Flat', subcategories: [
+                { name: 'Flat Washer (10)', code: 'A012-10', link: '#' },
+                { name: 'Lock Washer (20)', code: 'A012-20', link: '#' },
+                { name: 'Fender Washer (30)', code: 'A012-30', link: '#' },
+            ], image_url: "imgs/washer.png" },
+
+            { name: 'Wires', code: 'A013', display_name: 'WIRES', count: 503, image_alt: 'Wires Coil', subcategories: [
+                { name: 'Steel Wire (10)', code: 'A013-10', link: '#' },
+                { name: 'Copper Wire (20)', code: 'A013-20', link: '#' },
+                { name: 'Tie Wire (30)', code: 'A013-30', link: '#' },
+            ], image_url: "imgs/wire.png" },
+
+            { name: 'Hinge', code: 'A014', display_name: 'HINGE', count: 503, image_alt: 'Hinge Door', subcategories: [
+                { name: 'Piano Hinge (10)', code: 'A014-10', link: '#' },
+                { name: 'Butt Hinge (20)', code: 'A014-20', link: '#' },
+                { name: 'Strap Hinge (30)', code: 'A014-30', link: '#' },
+            ], image_url: "imgs/hinge.png" },
+
+            { name: 'Clamp', code: 'A015', display_name: 'CLAMP', count: 503, image_alt: 'Clamp Tool', subcategories: [
+                { name: 'Pipe Clamp (10)', code: 'A015-10', link: '#' },
+                { name: 'Toggle Clamp (20)', code: 'A015-20', link: '#' },
+                { name: 'Hose Clamp (30)', code: 'A015-30', link: '#' },
+            ], image_url: "imgs/clamp.png" },
+
+            { name: 'Latch', code: 'A016', display_name: 'LATCH', count: 503, image_alt: 'Latch Locking', subcategories: [
+                { name: 'Toggle Latch (10)', code: 'A016-10', link: '#' },
+                { name: 'Compression Latch (20)', code: 'A016-20', link: '#' },
+                { name: 'Slam Latch (30)', code: 'A016-30', link: '#' },
+            ], image_url: "imgs/latch.png" },
+        ];
+
+        let activeCategory = 'Bolt'; // Start with Bolt active as in the image
+
+        // --- Core Functions ---
+
+        /**
+         * Renders the interactive category list in the sidebar.
+         * @param {string} filter - The search filter applied to the sidebar categories.
+         */
+        function renderCategoryList(filter = '') {
+            const listContainer = document.getElementById('categoryList');
+            if (!listContainer) return;
+            
+            const upperFilter = filter.toUpperCase();
+
+            listContainer.innerHTML = productData.map(category => {
+                // Check if the main category or any subcategory matches the filter
+                const matchesMain = category.name.toUpperCase().includes(upperFilter) || category.code.toUpperCase().includes(upperFilter);
+                
+                const matchesSub = category.subcategories.some(sub => 
+                    sub.name.toUpperCase().includes(upperFilter) || (sub.code && sub.code.toUpperCase().includes(upperFilter))
+                );
+
+                const shouldShow = filter === '' || matchesMain || matchesSub;
+                
+                if (!shouldShow) return ''; 
+
+                const isActive = category.name === activeCategory;
+                const activeClass = isActive ? 'category-active' : 'hover:bg-gray-100 text-brand-text-dark';
+                const subMenuId = `sub-${category.name.replace(/\s/g, '')}`;
+
+                // Main category button
+                let html = `
+                    <div class="mb-1">
+                        <button onclick="toggleCategory('${category.name}')"
+                            class="flex justify-between items-center w-full p-2 text-sm rounded-lg transition-colors ${activeClass}">
+                            <span>${category.name}</span>
+                            <svg class="w-4 h-4 transform transition-transform ${isActive ? 'rotate-90' : ''}" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </button>
+                    </div>
+                `;
+
+                // Sub-category list
+                if (category.subcategories && category.subcategories.length > 0) {
+                    const subList = category.subcategories.map(sub => {
+                        const subMatches = sub.name.toUpperCase().includes(upperFilter) || (sub.code && sub.code.toUpperCase().includes(upperFilter));
+                        if (filter !== '' && !subMatches && !matchesMain) return ''; // Hide sub-item if searching and it doesn't match
+
+                        return `
+                            <a href="${sub.link}" class="block py-1 pl-6 text-xs text-gray-600 hover:text-brand-primary transition-colors">
+                                ${sub.name} (${sub.code || 'N/A'})
+                            </a>
+                        `;
+                    }).join('');
+
+                    html += `
+                        <div id="${subMenuId}" class="sub-menu pl-4 transition-all duration-300 overflow-hidden ${isActive || (filter !== '' && (matchesMain || matchesSub)) ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}">
+                            ${subList}
+                        </div>
+                    `;
+                }
+                return html;
+            }).join('');
+        }
+
+        /**
+         * Renders the product grid based on the provided list of products.
+         * @param {Array<Object>} productsToDisplay - The filtered list of products.
+         */
+        function renderProductGrid(productsToDisplay) {
+            const gridContainer = document.getElementById('productGrid');
+            const noResults = document.getElementById('noResults');
+            if (!gridContainer || !noResults) return;
+
+            if (productsToDisplay.length === 0) {
+                gridContainer.innerHTML = '';
+                noResults.classList.remove('hidden');
+                return;
+            }
+            
+            noResults.classList.add('hidden');
+
+            const productsHtml = productsToDisplay.map(product => {
+                const imageUrl = product.image_url;
+                const placeholderUrl = `https://placehold.co/112x128/f3f4f6/1f2937?text=${product.name.substring(0, 4)}`;
+
+                return `
+                    <a href="#" class="product-card flex flex-col items-center p-2 rounded-xl bg-white shadow-lg">
+                        <!-- Hexagon Clip Container - No border for cleaner look -->
+                        <div class="w-28 h-32 p-0.5 bg-gray-200 hexagon-clip flex items-center justify-center">
+                            <div class="w-full h-full hexagon-clip flex items-center justify-center bg-white p-1">
+                                <img src="${imageUrl}" alt="${product.image_alt}"
+                                    class="max-w-full max-h-full object-contain"
+                                    onerror="this.onerror=null; this.src='${placeholderUrl}';">
+                            </div>
+                        </div>
+                        <!-- Product Name, Code, and Count -->
+                        <p class="text-xs font-bold text-brand-text-dark text-center mt-2 leading-tight">${product.display_name}</p>
+                        <p class="text-xs text-gray-400 text-center leading-tight">Code: ${product.code}</p>
+                        <p class="text-xs text-gray-500 text-center leading-tight">${product.count} products</p>
+                    </a>
+                `;
+            }).join('');
+            
+            gridContainer.innerHTML = productsHtml;
+        }
+
+        /**
+         * Handles filtering the categories in the sidebar and the product cards in the grid.
+         */
+        function handleSearchAndFilter() {
+            const searchInput = document.getElementById('productSearch');
+            const filter = searchInput.value.trim();
+            const upperFilter = filter.toUpperCase();
+
+            // 1. Render the sidebar categories (which handles visibility based on filter)
+            renderCategoryList(filter);
+
+            let filteredProducts = [];
+
+            if (filter === '') {
+                // If no filter, show all main products
+                filteredProducts = productData;
+            } else {
+                // If filtering, find products where name, code, or any sub-product matches
+                filteredProducts = productData.filter(product => {
+                    // Check main category name/code
+                    const matchesMain = product.name.toUpperCase().includes(upperFilter) || product.code.toUpperCase().includes(upperFilter);
+                    
+                    // Check sub-category name/code
+                    const matchesSub = product.subcategories.some(sub => 
+                        sub.name.toUpperCase().includes(upperFilter) || (sub.code && sub.code.toUpperCase().includes(upperFilter))
+                    );
+                    
+                    return matchesMain || matchesSub;
+                });
+            }
+
+            // 2. Render the product grid with the filtered list
+            renderProductGrid(filteredProducts);
+        }
+
+        /**
+         * Toggles the active category and sub-menu visibility.
+         * This function resets the search filter.
+         * @param {string} categoryName - The name of the category to toggle.
+         */
+        function toggleCategory(categoryName) {
+            // Check if we are clicking the already active category
+            const isTogglingOff = activeCategory === categoryName;
+            
+            // Set the new active category (or null if toggling off)
+            activeCategory = isTogglingOff ? null : categoryName;
+
+            // Clear search when clicking a category button
+            document.getElementById('productSearch').value = '';
+
+            // Re-render the entire list and grid
+            handleSearchAndFilter();
+        }
+
+        // --- Initialization ---
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initial render of the category list and product grid (no filter initially)
+            handleSearchAndFilter();
+        });
+    </script>
+</body>
+
+</html>
