@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NITHA Aerospace - Products</title>
+    <link rel="shortcut icon" href="imgs/nithaa-removebg-preview.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        'brand-green': '#709a67',
+                        'brand-dark-green': '#5b7941',
+                        'brand-light-green': '#e9f3e6',
+                        'brand-black': '#000000',
+                        'sidebar-active': '#7fae69',
+                        'hero-bg': '#4a564e',
+                    },
+                    boxShadow: {
+                        'hex': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06)',
+                    }
+                }
+            }
+        };
+    </script>
+
+    <script type="text/javascript">
+        function redirectDesktop() {
+            // Check browser window width
+            if (window.innerWidth <= 768) {
+                window.location.href = "mobileProducts.html"; // Change this to your actual desktop filename
+            }
+        }
+
+        // 1. Check immediately when the page loads
+        redirectDesktop();
+
+        // 2. Check whenever the window is resized
+        window.addEventListener('resize', redirectDesktop);
+    </script>
+
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .hexagon-shape {
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        }
+
+        .custom-scroll::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .custom-scroll::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .custom-scroll::-webkit-scrollbar-thumb {
+            background: #d1d5db;
+            border-radius: 4px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 220px;
+            background: white;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            z-index: 50;
+            padding: 0.5rem 0;
+            border-radius: 4px;
+        }
+
+        .group:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+
+<body class="bg-white overflow-x-hidden">
+
+    <div
+        class="hidden bg-brand-topbar-green text-white text-[13px] py-2 px-6 md:flex justify-between items-center bg-[#6a9b5f]">
+        <div class="flex items-center space-x-4">
+            <a href="tel:+919578420672" class="flex items-center hover:underline">
+                <i class="fas fa-phone mr-2"></i>
+                <span>Call Us On: +91 95784 20672</span>
+            </a>
+            <a href="mailto:marketing@nithaaerospace.in" class="flex items-center hover:underline">
+                <i class="fas fa-envelope mr-2"></i>
+                <span>marketing@nithaaerospace.in</span>
+            </a>
+        </div>
+        <div class="flex items-center space-x-4">
+            <a href="#" class="hover:underline">News and Updates</a>
+            <span>|</span>
+            <a href="Terms.html" class="hover:underline">Terms</a>
+        </div>
+    </div>
+
+    <header class="bg-white shadow-sm relative z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center pl-32 lg:pl-40">
+            <div class="hidden lg:block"></div>
+            <a href="index.html" class="absolute top-8 left-10 z-50">
+                <img src="imgs/Screenshot 2025-11-04 120806.png" alt="NITHA Aerospace Logo" class="h-24 w-auto"
+                    style="margin-top: 0px; margin-left: 20px;">
+            </a>
+
+            <div class="hidden lg:flex items-center space-x-8 text-[14px] font-bold text-gray-600">
+                <a href="index.html" class="nav-text hover:text-brand-partner-btn font-bold">Home</a>
+                <a href="aboutus.html" class="nav-text hover:text-brand-partner-btn font-bold">About us</a>
+
+                <a href="aboutus.html" class="nav-text hover:text-brand-partner-btn font-bold">Capabilities</a>
+                <div class="relative group">
+                    <a href="" class="nav-text hover:text-brand-partner-btn font-bold flex items-center">
+                        FIS<i class="fas fa-chevron-down text-xs ml-1"></i>
+                    </a>
+
+                    <div class="absolute dropdown-content hidden group-hover:block z-20">
+                        <a href="#fasteners-intelligence-system" class="dropdown-link">
+                            Fasteners Intelligence System
+                        </a>
+                    </div>
+                </div>
+
+                <div class="relative group">
+                    <a href="" class="nav-text hover:text-brand-partner-btn font-bold flex items-center">
+                        Solutions <i class="fas fa-chevron-down text-xs ml-1"></i>
+                    </a>
+                </div>
+
+                <a href="" class="nav-text hover:text-brand-partner-btn font-bold">Downloads</a>
+                <a href="contact.html" class="nav-text hover:text-brand-partner-btn font-bold">Contact us</a>
+            </div>
+
+            <div class="flex items-center space-x-6">
+                <button class="text-gray-600 hover:text-brand-green">
+                    <i class="fas fa-search text-lg"></i>
+                </button>
+                <a href="#"
+                    class="hidden md:inline-block bg-[#7fae69] text-white px-6 py-2.5 rounded text-[13px] font-bold uppercase hover:opacity-90 transition-opacity">
+                    Become A Partner
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <div
+        class="relative w-full h-[700px] lg:h-[450px] bg-gradient-to-r from-[#4b584e] to-[#3a443d] overflow-visible flex items-center z-0">
+
+        <div class="absolute top-[-40px] left-6 lg:left-20 z-50 bg-white p-2 shadow-lg ">
+
+        </div>
+
+        <div class="absolute inset-0 bg-cover bg-center opacity-80 mix-blend-overlay"
+            style="background-image: url('imgs/product header.png')"></div>
+        <div
+            class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]">
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10 flex items-center justify-between h-full pl-6 lg:pl-40">
+            <div class="max-w-2xl text-white pt-10">
+                <p class="text-sm font-semibold tracking-wider mb-2 opacity-90">One Platform For All Your
+                    Fastener Requirements</p>
+                <h1 class="text-5xl lg:text-5xl font-extrabold leading-tight mb-8"
+                    style="text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">
+                    Industry Designs,<br>
+                    <span class="text-white">Inspiring Products</span>
+                </h1>
+
+                <div class="flex flex-row flex-wrap items-center gap-10">
+                    <a href="tel:+919578420672" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
+                        <div
+                            class="w-10 h-10 bg-[#25D366] rounded-full flex items-center justify-center text-white shadow-md">
+                            <i class="fab fa-whatsapp text-xl"></i>
+                        </div>
+                        <h3 class="text-sm font-bold tracking-wide">+91 95784 20672</h3>
+                    </a>
+
+                    <a href="mailto:marketing@nithaaerospace.in"
+                        class="flex items-center gap-2 hover:opacity-80 transition-opacity" style="margin-left: -10px;">
+                        <div
+                            class="w-10 h-10 bg-[#FFA500] rounded-full flex items-center justify-center text-white shadow-md">
+                            <i class="fas fa-envelope text-sm"></i>
+                        </div>
+                        <span class="text-sm font-bold tracking-wide">marketing@nithaaerospace.in</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="hidden lg:block w-1/2 h-full relative">
+                <img src="imgs/nut-large.png" alt="Industrial Fastener"
+                    class="absolute right-[-100px] top-1/2 transform -translate-y-1/2 h-[80%] object-contain drop-shadow-2xl"
+                    onerror="this.style.display='none'">
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-[#7fae69] text-white py-4">
+        <div class="container mx-auto px-6">
+            <div
+                class="flex flex-wrap justify-between items-center text-[13px] font-bold uppercase tracking-wide gap-4">
+                <div class="flex items-center"><i class="fas fa-wallet text-xl mr-3"></i> Easy Payment Options</div>
+                <div class="flex items-center"><i class="fas fa-dollar-sign text-xl mr-3"></i> Affordable Prices</div>
+                <div class="flex items-center"><i class="fas fa-cogs text-xl mr-3"></i> Quality Products Assured</div>
+                <div class="flex items-center"><i class="fas fa-check-circle text-xl mr-3"></i> Verified Company</div>
+            </div>
+        </div>
+    </div>
+
+    <section id="products-section" class="bg-white min-h-screen pb-20 pt-16">
+        <div class="container mx-auto px-4 lg:px-16 mb-8 text-xs text-gray-400">
+            Home / Products / Large Diameter Fiber Processing (LDF)
+        </div>
+
+        <div class="container mx-auto px-4 lg:px-16 flex flex-col lg:flex-row gap-12">
+            <div class="w-full lg:w-1/4 flex-shrink-0 flex flex-col">
+                <h2 class="text-lg font-extrabold text-brand-black mb-4 uppercase">All Products</h2>
+                <div class="bg-black p-3 rounded-t-sm">
+                    <h3 class="text-white text-[11px] font-bold mb-2">Search Term(s)</h3>
+                    <div class="relative">
+                        <input type="text" id="productSearch" onkeyup="handleSearchAndFilter()"
+                            class="w-full pl-3 pr-8 py-1.5 text-xs rounded bg-white text-gray-800 focus:outline-none"
+                            placeholder="Search a Product here">
+                        <span class="absolute inset-y-0 right-2 flex items-center"><i
+                                class="fas fa-search text-gray-400 text-xs"></i></span>
+                    </div>
+                </div>
+                <div id="categoryList" class="flex flex-col space-y-1 mt-1"></div>
+            </div>
+
+            <div class="w-full lg:w-3/4">
+                <div class="mb-12">
+                    <div class="flex items-center mb-1">
+                        <img src="imgs/mainNitha.png" alt="" style="width: 40px;">
+                        <h4 class="text-sidebar-active font-bold text-sm tracking-wider"
+                            style="margin-top: 50px; margin-left: -35px">Product Range</h4>
+                    </div>
+                    <h2 class="text-4xl font-extrabold text-black mb-6">Our Inspiring Products</h2>
+                    <div class="space-y-4 text-gray-500 text-xs leading-relaxed text-justify">
+                        <p>We are happy to introduce Nitha Aerospace Pvt Ltd (NAPL), the pioneering industry 4.0 startup
+                            specializing in superalloy fasteners in steel city of Tamilnadu. NAPL combines advanced
+                            production processes with proprietary superalloy formulations to deliver fasteners.</p>
+                        <p>Tamilnadu. NAPL combines advanced production processes with proprietary superalloy
+                            formulations to deliver fasteners. We are happy to introduce Nitha Aerospace Pvt Ltd (NAPL),
+                            the pioneering industry 4.0 startup specializing in superalloy fasteners in steel city of
+                            Tamilnadu.</p>
+                    </div>
+                </div>
+                <div id="productGrid"
+                    class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-y-10 gap-x-4 justify-items-center lg:justify-items-start">
+                </div>
+                <div id="noResults" class="hidden py-12 text-center text-gray-400">No products found.</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="w-full min-h-screen p-8 sm:p-12 flex items-center justify-center bg-cover bg-center"
+        style="background-image: url('imgs/nut.png'); ">
+
+        <div class="w-full max-w-5xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+
+            <div class=" text-white">
+
+                <img src="imgs/whitenitha-removebg-preview.png" alt="Logo" class="w-16 h-16" />
+
+                <p class="text-sm font-semibold tracking-wider uppercase mb-2">
+                    One Platform For All Your Fatener Requirements
+                </p>
+                <h1 class="text-4xl lg:text-5xl font-black  leading-tight mt-8"
+                    style="letter-spacing: -1px; transform: scaleY(1.1) ">
+                    Buy Quality Products At The Best Prices From NITHA Aerospace
+                </h1>
+
+                <div class="flex items-center gap-4 mt-8">
+                    <img src="imgs/mailwing.png" alt="Email" class="w-16 h-16" />
+                    <div>
+                        <p class="text-lg">Email us or Post your requirements</p>
+                        <a href="mailto:marketing@nithaaerospace.in" class="text-xl font-bold">
+                            marketing@nithaaerospace.in
+                        </a>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-4 mt-6">
+                    <img src="imgs/pngwing.com.png" alt="WhatsApp" class="w-14 h-14" />
+                    <div>
+                        <p class="text-lg">Contact us on WhatsApp or Post your requirements</p>
+                        <a href="tel:+919578420672" class="text-xl font-bold">
+                            +91 95784 20672
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full max-w-lg p-6 sm:p-8  backdrop-blur-lg rounded-lg shadow-2xl border border-white/30 "
+                style="box-shadow: 0px 10px 20px black;">
+
+                <h1 class="text-2xl font-extrabold text-white" style="letter-spacing: -1px; transform: scaleY(1.1);">
+                    Connect
+                    With
+                    Us Today!</h1>
+                <p class="mt-1 text-sm text-gray-200 mb-6">Share your details and we will contact you shortly</p>
+
+                <form action="#" method="POST" class="space-y-4">
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <input type="text" placeholder="Business Name"
+                                class="w-full bg-white rounded-md border-0 py-2.5 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-500 sm:text-sm">
+                        </div>
+                        <div>
+                            <input type="text" placeholder="First & Last name"
+                                class="w-full bg-white rounded-md border-0 py-2.5 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-500 sm:text-sm">
+                        </div>
+                        <div>
+                            <input type="email" placeholder="Business Email ID"
+                                class="w-full bg-white rounded-md border-0 py-2.5 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-500 sm:text-sm">
+                        </div>
+                        <div>
+                            <input type="tel" placeholder="Mobile Number"
+                                class="w-full bg-white rounded-md border-0 py-2.5 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-500 sm:text-sm">
+                        </div>
+                        <div>
+                            <input type="text" placeholder="Pincode"
+                                class="w-full bg-white rounded-md border-0 py-2.5 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-500 sm:text-sm">
+                        </div>
+                        <div>
+                            <input type="text" placeholder="City"
+                                class="w-full bg-white rounded-md border-0 py-2.5 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-500 sm:text-sm">
+                        </div>
+                        <div>
+                            <select
+                                class="w-full bg-white rounded-md border-0 py-2.5 px-3.5 text-gray-400 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-green-500 sm:text-sm">
+                                <option disabled selected>Products</option>
+                                <option value="prod1">Product 1</option>
+                                <option value="prod2">Product 2</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select
+                                class="w-full bg-white rounded-md border-0 py-2.5 px-3.5 text-gray-400 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-green-500 sm:text-sm">
+                                <option disabled selected>Quantity(in MT)</option>
+                                <option value="1">1 MT</option>
+                                <option value="5">5 MT</option>
+                                <option value="10">10+ MT</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3 pt-2">
+                        <div class="flex items-center">
+                            <input id="whatsapp" name="whatsapp" type="checkbox"
+                                class="h-4 w-4 rounded border-gray-300 text-green-600 focus:ring-green-500">
+                            <label for="whatsapp" class="ml-2 block text-sm text-gray-200">Get updates on
+                                WhatsApp</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input id="terms" name="terms" type="checkbox"
+                                class="h-4 w-4 rounded border-gray-300 text-green-600 focus:ring-green-500">
+                            <label for="terms" class="ml-2 block text-sm text-gray-200">Terms & Conditions</label>
+                        </div>
+                    </div>
+
+                    <p class="text-xs text-gray-300 pt-2">
+                        The personal data shared by you will be used by Nitha aerospace, to connect with you directly or
+                        through its affiliates and partners.
+                    </p>
+
+                    <button type="submit"
+                        class=" rounded-md bg-green-500 w-300 py-3 px-4 text-sm font-semibold text-white shadow-sm hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-500 mt-6">
+                        Submit A Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-10 bg-white">
+        <div class="container px-6 mx-auto">
+            <div class="mb-12 mt-16 text-center">
+                <p class="mb-2 text-sm font-extrabold tracking-widest uppercase text-brand-green-title "
+                    style=" transform: scaleY(1.1);">
+                    Approvals</p>
+                <h2 class="text-4xl font-extrabold md:text-4xl">Certificaion - In process</h2>
+            </div>
+            <div class="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-7 sm:gap-6">
+                <div class="flex flex-col items-center p-6 text-center transition-shadow bg-cert-bg rounded-lg shadow-sm hover:shadow-md"
+                    style="background: #eff7f1;">
+                    <img src="imgs/iso9001.png" alt="ISO9001:2015 Logo" class="h-20 mb-4">
+                    <h3 class="mb-1 text-sm font-bold text-gray-900">ISO9001:2015</h3>
+                    <p class="text-xs leading-snug text-gray-600">International Standard for Quality Management</p>
+                </div>
+                <div class="flex flex-col items-center p-6 text-center transition-shadow bg-cert-bg rounded-lg shadow-sm hover:shadow-md"
+                    style="background: #eff7f1;">
+                    <img src="imgs/apiq.png" alt="APIQ1 Logo" class="h-20 mb-4">
+                    <h3 class="mb-1 text-sm font-bold text-gray-900">APIQ1</h3>
+                    <p class="text-xs leading-snug text-gray-600">Quality System Specification for Oil & Gas
+                        Manufacturing</p>
+                </div>
+                <div class="flex flex-col items-center p-6 text-center transition-shadow bg-cert-bg rounded-lg shadow-sm hover:shadow-md"
+                    style="background: #eff7f1;">
+                    <img src="imgs/nabl.png" alt="NABL Logo" class="h-20 mb-4">
+                    <h3 class="mb-1 text-sm font-bold text-gray-900">NABL</h3>
+                    <p class="text-xs leading-snug text-gray-600">Accredited Testing and Calibration Laboratory
+                        under ISO/IEC 17025</p>
+                </div>
+                <div class="flex flex-col items-center p-6 text-center transition-shadow bg-cert-bg rounded-lg shadow-sm hover:shadow-md"
+                    style="background: #eff7f1;">
+                    <img src="imgs/iso45001.png" alt="ISO45001:2018 Logo" class="h-20 mb-4">
+                    <h3 class="mb-1 text-sm font-bold text-gray-900">ISO45001:2018</h3>
+                    <p class="text-xs leading-snug text-gray-600">Occupational Health and Safety Management System
+                    </p>
+                </div>
+                <div class="flex flex-col items-center p-6 text-center transition-shadow bg-cert-bg rounded-lg shadow-sm hover:shadow-md"
+                    style="background: #eff7f1;">
+                    <img src="imgs/as9100.png" alt="AS91000 Logo" class="h-20 mb-4">
+                    <h3 class="mb-1 text-sm font-bold text-gray-900">AS91000</h3>
+                    <p class="text-xs leading-snug text-gray-600">Quality Management System for Aerospace
+                        Manufacturing</p>
+                </div>
+                <div class="flex flex-col items-center p-6 text-center transition-shadow bg-cert-bg rounded-lg shadow-sm hover:shadow-md"
+                    style="background: #eff7f1;">
+                    <img src="imgs/api20.png" alt="API12DE Logo" class="h-20 mb-4">
+                    <h3 class="mb-1 text-sm font-bold text-gray-900">API1 20E</h3>
+                    <p class="text-xs leading-snug text-gray-600">Bolting Specification for Petroleum & Natural Gas
+                        Industries</p>
+                </div>
+                <div class="flex flex-col items-center p-6 text-center transition-shadow bg-cert-bg rounded-lg shadow-sm hover:shadow-md"
+                    style="background: #eff7f1;">
+                    <img src="imgs/iso14001.png" alt="ISO14001:2015 Logo" class="h-20 mb-4">
+                    <h3 class="mb-1 text-sm font-bold text-gray-900">ISO14001:2015</h3>
+                    <p class="text-xs leading-snug text-gray-600">Environmental Management System</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cta-fasteners-box"
+        class="top_box relative z-[90] overflow-hidden bg-[#6a9b5f] pb-24 text-white bg-dots"
+        style="border-radius:10px; width: 80%; height: 30vh; z-index: 99; position: relative; left: 9%; box-shadow: 0px 20px 9px black; margin-top: 20px;">
+
+        <div id="cta-image-wrapper"
+            class="absolute inset-0 z-0 bg-right bg-no-repeat bg-cover opacity-70 mix-blend-multiply" style="background-image: url('imgs/wwu.png'); height: 220px; background-size: cover;      /* make it fill the screen */
+background-repeat: no-repeat;  /* prevent tiling */
+background-position: center;">
+        </div>
+
+        <div class="top_box container relative z-2 px-6 py-20 mx-auto lg:py-20" id="cta-content-container">
+            <div id="cta-text-wrapper" style="position:absolute;top:0 ;">
+                <div class="max-w-2xl">
+                    <p class=" text-sm  py-4 font-semibold tracking-wider ">One Platform For All
+                        Your Fasteners Requirements</p>
+                    <h2 class=" text-3xl mb-2 font-extrabold tracking-tight">Which
+                        products are you looking to buy?</h2>
+                    <p class="mb-2 mt-1  text-1 font-bold">Single window for end-to-end steel sourcing</p>
+                    <a href="products.html"
+                        class="inline-flex items-center px-8 py-2 text-sm font-bold text-[#6a9b5f]  bg-white rounded-md shadow-lg transition-transform hover:scale-105">
+                        Explore Now
+                        <i class="ml-3  fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer
+        class="relative z-[10] pt-32 pb-16 text-gray-300 bg-gradient-to-t from-[#0b180d] via-[#172c19] to-[#1a471c] w-full">
+
+        <div class="absolute top-0 left-0 w-full h-24 bg-[#1a471c] rounded-[50%] transform -translate-y-1/2">
+        </div>
+
+        <div class="container px-6 mx-auto">
+            <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-6 ">
+                <div class="px-2">
+                    <div class="flex items-center mb-8 text-2xl font-bold text-white">
+                        <img src="imgs/Screenshot 2025-11-04 120806.png" alt="" style="width: 100px; height: 100px;">
+                    </div>
+                </div>
+
+                <div class="px-1">
+                    <h3 class="mb-6 text-lg font-semibold text-white ">Head Office & Factory</h3>
+                    <p class="text-sm leading-relaxed">Plot no. 140 SIDCO Women Industrial Estate Karuppur,
+                        Salem, Tamilnadu, India - 636 011
+                    </p>
+
+                    <h3 class="mt-6 mb-2 text-sm font-semibold text-white">Call Us On</h3>
+                    <p class="text-sm leading-relaxed"><a href="tel:+918220538534">+91 82205 38534</a></p>
+                    <p class="text-sm leading-relaxed"><a href="tel:+919578420672">+91 95784 20672</a></p>
+
+                    <h3 class="mt-6 mb-4 text-sm font-semibold text-white">Our Mailbox</h3>
+                    <p class="text-sm leading-relaxed"><a
+                            href="mailto:marketing@nithaaerospace.in">marketing@nithaaerospace.in</a></p>
+                    <p class="text-sm leading-relaxed"><a
+                            href="mailto:support@nithaaerospace.in">support@nithaaerospace.in</a></p>
+                </div>
+
+                <div class="px-8">
+                    <h3 class="mb-6 pc text-lg font-semibold text-white">Company</h3>
+                    <ul class="space-y-1 text-sm">
+                        <li><a href="index.html" class="transition-colors hover:text-white">Home</a></li>
+                        <li><a href="aboutus.html" class="transition-colors hover:text-white">About Us</a></li>
+                        <li><a href="#" class="transition-colors hover:text-white">Fasteners</a></li>
+                        <li><a href="products.html" class="transition-colors hover:text-white">Solution</a>
+                        <li><a href="#" class="transition-colors hover:text-white">Downloads</a></li>
+                        <li><a href="contact.html" class="transition-colors hover:text-white">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="-1px">
+                    <h3 class="mb-6 text-lg font-semibold text-white">Our Products</h3>
+                    <ul class="grid grid-cols-1 gap-x-4">
+                        <li class="mb-1"><a href="#" class="text-sm transition-colors hover:text-white">Aerospace
+                                Fasteners</a>
+                        </li>
+                        <li class="mb-1"><a href="#" class="text-sm transition-colors hover:text-white">Oil & Gas
+                                Bolting</a>
+                        </li>
+                        <li class="mb-1"><a href="#" class="text-sm transition-colors hover:text-white">Defence
+                                Fasteners</a>
+                        </li>
+                        <li class="mb-1"><a href="#" class="text-sm transition-colors hover:text-white">Shipbuilding
+                                Fasteners</a>
+                        </li>
+                        <li class="mb-1"><a href="#" class="text-sm transition-colors hover:text-white">Automotive
+                                Fasteners</a>
+                        </li>
+                        <li class="mb-1"><a href="#" class="text-sm transition-colors hover:text-white">Nuclear & Energy
+                                Fasteners</a>
+                        </li>
+                        <li class="mb-1"><a href="#" class="text-sm transition-colors hover:text-white">Mo Fasteners</a>
+                        </li>
+                        <li class="mb-1"><a href="#" class="text-sm transition-colors hover:text-white">Medical
+                                Fasteners</a>
+                        </li>
+                        <li class="mb-1"><a href="#" class="text-sm transition-colors hover:text-white">Custom &
+                                Prototype Fasteners</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="mb-6 text-lg font-semibold text-white">Facilities</h3>
+                    <ul class="grid grid-cols-1 gap-x-4">
+                        <li class="mb-1"><a href="#" class="text-sm transition-colors hover:text-white">Melting</a>
+                        </li>
+                        <li class="mb-1"><a href="#" class="text-sm transition-colors hover:text-white">Casting </a>
+                        </li>
+                        <li class="mb-1"><a href="#" class="text-sm transition-colors hover:text-white">Forging </a>
+                        </li>
+                        <li class="mb-1"><a href="#" class="text-sm transition-colors hover:text-white">Precision
+                                Machining </a></li>
+                        <li class="mb-1"><a href="#" class="text-sm transition-colors hover:text-white">Thread Rolling
+                            </a></li>
+                        <li class="mb-1"><a href="#" class="text-sm transition-colors hover:text-white"> Heat Treatment
+                            </a></li>
+                        <li class="mb-1"><a href="#" class="text-sm transition-colors hover:text-white">Surface
+                                Treatment </a></li>
+                        <li class="mb-1"><a href="#" class="text-sm transition-colors hover:text-white"> Testing & QA
+                            </a></li>
+                        <li class="mb-1"><a href="#" class="text-sm transition-colors hover:text-white">
+                                Design & Engineering </a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="mb-6 text-lg font-semibold text-white">Subscribe Our Newsletter</h3>
+                    <p class="mb-4 text-sm">Be the first to receive the great deals and news</p>
+                    <form>
+                        <input type="email" placeholder="Enter your email address"
+                            class="w-full px-4 py-3 text-sm text-gray-900 rounded-md">
+                        <button type="submit"
+                            class="w-full px-4 py-3 mt-3 text-sm font-semibold text-white uppercase bg-[#709a67] rounded-md transition-colors hover:bg-opacity-90">
+                            Subscribe Now
+                        </button>
+                    </form>
+
+                    <div class="flex items-center justify-center p-2 mt-4" style="width: 150px; height: 150px;">
+                        <img src="imgs/output-onlinepngtools.png" alt="ISO 9001 Logo" class="object-contain h-full">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="relative z-20 py-4 text-gray-400 " style="background: #0b180d; border-top: 1px solid white;">
+        <div class="container flex flex-col items-center justify-between px-6 mx-auto text-sm md:flex-row">
+            <p class="mb-4 md:mb-0">
+                www.nithaaerospace.in © Copyright and private limited. All Rights Reserved | <a href="Terms.html"
+                    id="terms">Terms of Access</a>
+            </p>
+            <div class="flex space-x-6 text-base">
+                <a href="#" class="transition-colors hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="transition-colors hover:text-white"><i class="fab fa-google-plus-g"></i></a>
+                <a href="#" class="transition-colors hover:text-white"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="transition-colors hover:text-white"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="transition-colors hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const productData = [
+            { name: 'Bolt', count: 503, image: 'imgs/bolt.png', sub: ['Anchor Bolt (133)', 'Cup Square Bolt (133)', 'Eye Bolt (133)', 'Flange Bolt (133)', 'Hex Bolt with Capital Screw (133)', 'Hex Bolt (133)', 'High Tensile Bolt (133)', 'J Bolt (133)', 'Serrated Flange Bolt (133)', 'Square Head Bolt (133)', 'Structural Bolt (133)', 'U Bolt (133)'] },
+            { name: 'Bush', count: 503, image: 'imgs/bush.png', sub: [] },
+            { name: 'Circlips', count: 503, image: 'imgs/circlip.png', sub: [] },
+            { name: 'Nail', count: 503, image: 'imgs/nail.png', sub: [] },
+            { name: 'Nut', count: 503, image: 'imgs/nnuts.png', sub: [] },
+            { name: 'Pin & Keys', count: 503, image: 'imgs/pins.png', sub: [] },
+            { name: 'Clamp', count: 503, image: 'imgs/clamp.png', sub: [] },
+            { name: 'Rivert', count: 503, image: 'imgs/rivert.png', sub: [] },
+            { name: 'Screw', count: 503, image: 'imgs/screw.png', sub: [] },
+            { name: 'Spacer & Standoff', count: 503, image: 'imgs/spacer.png', sub: [] },
+            { name: 'Stud & Rod', count: 503, image: 'imgs/stud.png', sub: [] },
+            { name: 'Washer', count: 503, image: 'imgs/washer.png', sub: [] },
+            { name: 'Wires', count: 503, image: 'imgs/wire.png', sub: [] },
+            { name: 'Hinge', count: 503, image: 'imgs/hinge.png', sub: [] },
+            { name: 'Latch', count: 503, image: 'imgs/latch.png', sub: [] },
+        ];
+
+        let activeCategory = 'Bolt';
+
+        function renderCategoryList(filter = '') {
+            const container = document.getElementById('categoryList');
+            const upperFilter = filter.toUpperCase();
+            container.innerHTML = productData.map(cat => {
+                const matchesMain = cat.name.toUpperCase().includes(upperFilter);
+                if (filter && !matchesMain) return '';
+                const isActive = cat.name === activeCategory;
+                const btnClass = isActive ? 'bg-sidebar-active text-white' : 'bg-brand-light-green text-gray-800 hover:bg-green-100';
+                const iconClass = isActive ? 'text-white' : 'text-gray-500';
+                let subHtml = '';
+                if (isActive && cat.sub.length > 0) {
+                    subHtml = `<div class="bg-white pl-2 py-2 mb-1">${cat.sub.map(s => `<div class="py-1 pl-4 text-[11px] text-gray-500 hover:text-brand-green cursor-pointer">${s}</div>`).join('')}</div>`;
+                }
+                return `<div class="mb-1"><button onclick="toggleCategory('${cat.name}')" class="w-full flex justify-between items-center px-4 py-3 text-xs font-bold uppercase transition-all duration-200 ${btnClass}"><span>${cat.name}</span><i class="fas fa-chevron-right text-[10px] ${iconClass}"></i></button>${subHtml}</div>`;
+            }).join('');
+        }
+
+        function renderProductGrid(items) {
+            const grid = document.getElementById('productGrid');
+            const noRes = document.getElementById('noResults');
+            if (items.length === 0) { grid.innerHTML = ''; noRes.classList.remove('hidden'); return; }
+            noRes.classList.add('hidden');
+            grid.innerHTML = items.map(p => {
+                const placeholder = `https://placehold.co/200x200/ffffff/d1d5db?text=${p.name.substring(0, 2)}`;
+                const borderColor = 'bg-sidebar-active';
+                return `<div class="flex flex-col items-center w-[150px] group cursor-pointer"><div class="relative w-[140px] h-[160px] mb-3 drop-shadow-md transition-transform duration-300 hover:scale-105"><div class="absolute inset-0 ${borderColor} hexagon-shape"></div><div class="absolute inset-[3px] bg-white hexagon-shape flex items-center justify-center overflow-hidden z-10"><img src="${p.image}" alt="${p.name}" class="w-full h-full object-contain p-1 grayscale group-hover:grayscale-0 transition-all duration-300" onerror="this.src='${placeholder}'"></div></div><h4 class="text-sm font-extrabold uppercase tracking-tight text-black text-center">${p.name}</h4><p class="text-[10px] text-gray-400 font-medium mt-0.5">${p.count} products</p></div>`;
+            }).join('');
+        }
+
+        function handleSearchAndFilter() {
+            const term = document.getElementById('productSearch').value.trim().toUpperCase();
+            renderCategoryList(term);
+            let gridItems = term ? productData.filter(p => p.name.toUpperCase().includes(term)) : productData;
+            renderProductGrid(gridItems);
+        }
+
+        function toggleCategory(name) {
+            activeCategory = (activeCategory === name) ? null : name;
+            document.getElementById('productSearch').value = '';
+            handleSearchAndFilter();
+        }
+
+        document.addEventListener('DOMContentLoaded', () => { handleSearchAndFilter(); });
+    </script>
+</body>
+
+</html>
