@@ -484,6 +484,87 @@
                 padding-right: 1rem !important;
             }
         }
+
+        /* Add this new media query to your <style> block or index.css */
+        @media (min-width: 1024px) and (max-width: 1279px) {
+
+            /* Hero section - reduce excessive height to prevent too much empty space on ~1300px screens */
+            header .relative.w-full.h-\[1000px\] {
+                height: 800px !important;
+            }
+
+            /* Adjust logo positioning in hero (it was pushed too far up/left) */
+            header img[alt="NITHA Logo"] {
+                margin-top: -450px !important;
+                margin-right: 400px !important;
+                padding-left: 0 !important;
+            }
+
+            /* Hero text container - slight vertical adjustment for better centering */
+            #hero-container {
+                margin-top: -50px;
+            }
+
+            /* Product range section - reduce bottom margin if it feels too spaced out */
+            section#product>.container {
+                margin-bottom: 10rem !important;
+            }
+
+            /* CTA / "Which products" box at the bottom - your existing rule for <=1366px is good, but tighten it a bit more */
+            #cta-fasteners-box {
+                height: 28vh !important;
+                padding-bottom: 1.5rem !important;
+            }
+
+            #cta-image-wrapper {
+                height: 180px !important;
+            }
+
+            #cta-content-container {
+                padding-top: 1.5rem !important;
+                padding-bottom: 1.5rem !important;
+            }
+
+            /* Reduce excessive horizontal padding on wide sections (your existing @media max-1366px rule) */
+            .py-24.px-24.bg-white {
+                padding-left: 4rem !important;
+                padding-right: 4rem !important;
+            }
+
+            section.relative.z-20.py-24.px-24.bg-white>.container.mx-auto.px-4 {
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+            }
+
+            section[style*="background: url(imgs/curves.png)"]>.container.mx-auto.px-4 {
+                padding-left: 2rem !important;
+                padding-right: 2rem !important;
+            }
+
+            /* Industries grid - prevent cards from becoming too large */
+            .grid-cols-4>div {
+                height: 70vh !important;
+            }
+
+            /* Process steps cards (What We Do section) */
+            .grid-cols-6>div {
+                height: auto !important;
+            }
+
+            /* General container max-width tweak - limit content width so it doesn't stretch too wide */
+            .container {
+                max-width: 1200px !important;
+            }
+
+            /* Optional: slightly reduce font sizes on headings if text feels oversized */
+            h1.text-5xl {
+                font-size: 3.5rem !important;
+            }
+
+            h1.text-4xl {
+                font-size: 2.5rem !important;
+            }
+        }
     </style>
     <script>
         // MERGED Tailwind config from all parts
@@ -567,7 +648,7 @@
 
                     <div class="relative group">
                         <a href="products.html" class="nav-text hover:text-brand-partner-btn font-bold">
-                            Solutions <i class="fas fa-chevron-down text-xs ml-1"></i>
+                            Products <i class="fas fa-chevron-down text-xs ml-1"></i>
                         </a>
                     </div>
 
@@ -1877,7 +1958,7 @@ background-position: center;">
                         <li><a href="index.html" class="transition-colors hover:text-white">Home</a></li>
                         <li><a href="aboutus.html" class="transition-colors hover:text-white">About Us</a></li>
                         <li><a href="#" class="transition-colors hover:text-white">Fasteners</a></li>
-                        <li><a href="products.html" class="transition-colors hover:text-white">Solution</a>
+                        <li><a href="products.html" class="transition-colors hover:text-white">Products</a>
                         <li><a href="#" class="transition-colors hover:text-white">Downloads</a></li>
                         <li><a href="contact.html" class="transition-colors hover:text-white">Contact us</a></li>
                     </ul>
