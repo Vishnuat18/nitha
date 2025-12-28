@@ -1,0 +1,57 @@
+/* =====================================================
+   NAVBAR FIX — 1024px LAPTOP WIDTH
+   Solves overflow + CTA misalignment
+===================================================== */
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+
+  /* NAV WRAPPER */
+  nav {
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+  }
+
+  nav .container {
+    max-width: 100%;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  /* LOGO */
+  nav img {
+    height: 20px;
+    width: 2px;
+  }
+
+  /* MAIN MENU ROW */
+  nav .md\:flex {
+    gap: 1rem;               /* tighter spacing */
+    font-size: 12.5px;       /* reduced text size */
+    white-space: nowrap;
+  }
+
+  /* MENU LINKS & BUTTONS */
+  nav a,
+  nav button {
+    letter-spacing: 0.02em;
+    flex-shrink: 0;
+  }
+
+  /* DROPDOWN ICON */
+  nav i.fa-chevron-down {
+    font-size: 9px;
+  }
+
+  /* CTA BUTTON */
+  nav .sm\:block a {
+    padding: 0.4rem 1.1rem;
+    font-size: 12px;
+  }
+}
+
+/* HARD STOP — PREVENT FLEX WRAP */
+@media (width: 1024px) {
+  nav .md\:flex {
+    flex-wrap: nowrap;
+  }
+}
