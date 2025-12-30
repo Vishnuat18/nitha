@@ -147,6 +147,35 @@
         #relatedProductsGrid .group:hover h5 {
             letter-spacing: 0.5px;
         }
+
+              /* FOOTER DESIGN HOVERING EFFECT */
+        footer ul li,
+        footer a {
+            transition: all 0.3s ease;
+            border-left: 2px solid transparent;
+            /* Invisible border to prevent shifting */
+            padding-left: 0;
+            cursor: pointer;
+
+        }
+
+        footer ul li:hover {
+            border-left: 2px solid white;
+            /* The white border appears on hover */
+            padding-left: 8px;
+            /* Smoothly pushes text to the right */
+            color: white;
+            font-weight: 500;
+        }
+
+
+        /* TERMS HOVER */
+
+
+        #terms:hover {
+            text-decoration: underline;
+            font-weight: 500;
+        }
     </style>
 </head>
 
@@ -751,26 +780,24 @@
         </div>
     </section>
 
-    <section id="cta-fasteners-box"
-        class="top_box relative z-[90] overflow-hidden bg-[#6a9b5f] pb-24 text-white bg-dots"
-        style="border-radius:10px; width: 80%; height: 30vh; z-index: 99; position: relative; left: 9%; box-shadow: 0px 20px 9px black; margin-top: 20px;">
+    <section class="top_box relative z-[90] overflow-hidden bg-[#6a9b5f] pb-0 text-white bg-dots responsive-out"
+        style="border-radius:10px; width: 80%; height: 250px; z-index: 99; position: relative; left: 9%; box-shadow: 0px 20px 9px black; margin-top: 20px;">
 
-        <div id="cta-image-wrapper"
-            class="absolute inset-0 z-0 bg-right bg-no-repeat bg-cover opacity-70 mix-blend-multiply" style="background-image: url('imgs/wwu-copy.png'); height: 220px; background-size: cover;      /* make it fill the screen */
+        <div class="absolute inset-0 z-0 bg-right bg-no-repeat bg-cover opacity-70 mix-blend-multiply responsive" style="background-image: url('imgs/wwu\ copy.png'); background-size: cover;      /* make it fill the screen */
 background-repeat: no-repeat;  /* prevent tiling */
 background-position: center;">
         </div>
 
-        <div class="top_box container relative z-2 px-6 py-20 mx-auto lg:py-20" id="cta-content-container">
-            <div id="cta-text-wrapper" style="position:absolute;top:0 ;">
+        <div class="top_box container relative z-2 px-6 py-20 mx-auto lg:py-20">
+            <div style="position:absolute;top:13% ;">
                 <div class="max-w-2xl">
-                    <p class=" text-sm  py-4 font-semibold tracking-wider ">One Platform For All
+                    <p class=" text-sm  py-3 font-semibold tracking-wider ">One Platform For All
                         Your Fasteners Requirements</p>
                     <h2 class=" text-3xl mb-2 font-extrabold tracking-tight">Which
                         products are you looking to buy?</h2>
-                    <p class="mb-2 mt-1  text-1 font-bold">Single window for end-to-end steel sourcing</p>
+                    <p class="mb-4 mt-1  text-1 font-bold">Single window for end-to-end steel sourcing</p>
                     <a href="products.html"
-                        class="inline-flex items-center px-8 py-2 text-sm font-bold text-[#6a9b5f]  bg-white rounded-md shadow-lg transition-transform hover:scale-105">
+                        class="inline-flex items-center px-8 py-3 text-sm font-bold text-[#6a9b5f]  bg-white rounded-md shadow-lg transition-transform hover:scale-105">
                         Explore Now
                         <i class="ml-3  fas fa-arrow-right"></i>
                     </a>
@@ -779,116 +806,127 @@ background-position: center;">
         </div>
     </section>
 
-    <footer
-        class="relative z-[10] pt-32 pb-16 text-gray-300 bg-gradient-to-t from-[#0b180d] via-[#172c19] to-[#1a471c] w-full">
+    <footer class="relative z-10 bg-gradient-to-t from-[#0b180d] via-[#172c19] to-[#1a471c] text-gray-300">
 
-        <div class="absolute top-0 left-0 w-full h-24 bg-[#1a471c] rounded-[50%] transform -translate-y-1/2">
-        </div>
+        <!-- Curve -->
+        <div class="absolute top-0 left-0 w-full h-24 bg-[#1a471c] rounded-[50%] -translate-y-1/2"></div>
 
-        <div class="container px-6 mx-auto">
-            <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-6 ">
-                <div class="px-2">
-                    <div class="flex items-center mb-8 text-2xl font-bold text-white">
-                        <img src="imgs/Screenshot 2025-11-04 120806.png" alt="" style="width: 100px; height: 100px;">
-                    </div>
+        <div class="relative max-w-7xl mx-auto px-6 py-16 pt-32 pb-32">
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6 items-start">
+
+                <!-- LOGO -->
+                <div>
+                    <img src="imgs/Screenshot 2025-11-04 120806.png" class="w-[100px] h-auto mb-6" alt="Logo">
                 </div>
 
-                <div class="px-1">
-                    <h3 class="mb-6 text-lg font-semibold text-white ">Head Office & Factory</h3>
-                    <p class="text-sm leading-relaxed">Plot no. 140 SIDCO Women Industrial Estate Karuppur,
-                        Salem, Tamilnadu, India - 636 011
+                <!-- ADDRESS -->
+                <div>
+                    <h3 class="mb-4 text-lg font-semibold text-white">Head Office & Factory</h3>
+
+                    <p class="text-sm leading-relaxed">
+                        Plot no. 140 SIDCO Women Industrial Estate,<br>
+                        Karuppur, Salem – 636011
                     </p>
 
-                    <h3 class="mt-6 mb-2 text-sm font-semibold text-white">Call Us On</h3>
-                    <p class="text-sm leading-relaxed"><a href="tel:+918220538534">+91 82205 38534</a></p>
-                    <p class="text-sm leading-relaxed"><a href="tel:+919578420672">+91 95784 20672</a></p>
+                    <h3 class="mt-4 text-sm font-semibold">Call Us</h3>
 
-                    <h3 class="mt-6 mb-4 text-sm font-semibold text-white">Our Mailbox</h3>
-                    <p class="text-sm leading-relaxed"><a
-                            href="mailto:marketing@nithaaerospace.in">marketing@nithaaerospace.in</a></p>
-                    <p class="text-sm leading-relaxed"><a
-                            href="mailto:support@nithaaerospace.in">support@nithaaerospace.in</a></p>
+                    <a href="tel:+918220538534" class="block text-sm hover:text-white transition">
+                        +91 82205 38534
+                    </a>
+
+                    <a href="tel:+919578420672" class="block text-sm hover:text-white transition">
+                        +91 95784 20672
+                    </a>
+
+                    <h3 class="mt-4 text-sm font-semibold">Mail</h3>
+
+                    <a href="mailto:marketing@nithaaerospace.in" class="block text-sm hover:text-white transition">
+                        marketing@nithaaerospace.in
+                    </a>
+
+                    <a href="mailto:support@nithaaerospace.in" class="block text-sm hover:text-white transition">
+                        support@nithaaerospace.in
+                    </a>
                 </div>
 
-                <div class="px-8">
-                    <h3 class="mb-6 pc text-lg font-semibold text-white">Company</h3>
-                    <ul class="space-y-1 text-sm">
-                        <li><a href="index.html" class="transition-colors hover:text-white">Home</a></li>
-                        <li><a href="aboutus.html" class="transition-colors hover:text-white">About Us</a></li>
-                        <li><a href="#" class="transition-colors hover:text-white">Fasteners</a></li>
-                        <li><a href="products.html" class="transition-colors hover:text-white">Products</a>
-                        <li><a href="#" class="transition-colors hover:text-white">Downloads</a></li>
-                        <li><a href="contact.html" class="transition-colors hover:text-white">Contact us</a></li>
-                    </ul>
-                </div>
-                <div class="-1px">
-                    <h3 class="mb-6 text-lg font-semibold text-white">Our Products</h3>
-                    <ul class="grid grid-cols-1 gap-x-4">
-                        <li class="mb-1"><a href="#" class="text-sm transition-colors hover:text-white">Aerospace
-                                Fasteners</a>
-                        </li>
-                        <li class="mb-1"><a href="#" class="text-sm transition-colors hover:text-white">Oil & Gas
-                                Bolting</a>
-                        </li>
-                        <li class="mb-1"><a href="#" class="text-sm transition-colors hover:text-white">Defence
-                                Fasteners</a>
-                        </li>
-                        <li class="mb-1"><a href="#" class="text-sm transition-colors hover:text-white">Shipbuilding
-                                Fasteners</a>
-                        </li>
-                        <li class="mb-1"><a href="#" class="text-sm transition-colors hover:text-white">Automotive
-                                Fasteners</a>
-                        </li>
-                        <li class="mb-1"><a href="#" class="text-sm transition-colors hover:text-white">Nuclear & Energy
-                                Fasteners</a>
-                        </li>
-                        <li class="mb-1"><a href="#" class="text-sm transition-colors hover:text-white">Medical
-                                Fasteners</a>
-                        </li>
-                        <li class="mb-1"><a href="#" class="text-sm transition-colors hover:text-white">Custom &
-                                Prototype Fasteners</a>
-                        </li>
-                    </ul>
-                </div>
+
+                <!-- COMPANY -->
                 <div>
-                    <h3 class="mb-6 text-lg font-semibold text-white">Facilities</h3>
-                    <ul class="grid grid-cols-1 gap-x-4">
-                        <li class="mb-1"><a href="#" class="text-sm transition-colors hover:text-white">Melting</a>
-                        </li>
-                        <li class="mb-1"><a href="#" class="text-sm transition-colors hover:text-white">Casting </a>
-                        </li>
-                        <li class="mb-1"><a href="#" class="text-sm transition-colors hover:text-white">Forging </a>
-                        </li>
-                        <li class="mb-1"><a href="#" class="text-sm transition-colors hover:text-white">Precision
-                                Machining </a></li>
-                        <li class="mb-1"><a href="#" class="text-sm transition-colors hover:text-white">Thread Rolling
-                            </a></li>
-                        <li class="mb-1"><a href="#" class="text-sm transition-colors hover:text-white"> Heat Treatment
-                            </a></li>
-                        <li class="mb-1"><a href="#" class="text-sm transition-colors hover:text-white">Surface
-                                Treatment </a></li>
-                        <li class="mb-1"><a href="#" class="text-sm transition-colors hover:text-white"> Testing & QA
-                            </a></li>
-                        <li class="mb-1"><a href="#" class="text-sm transition-colors hover:text-white">
-                                Design & Engineering </a></li>
+                    <h3 class="mb-4 text-lg font-semibold text-white">Company</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="aboutus.html">About</a></li>
+                        <li><a href="#">Capabilities</a></li>
+                        <li><a href="#">FID/R&D</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
+                <!-- PRODUCTS -->
                 <div>
-                    <h3 class="mb-6 text-lg font-semibold text-white">Subscribe Our Newsletter</h3>
-                    <p class="mb-4 text-sm">Be the first to receive the great deals and news</p>
-                    <form>
-                        <input type="email" placeholder="Enter your email address"
-                            class="w-full px-4 py-3 text-sm text-gray-900 rounded-md">
-                        <button type="submit"
-                            class="w-full px-4 py-3 mt-3 text-sm font-semibold text-white uppercase bg-[#709a67] rounded-md transition-colors hover:bg-opacity-90">
-                            Subscribe Now
-                        </button>
-                    </form>
-
-                    <div class="flex items-center justify-center p-2 mt-4" style="width: 150px; height: 150px;">
-                        <img src="imgs/output-onlinepngtools.png" alt="ISO 9001 Logo" class="object-contain h-full">
-                    </div>
+                    <h3 class="mb-4 text-lg font-semibold text-white">Our Products</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li class="hover:text-white cursor-pointer">Aerospace Fasteners</li>
+                        <li>Oil & Gas Bolting</li>
+                        <li>Defence Fasteners</li>
+                        <li>Shipbuilding Fasteners</li>
+                        <li>Automotive Fasteners</li>
+                        <li>Nuclear & Energy Fasteners</li>
+                        <li>Medical Fasteners</li>
+                        <li>Custom & Prototype Fasteners</li>
+                    </ul>
                 </div>
+
+                <!-- FACILITIES -->
+                <div>
+                    <h3 class="mb-4 text-lg font-semibold text-white">Facilities</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li>Melting</li>
+                        <li>Casting</li>
+                        <li>Forging</li>
+                        <li>Precision Machining</li>
+                        <li>Thread Rolling</li>
+                        <li>Heat Treatment</li>
+                        <li>Surface Treatment</li>
+                        <li>Testing & QA</li>
+                        <li>Design & Engineering</li>
+                    </ul>
+                </div>
+
+                <!-- CONTACT -->
+                <div>
+                    <h3 class="mb-4 text-lg font-semibold text-white">Connect With Us</h3>
+
+                    <!-- WhatsApp Button -->
+                    <a href="https://wa.me/919578420672" target="_blank"
+                        class="flex items-center gap-3 px-5 py-2 rounded-full bg-green-600 hover:bg-green-700 transition-all duration-200 shadow-md hover:shadow-lg w-fit">
+
+                        <div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+                            <i class="fab fa-whatsapp text-white text-xl"></i>
+                        </div>
+
+                        <span class="text-white font-semibold text-sm tracking-wide">
+                            Chat on WhatsApp
+                        </span>
+                    </a>
+
+                    <!-- Call Button -->
+                    <a href="tel:+919578420672"
+                        class="flex items-center gap-3 px-5 pr-20 py-2 mt-3 rounded-full bg-orange-400 hover:bg-orange-600 transition-all duration-200 shadow-md hover:shadow-lg w-fit">
+
+                        <div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+                            <i class="fas fa-phone-alt text-white text-lg"></i>
+
+                        </div>
+
+                        <span class="text-white font-semibold text-sm ">
+                            Call Now
+                        </span>
+                    </a>
+
+                </div>
+
             </div>
         </div>
     </footer>
@@ -901,14 +939,15 @@ background-position: center;">
             </p>
             <div class="flex space-x-6 text-base">
                 <a href="#" class="transition-colors hover:text-white"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="transition-colors hover:text-white"><i class="fab fa-google-plus-g"></i></a>
-                <a href="#" class="transition-colors hover:text-white"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="transition-colors hover:text-white"><i class="fab fa-google-plus-g"></i></a><a
+                    href="#" class="transition-colors hover:text-white">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
                 <a href="#" class="transition-colors hover:text-white"><i class="fab fa-instagram"></i></a>
                 <a href="#" class="transition-colors hover:text-white"><i class="fab fa-linkedin-in"></i></a>
             </div>
         </div>
     </div>
-
 
     <script>
         // Full dataset based on your uploaded list
