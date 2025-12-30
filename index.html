@@ -1,0 +1,2642 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nitha Aerospace -Home Page</title>
+    <link rel="shortcut icon" href="imgs/nithaa-.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="index.css">
+    <script type="text/javascript">
+        function redirectMobile() {
+            // Check browser window width
+            if (window.innerWidth <= 768) {
+                window.location.href = "mobileIndex.html";
+            }
+        }
+
+        // 1. Check immediately when the page loads
+        redirectMobile();
+
+        // 2. Check whenever the window is resized
+        window.addEventListener('resize', redirectMobile);
+    </script>
+
+    <style>
+        body {
+            /* Use 'Mona Sans' as the font family */
+            font-family: 'Montserrat', sans-serif;
+            /* This allows you to use the Condensed version */
+
+        }
+
+        #terms {
+            text-decoration: underline;
+        }
+
+        #terms:hover {
+            color: white;
+
+        }
+
+        hr {
+            border: none;
+            /* Remove default border */
+            height: 1px;
+            /* Set line thickness */
+            background-color: white;
+            /* White line color */
+            margin: 20px 0;
+            /* Optional: Add spacing */
+
+        }
+
+        /* Hero curve */
+        .hero-curve {
+            position: absolute;
+            inset: 0;
+            background-color: #5b7941;
+            clip-path: ellipse(150% 100% at 50% 100%);
+            z-index: 10;
+        }
+
+        /* Hero background image */
+        .hero-bg-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        /* Hero overlay */
+        .hero-overlay {
+            background-color: rgba(91, 121, 65, 0.75);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 5;
+        }
+
+        /* Custom color classes */
+        .top-bar-bg {
+            background-color: #6a9b5f;
+        }
+
+        .main-nav-bg {
+            background-color: #f7f7f7;
+        }
+
+        .partner-btn-bg {
+            background-color: #6b8d4e;
+        }
+
+        .text-theme-green {
+            color: #6b8d4e;
+        }
+
+        .bg-dark-green {
+            background-color: #5b7941;
+        }
+
+        .bg-light-green {
+            background-color: #6b8d4e;
+        }
+
+        /* Hexagon clip-path for products */
+        .hexagon-clip {
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        }
+
+        /* Gradient for the 4-icon bar (from p3) */
+        .icon-bar-bg {
+            background: #25342d;
+        }
+
+        /* Contact form (p3) container styling */
+        .form-container-bg {
+            background-color: #5b7941;
+            border: 2px solid #6b8d4e;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Contact form (p3) input styling */
+        .custom-input {
+            background-color: #f7f7f7;
+            border: 1px solid #e0e0e0;
+            color: #333;
+            padding: 0.75rem 1rem;
+            border-radius: 0.375rem;
+        }
+
+        /* Contact section (p3) background */
+        .contact-bg-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+            opacity: 0.3;
+        }
+
+        .contact-section-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(138, 189, 94, 0.85);
+            z-index: 1;
+        }
+
+        /* "What We Do" (p6) curved section */
+        .green-curved-section {
+            background-color: #5b7941;
+            /* bg-dark-green */
+            position: relative;
+        }
+
+        .green-curved-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            /* This needs to match the gradient of the 4-icon bar */
+            background: linear-gradient(to right, #4c6636, #5b7941);
+            clip-path: ellipse(100% 100% at 50% 0%);
+            transform: translateY(-1px);
+            /* Prevents rendering gaps */
+        }
+
+        .green-curved-section::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background-color: #5b7941;
+            /* Green from the Stats section below */
+            clip-path: ellipse(100% 100% at 50% 100%);
+            transform: translateY(1px);
+            /* Prevents rendering gaps */
+        }
+
+        /* Testimonials (p7) section styles */
+        .testimonial-section {
+            position: relative;
+            background-color: #fff;
+            /* White background */
+            /* Faint dot pattern from image */
+            background-image: radial-gradient(#e0e0e0 1px, transparent 1px);
+            background-size: 20px 20px;
+            z-index: 20;
+            /* Sits above green curve */
+        }
+
+        /* Curve to cut into green section above */
+        .testimonial-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background-color: #5b7941;
+            /* Green from the Stats section above */
+            clip-path: ellipse(100% 100% at 50% 0%);
+            transform: translateY(-1px);
+            z-index: -1;
+        }
+
+        /* Curve to cut into white section below */
+        .testimonial-section::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background-color: #fff;
+            /* White, to match the blog section below */
+            clip-path: ellipse(100% 100% at 50% 100%);
+            transform: translateY(1px);
+            z-index: 10;
+        }
+
+        /* Slider styles */
+        .slider-track {
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slider-slide {
+            flex: 0 0 100%;
+            /* On mobile, 1 slide */
+        }
+
+        @media (min-width: 1024px) {
+            .slider-slide {
+                flex: 0 0 50%;
+                /* On desktop, 2 slides */
+            }
+        }
+
+        /* NEW: Styles for Stats Section */
+        .bg-brand-green-bg-stats {
+            background-color: #5b7941;
+            /* Mapped to bg-dark-green */
+        }
+
+        .text-brand-light-text {
+            color: #ffffff;
+            /* Mapped to text-white */
+        }
+
+        .text-brand-dark-text-stats {
+            color: rgba(255, 255, 255, 0.8);
+            /* Mapped to text-white/100 */
+        }
+
+        .bg-brand-icon-bg {
+            background-color: rgba(255, 255, 255, 0.2);
+            /* Mapped to bg-white/20 */
+        }
+
+        .text-brand-green-title {
+            color: #6b8d4e;
+            /* Mapped to text-theme-green */
+        }
+
+        .bg-dots {
+            background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+            background-size: 15px 15px;
+        }
+
+        /* Custom styles for the Contact Section */
+        .contact-bg-image {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+            filter: brightness(0.6);
+            /* Slightly darken the image */
+        }
+
+        .contact-section-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right, #2c5230 0%, rgba(44, 82, 48, 0.9) 30%, rgba(44, 82, 48, 0.7) 60%, rgba(44, 82, 48, 0.5) 100%);
+            z-index: 1;
+        }
+
+        .form-container-bg {
+            background: rgba(255, 255, 255, 0.1);
+            /* White with transparency */
+            backdrop-filter: blur(8px);
+            /* Frosted glass effect */
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .custom-input {
+            background-color: rgba(255, 255, 255, 0.1);
+            /* Transparent white */
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            /* Text color */
+            padding: 0.75rem 1rem;
+            border-radius: 0.375rem;
+            /* rounded-md */
+            font-size: 0.875rem;
+            /* text-sm */
+        }
+
+        .custom-input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+            /* Lighter placeholder text */
+        }
+
+        .custom-input:focus {
+            outline: none;
+            border-color: #6b8d4e;
+            /* theme-green on focus */
+            box-shadow: 0 0 0 2px rgba(107, 141, 78, 0.5);
+        }
+
+        .form-checkbox {
+            /* This will style the checkbox directly */
+            appearance: none;
+            /* Remove default checkbox styles */
+            width: 1rem;
+            height: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 0.125rem;
+            /* sm */
+            background-color: transparent;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            vertical-align: middle;
+            position: relative;
+        }
+
+        .form-checkbox:checked {
+            background-color: #6b8d4e;
+            /* theme-green when checked */
+            border-color: #6b8d4e;
+        }
+
+        .form-checkbox:checked::after {
+            content: '✓';
+            /* Checkmark character */
+            color: white;
+            font-size: 0.75rem;
+            line-height: 1;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .icon-bar-gradient-bg {
+            background: linear-gradient(to right, #4a6c4b, #2c5230);
+        }
+
+        .bg-light-green {
+            background-color: #6b8d4e;
+            background-color: #718d58;
+            /* Replicate the button color */
+        }
+
+        /* Style for the dropdown container */
+        .dropdown-content {
+            /* Positioning */
+            top: 100%;
+            /* Position right below the FIS link */
+            left: 0;
+
+            /* Appearance */
+            min-width: 250px;
+            /* Adjust width as needed */
+            background-color: #ffffff;
+            /* White background */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            /* Subtle shadow */
+            border-radius: 0.25rem;
+            /* rounded-md */
+            padding: 0.5rem 0;
+            z-index: 100;
+            /* Ensure it appears above other content */
+
+            /* Initial state (will be overridden by group-hover:block utility) */
+            display: none;
+        }
+
+        /* Style for the link inside the dropdown */
+        .dropdown-link {
+            display: block;
+            padding: 0.75rem 1rem;
+            color: #1f2937;
+            /* Dark text color */
+            font-weight: 500;
+            text-decoration: none;
+            transition: background-color 0.15s ease-in-out;
+        }
+
+        /* Hover state for the link */
+        .dropdown-link:hover {
+            background-color: #f3f4f6;
+            /* Light gray background on hover */
+            color: #6a9b5f;
+            /* Change text color to the brand green on hover */
+        }
+
+        /* This utility class from Tailwind handles the visibility */
+        /* .hidden is the default, and .group-hover:block makes it appear on hover */
+        /* You do not need to add CSS for .group-hover:block as it's a Tailwind utility */
+
+        @media (max-width: 1366px) {
+            #cta-fasteners-box {
+                /* Reduce the height of the box */
+                height: 25vh !important;
+
+                /* Reduce the bottom padding to pull the box up further */
+                padding-bottom: 2rem !important;
+                /* Adjust as needed */
+            }
+
+            /* You may also need to adjust the vertical position of the content inside the box */
+            #cta-content-container {
+                padding-top: 1rem !important;
+                /* Adjust as needed */
+                padding-bottom: 1rem !important;
+                /* Adjust as needed */
+            }
+
+            /* This rule ensures the background image also scales down */
+            #cta-image-wrapper {
+                height: 160px !important;
+                /* Adjusted from 200px */
+            }
+        }
+
+        /*easy payment options side*/
+
+        @media (max-width: 1366px) {
+
+            /* Target the main content section causing the large side margins */
+            .py-24.px-24.bg-white {
+                /* Reduce the huge padding from 'px-24' (96px) to a smaller, more standard padding */
+                padding-left: 2rem !important;
+                padding-right: 2rem !important;
+                /* You can also use Tailwind classes if you prefer, like: 'px-8 !important' or 'px-10 !important' */
+            }
+
+            /* Adjust padding for the section with the image/text block to be consistent */
+            section.relative.z-20.py-24.px-24.bg-white>.container.mx-auto.px-4 {
+                /* Remove or reduce any conflicting padding on the inner container */
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+            }
+
+            /* Adjust the padding for the dark background section with the process steps */
+            section[style*="background: url(imgs/curves.png)"]>.container.mx-auto.px-4 {
+                /* Reduce the padding on the container inside the last section */
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+        }
+
+        /* Add this new media query to your <style> block or index.css */
+        @media (min-width: 1024px) and (max-width: 1279px) {
+
+            /* Hero section - reduce excessive height to prevent too much empty space on ~1300px screens */
+            header .relative.w-full.h-\[1000px\] {
+                height: 800px !important;
+            }
+
+            /* Adjust logo positioning in hero (it was pushed too far up/left) */
+            header img[alt="NITHA Logo"] {
+                margin-top: -450px !important;
+                margin-right: 400px !important;
+                padding-left: 0 !important;
+            }
+
+            /* Hero text container - slight vertical adjustment for better centering */
+            #hero-container {
+                margin-top: -50px;
+            }
+
+            /* Product range section - reduce bottom margin if it feels too spaced out */
+            section#product>.container {
+                margin-bottom: 10rem !important;
+            }
+
+            /* CTA / "Which products" box at the bottom - your existing rule for <=1366px is good, but tighten it a bit more */
+            #cta-fasteners-box {
+                height: 28vh !important;
+                padding-bottom: 1.5rem !important;
+            }
+
+            #cta-image-wrapper {
+                height: 180px !important;
+            }
+
+            #cta-content-container {
+                padding-top: 1.5rem !important;
+                padding-bottom: 1.5rem !important;
+            }
+
+            /* Reduce excessive horizontal padding on wide sections (your existing @media max-1366px rule) */
+            .py-24.px-24.bg-white {
+                padding-left: 4rem !important;
+                padding-right: 4rem !important;
+            }
+
+            section.relative.z-20.py-24.px-24.bg-white>.container.mx-auto.px-4 {
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+            }
+
+            section[style*="background: url(imgs/curves.png)"]>.container.mx-auto.px-4 {
+                padding-left: 2rem !important;
+                padding-right: 2rem !important;
+            }
+
+            /* Industries grid - prevent cards from becoming too large */
+            .grid-cols-4>div {
+                height: 70vh !important;
+            }
+
+            /* Process steps cards (What We Do section) */
+            .grid-cols-6>div {
+                height: auto !important;
+            }
+
+            /* General container max-width tweak - limit content width so it doesn't stretch too wide */
+            .container {
+                max-width: 1200px !important;
+            }
+
+            /* Optional: slightly reduce font sizes on headings if text feels oversized */
+            h1.text-5xl {
+                font-size: 3.5rem !important;
+            }
+
+            h1.text-4xl {
+                font-size: 2.5rem !important;
+            }
+
+        }
+
+        @keyframes floatLogo {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-6px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .floating-logo {
+            animation: floatLogo 4s ease-in-out infinite;
+        }
+
+        .cert-card {
+            width: 180px;
+            height: 260px;
+            background: #eff7f1;
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            transition: all 0.3s ease;
+        }
+
+        .cert-card img {
+            height: 80px;
+            margin-bottom: 1rem;
+            object-fit: contain;
+        }
+
+        .cert-card h3 {
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 0.4rem;
+        }
+
+        .cert-card p {
+            font-size: 0.75rem;
+            color: #4b5563;
+            line-height: 1.4;
+        }
+
+        .cert-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        /* Horizontal scrolling wrapper */
+        .logo-marquee {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+        }
+
+        /* Track that moves */
+        .logo-track {
+            display: flex;
+            gap: 60px;
+            width: max-content;
+            animation: scroll-left 25s linear infinite;
+        }
+
+        /* Pause on hover */
+        .logo-marquee:hover .logo-track {
+            animation-play-state: paused;
+        }
+
+        /* Logo container */
+        .logo-item {
+            flex: 0 0 auto;
+            padding: 20px 28px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+
+        /* Logo size consistency */
+        .logo-img {
+            width: 160px;
+            height: 60px;
+            object-fit: contain;
+        }
+
+        /* Animation */
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+
+        /* ============================================
+   TABLET – 768 × 1024
+============================================ */
+        @media screen and (min-width: 768px) and (max-width: 809px) {
+
+            /* Layout spacing */
+            .container {
+                padding-left: 2rem;
+                padding-right: 2rem;
+            }
+
+            /* Navbar */
+            nav {
+                padding: 1rem 2rem;
+            }
+
+            /* Hero */
+            .hero-section,
+            .hero-bg {
+                min-height: 85vh;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            /* Cards / grids */
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+
+        /* ============================================
+   TABLET – 810 × 1080
+============================================ */
+        @media screen and (min-width: 810px) and (max-width: 819px) {
+
+            .container {
+                max-width: 760px;
+                padding-left: 2.5rem;
+                padding-right: 2.5rem;
+            }
+
+            h1 {
+                font-size: 2.7rem;
+            }
+
+            .hero-section {
+                min-height: 90vh;
+            }
+
+            .grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+
+        /* ============================================
+   TABLET – 820 × 1180
+============================================ */
+        @media screen and (min-width: 820px) and (max-width: 899px) {
+
+            .container {
+                max-width: 800px;
+                padding-left: 3rem;
+                padding-right: 3rem;
+            }
+
+            h1 {
+                font-size: 2.8rem;
+            }
+
+            .hero-section {
+                min-height: 92vh;
+            }
+
+            .grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+
+        /* ============================================
+   DESKTOP – 1920 × 1080
+============================================ */
+        @media screen and (min-width: 1920px) {
+
+            .container {
+                max-width: 1600px;
+                margin: 0 auto;
+            }
+
+            body {
+                font-size: 18px;
+            }
+
+            h1 {
+                font-size: 3.5rem;
+            }
+
+            h2 {
+                font-size: 2.5rem;
+            }
+
+            .hero-section {
+                min-height: 100vh;
+            }
+
+            .grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 2.5rem;
+            }
+
+        }
+
+        /* ===============================
+   FOOTER LIFECYCLE STYLES
+================================ */
+
+        .lifecycle-step {
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .lifecycle-arrow {
+            font-size: 1rem;
+            opacity: 0.7;
+        }
+
+        /* Hover interaction for clarity */
+        .lifecycle-step:hover {
+            color: #ffffff;
+            transform: translateY(-1px);
+        }
+
+        /* Tablet and above */
+        @media (min-width: 768px) {
+            .lifecycle-step {
+                font-size: 0.9rem;
+            }
+
+            .lifecycle-arrow {
+                font-size: 1.1rem;
+            }
+        }
+
+        /* Laptop and Desktop */
+        @media (min-width: 1024px) {
+            .lifecycle-step {
+                font-size: 1rem;
+            }
+
+            .lifecycle-arrow {
+                font-size: 1.25rem;
+            }
+        }
+
+        /* Customer animation infinite rotating in horizontal*/
+        @keyframes marquee {
+            0% {
+                transform: translateX(0%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        @keyframes marquee2 {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(0%);
+            }
+        }
+
+        .animate-marquee {
+            animation: marquee 40s linear infinite;
+        }
+
+        .animate-marquee2 {
+            animation: marquee2 40s linear infinite;
+        }
+
+        /* Pause on hover for better UX */
+        .group:hover .animate-marquee,
+        .group:hover .animate-marquee2 {
+            animation-play-state: paused;
+        }
+
+        /* Extra spacing for large screens */
+        @media (min-width: 1900px) {
+
+            .animate-marquee,
+            .animate-marquee2 {
+                animation-duration: 50s;
+                /* Slow it down for ultra-wide screens */
+            }
+        }
+
+        /* FOOTER DESIGN HOVERING EFFECT */
+        footer ul li,
+        footer a {
+            transition: all 0.3s ease;
+            border-left: 2px solid transparent;
+            /* Invisible border to prevent shifting */
+            padding-left: 0;
+            cursor: pointer;
+
+        }
+
+        footer ul li:hover {
+            border-left: 2px solid white;
+            /* The white border appears on hover */
+            padding-left: 8px;
+            /* Smoothly pushes text to the right */
+            color: white;
+            font-weight: 500;
+        }
+
+
+        /* TERMS HOVER */
+
+
+        #terms:hover {
+            text-decoration: underline;
+            font-weight: 500;
+        }
+    </style>
+    </style>
+    <script>
+        // MERGED Tailwind config from all parts
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // --- Your original color ---
+                        'brand-partner-btn': '#a7c739',
+                        'form-dark-green': '#6b8d4e',
+                        'brand-topbar-green': '#6a9b5f',
+                        // --- Greens ---
+                        'brand-dark-green': '#3B5833',    // Main dark green (footer, icon bar, headings)
+                        'brand-medium-green': '#6A8A61', // Lighter green (split section)
+                        'brand-deep-green': '#334C2D',    // Very dark green (sub-footer)
+                        'brand-light-mint': '#DDE6DA',   // Light mint banner
+                        'brand-gradient-from': '#4A6D41', // For the gradient section
+
+                        // --- Greys & Neutrals ---
+                        'brand-dark-grey': '#333333',     // Dark text (headings)
+                        'brand-medium-grey': '#666666',   // Lighter text (paragraphs)
+                        'brand-light-grey': '#E0E0E0',    // Light text on dark (footer links)
+                        'brand-off-white': '#F9F9F9',    // Light grey background (specs section)
+                    }
+                }
+            }
+        };
+
+
+    </script>
+</head>
+
+<body class="font-sans bg-white overflow-x-hidden">
+
+    <div class="hidden bg-brand-topbar-green text-white text-[13px] py-2 px-6 md:flex justify-between items-center"
+        style="font-family: 'Montserrat', sans-serif;">
+        <div class="flex items-center space-x-4">
+            <a href="tel:+919578420672" class="flex items-center hover:underline">
+                <i class="fas fa-phone mr-2"></i>
+                <span>Call Us On:<a href="tel:+919578420672">+91 95784 20672</a></span>
+            </a>
+            <a href="mailto:marketing@nithaeroespace.in" class="flex items-center hover:underline">
+                <i class="fas fa-envelope mr-2"></i>
+                <span><a href="mailto:marketing@nithaeroespace.in">marketing@nithaaroespace.in</a></span>
+            </a>
+        </div>
+        <div class="flex items-center space-x-4">
+            <a href="#" class="hover:underline">Blog</a>
+            <span>|</span>
+            <!-- <a href="#" class="hover:underline">Careers</a> -->
+            <a href="Terms.html" class="hover:underline">Careers</a>
+        </div>
+    </div>
+
+    <header class="relative">
+
+        <nav class="w-full absolute top-0 py-4 z-50 bg-white shadow-sm" style="font-family: 'Montserrat', sans-serif;">
+            <div class="container mx-auto flex items-center justify-between px-6">
+
+                <div class="flex items-center">
+                    <img src="imgs/Screenshot 2025-11-04 120806.png" alt="NITHA Logo" class="h-16 w-20 object-contain">
+                </div>
+
+                <div class="hidden md:flex items-center gap-6 lg:gap-8 text-[14px] lg:text-[15px] font-bold">
+
+                    <a href="index.html" class="hover:text-brand-partner-btn">Home</a>
+                    <a href="aboutus.html" class="hover:text-brand-partner-btn">About</a>
+
+                    <div class="relative group py-2"> <button
+                            class="hover:text-brand-partner-btn flex items-center gap-1 focus:outline-none cursor-pointer">
+                            Capabilities <i class="fas fa-chevron-down text-[10px]"></i>
+                        </button>
+                        <div class="absolute top-full left-0 pt-2 hidden group-hover:block z-[60]">
+
+                            <div
+                                class="bg-white shadow-xl rounded-md w-72 border-t-4 border-brand-topbar-green py-2 overflow-hidden">
+                                <a href="aerospace.html"
+                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Aerospace
+                                    Fasteners</a>
+                                <a href="oil-gas.html"
+                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Oil
+                                    & Gas Bolting</a>
+                                <a href="defence.html"
+                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Defence
+                                    Fasteners</a>
+                                <a href="shipbuilding.html"
+                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Shipbuilding
+                                    Fasteners</a>
+                                <a href="automotive.html"
+                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Automotive
+                                    Fasteners</a>
+                                <a href="nuclear.html"
+                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Nuclear
+                                    & Energy Fasteners</a>
+                                <a href="medical.html"
+                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Medical
+                                    Fasteners</a>
+                                <a href="custom.html"
+                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Custom
+                                    & Prototype Fasteners</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative group py-2">
+                        <button
+                            class="hover:text-brand-partner-btn flex items-center gap-1 focus:outline-none cursor-pointer">
+                            FIS/R&D <i class="fas fa-chevron-down text-[10px]"></i>
+                        </button>
+                        <div class="absolute top-full left-0 pt-2 hidden group-hover:block z-[60]">
+                            <div class="bg-white shadow-xl rounded-md w-64 border-t-4 border-brand-topbar-green py-2">
+                                <a href="#fasteners-intelligence-system"
+                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
+                                    Fasteners Intelligence System
+                                </a>
+                                <a href="#fasteners-intelligence-system"
+                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
+                                    Research & Development
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative group py-2">
+                        <a href="products.html"
+                            class="hover:text-brand-partner-btn flex items-center gap-1 focus:outline-none cursor-pointer">
+                            Products <i class="fas fa-chevron-down text-[10px]"></i>
+                        </a>
+                        <div class="absolute top-full left-0 pt-2 hidden group-hover:block z-[60]">
+                            <div
+                                class="bg-white shadow-xl rounded-md w-64 border-t-4 border-brand-topbar-green py-2 overflow-hidden">
+                                <a href="melting.html"
+                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Melting</a>
+                                <a href="casting.html"
+                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Casting</a>
+                                <a href="forging.html"
+                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Forging</a>
+                                <a href="machining.html"
+                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Precision
+                                    Machining</a>
+                                <a href="rolling.html"
+                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Thread
+                                    Rolling</a>
+                                <a href="heat-treatment.html"
+                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Heat
+                                    Treatment</a>
+                                <a href="surface-treatment.html"
+                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Surface
+                                    Treatment</a>
+                                <a href="qa.html"
+                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Testing
+                                    & QA</a>
+                                <a href="design.html"
+                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Design
+                                    & Engineering</a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <a href="contact.html" class="hover:text-brand-partner-btn">Contact</a>
+                </div>
+
+                <div class="hidden sm:block">
+                    <a href="#"
+                        class="bg-brand-topbar-green text-white px-5 lg:px-6 py-2 rounded-md text-xs lg:text-sm font-bold hover:brightness-110 transition shadow-md whitespace-nowrap">
+                        Become A Partner
+                    </a>
+                </div>
+
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-brand-topbar-green text-2xl focus:outline-none">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <div class="relative  h-[900px] overflow-hidden flex items-center justify-center text-center p-20 text-white">
+
+
+
+            <!-- Background Image -->
+            <img src="imgs/plane.jpeg" alt="Aerospace background"
+                class="absolute inset-0 w-full h-full object-cover z-0">
+
+            <!-- Overlay Content -->
+            <div class="absolute inset-0 z-10 flex items-center justify-center" style="left: 50%;">
+                <div class="container mx-auto px-4 text-white">
+                    <div class="max-w-3xl text-left" id="hero-container">
+
+                        <p class="text-2xl tracking-widest font-bold mb-4 mt-16"
+                            style="font-family: 'Montserrat', sans-serif; ">
+                            NITHA Aerospace Private Limited
+                        </p>
+
+                        <p class="text-5xl font-extrabold leading-tight"
+                            style="letter-spacing: -2px; line-height: 45px;">
+                            Built for Aerospace, Defence
+                        </p>
+
+                        <p class="text-5xl font-extrabold leading-tight" style="letter-spacing: -1px;">
+                            Energy & Precision Engineering
+                        </p>
+
+                        <p class="text-lg opacity-90 py-5">
+                            Advanced Materials Expertise · Product & Process Excellence · Indo-European Advanced
+                            Solutions
+                        </p>
+
+                        <a href="#"
+                            class="inline-flex items-center px-8 py-3 bg-white text-gray-800 font-semibold rounded-md shadow-lg hover:bg-gray-300 transition-colors mb-32">
+                            VIEW MORE PRODUCTS
+                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <section class="relative z-40 ">
+        <div class="container mx-auto px-4  mb-20 bg-white rounded-lg " id="product">
+            <div class="container mx-auto px-4 mb-20 bg-white rounded-lg ">
+                <div class="text-center max-w-4xl mx-auto">
+                    <img src="imgs/mainNitha.png" alt="Product Range Icon" class="mx-auto h-20 w-20">
+                    <p class="text-lg font-extrabold tracking-wider text-theme-green">Product Range</p>
+                    <h1 class="text-2xl lg:text-3xl font-black leading-tight mt-4"
+                        style="letter-spacing: -1px; transform: scaleY(1.2) ">Industry Designs, Inspiring Products
+                    </h1> <br>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        NAPL is a precision engineering company delivering high-performance fasteners and components to
+                        the
+                        Automotive, Aerospace, Defence, Oil & Gas, and Motorsport industries worldwide. Our products are
+                        renowned for their strength, reliability, and endurance
+                    </p>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        performing flawlessly under dynamic loads, vibration, and extreme te mperatures.
+                    </p>
+                </div>
+
+                <div class="container px-8 py-0 mx-auto">
+                    <br><br>
+                    <div class="flex flex-wrap justify-center gap-4 mb-4">
+
+                        <div class="flex flex-col items-center">
+                            <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
+                                <div class="w-full h-full hexagon-clip flex items-center justify-center">
+                                    <img src="imgs/bolt.png" alt="Product Image"
+                                        class="max-w-full max-h-full object-contain">
+                                </div>
+                            </div>
+                            <p class="text-xs font-bold text-brand-text-dark mt-2">Bolt</p>
+                        </div>
+
+                        <div class="flex flex-col items-center">
+                            <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
+                                <div class="w-full h-full hexagon-clip flex items-center justify-center">
+                                    <img src="imgs/circlip.png" alt="Product Image"
+                                        class="max-w-full max-h-full object-contain">
+                                </div>
+                            </div>
+                            <p class="text-xs font-bold text-brand-text-dark mt-2">Circlips</p>
+                        </div>
+
+                        <div class="flex flex-col items-center">
+                            <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
+                                <div class="w-full h-full hexagon-clip flex items-center justify-center">
+                                    <img src="imgs/nail.png" alt="Product Image"
+                                        class="max-w-full max-h-full object-contain">
+                                </div>
+                            </div>
+                            <p class="text-xs font-bold text-brand-text-dark mt-2">Nail
+                            <p>
+                        </div>
+
+                        <div class="flex flex-col items-center">
+                            <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
+                                <div class="w-full h-full hexagon-clip flex items-center justify-center">
+                                    <img src="imgs/nnuts.png" alt="Product Image"
+                                        class="max-w-full max-h-full object-contain">
+                                </div>
+                            </div>
+                            <p class="text-xs font-bold text-brand-text-dark mt-2">Nut</p>
+                        </div>
+
+                        <div class="flex flex-col items-center">
+                            <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
+                                <div class="w-full h-full hexagon-clip flex items-center justify-center">
+                                    <img src="imgs/pins.png" alt="Product Image"
+                                        class="max-w-full max-h-full object-contain">
+                                </div>
+                            </div>
+                            <p class="text-xs font-bold text-brand-text-dark mt-2">Pin & Keys</p>
+                        </div>
+
+                        <div class="flex flex-col items-center">
+                            <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
+                                <div class="w-full h-full hexagon-clip flex items-center justify-center">
+                                    <img src="imgs/rivert.png" alt="Product Image"
+                                        class="max-w-full max-h-full object-contain">
+                                </div>
+                            </div>
+                            <p class="text-xs font-bold text-brand-text-dark mt-2">Rivet</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
+                                <div class="w-full h-full hexagon-clip flex items-center justify-center">
+                                    <img src="imgs/screw.png" alt="Product Image"
+                                        class="max-w-full max-h-full object-contain">
+                                </div>
+                            </div>
+                            <p class="text-xs font-bold text-brand-text-dark mt-2">Screw</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
+                                <div class="w-full h-full hexagon-clip flex items-center justify-center">
+                                    <img src="imgs/spacer.png" alt="Product Image"
+                                        class="max-w-full max-h-full object-contain">
+                                </div>
+                            </div>
+                            <p class="text-xs font-bold text-brand-text-dark mt-2">Spacer & Standoff</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap justify-center gap-4 mb-4">
+
+
+
+                        <div class="flex flex-col items-center">
+                            <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
+                                <div class="w-full h-full hexagon-clip flex items-center justify-center">
+                                    <img src="imgs/stud.png" alt="Product Image"
+                                        class="max-w-full max-h-full object-contain">
+                                </div>
+                            </div>
+                            <p class="text-xs font-bold text-brand-text-dark mt-2">Stud & Rod</p>
+                        </div>
+
+                        <div class="flex flex-col items-center">
+                            <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
+                                <div class="w-full h-full hexagon-clip flex items-center justify-center">
+                                    <img src="imgs/washer.png" alt="Product Image"
+                                        class="max-w-full max-h-full object-contain">
+                                </div>
+                            </div>
+                            <p class="text-xs font-bold text-brand-text-dark mt-2">Washer</p>
+                        </div>
+
+                        <div class="flex flex-col items-center">
+                            <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
+                                <div class="w-full h-full hexagon-clip flex items-center justify-center">
+                                    <img src="imgs/wire.png" alt="Product Image"
+                                        class="max-w-full max-h-full object-contain">
+                                </div>
+                            </div>
+                            <p class="text-xs font-bold text-brand-text-dark mt-2">Wires</p>
+                        </div>
+
+                        <div class="flex flex-col items-center">
+                            <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
+                                <div class="w-28 h-full hexagon-clip flex items-center justify-center">
+                                    <img src="imgs/hinge.png" alt="Product Image" style="width: 136px; height: 156px;">
+                                </div>
+                            </div>
+                            <p class="text-xs font-bold text-brand-text-dark mt-2">Hinge</p>
+                        </div>
+
+                        <div class="flex flex-col items-center">
+                            <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
+                                <div class="w-full h-full hexagon-clip flex items-center justify-center">
+                                    <img src="imgs/clamp.png" alt="Product Image"
+                                        class="max-w-full max-h-full object-contain">
+                                </div>
+                            </div>
+                            <p class="text-xs font-bold text-brand-text-dark mt-2">Clamp</p>
+                        </div>
+
+                        <div class="flex flex-col items-center">
+                            <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
+                                <div class="w-full h-full hexagon-clip flex items-center justify-center">
+                                    <img src="imgs/latch.png" alt="Product Image"
+                                        class="max-w-full max-h-full object-contain">
+                                </div>
+                            </div>
+                            <p class="text-xs font-bold text-brand-text-dark mt-2">Latch</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <section class="w-full  p-8 sm:p-12 flex items-center justify-center bg-cover bg-center"
+        style="background-image: url('imgs/nut.png'); ">
+
+        <div class="w-full max-w-5xl mx-auto grid lg:grid-cols-2 gap-16 items-center ">
+
+            <div class=" text-white">
+
+                <img src="imgs/whitenitha-removebg-preview.png" alt="Logo" class="w-16 h-16" />
+
+                <p class="text-sm font-semibold tracking-wider uppercase mb-2">
+                    One Platform For All Your Fatener Requirements
+                </p>
+                <h1 class="text-4xl lg:text-5xl font-black  leading-tight mt-8"
+                    style="letter-spacing: -1px; transform: scaleY(1.1) ">
+                    Buy Quality Products At The Best Prices From NITHA Aerospace
+                </h1>
+
+                <div class="flex items-center gap-4 mt-8">
+                    <img src="imgs/mailwing.png" alt="Email" class="w-16 h-16" />
+                    <div>
+                        <p class="text-lg">Email us or Post your requirements</p>
+                        <a href="mailto:marketing@nithaaerospace.in" class="text-xl font-bold">
+                            marketing@nithaaerospace.in
+                        </a>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-4 mt-6">
+                    <img src="imgs/pngwing.com.png" alt="WhatsApp" class="w-14 h-14" />
+                    <div>
+                        <p class="text-lg">Contact us on WhatsApp or Post your requirements</p>
+                        <a href="tel:+919578420672" class="text-xl font-bold">
+                            +91 95784 20672
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full max-w-lg p-6 sm:p-8  backdrop-blur-lg rounded-lg shadow-2xl border border-white/30 "
+                style="box-shadow: 0px 10px 20px black;">
+
+                <h1 class="text-2xl font-extrabold text-white" style="letter-spacing: -1px; transform: scaleY(1.1);">
+                    Connect
+                    With
+                    Us Today!</h1>
+                <p class="mt-1 text-sm text-gray-200 mb-6">Share your details and we will contact you shortly</p>
+
+                <form id="contactForm" class="space-y-4" method="POST">
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <input type="text" name="businessName" placeholder="Business Name" required class="...">
+
+                        <input type="text" name="fullName" placeholder="First & Last name" required class="...">
+
+                        <input type="email" name="email" placeholder="Business Email ID" required class="...">
+
+                        <input type="tel" name="phone" placeholder="Mobile Number" required class="...">
+
+                        <input type="text" name="pincode" placeholder="Pincode" required class="...">
+
+                        <input type="text" name="city" placeholder="City" required class="...">
+
+                        <select name="product" required>
+                            <option value="">Select Product</option>
+                            <option value="Product 1">Product 1</option>
+                            <option value="Product 2">Product 2</option>
+                        </select>
+
+                        <select name="quantity" required>
+                            <option value="">Quantity (MT)</option>
+                            <option value="1">1 MT</option>
+                            <option value="5">5 MT</option>
+                            <option value="10">10+ MT</option>
+                        </select>
+                        <p id="form-status" class="text-sm mt-3 text-white"></p>
+
+                    </div>
+
+                    <div class="space-y-3 pt-2">
+                        <div class="flex items-center">
+                            <input id="whatsapp" name="whatsapp" type="checkbox"
+                                class="h-4 w-4 rounded border-gray-300 text-green-600 focus:ring-green-500">
+                            <label for="whatsapp" class="ml-2 block text-sm text-gray-200">Get updates on
+                                WhatsApp</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input id="terms" name="terms" type="checkbox"
+                                class="h-4 w-4 rounded border-gray-300 text-green-600 focus:ring-green-500">
+                            <label for="terms" class="ml-2 block text-sm text-gray-200">Terms & Conditions</label>
+                        </div>
+                    </div>
+
+                    <p class="text-xs text-gray-300 pt-2">
+                        The personal data shared by you will be used by Nitha aerospace, to connect with you directly or
+                        through its affiliates and partners.
+                    </p>
+
+                    <button type="submit"
+                        class=" rounded-md bg-green-500 w-300 py-3 px-4 text-sm font-semibold text-white shadow-sm hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-500 mt-6">
+                        Submit A Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="relative z-20 py-24 px-24 bg-white">
+        <div class="container mx-auto px-4">
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="relative rounded-lg overflow-hidden w-full h-[400px]  shadow-lg">
+                    <img src="imgs/lava.png" alt="Manufacturing process" class="w-full h-[400px]  object-cover">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <button
+                            class="w-20 h-20 rounded-full flex items-center justify-center backdrop-blur-sm bg-red-600/70 shadow-xl transition-all hover:bg-red-500/90 scale-100 hover:scale-110">
+                            <svg class="w-8 h-8 text-white ml-1" viewBox="0 0 24 24" fill="currentColor"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 5v14l11-7z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="text-left">
+                    <p class="text-sm font-extrabold tracking-wider text-theme-green mb-4"
+                        style="transform: scaleY(1.2);">NITHA Aerospace
+                        Private Limited</p>
+                    <h1 class="text-2xl lg:text-3xl font-black leading-tight mt-10"
+                        style="letter-spacing: -1px; transform: scaleY(1.2) ">
+                        Indo-European <br>Applied Research And Development
+                    </h1>
+                    <br>
+                    <p class="text-gray-600 mb-6 text-sm leading-relaxed text-justify"
+                        style="text-justify: inter-word; text-align: justify;">
+                        Our Indo-European R&D laboratories specialize in applied industrial research and the
+                        technological advancement of key metal sectors, including aluminium, copper, alloy steel,
+                        brass,
+                        composites, titanium, and zinc. We offer cutting-edge R&D services and technical solutions
+                        for
+                        new product development, while also optimizing existing products, business operations, and
+                        plant
+                        production processes.
+                    </p>
+                    <a href="#"
+                        class="inline-flex items-center px-6 py-3 bg-light-green text-white text-sm font-semibold rounded-md shadow-lg hover:opacity-90 transition-opacity">
+                        LEARN MORE
+                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 7l5 5-5 5M5 12h13"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+    </section>
+
+    <section class="w-full p-8 sm:p-12 flex items-center justify-center bg-cover bg-center"
+        style="background-image: url('imgs/nut.png'); height: fit-content;">
+
+        <div class="w-full max-w-5xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+
+            <div class="text-white">
+                <img src="imgs/whitenitha-removebg-preview.png" alt="" class="h-20" loading="eager">
+                <p class="text-sm font-extrabold tracking-wider mb-4" style="transform: scaleY(1.2);">NITHA Aerospace
+                    Private Limited</p>
+                <h1 class="text-2xl lg:text-3xl font-black leading-tight mt-10"
+                    style="letter-spacing: 0.5x; transform: scaleY(1.2); color:rgb(255, 255, 255);">
+                    Building a Stronger Connected World Together
+                </h1>
+                <br>
+                <p class="text-gray-600 mb-6 text-sm leading-relaxed text-justify"
+                    style="text-justify: inter-word; text-align: justify;"> </p>
+            </div>
+
+            <div class="w-full max-w-lg p-6 sm:p-8  backdrop-blur-lg rounded-lg shadow-2xl border border-white/30 "
+                style="box-shadow: 0px 10px 20px black;">
+
+                <h1 class="text-2xl font-extrabold  text-white" style="letter-spacing: -0.5px; transform: scaleY(1.1);">
+                    Fasteners Intelligence System™</h1>
+                <p class="mt-1 text-lg text-gray-200 mb-6">A proprietary, Trademarked framework that ensures fasteners
+                    are designed manufactured, tested and traced with consistency, control, and alignment to
+                    international compliance requirements.
+                </p>
+                <a href="fasteners.html" class=" font-semibold text-sm inline-flex items-center hover:text-white">
+                    Learn More
+                    <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                        </path>
+                    </svg>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="flex flex-col justify-center items-center py-20 bg-white uppercase">
+        <div class="max-w-4xl px-4">
+            <h2 class=" text-lg mb-5 font-extrabold tracking-widest text-center text-brand-green-title">
+                Our Lifecycle </h2>
+            <img src="imgs/lifecycle.png" style="height: 160px;" alt="Aerospace Process">
+        </div>
+    </div>
+
+    <section class="bg-white overflow-hidden">
+        <div class="py-10">
+            <h2 class="mb-20 text-lg font-extrabold tracking-widest text-center text-brand-green-title uppercase">
+                Our Valuable Customers
+            </h2>
+
+            <div class="relative flex overflow-x-hidden group">
+                <div class="animate-marquee flex items-center whitespace-nowrap min-w-full">
+                    <img src="imgs/c1.png" alt="Logo 1" class="mx-16 lg:mx-24 h-16 w-auto object-contain">
+                    <img src="imgs/c2.png" alt="Logo 2" class="mx-16 lg:mx-24 h-16 w-auto object-contain">
+                    <img src="imgs/c3.png" alt="Logo 3" class="mx-16 lg:mx-24 h-16 w-auto object-contain">
+                    <img src="imgs/c4.png" alt="Logo 4" class="mx-16 lg:mx-24 h-16 w-auto object-contain">
+                    <img src="imgs/c5.png" alt="Logo 5" class="mx-16 lg:mx-24 h-16 w-auto object-contain">
+                    <img src="imgs/c6.png" alt="Logo 6" class="mx-16 lg:mx-24 h-16 w-auto object-contain">
+                    <img src="imgs/c1.png" alt="Logo 1" class="mx-16 lg:mx-24 h-16 w-auto object-contain">
+                    <img src="imgs/c2.png" alt="Logo 2" class="mx-16 lg:mx-24 h-16 w-auto object-contain">
+                    <img src="imgs/c3.png" alt="Logo 3" class="mx-16 lg:mx-24 h-16 w-auto object-contain">
+                </div>
+
+
+            </div>
+    </section>
+    <div class="py-20">
+        <div class="text-center max-w-4xl mx-auto">
+            <img src="imgs/mainNitha.png" alt="Industries Icon"
+                class="mx-auto h-28 w-28 mb-5 border-[5px] border-[#6f9e74]">
+
+            <p class="text-lg font-extrabold tracking-wider text-theme-green">Industries We Serve
+            </p>
+            <p class="text-5xl font-extrabold leading-tight " style=" letter-spacing: -2px ; transform: scaleY(1.1);">
+                Premium Fasteners
+            </p>
+            <p class="text-5xl font-extrabold leading-tight " style=" letter-spacing: -1px ; transform: scaleY(1.1);">
+                Designed To Meet The Highest
+            </p>
+            <p class="text-5xl font-extrabold leading-tight " style=" letter-spacing: -1px ; transform: scaleY(1.1);">
+                Industrial Standards
+            </p>
+
+            <p class="text-gray-600 text-sm leading-relaxed mt-6">
+                With deep expertise in precision threads, tensile strength (800–1200 MPa), and custom
+                tolerances, we ensure every product meets rigorous international quality standards. Our
+                advanced
+                surface treatments—Zinc/Nickel Plating, Moly Coating, and Phosphate Passivation
+
+            </p>
+            <p class="text-gray-600 text-sm leading-relaxed ">enhance
+                corrosion resistance and durability under demanding conditions.
+                NAPL empowers OEMs and Tier-1 suppliers
+            </p>
+            <p class="text-gray-600 text-sm leading-relaxed "> across the globe to build stronger, safer, and
+                more
+                efficient systems through engineering excellence.
+
+            </p>
+        </div>
+
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-16 mx-10">
+
+            <div class="relative rounded-lg overflow-hidden shadow-lg group cursor-pointer h-80">
+                <img src="imgs/aerospace.png" alt="Aerospace" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-green-800/90 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 p-6">
+                    <h3 class="text-white text-lg font-bold uppercase tracking-wider">Aerospace</h3>
+                </div>
+                <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity">
+                </div>
+            </div>
+
+            <div class="relative rounded-lg overflow-hidden shadow-lg group cursor-pointer h-80">
+                <img src="imgs/oil.png" alt="Oil & Gas" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-green-800/90 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 p-6">
+                    <h3 class="text-white text-lg font-bold uppercase tracking-wider">Oil & Gas</h3>
+                </div>
+                <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity">
+                </div>
+            </div>
+
+            <div class="relative rounded-lg overflow-hidden shadow-lg group cursor-pointer h-80">
+                <img src="imgs/automobile.jfif" alt="Automobile" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-green-800/90 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 p-6">
+                    <h3 class="text-white text-lg font-bold uppercase tracking-wider">Automobile</h3>
+                </div>
+                <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity">
+                </div>
+            </div>
+
+            <div class="relative rounded-lg overflow-hidden shadow-lg group cursor-pointer h-80">
+                <img src="imgs/ship.jfif" alt="Ship Building" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-green-800/90 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 p-6">
+                    <h3 class="text-white text-lg font-bold uppercase tracking-wider">Ship Building</h3>
+                </div>
+                <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity">
+                </div>
+            </div>
+
+            <div class="relative rounded-lg overflow-hidden shadow-lg group cursor-pointer h-80">
+                <img src="imgs/consumable.jfif" alt="Consumer Durables" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-green-800/90 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 p-6">
+                    <h3 class="text-white text-lg font-bold uppercase tracking-wider">Consumable Durables
+                    </h3>
+                </div>
+                <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity">
+                </div>
+            </div>
+
+            <div class="relative rounded-lg overflow-hidden shadow-lg group cursor-pointer h-80">
+                <img src="imgs/healthcaare.jfif" alt="Health Care" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-green-800/90 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 p-6">
+                    <h3 class="text-white text-lg font-bold uppercase tracking-wider">Health Care</h3>
+                </div>
+                <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity">
+                </div>
+            </div>
+
+            <div class="relative rounded-lg overflow-hidden shadow-lg group cursor-pointer h-80">
+                <img src="imgs/civil.jfif" alt="Civil Aviations" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-green-800/90 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 p-6">
+                    <h3 class="text-white text-lg font-bold uppercase tracking-wider">Civil Aviations</h3>
+                </div>
+                <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity">
+                </div>
+            </div>
+
+            <div class="relative rounded-lg overflow-hidden shadow-lg group cursor-pointer h-80">
+                <img src="imgs/energy.jfif" alt="Renewable Energy" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-green-800/90 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 p-6">
+                    <h3 class="text-white text-lg font-bold uppercase tracking-wider">Renewable Energy</h3>
+                </div>
+                <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    </div>
+
+    </div>
+    </section>
+
+    <div class="global pt-12">
+
+        <section class="relative w-full min-h-screen flex items-center justify-center text-white"
+            style="background: url(imgs/curves.png) center/cover no-repeat; height: 1280px;" class="curves">
+
+            <div class=" relative z-10 container mx-auto px-4 py-17">
+
+
+                <div class="text-center max-w-3xl mx-auto mb-24">
+                    <img src="imgs/whitenitha-removebg-preview.png" alt="Logo"
+                        style="margin-left: 360px; margin-top: 50px; width: 55px; height: 55px;" />
+                    <p class="text-sm font-bold uppercase tracking-wider" style="transform: (1.1);">What We Do</p>
+
+                    <p class="text-5xl font-extrabold leading-tight mb-6 mt-4 "
+                        style=" letter-spacing: -1px ;line-height: 33px; transform: scaleY(1.1);">
+                        Global One-Stop Solution for
+                    </p>
+                    <p class="text-5xl font-extrabold leading-tight mb-6 "
+                        style=" letter-spacing: -1px ;line-height: 4px; transform: scaleY(1.1);">Engineering Materials
+                    </p>
+                    <p style="padding-top: 20px;">Our facilities unite
+                        Metallurgy, Machining, Heat Treatment, Thread Rolling and Coating under one roof. <br>Delivering
+                        Global-Grade
+                        Engineering Materials
+                        and performance assurance.</p>
+                    <p style="padding-top: 15px;">From Melting to Plating, we manage the Science behind every layer of
+                        metal. </p>
+
+
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-x-2 ">
+
+                    <div class="relative">
+                        <div class="absolute -top-8 left-1/2 -translate-x-1/2 z-20">
+                            <div
+                                class="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center border border-white/30">
+                                <img src="imgs/cl1.png" alt="" style="border-radius: 100%;">
+                            </div>
+                        </div>
+                        <div
+                            class="bg-form-dark-green backdrop-blur-sm rounded-lg shadow-lg h-full flex flex-col overflow-hidden">
+                            <img src="imgs/casting.jpg" alt="Casting" class="w-full h-32 object-cover">
+                            <div class="p-5 flex flex-col justify-between flex-grow">
+                                <div>
+                                    <h4 class="text-sm font-extrabold text-center mb-2" style="transform: scaleY(1.2);">
+                                        Casting
+                                    </h4>
+                                    <p class="text-xs text-white/100 mb-4 text-justify ">Our fastener manufacturing
+                                        process
+                                        begins
+                                        with
+                                        high-integrity casting for ferrous, non-ferrous, and superalloy fasteners. This
+                                        ensures consistent strength and durability, essential for aerospace, space &
+                                        aviation, and oil & gas applications.</p>
+                                </div>
+                                <a href="#" class="self-center mt-4">
+                                    <div
+                                        class="w-8 h-8 rounded-full  bg-gray-800 hover:bg-gray-700 flex items-center justify-center transition-colors">
+                                        <svg class="w-4 h-4 text-white " fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M9 5l7 7-7 7"></path>
+                                        </svg>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative ">
+                        <div class="absolute -top-8 left-1/2 -translate-x-1/2 z-20">
+                            <div
+                                class="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center border border-white/30">
+                                <img src="imgs/cl2.png" alt="" style="border-radius: 100%;">
+                            </div>
+                        </div>
+                        <div
+                            class="bg-form-dark-green backdrop-blur-sm rounded-lg shadow-lg h-full flex flex-col overflow-hidden">
+                            <img src="imgs/forging.jpg" alt="Forging" class="w-full h-32 object-cover">
+                            <div class="p-5 flex flex-col justify-between flex-grow">
+                                <div>
+                                    <h4 class="text-sm font-extrabold text-center mb-2" style="transform: scaleY(1.2);">
+                                        Forging
+                                    </h4>
+                                    <p class="text-xs text-white/100 text-justify mb-4">Our forging solutions for
+                                        fasteners
+                                        that
+                                        require
+                                        superior grain flow and structural strength. Our forged fasteners are ideal for
+                                        high-stress aerospace environments and critical industrial uses where
+                                        performance is
+                                        non-negotiable.</p>
+                                </div>
+                                <a href="#" class="self-center mt-4">
+                                    <div
+                                        class="w-8 h-8 rounded-full  bg-gray-800 hover:bg-gray-700  flex items-center justify-center transition-colors">
+                                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M9 5l7 7-7 7"></path>
+                                        </svg>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative ">
+                        <div class="absolute -top-8 left-1/2 -translate-x-1/2 z-20">
+                            <div
+                                class="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center border border-white/30">
+                                <img src="imgs/cl3.png" alt="" style="border-radius: 100%;">
+                            </div>
+                        </div>
+                        <div
+                            class="bg-form-dark-green backdrop-blur-sm rounded-lg shadow-lg h-full flex flex-col overflow-hidden">
+                            <img src="imgs/precision machining.jpg" alt="Machining" class="w-full h-32 object-cover">
+                            <div class="p-5 flex flex-col justify-between flex-grow">
+                                <div>
+                                    <h4 class="text-sm font-extrabold text-center mb-2"
+                                        style="transform: scaleY(1.2) ; letter-spacing: 0.1px;">Precision Machining</h4>
+                                    <p class="text-xs text-white/100 text-justify mb-4">Equipped with advanced CNC
+                                        machining
+                                        technology,
+                                        we produce precision fasteners with tight tolerances and complex geometries. Our
+                                        machining supports aerospace-grade threads such as MJ and UNJF, meeting exacting
+                                        aerospace specifications.</p>
+                                </div>
+                                <a href="#" class="self-center mt-4">
+                                    <div
+                                        class="w-8 h-8 rounded-full bg-gray-800 hover:bg-gray-700  flex items-center justify-center transition-colors">
+                                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M9 5l7 7-7 7"></path>
+                                        </svg>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative ">
+                        <div class="absolute -top-8 left-1/2 -translate-x-1/2 z-20">
+                            <div
+                                class="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center border border-white/30">
+                                <img src="imgs/cl4.png" alt="" style="border-radius: 100%;">
+                            </div>
+                        </div>
+                        <div
+                            class="bg-form-dark-green backdrop-blur-sm rounded-lg shadow-lg h-full flex flex-col overflow-hidden">
+                            <img src="imgs/heattreatment.jfif" alt="Heat Treatment" class="w-full h-32 object-cover">
+                            <div class="p-5 flex flex-col justify-between flex-grow">
+                                <div>
+
+                                    <h4 class="text-sm font-extrabold text-center mb-2" style="transform: scaleY(1.2);">
+                                        Heat
+                                        Treatment
+                                    </h4>
+                                    <p class="text-xs text-white/100 text-justify mb-4">Our in-house heat treatment
+                                        facility
+                                        enhances
+                                        the
+                                        mechanical properties of our fasteners. Using controlled thermal cycles, we
+                                        improve
+                                        hardness, fatigue strength, and durability — critical for oil & gas, energy, and
+                                        aerospace fastener performance.</p>
+                                </div>
+                                <a href="#" class="self-center mt-4">
+                                    <div
+                                        class="w-8 h-8 rounded-full  bg-gray-800 hover:bg-gray-700  flex items-center justify-center transition-colors">
+                                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M9 5l7 7-7 7"></path>
+                                        </svg>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <div class="absolute -top-8 left-1/2 -translate-x-1/2 z-20">
+                            <div
+                                class="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center border border-white/30">
+                                <img src="imgs/cl5.png" alt="" style="border-radius: 100%;">
+                            </div>
+                        </div>
+                        <div
+                            class="bg-form-dark-green backdrop-blur-sm rounded-lg shadow-lg h-full flex flex-col overflow-hidden">
+                            <img src="imgs/surface treatment.jfif" alt="Surface Treatment"
+                                class="w-full h-32 object-cover">
+                            <div class="p-5 flex flex-col justify-between flex-grow">
+                                <div>
+                                    <h4 class="text-sm font-extrabold mb-2  text-center"
+                                        style="transform: scaleY(1.2);">
+                                        Surface
+                                        Treatment</h4>
+                                    <p class="text-xs text-white/100 mb-4 text-justify">We provide advanced surface
+                                        treatment
+                                        solutions
+                                        including plating, passivation, and anti-corrosion coatings. These treatments
+                                        extend
+                                        fastener life in extreme conditions, ensuring compliance with aerospace, marine,
+                                        and
+                                        industrial fastener standards.</p>
+                                </div>
+                                <a href="#" class="self-center mt-4">
+                                    <div
+                                        class="w-8 h-8 rounded-full  bg-gray-800 hover:bg-gray-700  flex items-center justify-center transition-colors">
+                                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M9 5l7 7-7 7"></path>
+                                        </svg>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative ">
+                        <div class="absolute -top-8 left-1/2 -translate-x-1/2 z-20">
+                            <div
+                                class="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center border border-white/30">
+                                <img src="imgs/cl6.png" alt="" style="border-radius: 100%;">
+                            </div>
+                        </div>
+                        <div
+                            class="bg-form-dark-green backdrop-blur-sm rounded-lg shadow-lg h-full flex flex-col overflow-hidden">
+                            <img src="imgs/r&d.jfif" alt="R&D Testing" class="w-full h-32 object-cover">
+                            <div class="p-5 flex flex-col justify-between flex-grow">
+                                <div>
+                                    <h4 class="text-sm font-extrabold text-center mb-2" style="transform: scaleY(1.2);">
+                                        R&D
+                                    </h4>
+                                    <p class="text-xs text-white/100 text-justify mb-4">Our dedicated R&D and testing
+                                        laboratory
+                                        ensures every fastener meets the highest quality standards. From tensile
+                                        strength to
+                                        metallurgical analysis, we validate each product for aerospace and critical
+                                        industrial applications.</p>
+                                </div>
+                                <a href="#" class="self-center mt-4">
+                                    <div
+                                        class="w-8 h-8 rounded-full  bg-gray-800 hover:bg-gray-700  flex items-center justify-center transition-colors">
+                                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M9 5l7 7-7 7"></path>
+                                        </svg>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+    </div>
+    <!-- <section class="testimonial-section py-24 relative overflow-hidden">
+        <div class="container mx-auto px-4 relative z-20"><br><br>
+            <div class="text-center max-w-4xl mx-auto">
+                <p class="text-sm font-semibold uppercase tracking-wider text-theme-green">TESTIMONIALS</p>
+                <h2 class="text-4xl font-bold text-gray-900 my-2">What Our Client says About us</h2>
+            </div>
+
+            <div class="relative mt-16">
+                <div id="slider-container" class="overflow-hidden">
+                    <div id="slider-track" class="slider-track flex">
+
+                        <div class="slider-slide p-6">
+                            <div class="bg-white rounded-lg shadow-lg p-8 relative mt-12">
+                                <img src="imgs/suzanne.jpg"
+                                    alt="Suzanne Wantuch"
+                                    class="absolute -top-12 left-8 w-24 h-24 rounded-md object-cover border-4 border-white shadow-lg">
+                                <div class="pl-28">
+                                    <h3 class="text-lg font-bold">Suzanne Wantuch</h3>
+                                    <p class="text-xs text-gray-500">Nov 19, 2023</p>
+                                    <div class="flex text-yellow-400 my-2">
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.959h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.446 1.286 3.959c.3.921-.755 1.688-1.54 1.18l-3.368-2.446-3.368 2.446c-.784.508-1.84-.259-1.54-1.18l1.286-3.959-3.368-2.446c-.783-.57-.381-1.81.588-1.81h4.162l1.286-3.959z" />
+                                        </svg>
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.959h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.446 1.286 3.959c.3.921-.755 1.688-1.54 1.18l-3.368-2.446-3.368 2.446c-.784.508-1.84-.259-1.54-1.18l1.286-3.959-3.368-2.446c-.783-.57-.381-1.81.588-1.81h4.162l1.286-3.959z" />
+                                        </svg>
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.959h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.446 1.286 3.959c.3.921-.755 1.688-1.54 1.18l-3.368-2.446-3.368 2.446c-.784.508-1.84-.259-1.54-1.18l1.286-3.959-3.368-2.446c-.783-.57-.381-1.81.588-1.81h4.162l1.286-3.959z" />
+                                        </svg>
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.959h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.446 1.286 3.959c.3.921-.755 1.688-1.54 1.18l-3.368-2.446-3.368 2.446c-.784.508-1.84-.259-1.54-1.18l1.286-3.959-3.368-2.446c-.783-.57-.381-1.81.588-1.81h4.162l1.286-3.959z" />
+                                        </svg>
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.959h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.446 1.286 3.959c.3.921-.755 1.688-1.54 1.18l-3.368-2.446-3.368 2.446c-.784.508-1.84-.259-1.54-1.18l1.286-3.959-3.368-2.446c-.783-.57-.381-1.81.588-1.81h4.162l1.286-3.959z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <img src="imgs/suzanne1.jfif" alt="Google"
+                                    class="absolute top-8 right-8 w-6 h-6">
+                                <p class="text-sm text-gray-600 mt-4">Mauris eget leo in erat auctor elementum. Vivamus
+                                    facilisis mauris urna, non pharetra ipsum mattis porttitor. Sed consequat volutpat
+                                    nibh ut tempus. Phasellus mi sem, auctor vulputate faucibus vel, pharetra in lacus.
+                                    et, pharetra in lacus. in iaculis enim volutMauris eget leo...</p>
+                            </div>
+                        </div>
+                        <div class="slider-slide p-6">
+                            <div class="bg-white rounded-lg shadow-lg p-8 relative mt-12">
+                                <img src="imgs/suzanne1.jfif"
+                                    alt="Suzanne Wantuch"
+                                    class="absolute -top-12 left-8 w-24 h-24 rounded-md object-cover border-4 border-white shadow-lg">
+                                <div class="pl-28">
+                                    <h3 class="text-lg font-bold">Suzanne Wantuch</h3>
+                                    <p class="text-xs text-gray-500">Nov 19, 2023</p>
+                                    <div class="flex text-yellow-400 my-2">
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.959h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.446 1.286 3.959c.3.921-.755 1.688-1.54 1.18l-3.368-2.446-3.368 2.446c-.784.508-1.84-.259-1.54-1.18l1.286-3.959-3.368-2.446c-.783-.57-.381-1.81.588-1.81h4.162l1.286-3.959z" />
+                                        </svg>
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.959h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.446 1.286 3.959c.3.921-.755 1.688-1.54 1.18l-3.368-2.446-3.368 2.446c-.784.508-1.84-.259-1.54-1.18l1.286-3.959-3.368-2.446c-.783-.57-.381-1.81.588-1.81h4.162l1.286-3.959z" />
+                                        </svg>
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.959h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.446 1.286 3.959c.3.921-.755 1.688-1.54 1.18l-3.368-2.446-3.368 2.446c-.784.508-1.84-.259-1.54-1.18l1.286-3.959-3.368-2.446c-.783-.57-.381-1.81.588-1.81h4.162l1.286-3.959z" />
+                                        </svg>
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.959h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.446 1.286 3.959c.3.921-.755 1.688-1.54 1.18l-3.368-2.446-3.368 2.446c-.784.508-1.84-.259-1.54-1.18l1.286-3.959-3.368-2.446c-.783-.57-.381-1.81.588-1.81h4.162l1.286-3.959z" />
+                                        </svg>
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.959h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.446 1.286 3.959c.3.921-.755 1.688-1.54 1.18l-3.368-2.446-3.368 2.446c-.784.508-1.84-.259-1.54-1.18l1.286-3.959-3.368-2.446c-.783-.57-.381-1.81.588-1.81h4.162l1.286-3.959z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <img src="https://via.placeholder.com/24x24/ffffff/000000?text=G" alt="Google"
+                                    class="absolute top-8 right-8 w-6 h-6">
+                                <p class="text-sm text-gray-600 mt-4">Mauris eget leo in erat auctor elementum. Vivamus
+                                    facilisis mauris urna, non pharetra ipsum mattis porttitor. Sed consequat volutpat
+                                    nibh ut tempus. Phasellus mi sem, auctor vulputate faucibus vel, pharetra in lacus.
+                                    et, pharetra in lacus. in iaculis enim volutMauris eget leo...</p>
+                            </div>
+                        </div>
+
+                        <div class="slider-slide p-6">
+                            <div class="bg-white rounded-lg shadow-lg p-8 relative mt-12">
+                                <img src="imgs/suzanne.jpg"
+                                    alt="Suzanne Wantuch"
+                                    class="absolute -top-12 left-8 w-24 h-24 rounded-md object-cover border-4 border-white shadow-lg">
+                                <div class="pl-28">
+                                    <h3 class="text-lg font-bold">Suzanne Wantuch</h3>
+                                    <p class="text-xs text-gray-500">Nov 19, 2023</p>
+                                    <div class="flex text-yellow-400 my-2">
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.959h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.446 1.286 3.959c.3.921-.755 1.688-1.54 1.18l-3.368-2.446-3.368 2.446c-.784.508-1.84-.259-1.54-1.18l1.286-3.959-3.368-2.446c-.783-.57-.381-1.81.588-1.81h4.162l1.286-3.959z" />
+                                        </svg>
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.959h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.446 1.286 3.959c.3.921-.755 1.688-1.54 1.18l-3.368-2.446-3.368 2.446c-.784.508-1.84-.259-1.54-1.18l1.286-3.959-3.368-2.446c-.783-.57-.381-1.81.588-1.81h4.162l1.286-3.959z" />
+                                        </svg>
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.959h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.446 1.286 3.959c.3.921-.755 1.688-1.54 1.18l-3.368-2.446-3.368 2.446c-.784.508-1.84-.259-1.54-1.18l1.286-3.959-3.368-2.446c-.783-.57-.381-1.81.588-1.81h4.162l1.286-3.959z" />
+                                        </svg>
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.959h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.446 1.286 3.959c.3.921-.755 1.688-1.54 1.18l-3.368-2.446-3.368 2.446c-.784.508-1.84-.259-1.54-1.18l1.286-3.959-3.368-2.446c-.783-.57-.381-1.81.588-1.81h4.162l1.286-3.959z" />
+                                        </svg>
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.959h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.446 1.286 3.959c.3.921-.755 1.688-1.54 1.18l-3.368-2.446-3.368 2.446c-.784.508-1.84-.259-1.54-1.18l1.286-3.959-3.368-2.446c-.783-.57-.381-1.81.588-1.81h4.162l1.286-3.959z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <img src="https://via.placeholder.com/24x24/ffffff/000000?text=G" alt="Google"
+                                    class="absolute top-8 right-8 w-6 h-6">
+                                <p class="text-sm text-gray-600 mt-4">Mauris eget leo in erat auctor elementum. Vivamus
+                                    facilisis mauris urna, non pharetra ipsum mattis porttitor. Sed consequat volutpat
+                                    nibh ut tempus. Phasellus mi sem, auctor vulputate faucibus vel, pharetra in lacus.
+                                    et, pharetra in lacus. in iaculis enim volutMauris eget leo...</p>
+                            </div>
+                        </div>
+
+                        <div class="slider-slide p-6">
+                            <div class="bg-white rounded-lg shadow-lg p-8 relative mt-12">
+                                <img src="imgs/suzanne1.jfif"
+                                    alt="Suzanne Wantuch"
+                                    class="absolute -top-12 left-8 w-24 h-24 rounded-md object-cover border-4 border-white shadow-lg">
+                                <div class="pl-28">
+                                    <h3 class="text-lg font-bold">Suzanne Wantuch</h3>
+                                    <p class="text-xs text-gray-500">Nov 19, 2023</p>
+                                    <div class="flex text-yellow-400 my-2">
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.959h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.446 1.286 3.959c.3.921-.755 1.688-1.54 1.18l-3.368-2.446-3.368 2.446c-.784.508-1.84-.259-1.54-1.18l1.286-3.959-3.368-2.446c-.783-.57-.381-1.81.588-1.81h4.162l1.286-3.959z" />
+                                        </svg>
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.959h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.446 1.286 3.959c.3.921-.755 1.688-1.54 1.18l-3.368-2.446-3.368 2.446c-.784.508-1.84-.259-1.54-1.18l1.286-3.959-3.368-2.446c-.783-.57-.381-1.81.588-1.81h4.162l1.286-3.959z" />
+                                        </svg>
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.959h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.446 1.286 3.959c.3.921-.755 1.688-1.54 1.18l-3.368-2.446-3.368 2.446c-.784.508-1.84-.259-1.54-1.18l1.286-3.959-3.368-2.446c-.783-.57-.381-1.81.588-1.81h4.162l1.286-3.959z" />
+                                        </svg>
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.959h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.446 1.286 3.959c.3.921-.755 1.688-1.54 1.18l-3.368-2.446-3.368 2.446c-.784.508-1.84-.259-1.54-1.18l1.286-3.959-3.368-2.446c-.783-.57-.381-1.81.588-1.81h4.162l1.286-3.959z" />
+                                        </svg>
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.959h4.162c.969 0 1.371 1.24.588 1.81l-3.368 2.446 1.286 3.959c.3.921-.755 1.688-1.54 1.18l-3.368-2.446-3.368 2.446c-.784.508-1.84-.259-1.54-1.18l1.286-3.959-3.368-2.446c-.783-.57-.381-1.81.588-1.81h4.162l1.286-3.959z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <img src="https://via.placeholder.com/24x24/ffffff/000000?text=G" alt="Google"
+                                    class="absolute top-8 right-8 w-6 h-6">
+                                <p class="text-sm text-gray-600 mt-4">Mauris eget leo in erat auctor elementum. Vivamus
+                                    facilisis mauris urna, non pharetra ipsum mattis porttitor. Sed consequat volutpat
+                                    nibh ut tempus. Phasellus mi sem, auctor vulputate faucibus vel, pharetra in lacus.
+                                    et, pharetra in lacus. in iaculis enim volutMauris eget leo...</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <button id="prev-slide"
+                    class="absolute top-1/2 left-0 lg:-left-8 -translate-y-1/2 bg-white rounded-full p-3 shadow-lg hover:bg-gray-300 transition z-30">
+                    <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
+                        </path>
+                    </svg>
+                </button>
+                <button id="next-slide"
+                    class="absolute top-1/2 right-0 lg:-right-8 -translate-y-1/2 bg-white rounded-full p-3 shadow-lg hover:bg-gray-300 transition z-30">
+                    <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <div id="slider-dots" class="flex justify-center space-x-2 mt-8 relative z-20">
+                <button class="slider-dot w-3 h-3 bg-light-green rounded-full"></button>
+                <button class="slider-dot w-3 h-3 bg-gray-300 rounded-full"></button>
+            </div>
+        </div>
+    </section>
+ -->
+    <section class="py-10  bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center mb-12">
+                <div>
+                    <p class="text-sm font-bold uppercase tracking-wider text-theme-green">LATEST NEWS & BLOGS
+                    </p>
+                    <h1 class="text-4xl font-extrabold text-gray-900 md:text-4xl">News & Blog Insights</h1>
+                </div>
+                <a href="#"
+                    class="inline-flex items-center px-6 py-3 bg-light-green text-white text-sm font-semibold rounded-md shadow-lg hover:opacity-90 transition-opacity">
+                    VIEW MORE
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5-5 5M5 12h13">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+                    <img src="imgs/news1.jfif" alt="Advancing Precision Metallurgy" class="h-48 w-full object-cover">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <p class="text-xs text-gray-500 mb-2">6. may 2025</p>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Advancing Precision Metallurgy for Smarter
+                            Manufacturing</h3>
+                        <p class="text-sm text-gray-600 mb-4 flex-grow">We are improving alloy strength and
+                            consistency
+                            through advanced metallurgical processes to support high-quality, reliable manufacturing
+                            performance.</p>
+                        <a href="#" class="text-theme-green font-semibold text-sm inline-flex items-center">
+                            LEARN MORE
+                            <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+                    <img src="imgs/news2.jfif" alt="Indigenous Production Capabilities"
+                        class="h-48 w-full object-cover">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <p class="text-xs text-gray-500 mb-2">6. June 2025</p>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Boosting Indigenous Production Capabilities
+                        </h3>
+                        <p class="text-sm text-gray-600 mb-4 flex-grow">Our focus is on increasing local
+                            manufacturing
+                            capacity, reducing dependency on imports, and supporting a stronger self-reliant
+                            industrial
+                            ecosystem.</p>
+                        <a href="#" class="text-theme-green font-semibold text-sm inline-flex items-center">
+                            LEARN MORE
+                            <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+                    <img src="imgs/news3.jfif" alt="Innovation in High-Performance Fasteners"
+                        class="h-48 w-full object-cover">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <p class="text-xs text-gray-500 mb-2">6. July 2025</p>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Innovation in High-Performance Fasteners
+                        </h3>
+                        <p class="text-sm text-gray-600 mb-4 flex-grow">We are developing fasteners engineered for
+                            superior durability, precision, and strength, suitable for heavy industrial and
+                            specialized
+                            engineering applications.</p>
+                        <a href="#" class="text-theme-green font-semibold text-sm inline-flex items-center">
+                            Learn More
+                            <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+                    <img src="imgs/news4.jfif" alt="Digital Quality Control" class="h-48 w-full object-cover">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <p class="text-xs text-gray-500 mb-2">6. August 2025</p>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Digital Quality Control for Modern
+                            Production
+                        </h3>
+                        <p class="text-sm text-gray-600 mb-4 flex-grow">By integrating automated inspection and
+                            data-driven monitoring, we enhance quality consistency while reducing production time
+                            and
+                            wastage.</p>
+                        <a href="#" class="text-theme-green font-semibold text-sm inline-flex items-center">
+                            Learn More
+                            <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </section>
+
+    <!-- <section
+        class="min-h-[250px] flex items-center justify-center bg-brand-green-bg-stats text-white py-10 overflow-hidden relative z-0">
+        <div class="container px-6 mx-auto">
+            <div class="flex flex-col items-center justify-around gap-4 md:flex-row">
+                <div class="flex flex-col items-center text-center">
+                    <div
+                        class="flex items-center justify-center w-24 h-24 mb-4 rounded-full bg-brand-icon-bg backdrop-blur-sm border border-white/30">
+                        <i class="text-3xl fa-solid fa-cube text-brand-light-text"></i>
+                    </div>
+                    <p class="mb-1 text-4xl font-extrabold text-brand-light-text">227</p>
+                    <p class="text-xs font-semibold uppercase text-brand-dark-text-stats">Total Products</p>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <div
+                        class="flex items-center justify-center w-24 h-24 mb-4 rounded-full bg-brand-icon-bg backdrop-blur-sm border border-white/30">
+                        <i class="text-3xl fa-solid fa-certificate text-brand-light-text"></i>
+                    </div>
+                    <p class="mb-1 text-4xl font-extrabold text-brand-light-text">7</p>
+                    <p class="text-xs font-semibold uppercase text-brand-dark-text-stats">Certificates</p>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <div
+                        class="flex items-center justify-center w-24 h-24 mb-4 rounded-full bg-brand-icon-bg backdrop-blur-sm border border-white/30">
+                        <i class="text-3xl fa-solid fa-users text-brand-light-text"></i>
+                    </div>
+                    <p class="mb-1 text-4xl font-extrabold text-brand-light-text">10+</p>
+                    <p class="text-xs font-semibold uppercase text-brand-dark-text-stats">Employees</p>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <div
+                        class="flex items-center justify-center w-24 h-24 mb-4 rounded-full bg-brand-icon-bg backdrop-blur-sm border border-white/30">
+                        <i class="text-3xl fa-solid fa-handshake text-brand-light-text"></i>
+                    </div>
+                    <p class="mb-1 text-4xl font-extrabold text-brand-light-text">10</p>
+                    <p class="text-xs font-semibold uppercase text-brand-dark-text-stats">Clients</p>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <div
+                        class="flex items-center justify-center w-24 h-24 mb-4 rounded-full bg-brand-icon-bg backdrop-blur-sm border border-white/30">
+                        <i class="text-3xl fa-solid fa-truck-ramp-box text-brand-light-text"></i>
+                    </div>
+                    <p class="mb-1 text-4xl font-extrabold text-brand-light-text">2Lakhs+</p>
+                    <p class="text-xs font-semibold uppercase text-brand-dark-text-stats">Material Delivered</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <section class="py-16 bg-white flex justify-center">
+        <div class="max-w-7xl w-full px-6">
+
+            <!-- Heading -->
+            <div class="mb-12 text-center">
+                <p class="mb-2 text-sm font-extrabold tracking-widest uppercase text-brand-green-title"
+                    style="transform: scaleY(1.1);">
+                    Approvals
+                </p>
+                <h2 class="text-4xl font-extrabold">Certification - In Process</h2>
+            </div>
+
+            <!-- Centered Grid -->
+            <div class="flex justify-center">
+                <div class="grid gap-6 
+                        grid-cols-2 
+                        sm:grid-cols-3 
+                        md:grid-cols-4 
+                        lg:grid-cols-6">
+
+                    <!-- CARD -->
+                    <div class="cert-card">
+                        <img src="imgs/as9100.png" alt="AS9100">
+                        <h3>AS9100</h3>
+                        <p>Quality Management System</p>
+                    </div>
+
+                    <div class="cert-card">
+                        <img src="imgs/iso14001.png" alt="ISO 14001">
+                        <h3>ISO 14001</h3>
+                        <p>Environmental Management</p>
+                    </div>
+
+                    <div class="cert-card">
+                        <img src="imgs/iso45001.png" alt="ISO 45001">
+                        <h3>ISO 45001</h3>
+                        <p>Occupational Health & Safety</p>
+                    </div>
+
+                    <div class="cert-card">
+                        <img src="imgs/apiq.png" alt="API Q1">
+                        <h3>API Q1</h3>
+                        <p>Oil & Gas Quality System</p>
+                    </div>
+
+                    <div class="cert-card">
+                        <img src="imgs/api20.png" alt="API 20E">
+                        <h3>API 20E</h3>
+                        <p>Bolting Specification</p>
+                    </div>
+
+                    <div class="cert-card">
+                        <img src="imgs/nabl.png" alt="NABL">
+                        <h3>NABL</h3>
+                        <p>ISO/IEC 17025 Certified</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="top_box relative z-[90] overflow-hidden bg-[#6a9b5f] pb-0 text-white bg-dots responsive-out"
+        style="border-radius:10px; width: 80%; height: 250px; z-index: 99; position: relative; left: 9%; box-shadow: 0px 20px 9px black; margin-top: 20px;">
+
+        <div class="absolute inset-0 z-0 bg-right bg-no-repeat bg-cover opacity-70 mix-blend-multiply responsive" style="background-image: url('imgs/wwu-copy.png'); background-size: cover;      /* make it fill the screen */
+background-repeat: no-repeat;  /* prevent tiling */
+background-position: center;">
+        </div>
+
+        <div class="top_box container relative z-2 px-6 py-20 mx-auto lg:py-20">
+            <div style="position:absolute;top:13% ;">
+                <div class="max-w-2xl">
+                    <p class=" text-sm  py-3 font-semibold tracking-wider ">One Platform For All
+                        Your Fasteners Requirements</p>
+                    <h2 class=" text-3xl mb-2 font-extrabold tracking-tight">Which
+                        products are you looking to buy?</h2>
+                    <p class="mb-4 mt-1  text-1 font-bold">Single window for end-to-end steel sourcing</p>
+                    <a href="products.html"
+                        class="inline-flex items-center px-8 py-3 text-sm font-bold text-[#6a9b5f]  bg-white rounded-md shadow-lg transition-transform hover:scale-105">
+                        Explore Now
+                        <i class="ml-3  fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="relative z-10 bg-gradient-to-t from-[#0b180d] via-[#172c19] to-[#1a471c] text-gray-300">
+
+        <!-- Curve -->
+        <div class="absolute top-0 left-0 w-full h-24 bg-[#1a471c] rounded-[50%] -translate-y-1/2"></div>
+
+        <div class="relative max-w-7xl mx-auto px-6 py-16 pt-32 pb-32">
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6 items-start">
+
+                <!-- LOGO -->
+                <div>
+                    <img src="imgs/Screenshot 2025-11-04 120806.png" class="w-[100px] h-auto mb-6" alt="Logo">
+                </div>
+
+                <!-- ADDRESS -->
+                <div>
+                    <h3 class="mb-4 text-lg font-semibold text-white">Head Office & Factory</h3>
+
+                    <p class="text-sm leading-relaxed">
+                        Plot no. 140 SIDCO Women Industrial Estate,<br>
+                        Karuppur, Salem – 636011
+                    </p>
+
+                    <h3 class="mt-4 text-sm font-semibold">Call Us</h3>
+
+                    <a href="tel:+918220538534" class="block text-sm hover:text-white transition">
+                        +91 82205 38534
+                    </a>
+
+                    <a href="tel:+919578420672" class="block text-sm hover:text-white transition">
+                        +91 95784 20672
+                    </a>
+
+                    <h3 class="mt-4 text-sm font-semibold">Mail</h3>
+
+                    <a href="mailto:marketing@nithaaerospace.in" class="block text-sm hover:text-white transition">
+                        marketing@nithaaerospace.in
+                    </a>
+
+                    <a href="mailto:support@nithaaerospace.in" class="block text-sm hover:text-white transition">
+                        support@nithaaerospace.in
+                    </a>
+                </div>
+
+
+                <!-- COMPANY -->
+                <div>
+                    <h3 class="mb-4 text-lg font-semibold text-white">Company</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="aboutus.html">About</a></li>
+                        <li><a href="#">Capabilities</a></li>
+                        <li><a href="#">FID/R&D</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- PRODUCTS -->
+                <div>
+                    <h3 class="mb-4 text-lg font-semibold text-white">Our Products</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li class="hover:text-white cursor-pointer">Aerospace Fasteners</li>
+                        <li>Oil & Gas Bolting</li>
+                        <li>Defence Fasteners</li>
+                        <li>Shipbuilding Fasteners</li>
+                        <li>Automotive Fasteners</li>
+                        <li>Nuclear & Energy Fasteners</li>
+                        <li>Medical Fasteners</li>
+                        <li>Custom & Prototype Fasteners</li>
+                    </ul>
+                </div>
+
+                <!-- FACILITIES -->
+                <div>
+                    <h3 class="mb-4 text-lg font-semibold text-white">Facilities</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li>Melting</li>
+                        <li>Casting</li>
+                        <li>Forging</li>
+                        <li>Precision Machining</li>
+                        <li>Thread Rolling</li>
+                        <li>Heat Treatment</li>
+                        <li>Surface Treatment</li>
+                        <li>Testing & QA</li>
+                        <li>Design & Engineering</li>
+                    </ul>
+                </div>
+
+                <!-- CONTACT -->
+                <div>
+                    <h3 class="mb-4 text-lg font-semibold text-white">Connect With Us</h3>
+
+                    <!-- WhatsApp Button -->
+                    <a href="https://wa.me/919578420672" target="_blank"
+                        class="flex items-center gap-3 px-5 py-2 rounded-full bg-green-600 hover:bg-green-700 transition-all duration-200 shadow-md hover:shadow-lg w-fit">
+
+                        <div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+                            <i class="fab fa-whatsapp text-white text-xl"></i>
+                        </div>
+
+                        <span class="text-white font-semibold text-sm tracking-wide">
+                            Chat on WhatsApp
+                        </span>
+                    </a>
+
+                    <!-- Call Button -->
+                    <a href="tel:+919578420672"
+                        class="flex items-center gap-3 px-5 pr-20 py-2 mt-3 rounded-full bg-orange-400 hover:bg-orange-600 transition-all duration-200 shadow-md hover:shadow-lg w-fit">
+
+                        <div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+                            <i class="fas fa-phone-alt text-white text-lg"></i>
+
+                        </div>
+
+                        <span class="text-white font-semibold text-sm ">
+                            Call Now
+                        </span>
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <div class="relative z-20 py-4 text-gray-400 " style="background: #0b180d; border-top: 1px solid white;">
+        <div class="container flex flex-col items-center justify-between px-6 mx-auto text-sm md:flex-row">
+            <p class="mb-4 md:mb-0">
+                www.nithaaerospace.in © Copyright and private limited. All Rights Reserved | <a href="Terms.html"
+                    id="terms">Terms of Access</a>
+            </p>
+            <div class="flex space-x-6 text-base">
+                <a href="#" class="transition-colors hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="transition-colors hover:text-white"><i class="fab fa-google-plus-g"></i></a><a
+                    href="#" class="transition-colors hover:text-white">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+                <a href="#" class="transition-colors hover:text-white"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="transition-colors hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Check if slider elements exist before running the script
+            const track = document.getElementById('slider-track');
+            const nextButton = document.getElementById('next-slide');
+            const prevButton = document.getElementById('prev-slide');
+            const dotsContainer = document.getElementById('slider-dots');
+
+            if (!track || !nextButton || !prevButton || !dotsContainer) {
+                console.warn('Slider elements not found. Skipping slider initialization.');
+                return;
+            }
+
+            const slides = Array.from(track.children);
+            const dots = Array.from(dotsContainer.children);
+
+            if (slides.length === 0) {
+                console.warn('No slides found in slider-track.');
+                return;
+            }
+
+            let slidesPerPage = window.innerWidth >= 1024 ? 2 : 1;
+            const slideCount = slides.length;
+            let pageCount = Math.ceil(slideCount / slidesPerPage);
+            let currentPage = 0;
+
+            function updateSliderPosition() {
+                slidesPerPage = window.innerWidth >= 1024 ? 2 : 1;
+                pageCount = Math.ceil(slideCount / slidesPerPage);
+
+                if (currentPage > (pageCount - 1)) {
+                    currentPage = pageCount - 1;
+                }
+                if (currentPage < 0) {
+                    currentPage = 0;
+                }
+
+                const slideWidthPercentage = 100 / slidesPerPage;
+                track.style.transform = `translateX(-${currentPage * slideWidthPercentage}%)`;
+
+                dots.forEach((dot, index) => {
+                    if (index >= pageCount) {
+                        dot.style.display = 'none';
+                    } else {
+                        dot.style.display = 'block';
+                    }
+
+                    if (index === currentPage) {
+                        dot.classList.add('bg-light-green');
+                        dot.classList.remove('bg-gray-300');
+                    } else {
+                        dot.classList.add('bg-gray-300');
+                        dot.classList.remove('bg-light-green');
+                    }
+                });
+            }
+
+            nextButton.addEventListener('click', () => {
+                currentPage = (currentPage + 1) % pageCount;
+                updateSliderPosition();
+            });
+
+            prevButton.addEventListener('click', () => {
+                currentPage = (currentPage - 1 + pageCount) % pageCount;
+                updateSliderPosition();
+            });
+
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    if (index < pageCount) {
+                        currentPage = index;
+                        updateSliderPosition();
+                    }
+                });
+            });
+
+            window.addEventListener('resize', () => {
+                updateSliderPosition();
+            });
+
+            updateSliderPosition();
+        });
+    </script>
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", async function (e) {
+            e.preventDefault(); // VERY IMPORTANT
+
+            const form = e.target;
+
+            const data = {
+                businessName: form.businessName?.value,
+                fullName: form.fullName?.value,
+                email: form.email?.value,
+                phone: form.phone?.value,
+                pincode: form.pincode?.value,
+                city: form.city?.value,
+                product: form.product?.value,
+                quantity: form.quantity?.value
+            };
+
+            try {
+                const response = await fetch("http://localhost:3000/send-mail", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    alert("✅ Message sent successfully!");
+                    form.reset();
+                } else {
+                    alert("❌ Error: " + result.message);
+                }
+            } catch (error) {
+                alert("❌ Server not responding");
+                console.error(error);
+            }
+        });
+    </script>
+
+
+
+</body>
+
+</html>
