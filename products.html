@@ -23,6 +23,7 @@
                     },
                     colors: {
                         'brand-green': '#709a67',
+                        'brand-topbar-green': '#6a9b5f',
                         'brand-dark-green': '#5b7941',
                         'brand-light-green': '#e9f3e6',
                         'brand-black': '#000000',
@@ -147,6 +148,45 @@
         #relatedProductsGrid .group:hover h5 {
             letter-spacing: 0.5px;
         }
+
+         .cert-card {
+            width: 180px;
+            height: 260px;
+            background: #eff7f1;
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            transition: all 0.3s ease;
+        }
+
+        .cert-card img {
+            height: 80px;
+            margin-bottom: 1rem;
+            object-fit: contain;
+        }
+
+        .cert-card h3 {
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 0.4rem;
+        }
+
+        .cert-card p {
+            font-size: 0.75rem;
+            color: #4b5563;
+            line-height: 1.4;
+        }
+
+        .cert-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+        }
     </style>
 </head>
 
@@ -231,7 +271,7 @@
                                     class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
                                     Fasteners Intelligence System
                                 </a>
-                                <a href="#fasteners-intelligence-system"
+                                <a href="r&d.html"
                                     class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
                                     Research & Development
                                 </a>
@@ -717,62 +757,63 @@
             </div>
         </div>
     </section>
+    <section class="py-16 bg-white flex justify-center">
+        <div class="max-w-7xl w-full px-6">
 
-    <section class="py-10 bg-white">
-        <div class="container px-6 mx-auto">
-            <div class="mb-12 mt-16 text-center">
-                <p class="mb-2 text-sm font-extrabold tracking-widest uppercase text-brand-green-title "
-                    style=" transform: scaleY(1.1);">
-                    Approvals</p>
-                <h2 class="text-4xl font-extrabold md:text-4xl">Certificaion - In process</h2>
+            <!-- Heading -->
+            <div class="mb-12 text-center">
+                <p class="mb-2 text-sm font-extrabold tracking-widest uppercase text-brand-green-title"
+                    style="transform: scaleY(1.1);">
+                    Approvals
+                </p>
+                <h2 class="text-4xl font-extrabold">Certification - In Process</h2>
             </div>
-            <div class="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-7 sm:gap-6">
-                <div class="flex flex-col items-center p-6 text-center transition-shadow bg-cert-bg rounded-lg shadow-sm hover:shadow-md"
-                    style="background: #eff7f1;">
-                    <img src="imgs/iso9001.png" alt="ISO9001:2015 Logo" class="h-20 mb-4">
-                    <h3 class="mb-1 text-sm font-bold text-gray-900">ISO9001:2015</h3>
-                    <p class="text-xs leading-snug text-gray-600">International Standard for Quality Management</p>
-                </div>
-                <div class="flex flex-col items-center p-6 text-center transition-shadow bg-cert-bg rounded-lg shadow-sm hover:shadow-md"
-                    style="background: #eff7f1;">
-                    <img src="imgs/apiq.png" alt="APIQ1 Logo" class="h-20 mb-4">
-                    <h3 class="mb-1 text-sm font-bold text-gray-900">APIQ1</h3>
-                    <p class="text-xs leading-snug text-gray-600">Quality System Specification for Oil & Gas
-                        Manufacturing</p>
-                </div>
-                <div class="flex flex-col items-center p-6 text-center transition-shadow bg-cert-bg rounded-lg shadow-sm hover:shadow-md"
-                    style="background: #eff7f1;">
-                    <img src="imgs/nabl.png" alt="NABL Logo" class="h-20 mb-4">
-                    <h3 class="mb-1 text-sm font-bold text-gray-900">NABL</h3>
-                    <p class="text-xs leading-snug text-gray-600">Accredited Testing and Calibration Laboratory
-                        under ISO/IEC 17025</p>
-                </div>
-                <div class="flex flex-col items-center p-6 text-center transition-shadow bg-cert-bg rounded-lg shadow-sm hover:shadow-md"
-                    style="background: #eff7f1;">
-                    <img src="imgs/iso45001.png" alt="ISO45001:2018 Logo" class="h-20 mb-4">
-                    <h3 class="mb-1 text-sm font-bold text-gray-900">ISO45001:2018</h3>
-                    <p class="text-xs leading-snug text-gray-600">Occupational Health and Safety Management System
-                    </p>
-                </div>
-                <div class="flex flex-col items-center p-6 text-center transition-shadow bg-cert-bg rounded-lg shadow-sm hover:shadow-md"
-                    style="background: #eff7f1;">
-                    <img src="imgs/as9100.png" alt="AS91000 Logo" class="h-20 mb-4">
-                    <h3 class="mb-1 text-sm font-bold text-gray-900">AS91000</h3>
-                    <p class="text-xs leading-snug text-gray-600">Quality Management System for Aerospace
-                        Manufacturing</p>
-                </div>
-                <div class="flex flex-col items-center p-6 text-center transition-shadow bg-cert-bg rounded-lg shadow-sm hover:shadow-md"
-                    style="background: #eff7f1;">
-                    <img src="imgs/api20.png" alt="API12DE Logo" class="h-20 mb-4">
-                    <h3 class="mb-1 text-sm font-bold text-gray-900">API 20E</h3>
-                    <p class="text-xs leading-snug text-gray-600">Bolting Specification for Petroleum & Natural Gas
-                        Industries</p>
-                </div>
-                <div class="flex flex-col items-center p-6 text-center transition-shadow bg-cert-bg rounded-lg shadow-sm hover:shadow-md"
-                    style="background: #eff7f1;">
-                    <img src="imgs/iso14001.png" alt="ISO14001:2015 Logo" class="h-20 mb-4">
-                    <h3 class="mb-1 text-sm font-bold text-gray-900">ISO14001:2015</h3>
-                    <p class="text-xs leading-snug text-gray-600">Environmental Management System</p>
+
+            <!-- Centered Grid -->
+            <div class="flex justify-center">
+                <div class="grid gap-6 
+                        grid-cols-2 
+                        sm:grid-cols-3 
+                        md:grid-cols-4 
+                        lg:grid-cols-6">
+
+                    <!-- CARD -->
+                    <div class="cert-card">
+                        <img src="imgs/as9100.png" alt="AS9100">
+                        <h3>AS9100</h3>
+                        <p>Quality Management System</p>
+                    </div>
+
+                    <div class="cert-card">
+                        <img src="imgs/iso14001.png" alt="ISO 14001">
+                        <h3>ISO 14001</h3>
+                        <p>Environmental Management</p>
+                    </div>
+
+                    <div class="cert-card">
+                        <img src="imgs/iso45001.png" alt="ISO 45001">
+                        <h3>ISO 45001</h3>
+                        <p>Occupational Health & Safety</p>
+                    </div>
+
+                    <div class="cert-card">
+                        <img src="imgs/apiq.png" alt="API Q1">
+                        <h3>API Q1</h3>
+                        <p>Oil & Gas Quality System</p>
+                    </div>
+
+                    <div class="cert-card">
+                        <img src="imgs/api20.png" alt="API 20E">
+                        <h3>API 20E</h3>
+                        <p>Bolting Specification</p>
+                    </div>
+
+                    <div class="cert-card">
+                        <img src="imgs/nabl.png" alt="NABL">
+                        <h3>NABL</h3>
+                        <p>ISO/IEC 17025 Certified</p>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -863,7 +904,7 @@ background-position: center;">
                 </div>
                 <!-- PRODUCTS -->
                 <div>
-                    <h3 class="mb-4 text-lg font-semibold text-white">Our Products</h3>
+                    <h3 class="mb-4 text-lg font-semibold text-white">Products</h3>
                     <ul class="space-y-3 text-sm">
                         <li class="hover:text-white cursor-pointer">
                             <a href="solution.html" class="block w-full">Aerospace Fasteners</a>
@@ -997,6 +1038,7 @@ background-position: center;">
             </div>
         </div>
     </div>
+
 
     <script>
         // Full dataset based on your uploaded list
