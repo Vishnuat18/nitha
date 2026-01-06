@@ -20,6 +20,9 @@
             // Check browser window width
             if (window.innerWidth <= 768) {
                 window.location.href = "mobileIndex.html";
+
+
+
             }
         }
 
@@ -1364,9 +1367,9 @@
             </div>
 
             <div class="w-full max-w-lg p-6 sm:p-8  backdrop-blur-lg rounded-lg shadow-2xl border border-white/30 "
-                style="box-shadow: 0px 10px 20px black; font-family: 'Monteserat', 'sans-serif';">
+                style="box-shadow: 0px 10px 20px black; ">
 
-                <h1 class="text-2xl font-extrabold text-white" style="letter-spacing: -1px; transform: scaleY(1.1);">
+                <h1 class="text-2xl font-extrabold text-white" style="letter-spacing: -1px; transform: scaleY(1.2);  ">
                     Connect
                     With
                     Us Today!</h1>
@@ -1375,32 +1378,36 @@
                 <form id="contactForm" class="space-y-4" method="POST">
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <input type="text" name="businessName" placeholder="Business Name" required>
+                        <input type="text" name="businessName" class="p-2 border rounded-lg" placeholder="Business Name"
+                            required>
 
-                        <input type="text" name="fullName" placeholder="First & Last name" required>
+                        <input type="text" name="fullName" class="p-2 border rounded-lg" placeholder="First & Last name"
+                            required>
 
-                        <input type="email" name="email" placeholder="Business Email ID" required>
+                        <input type="email" name="email" class="p-2 border rounded-lg" placeholder="Business Email ID"
+                            required>
 
-                        <input type="tel" name="phone" placeholder="Mobile Number" required>
+                        <input type="tel" name="phone" class="p-2 border rounded-lg" placeholder="Mobile Number"
+                            required>
 
-                        <input type="text" name="pincode" placeholder="Pincode" required>
+                        <input type="text" name="pincode" class="p-2 border rounded-lg" placeholder="Pincode" required>
 
-                        <input type="text" name="city" placeholder="City" required>
+                        <input type="text" name="city" class="p-2 border rounded-lg" placeholder="City" required>
 
-                        <select name="product" required>
+                        <select name="product" class="p-2 border rounded-lg" required>
                             <option value="">Select Product</option>
                             <option value="Product 1">Product 1</option>
                             <option value="Product 2">Product 2</option>
                         </select>
 
-                        <select name="quantity" required>
+                        <select name="quantity" class="p-2 border rounded-lg" required>
                             <option value="">Quantity (MT)</option>
                             <option value="1">1 MT</option>
                             <option value="5">5 MT</option>
                             <option value="10">10+ MT</option>
                         </select>
-                        <p id="form-status" class="text-sm mt-3 text-white"></p>
 
+                        <p id="form-status" class="text-sm mt-3 text-white"></p>
                     </div>
 
                     <div class="space-y-3 pt-2">
@@ -1483,8 +1490,8 @@
 
     </section>
 
-    <section class="w-full p-8 sm:p-12 flex items-center justify-center bg-cover bg-center"
-        style="background-image: url('imgs/nut.png'); height: fit-content;">
+    <section class="w-full p-8 sm:p-12 flex-col items-center justify-center bg-cover bg-center"
+        style="background-image: url('imgs/nut.png'); height: fit-cont">
 
         <div class="w-full max-w-5xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
 
@@ -1492,7 +1499,7 @@
                 <img src="imgs/whitenitha-removebg-preview.png" alt="" class="h-20" loading="eager">
                 <p class="text-sm font-extrabold tracking-wider mb-4" style="transform: scaleY(1.2);">NITHA Aerospace
                     Private Limited</p>
-                <h1 class="text-2xl lg:text-3xl font-black leading-tight mt-10"
+                <h1 class="text-2xl lg:text-4xl font-black leading-tight "
                     style="letter-spacing: 0.5x; transform: scaleY(1.2); color:rgb(255, 255, 255);">
                     Building a Stronger Connected World Together
                 </h1>
@@ -1501,16 +1508,16 @@
                     style="text-justify: inter-word; text-align: justify;"> </p>
             </div>
 
-            <div class="w-full max-w-lg p-6 sm:p-8  backdrop-blur-lg rounded-lg shadow-2xl border border-white/30 "
+            <div class="w-full max-w-lg p-2 sm:p-8  backdrop-blur-lg rounded-lg shadow-2xl border border-white/30 "
                 style="box-shadow: 0px 10px 20px black;">
 
                 <h1 class="text-2xl font-extrabold  text-white" style="letter-spacing: -0.5px; transform: scaleY(1.1);">
                     Fasteners Intelligence System™</h1>
-                <p class="mt-1 text-lg text-gray-200 mb-6">A proprietary, Trademarked framework that ensures fasteners
+                <p class="mt-1 text-lg text-gray-200 ">A proprietary, Trademarked framework that ensures fasteners
                     are designed manufactured, tested and traced with consistency, control, and alignment to
                     international compliance requirements.
                 </p>
-                <a href="fasteners.html" class=" font-semibold text-sm inline-flex items-center hover:text-white">
+                <a href="fasteners.html" class=" font-semibold text-sm inline-flex mt-4 items-center hover:text-white">
                     Learn More
                     <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg">
@@ -1521,18 +1528,19 @@
 
             </div>
         </div>
-    </section>
-
-    <div class="flex flex-col justify-center items-center py-20 bg-white uppercase">
-        <div class="max-w-4xl px-4">
-            <h2 class=" text-lg mb-5 font-extrabold tracking-widest text-center text-brand-green-title">
+        
+    <div class="flex flex-col justify-center items-center uppercase underline text-white">
+        <div class="max-w-4xl px-4 mt-12">
+            <h2 class=" text-lg  font-extrabold tracking-widest text-center text-white">
                 Our Lifecycle </h2>
-            <img src="imgs/lifecycle.png" style="height: 160px;" alt="Aerospace Process">
+            <img src="imgs/cycle.png" style="height: 150px; width: 600px;" alt="Aerospace Process">
         </div>
     </div>
+    </section>
+
 
     <section class="bg-white overflow-hidden">
-        <div class="py-10">
+        <div class="py-24">
             <h2 class="mb-20 text-lg font-extrabold tracking-widest text-center text-brand-green-title uppercase">
                 Our Valuable Customers
             </h2>
@@ -2388,9 +2396,9 @@ background-position: center;">
         <!-- Curve -->
         <div class="absolute top-0 left-0 w-full h-24 bg-[#1a471c] rounded-[50%] -translate-y-1/2"></div>
 
-        <div class="relative max-w-7xl mx-auto px-6 py-16 pt-32 pb-32">
+        <div class="relative max-w-7xl mx-auto  py-16 pt-32 pb-32">
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6 items-start">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 items-start">
 
                 <!-- LOGO -->
                 <div>
@@ -2524,7 +2532,10 @@ background-position: center;">
 
                 <!-- CONTACT -->
                 <div>
-                    <h3 class="mb-4 text-lg font-semibold text-white">Connect With Us</h3>
+                    <h3 class="mb-2 text-lg font-semibold text-white">Connect With Us</h3>
+                    
+                    <p class="mt-1">For Advanced Engineering</p>
+                     <p class="mt-1 mb-2">Fastening Solution</p>
 
                     <!-- WhatsApp Button -->
                     <a href="https://wa.me/919578420672" target="_blank"
@@ -2576,7 +2587,7 @@ background-position: center;">
             </div>
         </div>
     </div>
-    
+
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             // Check if slider elements exist before running the script
