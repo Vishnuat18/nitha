@@ -279,6 +279,30 @@
             }
         }
     </script>
+
+    <style>
+        .curve-item {
+            position: absolute;
+            width: 120px;
+
+            /* LOWER CURVE PATH */
+            offset-path: path("M -100 90 Q 720 270 1640 90");
+            offset-rotate: auto;
+
+            animation: moveLowerCurve 26s linear infinite;
+        }
+
+        @keyframes moveLowerCurve {
+            from {
+                offset-distance: 0%;
+            }
+
+            to {
+                offset-distance: 100%;
+            }
+        }
+    </style>
+
 </head>
 
 <body class="bg-white">
@@ -287,7 +311,8 @@
         <div class="flex items-center space-x-4">
             <a href="tel:+919578420672" class="flex items-center hover:underline">
                 <i class="fas fa-phone mr-2"></i>
-                <span>Call Us On:<a href="tel:+919578420672">+91 95784 20672</a></span>
+                <span>Call Us On:<a href="tel:+919578420672">+91 95784
+                        20672</a></span>
             </a>
             <a href="mailto:marketing@nithaeroespace.in" class="flex items-center hover:underline">
                 <i class="fas fa-envelope mr-2"></i>
@@ -448,8 +473,6 @@
             </div>
         </nav>
 
-
-
         <div
             class="relative w-full h-[950px]  overflow-hidden flex items-center justify-center text-center text-white \">
 
@@ -458,18 +481,27 @@
             <div class="absolute inset-0 z-10"></div>
 
             <div class="relative z-30 max-w-5xl px-6 pt-24" style="margin-left: 60px;">
-                <p class="text-[30px] tracking-wider text-white mb-4 font-extrabold">About Us</p>
-                <h1 class="text-[30px] leading-[1.2] font-extrabold  drop-shadow-lg"> NITHA Aerospace Private
+                <img src="imgs/whitenitha-removebg-preview.png" alt
+                    style="height: 100px; width: 100px; margin-left: 400px; padding-top: 10px;">
+                <p class="text-[30px] tracking-wider text-white font-extrabold">About
+                    Us</p>
+                <h1 class="text-[30px] leading-[1.2] font-extrabold  drop-shadow-lg">
+                    NITHA Aerospace Private
                     Limited –
-                    INDO-EUROPE'S Trusted
+                    INDO-EUROPE'S
                 </h1>
-                <h1 class="text-[30px] leading-[1.2] font-extrabold mb-6 drop-shadow-lg">Aerospace And Industrial
+                <h1 class="text-[30px] leading-[1.2] font-extrabold mb-6 drop-shadow-lg">Trusted
+                    Aerospace And
+                    Industrial
                     fastener Manufacturer.
                 </h1>
-                <p class="text-[14px] text-white max-w-3xl mx-auto drop-shadow-md"> We deliver
-                    precision-engineered superalloy fasteners for Aerospace, Oil & Gas, Shipbuilding, Automotive,
+                <p class="text-[14px] text-white max-w-3xl mx-auto drop-shadow-md">
+                    We deliver
+                    precision-engineered superalloy fasteners for Aerospace,
+                    Oil & Gas, Shipbuilding, Automotive,
                     and
-                    Engineering sectors. Built to AS9100D, API, ASTM, IS, DIN, and ISO standards – with full
+                    Engineering sectors. Built to AS9100D, API, ASTM, IS,
+                    DIN, and ISO standards – with full
                     traceability, superior
                     corrosion resistance, and high-temperature performance.
                 </p>
@@ -477,15 +509,206 @@
         </div>
     </header>
 
+    <section class="relative bg-white overflow-hidden ">
+
+        <!-- LOWER CURVE PRODUCT MARQUEE -->
+        <div class="relative w-full h-[260px]">
+
+            <!-- SVG CURVE (LOWER ARC) -->
+            <svg viewBox="0 0 1440 300" class="absolute inset-0 w-full h-full pointer-events-none">
+                <path id="lowerCurvePath" d="M -200 90 Q 720 270 1640 90" fill="none" />
+            </svg>
+
+            <!-- CURVED RUNNING PRODUCTS -->
+            <div id="curve-marquee" class="absolute inset-0">
+
+                <!-- PRODUCT 1 -->
+                <div class="curve-item">
+                    <div class="flex flex-col items-center">
+                        <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
+                            <div class="w-full h-full hexagon-clip flex items-center justify-center">
+                                <img src="imgs/bolt.png" class="max-w-full max-h-full object-contain">
+                            </div>
+                        </div>
+                        <p class="text-xs font-bold mt-2">Bolt</p>
+                    </div>
+                </div>
+
+                <!-- PRODUCT 2 -->
+                <div class="curve-item">
+                    <div class="flex flex-col items-center">
+                        <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
+                            <div class="w-full h-full hexagon-clip flex items-center justify-center">
+                                <img src="imgs/circlip.png" class="max-w-full max-h-full object-contain">
+                            </div>
+                        </div>
+                        <p class="text-xs font-bold mt-2">Circlips</p>
+                    </div>
+                </div>
+
+                <!-- PRODUCT 3 -->
+                <div class="curve-item">
+                    <div class="flex flex-col items-center">
+                        <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
+                            <div class="w-full h-full hexagon-clip flex items-center justify-center">
+                                <img src="imgs/nail.png" class="max-w-full max-h-full object-contain">
+                            </div>
+                        </div>
+                        <p class="text-xs font-bold mt-2">Nail</p>
+                    </div>
+                </div>
+
+                <!-- PRODUCT 4 -->
+                <div class="curve-item">
+                    <div class="flex flex-col items-center">
+                        <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
+                            <div class="w-full h-full hexagon-clip flex items-center justify-center">
+                                <img src="imgs/nnuts.png" class="max-w-full max-h-full object-contain">
+                            </div>
+                        </div>
+                        <p class="text-xs font-bold mt-2">Nut</p>
+                    </div>
+                </div>
+
+                <!-- PRODUCT 5 -->
+                <div class="curve-item">
+                    <div class="flex flex-col items-center">
+                        <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
+                            <div class="w-full h-full hexagon-clip flex items-center justify-center">
+                                <img src="imgs/pins.png" class="max-w-full max-h-full object-contain">
+                            </div>
+                        </div>
+                        <p class="text-xs font-bold mt-2">Pin & Keys</p>
+                    </div>
+                </div>
+
+                <!-- PRODUCT 6 -->
+                <div class="curve-item">
+                    <div class="flex flex-col items-center">
+                        <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
+                            <div class="w-full h-full hexagon-clip flex items-center justify-center">
+                                <img src="imgs/rivert.png" class="max-w-full max-h-full object-contain">
+                            </div>
+                        </div>
+                        <p class="text-xs font-bold mt-2">Rivet</p>
+                    </div>
+                </div>
+
+                <!-- PRODUCT 7 -->
+                <div class="curve-item">
+                    <div class="flex flex-col items-center">
+                        <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
+                            <div class="w-full h-full hexagon-clip flex items-center justify-center">
+                                <img src="imgs/screw.png" class="max-w-full max-h-full object-contain">
+                            </div>
+                        </div>
+                        <p class="text-xs font-bold mt-2">Screw</p>
+                    </div>
+                </div>
+
+                <!-- PRODUCT 8 -->
+                <div class="curve-item">
+                    <div class="flex flex-col items-center">
+                        <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
+                            <div class="w-full h-full hexagon-clip flex items-center justify-center">
+                                <img src="imgs/spacer.png" class="max-w-full max-h-full object-contain">
+                            </div>
+                        </div>
+                        <p class="text-xs font-bold mt-2">Spacer</p>
+                    </div>
+                </div>
+
+                <!-- PRODUCT 9 -->
+                <div class="curve-item">
+                    <div class="flex flex-col items-center">
+                        <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
+                            <div class="w-full h-full hexagon-clip flex items-center justify-center">
+                                <img src="imgs/stud.png" class="max-w-full max-h-full object-contain">
+                            </div>
+                        </div>
+                        <p class="text-xs font-bold mt-2">Stud & Rod</p>
+                    </div>
+                </div>
+
+                <!-- PRODUCT 10 -->
+                <div class="curve-item">
+                    <div class="flex flex-col items-center">
+                        <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
+                            <div class="w-full h-full hexagon-clip flex items-center justify-center">
+                                <img src="imgs/washer.png" class="max-w-full max-h-full object-contain">
+                            </div>
+                        </div>
+                        <p class="text-xs font-bold mt-2">Washer</p>
+                    </div>
+                </div>
+
+                <!-- PRODUCT 11 -->
+                <div class="curve-item">
+                    <div class="flex flex-col items-center">
+                        <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
+                            <div class="w-full h-full hexagon-clip flex items-center justify-center">
+                                <img src="imgs/wire.png" class="max-w-full max-h-full object-contain">
+                            </div>
+                        </div>
+                        <p class="text-xs font-bold mt-2">Wires</p>
+                    </div>
+                </div>
+
+                <!-- PRODUCT 12 -->
+                <div class="curve-item">
+                    <div class="flex flex-col items-center">
+                        <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
+                            <div class="w-full h-full hexagon-clip flex items-center justify-center">
+                                <img src="imgs/hinge.png" class="max-w-full max-h-full object-contain">
+                            </div>
+                        </div>
+                        <p class="text-xs font-bold mt-2">Hinge</p>
+                    </div>
+                </div>
+
+                <!-- PRODUCT 13 -->
+                <div class="curve-item">
+                    <div class="flex flex-col items-center">
+                        <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
+                            <div class="w-full h-full hexagon-clip flex items-center justify-center">
+                                <img src="imgs/clamp.png" class="max-w-full max-h-full object-contain">
+                            </div>
+                        </div>
+                        <p class="text-xs font-bold mt-2">Clamp</p>
+                    </div>
+                </div>
+
+                <!-- PRODUCT 14 -->
+                <div class="curve-item">
+                    <div class="flex flex-col items-center">
+                        <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
+                            <div class="w-full h-full hexagon-clip flex items-center justify-center">
+                                <img src="imgs/latch.png" class="max-w-full max-h-full object-contain">
+                            </div>
+                        </div>
+                        <p class="text-xs font-bold mt-2">Latch</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <main>
         <section class="py-24 text-center">
             <div class="container px-6 mx-auto">
-                <p class="mb-3 text-xl font-extrabold tracking-widest text-brand-green-dark ">Key Sectors</p>
-                <h2 class="text-4xl font-extrabold md:text-5xl text-brand-text-dark">Industry Design, Inspiring
+                <img src="imgs/nitha_logo_top.jpg" alt="" style="width: 80px; height: 70px; margin-left: 703px; padding-bottom: 20px;">
+                <p class="mb-3 text-xl font-extrabold tracking-widest text-brand-green-dark ">Key
+                    Sectors</p>
+                <h2 class="text-4xl font-extrabold md:text-5xl text-brand-text-dark">Industry
+                    Design, Inspiring
                     Products</h2>
                 <p class="max-w-4xl mx-auto mt-6 font-bold text-lg text-brand-text-gray">
-                    NAPL commitment to Quality is reflected in our rigorous R&D and Testing processes,
-                    which ensure that our products meet the highest industry standards.
+                    NAPL commitment to Quality is reflected in our rigorous
+                    R&D
+                    and Testing processes,
+                    which ensure that our products meet the highest industry
+                    standards.
                 </p>
             </div>
         </section>
@@ -503,182 +726,98 @@
                     <br>
                     With Excellence
                 </h2>
-                <p class="max-w-5xl mx-auto mt-6 text-base text-brand-text-gray text-center">
-                    NITHA Aerospace Pvt Ltd (NAPL) is a leading advanced manufacturer of superalloy fasteners, based in
-                    Tamil Nadu, India. We
-                </p>
-                <p class="max-w-5xl mx-auto text-base text-brand-text-gray text-center">
-                    specialize in delivering high-strength,
-                    corrosion-resistant, and heat-stable fasteners for demanding sectors such as
-                </p>
-                <p class="max-w-5xl mx-auto  text-base text-brand-text-gray text-center">
-                    aerospace, oil & gas, and space systems. Our products are built to meet stringent global standards,
-                    ensuring
-                </p>
-                <p class="max-w-5xl mx-auto  text-base text-brand-text-gray text-center">
-                    reliability,
-                    safety and performance in the most extreme environments. Fasteners Forged for
-                    the Future.
-                </p>
 
+            </div>
+
+        </section>
+
+        <section class="grid grid-cols-1 md:grid-cols-2">
+            <div>
+                <img src="imgs/Picsart_26-01-09_11-13-48-692.jpg" alt="Heat treatment of a metal fastener"
+                    class="object-cover w-full h-full min-h-[300px] md:h-full">
+            </div>
+            <div class="flex flex-col justify-center p-12 bg-brand-green-bg text-brand-text-light md:p-16 lg:p-20">
+                <img src="imgs/whitenitha-removebg-preview.png" alt style="width: 100px; height: 100px;">
+                <h2 class="mb-6 font-extrabold text-white text-3xl md:text-[44px] leading-tight">
+                    About NAPL
+                </h2>
+                <div class="space-y-4 text-[15px] leading-relaxed text-justify">
+                    <p>NITHA Aerospace Private Limited is an
+                        engineering-driven
+                        manufacturer of aerospace-grade
+                        fasteners and precision components, supported by
+                        Indo-European applied industrial R&D
+                        capabilities.
+                    </p>
+                    <p>Powered by <strong>FASTENERS INTELLIGENCE SYSTEM™
+                            (FIS™)</strong> we deliver traceable,
+                        test-validated fasteners
+                        for Aerospace, Defence, Oil & Gas and other critical
+                        industries.
+                    </p>
+                    <p>
+                        NAPL is a precision engineering company delivering
+                        high-performance fasteners and components to
+                        the
+                        Automotive, Aerospace, Defence, Oil & Gas, and
+                        Motorsport industries worldwide. Our products are
+                        renowned for their strength, reliability, and
+                        endurance
+                        performing flawlessly under dynamic loads,
+                        vibration,
+                        and extreme temperatures.</p>
+                    <p> <strong> Our Indo-European R&D laboratories</strong>
+                        specialize in applied industrial research
+                        and the
+                        technological
+                        advancement of key metal sectors, including
+                        aluminium,
+                        copper, alloy steel, brass, composites,
+                        titanium,
+                        and zinc.</p>
+                    <p> We offer cutting-edge R&D services and technical
+                        solutions for new product development,
+                        while
+                        also optimizing existing products, business
+                        operations,
+                        and plant production processes.
+
+                        With deep expertise in precision threads, tensile
+                        strength (800–1200 MPa), and custom
+                        tolerances, we
+                        ensure every product meets rigorous international
+                        quality standards.
+                        Our advanced surface treatments—Zinc/Nickel Plating,
+                        Moly Coating, and Phosphate Passivation
+                        enhance
+                        corrosion resistance and durability under demanding
+                        conditions.</p>
+                    <p>NAPL empowers OEMs and Tier-1 suppliers across the
+                        globe
+                        to build stronger, safer, and more
+                        efficient systems through engineering excellence.
+                    </p>
+
+                    <p> Our facilities unite Metallurgy, Machining, Heat
+                        Treatment, Thread Rolling and Coating under one
+                        roof.
+                        Delivering Global-Grade Engineering Materials and
+                        performance assurance.
+
+                    </p>
+                    <center><strong class="text-2xl">“from Melting to
+                            Plating,
+                            we engineer the science behind every
+                            layer of metal.”</strong></center>
+
+                </div>
             </div>
         </section>
 
-        <section class="py-16 bg-white" style="margin-top: -100px;">
-            <div class="container px-4 py-0 mx-auto"><br><br>
-                <div class="container px-8 py-0 mx-auto">
-
-                    <div class="flex flex-wrap justify-center gap-4 mb-4">
-
-                        <div class="flex flex-col items-center">
-                            <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
-                                <div class="w-full h-full hexagon-clip flex items-center justify-center">
-                                    <img src="imgs/bolt.png" alt="Product Image"
-                                        class="max-w-full max-h-full object-contain">
-                                </div>
-                            </div>
-                            <p class="text-xs font-bold text-brand-text-dark mt-2">Bolt</p>
-                        </div>
-
-                        <div class="flex flex-col items-center">
-                            <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
-                                <div class="w-full h-full hexagon-clip flex items-center justify-center">
-                                    <img src="imgs/circlip.png" alt="Product Image"
-                                        class="max-w-full max-h-full object-contain">
-                                </div>
-                            </div>
-                            <p class="text-xs font-bold text-brand-text-dark mt-2">Circlips</p>
-                        </div>
-
-                        <div class="flex flex-col items-center">
-                            <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
-                                <div class="w-full h-full hexagon-clip flex items-center justify-center">
-                                    <img src="imgs/nail.png" alt="Product Image"
-                                        class="max-w-full max-h-full object-contain">
-                                </div>
-                            </div>
-                            <p class="text-xs font-bold text-brand-text-dark mt-2">Nail
-                            <p>
-                        </div>
-
-                        <div class="flex flex-col items-center">
-                            <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
-                                <div class="w-full h-full hexagon-clip flex items-center justify-center">
-                                    <img src="imgs/nnuts.png" alt="Product Image"
-                                        class="max-w-full max-h-full object-contain">
-                                </div>
-                            </div>
-                            <p class="text-xs font-bold text-brand-text-dark mt-2">Nut</p>
-                        </div>
-
-                        <div class="flex flex-col items-center">
-                            <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
-                                <div class="w-full h-full hexagon-clip flex items-center justify-center">
-                                    <img src="imgs/pins.png" alt="Product Image"
-                                        class="max-w-full max-h-full object-contain">
-                                </div>
-                            </div>
-                            <p class="text-xs font-bold text-brand-text-dark mt-2">Pin & Keys</p>
-                        </div>
-
-                        <div class="flex flex-col items-center">
-                            <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
-                                <div class="w-full h-full hexagon-clip flex items-center justify-center">
-                                    <img src="imgs/rivert.png" alt="Product Image"
-                                        class="max-w-full max-h-full object-contain">
-                                </div>
-                            </div>
-                            <p class="text-xs font-bold text-brand-text-dark mt-2">Rivet</p>
-                        </div>
-                        <div class="flex flex-col items-center">
-                            <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
-                                <div class="w-full h-full hexagon-clip flex items-center justify-center">
-                                    <img src="imgs/screw.png" alt="Product Image"
-                                        class="max-w-full max-h-full object-contain">
-                                </div>
-                            </div>
-                            <p class="text-xs font-bold text-brand-text-dark mt-2">Screw</p>
-                        </div>
-                        <div class="flex flex-col items-center">
-                            <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
-                                <div class="w-full h-full hexagon-clip flex items-center justify-center">
-                                    <img src="imgs/spacer.png" alt="Product Image"
-                                        class="max-w-full max-h-full object-contain">
-                                </div>
-                            </div>
-                            <p class="text-xs font-bold text-brand-text-dark mt-2">Spacer & Standoff</p>
-                        </div>
-                    </div>
-
-                    <div class="flex flex-wrap justify-center gap-4 mb-4">
-
-
-
-                        <div class="flex flex-col items-center">
-                            <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
-                                <div class="w-full h-full hexagon-clip flex items-center justify-center">
-                                    <img src="imgs/stud.png" alt="Product Image"
-                                        class="max-w-full max-h-full object-contain">
-                                </div>
-                            </div>
-                            <p class="text-xs font-bold text-brand-text-dark mt-2">Stud & Rod</p>
-                        </div>
-
-                        <div class="flex flex-col items-center">
-                            <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
-                                <div class="w-full h-full hexagon-clip flex items-center justify-center">
-                                    <img src="imgs/washer.png" alt="Product Image"
-                                        class="max-w-full max-h-full object-contain">
-                                </div>
-                            </div>
-                            <p class="text-xs font-bold text-brand-text-dark mt-2">Washer</p>
-                        </div>
-
-                        <div class="flex flex-col items-center">
-                            <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
-                                <div class="w-full h-full hexagon-clip flex items-center justify-center">
-                                    <img src="imgs/wire.png" alt="Product Image"
-                                        class="max-w-full max-h-full object-contain">
-                                </div>
-                            </div>
-                            <p class="text-xs font-bold text-brand-text-dark mt-2">Wires</p>
-                        </div>
-
-                        <div class="flex flex-col items-center">
-                            <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
-                                <div class="w-28 h-full hexagon-clip flex items-center justify-center">
-                                    <img src="imgs/hinge.png" alt="Product Image" style="width: 136px; height: 156px;">
-                                </div>
-                            </div>
-                            <p class="text-xs font-bold text-brand-text-dark mt-2">Hinge</p>
-                        </div>
-
-                        <div class="flex flex-col items-center">
-                            <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
-                                <div class="w-full h-full hexagon-clip flex items-center justify-center">
-                                    <img src="imgs/clamp.png" alt="Product Image"
-                                        class="max-w-full max-h-full object-contain">
-                                </div>
-                            </div>
-                            <p class="text-xs font-bold text-brand-text-dark mt-2">Clamp</p>
-                        </div>
-
-                        <div class="flex flex-col items-center">
-                            <div class="w-28 h-32 p-0.5 bg-gray-300 hexagon-clip flex items-center justify-center">
-                                <div class="w-full h-full hexagon-clip flex items-center justify-center">
-                                    <img src="imgs/latch.png" alt="Product Image"
-                                        class="max-w-full max-h-full object-contain">
-                                </div>
-                            </div>
-                            <p class="text-xs font-bold text-brand-text-dark mt-2">Latch</p>
-                        </div>
-                    </div>
-                </div>
-        </section>
-
         <section class="bg-white overflow-hidden">
-            <div class="py-20">
-                <h2 class="mb-20 text-lg font-extrabold tracking-widest text-center text-brand-dark-green ">
+            <div class="py-20 flex flex-col items-center">
+                <img src="imgs/nitha_logo_top.jpg" alt="" style="width: 90px; height: 60px;">
+                <h2 class="mb-20 mt-4 text-2xl font-extrabold tracking-widest text-center text-brand-topbar-green ">
                     Our Valuable Customers
                 </h2>
 
@@ -698,92 +837,52 @@
                         <img src="imgs/6.png" alt="Logo 6" class="mx-16 lg:mx-24 h-16 w-auto object-contain">
                     </div>
 
-
                 </div>
-        </section>
-        <section class="grid grid-cols-1 md:grid-cols-2">
-            <div>
-                <img src="imgs/flame_home.jpeg" alt="Heat treatment of a metal fastener"
-                    class="object-cover w-full h-full min-h-[300px] md:h-full">
-            </div>
-            <div class="flex flex-col justify-center p-12 bg-brand-green-bg text-brand-text-light md:p-16 lg:p-20">
-                <img src="imgs/whitenitha-removebg-preview.png" alt="" style="width: 70px; height: 70px;">
-                <h2 class="mb-6 font-extrabold text-white text-3xl md:text-[44px] leading-tight">
-                    About NAPL
-                </h2>
-                <div class="space-y-4 text-[15px] leading-relaxed text-justify">
-                    <p>At NAPL is a leading metallurgical fastener manufacturer in India.</p>
-                    <p>As an AS9100D-certified 'fastener supplier', our products are engineered to precise dimensional
-                        tolerances.</p>
-                    <p>At NAPL, we combine advanced manufacturing technologies with rigorous quality control systems.
-                    </p>
-                    <p>With end-to-end production from raw material procurement to finished fasteners, we deliver
-                        complete fastening solutions.</p>
-                    <p>Driven by continuous innovation, indigenization, and 'Made in India' excellence, NAPL is
-                        committed to supplying high-performance.</p>
-                </div>
-            </div>
         </section>
 
         <section class="py-20">
             <div class="container px-6 mx-auto">
                 <div class="mb-16 text-center">
-                    <h2 class="text-4xl md:text-5xl font-extrabold text-brand-text-dark">Forged with Passion, Built for
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-brand-text-dark">Forged
+                        with Passion, Built for
                         India</h2>
                 </div>
                 <div class="grid max-w-6xl gap-16 mx-auto md:grid-cols-2">
                     <div>
-                        <p
-                            class="mb-4 text-lg font-extrabold tracking-widest uppercase text-brand-green-dark underline">
+                        <p class="mb-4 text-2xl font-extrabold tracking-widest  text-brand-green-dark underline">
                             Vision</p>
                         <h3 class="text-2xl md:text-3xl font-semibold text-gray-500">
-                            To be the Leading Global Manufacturer of High-Quality Fasteners for
-                            <span class="italic font-bold text-brand-green-dark">Aviation, Space, Defence, Oil & Gas,
-                                Medical, Nuclear and other engineering industries</span>
+                            To be the Leading Global Manufacturer of
+                            High-Quality Fasteners for
+                            <span class="italic font-bold text-brand-green-dark">Aviation,
+                                Space, Defence, Oil & Gas,
+                                Medical, Nuclear and other engineering
+                                industries </span>
                             through Advanced Technology and Innovation.
                         </h3>
                     </div>
-                    <div class="flex gap-6">
-                        <div class="w-1 bg-brand-green-dark/30"></div>
-                        <div>
-                            <p
-                                class="mb-4 text-lg font-extrabold tracking-widest uppercase text-brand-green-dark underline">
-                                Mission
-                            </p>
-                            <p class="mb-6 text-brand-text-gray">
-                                To be a global leader in fasteners manufacturing by setting benchmarks for Quality and
-                                Service followed by
-                                <br>
-                                The principles of CPES
-                            </p>
-                            <ul class="space-y-4">
-                                <li class="flex items-center gap-4">
-                                    <div
-                                        class="flex items-center justify-center w-10 h-10 font-bold text-white bg-brand-green-dark hexagon-clip">
-                                        C</div><span class="text-lg font-semibold text-brand-text-gray">Customer
-                                        Satisfaction</span>
-                                </li>
-                                <li class="flex items-center gap-4">
-                                    <div
-                                        class="flex items-center justify-center w-10 h-10 font-bold text-white bg-brand-green-dark hexagon-clip">
-                                        P</div><span class="text-lg font-semibold text-brand-text-gray">Process
-                                        Improvement</span>
-                                </li>
-                                <li class="flex items-center gap-4">
-                                    <div
-                                        class="flex items-center justify-center w-10 h-10 font-bold text-white bg-brand-green-dark hexagon-clip">
-                                        E</div><span class="text-lg font-semibold text-brand-text-gray">Employee
-                                        Involvement</span>
-                                </li>
-                                <li class="flex items-center gap-4">
-                                    <div
-                                        class="flex items-center justify-center w-10 h-10 font-bold text-white bg-brand-green-dark hexagon-clip">
-                                        S</div><span class="text-lg font-semibold text-brand-text-gray">Social
-                                        Responsibility</span>
-                                </li>
-                            </ul>
-                        </div>
+
+                    <div class="space-y-6 text-brand-text-gray">
+                        <h2 class="text-3xl font-bold text-brand-text-dark">The
+                            Minds Behind the Materials</h2>
+                        <p class="text-justify">At NITHA Aerospace Pvt
+                            Ltd,
+                            our team is the foundation of our
+                            engineering excellence.</p>
+                        <p class="text-justify">From material selection
+                            and
+                            process planning to machining, heat
+                            treatment, coating, and
+                            testing.</p>
+                        <p class="text-justify">Backed by a culture of
+                            continuous improvement, process innovation,
+                            and
+                            technical
+                            leadership.</p>
+                        <br>
+
                     </div>
+
                 </div>
             </div>
         </section>
@@ -792,36 +891,83 @@
             <div class="container px-6 mx-auto">
                 <div class="grid max-w-6xl gap-16 mx-auto md:grid-cols-2">
 
-                    <div class="space-y-6 text-brand-text-gray">
-                        <h2 class="text-3xl font-bold text-brand-text-dark">The Minds Behind the Materials</h2>
-                        <p class="text-justify">At NITHA Aerospace Pvt Ltd, our team is the foundation of our
-                            engineering excellence.</p>
-                        <p class="text-justify">From material selection and process planning to machining, heat
-                            treatment, coating, and
-                            testing.</p>
-                        <p class="text-justify">Backed by a culture of continuous improvement, process innovation, and
-                            technical
-                            leadership.</p>
-                        <br>
-
-                    </div>
-
                     <div class="space-y-10 text-brand-text-gray">
                         <div>
-                            <h2 class="mb-6 text-3xl font-bold text-brand-text-dark">What Defines Our Leadership?</h2>
+                            <h2 class="mb-6 text-3xl font-bold text-brand-text-dark">What
+                                Defines Our Leadership?</h2>
                             <ul class="space-y-3">
                                 <li class="flex items-start gap-3"><i
                                         class="mt-1 text-xl fas fa-check-circle text-brand-green-dark"></i><span>Deep
-                                        domain knowledge in aerospace, metallurgy, and manufacturing</span></li>
+                                        domain knowledge in aerospace,
+                                        metallurgy, and
+                                        manufacturing</span></li>
                                 <li class="flex items-start gap-3"><i
                                         class="mt-1 text-xl fas fa-check-circle text-brand-green-dark"></i><span>A
-                                        commitment to indigenization and nation-building</span></li>
+                                        commitment to indigenization and
+                                        nation-building</span></li>
                                 <li class="flex items-start gap-3"><i
                                         class="mt-1 text-xl fas fa-check-circle text-brand-green-dark"></i><span>Decision-making
-                                        grounded in technical data, compliance, and ethics</span></li>
+                                        grounded in technical data,
+                                        compliance, and
+                                        ethics</span></li>
                                 <li class="flex items-start gap-3"><i
                                         class="mt-1 text-xl fas fa-check-circle text-brand-green-dark"></i><span>On-the-ground
-                                        leadership — not just boardroom presence</span></li>
+                                        leadership — not just boardroom
+                                        presence</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-6">
+
+                        <div class="w-1 bg-brand-green-dark/30"></div>
+                        <div>
+                            <p class="mb-4 text-2xl font-extrabold tracking-widest text-brand-green-dark underline">
+                                Mission
+                            </p>
+                            <p class="mb-6 text-2xl md:text-3xl font-semibold text-gray-500">
+                                To be a global leader in fasteners
+                                manufacturing by setting benchmarks for
+                                Quality and
+                                Service followed by
+                                <br>
+                                The principles of CPES
+                            </p>
+                            <ul class="space-y-4">
+                                <div class="flex ">
+
+                                    <div class="mx-4 ">
+                                        <li class="flex items-center gap-4 my-2">
+                                            <div
+                                                class="flex items-center justify-center w-10 h-10 font-bold text-white bg-brand-green-dark hexagon-clip">
+                                                C</div><span
+                                                class="text-sm font-extrabold text-brand-text-gray">Customer
+                                                Satisfaction</span>
+                                        </li>
+                                        <li class="flex items-center gap-4">
+                                            <div
+                                                class="flex items-center justify-center w-10 h-10 font-bold text-white bg-brand-green-dark hexagon-clip">
+                                                P</div><span class="text-sm font-extrabold text-brand-text-gray">Process
+                                                Improvement</span>
+                                        </li>
+                                    </div>
+                                    <div>
+                                        <li class="flex items-center gap-4 my-2">
+                                            <div
+                                                class="flex items-center justify-center w-10 h-10 font-bold text-white bg-brand-green-dark hexagon-clip">
+                                                E</div><span
+                                                class="text-sm font-extrabold text-brand-text-gray">Employee
+                                                Involvement</span>
+                                        </li>
+                                        <li class="flex items-center gap-4">
+                                            <div
+                                                class="flex items-center justify-center w-10 h-10 font-bold text-white bg-brand-green-dark hexagon-clip">
+                                                S</div>
+                                            <span class="text-sm font-extrabold text-brand-text-gray">Social
+                                                Responsibility</span>
+                                        </li>
+                                    </div>
+                                </div>
                             </ul>
                         </div>
                     </div>
@@ -834,20 +980,30 @@
 
             <div class="flex flex-col items-center space-y-6 text-center">
                 <p class="max-w-[900px] text-lg leading-relaxed text-gray-800">
-                    We at NITHA Aerospace Private Limited, Manufacture and Supply of Fasteners and
-                    Machined Components that are committed to meet customer requirements consistently by
+                    We at NITHA Aerospace Private Limited, Manufacture
+                    and
+                    Supply of Fasteners and
+                    Machined Components that are committed to meet
+                    customer
+                    requirements consistently by
                     focusing on Quality, Delivery and Response.
                 </p>
 
                 <p class="max-w-[700px] font-semibold text-brand-green-dark">
-                    This is achieved through integrated teamwork and continual improvement.
+                    This is achieved through integrated teamwork and
+                    continual improvement.
                 </p>
 
                 <p class="text-sm md:text-base text-gray-600 leading-relaxed italic">
-                    We ensure compliance with the highest industry Standards, applicable Regulatory
-                    Requirements, and we are dedicated to protecting the environment including
-                    prevention of pollution, sustainable development, workplace safety by eliminating
-                    hazard & reducing risk, employee training, consultation & participation
+                    We ensure compliance with the highest industry
+                    Standards, applicable Regulatory
+                    Requirements, and we are dedicated to protecting the
+                    environment including
+                    prevention of pollution, sustainable development,
+                    workplace safety by eliminating
+                    hazard & reducing risk, employee training,
+                    consultation
+                    & participation
                     of workers and gentle stakeholder relationship.
                 </p>
             </div>
@@ -856,11 +1012,14 @@
         <section class="py-20 text-brand-text-gray">
             <div class="container px-6 mx-auto">
                 <div class="max-w-3xl mx-auto mb-14 text-center">
-                    <p class="mb-4 text-lg font-extrabold tracking-widest text-brand-green-dark">Meet Our
+                    <p class="mb-4 text-lg font-extrabold tracking-widest text-brand-green-dark">Meet
+                        Our
                         Leadership Team</p>
-                    <h2 class="text-4xl font-extrabold text-gray-900 md:text-5xl">Leading with Vision. Delivering with
+                    <h2 class="text-4xl font-extrabold text-gray-900 md:text-5xl">Leading
+                        with Vision. Delivering with
                         Precision.</h2>
-                    <p class="mt-6 text-lg text-gray-600 text-center">At NAPL, our leadership blends deep
+                    <p class="mt-6 text-lg text-gray-600 text-center">At
+                        NAPL, our leadership blends deep
                         technical
                         expertise...</p>
                 </div><br>
@@ -887,7 +1046,8 @@
                             </p>
 
                             <p class="mt-3 text-gray-600 leading-relaxed">
-                                Excellence in heat treatment and metallurgical engineering solutions.
+                                Excellence in heat treatment and
+                                metallurgical engineering solutions.
                             </p>
                         </div>
                     </div>
@@ -905,19 +1065,24 @@
 
                         <div class="md:col-span-2 text-center md:text-left">
                             <h3 class="text-2xl md:text-3xl font-extrabold text-brand-green-dark">
-                                Mr. Karthick Asokan M.S (The Netherlands), MBA (Defence & Aerospace – MoD, Italy)
+                                Mr. Karthick Asokan <span class="text-lg"> M.S (The
+                                    Netherlands)</span>
+                                <p>
+                                    MBA (Defence & Aerospace)</p>
                             </h3>
 
-                            <p class="mt-3 text-gray-800 font-semibold">
-                                Vice President – NAPL
+                            <p class="mt-3 font-extraboldtext-lg">
+                                VP– NAPL
                             </p>
 
                             <p class="mt-3 text-gray-600">
-                                Former Country Head (Torpedo Division), Leonardo S.p.A – Italy
+                                Former Country Head (Torpedo Division),
+                                Leonardo S.p.A – Italy
                             </p>
 
                             <p class="mt-2 text-gray-600">
-                                Philips Innovation Award Winner – The Netherlands
+                                Philips Innovation Award Winner – The
+                                Netherlands
                             </p>
                         </div>
                     </div>
@@ -928,24 +1093,32 @@
 
         <section class="relative text-white bg-dots overflow-hidden"
             style="margin-top: -80px; background: url(imgs/abt.png); background-repeat: no-repeat; background-size: cover;">
-            <!-- 
+            <!--
             <div
                 class="top-curve absolute top-0 left-0 w-full h-[220px] md:h-[250px] lg:h-[270px] bg-brand-mid-green z-0">
             </div>
 
             <div class="top-curve absolute top-0 left-0 w-full h-[200px] md:h-[225px] lg:h-[250px] bg-white z-50">
             </div> -->
-            <div class="container relative z-20 px-6 mx-auto py-20 ">
+            <div class="container relative z-20 px-6 mx-auto py-40 ">
 
                 <div class="max-w-4xl mx-auto text-center mt-36 ">
-                    <p class="mb-3 text-lg font-bold tracking-widest uppercase text-white">Core Values</p>
-                    <h1 class="text-xl font-extrabold text-white md:text-5xl lg:text-5xl">Our values guide our
+                    <img src="imgs/whitenitha-removebg-preview.png" alt=""
+                        style="width: 100px; height: 100px; margin-left: 335px;">
+                    <p class="mb-3 text-lg font-bold tracking-widest uppercase text-white">Core
+                        Values</p>
+                    <h1 class="text-xl font-extrabold text-white md:text-5xl lg:text-5xl">Our
+                        values guide our
                         decisions
                     </h1>
                     <p class="mt-6 mb-10 text-sm text-brand-text-light text-center center">
-                        At NAPL, we don't just manufacture fasteners - we build trust, ensure
+                        At NAPL, we don't just manufacture fasteners -
+                        we
+                        build trust, ensure
                         reliability,
-                        and uphold standards that define critical industries. Our core values shape how we operate,
+                        and uphold standards that define critical
+                        industries. Our core values shape how we
+                        operate,
                         innovate,
                         and deliver - every day, on every project.
                     </p>
@@ -958,12 +1131,18 @@
                             class="relative inline-flex items-center justify-center w-10 h-10 mb-2 bg-brand-lime-green hexagon-clip">
                             <i class="text-1xl fas fa-clock text-brand-dark-green"></i>
                         </div>
-                        <h3 class="mb-3 text-xl font-bold text-white">On-time delivery</h3>
-                        <p class="mb-4 text-sm font-semibold text-white">Commitment you can schedule.</p>
+                        <h3 class="mb-3 text-xl font-bold text-white">On-time
+                            delivery</h3>
+                        <p class="mb-4 text-sm font-semibold text-white">Commitment
+                            you can schedule.</p>
                         <p class="text-sm leading-relaxed text-brand-text-light text-justify">
-                            We understand that in aerospace, oil & gas, and infrastructure, delays aren't just costly —
+                            We understand that in aerospace, oil & gas,
+                            and
+                            infrastructure, delays aren't just costly —
                             they're critical.
-                            Our integrated planning, manufacturing, and agile logistics ensure your components arrive
+                            Our integrated planning, manufacturing, and
+                            agile logistics ensure your components
+                            arrive
                             exactly when they're needed.
                         </p>
                     </div>
@@ -973,12 +1152,17 @@
                             class="relative inline-flex items-center justify-center w-10 h-10 mb-2 bg-brand-lime-green hexagon-clip">
                             <i class="text-1xl fas fa-lightbulb text-brand-dark-green"></i>
                         </div>
-                        <h3 class="mb-3 text-xl font-bold text-white">Reducing Rejections and Rework</h3>
-                        <p class="mb-4 text-sm font-semibold text-white">Zero-defect mindset. Every batch</p>
+                        <h3 class="mb-3 text-xl font-bold text-white">Reducing
+                            Rejections and Rework</h3>
+                        <p class="mb-4 text-sm font-semibold text-white">Zero-defect
+                            mindset. Every batch</p>
                         <p class="text-sm leading-relaxed text-brand-text-light text-justify">
-                            Through robust in-process controls and end-to-end quality gates, we minimize variability and
+                            Through robust in-process controls and
+                            end-to-end quality gates, we minimize
+                            variability and
                             ensure every
-                            part meets specification – reducing scrap, rework, and customer downtime.
+                            part meets specification – reducing scrap,
+                            rework, and customer downtime.
                         </p>
                     </div>
 
@@ -987,15 +1171,20 @@
                             class="relative inline-flex items-center justify-center w-10 h-10 mb-2 bg-brand-lime-green hexagon-clip">
                             <i class="text-1xl fas fa-award text-brand-dark-green"></i>
                         </div>
-                        <h3 class="mb-3 text-xl font-bold text-white">Integrating product Quality,</h3>
-                        <p class="mb-4 text-sm font-semibold text-white">Quality isn’t added later – it starts at
+                        <h3 class="mb-3 text-xl font-bold text-white">Integrating
+                            product Quality,</h3>
+                        <p class="mb-4 text-sm font-semibold text-white">Quality
+                            isn’t added later – it starts at
                             design.
                         </p>
                         <p class="text-sm leading-relaxed text-brand-text-light text-justify">
-                            From Design to casting, forging to finish, quality is built into every step. We follow
+                            From Design to casting, forging to finish,
+                            quality is built into every step. We follow
                             AS9100D,
                             API Q1 & ISO 9001
-                            protocols for upfront reliability, dimensional accuracy, and test-backed compliance for
+                            protocols for upfront reliability,
+                            dimensional
+                            accuracy, and test-backed compliance for
                             every
                             fastener we ship.
                         </p>
@@ -1006,13 +1195,19 @@
                             class="relative inline-flex items-center justify-center w-10 h-10 mb-2 bg-brand-lime-green hexagon-clip">
                             <i class="text-1xl fas fa-users text-brand-dark-green"></i>
                         </div>
-                        <h3 class="mb-3 text-xl font-bold text-white">Customer-Focused Culture</h3>
-                        <p class="mb-4 text-sm font-semibold text-white">Your challenges. Our priority.</p>
+                        <h3 class="mb-3 text-xl font-bold text-white">Customer-Focused
+                            Culture</h3>
+                        <p class="mb-4 text-sm font-semibold text-white">Your
+                            challenges. Our priority.</p>
                         <p class="text-sm leading-relaxed text-brand-text-light text-justify">
-                            We listen, customize, and co-engineer. Whether you're developing next-gen systems or
+                            We listen, customize, and co-engineer.
+                            Whether
+                            you're developing next-gen systems or
                             upgrading
                             legacy
-                            infrastructure, we partner with you from design review to post-delivery support.
+                            infrastructure, we partner with you from
+                            design
+                            review to post-delivery support.
                         </p>
                     </div>
 
@@ -1021,12 +1216,18 @@
                             class="relative inline-flex items-center justify-center w-10 h-10 mb-2 bg-brand-lime-green hexagon-clip">
                             <i class="text-1xl fas fa-rocket text-brand-dark-green"></i>
                         </div>
-                        <h3 class="mb-3 text-xl font-bold text-white">Innovation & Integrity</h3>
-                        <p class="mb-4 text-sm font-semibold text-white">Built to solve. Delivered with honesty.</p>
+                        <h3 class="mb-3 text-xl font-bold text-white">Innovation
+                            & Integrity</h3>
+                        <p class="mb-4 text-sm font-semibold text-white">Built
+                            to solve. Delivered with honesty.</p>
                         <p class="text-sm leading-relaxed text-brand-text-light text-justify">
-                            We combine metallurgical R&D with practical field knowledge to solve real-world fastening
+                            We combine metallurgical R&D with practical
+                            field knowledge to solve real-world
+                            fastening
                             problems. And
-                            do it with transparency – full technical disclosure, data sheets, and ethical sourcing.
+                            do it with transparency – full technical
+                            disclosure, data sheets, and ethical
+                            sourcing.
                         </p>
                     </div>
 
@@ -1035,14 +1236,19 @@
                             class="relative inline-flex items-center justify-center w-10 h-10 mb-2 bg-brand-lime-green hexagon-clip">
                             <i class="text-1xl fas fa-gem text-brand-dark-green"></i>
                         </div>
-                        <h3 class="mb-3 text-xl font-bold text-white">Quality Is Our Promise and Legacy</h3>
-                        <p class="mb-4 text-sm font-semibold text-white">Made to perform. Made to last.</p>
+                        <h3 class="mb-3 text-xl font-bold text-white">Quality
+                            Is Our Promise and Legacy</h3>
+                        <p class="mb-4 text-sm font-semibold text-white">Made
+                            to perform. Made to last.</p>
                         <p class="text-sm leading-relaxed text-brand-text-light text-justify">
-                            Our commitment to quality goes beyond certifications. Every NAPL fastener is a
+                            Our commitment to quality goes beyond
+                            certifications. Every NAPL fastener is a
                             representation
                             of
                             its legacy –
-                            precisely engineered, heat-treated, and tested to perform in the most demanding
+                            precisely engineered, heat-treated, and
+                            tested
+                            to perform in the most demanding
                             environments.
                         </p>
                     </div>
@@ -1061,20 +1267,30 @@
                     <p class="mb-3 text-sm font-semibold tracking-widest uppercase text-brand-green-career">
 
                     </p>
-                    <h2 class="mb-6 text-4xl font-extrabold md:text-5xl">Why Work With Us?</h2>
+                    <h2 class="mb-6 text-4xl font-extrabold md:text-5xl">Why
+                        Work With Us?</h2>
                     <ul class="space-y-3 text-lg">
                         <li class="flex items-center"><i
-                                class="mr-3 text-xl fas fa-check-circle text-brand-green-career"></i>Work on
-                            mission-critical components for aerospace and space</li>
+                                class="mr-3 text-xl fas fa-check-circle text-brand-green-career"></i>Work
+                            on
+                            mission-critical components for aerospace
+                            and
+                            space</li>
                         <li class="flex items-center"><i
-                                class="mr-3 text-xl fas fa-check-circle text-brand-green-career"></i>Collaborate with
-                            experts in metallurgy, precision machining, and R&D</li>
+                                class="mr-3 text-xl fas fa-check-circle text-brand-green-career"></i>Collaborate
+                            with
+                            experts in metallurgy, precision machining,
+                            and
+                            R&D</li>
                         <li class="flex items-center"><i
-                                class="mr-3 text-xl fas fa-check-circle text-brand-green-career"></i>Be part of a Make
+                                class="mr-3 text-xl fas fa-check-circle text-brand-green-career"></i>Be
+                            part of a Make
                             in India movement with global impact</li>
                         <li class="flex items-center"><i
-                                class="mr-3 text-xl fas fa-check-circle text-brand-green-career"></i>Access upskilling,
-                            certification, and leadership opportunities</li>
+                                class="mr-3 text-xl fas fa-check-circle text-brand-green-career"></i>Access
+                            upskilling,
+                            certification, and leadership
+                            opportunities</li>
                     </ul>
                     <a href="#"
                         class="inline-flex items-center px-8 py-3 mt-10 text-sm font-bold text-gray-900 uppercase bg-white rounded-md shadow-lg transition-transform hover:scale-105">
@@ -1086,12 +1302,11 @@
 
         <svg class="absolute w-0 h-0">
             <defs>
-                <clipPath id="top-curve-clip" clipPathUnits="objectBoundingBox">
+                <clippath id="top-curve-clip" clipPathUnits="objectBoundingBox">
                     <path d="M 0,0 L 1,0 L 1,0.9 C 0.75,0.4 0.25,0.4 0,0.9 Z"></path>
-                </clipPath>
+                </clippath>
             </defs>
         </svg>
-
 
         <section class="top_box relative z-[90] overflow-hidden bg-[#6a9b5f] pb-0 text-white bg-dots responsive-out "
             style="border-radius:10px; width: 80%; height: 250px; z-index: 99; position: relative; left: 9%; box-shadow: 0px 20px 9px black; margin-top: 50px;">
@@ -1105,11 +1320,14 @@ background-position: center;">
             <div class="top_box container relative z-2 px-6 py-20 mx-auto lg:py-20">
                 <div style="position:absolute;top:13% ;">
                     <div class="max-w-2xl">
-                        <p class=" text-sm  py-3 font-semibold tracking-wider ">One Platform For All
+                        <p class=" text-sm  py-3 font-semibold tracking-wider ">One
+                            Platform For All
                             Your Fasteners Requirements</p>
                         <h2 class=" text-3xl mb-2 font-extrabold tracking-tight">Which
                             products are you looking to buy?</h2>
-                        <p class="mb-4 mt-1  text-1 font-bold">Single window for end-to-end steel sourcing</p>
+                        <p class="mb-4 mt-1  text-1 font-bold">Single
+                            window
+                            for end-to-end steel sourcing</p>
                         <a href="products.html"
                             class="inline-flex items-center px-8 py-3 text-sm font-bold text-[#6a9b5f]  bg-white rounded-md shadow-lg transition-transform hover:scale-105">
                             Explore Now
@@ -1136,14 +1354,17 @@ background-position: center;">
 
                     <!-- ADDRESS -->
                     <div>
-                        <h3 class="mb-4 text-lg font-semibold text-white">Head Office & Factory</h3>
+                        <h3 class="mb-4 text-lg font-semibold text-white">Head
+                            Office & Factory</h3>
 
                         <p class="text-sm leading-relaxed">
-                            Plot no. 140 SIDCO Women Industrial Estate,<br>
+                            Plot no. 140 SIDCO Women Industrial
+                            Estate,<br>
                             Karuppur, Salem – 636011
                         </p>
 
-                        <h3 class="mt-4 text-sm font-semibold">Call Us</h3>
+                        <h3 class="mt-4 text-sm font-semibold">Call
+                            Us</h3>
 
                         <a href="tel:+918220538534" class="block text-sm hover:text-white transition">
                             +91 82205 38534
@@ -1164,7 +1385,6 @@ background-position: center;">
                         </a>
                     </div>
 
-
                     <!-- COMPANY -->
                     <div>
                         <h3 class="mb-4 text-lg font-semibold text-white">Company</h3>
@@ -1182,35 +1402,45 @@ background-position: center;">
                         <h3 class="mb-4 text-lg font-semibold text-white">Products</h3>
                         <ul class="space-y-3 text-sm">
                             <li class="hover:text-white cursor-pointer">
-                                <a href="solution.html" class="block w-full">Aerospace Fasteners</a>
+                                <a href="solution.html" class="block w-full">Aerospace
+                                    Fasteners</a>
                             </li>
 
                             <li class="hover:text-white cursor-pointer">
-                                <a href="solution.html" class="block w-full">Oil & Gas Bolting</a>
+                                <a href="solution.html" class="block w-full">Oil & Gas
+                                    Bolting</a>
                             </li>
 
                             <li class="hover:text-white cursor-pointer">
-                                <a href="solution.html" class="block w-full">Defence Fasteners</a>
+                                <a href="solution.html" class="block w-full">Defence
+                                    Fasteners</a>
                             </li>
 
                             <li class="hover:text-white cursor-pointer">
-                                <a href="solution.html" class="block w-full">Shipbuilding Fasteners</a>
+                                <a href="solution.html" class="block w-full">Shipbuilding
+                                    Fasteners</a>
                             </li>
 
                             <li class="hover:text-white cursor-pointer">
-                                <a href="solution.html" class="block w-full">Automotive Fasteners</a>
+                                <a href="solution.html" class="block w-full">Automotive
+                                    Fasteners</a>
                             </li>
 
                             <li class="hover:text-white cursor-pointer">
-                                <a href="solution.html" class="block w-full">Nuclear & Energy Fasteners</a>
+                                <a href="solution.html" class="block w-full">Nuclear &
+                                    Energy
+                                    Fasteners</a>
                             </li>
 
                             <li class="hover:text-white cursor-pointer">
-                                <a href="solution.html" class="block w-full">Medical Fasteners</a>
+                                <a href="solution.html" class="block w-full">Medical
+                                    Fasteners</a>
                             </li>
 
                             <li class="hover:text-white cursor-pointer">
-                                <a href="solution.html" class="block w-full">Custom & Prototype Fasteners</a>
+                                <a href="solution.html" class="block w-full">Custom &
+                                    Prototype
+                                    Fasteners</a>
                             </li>
 
                         </ul>
@@ -1233,23 +1463,28 @@ background-position: center;">
                             </li>
 
                             <li class="hover:text-white cursor-pointer">
-                                <a href="fasteners.html" class="block w-full">Precision Machining</a>
+                                <a href="fasteners.html" class="block w-full">Precision
+                                    Machining</a>
                             </li>
 
                             <li class="hover:text-white cursor-pointer">
-                                <a href="fasteners.html" class="block w-full">Thread Rolling</a>
+                                <a href="fasteners.html" class="block w-full">Thread
+                                    Rolling</a>
                             </li>
 
                             <li class="hover:text-white cursor-pointer">
-                                <a href="fasteners.html" class="block w-full">Heat Treatment</a>
+                                <a href="fasteners.html" class="block w-full">Heat
+                                    Treatment</a>
                             </li>
 
                             <li class="hover:text-white cursor-pointer">
-                                <a href="fasteners.html" class="block w-full">Surface Treatment</a>
+                                <a href="fasteners.html" class="block w-full">Surface
+                                    Treatment</a>
                             </li>
 
                             <li class="hover:text-white cursor-pointer">
-                                <a href="fasteners.html" class="block w-full">Testing & QA</a>
+                                <a href="fasteners.html" class="block w-full">Testing &
+                                    QA</a>
                             </li>
 
                             <li class="hover:text-white cursor-pointer">
@@ -1261,7 +1496,8 @@ background-position: center;">
 
                     <!-- CONTACT -->
                     <div>
-                        <h3 class="mb-4 text-lg font-semibold text-white">Connect With Us</h3>
+                        <h3 class="mb-4 text-lg font-semibold text-white">Connect
+                            With Us</h3>
 
                         <!-- WhatsApp Button -->
                         <a href="https://wa.me/919578420672" target="_blank"
@@ -1299,8 +1535,9 @@ background-position: center;">
         <div class="relative z-20 py-4 text-gray-400 " style="background: #0b180d; border-top: 1px solid white;">
             <div class="container flex flex-col items-center justify-between px-6 mx-auto text-sm md:flex-row">
                 <p class="mb-4 md:mb-0">
-                    www.nithaaerospace.in © Copyright and private limited. All Rights Reserved | <a href="Terms.html"
-                        id="terms">Terms of Access</a>
+                    www.nithaaerospace.in © Copyright and private
+                    limited.
+                    All Rights Reserved | <a href="Terms.html" id="terms">Terms of Access</a>
                 </p>
                 <div class="flex space-x-6 text-base">
                     <a href="#" class="transition-colors hover:text-white"><i class="fab fa-facebook-f"></i></a>
@@ -1315,5 +1552,17 @@ background-position: center;">
         </div>
     </main>
 </body>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const items = document.querySelectorAll(".curve-item");
+        const duration = 26; // must match CSS animation time
+        const total = items.length;
+
+        items.forEach((item, index) => {
+            item.style.animationDelay = `${-(duration / total) * index}s`;
+        });
+    });
+</script>
 
 </html>
