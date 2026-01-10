@@ -5,7 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NITHA Aerospace - Excellence in Fasteners</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -56,7 +60,6 @@
         }
 
         .section-title {
-            font-family: 'Arial Black', Gadget, sans-serif;
             color: #333333;
             line-height: 1.1;
         }
@@ -65,13 +68,84 @@
             scroll-behavior: smooth;
         }
 
-        .brand-subhead {
-            font-weight: 700;
+        /* ===============================
+   SCROLL REVEAL BASE
+================================ */
+        .reveal,
+        .reveal-left,
+        .reveal-right,
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition:
+                opacity 0.9s ease,
+                transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+            will-change: transform, opacity;
+        }
+
+        /* ===============================
+   DIRECTION VARIANTS
+================================ */
+        .reveal-left {
+            transform: translateX(-60px);
+        }
+
+        .reveal-right {
+            transform: translateX(60px);
+        }
+
+        .reveal-up {
+            transform: translateY(60px);
+        }
+
+        /* ===============================
+   ACTIVE STATE
+================================ */
+        .reveal.active,
+        .reveal-left.active,
+        .reveal-right.active,
+        .reveal-up.active {
+            opacity: 1;
+            transform: translateX(0) translateY(0);
+        }
+
+        /* ===============================
+   DELAY UTILITIES
+================================ */
+        .delay-1 {
+            transition-delay: 0.15s;
+        }
+
+        .delay-2 {
+            transition-delay: 0.3s;
+        }
+
+        .delay-3 {
+            transition-delay: 0.45s;
+        }
+
+        .delay-4 {
+            transition-delay: 0.6s;
+        }
+
+        /* ===============================
+   REDUCED MOTION SUPPORT
+================================ */
+        @media (prefers-reduced-motion: reduce) {
+
+            .reveal,
+            .reveal-left,
+            .reveal-right,
+            .reveal-up {
+                transition: none;
+                transform: none;
+                opacity: 1;
+            }
         }
     </style>
 </head>
 
-<body class="bg-white font-sans">
+<body class="bg-white ">
     <div class="hidden bg-brand-topbar-green text-white text-[13px] py-2 px-6 md:flex justify-between items-center"
         style="font-family: 'Montserrat', sans-serif;">
         <div class="flex items-center space-x-4">
@@ -94,8 +168,11 @@
 
     <header class="relative">
 
-        <nav class="w-full absolute top-0 py-4 z-50 bg-white shadow-sm" style="font-family: 'Montserrat', sans-serif;">
-            <div class="container mx-auto flex items-center justify-between px-6">
+        <nav class="w-full absolute bg-white font-extrabold text-brand-topbar-green top-0 py-4 z-50 shadow-sm"
+            style="font-family: 'Montserrat';">
+            <div class="w-full max-w-screen-2xl mx-auto flex items-center justify-between px-6 xl:px-4 2xl:px-2">
+
+
 
                 <div class="flex items-center">
                     <img src="imgs/Screenshot 2025-11-04 120806.png" alt="NITHA Logo" class="h-16 w-20 object-contain">
@@ -103,50 +180,77 @@
 
                 <div class="hidden md:flex items-center gap-6 lg:gap-8 text-[14px] lg:text-[15px] font-bold">
 
-                    <a href="index.html" class="hover:text-brand-topbar-green">Home</a>
-                    <a href="aboutus.html" class="hover:text-brand-topbar-green">About</a>
-
-                    <div class="relative group py-2"> <button
-                            class="hover:text-brand-topbar-green flex items-center gap-1 focus:outline-none cursor-pointer">
+                    <a href="index.html" class="transition-colors duration-100 hover:text-black">Home</a>
+                    <a href="aboutus.html" class="transition-colors duration-100 hover:text-black">About</a>
+                    <div class="relative group py-2">
+                        <button class="flex items-center gap-1 cursor-pointer
+        transition-colors duration-100
+        hover:text-black focus:outline-none">
                             Capabilities <i class="fas fa-chevron-down text-[10px]"></i>
                         </button>
-                        <div class="absolute top-full left-0 pt-2 hidden group-hover:block z-[60]">
 
-                            <div
-                                class="bg-white shadow-xl rounded-md w-72 border-t-4 border-brand-topbar-green py-2 overflow-hidden">
-                                <a href="fasteners.html"
-                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Aerospace
-                                    Fasteners</a>
-                                <a href="fasteners.html"
-                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Oil
-                                    & Gas Bolting</a>
-                                <a href="fasteners.html"
-                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Defence
-                                    Fasteners</a>
-                                <a href="fasteners.html"
-                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Shipbuilding
-                                    Fasteners</a>
-                                <a href="fasteners.html"
-                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Automotive
-                                    Fasteners</a>
-                                <a href="fasteners.html"
-                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Nuclear
-                                    & Energy Fasteners</a>
-                                <a href="fasteners.html"
-                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Medical
-                                    Fasteners</a>
-                                <a href="fasteners.html"
-                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Custom
-                                    & Prototype Fasteners</a>
+                        <!-- DROPDOWN -->
+                        <div class="absolute top-full left-0 pt-2 hidden group-hover:block z-[60]">
+                            <div class="bg-white shadow-xl rounded-md w-72
+            border-t-4 border-brand-topbar-green
+            py-2 overflow-hidden">
+
+                                <a href="fasteners.html" class="block px-4 py-2 text-gray-700
+                hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
+                                    Melting
+                                </a>
+
+                                <a href="fasteners.html" class="block px-4 py-2 text-gray-700
+                hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
+                                    Casting
+                                </a>
+
+                                <a href="fasteners.html" class="block px-4 py-2 text-gray-700
+                hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
+                                    Forging
+                                </a>
+
+                                <a href="fasteners.html" class="block px-4 py-2 text-gray-700
+                hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
+                                    Precision Machining
+                                </a>
+
+                                <a href="fasteners.html" class="block px-4 py-2 text-gray-700
+                hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
+                                    Thread Rolling
+                                </a>
+
+                                <a href="fasteners.html" class="block px-4 py-2 text-gray-700
+                hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
+                                    Heat Treatment
+                                </a>
+
+                                <a href="fasteners.html" class="block px-4 py-2 text-gray-700
+                hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
+                                    Surface Treatment
+                                </a>
+
+                                <a href="fasteners.html" class="block px-4 py-2 text-gray-700
+                hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
+                                    Testing & QA
+                                </a>
+
+                                <a href="fasteners.html" class="block px-4 py-2 text-gray-700
+                hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
+                                    Engineering
+                                </a>
                             </div>
                         </div>
                     </div>
 
+
                     <div class="relative group py-2">
-                        <button
-                            class="hover:text-brand-topbar-green flex items-center gap-1 focus:outline-none cursor-pointer">
+                        <button class="flex items-center gap-1 cursor-pointer
+           transition-colors duration-100
+           hover:text-black focus:outline-none">
                             FIS/R&D <i class="fas fa-chevron-down text-[10px]"></i>
                         </button>
+
                         <div class="absolute top-full left-0 pt-2 hidden group-hover:block z-[60]">
                             <div class="bg-white shadow-xl rounded-md w-64 border-t-4 border-brand-topbar-green py-2">
                                 <a href="fasteners.html"
@@ -162,70 +266,135 @@
                     </div>
 
                     <div class="relative group py-2">
-                        <a href="products.html"
-                            class="hover:text-brand-topbar-green flex items-center gap-1 focus:outline-none cursor-pointer">
-                            Products <i class="fas fa-chevron-down text-[10px]"></i>
-                        </a>
-                        <div class="absolute top-full left-0 pt-2 hidden group-hover:block z-[60]">
+                        <div class="relative group inline-block ">
+                            <button class="flex items-center gap-1 cursor-pointer
+           transition-colors duration-100
+           hover:text-black focus:outline-none">
+                                Products
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+
+
                             <div
-                                class="bg-white shadow-xl rounded-md w-[420px] border-t-4 border-brand-topbar-green py-3 px-2 grid grid-cols-2 gap-x-2 gap-y-1">
-                                <a href="products.html"
-                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Bolt</a>
+                                class="absolute left-0 hidden group-hover:block bg-white shadow-xl rounded-md w-72 border-t-4 border-brand-topbar-green py-2 z-50">
 
-                                <a href="products.html"
-                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Bush</a>
+                                <div class="relative group/sub">
+                                    <a href=""
+                                        class="flex justify-between items-center px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
+                                        Critical Industries
+                                        <span
+                                            class="text-xs ml-2 opacity-50 group-hover:opacity-100 transition-opacity">
+                                            <i class="fa-solid fa-chevron-right"></i>
+                                        </span>
+                                    </a>
+                                    <div
+                                        class="absolute left-full top-0 hidden group-hover/sub:block bg-white shadow-xl rounded-md w-72 border-l-2 border-brand-topbar-green py-2 -ml-1">
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Aerospace
+                                            Fasteners</a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Defence
+                                            Fasteners</a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Nuclear
+                                            / Energy Fasteners</a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Oil
+                                            & Gas Bolting Solutions</a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Medical
+                                            & Precision Fasteners</a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Railway
+                                            & Metro Fasteners</a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Power
+                                            Plant & Thermal Fasteners</a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Renewable
+                                            Energy Fasteners</a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Shipbuilding
+                                            & Marine Fasteners</a>
+                                    </div>
+                                </div>
 
-                                <a href="products.html"
-                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Circlips</a>
+                                <div class="relative group/sub">
+                                    <a href="#"
+                                        class="flex justify-between items-center px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
+                                        Industrial & General Engineering
+                                        <span
+                                            class="text-xs ml-2 opacity-50 group-hover:opacity-100 transition-opacity">
+                                            <i class="fa-solid fa-chevron-right"></i>
+                                        </span>
+                                    </a>
+                                    <div
+                                        class="absolute left-full top-0 hidden group-hover/sub:block bg-white shadow-xl rounded-md w-72 border-l-2 border-brand-topbar-green py-2 -ml-1">
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Automotive
+                                            Fasteners</a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Construction
+                                            & Infrastructure Fasteners</a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Electrical
+                                            & Electronics Fasteners</a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Heavy
+                                            Engineering & Industrial Fasteners</a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Chemical
+                                            & Process Industry Fasteners</a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Mining
+                                            & Earthmoving Fasteners</a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">HVAC
+                                            & Building Services Fasteners</a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Agricultural
+                                            & Off-Highway Fasteners</a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">General
+                                            Engineering Fasteners</a>
+                                    </div>
+                                </div>
 
-                                <a href="products.html"
-                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Nail</a>
+                                <div class="relative group/sub">
+                                    <a href="#"
+                                        class="flex justify-between items-center px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
+                                        Specialised Engineering
+                                        <span
+                                            class="text-xs ml-2 opacity-50 group-hover:opacity-100 transition-opacity">
+                                            <i class="fa-solid fa-chevron-right"></i>
+                                        </span>
+                                    </a>
+                                    <div
+                                        class="absolute left-full top-0 hidden group-hover/sub:block bg-white shadow-xl rounded-md w-72 border-l-2 border-brand-topbar-green py-2 -ml-1">
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Custom
+                                            & Prototype Fasteners</a>
+                                    </div>
+                                </div>
 
-                                <a href="products.html"
-                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Nut</a>
-
-                                <a href="products.html"
-                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Pin
-                                    & Keys</a>
-
-                                <a href="products.html"
-                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Clamp</a>
-
-                                <a href="products.html"
-                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Rivet</a>
-
-                                <a href="products.html"
-                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Screw</a>
-
-                                <a href="products.html"
-                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Spacer
-                                    & Standoff</a>
-
-                                <a href="products.html"
-                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Stud
-                                    & Rod</a>
-
-                                <a href="products.html"
-                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Washer</a>
-
-                                <a href="products.html"
-                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Wires</a>
-
-                                <a href="products.html"
-                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Hinge</a>
-
-                                <a href="products.html"
-                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Latch</a>
                             </div>
-
                         </div>
                     </div>
-                    <a href="contact.html" class="hover:text-brand-topbar-green">Contact</a>
+                    <a href="contact.html" class="transition-colors duration-100 hover:text-black">Contact</a>
                 </div>
-
-                <div class="hidden sm:block">
-                    <a href="#"
-                        class="bg-brand-topbar-green text-white px-5 lg:px-6 py-2 rounded-md text-xs lg:text-sm font-bold hover:brightness-110 transition shadow-md whitespace-nowrap">
+                <div class="hidden md:block">
+                    <a href="#" class="bg-brand-topbar-green text-white
+              px-5 lg:px-6 py-2
+              rounded-md
+              text-xs lg:text-sm
+              font-bold
+              hover:brightness-110
+              transition
+              shadow-md
+              whitespace-nowrap">
                         Become A Partner
                     </a>
                 </div>
@@ -235,17 +404,16 @@
                         <i class="fas fa-bars"></i>
                     </button>
                 </div>
-            </div>
-        </nav>
 
-        <div class="relative  h-[900px] overflow-hidden flex items-center justify-center text-center p-20 text-white">
+        </nav>
+        <div class="relative  h-[920px] overflow-hidden flex items-center justify-center text-center p-20 text-white">
 
             <!-- Background Image -->
-            <img src="imgs/fasteners_hero.jpg" alt="Aerospace background"
+            <img src="imgs/Rectangle22.png" alt="Aerospace background"
                 class="absolute inset-0 w-full h-full object-cover z-0">
 
             <!-- Overlay Content -->
-            <div class="absolute inset-0 z-10 flex items-center justify-center" style="left: 50%;">
+            <div class="absolute inset-0 z-10 flex items-center justify-center reveal-right" style="left: 50%;">
                 <div class="container mx-auto px-4 text-white">
                     <div class="max-w-3xl text-left" id="hero-container">
 
@@ -285,16 +453,21 @@
     </header>
 
 
-    <section class="relative py-32 px-4 overflow-hidden">
+    <section class="relative py-2 px-4 overflow-hidden">
         <div class="dotted-bg absolute top-0 right-0 w-1/3 h-full opacity-60 pointer-events-none"></div>
 
         <div class="max-w-7xl mx-auto relative z-10">
             <div class="text-center mb-16">
-                <h3 class="text-sm font-extrabold text-brand-dark-grey tracking-widest uppercase mb-4">What We Do</h3>
-                <h1 class="text-5xl lg:text-5xl text-brand-topbar-green font-extrabold leading-tight mb-8">
+                <div class="flex justify-center items-center  reveal-up">
+                    <img src="imgs/nithaa-removebg-preview.png" alt="NITHA Aerospace Logo"
+                        class="w-20 h-20 object-contain" />
+                </div>
+                <h3 class="text-sm font-extrabold text-brand-topbar-green tracking-widest uppercase mb-4 reveal-up">What We Do
+                </h3>
+                <h1 class="text-5xl lg:text-5xl text-black font-extrabold leading-tight mb-8 reveal-up ">
                     Precision Fasteners.<br>Engineered to Perform.
                 </h1>
-                <div class="max-w-4xl mx-auto space-y-6 text-brand-medium-grey text-lg">
+                <div class="max-w-4xl mx-auto space-y-6 text-brand-medium-grey text-lg  reveal-up ">
                     <p>At NITHA Aerospace Pvt Ltd, we don't just manufacture fasteners — we engineer confidence in every
                         connection. Specializing in superalloy fasteners for aerospace, oil & gas, energy, and space
                         systems, we design and produce components that meet the world's most demanding engineering
@@ -307,7 +480,7 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div
-                    class="bg-brand-light-mint p-8 rounded-2xl flex flex-col items-start transition-transform hover:-translate-y-2">
+                    class="bg-brand-light-mint p-8 rounded-2xl flex flex-col items-start  reveal-up">
                     <i class="fa-solid fa-bullseye text-5xl text-brand-medium-green mb-6"></i>
                     <h4 class="text-xl font-bold text-brand-medium-green uppercase leading-tight mb-4">Driven
                         by<br>Precision</h4>
@@ -317,7 +490,7 @@
                         material specifications.</p>
                 </div>
                 <div
-                    class="bg-brand-light-mint p-8 rounded-2xl flex flex-col items-start transition-transform hover:-translate-y-2">
+                    class="bg-brand-light-mint p-8 rounded-2xl flex flex-col items-start  reveal-up delay-1">
                     <i class="fa-solid fa-atom text-5xl text-brand-medium-green mb-6"></i>
                     <h4 class="text-xl font-bold text-brand-medium-green uppercase leading-tight mb-4">
                         Material<br>Matters</h4>
@@ -327,7 +500,7 @@
                         critical industries.</p>
                 </div>
                 <div
-                    class="bg-brand-light-mint p-8 rounded-2xl flex flex-col items-start transition-transform hover:-translate-y-2">
+                    class="bg-brand-light-mint p-8 rounded-2xl flex flex-col items-start reveal-up delay-2">
                     <i class="fa-solid fa-industry text-5xl text-brand-medium-green mb-6"></i>
                     <h4 class="text-xl font-bold text-brand-medium-green uppercase leading-tight mb-4">
                         End-to-End<br>Manufacturing</h4>
@@ -336,7 +509,7 @@
                         lifecycle in-house. This allows us to guarantee both performance and traceability.</p>
                 </div>
                 <div
-                    class="bg-brand-light-mint p-8 rounded-2xl flex flex-col items-start transition-transform hover:-translate-y-2">
+                    class="bg-brand-light-mint p-8 rounded-2xl flex flex-col items-start reveal-up delay-3">
                     <i class="fa-solid fa-globe text-5xl text-brand-medium-green mb-6"></i>
                     <h4 class="text-xl font-bold text-brand-medium-green uppercase leading-tight mb-4">Built in
                         India.<br>Trusted Globally.</h4>
@@ -350,13 +523,13 @@
 
     <!--   <hr class="border-brand-light-grey mx-auto max-w-7xl">
  -->
-    <section class="relative px-4 overflow-hidden">
+    <section class="relative px-4 overflow-hidden mt-2">
         <div class="dotted-bg absolute top-0 left-20 w-1/4 h-1/2 opacity-40 pointer-events-none"></div>
 
         <div class="px-6 max-w-7xl mx-auto">
             <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
 
-                <div class="lg:w-1/2 order-2 lg:order-1">
+                <div class="lg:w-1/2 order-2 lg:order-1 reveal-left">
                     <img src="imgs/mainNitha.png" alt="Industries Icon" class="mx-auto h-20 w-20"
                         style="margin-left: 1px; padding-top: 5px;">
                     <h2 class="section-title text-5xl font-extrabold text-brand-dark-grey tracking-wide mb-2">Casting
@@ -406,7 +579,8 @@
                         a Quote</button>
                 </div>
 
-                <div class="lg:w-1/2 order-1 lg:order-2">
+                <div class="lg:w-1/2 order-1 lg:order-2 reveal-right
+                ">
                     <img src="imgs/casting_fastners.png" alt="">
                 </div>
             </div>
@@ -415,11 +589,11 @@
 
     <section class="py-16 px-6 max-w-7xl mx-auto">
         <div class="flex flex-col lg:flex-row items-center gap-12">
-            <div class="lg:w-1/2 order-2 lg:order-1">
+            <div class="lg:w-1/2 order-2 lg:order-1 reveal-left">
                 <img src="imgs/forging_fasteners.png" alt="">
             </div>
 
-            <div class="lg:w-1/2 order-1 lg:order-2">
+            <div class="lg:w-1/2 order-1 lg:order-2 reveal-right">
                 <div class="mb-4">
                     <img src="imgs/mainNitha.png" alt="Industries Icon" class="mx-auto h-20 w-20"
                         style="margin-left: 1px; padding-top: 5px;">
@@ -447,7 +621,7 @@
     <section class="py-16 px-6 max-w-7xl mx-auto">
         <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
             <div class="lg:w-1/2">
-                <div class="mb-6">
+                <div class="mb-6 reveal-left">
                     <img src="imgs/mainNitha.png" alt="Industries Icon" class="mx-auto h-20 w-20"
                         style="margin-left: 1px; padding-top: 5px;">
                     <h2 class="section-title text-5xl font-extrabold text-brand-dark-grey tracking-wide mb-2">Precision
@@ -472,7 +646,7 @@
                     a Quote</button>
             </div>
 
-            <div class="lg:w-1/2">
+            <div class="lg:w-1/2 reveal-right">
                 <img src="imgs/precision_fasteners.png" alt="">
             </div>
         </div>
@@ -480,10 +654,10 @@
 
     <section class="py-12 px-6 max-w-7xl mx-auto">
         <div class="flex flex-col lg:flex-row items-center gap-10">
-            <div class="lg:w-1/2 order-2 lg:order-1">
+            <div class="lg:w-1/2 order-2 lg:order-1 reveal-left">
                 <img src="imgs/heat_fasteners.png" alt="">
             </div>
-            <div class="lg:w-1/2 order-1 lg:order-2">
+            <div class="lg:w-1/2 order-1 lg:order-2 reveal-right">
                 <img src="imgs/mainNitha.png" alt="Industries Icon" class="mx-auto h-20 w-20"
                     style="margin-left: 1px; padding-top: 5px;">
                 <h2 class="section-title text-5xl font-extrabold text-brand-dark-grey tracking-wide mb-2">Heat Treatment
@@ -519,7 +693,7 @@
 
     <section class="py-12 px-6 max-w-7xl mx-auto">
         <div class="flex flex-col lg:flex-row items-center gap-10">
-            <div class="lg:w-1/2">
+            <div class="lg:w-1/2 reveal-left">
                 <img src="imgs/mainNitha.png" alt="Industries Icon" class="mx-auto h-20 w-20"
                     style="margin-left: 1px; padding-top: 5px;">
                 <h2 class="section-title text-5xl font-extrabold text-brand-dark-grey tracking-wide mb-2">Surface
@@ -562,7 +736,7 @@
                     a Quote</button>
             </div>
 
-            <div class="lg:w-1/2">
+            <div class="lg:w-1/2 reveal-right">
                 <img src="imgs/surface_fasteners.png" alt="">
             </div>
         </div>
@@ -570,11 +744,11 @@
 
     <section class="py-12 px-6 max-w-7xl mx-auto">
         <div class="flex flex-col lg:flex-row items-center gap-10">
-            <div class="lg:w-1/2 order-2 lg:order-1">
+            <div class="lg:w-1/2 order-2 lg:order-1 reveal-left">
                 <img src="imgs/r&d_fasteners.png" alt="">
             </div>
 
-            <div class="lg:w-1/2 order-1 lg:order-2">
+            <div class="lg:w-1/2 order-1 lg:order-2 reveal-right">
                 <img src="imgs/mainNitha.png" alt="Industries Icon" class="mx-auto h-20 w-20"
                     style="margin-left: 1px; padding-top: 5px;">
                 <h2 class="section-title text-5xl font-extrabold text-brand-dark-grey tracking-wide mb-2">R&D and
@@ -611,7 +785,8 @@
         </div>
     </section>
 
-    <section class="top_box relative z-[90] overflow-hidden bg-[#6a9b5f] pb-0 text-white bg-dots responsive-out"
+
+    <section class="top_box relative z-[90] overflow-hidden bg-[#6a9b5f] pb-0 text-white bg-dots responsive-out reveal-up"
         style="border-radius:10px; width: 80%; height: 250px; z-index: 99; position: relative; left: 9%; box-shadow: 0px 20px 9px black; margin-top: 20px;">
 
         <div class="absolute inset-0 z-0 bg-right bg-no-repeat bg-cover opacity-70 mix-blend-multiply responsive" style="background-image: url('imgs/wwu-copy.png'); background-size: cover;      /* make it fill the screen */
@@ -777,37 +952,87 @@ background-position: center;">
                 </div>
 
                 <!-- CONTACT -->
-                <div>
-                    <h3 class="mb-4 text-lg font-semibold text-white">Connect With Us</h3>
+                <div class="w-full">
+                    <h3 class="mb-3 text-lg font-semibold text-white text-center sm:text-left">
+                        Connect With Us
+                    </h3>
+                    <p class="mt-3 mb-3 text-white/90 text-sm  tracking-tight max-w-xl mx-auto md:mx-0">
+                        For Advanced Engineering <span class="opacity-70 mx-1"></span> Fastening Solutions
+                    </p>
+                    <div class="flex flex-col gap-4 items-center sm:items-start">
 
-                    <!-- WhatsApp Button -->
-                    <a href="https://wa.me/919578420672" target="_blank"
-                        class="flex items-center gap-3 px-5 py-2 rounded-full bg-green-600 hover:bg-green-700 transition-all duration-200 shadow-md hover:shadow-lg w-fit">
+                        <!-- WHATSAPP BUTTON -->
+                        <a href="https://wa.me/919578420672" target="_blank" class="group flex items-center gap-4
+                  w-full max-w-[280px] sm:max-w-[260px] lg:max-w-[280px] 
+                  px-5 py-1 rounded-full
+                  bg-white/80
+                  border border-brand-deep-green/40
+                  transition-all duration-300 ease-out
+                  shadow-md hover:shadow-xl
+                  hover:bg-brand-medium-green">
 
-                        <div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
-                            <i class="fab fa-whatsapp text-white text-xl"></i>
-                        </div>
+                            <!-- ICON -->
+                            <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-full
+                        bg-white/50
+                        border border-brand-deep-green/50
+                        flex items-center justify-center
+                        transition-all duration-300
+                        group-hover:bg-brand-deep-green
+                        group-hover:border-brand-deep-green">
 
-                        <span class="text-white font-semibold text-sm tracking-wide">
-                            Chat on WhatsApp
-                        </span>
-                    </a>
+                                <i class="fab fa-whatsapp
+                          text-brand-deep-green text-lg sm:text-xl
+                          transition-colors duration-300
+                          group-hover:text-white"></i>
+                            </div>
 
-                    <!-- Call Button -->
-                    <a href="tel:+919578420672"
-                        class="flex items-center gap-3 px-5 pr-20 py-2 mt-3 rounded-full bg-orange-400 hover:bg-orange-600 transition-all duration-200 shadow-md hover:shadow-lg w-fit">
+                            <!-- TEXT -->
+                            <span class="font-bold text-sm tracking-wide
+                         text-brand-deep-green
+                         transition-colors duration-300
+                         group-hover:text-white">
+                                WhatsApp
+                            </span>
+                        </a>
 
-                        <div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
-                            <i class="fas fa-phone-alt text-white text-lg"></i>
+                        <!-- EMAIL BUTTON -->
+                        <a href="mailto:marketing@nithaaerospace.in" class="group flex items-center gap-4
+                  w-full max-w-[280px] sm:max-w-[260px] lg:max-w-[280px]
+                  px-5 py-1 rounded-full
+                  bg-white/80
+                  border border-brand-deep-green/40
+                  transition-all duration-300 ease-out
+                  shadow-md hover:shadow-xl
+                  hover:bg-brand-medium-green">
 
-                        </div>
+                            <!-- ICON -->
+                            <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-full
+                        bg-white/60
+                        border border-brand-deep-green/50
+                        flex items-center justify-center
+                        transition-all duration-300
+                        group-hover:bg-brand-deep-green
+                        group-hover:border-brand-deep-green">
 
-                        <span class="text-white font-semibold text-sm ">
-                            Call Now
-                        </span>
-                    </a>
+                                <i class="fas fa-envelope
+                          text-brand-deep-green text-base sm:text-lg
+                          transition-colors duration-300
+                          group-hover:text-white"></i>
+                            </div>
 
+                            <!-- TEXT -->
+                            <span class="font-bold text-sm tracking-wide
+                         text-brand-deep-green
+                         transition-colors duration-300
+                         group-hover:text-white">
+                                Email Us
+                            </span>
+                        </a>
+
+                    </div>
                 </div>
+
+
 
             </div>
         </div>
@@ -830,6 +1055,31 @@ background-position: center;">
             </div>
         </div>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const reveals = document.querySelectorAll(
+                ".reveal, .reveal-left, .reveal-right, .reveal-up"
+            );
+
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("active");
+                            observer.unobserve(entry.target); // animate once
+                        }
+                    });
+                },
+                {
+                    threshold: 0.2,
+                    rootMargin: "0px 0px -80px 0px"
+                }
+            );
+
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
 
 </body>
 
