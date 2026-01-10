@@ -31,6 +31,10 @@
     </script>
 
     <style>
+        section {
+            scroll-margin-top: 80px;
+        }
+
         /* Applying the custom font globally */
         body {
             font-family: 'Montserrat', sans-serif;
@@ -234,6 +238,81 @@
             text-decoration: underline;
             font-weight: 500;
         }
+
+        /* ===============================
+   SCROLL REVEAL BASE
+================================ */
+        .reveal,
+        .reveal-left,
+        .reveal-right,
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition:
+                opacity 0.9s ease,
+                transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+            will-change: transform, opacity;
+        }
+
+        /* ===============================
+   DIRECTION VARIANTS
+================================ */
+        .reveal-left {
+            transform: translateX(-60px);
+        }
+
+        .reveal-right {
+            transform: translateX(60px);
+        }
+
+        .reveal-up {
+            transform: translateY(60px);
+        }
+
+        /* ===============================
+   ACTIVE STATE
+================================ */
+        .reveal.active,
+        .reveal-left.active,
+        .reveal-right.active,
+        .reveal-up.active {
+            opacity: 1;
+            transform: translateX(0) translateY(0);
+        }
+
+        /* ===============================
+   DELAY UTILITIES
+================================ */
+        .delay-1 {
+            transition-delay: 0.15s;
+        }
+
+        .delay-2 {
+            transition-delay: 0.3s;
+        }
+
+        .delay-3 {
+            transition-delay: 0.45s;
+        }
+
+        .delay-4 {
+            transition-delay: 0.6s;
+        }
+
+        /* ===============================
+   REDUCED MOTION SUPPORT
+================================ */
+        @media (prefers-reduced-motion: reduce) {
+
+            .reveal,
+            .reveal-left,
+            .reveal-right,
+            .reveal-up {
+                transition: none;
+                transform: none;
+                opacity: 1;
+            }
+        }
     </style>
 
     <script>
@@ -243,9 +322,6 @@
                 extend: {
                     colors: {
                         'brand-topbar-green': '#6a9b5f',
-                        'brand-nav-green': '#2e432c',
-                        'brand-partner-btn': '#a7c739',
-                        'brand-text-gray-light': '#d0d6d3',
 
                         'brand-green-light': '#a7c739',
                         'brand-green-dark': '#6a9b5f',
@@ -261,19 +337,21 @@
                         'brand-icon-bg': '#546b5a',
                         'brand-dark-text-stats': '#c3c9c2',
 
-                        'brand-border-green': '#6a9b5f',
 
                         'brand-dark-green': '#344a40',
-                        'brand-mid-green': '#6a9b5f',
                         'brand-lime-green': '#a7c739',
                         'brand-gradient-start': '#2a3a31',
 
                         'brand-green-career': '#a8c63a',
-                        'brand-green-light-career': '#6f8b2d',
                         'cert-bg': '#f8fcf3',
 
-                        /* Added from second file, ensures .top-curve section colors are defined */
+                        'brand-green-light': '#5E8C43',
+                        'brand-gray-input': '#F0F0F0',
+
                         'brand-text-light': '#d0d6d3',
+                        'brand-medium-green': '#6A8A61',
+
+                        'brand-deep-green': '#334C2D',
                     }
                 }
             }
@@ -329,8 +407,11 @@
     </div>
 
     <header class="relative">
-        <nav class="w-full absolute top-0 py-4 z-50 bg-white shadow-sm" style="font-family: 'Montserrat', sans-serif;">
-            <div class="container mx-auto flex items-center justify-between px-6">
+        <nav class="w-full absolute bg-white font-extrabold text-brand-topbar-green top-0 py-4 z-50 shadow-sm"
+            style="font-family: 'Montserrat', sans-serif;">
+            <div class="w-full max-w-screen-2xl mx-auto flex items-center justify-between px-6 xl:px-4 2xl:px-2">
+
+
 
                 <div class="flex items-center">
                     <img src="imgs/Screenshot 2025-11-04 120806.png" alt="NITHA Logo" class="h-16 w-20 object-contain">
@@ -338,50 +419,76 @@
 
                 <div class="hidden md:flex items-center gap-6 lg:gap-8 text-[14px] lg:text-[15px] font-bold">
 
-                    <a href="index.html" class="hover:text-brand-partner-btn">Home</a>
-                    <a href="aboutus.html" class="hover:text-brand-partner-btn">About</a>
-
-                    <div class="relative group py-2"> <button
-                            class="hover:text-brand-partner-btn flex items-center gap-1 focus:outline-none cursor-pointer">
+                    <a href="index.html" class="transition-colors duration-100 hover:text-black">Home</a>
+                    <a href="aboutus.html" class="transition-colors duration-100 hover:text-black">About</a>
+                    <div class="relative group py-2">
+                        <button class="flex items-center gap-1 cursor-pointer
+        transition-colors duration-100
+        hover:text-black focus:outline-none">
                             Capabilities <i class="fas fa-chevron-down text-[10px]"></i>
                         </button>
-                        <div class="absolute top-full left-0 pt-2 hidden group-hover:block z-[60]">
 
-                            <div
-                                class="bg-white shadow-xl rounded-md w-72 border-t-4 border-brand-topbar-green py-2 overflow-hidden">
-                                <a href="fasteners.html"
-                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Aerospace
-                                    Fasteners</a>
-                                <a href="fasteners.html"
-                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Oil
-                                    & Gas Bolting</a>
-                                <a href="fasteners.html"
-                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Defence
-                                    Fasteners</a>
-                                <a href="fasteners.html"
-                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Shipbuilding
-                                    Fasteners</a>
-                                <a href="fasteners.html"
-                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Automotive
-                                    Fasteners</a>
-                                <a href="fasteners.html"
-                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Nuclear
-                                    & Energy Fasteners</a>
-                                <a href="fasteners.html"
-                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Medical
-                                    Fasteners</a>
-                                <a href="fasteners.html"
-                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Custom
-                                    & Prototype Fasteners</a>
+                        <!-- DROPDOWN -->
+                        <div class="absolute top-full left-0 pt-2 hidden group-hover:block z-[60]">
+                            <div class="bg-white shadow-xl rounded-md w-72
+            border-t-4 border-brand-topbar-green
+            py-2 overflow-hidden">
+
+                                <a href="fasteners.html" class="block px-4 py-2 text-gray-700
+                hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
+                                    Melting
+                                </a>
+
+                                <a href="fasteners.html" class="block px-4 py-2 text-gray-700
+                hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
+                                    Casting
+                                </a>
+
+                                <a href="fasteners.html" class="block px-4 py-2 text-gray-700
+                hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
+                                    Forging
+                                </a>
+
+                                <a href="fasteners.html" class="block px-4 py-2 text-gray-700
+                hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
+                                    Precision Machining
+                                </a>
+
+                                <a href="fasteners.html" class="block px-4 py-2 text-gray-700
+                hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
+                                    Thread Rolling
+                                </a>
+
+                                <a href="fasteners.html" class="block px-4 py-2 text-gray-700
+                hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
+                                    Heat Treatment
+                                </a>
+
+                                <a href="fasteners.html" class="block px-4 py-2 text-gray-700
+                hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
+                                    Surface Treatment
+                                </a>
+
+                                <a href="fasteners.html" class="block px-4 py-2 text-gray-700
+                hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
+                                    Testing & QA
+                                </a>
+
+                                <a href="fasteners.html" class="block px-4 py-2 text-gray-700
+                hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
+                                    Engineering
+                                </a>
                             </div>
                         </div>
                     </div>
 
                     <div class="relative group py-2">
-                        <button
-                            class="hover:text-brand-partner-btn flex items-center gap-1 focus:outline-none cursor-pointer">
+                        <button class="flex items-center gap-1 cursor-pointer
+           transition-colors duration-100
+           hover:text-black focus:outline-none">
                             FIS/R&D <i class="fas fa-chevron-down text-[10px]"></i>
                         </button>
+
                         <div class="absolute top-full left-0 pt-2 hidden group-hover:block z-[60]">
                             <div class="bg-white shadow-xl rounded-md w-64 border-t-4 border-brand-topbar-green py-2">
                                 <a href="fasteners.html"
@@ -397,70 +504,135 @@
                     </div>
 
                     <div class="relative group py-2">
-                        <a href="products.html"
-                            class="hover:text-brand-partner-btn flex items-center gap-1 focus:outline-none cursor-pointer">
-                            Products <i class="fas fa-chevron-down text-[10px]"></i>
-                        </a>
-                        <div class="absolute top-full left-0 pt-2 hidden group-hover:block z-[60]">
+                        <div class="relative group inline-block ">
+                            <button class="flex items-center gap-1 cursor-pointer
+           transition-colors duration-100
+           hover:text-black focus:outline-none">
+                                Products
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+
+
                             <div
-                                class="bg-white shadow-xl rounded-md w-[420px] border-t-4 border-brand-topbar-green py-3 px-2 grid grid-cols-2 gap-x-2 gap-y-1">
-                                <a href="products.html"
-                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Bolt</a>
+                                class="absolute left-0 hidden group-hover:block bg-white shadow-xl rounded-md w-72 border-t-4 border-brand-topbar-green py-2 z-50">
 
-                                <a href="products.html"
-                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Bush</a>
+                                <div class="relative group/sub">
+                                    <a href=""
+                                        class="flex justify-between items-center px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
+                                        Critical Industries
+                                        <span
+                                            class="text-xs ml-2 opacity-50 group-hover:opacity-100 transition-opacity">
+                                            <i class="fa-solid fa-chevron-right"></i>
+                                        </span>
+                                    </a>
+                                    <div
+                                        class="absolute left-full top-0 hidden group-hover/sub:block bg-white shadow-xl rounded-md w-72 border-l-2 border-brand-topbar-green py-2 -ml-1">
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Aerospace
+                                            Fasteners</a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Defence
+                                            Fasteners</a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Nuclear
+                                            / Energy Fasteners</a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Oil
+                                            & Gas Bolting Solutions</a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Medical
+                                            & Precision Fasteners</a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Railway
+                                            & Metro Fasteners</a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Power
+                                            Plant & Thermal Fasteners</a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Renewable
+                                            Energy Fasteners</a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Shipbuilding
+                                            & Marine Fasteners</a>
+                                    </div>
+                                </div>
 
-                                <a href="products.html"
-                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Circlips</a>
+                                <div class="relative group/sub">
+                                    <a href="#"
+                                        class="flex justify-between items-center px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
+                                        Industrial & General Engineering
+                                        <span
+                                            class="text-xs ml-2 opacity-50 group-hover:opacity-100 transition-opacity">
+                                            <i class="fa-solid fa-chevron-right"></i>
+                                        </span>
+                                    </a>
+                                    <div
+                                        class="absolute left-full top-0 hidden group-hover/sub:block bg-white shadow-xl rounded-md w-72 border-l-2 border-brand-topbar-green py-2 -ml-1">
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Automotive
+                                            Fasteners</a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Construction
+                                            & Infrastructure Fasteners</a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Electrical
+                                            & Electronics Fasteners</a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Heavy
+                                            Engineering & Industrial Fasteners</a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Chemical
+                                            & Process Industry Fasteners</a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Mining
+                                            & Earthmoving Fasteners</a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">HVAC
+                                            & Building Services Fasteners</a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Agricultural
+                                            & Off-Highway Fasteners</a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">General
+                                            Engineering Fasteners</a>
+                                    </div>
+                                </div>
 
-                                <a href="products.html"
-                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Nail</a>
+                                <div class="relative group/sub">
+                                    <a href="#"
+                                        class="flex justify-between items-center px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
+                                        Specialised Engineering
+                                        <span
+                                            class="text-xs ml-2 opacity-50 group-hover:opacity-100 transition-opacity">
+                                            <i class="fa-solid fa-chevron-right"></i>
+                                        </span>
+                                    </a>
+                                    <div
+                                        class="absolute left-full top-0 hidden group-hover/sub:block bg-white shadow-xl rounded-md w-72 border-l-2 border-brand-topbar-green py-2 -ml-1">
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Custom
+                                            & Prototype Fasteners</a>
+                                    </div>
+                                </div>
 
-                                <a href="products.html"
-                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Nut</a>
-
-                                <a href="products.html"
-                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Pin
-                                    & Keys</a>
-
-                                <a href="products.html"
-                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Clamp</a>
-
-                                <a href="products.html"
-                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Rivet</a>
-
-                                <a href="products.html"
-                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Screw</a>
-
-                                <a href="products.html"
-                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Spacer
-                                    & Standoff</a>
-
-                                <a href="products.html"
-                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Stud
-                                    & Rod</a>
-
-                                <a href="products.html"
-                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Washer</a>
-
-                                <a href="products.html"
-                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Wires</a>
-
-                                <a href="products.html"
-                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Hinge</a>
-
-                                <a href="products.html"
-                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">Latch</a>
                             </div>
-
                         </div>
                     </div>
-                    <a href="contact.html" class="hover:text-brand-partner-btn">Contact</a>
+                    <a href="contact.html" class="transition-colors duration-100 hover:text-black">Contact</a>
                 </div>
-
-                <div class="hidden sm:block">
-                    <a href="#"
-                        class="bg-brand-topbar-green text-white px-5 lg:px-6 py-2 rounded-md text-xs lg:text-sm font-bold hover:brightness-110 transition shadow-md whitespace-nowrap">
+                <div class="hidden md:block">
+                    <a href="#" class="bg-brand-topbar-green text-white
+              px-5 lg:px-6 py-2
+              rounded-md
+              text-xs lg:text-sm
+              font-bold
+              hover:brightness-110
+              transition
+              shadow-md
+              whitespace-nowrap">
                         Become A Partner
                     </a>
                 </div>
@@ -473,16 +645,18 @@
             </div>
         </nav>
 
-        <div
-            class="relative w-full h-[950px]  overflow-hidden flex items-center justify-center text-center text-white \">
+        <div class="relative w-full h-[960px] 
+overflow-hidden flex  justify-center items-center text-center text-white \">
 
-            <img src="imgs/abt curved.png" alt="Industrial pouring molten metal" style="margin-top: 100px;"
+            <img src="imgs/image 1.png" alt="Industrial pouring molten metal"
                 class="absolute inset-0 w-full h-full object-cover z-0">
             <div class="absolute inset-0 z-10"></div>
 
-            <div class="relative z-30 max-w-5xl px-6 pt-24" style="margin-left: 60px;">
-                <img src="imgs/whitenitha-removebg-preview.png" alt
-                    style="height: 100px; width: 100px; margin-left: 400px; padding-top: 10px;">
+            <div class="relative z-30 max-w-5xl px-6 reveal-up text-center" style="margin-top: -40px; ">
+
+                <img src="imgs/whitenitha-removebg-preview.png" alt="NITHA Aerospace Logo"
+                    class="mx-auto  w-[100px] h-[100px] object-contain" />
+
                 <p class="text-[30px] tracking-wider text-white font-extrabold">About
                     Us</p>
                 <h1 class="text-[30px] leading-[1.2] font-extrabold  drop-shadow-lg">
@@ -509,10 +683,10 @@
         </div>
     </header>
 
-    <section class="relative bg-white overflow-hidden ">
+    <section class="relative bg-white overflow-hidden">
 
         <!-- LOWER CURVE PRODUCT MARQUEE -->
-        <div class="relative w-full h-[260px]">
+        <div class="relative w-full h-[260px] reveal-up">
 
             <!-- SVG CURVE (LOWER ARC) -->
             <svg viewBox="0 0 1440 300" class="absolute inset-0 w-full h-full pointer-events-none">
@@ -696,8 +870,10 @@
 
     <main>
         <section class="py-24 text-center">
-            <div class="container px-6 mx-auto">
-                <img src="imgs/nitha_logo_top.jpg" alt="" style="width: 80px; height: 70px; margin-left: 703px; padding-bottom: 20px;">
+            <div class="container px-6 mx-auto reveal-up">
+                <img src="imgs/nitha_logo_top.jpg" alt="NITHA Aerospace Logo"
+                    class="mx-auto  w-[80px] h-[70px] object-contain" />
+
                 <p class="mb-3 text-xl font-extrabold tracking-widest text-brand-green-dark ">Key
                     Sectors</p>
                 <h2 class="text-4xl font-extrabold md:text-5xl text-brand-text-dark">Industry
@@ -714,7 +890,7 @@
         </section>
 
         <center>
-            <div class="relative w-full max-w-5xl px-4">
+            <div class="relative w-full max-w-5xl px-4 reveal-up">
                 <img src="imgs/flower.png" alt="Product sectors diagram" class="w-full h-auto">
             </div>
         </center>
@@ -731,17 +907,18 @@
 
         </section>
 
-        <section class="grid grid-cols-1 md:grid-cols-2">
+        <section class="grid grid-cols-1 md:grid-cols-2 reve">
             <div>
-                <img src="imgs/Picsart_26-01-09_11-13-48-692.jpg" alt="Heat treatment of a metal fastener"
-                    class="object-cover w-full h-full min-h-[300px] md:h-full">
+                <img src="imgs/abouthome.jpeg" alt="Heat treatment of a metal fastener reveal-right"
+                    class="object-cover w-full h-full min-h-[300px] reveal-left md:h-full">
             </div>
-            <div class="flex flex-col justify-center p-12 bg-brand-green-bg text-brand-text-light md:p-16 lg:p-20">
-                <img src="imgs/whitenitha-removebg-preview.png" alt style="width: 100px; height: 100px;">
-                <h2 class="mb-6 font-extrabold text-white text-3xl md:text-[44px] leading-tight">
+            <div class="flex flex-col justify-center p-12 bg-brand-green-bg text-brand-text-light md:p-16 lg:p-20  ">
+                <img src="imgs/whitenitha-removebg-preview.png" class="reveal-right"
+                    style="width: 100px; height: 100px;">
+                <h2 class="mb-6 font-extrabold text-white text-3xl md:text-[44px] leading-tight reveal-right">
                     About NAPL
                 </h2>
-                <div class="space-y-4 text-[15px] leading-relaxed text-justify">
+                <div class="space-y-4 text-[15px] leading-relaxed text-white text-justify reveal-right">
                     <p>NITHA Aerospace Private Limited is an
                         engineering-driven
                         manufacturer of aerospace-grade
@@ -815,7 +992,7 @@
         </section>
 
         <section class="bg-white overflow-hidden">
-            <div class="py-20 flex flex-col items-center">
+            <div class="py-20 flex flex-col items-center reveal-up">
                 <img src="imgs/nitha_logo_top.jpg" alt="" style="width: 90px; height: 60px;">
                 <h2 class="mb-20 mt-4 text-2xl font-extrabold tracking-widest text-center text-brand-topbar-green ">
                     Our Valuable Customers
@@ -843,12 +1020,12 @@
         <section class="py-20">
             <div class="container px-6 mx-auto">
                 <div class="mb-16 text-center">
-                    <h2 class="text-4xl md:text-5xl font-extrabold text-brand-text-dark">Forged
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-brand-text-dark reveal">Forged
                         with Passion, Built for
                         India</h2>
                 </div>
                 <div class="grid max-w-6xl gap-16 mx-auto md:grid-cols-2">
-                    <div>
+                    <div class="reveal-left">
                         <p class="mb-4 text-2xl font-extrabold tracking-widest  text-brand-green-dark underline">
                             Vision</p>
                         <h3 class="text-2xl md:text-3xl font-semibold text-gray-500">
@@ -862,7 +1039,7 @@
                         </h3>
                     </div>
 
-                    <div class="space-y-6 text-brand-text-gray">
+                    <div class="space-y-6 text-brand-text-gray reveal-right">
                         <h2 class="text-3xl font-bold text-brand-text-dark">The
                             Minds Behind the Materials</h2>
                         <p class="text-justify">At NITHA Aerospace Pvt
@@ -892,7 +1069,7 @@
                 <div class="grid max-w-6xl gap-16 mx-auto md:grid-cols-2">
 
                     <div class="space-y-10 text-brand-text-gray">
-                        <div>
+                        <div class="reveal-left">
                             <h2 class="mb-6 text-3xl font-bold text-brand-text-dark">What
                                 Defines Our Leadership?</h2>
                             <ul class="space-y-3">
@@ -918,7 +1095,7 @@
                         </div>
                     </div>
 
-                    <div class="flex gap-6">
+                    <div class="flex gap-6 reveal-right">
 
                         <div class="w-1 bg-brand-green-dark/30"></div>
                         <div>
@@ -975,7 +1152,7 @@
                 </div>
             </div>
         </section>
-        <div class="max-w-[1000px] mx-auto px-6 py-12">
+        <div class="max-w-[1000px] mx-auto px-6 py-12 reveal-up">
             <h2 class="mb-8 text-3xl font-bold text-brand-green-dark text-center underline">IMS-Policy</h2>
 
             <div class="flex flex-col items-center space-y-6 text-center">
@@ -1008,27 +1185,34 @@
                 </p>
             </div>
         </div>
-        <hr style="font-weight: 100px;" class="mt-20">
-        <section class="py-20 text-brand-text-gray">
-            <div class="container px-6 mx-auto">
-                <div class="max-w-3xl mx-auto mb-14 text-center">
-                    <p class="mb-4 text-lg font-extrabold tracking-widest text-brand-green-dark">Meet
-                        Our
-                        Leadership Team</p>
-                    <h2 class="text-4xl font-extrabold text-gray-900 md:text-5xl">Leading
-                        with Vision. Delivering with
-                        Precision.</h2>
-                    <p class="mt-6 text-lg text-gray-600 text-center">At
-                        NAPL, our leadership blends deep
-                        technical
-                        expertise...</p>
-                </div><br>
-                <div class="max-w-6xl mx-auto space-y-20">
+        <section class="bg-white text-brand-text-gray py-24">
+            <div class="container px-6 mx-auto ">
 
-                    <!-- Person 1 -->
-                    <div class="grid items-center gap-10 md:grid-cols-3 md:gap-16">
+                <!-- SECTION HEADER -->
+                <div class="max-w-3xl mx-auto mb-20 text-center reveal-up">
+                    <p class="mb-4 text-2xl underline font-extrabold tracking-tight text-brand-green-dark">
+                        Meet Our Leadership Team
+                    </p>
+
+                    <h2 class="text-4xl font-bold text-gray-900 md:text-5xl">
+                        Leading with Vision. Delivering with Precision.
+                    </h2>
+
+                    <p class="mt-6 text-lg text-gray-600">
+                        At NAPL, our leadership blends deep technical expertise...
+                    </p>
+                </div>
+
+                <!-- LEADERS -->
+                <div class="max-w-7xl mx-auto space-y-24">
+
+                    <!-- PERSON 1 -->
+                    <div class="grid items-center gap-12 md:grid-cols-3 md:gap-16 group reveal-left">
+
+                        <!-- IMAGE -->
                         <div class="flex justify-center md:justify-end">
-                            <div class="w-64 h-64 md:w-80 md:h-80 bg-brand-border-green p-1 hexagon-clip">
+                            <div
+                                class="w-64 h-64 md:w-80 md:h-80 bg-brand-green-dark  p-1 hexagon-clip shadow-xl group-hover:shadow-2xl transition">
                                 <div class="w-full h-full bg-white hexagon-clip">
                                     <img src="imgs/vasa.jpg" alt="Vasanth Murugan"
                                         class="object-cover w-full h-full hexagon-clip">
@@ -1036,26 +1220,35 @@
                             </div>
                         </div>
 
+                        <!-- CONTENT -->
                         <div class="md:col-span-2 text-center md:text-left">
-                            <h3 class="text-3xl font-extrabold text-brand-green-dark">
-                                Vasanth Murugan, MBA (India)
+                            <h3 class="text-3xl font-extrabold text-brand-green-dark tracking-tight">
+                                Vasanth Murugan
+                                <span class="text-xl align-middle opacity-60">,</span>
+                                <span class="text-lg font-semibold text-gray-600">
+                                    M.E., MBA (India)
+                                </span>
                             </h3>
 
-                            <p class="mt-3 text-gray-800 font-semibold">
+                            <div class="w-16 h-[3px] bg-brand-green-dark mx-auto md:mx-0 my-3"></div>
+
+                            <p class="text-gray-800 font-semibold">
                                 Founder & CEO
                             </p>
 
-                            <p class="mt-3 text-gray-600 leading-relaxed">
-                                Excellence in heat treatment and
-                                metallurgical engineering solutions.
+                            <p class="mt-3 text-gray-600 leading-relaxed max-w-xl mx-auto md:mx-0">
+                                Excellence in heat treatment and metallurgical engineering solutions.
                             </p>
                         </div>
                     </div>
 
-                    <!-- Person 2 -->
-                    <div class="grid items-center gap-10 md:grid-cols-3 md:gap-16">
+                    <!-- PERSON 2 -->
+                    <div class="grid items-center gap-12 md:grid-cols-3 md:gap-16 group reveal-right">
+
+                        <!-- IMAGE -->
                         <div class="flex justify-center md:justify-end">
-                            <div class="w-64 h-64 md:w-80 md:h-80 bg-brand-border-green p-1 hexagon-clip">
+                            <div
+                                class="w-64 h-64 md:w-80 md:h-80 bg-brand-green-dark p-1 hexagon-clip shadow-xl group-hover:shadow-2xl transition">
                                 <div class="w-full h-full bg-white hexagon-clip">
                                     <img src="imgs/karthik_ashogan.jpg" alt="Karthick Asokan"
                                         class="object-cover w-full h-full hexagon-clip">
@@ -1063,26 +1256,28 @@
                             </div>
                         </div>
 
+                        <!-- CONTENT -->
                         <div class="md:col-span-2 text-center md:text-left">
-                            <h3 class="text-2xl md:text-3xl font-extrabold text-brand-green-dark">
-                                Mr. Karthick Asokan <span class="text-lg"> M.S (The
-                                    Netherlands)</span>
-                                <p>
-                                    MBA (Defence & Aerospace)</p>
+                            <h3 class="text-2xl md:text-3xl font-extrabold text-brand-green-dark tracking-tight">
+                                Mr. Karthick Asokan
+                                <span class="text-lg align-middle opacity-60">,</span>
+                                <span class="text-base md:text-lg font-semibold text-gray-600">
+                                    M.S (The Netherlands), MBA (Defence & Aerospace)
+                                </span>
                             </h3>
 
-                            <p class="mt-3 font-extraboldtext-lg">
-                                VP– NAPL
+                            <div class="w-16 h-[3px] bg-brand-green-dark mx-auto md:mx-0 my-3"></div>
+
+                            <p class="font-semibold text-gray-800">
+                                VP – NAPL
                             </p>
 
-                            <p class="mt-3 text-gray-600">
-                                Former Country Head (Torpedo Division),
-                                Leonardo S.p.A – Italy
+                            <p class="mt-3 text-gray-600 max-w-xl mx-auto md:mx-0">
+                                Former Country Head (Torpedo Division), Leonardo S.p.A – Italy
                             </p>
 
-                            <p class="mt-2 text-gray-600">
-                                Philips Innovation Award Winner – The
-                                Netherlands
+                            <p class="mt-2 text-gray-600 max-w-xl mx-auto md:mx-0">
+                                Philips Innovation Award Winner – The Netherlands
                             </p>
                         </div>
                     </div>
@@ -1091,8 +1286,9 @@
             </div>
         </section>
 
-        <section class="relative text-white bg-dots overflow-hidden"
-            style="margin-top: -80px; background: url(imgs/abt.png); background-repeat: no-repeat; background-size: cover;">
+
+        <section class="relative text-white bg-dots overflow-hidden py-20 lg:py-24"
+            style="background: url(imgs/abt.png);background-position: center; background-repeat: no-repeat; background-size: cover;">
             <!--
             <div
                 class="top-curve absolute top-0 left-0 w-full h-[220px] md:h-[250px] lg:h-[270px] bg-brand-mid-green z-0">
@@ -1100,33 +1296,33 @@
 
             <div class="top-curve absolute top-0 left-0 w-full h-[200px] md:h-[225px] lg:h-[250px] bg-white z-50">
             </div> -->
-            <div class="container relative z-20 px-6 mx-auto py-40 ">
+            <div class="container relative z-20 px-6 mx-auto py-20  ">
 
-                <div class="max-w-4xl mx-auto text-center mt-36 ">
-                    <img src="imgs/whitenitha-removebg-preview.png" alt=""
-                        style="width: 100px; height: 100px; margin-left: 335px;">
-                    <p class="mb-3 text-lg font-bold tracking-widest uppercase text-white">Core
-                        Values</p>
-                    <h1 class="text-xl font-extrabold text-white md:text-5xl lg:text-5xl">Our
-                        values guide our
-                        decisions
-                    </h1>
-                    <p class="mt-6 mb-10 text-sm text-brand-text-light text-center center">
-                        At NAPL, we don't just manufacture fasteners -
-                        we
-                        build trust, ensure
-                        reliability,
-                        and uphold standards that define critical
-                        industries. Our core values shape how we
-                        operate,
-                        innovate,
-                        and deliver - every day, on every project.
+                <div class="max-w-4xl mx-auto text-center">
+
+                    <img src="imgs/whitenitha-removebg-preview.png" alt="NITHA Logo"
+                        class="mx-auto  w-[100px] h-[100px] object-contain reveal-up">
+
+                    <p class="mb-3 text-lg font-bold tracking-widest uppercase text-white reveal-up">
+                        Core Values
                     </p>
+
+                    <h1 class="text-xl md:text-5xl font-extrabold text-white reveal-up">
+                        Our values guide our decisions
+                    </h1>
+
+                    <p class="mt-6 mb-10 text-sm text-brand-text-light reveal-up">
+                        At NAPL, we don't just manufacture fasteners —
+                        we build trust, ensure reliability, and uphold standards that define
+                        critical industries. Our core values shape how we operate, innovate,
+                        and deliver — every day, on every project.
+                    </p>
+
                 </div>
-                <br>
+
                 <div class="grid gap-12 md:grid-cols-2 lg:grid-cols-3">
 
-                    <div class="text-center md:text-left">
+                    <div class="text-center md:text-left reveal-left">
                         <div
                             class="relative inline-flex items-center justify-center w-10 h-10 mb-2 bg-brand-lime-green hexagon-clip">
                             <i class="text-1xl fas fa-clock text-brand-dark-green"></i>
@@ -1147,7 +1343,7 @@
                         </p>
                     </div>
 
-                    <div class="text-center md:text-left">
+                    <div class="text-center md:text-left reveal-left">
                         <div
                             class="relative inline-flex items-center justify-center w-10 h-10 mb-2 bg-brand-lime-green hexagon-clip">
                             <i class="text-1xl fas fa-lightbulb text-brand-dark-green"></i>
@@ -1166,7 +1362,7 @@
                         </p>
                     </div>
 
-                    <div class="text-center md:text-left">
+                    <div class="text-center md:text-left reveal-left">
                         <div
                             class="relative inline-flex items-center justify-center w-10 h-10 mb-2 bg-brand-lime-green hexagon-clip">
                             <i class="text-1xl fas fa-award text-brand-dark-green"></i>
@@ -1190,7 +1386,7 @@
                         </p>
                     </div>
 
-                    <div class="text-center md:text-left">
+                    <div class="text-center md:text-left reveal-right">
                         <div
                             class="relative inline-flex items-center justify-center w-10 h-10 mb-2 bg-brand-lime-green hexagon-clip">
                             <i class="text-1xl fas fa-users text-brand-dark-green"></i>
@@ -1211,7 +1407,7 @@
                         </p>
                     </div>
 
-                    <div class="text-center md:text-left">
+                    <div class="text-center md:text-left reveal-right">
                         <div
                             class="relative inline-flex items-center justify-center w-10 h-10 mb-2 bg-brand-lime-green hexagon-clip">
                             <i class="text-1xl fas fa-rocket text-brand-dark-green"></i>
@@ -1231,7 +1427,7 @@
                         </p>
                     </div>
 
-                    <div class="text-center md:text-left">
+                    <div class="text-center md:text-left reveal-right">
                         <div
                             class="relative inline-flex items-center justify-center w-10 h-10 mb-2 bg-brand-lime-green hexagon-clip">
                             <i class="text-1xl fas fa-gem text-brand-dark-green"></i>
@@ -1257,13 +1453,13 @@
             </div>
         </section>
 
-        <section class="relative text-white overflow-hidden">
+        <section class="relative text-white overflow-hidden mb-24">
             <div class="absolute inset-0 z-0">
                 <img src="imgs/wk1.png" alt="Factory worker" class="object-cover w-full h-full">
                 <div class="absolute inset-0 bg-black/60"></div>
             </div>
-            <div class="container relative z-10 px-6 md:px-20 mx-auto py-16 md:py-24">
-                <div class="max-w-2xl text-center md:text-left">
+            <div class="container relative z-10 px-6 md:px-20 mx-auto py-16 md:py-20">
+                <div class="max-w-2xl text-center md:text-left reveal-zoom">
                     <p class="mb-3 text-sm font-semibold tracking-widest uppercase text-brand-green-career">
 
                     </p>
@@ -1308,8 +1504,9 @@
             </defs>
         </svg>
 
-        <section class="top_box relative z-[90] overflow-hidden bg-[#6a9b5f] pb-0 text-white bg-dots responsive-out "
-            style="border-radius:10px; width: 80%; height: 250px; z-index: 99; position: relative; left: 9%; box-shadow: 0px 20px 9px black; margin-top: 50px;">
+
+        <section class="top_box relative z-[90] overflow-hidden bg-[#6a9b5f] pb-0 text-white bg-dots responsive-out"
+            style="border-radius:10px; width: 80%; height: 250px; z-index: 99; position: relative; left: 9%; box-shadow: 0px 20px 9px black; margin-top: 20px;">
 
             <div class="absolute inset-0 z-0 bg-right bg-no-repeat bg-cover opacity-70 mix-blend-multiply responsive"
                 style="background-image: url('imgs/wwu-copy.png'); background-size: cover;      /* make it fill the screen */
@@ -1320,14 +1517,11 @@ background-position: center;">
             <div class="top_box container relative z-2 px-6 py-20 mx-auto lg:py-20">
                 <div style="position:absolute;top:13% ;">
                     <div class="max-w-2xl">
-                        <p class=" text-sm  py-3 font-semibold tracking-wider ">One
-                            Platform For All
+                        <p class=" text-sm  py-3 font-semibold tracking-wider ">One Platform For All
                             Your Fasteners Requirements</p>
                         <h2 class=" text-3xl mb-2 font-extrabold tracking-tight">Which
                             products are you looking to buy?</h2>
-                        <p class="mb-4 mt-1  text-1 font-bold">Single
-                            window
-                            for end-to-end steel sourcing</p>
+                        <p class="mb-4 mt-1  text-1 font-bold">Single window for end-to-end steel sourcing</p>
                         <a href="products.html"
                             class="inline-flex items-center px-8 py-3 text-sm font-bold text-[#6a9b5f]  bg-white rounded-md shadow-lg transition-transform hover:scale-105">
                             Explore Now
@@ -1343,7 +1537,7 @@ background-position: center;">
             <!-- Curve -->
             <div class="absolute top-0 left-0 w-full h-24 bg-[#1a471c] rounded-[50%] -translate-y-1/2"></div>
 
-            <div class="relative max-w-7xl mx-auto px-6 py-20 pb-32">
+            <div class="relative max-w-7xl mx-auto px-6 py-16 pt-32 pb-32">
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6 items-start">
 
@@ -1354,17 +1548,14 @@ background-position: center;">
 
                     <!-- ADDRESS -->
                     <div>
-                        <h3 class="mb-4 text-lg font-semibold text-white">Head
-                            Office & Factory</h3>
+                        <h3 class="mb-4 text-lg font-semibold text-white">Head Office & Factory</h3>
 
                         <p class="text-sm leading-relaxed">
-                            Plot no. 140 SIDCO Women Industrial
-                            Estate,<br>
+                            Plot no. 140 SIDCO Women Industrial Estate,<br>
                             Karuppur, Salem – 636011
                         </p>
 
-                        <h3 class="mt-4 text-sm font-semibold">Call
-                            Us</h3>
+                        <h3 class="mt-4 text-sm font-semibold">Call Us</h3>
 
                         <a href="tel:+918220538534" class="block text-sm hover:text-white transition">
                             +91 82205 38534
@@ -1385,6 +1576,7 @@ background-position: center;">
                         </a>
                     </div>
 
+
                     <!-- COMPANY -->
                     <div>
                         <h3 class="mb-4 text-lg font-semibold text-white">Company</h3>
@@ -1402,45 +1594,35 @@ background-position: center;">
                         <h3 class="mb-4 text-lg font-semibold text-white">Products</h3>
                         <ul class="space-y-3 text-sm">
                             <li class="hover:text-white cursor-pointer">
-                                <a href="solution.html" class="block w-full">Aerospace
-                                    Fasteners</a>
+                                <a href="solution.html" class="block w-full">Aerospace Fasteners</a>
                             </li>
 
                             <li class="hover:text-white cursor-pointer">
-                                <a href="solution.html" class="block w-full">Oil & Gas
-                                    Bolting</a>
+                                <a href="solution.html" class="block w-full">Oil & Gas Bolting</a>
                             </li>
 
                             <li class="hover:text-white cursor-pointer">
-                                <a href="solution.html" class="block w-full">Defence
-                                    Fasteners</a>
+                                <a href="solution.html" class="block w-full">Defence Fasteners</a>
                             </li>
 
                             <li class="hover:text-white cursor-pointer">
-                                <a href="solution.html" class="block w-full">Shipbuilding
-                                    Fasteners</a>
+                                <a href="solution.html" class="block w-full">Shipbuilding Fasteners</a>
                             </li>
 
                             <li class="hover:text-white cursor-pointer">
-                                <a href="solution.html" class="block w-full">Automotive
-                                    Fasteners</a>
+                                <a href="solution.html" class="block w-full">Automotive Fasteners</a>
                             </li>
 
                             <li class="hover:text-white cursor-pointer">
-                                <a href="solution.html" class="block w-full">Nuclear &
-                                    Energy
-                                    Fasteners</a>
+                                <a href="solution.html" class="block w-full">Nuclear & Energy Fasteners</a>
                             </li>
 
                             <li class="hover:text-white cursor-pointer">
-                                <a href="solution.html" class="block w-full">Medical
-                                    Fasteners</a>
+                                <a href="solution.html" class="block w-full">Medical Fasteners</a>
                             </li>
 
                             <li class="hover:text-white cursor-pointer">
-                                <a href="solution.html" class="block w-full">Custom &
-                                    Prototype
-                                    Fasteners</a>
+                                <a href="solution.html" class="block w-full">Custom & Prototype Fasteners</a>
                             </li>
 
                         </ul>
@@ -1463,28 +1645,23 @@ background-position: center;">
                             </li>
 
                             <li class="hover:text-white cursor-pointer">
-                                <a href="fasteners.html" class="block w-full">Precision
-                                    Machining</a>
+                                <a href="fasteners.html" class="block w-full">Precision Machining</a>
                             </li>
 
                             <li class="hover:text-white cursor-pointer">
-                                <a href="fasteners.html" class="block w-full">Thread
-                                    Rolling</a>
+                                <a href="fasteners.html" class="block w-full">Thread Rolling</a>
                             </li>
 
                             <li class="hover:text-white cursor-pointer">
-                                <a href="fasteners.html" class="block w-full">Heat
-                                    Treatment</a>
+                                <a href="fasteners.html" class="block w-full">Heat Treatment</a>
                             </li>
 
                             <li class="hover:text-white cursor-pointer">
-                                <a href="fasteners.html" class="block w-full">Surface
-                                    Treatment</a>
+                                <a href="fasteners.html" class="block w-full">Surface Treatment</a>
                             </li>
 
                             <li class="hover:text-white cursor-pointer">
-                                <a href="fasteners.html" class="block w-full">Testing &
-                                    QA</a>
+                                <a href="fasteners.html" class="block w-full">Testing & QA</a>
                             </li>
 
                             <li class="hover:text-white cursor-pointer">
@@ -1495,38 +1672,87 @@ background-position: center;">
                     </div>
 
                     <!-- CONTACT -->
-                    <div>
-                        <h3 class="mb-4 text-lg font-semibold text-white">Connect
-                            With Us</h3>
+                    <div class="w-full">
+                        <h3 class="mb-3 text-lg font-semibold text-white text-center sm:text-left">
+                            Connect With Us
+                        </h3>
+                        <p class="mt-3 mb-3 text-white/90 text-sm  tracking-tight max-w-xl mx-auto md:mx-0">
+                            For Advanced Engineering <span class="opacity-70 mx-1"></span> Fastening Solutions
+                        </p>
+                        <div class="flex flex-col gap-4 items-center sm:items-start">
 
-                        <!-- WhatsApp Button -->
-                        <a href="https://wa.me/919578420672" target="_blank"
-                            class="flex items-center gap-3 px-5 py-2 rounded-full bg-green-600 hover:bg-green-700 transition-all duration-200 shadow-md hover:shadow-lg w-fit">
+                            <!-- WHATSAPP BUTTON -->
+                            <a href="https://wa.me/919578420672" target="_blank" class="group flex items-center gap-4
+                  w-full max-w-[280px] sm:max-w-[260px] lg:max-w-[280px]
+                  px-5 py-3 rounded-full
+                  bg-white/80
+                  border border-brand-deep-green/40
+                  transition-all duration-300 ease-out
+                  shadow-md hover:shadow-xl
+                  hover:bg-brand-medium-green">
 
-                            <div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
-                                <i class="fab fa-whatsapp text-white text-xl"></i>
-                            </div>
+                                <!-- ICON -->
+                                <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-full
+                        bg-white/50
+                        border border-brand-deep-green/50
+                        flex items-center justify-center
+                        transition-all duration-300
+                        group-hover:bg-brand-deep-green
+                        group-hover:border-brand-deep-green">
 
-                            <span class="text-white font-semibold text-sm tracking-wide">
-                                Chat on WhatsApp
-                            </span>
-                        </a>
+                                    <i class="fab fa-whatsapp
+                          text-brand-deep-green text-lg sm:text-xl
+                          transition-colors duration-300
+                          group-hover:text-white"></i>
+                                </div>
 
-                        <!-- Call Button -->
-                        <a href="tel:+919578420672"
-                            class="flex items-center gap-3 px-5 pr-20 py-2 mt-3 rounded-full bg-orange-400 hover:bg-orange-600 transition-all duration-200 shadow-md hover:shadow-lg w-fit">
+                                <!-- TEXT -->
+                                <span class="font-bold text-sm tracking-wide
+                         text-brand-deep-green
+                         transition-colors duration-300
+                         group-hover:text-white">
+                                    WhatsApp
+                                </span>
+                            </a>
 
-                            <div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
-                                <i class="fas fa-phone-alt text-white text-lg"></i>
+                            <!-- EMAIL BUTTON -->
+                            <a href="mailto:marketing@nithaaerospace.in" class="group flex items-center gap-4
+                  w-full max-w-[280px] sm:max-w-[260px] lg:max-w-[280px]
+                  px-5 py-3 rounded-full
+                  bg-white/80
+                  border border-brand-deep-green/40
+                  transition-all duration-300 ease-out
+                  shadow-md hover:shadow-xl
+                  hover:bg-brand-medium-green">
 
-                            </div>
+                                <!-- ICON -->
+                                <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-full
+                        bg-white/60
+                        border border-brand-deep-green/50
+                        flex items-center justify-center
+                        transition-all duration-300
+                        group-hover:bg-brand-deep-green
+                        group-hover:border-brand-deep-green">
 
-                            <span class="text-white font-semibold text-sm ">
-                                Call Now
-                            </span>
-                        </a>
+                                    <i class="fas fa-envelope
+                          text-brand-deep-green text-base sm:text-lg
+                          transition-colors duration-300
+                          group-hover:text-white"></i>
+                                </div>
 
+                                <!-- TEXT -->
+                                <span class="font-bold text-sm tracking-wide
+                         text-brand-deep-green
+                         transition-colors duration-300
+                         group-hover:text-white">
+                                    Email Us
+                                </span>
+                            </a>
+
+                        </div>
                     </div>
+
+
 
                 </div>
             </div>
@@ -1535,9 +1761,8 @@ background-position: center;">
         <div class="relative z-20 py-4 text-gray-400 " style="background: #0b180d; border-top: 1px solid white;">
             <div class="container flex flex-col items-center justify-between px-6 mx-auto text-sm md:flex-row">
                 <p class="mb-4 md:mb-0">
-                    www.nithaaerospace.in © Copyright and private
-                    limited.
-                    All Rights Reserved | <a href="Terms.html" id="terms">Terms of Access</a>
+                    www.nithaaerospace.in © Copyright and private limited. All Rights Reserved | <a href="Terms.html"
+                        id="terms">Terms of Access</a>
                 </p>
                 <div class="flex space-x-6 text-base">
                     <a href="#" class="transition-colors hover:text-white"><i class="fab fa-facebook-f"></i></a>
@@ -1564,5 +1789,31 @@ background-position: center;">
         });
     });
 </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const reveals = document.querySelectorAll(
+            ".reveal, .reveal-left, .reveal-right, .reveal-up"
+        );
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("active");
+                        observer.unobserve(entry.target); // animate once
+                    }
+                });
+            },
+            {
+                threshold: 0.2,
+                rootMargin: "0px 0px -80px 0px"
+            }
+        );
+
+        reveals.forEach(el => observer.observe(el));
+    });
+</script>
+
 
 </html>

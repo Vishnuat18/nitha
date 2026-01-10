@@ -163,6 +163,29 @@
         }
     </style>
 
+    <style>
+        .curve-item {
+            position: absolute;
+            width: 120px;
+
+            /* LOWER CURVE PATH */
+            offset-path: path("M -100 90 Q 720 270 1640 90");
+            offset-rotate: auto;
+
+            animation: moveLowerCurve 26s linear infinite;
+        }
+
+        @keyframes moveLowerCurve {
+            from {
+                offset-distance: 0%;
+            }
+
+            to {
+                offset-distance: 100%;
+            }
+        }
+    </style>
+
 </head>
 
 <body class="bg-white">
@@ -315,38 +338,19 @@
         </div>
     </section>
 
-    <main>
-        <section class="py-12 text-center">
-            <div class="container px-6 mx-auto">
-                <p class="mb-3 text-lg font-extrabold tracking-widest text-brand-green-dark">Key Sectors</p>
-                <h2 class="text-3xl font-extrabold text-brand-text-dark">Industry Design, Inspiring Products</h2>
-                <p class="max-w-4xl mx-auto mt-4 font-bold text-base text-brand-text-gray">
-                    NAPL's commitment to Quality is reflected in our rigorous R&D and Testing processes.
-                </p>
-            </div>
-        </section>
+    <section class="relative bg-white overflow-visible">
 
-        <center>
-            <div class="relative w-full max-w-md px-4 mx-auto">
-                <img src="imgs/flower.png" alt="Product sectors diagram" class="w-full h-auto">
-            </div>
-        </center>
+        <!-- MOVING CURVE -->
+        <svg id="curveSvg" class="absolute top-0 left-0 w-full pointer-events-none"
+            style="transform: translateY(-100%);" viewBox="0 0 1440 140" preserveAspectRatio="none">
 
-        <section class="py-12 text-center bg-white">
-            <div class="container px-6 mx-auto">
-                <h2 class="text-3xl font-[900] text-brand-green-dark leading-tight">
-                    Rooted in India<br>Fastened with Excellence
-                </h2>
-                <p class="max-w-3xl mx-auto mt-4 text-sm text-brand-text-gray text-center leading-relaxed">
-                    NITHA Aerospace Pvt Ltd (NAPL) is a leading advanced manufacturer of superalloy fasteners, based in
-                    Tamil Nadu, India. We specialize in delivering high-strength,
-                    corrosion-resistant, and heat-stable fasteners for demanding sectors.
-                    Fasteners Forged for the Future.
-                </p>
-            </div>
-        </section>
+            <path id="animatedCurve" fill="#ffffff"
+                d="M0,80 C240,20 480,20 720,60 960,100 1200,120 1440,80 L1440,140 L0,140 Z">
+            </path>
+        </svg>
 
-        <section class="py-12 bg-white">
+        <!-- CONTENT -->
+        <div class="relative pt-12 pb-12">
             <div class="container mx-auto px-4">
                 <div class="flex flex-wrap justify-center gap-4">
 
@@ -356,7 +360,7 @@
                                 <img src="imgs/bolt.png" alt="Bolt" class="max-w-full max-h-full object-contain">
                             </div>
                         </div>
-                        <p class="text-xs font-bold text-brand-text-dark mt-2">Bolt</p>
+                        <p class="text-xs font-bold mt-2">Bolt</p>
                     </div>
 
                     <div class="flex flex-col items-center w-[140px]">
@@ -476,7 +480,40 @@
                         </div>
                         <p class="text-xs font-bold text-brand-text-dark mt-2">Latch</p>
                     </div>
+
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <section class="py-12 text-center">
+            <div class="container px-6 mx-auto">
+                <p class="mb-3 text-lg font-extrabold tracking-widest text-brand-green-dark">Key Sectors</p>
+                <h2 class="text-3xl font-extrabold text-brand-text-dark">Industry Design, Inspiring Products</h2>
+                <p class="max-w-4xl mx-auto mt-4 font-bold text-base text-brand-text-gray">
+                    NAPL's commitment to Quality is reflected in our rigorous R&D and Testing processes.
+                </p>
+            </div>
+        </section>
+
+        <center>
+            <div class="relative w-full max-w-md px-4 mx-auto">
+                <img src="imgs/flower.png" alt="Product sectors diagram" class="w-full h-auto">
+            </div>
+        </center>
+
+        <section class="py-12 text-center bg-white">
+            <div class="container px-6 mx-auto">
+                <h2 class="text-3xl font-[900] text-brand-green-dark leading-tight">
+                    Rooted in India<br>Fastened with Excellence
+                </h2>
+                <p class="max-w-3xl mx-auto mt-4 text-sm text-brand-text-gray text-center leading-relaxed">
+                    NITHA Aerospace Pvt Ltd (NAPL) is a leading advanced manufacturer of superalloy fasteners, based in
+                    Tamil Nadu, India. We specialize in delivering high-strength,
+                    corrosion-resistant, and heat-stable fasteners for demanding sectors.
+                    Fasteners Forged for the Future.
+                </p>
             </div>
         </section>
 
@@ -507,22 +544,87 @@
         </section>
 
         <section class="grid grid-cols-1">
+            <!-- IMAGE -->
             <div>
-                <img src="imgs/OIP.webp" alt="Heat treatment of a metal fastener" class="object-cover w-full h-64">
+                <img src="imgs/precision_fasteners.png" alt="Heat treatment of a metal fastener"
+                    class="object-cover w-full h-64">
             </div>
+
+            <!-- CONTENT -->
             <div class="flex flex-col justify-center p-6 bg-brand-green-bg text-brand-text-light">
-                <p class="mb-3 font-bold tracking-widest  text-brand-text-dim text-xs">
-                    About Us
-                </p>
-                <h2 class="mb-6 font-extrabold text-white text-2xl leading-tight">
-                    About NAPL – NITHA Aerospace Private Limited
+
+                <!-- LOGO -->
+                <img src="imgs/whitenitha-removebg-preview.png" alt="NAPL Logo" class="w-20 h-20">
+
+                <!-- TITLE -->
+                <h2 class="mb-5 font-extrabold text-white text-2xl leading-tight">
+                    About NAPL
                 </h2>
+
+                <!-- TEXT -->
                 <div class="space-y-4 text-sm leading-relaxed text-left">
-                    <p>Nitha Aerospace Pvt Ltd (NAPL) is a leading metallurgical fastener manufacturer in India...</p>
-                    <p>As an AS9100D-certified 'fastener supplier', our products are engineered to precise dimensional
-                        tolerances...</p>
-                    <p>At NAPL, we combine advanced manufacturing technologies with rigorous quality control systems...
+
+                    <p>
+                        <strong>NITHA Aerospace Private Limited (NAPL)</strong> is an engineering-driven manufacturer of
+                        aerospace-grade fasteners and precision components, supported by
+                        Indo-European applied industrial R&amp;D capabilities.
                     </p>
+
+                    <p>
+                        Powered by <strong>FASTENERS INTELLIGENCE SYSTEM™ (FIS™)</strong>, we deliver traceable,
+                        test-validated fasteners for Aerospace, Defence, Oil &amp; Gas and other
+                        critical industries.
+                    </p>
+
+                    <p>
+                        NAPL is a precision engineering company delivering high-performance
+                        fasteners and components to the Automotive, Aerospace, Defence,
+                        Oil &amp; Gas, and Motorsport industries worldwide.
+                    </p>
+
+                    <p>
+                        Our products are renowned for their strength, reliability, and endurance,
+                        performing flawlessly under dynamic loads, vibration, and extreme
+                        temperatures.
+                    </p>
+
+                    <p>
+                        <strong>Our Indo-European R&amp;D laboratories</strong> specialize in applied industrial
+                        research
+                        and technological advancement across aluminium, copper, alloy steel,
+                        brass, composites, titanium, and zinc.
+                    </p>
+
+                    <p>
+                        We provide cutting-edge R&amp;D services for new product development
+                        while optimizing existing products, manufacturing operations, and
+                        plant production processes.
+                    </p>
+
+                    <p>
+                        With expertise in precision threads, tensile strength
+                        <strong>(800–1200 MPa)</strong>, and custom tolerances, every product meets
+                        stringent international quality standards.
+                    </p>
+
+                    <p>
+                        Advanced surface treatments such as Zinc/Nickel Plating,
+                        Moly Coating, and Phosphate Passivation enhance corrosion
+                        resistance and durability under demanding conditions.
+                    </p>
+
+                    <p>
+                        Our integrated facilities bring together Metallurgy, Machining,
+                        Heat Treatment, Thread Rolling, and Coating under one roof,
+                        delivering global-grade engineering materials with assured performance.
+                    </p>
+
+                    <!-- QUOTE -->
+                    <p class="pt-4 font-extrabold text-center text-lg text-white">
+                        “From melting to plating,<br>
+                        we engineer the science behind every layer of metal.”
+                    </p>
+
                 </div>
             </div>
         </section>
@@ -1106,6 +1208,41 @@
         });
 
     </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const curve = document.getElementById("animatedCurve");
+            if (!curve) {
+                console.error("Curve not found");
+                return;
+            }
+
+            let t = 0;
+
+            function animateCurve() {
+                t += 0.02;
+
+                const yA = 80 + Math.sin(t) * 20;
+                const yB = 20 + Math.sin(t + 1) * 25;
+                const yC = 60 + Math.sin(t + 2) * 20;
+                const yD = 80 + Math.sin(t + 3) * 25;
+
+                curve.setAttribute(
+                    "d",
+                    `M0,${yA}
+             C240,${yB} 480,${yB} 720,${yC}
+             960,${yD} 1200,120 1440,${yA}
+             L1440,140 L0,140 Z`
+                );
+
+                requestAnimationFrame(animateCurve);
+            }
+
+            animateCurve();
+        });
+    </script>
+
 </body>
 
 </html>
