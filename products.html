@@ -188,6 +188,265 @@
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
         }
     </style>
+
+    <style>
+        /* CLEAN HEXAGON SYSTEM */
+        .hex-wrap {
+            width: 140px;
+            height: 160px;
+            position: relative;
+        }
+
+        .hex-core {
+            width: 100%;
+            height: 100%;
+            clip-path: polygon(50% 0%,
+                    100% 25%,
+                    100% 75%,
+                    50% 100%,
+                    0% 75%,
+                    0% 25%);
+            background: linear-gradient(145deg, #f3f4f6, #e5e7eb);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+            transition: all 0.35s ease;
+        }
+
+        .hex-wrap:hover .hex-core {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
+            background: linear-gradient(145deg, #e9f3e6, #dbeadb);
+        }
+
+        .hex-core img {
+            width: 70%;
+            height: 70%;
+            object-fit: contain;
+            transition: transform 0.4s ease;
+        }
+
+        .hex-wrap:hover img {
+            transform: scale(1.08);
+        }
+
+        .hex-label {
+            margin-top: 12px;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            text-align: center;
+            color: #1f2937;
+        }
+
+        /* ===============================
+   PRODUCT CARD – FINAL LOCKED UI
+   =============================== */
+
+        .product-card {
+            background: #ffffff;
+            border: 1px solid #cfe3c3;
+            border-radius: 6px;
+            padding: 14px;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            transition: all 0.25s ease;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+            transform: translateY(-4px);
+        }
+
+        .product-img {
+            background: #f4f6f5;
+            border-radius: 4px;
+            padding: 14px;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product-img img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .product-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: #000;
+            margin-top: 12px;
+        }
+
+        .product-desc {
+            font-size: 11px;
+            color: #6b7280;
+            line-height: 1.45;
+            margin: 6px 0 12px;
+            flex-grow: 1;
+        }
+
+        .product-btn {
+            background: #7fae69;
+            color: #ffffff;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 7px 10px;
+            border-radius: 4px;
+            text-align: center;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+
+        .product-btn:hover {
+            background: #5b7941;
+        }
+
+        /* ===== SHARED HEX SHAPE ===== */
+        .hex-shape {
+            clip-path: polygon(50% 0%,
+                    100% 25%,
+                    100% 75%,
+                    50% 100%,
+                    0% 75%,
+                    0% 25%);
+        }
+
+        /* MATERIAL TITLE BAR */
+        .material-title-wrap {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .material-title-hex {
+            width: 56px;
+            height: 64px;
+            background: #ffffff;
+            border: 2px solid #7e8978;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .material-title-hex img {
+            width: 128px;
+            height: 128px;
+            object-fit: contain;
+        }
+
+        .material-title-bar {
+            flex: 1;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            padding: 0 24px;
+            font-size: 20px;
+            font-weight: 800;
+            color: #ffffff;
+            background: linear-gradient(to right,
+                    #7fa36a 0%,
+                    #8fb57a 55%,
+                    #dfead6 100%);
+            border-radius: 6px;
+        }
+
+        /* ===== OUTER HEX (BORDER) ===== */
+        .material-hex-outer {
+            width: 130px;
+            height: 156px;
+            background: #cfd3d8;
+            /* grey border */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        /* hover → green border */
+        .material-hex-outer:hover {
+            background: #7fae69;
+            box-shadow: 0 8px 20px rgba(127, 174, 105, 0.25);
+        }
+
+        /* ===== INNER HEX (IMAGE HOLDER) ===== */
+        .material-hex-inner {
+            width: 125px;
+            /* border thickness control */
+            height: 148px;
+            background: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* ===== IMAGE ===== */
+        .material-hex-inner img {
+            width: 140px;
+            height: 132px;
+            object-fit: contain;
+            display: block;
+        }
+
+        /* SIDEBAR */
+        .sidebar-parent {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #e9f5e9;
+            color: #1f2937;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 10px 14px;
+            margin-bottom: 6px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .sidebar-parent:hover {
+            background: #dff0df;
+        }
+
+        .sidebar-parent.active {
+            background: #7fa36a;
+            color: #ffffff;
+        }
+
+        .sidebar-parent .arrow {
+            font-size: 16px;
+            opacity: 0.7;
+        }
+
+        /* CHILD LIST */
+        .sidebar-children {
+            padding: 6px 0 10px 12px;
+        }
+
+        .sidebar-child {
+            font-size: 12px;
+            color: #6b7280;
+            padding: 6px 6px;
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+
+        .sidebar-child:hover {
+            color: #2f7d32;
+        }
+
+        .sidebar-child.active {
+            color: #2f7d32;
+            font-weight: 600;
+        }
+    </style>
 </head>
 
 <body class="bg-white overflow-x-hidden">
@@ -452,13 +711,13 @@
     </header>
 
     <div
-        class="relative w-full h-[700px] lg:h-[450px] bg-gradient-to-r from-[#4b584e] to-[#3a443d] overflow-visible flex items-center z-0">
+        class="relative w-full h-[700px] lg:h-[500px] bg-gradient-to-r from-[#4b584e] to-[#3a443d] overflow-visible flex items-center z-0">
 
         <div class="absolute top-[-40px] left-6 lg:left-20 z-50 p-2 shadow-lg ">
 
         </div>
 
-        <div class="absolute inset-0 bg-cover bg-center opacity-80 mix-blend-overlay"
+        <div class="absolute inset-0 bg-cover bg-center mix-blend-overlay object-contain"
             style="background-image: url('imgs/product header.png')"></div>
         <div
             class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]">
@@ -470,27 +729,44 @@
                     Fastener Requirements</p>
                 <h1 class="text-5xl lg:text-5xl font-extrabold leading-tight mb-8"
                     style="text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">
-                    Industry Designs,<br>
+                    Industry Designs<br>
                     <span class="text-white">Inspiring Products</span>
                 </h1>
 
-                <div class="flex flex-row flex-wrap items-center gap-10">
-                    <a href="tel:+919578420672" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
-                        <div
-                            class="w-10 h-10 bg-[#25D366] rounded-full flex items-center justify-center text-white shadow-md">
-                            <i class="fab fa-whatsapp text-xl"></i>
-                        </div>
-                        <h3 class="text-sm font-bold tracking-wide">+91 95784 20672</h3>
-                    </a>
+                <div>
+                    <h3 class="mb-4 text-lg font-semibold text-white">Connect With Us</h3>
 
-                    <a href="mailto:marketing@nithaaerospace.in"
-                        class="flex items-center gap-2 hover:opacity-80 transition-opacity" style="margin-left: -10px;">
-                        <div
-                            class="w-10 h-10 bg-[#FFA500] rounded-full flex items-center justify-center text-white shadow-md">
-                            <i class="fas fa-envelope text-sm"></i>
-                        </div>
-                        <span class="text-sm font-bold tracking-wide">marketing@nithaaerospace.in</span>
-                    </a>
+                    <!-- Action Buttons Wrapper -->
+                    <div class="flex flex-row flex-wrap items-center gap-4">
+
+                        <!-- WhatsApp Button -->
+                        <a href="https://wa.me/919578420672" target="_blank"
+                            class="flex items-center gap-3 px-5 py-2 rounded-full bg-green-600 hover:bg-green-700 transition-all duration-200 shadow-md hover:shadow-lg">
+
+                            <div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+                                <i class="fab fa-whatsapp text-white text-xl"></i>
+                            </div>
+
+                            <span class="text-white font-semibold text-sm tracking-wide">
+                                Chat on WhatsApp
+                            </span>
+                        </a>
+
+                        <!-- Call Button -->
+                        <a href="tel:+919578420672"
+                            class="flex items-center gap-3 px-5 py-2 rounded-full bg-orange-400 hover:bg-orange-600 transition-all duration-200 shadow-md hover:shadow-lg">
+
+                            <div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+                                <i class="fas fa-phone-alt text-white text-lg"></i>
+                            </div>
+
+                            <span class="text-white font-semibold text-sm">
+                                Call Now
+                            </span>
+                        </a>
+
+                    </div>
+
                 </div>
             </div>
 
@@ -523,15 +799,15 @@
                 <div class="bg-black p-3 rounded-t-sm">
                     <h3 class="text-white text-[11px] font-bold mb-2 uppercase">Search</h3>
                     <div class="relative">
-                        <input type="text" id="productSearch" onkeyup="handleSearchInput()"
-                            class="w-full pl-3 pr-8 py-1.5 text-xs rounded bg-white text-gray-800 focus:outline-none"
-                            placeholder="Search product here...">
+                        <input id="productSearch" type="text" placeholder="Search products..."
+                            onkeyup="handleSearch(this.value)"
+                            class="w-full pl-3 pr-8 py-1.5 text-xs rounded bg-white text-gray-800 focus:outline-none">
                         <span class="absolute inset-y-0 right-2 flex items-center"><i
                                 class="fas fa-search text-gray-400 text-xs"></i></span>
                     </div>
                 </div>
                 <div id="categoryList" class="flex flex-col space-y-1 mt-1"></div>
-                <button onclick="resetFilters()"
+                <button onclick="resetAll()"
                     class="mt-4 text-[10px] font-bold text-gray-400 uppercase hover:text-brand-green flex items-center">
                     <i class="fas fa-sync-alt mr-2"></i> Reset Filters
                 </button>
@@ -541,191 +817,21 @@
                 <div id="gridHeader" class="mb-10">
                     <div class="flex items-center mb-1">
                         <img src="imgs/mainNitha.png" alt="" class="w-10">
-                        <h4 class="text-sidebar-active font-bold text-sm tracking-wider ml-2 uppercase">Product Range
+                        <h4 class="text-sidebar-active font-bold text-sm tracking-wider ml-2">
                         </h4>
                     </div>
                     <h2 id="gridTitle" class="text-4xl font-extrabold text-black mb-6 uppercase tracking-tight">Our
                         Inspiring Products</h2>
                 </div>
 
-                <div id="productGrid"></div>
-
-                <div id="productDetailSection" class="hidden animate-in fade-in duration-500">
-                    <div class="flex flex-col md:flex-row gap-10 bg-white p-2">
-                        <div
-                            class="w-full md:w-1/2 border rounded-lg p-10 flex items-center justify-center bg-gray-50/50 shadow-sm">
-                            <img id="detailImage" src="" alt="" class="max-h-[350px] object-contain drop-shadow-xl">
-                        </div>
-
-                        <div class="w-full md:w-1/2">
-                            <h2 id="detailName"
-                                class="text-3xl font-black text-gray-900 uppercase mb-4 tracking-tighter italic"></h2>
-                            <p class="text-sm text-gray-500 mb-8 leading-relaxed">
-                                Precision-engineered superalloy component manufactured to international aerospace and
-                                defense standards.
-                                Designed for maximum performance in high-stress industrial assemblies.
-                            </p>
-
-                            <h5 class="text-xs font-bold text-brand-green uppercase mb-4 tracking-widest border-b pb-2">
-                                Technical Specifications</h5>
-                            <div class="overflow-hidden border rounded-lg mb-8 bg-white">
-                                <table class="w-full text-left text-xs">
-                                    <tr class="border-b bg-gray-50">
-                                        <th class="p-3 text-gray-700 w-1/3 font-bold">Standards</th>
-                                        <td class="p-3 text-gray-600">DIN / ISO / ASTM / NAS</td>
-                                    </tr>
-                                    <tr class="border-b">
-                                        <th class="p-3 text-gray-700 font-bold">Material</th>
-                                        <td class="p-3 text-gray-600">Titanium, Inconel, Superalloys</td>
-                                    </tr>
-                                    <tr class="border-b bg-gray-50">
-                                        <th class="p-3 text-gray-700 font-bold">Size Range</th>
-                                        <td class="p-3 text-gray-600">M1.6 - M100 / Custom</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="p-3 text-gray-700 font-bold">Surface</th>
-                                        <td class="p-3 text-gray-600">Passivated / Zinc / Cadmium</td>
-                                    </tr>
-                                </table>
-                            </div>
-
-                            <div class="flex gap-4">
-                                <button onclick="window.location.href='contact.html'"
-                                    class="bg-black text-white px-8 py-3 text-xs font-bold uppercase hover:bg-brand-green transition-all tracking-widest shadow-md">Enquire
-                                    Now</button>
-                                <button onclick="goBack()"
-                                    class="border border-gray-300 px-8 py-3 text-xs font-bold uppercase hover:bg-gray-100 transition-all tracking-widest">
-                                    <i class="fas fa-arrow-left mr-2"></i> Back to List
-                                </button>
-                            </div>
-
-                            <div class="mt-10 border-t pt-8 mb-8">
-                                <div class="flex border-b border-gray-200">
-                                    <button onclick="switchTab('spec')" id="tab-spec"
-                                        class="tab-btn px-6 py-3 text-[11px] font-black uppercase tracking-widest border-b-2 border-brand-green text-brand-green transition-all focus:outline-none">Specification</button>
-                                    <button onclick="switchTab('desc')" id="tab-desc"
-                                        class="tab-btn px-6 py-3 text-[11px] font-black uppercase tracking-widest border-b-2 border-transparent text-gray-400 hover:text-gray-600 transition-all focus:outline-none">Description</button>
-                                    <button onclick="switchTab('down')" id="tab-down"
-                                        class="tab-btn px-6 py-3 text-[11px] font-black uppercase tracking-widest border-b-2 border-transparent text-gray-400 hover:text-gray-600 transition-all focus:outline-none">Downloads</button>
-                                </div>
-
-                                <div id="content-spec" class="tab-content py-6">
-                                    <div class="overflow-hidden border rounded-lg">
-                                        <table class="w-full text-left text-[11px]">
-                                            <tr class="bg-gray-50">
-                                                <th class="p-3 font-bold text-gray-700 w-1/3 border-b border-r">Standard
-                                                    Ref.</th>
-                                                <td class="p-3 text-gray-600 border-b">AS9100 Rev D / ISO 9001:2015</td>
-                                            </tr>
-                                            <tr>
-                                                <th class="p-3 font-bold text-gray-700 border-b border-r">Tensile
-                                                    Strength</th>
-                                                <td class="p-3 text-gray-600 border-b">180 ksi min (1,240 MPa)</td>
-                                            </tr>
-                                            <tr class="bg-gray-50">
-                                                <th class="p-3 font-bold text-gray-700 border-b border-r">Shear Strength
-                                                </th>
-                                                <td class="p-3 text-gray-600 border-b">108 ksi min (745 MPa)</td>
-                                            </tr>
-                                            <tr>
-                                                <th class="p-3 font-bold text-gray-700 border-b border-r">Max Temp.</th>
-                                                <td class="p-3 text-gray-600 border-b">800°F (427°C) - 1200°F (649°C)
-                                                </td>
-                                            </tr>
-                                            <tr class="bg-gray-50">
-                                                <th class="p-3 font-bold text-gray-700 border-r">Thread Class</th>
-                                                <td class="p-3 text-gray-600">UNJ / MJ (Aerospace thread form)</td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                </div>
-
-                                <div id="content-desc"
-                                    class="tab-content hidden py-6 text-xs text-gray-500 leading-relaxed space-y-4">
-                                    <p class="font-bold text-gray-700">General Description:</p>
-                                    <p>This high-performance fastener is specifically engineered for critical aerospace
-                                        and defense applications where failure is not an option. It offers exceptional
-                                        strength-to-weight ratio and superior resistance to fatigue and corrosion in
-                                        harsh environments.</p>
-                                    <p class="font-bold text-gray-700 mt-4">Key Features:</p>
-                                    <ul class="list-disc pl-5 space-y-2">
-                                        <li>Manufactured from vacuum-melted superalloys for purity.</li>
-                                        <li>Rolled threads after heat treatment for maximum fatigue life.</li>
-                                        <li>Full traceability with lot control and material certifications.</li>
-                                        <li>Available with various locking mechanisms (e.g., self-locking patches,
-                                            drilled heads).</li>
-                                    </ul>
-                                </div>
-
-                                <div id="content-down" class="tab-content hidden py-6">
-                                    <div class="space-y-3">
-                                        <a href="#"
-                                            class="flex items-center p-3 border rounded-lg hover:bg-gray-50 transition-colors group">
-                                            <div
-                                                class="w-10 h-10 bg-red-100 text-red-500 rounded flex items-center justify-center mr-4 group-hover:bg-red-500 group-hover:text-white transition-colors">
-                                                <i class="far fa-file-pdf text-lg"></i>
-                                            </div>
-                                            <div>
-                                                <h6 class="text-xs font-bold text-gray-700 uppercase tracking-wider">
-                                                    Technical Data Sheet (TDS)</h6>
-                                                <p class="text-[10px] text-gray-400">PDF - 1.2 MB</p>
-                                            </div>
-                                            <i
-                                                class="fas fa-download ml-auto text-gray-300 group-hover:text-brand-green"></i>
-                                        </a>
-                                        <a href="#"
-                                            class="flex items-center p-3 border rounded-lg hover:bg-gray-50 transition-colors group">
-                                            <div
-                                                class="w-10 h-10 bg-blue-100 text-blue-500 rounded flex items-center justify-center mr-4 group-hover:bg-blue-500 group-hover:text-white transition-colors">
-                                                <i class="far fa-file-alt text-lg"></i>
-                                            </div>
-                                            <div>
-                                                <h6 class="text-xs font-bold text-gray-700 uppercase tracking-wider">
-                                                    Material Safety Data Sheet (MSDS)</h6>
-                                                <p class="text-[10px] text-gray-400">PDF - 850 KB</p>
-                                            </div>
-                                            <i
-                                                class="fas fa-download ml-auto text-gray-300 group-hover:text-brand-green"></i>
-                                        </a>
-                                        <a href="#"
-                                            class="flex items-center p-3 border rounded-lg hover:bg-gray-50 transition-colors group">
-                                            <div
-                                                class="w-10 h-10 bg-gray-100 text-gray-500 rounded flex items-center justify-center mr-4 group-hover:bg-gray-700 group-hover:text-white transition-colors">
-                                                <i class="fas fa-cubes text-lg"></i>
-                                            </div>
-                                            <div>
-                                                <h6 class="text-xs font-bold text-gray-700 uppercase tracking-wider">3D
-                                                    CAD Model</h6>
-                                                <p class="text-[10px] text-gray-400">STEP File - 4.5 MB</p>
-                                            </div>
-                                            <i
-                                                class="fas fa-download ml-auto text-gray-300 group-hover:text-brand-green"></i>
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div class="mt-16 border-t pt-10">
-                                    <div class="flex items-center justify-between mb-8">
-                                        <div>
-                                            <h4
-                                                class="text-sidebar-active font-black text-[10px] uppercase tracking-[0.2em] mb-1">
-                                                Recommendations</h4>
-                                            <h3 class="text-2xl font-black text-gray-900 uppercase tracking-tight">
-                                                Related Products</h3>
-                                        </div>
-                                        <div class="h-[2px] flex-grow bg-gray-100 ml-6"></div>
-                                    </div>
-
-                                    <div id="relatedProductsGrid"
-                                        class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="w-full max-w-7xl mx-auto px-6">
+                    <div id="materialHeader" class="hidden"></div>
+                    <div id="productGrid"></div>
                 </div>
 
-                <div id="noResults" class="hidden py-12 text-center text-gray-400 uppercase font-bold">No results found
+                <div id="productDetailSection" class="hidden">
+                    <div id="productDetailTop" class="mb-14"></div>
+                    <div id="productDetailBelow"></div>
                 </div>
             </div>
         </div>
@@ -1115,29 +1221,88 @@ background-position: center;">
         </div>
     </footer>
 
-    <div class="relative z-20 py-4 text-gray-400 " style="background: #0b180d; border-top: 1px solid white;">
+    <div class="relative z-20 py-4 text-gray-400" style="background: #0b180d; border-top: 1px solid white;">
         <div class="container flex flex-col items-center justify-between px-6 mx-auto text-sm md:flex-row">
             <p class="mb-4 md:mb-0">
-                www.nithaaerospace.in © Copyright and private limited. All Rights Reserved | <a href="Terms.html"
-                    id="terms">Terms of Access</a>
+                www.nithaaerospace.in © Copyright and Private Limited.
+                All Rights Reserved |
+                <a href="Terms.html" id="terms" class="hover:text-white">
+                    Terms of Access
+                </a>
             </p>
-            <div class="flex space-x-6 text-base">
-                <a href="#" class="transition-colors hover:text-white"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="transition-colors hover:text-white"><i class="fab fa-google-plus-g"></i></a><a
-                    href="#" class="transition-colors hover:text-white">
+
+            <!-- Social Media Icons -->
+            <div class="flex space-x-4 text-base">
+                <!-- Facebook -->
+                <a href="#" class="w-9 h-9 flex items-center justify-center rounded-full
+                       text-white hover:bg-blue-600
+                       transition-all duration-200">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+
+                <!-- Twitter (X) -->
+                <a href="#" class="w-9 h-9 flex items-center justify-center rounded-full
+                       text-white hover:bg-black
+                       transition-all duration-200">
                     <i class="fa-brands fa-x-twitter"></i>
                 </a>
-                <a href="#" class="transition-colors hover:text-white"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="transition-colors hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+
+                <!-- Instagram -->
+                <!-- Instagram -->
+                <a href="#" class="w-9 h-9 flex items-center justify-center rounded-full
+          text-white
+          hover:bg-[radial-gradient(circle_at_30%_107%,#fdf497_0%,#fdf497_5%,#fd5949_45%,#d6249f_60%,#285AEB_90%)]
+          transition-all duration-200">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+
+                <!-- LinkedIn -->
+                <a href="#" class="w-9 h-9 flex items-center justify-center rounded-full
+                       text-white hover:bg-blue-700
+                       transition-all duration-200">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
             </div>
         </div>
     </div>
+
 
 
     <script>
         /* =========================================================
            ORIGINAL DATA (UNCHANGED – AS YOU REQUESTED)
         ========================================================= */
+        const groupImages = {
+            "Critical Industries": "products/critical-industries.png",
+            "Industrial & General Engineering": "products/industrial-engineering.png",
+            "Specialised Engineering": "products/specialized-engg.jpg",
+        };
+
+        const productImages = {
+            "Aerospace Fasteners": "products/aerospace-fasteners.webp",
+            "Defence Fasteners": "products/defence-fasteners.webp",
+            "Medical & Precision Fasteners": "products/medical-fasteners.jpg",
+            "Nuclear & Energy Fasteners": "products/nuclear&energy-fasteners.avif",
+            "Oil & Gas Bolting Solutions": "products/oil&gasbolting-fasteners.png",
+            "Power Plant & Thermal Fasteners": "products/powerplant.jpg",
+            "Railway & Metro Fasteners": "products/railway-metro.png",
+            "Renewable Energy Fasteners": "products/renewable-energy.webp",
+            "Shipbuilding & Marine Fasteners": "products/shipbuilding.jpg",
+            "Specialised Engineering": "products/specialized-engg.jpg",
+
+            "Automotive Fasteners": "products/automotive-fasteners.webp",
+            "Construction & Infrastructure Fasteners": "products/construction-fasteners.png",
+            "Electrical & Electronics Fasteners": "products/electrical-fasteners.jpg",
+            "Heavy Engineering & Industrial Fasteners": "products/heavyengineering.jpg",
+            "Chemical & Process Industry Fasteners": "products/chemical-fasteners.jpg",
+            "Mining & Earthmoving Fasteners": "products/mining-fasteners.jpeg",
+            "HVAC & Building Services Fasteners": "products/hvac-building.jpeg",
+            "Agricultural & Off-Highway Fasteners": "products/agricultural.jpg",
+            "General Engineering Fasteners": "products/general-fasteners.webp",
+
+            "Custom & Prototype Fasteners": "products/custom-prototype.jpg"
+        };
 
         const industryGroups = [
             {
@@ -1177,22 +1342,294 @@ background-position: center;">
         ];
 
         const productData = [
-            { name: "Bolt", image: "imgs/bolt.png", sub: ["Hex Bolt", "Flange Bolt", "Carriage Bolt", "Eye Bolt", "U-Bolt", "Serrated Flange Bolt", "J Bolt", "Cup Squre Bolt"] },
-            { name: "Bush", image: "imgs/bush.png", sub: ["Hexagon Rivet Bush", "Round Euro", "Mini Round Euro", "Weld Bush", "External Threaded Bush", "Plain Bush", "Flanged Bush", "Split Bush", "Internal Threaded Bush", "Threaded Bushing"] },
-            { name: "Circlips", image: "imgs/circlip.png", sub: ["External Circlips", "Internal Circlips", "E-Clips", "Wire Snap Rings for Shafts", "Wire Snap Rings for Bores", "Lipped Retaining Ring", "Fixing Rings", "Snap Ring"] },
-            { name: "Nail", image: "imgs/nail.png", sub: ["Flat Nails", "Box Nails", "Deck Nails", "Masonry Nails", "Pin Nails", "Duplex Nails", "Pole Barn Nails", "Drywall Nails"] },
-            { name: "Nut", image: "imgs/nnuts.png", sub: ["Hex Nut", "Lock Nut", "Flange Nut", "Wing Nut", "Cap Nut", "Heavy Hexagon Nut", "Square Nut", "Clinch Nut", "Pal Nut", "T Nut"] },
-            { name: "Pin & Keys", image: "imgs/pins.png", sub: ["Cotter Pin", "Dowel Pin", "Tapper Pin", "Spring Pin", "Spiral Pin", "Clevis Pin", "Groove Pin", "Machine Keys", "Parallel Keys"] },
-            { name: "Clamp", image: "imgs/clamp.png", sub: ["Industrial Clamp", "Hose Clamp", "U-Clamp"] },
-            { name: "Rivet", image: "imgs/rivert.png", sub: ["Blind Rivet", "Drive Rivet", "Solid Rivet", "Countersunk Head Rivet", "Flat Head Hollow Rivet", "Pop Rivet"] },
-            { name: "Screw", image: "imgs/screw.png", sub: ["Hex Screw", "Machine Screw", "Self-Tapping Screw", "Self-Drilling Screw", "Flange Hex Screw", "CSK Screw", "Grub Screw"] },
-            { name: "Spacer & Standoff", image: "imgs/spacer.png", sub: ["Internal Spacer", "External Spacer", "Hexagon Spacer", "Threaded Pillers", "Round Spacer", "Hex Standoff"] },
-            { name: "Stud & Rod", image: "imgs/stud.png", sub: ["Stud", "Double End Stud", "Tap End Stud", "Fully Threaded Rod"] },
-            { name: "Washer", image: "imgs/washer.png", sub: ["Plain Washer", "Spring Washer", "Tooth Lock Washer", "Belleville Washer", "Wave Washer", "Serrated Washer", "Tab Washer"] },
-            { name: "Wires", image: "imgs/wire.png", sub: ["Aluminium Wires", "Copper Wires", "Brass Wires", "Steel Wires", "Nickel Wires"] },
-            { name: "Hinge", image: "imgs/hinge.png", sub: ["Industrial Hinge", "Butt Hinge", "Continuous Hinge"] },
-            { name: "Latch", image: "imgs/latch.png", sub: ["Draw Latch", "Compression Latch", "Swell Latch"] }
+            {
+                name: "Bolt",
+                image: "imgs/bolt.png",
+                sub: [
+                    { name: "Anchor Bolt", image: "products/Bolt/Anchor Bolt.jpg" },
+                    { name: "Cup Square Bolt", image: "products/Bolt/Cup Square Bolt.jpg" },
+                    { name: "Eye Bolt", image: "products/Bolt/Eye Bolt.jpg" },
+                    { name: "Flange Bolt", image: "products/Bolt/Flange Bolt.png" },
+                    { name: "Hex Bolt with Capital Screw", image: "products/Bolt/Hex Bolt with Capital Screw.jpg" },
+                    { name: "Hex Bolt", image: "products/Bolt/Hex Bolt.jpeg" },
+                    { name: "High Tensile Bolt", image: "products/Bolt/High Tensile Bolt.jpg" },
+                    { name: "J Bolt", image: "products/Bolt/J Bolt.png" },
+                    { name: "Screaded Flange Bolt", image: "products/Bolt/Scrreated Flange Bolt.webp" },
+                    { name: "Square Head Bolt", image: "products/Bolt/Squre Head Bolt.png" },
+                    { name: "Structural Bolt", image: "products/Bolt/Structural Bolt.png" },
+                    { name: "U Bolt", image: "products/Bolt/U Bolt.webp" }
+                ]
+            },
+
+            {
+                name: "Bush",
+                image: "imgs/bush.png",
+                sub: [
+                    { name: "Composite PTFE Line Bushing", image: "products/Bush/Composite  PTFE Line Bushing.jpg" },
+                    { name: "External Threaded Bush", image: "products/Bush/External Threaded Bush.webp" },
+                    { name: "Flanged Bush", image: "products/Bush/Flanged Bush.jpg" },
+                    { name: "Hexagon Rivet Bush", image: "products/Bush/Hexagon Rivet Bush.jpg" },
+                    { name: "Mini Standoff Screwed Face", image: "products/Bush/Mini Standoff Scrreated Face.jpg" },
+                    { name: "Plain Bush", image: "products/Bush/Plain Bush.jpg" },
+                    { name: "Reverse Bush", image: "products/Bush/Reverse Bush.jpg" },
+                    { name: "Round Euro", image: "products/Bush/Round Euro.png" },
+                    { name: "Sintered Bronze Bushing", image: "products/Bush/Sintered Bronze Bushing.jpg" },
+                    { name: "Split Bush", image: "products/Bush/Split Bush.webp" },
+                    { name: "Tank Bush", image: "products/Bush/Tank Bush.png" },
+                    { name: "Threaded Bushing", image: "products/Bush/Threaded Bushing.jpg" },
+                    { name: "Weld Bush", image: "products/Bush/Weld Bush.jpg" }
+                ]
+            },
+
+            {
+                name: "Circlips",
+                image: "imgs/circlip.png",
+                sub: [
+                    { name: "External Circlips", image: "products/Circlips/External Circlips.webp" },
+                    { name: "Internal Circlips", image: "products/Circlips/Internal Circlips.webp" },
+                    { name: "Heavy Duty Internal Circlips", image: "products/Circlips/Heavy Duty Internal Circlips.png" },
+                    { name: "Heavy Duty External Circlips", image: "products/Circlips/Heavy Duty External Circlips.webp" },
+                    { name: "E-Clips", image: "products/Circlips/E - Clips.jpg" },
+                    { name: "Wire Snap Rings for Shafts", image: "products/Circlips/Wire Snap Rings for Shafts.avif" },
+                    { name: "Lipped Retaining Ring", image: "products/Circlips/Lipped Retaining Ring.avif" },
+                    { name: "Fixing Rings", image: "products/Circlips/Fixing Rings.jpg" },
+                ]
+            },
+
+            {
+                name: "Clamp",
+                image: "imgs/clamp.png",
+                sub: [
+                    { name: "Cable Clamp", image: "products/Clamp/Cable Clamp.jpeg" },
+                    { name: "U Clamp", image: "products/Clamp/U Clamp.webp" },
+                    { name: "Heavy Duty Double Bolt Pipe Clamp", image: "products/Clamp/heavy duty double bolt pipe clamp.jpeg" }
+                ]
+            },
+
+            {
+                name: "Hinge",
+                image: "imgs/hinge.png",
+                sub: [
+                    { name: "Butt Hinges", image: "products/Hinge/Butt Hinges.jpg" },
+                    { name: "Concealed Hinges", image: "products/Hinge/Concealed Hinges.jpg" },
+                    { name: "Double Action Spring Hinges", image: "products/Hinge/Double Action Spring Hinges.webp" },
+                    { name: "Hydraulic Door Hinge", image: "products/Hinge/Hydrallic door hinge.jpg" },
+                    { name: "Quick Release and Detachable Hinges", image: "products/Hinge/Quick relese and detachable hinges.png" },
+                    { name: "Spring Assist Torque Hinges", image: "products/Hinge/Spring Assist Torque Hinges.jpeg" },
+                    { name: "Spring Tension Hinge", image: "products/Hinge/Spring tension hinge.jpg" }
+                ]
+            },
+
+            {
+                name: "Latch",
+                image: "imgs/latch.png",
+                sub: [
+                    { name: "EOT Crane Safety Latch", image: "products/Latch/EOT Crane Safety Latch.jpg" },
+                    { name: "Hook Latch", image: "products/Latch/hook latch.jpg" },
+                    { name: "Trigger Lock Latch", image: "products/Latch/trigger lock latch.jpg" }
+                ]
+            },
+
+            {
+                name: "Nail",
+                image: "imgs/nail.png",
+                sub: [
+                    { name: "Box Nails", image: "products/Nail/Box Nails.jpg" },
+                    { name: "Deck Nail", image: "products/Nail/Deck Nail.jpg" },
+                    { name: "Drywall Nails", image: "products/Nail/Drywall Nails.jpg" },
+                    { name: "Duplex Nails", image: "products/Nail/Duplex Nails.jpg" },
+                    { name: "Finishing Nails", image: "products/Nail/Finishing Nails.webp" },
+                    { name: "Flat Nails", image: "products/Nail/Flat Nails.webp" },
+                    { name: "Flooring Nails", image: "products/Nail/Flooring Nails.jpg" },
+                    { name: "Masonry Nails", image: "products/Nail/Masonary Nails.jpg" },
+                    { name: "Panel Board Nails", image: "products/Nail/Panel Board Nails.jpg" },
+                    { name: "Pole Barn Nails", image: "products/Nail/Pole Barn.avif" },
+                    { name: "Sliding Nail", image: "products/Nail/Sliding Nail.jpg" },
+                    { name: "Trim Nails", image: "products/Nail/Trim Nails.jpg" }
+                ]
+            },
+
+            {
+                name: "Nut",
+                image: "imgs/nnuts.png",
+                sub: [
+                    { name: "Cage Nut", image: "products/Nut/Cage Nut.jpg" },
+                    { name: "Clinch Nut", image: "products/Nut/Clunch Nut.jpg" },
+                    { name: "Coupling Nut", image: "products/Nut/Coupling Nut.jpg" },
+                    { name: "Dome Nut", image: "products/Nut/Dome Nut.webp" },
+                    { name: "Flange Nut", image: "products/Nut/Flange Nut.jpg" },
+                    { name: "Half Nut", image: "products/Nut/Half Nut.jpg" },
+                    { name: "Heavy Hexagon Nut", image: "products/Nut/Heavy Hexagon Nut.png" },
+                    { name: "Hexagon Nut", image: "products/Nut/Hexagon Nut.jpg" },
+                    { name: "Insert Nut", image: "products/Nut/insret Nut.webp" },
+                    { name: "Jam Nut", image: "products/Nut/Jam Nut.webp" },
+
+                    { name: "Pal Nut", image: "products/Nut/Pal Nut.jpg" },
+                    { name: "Plain Hex Nut", image: "products/Nut/Plain Hex Nut.png" },
+                    { name: "Profile Nut", image: "products/Nut/ProfileNut.webp" },
+                    { name: "Rivet Nut", image: "products/Nut/Rivert Nut.png" },
+                    { name: "Self Locking Nut", image: "products/Nut/Self Locking Nut.webp" },
+                    { name: "Self Threading Nut", image: "products/Nut/Self Threading Nut.jpg" },
+                    { name: "Speed Nut", image: "products/Nut/Speed Nut.webp" },
+                    { name: "Spring Nut", image: "products/Nut/Spring Nut.webp" },
+                    { name: "Square Nut", image: "products/Nut/Squre Nut.jpg" },
+                    { name: "T Slot Nut", image: "products/Nut/T Slot Nut.png" },
+
+                    { name: "Wing Nut", image: "products/Nut/Wing Nut.jpg" }
+                ]
+            },
+
+            {
+                name: "Pin & Keys",
+                image: "imgs/pins.png",
+                sub: [
+                    { name: "Clevis Pin", image: "products/Pin & Keys/Clevis Pin.jpg" },
+                    { name: "Cotter Pin", image: "products/Pin & Keys/Cotter Pin.jpg" },
+                    { name: "Dowel Pin", image: "products/Pin & Keys/Dowel Pin.jpg" },
+                    { name: "Full Length Parallel Groove Pin", image: "products/Pin & Keys/Full Length Parallel Groove Pin.avif" },
+                    { name: "Groove Pin", image: "products/Pin & Keys/Groove Pin.jpg" },
+                    { name: "Hairpin Cotter Pin", image: "products/Pin & Keys/Hairpin Cotter Pin.jpg" },
+                    { name: "Half Length Taper Groove Pin", image: "products/Pin & Keys/Half Length Tapper Groove Pin.png" },
+                    { name: "Hitch Pin", image: "products/Pin & Keys/Hitch Pin.jpg" },
+                    { name: "Lynch Pin", image: "products/Pin & Keys/Lynch Pin.jpg" },
+                    { name: "Parallel Keys", image: "products/Pin & Keys/Parallel Keys.jpg" },
+
+                    { name: "Push Pull Pin", image: "products/Pin & Keys/Push Pull Pin.jpg" },
+                    { name: "Safety Pin", image: "products/Pin & Keys/Safty Pin.webp" },
+                    { name: "Snapper Tab Lock Pin", image: "products/Pin & Keys/Snapper Tab Lock Pin.jpeg" },
+                    { name: "Spiral Pin", image: "products/Pin & Keys/Spiral Pin.png" },
+                    { name: "Spring Pin", image: "products/Pin & Keys/Spring Pin.jpg" },
+                    { name: "Tapper Pin", image: "products/Pin & Keys/Tapper Pin.webp" },
+                    { name: "Third Length Taper Groove Pin", image: "products/Pin & Keys/Third Length Tapper Groove Pin.webp" }
+                ]
+            },
+
+            {
+                name: "Rivet",
+                image: "imgs/rivert.png",
+                sub: [
+                    { name: "Blind Rivet", image: "products/Rivet/Blind Rivert.jpg" },
+                    { name: "Button Head Solid Rivet", image: "products/Rivet/Button Head Solid Rivert.avif" },
+                    { name: "Countersunk Head Rivet", image: "products/Rivet/Countershunk Head Rivert.png" },
+                    { name: "Dome Rivet", image: "products/Rivet/Dome Rivert.webp" },
+                    { name: "Drive Rivet", image: "products/Rivet/Drive Rivert.webp" },
+                    { name: "Flat Head Hollow Rivet", image: "products/Rivet/Flat Head Hallow Rivert.webp" },
+                    { name: "Head Open End Blind Rivet", image: "products/Rivet/Head Open End Blind Rivert.webp" },
+                    { name: "Nylon Snap Rivet", image: "products/Rivet/Nylon Snap Rivert.png" },
+                    { name: "Parker Track Rivet", image: "products/Rivet/Parker Track Rivert.webp" },
+                    { name: "PAS Hit Rivet", image: "products/Rivet/PAS Hit Rivert.jpg" },
+                    { name: "Push Pull Rivet", image: "products/Rivet/Push Pull Rivert.jpg" },
+                    { name: "Round Rivet", image: "products/Rivet/Round Rivert.webp" },
+                    { name: "Thin Flat Rivet", image: "products/Rivet/Thin Flat Rivert.jpg" }
+                ]
+            },
+
+            {
+                name: "Ring",
+                image: "imgs/ring.png",
+                sub: [
+                    { name: "Adjusting Ring", image: "products/Ring/Adjusting Ring.jpg" },
+                    { name: "Collar Ring", image: "products/Ring/Collar Ring.jpg" },
+                    { name: "D Rings", image: "products/Ring/D Rings.jpg" },
+                    { name: "Jointing Ring", image: "products/Ring/Jointing Ring.png" },
+                    { name: "O Ring", image: "products/Ring/O Ring.jpg" },
+                    { name: "Oil Seal Ring", image: "products/Ring/Oil Seal Ring.jpg" },
+                    { name: "Shims Ring", image: "products/Ring/Shims Ring.webp" },
+                    { name: "Snap Ring", image: "products/Ring/Snap Ring.jpg" },
+                    { name: "Spiral Retaining Ring", image: "products/Ring/Spiral Retaining Ring.jpg" }
+                ]
+            },
+
+            {
+                name: "Screw",
+                image: "imgs/screw.png",
+                sub: [
+                    { name: "Button Head Screw", image: "products/Screw/Button Head Screw.jpg" },
+                    { name: "Countersunk Head Socket Cap Screw", image: "products/Screw/Countershunk Head Socket Cap Screw.jpg" },
+                    { name: "CSK Screw", image: "products/Screw/CSK-Screw.webp" },
+                    { name: "Cylindrical Head Socket Cap Screw", image: "products/Screw/Cylindrical Head Socket Cap Screw.jpeg" },
+                    { name: "Flange Hexagon Screw", image: "products/Screw/Flange hexagon Screw.png" },
+                    { name: "Grub Screw", image: "products/Screw/Grub Screw.jpg" },
+                    { name: "Hex Phillips Sems Screw", image: "products/Screw/Hex Phillips Sems Screw.jpg" },
+                    { name: "Hex Washer Head Screw", image: "products/Screw/Hex Washer Head Screw.jpg" },
+                    { name: "Pan Head Screw", image: "products/Screw/pan-head-screw.webp" },
+                    { name: "Serrated Head Pan Screw", image: "products/Screw/Scrreated Head Pan Screw.png" },
+                    { name: "Self Drilling Screw", image: "products/Screw/Self Drilling Screw.jpg" },
+                    { name: "Sheet Metal Screw", image: "products/Screw/Sheet Metal Screw.jpg" },
+                    { name: "Thin Head Screw", image: "products/Screw/Thin Head Screw.jpg" },
+                    { name: "Truss Screw", image: "products/Screw/Truss Screw.jpg" },
+                    { name: "Weld Stud Screw", image: "products/Screw/Weld Stud Screw.webp" },
+                    { name: "Wing Screw", image: "products/Screw/Wing Screw.jpg" }
+                ]
+            },
+
+            {
+                name: "Spacer & Standoff",
+                image: "imgs/spacer.png",
+                sub: [
+                    { name: "Blindoff Spacer", image: "products/Spacer & Standoff/Blindoff Spacer.png" },
+                    { name: "Hexagon Spacer", image: "products/Spacer & Standoff/Hexagon Spacer.jpg" },
+                    { name: "Internal and External Threaded Spacer", image: "products/Spacer & Standoff/Internal and External Threaded Spacer.webp" },
+                    { name: "Rounded Spacer", image: "products/Spacer & Standoff/Rounded Spacer.jpg" },
+                    { name: "Self Clinching Linedoff Spacer", image: "products/Spacer & Standoff/Self Clinching Linedoff Spacer.jpg" },
+                    { name: "Threaded Pillers", image: "products/Spacer & Standoff/Threaded Pillers.avif" },
+                    { name: "Through Spacer", image: "products/Spacer & Standoff/Through Spacer.png" }
+                ]
+            },
+
+            {
+                name: "Stud & Rod",
+                image: "imgs/stud.png",
+                sub: [
+                    { name: "Stud", image: "products/Stud/Stud.jpg" },
+                    { name: "Double End Stud", image: "products/Stud/Double End Stud.webp" },
+                    { name: "Tap End Stud", image: "products/Stud/Tap End Stud.jpeg" },
+                    { name: "Fully Threaded Rod", image: "products/Stud/Fully Threaded Rod.jpg" },
+                    { name: "Double End Stud with Reduced Shank", image: "products/Stud/Double End Stud with Reduced Shank.avif" }
+                ]
+            },
+
+            {
+                name: "Washer",
+                image: "imgs/washer.png",
+                sub: [
+                    { name: "Belleville Conical Washer", image: "products/Washer/Belleville Conical Washer.webp" },
+                    { name: "Cealing Washer", image: "products/Washer/Cealing Washer.jpg" },
+                    { name: "Collar Washer", image: "products/Washer/Collar Washer.png" },
+                    { name: "Conical Washer", image: "products/Washer/Conical Washer.png" },
+                    { name: "Cushion Washer", image: "products/Washer/Cushion Washer.avif" },
+                    { name: "Dome Washer", image: "products/Washer/Dome Washer.jpg" },
+                    { name: "External Serrated Washer", image: "products/Washer/External Scrreated Washer.jpg" },
+                    { name: "External Tooth Lock Washer", image: "products/Washer/External Tooth Look Washer.jpg" },
+                    { name: "Fender Washer", image: "products/Washer/Fender Washer.jpg" },
+                    { name: "Internal and External Serrated Washer", image: "products/Washer/Internal and External Scrreated Washer.png" },
+
+                    { name: "Internal Serrated Washer", image: "products/Washer/Internal Scrreated Washer.webp" },
+                    { name: "Internal Tooth Lock Washer", image: "products/Washer/Intrenal Tooth Lock Washer.webp" },
+                    { name: "Key Lock Washer", image: "products/Washer/Key Lock Washer.jpg" },
+                    { name: "Machined Washer", image: "products/Washer/Machined Washer.jpg" },
+                    { name: "Plain Washer", image: "products/Washer/Plain Washer.jpg" },
+                    { name: "Spring Washer", image: "products/Washer/Spring Washer.webp" },
+                    { name: "Square Washer", image: "products/Washer/Squre Washer.jpg" },
+                    { name: "Tab Washer", image: "products/Washer/Tab Washer.webp" },
+                    { name: "Wave Washer", image: "products/Washer/Wave Washer.webp" }
+                ]
+            },
+
+            {
+                name: "Wires",
+                image: "imgs/wire.png",
+                sub: [
+                    { name: "Aluminium Wires", image: "products/Wires/Aluminium Wires.webp" },
+                    { name: "Copper Wires", image: "products/Wires/Copper Wires.jpg" },
+                    { name: "Bronze Wires", image: "products/Wires/Bronze Wire.jpg" },
+                    { name: "Brass Wires", image: "products/Wires/Brass Wires.jpg" },
+                    { name: "Steel Wires", image: "products/Wires/Steel Wires.webp" },
+                    { name: "Nickel Wires", image: "products/Wires/Nickel Wires.jpg" }
+                ]
+            },
         ];
+
 
         /* =========================================================
            DATA ADAPTER (FIXES EVERYTHING)
@@ -1213,6 +1650,28 @@ background-position: center;">
         }));
 
         /* =========================================================
+           SEARCH HANDLER
+        ========================================================= */
+
+        let searchTerm = "";
+
+        function handleSearch(value) {
+            searchTerm = value.toLowerCase().trim();
+
+            if (!searchTerm) {
+                resetAll();
+                return;
+            }
+
+            view = "search";
+            selectedGroup = selectedProduct = selectedMaterial = selectedSub = null;
+
+            refresh();
+        }
+
+
+
+        /* =========================================================
            STATE
         ========================================================= */
 
@@ -1227,45 +1686,99 @@ background-position: center;">
         ========================================================= */
         function updateBreadcrumbs() {
             const bc = document.getElementById("breadcrumbContainer");
-            let html = `
-    <span class="cursor-pointer hover:text-brand-green" onclick="resetAll()">
-      Products
-    </span>
-  `;
+
+            const parts = [];
+
+            parts.push(`
+        <span class="cursor-pointer hover:text-brand-green"
+              data-action="home">
+            Products
+        </span>
+    `);
 
             if (selectedGroup) {
-                html += ` / 
-      <span class="cursor-pointer hover:text-brand-green"
-        onclick="breadcrumbGroup('${selectedGroup}')">
-        ${selectedGroup}
-      </span>`;
+                parts.push(`
+            <span class="mx-2">/</span>
+            <span class="cursor-pointer hover:text-brand-green"
+                  data-action="group"
+                  data-value="${selectedGroup}">
+                ${selectedGroup}
+            </span>
+        `);
             }
 
             if (selectedProduct) {
-                html += ` / 
-      <span class="cursor-pointer hover:text-brand-green"
-        onclick="breadcrumbProduct('${selectedGroup}','${selectedProduct}')">
-        ${selectedProduct}
-      </span>`;
+                parts.push(`
+            <span class="mx-2">/</span>
+            <span class="cursor-pointer hover:text-brand-green"
+                  data-action="product"
+                  data-group="${selectedGroup}"
+                  data-value="${selectedProduct}">
+                ${selectedProduct}
+            </span>
+        `);
             }
 
             if (selectedMaterial) {
-                html += ` / 
-      <span class="cursor-pointer hover:text-brand-green"
-        onclick="breadcrumbMaterial('${selectedMaterial}')">
-        ${selectedMaterial}
-      </span>`;
+                parts.push(`
+            <span class="mx-2">/</span>
+            <span class="cursor-pointer hover:text-brand-green"
+                  data-action="material"
+                  data-value="${selectedMaterial}">
+                ${selectedMaterial}
+            </span>
+        `);
             }
 
             if (selectedSub) {
-                html += ` / 
-      <span class="text-brand-green font-black">
-        ${selectedSub}
-      </span>`;
+                parts.push(`
+            <span class="mx-2">/</span>
+            <span class="text-brand-green font-black">
+                ${selectedSub}
+            </span>
+        `);
             }
 
-            bc.innerHTML = html;
+            bc.innerHTML = parts.join("");
         }
+
+        document.getElementById("breadcrumbContainer")
+            .addEventListener("click", function (e) {
+
+                const target = e.target.closest("[data-action]");
+                if (!target) return;
+
+                const action = target.dataset.action;
+
+                clearSearchState();
+
+                if (action === "home") {
+                    view = "home";
+                    selectedGroup = selectedProduct = selectedMaterial = selectedSub = null;
+                }
+
+                if (action === "group") {
+                    view = "group";
+                    selectedGroup = target.dataset.value;
+                    selectedProduct = selectedMaterial = selectedSub = null;
+                }
+
+                if (action === "product") {
+                    view = "product";
+                    selectedGroup = target.dataset.group;
+                    selectedProduct = target.dataset.value;
+                    selectedMaterial = selectedSub = null;
+                }
+
+                if (action === "material") {
+                    view = "material";
+                    selectedMaterial = target.dataset.value;
+                    selectedGroup = selectedProduct = selectedSub = null;
+                }
+
+                refresh();
+            });
+
 
         /* =========================================================
            SIDEBAR
@@ -1273,23 +1786,34 @@ background-position: center;">
         function renderSidebar() {
             const el = document.getElementById("categoryList");
             el.innerHTML = "";
-            IG.forEach(g => {
-                g.products.forEach(p => {
-                    const open = p.name === selectedProduct;
+
+            IG.forEach(group => {
+                group.products.forEach(product => {
+                    const isOpen = selectedProduct === product.name;
+
+                    /* PARENT ROW (UI only) */
                     el.innerHTML += `
-        <div onclick="openProduct('${g.name}','${p.name}')"
-          class="px-4 py-2 text-[11px] font-bold cursor-pointer ${open ? 'bg-brand-light-green text-brand-green' : 'hover:text-brand-green'}">
-          ${p.name}
-        </div>`;
-                    if (open) {
+        <div
+          onclick="openProduct('${group.name}','${product.name}')"
+          class="sidebar-parent ${isOpen ? 'active' : ''}">
+          <span>${product.name}</span>
+          <span class="arrow">›</span>
+        </div>
+      `;
+
+                    /* CHILDREN (UNCHANGED CONTENT) */
+                    if (isOpen) {
                         el.innerHTML += `
-          <div class="ml-4 pl-3 border-l border-brand-green">
-            ${p.subs.map(s => `
-              <div onclick="openDetail('${s}')"
-                class="text-[10px] cursor-pointer ${selectedSub === s ? 'text-brand-green font-bold' : 'text-gray-500 hover:text-brand-green'}">
-                • ${s}
-              </div>`).join("")}
-          </div>`;
+          <div class="sidebar-children">
+            ${product.subs.map(sub => `
+              <div
+                onclick="openDetail('${sub}')"
+                class="sidebar-child ${selectedSub === sub ? 'active' : ''}">
+                ${sub}
+              </div>
+            `).join("")}
+          </div>
+        `;
                     }
                 });
             });
@@ -1303,75 +1827,447 @@ background-position: center;">
             const title = document.getElementById("gridTitle");
             const detail = document.getElementById("productDetailSection");
 
+            const detailTop = document.getElementById("productDetailTop");
+            const detailBelow = document.getElementById("productDetailBelow");
+
+            document.getElementById("materialHeader").classList.add("hidden");
+
+            /* RESET */
             grid.classList.remove("hidden");
             detail.classList.add("hidden");
+            title.innerText = "";
+            detailTop.innerHTML = "";
+            detailBelow.innerHTML = "";
 
+            /* ===================== SEARCH VIEW ===================== */
+            if (view === "search") {
+                grid.classList.remove("hidden");
+                detail.classList.add("hidden");
+
+                title.innerText = `Search Results`;
+
+                let results = [];
+
+                MD.forEach(material => {
+                    // Match material name
+                    if (material.name.toLowerCase().includes(searchTerm)) {
+                        results.push({
+                            name: material.name,
+                            image: material.image,
+                            click: `openMaterial('${material.name}')`
+                        });
+                    }
+
+                    // Match sub-products
+                    material.subs.forEach(sub => {
+                        if (sub.name.toLowerCase().includes(searchTerm)) {
+                            results.push({
+                                name: sub.name,
+                                image: sub.image,
+                                click: `openDetail('${sub.name}')`
+                            });
+                        }
+                    });
+                });
+
+                // NO RESULTS
+                if (results.length === 0) {
+                    grid.className = "grid grid-cols-1";
+                    grid.innerHTML = `
+            <div class="text-center py-24">
+                <p class="text-sm font-bold uppercase text-gray-400 mb-6">
+                    No products found
+                </p>
+                <button onclick="resetAll()"
+                        class="px-6 py-3 border text-xs font-bold uppercase
+                               hover:bg-gray-100 transition">
+                    ← Back to Products
+                </button>
+            </div>
+        `;
+                    return;
+                }
+
+                // SHOW RESULTS
+                grid.className =
+                    "grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6";
+
+                grid.innerHTML = results.map(r => `
+        <div onclick="${r.click}" class="cursor-pointer group">
+
+            <div class="aspect-square border rounded-xl p-4 bg-gray-50
+                        transition-all duration-300
+                        group-hover:border-brand-green
+                        group-hover:shadow-md">
+
+                <img src="${r.image}"
+                     class="w-full h-full object-contain
+                            transition-transform duration-300
+                            group-hover:scale-110">
+            </div>
+
+            <p class="mt-2 text-[10px] font-bold uppercase text-center
+                      text-gray-700 group-hover:text-brand-green">
+                ${r.name}
+            </p>
+        </div>
+    `).join("");
+
+                return;
+            }
+
+            /* ===================== DETAIL VIEW ===================== */
             if (view === "detail") {
                 grid.classList.add("hidden");
                 detail.classList.remove("hidden");
-                document.getElementById("detailName").innerText = selectedSub;
-                const mat = MD.find(m => m.subs.includes(selectedSub));
-                document.getElementById("detailImage").src = mat?.image || "imgs/bolt.png";
+
+                /* Resolve image safely */
+                let detailImage = "imgs/placeholder.png";
+                MD.forEach(m => {
+                    m.subs.forEach(s => {
+                        if (s.name === selectedSub) detailImage = s.image;
+                    });
+                });
+
+                /* ===================== TOP SECTION ===================== */
+                detailTop.innerHTML = `
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+
+  <!-- LEFT COLUMN -->
+  <div class="flex gap-6">
+
+    <!-- Thumbnails -->
+    <div class="flex flex-col gap-4">
+      ${[0, 90, -90, 180].map(r => `
+        <button type="button"
+          onclick="rotateMain(${r})"
+          class="w-16 h-16 border rounded-md bg-white
+                 flex items-center justify-center
+                 hover:border-brand-green
+                 focus:outline-none focus:ring-2 focus:ring-brand-green">
+          <img src="${detailImage}"
+               class="w-full h-full object-contain transform rotate-[${r}deg]">
+        </button>
+      `).join("")}
+    </div>
+
+    <!-- Main Image -->
+    <div class="flex-1 border rounded-xl p-10 bg-gray-50
+                flex items-center justify-center">
+      <img id="mainDetailImage"
+           src="${detailImage}"
+           class="max-h-[360px] object-contain transform transition-transform duration-300">
+    </div>
+
+  </div>
+
+  <!-- RIGHT COLUMN -->
+  <div>
+
+    <h1 class="text-2xl font-black uppercase mb-4">
+      ${selectedSub}
+    </h1>
+
+    <!-- Specs Summary -->
+    <table class="w-full text-xs border mb-6">
+      <tr class="bg-gray-50">
+        <th class="p-3 text-left font-bold">Standards</th>
+        <td class="p-3">DIN / ISO / ASTM / NAS</td>
+      </tr>
+      <tr>
+        <th class="p-3 text-left font-bold">Material</th>
+        <td class="p-3">Titanium / Alloy / Steel</td>
+      </tr>
+      <tr class="bg-gray-50">
+        <th class="p-3 text-left font-bold">Size Range</th>
+        <td class="p-3">M1.6 – M100</td>
+      </tr>
+      <tr>
+        <th class="p-3 text-left font-bold">Surface</th>
+        <td class="p-3">Zinc / Passivated</td>
+      </tr>
+    </table>
+
+    <!-- Quantity + CTA -->
+    <div class="flex items-center gap-4 mb-6">
+      <input type="number" value="1" min="1"
+             class="w-20 border px-3 py-2 rounded-md">
+      <button
+        class="bg-brand-green text-white px-8 py-3
+               text-xs font-bold uppercase hover:opacity-90 transition">
+        Enquire Now
+      </button>
+    </div>
+
+  </div>
+</div>
+`;
+
+                /* ===================== BELOW SECTIONS ===================== */
+                detailBelow.innerHTML = `
+<!-- Specifications & Standards -->
+<div class="mt-20 mb-16">
+  <h3 class="text-lg font-extrabold mb-4">Specifications & Standards</h3>
+  <table class="w-full text-xs border">
+    <tr class="bg-gray-50">
+      <th class="p-3 text-left font-bold">Standard</th>
+      <td class="p-3">AS9100 / ISO 9001</td>
+    </tr>
+    <tr>
+      <th class="p-3 text-left font-bold">Thread</th>
+      <td class="p-3">Metric / UN / UNJ</td>
+    </tr>
+    <tr class="bg-gray-50">
+      <th class="p-3 text-left font-bold">Tolerance</th>
+      <td class="p-3">ISO 2768</td>
+    </tr>
+  </table>
+</div>
+
+<!-- Dimensions -->
+<div class="mb-16">
+  <h3 class="text-lg font-extrabold mb-4">Dimensions</h3>
+  <table class="w-full text-xs border">
+    <tr class="bg-gray-50">
+      <th class="p-3 text-left font-bold">Diameter</th>
+      <td class="p-3">M1.6 – M100</td>
+    </tr>
+    <tr>
+      <th class="p-3 text-left font-bold">Length</th>
+      <td class="p-3">Custom</td>
+    </tr>
+  </table>
+</div>
+
+<!-- Product Description -->
+<div class="mb-16">
+  <h3 class="text-lg font-extrabold mb-4">Product Description</h3>
+  <p class="text-sm text-gray-600 leading-relaxed max-w-4xl">
+    ${selectedSub} is manufactured for demanding aerospace,
+    automotive, and industrial applications where reliability
+    and precision are critical.
+  </p>
+</div>
+
+<!-- Downloads -->
+<div class="mb-16">
+  <h3 class="text-lg font-extrabold mb-6">Downloads</h3>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    ${["Datasheet", "Material Certificate", "3D CAD Model"].map(d => `
+      <div class="border rounded-lg p-4 flex items-center gap-4
+                  hover:border-brand-green transition">
+        <i class="fas fa-file-pdf text-red-500 text-xl"></i>
+        <div>
+          <p class="text-xs font-bold">${d}</p>
+          <p class="text-[10px] text-gray-400">PDF</p>
+        </div>
+      </div>
+    `).join("")}
+  </div>
+</div>
+
+<!-- Product Variations -->
+<div class="mb-20">
+  <h3 class="text-lg font-extrabold mb-6">Product Variations</h3>
+  <div class="overflow-x-auto border rounded-lg">
+    <table class="w-full text-xs">
+      <tr class="bg-gray-50">
+        <th class="p-3">Size</th>
+        <th class="p-3">Length</th>
+        <th class="p-3">Grade</th>
+        <th class="p-3">Finish</th>
+      </tr>
+      ${Array.from({ length: 6 }).map(() => `
+        <tr class="border-t">
+          <td class="p-3">M10</td>
+          <td class="p-3">40mm</td>
+          <td class="p-3">8.8</td>
+          <td class="p-3">Zinc</td>
+        </tr>
+      `).join("")}
+    </table>
+  </div>
+</div>
+
+<!-- Related Products -->
+<div class="mt-20">
+  <div class="flex items-center justify-between mb-8">
+    <h3 class="text-lg font-extrabold uppercase">Related Products</h3>
+    <div class="h-[2px] flex-grow bg-gray-200 ml-6"></div>
+  </div>
+
+  <div id="relatedProductsGrid"
+       class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+  </div>
+</div>
+
+`;
+
                 renderRelated();
                 return;
             }
 
+            /* ===================== MATERIAL PRODUCTS + HEADER ===================== */
             if (view === "material") {
-                const m = MD.find(x => x.name === selectedMaterial);
-                title.innerText = m.name;
-                grid.className = "grid grid-cols-5 gap-8";
-                grid.innerHTML = m.subs.map(s => `
-      <div onclick="openDetail('${s}')" class="cursor-pointer text-center">
-        <div class="w-[110px] h-[125px] bg-gray-200 hexagon-clip flex items-center justify-center">
-          <img src="${m.image}" class="w-3/4">
+                const material = MD.find(m => m.name === selectedMaterial);
+                if (!material) return;
+
+                // HEADER
+                const header = document.getElementById("materialHeader");
+                header.classList.remove("hidden");
+                header.innerHTML = `
+  <div class="material-title-wrap mt-8 mb-12">
+    
+
+
+    <div class="material-title-bar">
+      ${material.name} (${material.subs.length})
+    </div>
+
+  </div>`;
+
+                title.innerText = ""; // title handled by header
+
+                grid.className =
+                    "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6";
+
+                grid.innerHTML = material.subs.map(sub => `
+        <div class="product-card">
+
+            <div class="product-img">
+                <img src="${sub.image}" alt="${sub.name}">
+            </div>
+
+            <div class="product-title">
+                ${sub.name}
+            </div>
+
+            <!-- <div class="product-desc">
+                We manufacture high-quality ${sub.name} suitable for aerospace,
+                automotive and industrial applications.
+            </div> -->
+
+            <div class="product-btn mt-4" onclick="openDetail('${sub.name}')">
+                View more details →
+            </div>
+
         </div>
-        <p class="text-[10px] font-bold mt-2">${s}</p>
-      </div>`).join("");
+    `).join("");
+
                 return;
             }
 
+            /* ===================== PRODUCT VIEW ===================== */
             if (view === "product") {
                 const g = IG.find(x => x.name === selectedGroup);
                 const p = g.products.find(x => x.name === selectedProduct);
+
                 title.innerText = selectedProduct;
                 grid.className = "grid grid-cols-4 gap-6";
+
                 grid.innerHTML = p.subs.map(s => `
       <div onclick="openDetail('${s}')" class="border rounded-xl p-6 text-center cursor-pointer hover:shadow-md">
         <p class="text-xs font-bold">${s}</p>
-      </div>`).join("");
+      </div>
+    `).join("");
                 return;
             }
 
+            /* ===================== GROUP VIEW ===================== */
             if (view === "group") {
                 const g = IG.find(x => x.name === selectedGroup);
+
                 title.innerText = selectedGroup;
-                grid.className = "grid grid-cols-3 gap-6";
+                grid.className = "grid grid-cols-1 md:grid-cols-3 gap-8";
+
                 grid.innerHTML = g.products.map(p => `
-      <div onclick="openProduct('${g.name}','${p.name}')"
-        class="border rounded-xl p-5 text-center cursor-pointer hover:shadow-md">
-        <h3 class="text-xs font-black uppercase">${p.name}</h3>
-        <p class="text-[10px] text-gray-400">${p.subs.length} Types</p>
-      </div>`).join("");
+    <div
+      onclick="openProduct('${g.name}','${p.name}')"
+      class="cursor-pointer bg-white rounded-xl border
+             transition-all duration-300
+             hover:-translate-y-2 hover:shadow-lg"
+    >
+      <div class="h-[150px] w-full overflow-hidden rounded-t-xl">
+        <img
+          src="${productImages[p.name] || 'products/industrial-engineering.png'}"
+          class="w-full h-full object-cover"
+          alt="${p.name}"
+        />
+      </div>
+
+      <div class="p-5 text-center">
+        <h3 class="text-xs font-black uppercase leading-tight">
+          ${p.name}
+        </h3>
+        <p class="text-[10px] text-gray-400 mt-1">
+          ${p.subs.length} Types
+        </p>
+      </div>
+    </div>
+  `).join("");
                 return;
             }
 
+            /* ===================== HOME (GROUPS + MATERIALS) ===================== */
             title.innerText = "Industry Groups & Materials";
+
             grid.innerHTML = `
-    <div class="grid grid-cols-3 gap-6 mb-12">
+    <!-- INDUSTRY GROUPS -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
       ${IG.map(g => `
-        <div onclick="openGroup('${g.name}')" class="border rounded-xl p-5 text-center cursor-pointer hover:shadow-md">
-          <h3 class="text-xs font-black uppercase">${g.name}</h3>
-        </div>`).join("")}
-    </div>
-    <div class="flex flex-wrap justify-center gap-6">
-      ${MD.map(m => `
-        <div onclick="openMaterial('${m.name}')" class="flex flex-col items-center cursor-pointer">
-          <div class="w-28 h-32 bg-gray-300 hexagon-clip flex items-center justify-center">
-            <img src="${m.image}" class="w-3/4">
+        <div onclick="openGroup('${g.name}')"
+          class="relative group cursor-pointer rounded-xl overflow-hidden h-[220px] shadow-md">
+
+          <img src="${groupImages[g.name]}"
+            class="w-full h-full object-cover" />
+
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+
+          <div class="absolute bottom-4 left-4 right-4 z-10">
+            <h3 class="text-white text-sm font-extrabold uppercase">
+              ${g.name}
+            </h3>
           </div>
-          <p class="text-xs font-bold mt-2">${m.name}</p>
-        </div>`).join("")}
-    </div>`;
+
+          <!-- HOVER OVERLAY -->
+          <div
+            class="absolute inset-0 bg-brand-green/90 flex items-center justify-center
+                   translate-y-full group-hover:translate-y-0
+                   transition-transform duration-500 ease-out z-20">
+            <div class="flex items-center gap-3 text-white font-black uppercase text-xs tracking-widest">
+              Explore
+              <span class="w-10 h-10 rounded-full border-2 border-white flex items-center justify-center">
+                <i class="fas fa-arrow-right"></i>
+              </span>
+            </div>
+          </div>
+
+        </div>
+      `).join("")}
+    </div>
+
+    <!-- MATERIALS (HEXAGON – BORDER CLEAR & IMAGE INSIDE) -->
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-10 gap-y-14 justify-items-center">
+  ${MD.map(m => `
+    <div
+      onclick="openMaterial('${m.name}')"
+      class="flex flex-col items-center cursor-pointer"
+    >
+
+      <div class="material-hex-outer hex-shape">
+        <div class="material-hex-inner hex-shape">
+          <img src="${m.image}" alt="${m.name}">
+        </div>
+      </div>
+
+      <p class="text-xs font-bold mt-2 leading-none uppercase text-gray-800">
+        ${m.name}
+      </p>
+
+    </div>
+  `).join("")}
+</div>
+  `;
         }
 
         /* =========================================================
@@ -1379,15 +2275,37 @@ background-position: center;">
         ========================================================= */
         function renderRelated() {
             const el = document.getElementById("relatedProductsGrid");
-            const m = MD.find(x => x.subs.includes(selectedSub));
-            if (!m) return;
-            el.innerHTML = m.subs.filter(s => s !== selectedSub).slice(0, 5).map(s => `
-    <div onclick="openDetail('${s}')" class="cursor-pointer">
-      <div class="aspect-square border rounded-xl p-4 bg-gray-50">
-        <img src="${m.image}" class="w-full h-full object-contain">
-      </div>
-      <h5 class="text-[10px] font-bold mt-2 uppercase">${s}</h5>
-    </div>`).join("");
+            let parent = null;
+
+            MD.forEach(m => {
+                if (m.subs.some(s => s.name === selectedSub)) parent = m;
+            });
+
+            if (!parent) return;
+
+            el.innerHTML = parent.subs
+                .filter(s => s.name !== selectedSub)
+                .slice(0, 5)
+                .map(s => `
+            <div onclick="openDetail('${s.name}')"
+                 class="cursor-pointer group">
+
+                <div class="aspect-square border rounded-xl p-3 bg-gray-50
+                            transition-all group-hover:border-brand-green
+                            group-hover:shadow-md">
+
+                    <img src="${s.image}"
+                         class="w-full h-full object-contain
+                                transition-transform duration-300
+                                group-hover:scale-110">
+                </div>
+
+                <h5 class="mt-2 text-[10px] font-bold uppercase text-gray-700
+                           group-hover:text-brand-green transition-colors">
+                    ${s.name}
+                </h5>
+            </div>
+        `).join("");
         }
 
         /* =========================================================
@@ -1397,9 +2315,22 @@ background-position: center;">
         function openProduct(g, p) { view = "product"; selectedGroup = g; selectedProduct = p; selectedMaterial = selectedSub = null; refresh(); }
         function openMaterial(m) { view = "material"; selectedMaterial = m; selectedGroup = selectedProduct = selectedSub = null; refresh(); }
         function openDetail(s) { view = "detail"; selectedSub = s; refresh(); window.scrollTo({ top: 350, behavior: "smooth" }); }
-        function resetAll() { view = "home"; selectedGroup = selectedProduct = selectedMaterial = selectedSub = null; refresh(); }
+
+        function resetAll() {
+            clearSearchState();
+            view = "home";
+            selectedGroup = selectedProduct = selectedMaterial = selectedSub = null;
+            refresh();
+        }
+
+        function clearSearchState() {
+            searchTerm = "";
+            const input = document.getElementById("productSearch");
+            if (input) input.value = "";
+        }
 
         function breadcrumbGroup(groupName) {
+            clearSearchState();
             view = "group";
             selectedGroup = groupName;
             selectedProduct = null;
@@ -1409,6 +2340,7 @@ background-position: center;">
         }
 
         function breadcrumbProduct(groupName, productName) {
+            clearSearchState();
             view = "product";
             selectedGroup = groupName;
             selectedProduct = productName;
@@ -1418,12 +2350,28 @@ background-position: center;">
         }
 
         function breadcrumbMaterial(materialName) {
+            clearSearchState();
             view = "material";
             selectedMaterial = materialName;
             selectedGroup = null;
             selectedProduct = null;
             selectedSub = null;
             refresh();
+        }
+
+        function swapImage(src, rotationClass) {
+            const img = document.getElementById("mainDetailImage");
+            img.className = "max-h-[420px] object-contain transition-transform duration-300 " + rotationClass;
+            img.src = src;
+        }
+        function rotateMain(degrees) {
+            const img = document.getElementById("mainDetailImage");
+            img.style.transform = `rotate(${degrees}deg)`;
+        }
+
+        function rotate360(degrees) {
+            const img = document.getElementById("mainDetailImage");
+            img.style.transform = `rotateY(${degrees}deg)`;
         }
 
 
