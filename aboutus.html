@@ -31,6 +31,17 @@
     </script>
 
     <style>
+        * {
+            max-width: 100vw;
+        }
+
+
+        html,
+        body {
+            width: 100%;
+            overflow-x: hidden;
+        }
+
         section {
             scroll-margin-top: 80px;
         }
@@ -381,6 +392,30 @@
         }
     </style>
 
+    <style>
+        /* FRAME ENTRY */
+        /* FRAME movement only (no opacity, no bg change) */
+        @keyframes frameInLeft {
+            from {
+                transform: translateX(-60px);
+            }
+
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes frameInRight {
+            from {
+                transform: translateX(60px);
+            }
+
+            to {
+                transform: translateX(0);
+            }
+        }
+    </style>
+
 </head>
 
 <body class="bg-white">
@@ -645,7 +680,7 @@
             </div>
         </nav>
 
-        <div class="relative w-full h-[960px] 
+        <div class="relative w-full h-[960px]
 overflow-hidden flex  justify-center items-center text-center text-white \">
 
             <img src="imgs/image 1.png" alt="Industrial pouring molten metal"
@@ -907,96 +942,90 @@ overflow-hidden flex  justify-center items-center text-center text-white \">
 
         </section>
 
-        <section class="relative grid grid-cols-1 md:grid-cols-2 overflow-hidden">
+        <section class="relative grid grid-cols-1 md:grid-cols-2 min-h-screen">
 
-            <!-- LEFT : Image (Clear, No Overlay) -->
-            <div class="relative">
-                <img src="imgs/abouthome.jpeg" alt="Heat treatment of a metal fastener"
-                    class="object-cover w-full h-full min-h-[300px] reveal-left">
+            <!-- LEFT IMAGE (FIXED, NO SCROLL) -->
+            <div class="relative h-full">
+                <img src="imgs/new/finalabout-factory.png" class="object-cover w-full h-full max-w-full reveal-left">
             </div>
 
-            <!-- RIGHT : Green Overlay (Background Only) -->
-            <div class="absolute top-0 right-0 h-full w-full md:w-1/2
-               bg-gradient-to-l from-brand-green-bg/90 to-black">
-            </div>
+            <!-- RIGHT CONTENT (SCROLLS INTERNALLY) -->
+            <div class="relative
+     bg-gradient-to-l from-black to-brand-green-bg/90
+     flex items-center">
 
-            <!-- RIGHT : Content (Above Overlay) -->
-            <div class="relative z-10 flex flex-col justify-center p-12 text-white md:p-16 lg:p-20">
+                <div class="flex flex-col px-10 py-14 md:px-16 md:py-16 lg:px-20 lg:py-20">
 
-                <img src="imgs/whitenitha-removebg-preview.png" alt="NITHA Aerospace Logo" class="mb-4 reveal-right"
-                    style="width: 100px; height: 100px;">
+                    <img src="imgs/whitenitha-removebg-preview.png" alt="NITHA Aerospace Logo" class="mb-4 reveal-right"
+                        style="width:100px;height:100px;">
 
-                <h2 class="mb-6 font-extrabold text-3xl md:text-[44px] leading-tight reveal-right">
-                    About NAPL
-                </h2>
+                    <h2 class="mb-6 text-white font-extrabold text-3xl md:text-[44px] leading-tight reveal-right">
+                        About NAPL
+                    </h2>
 
-                <div class="space-y-4 text-[15px] leading-relaxed text-justify reveal-right">
+                    <div class="space-y-4 text-[15px] text-white leading-relaxed text-justify reveal-right">
+                        <p>
+                            NITHA Aerospace Private Limited is an engineering-driven
+                            manufacturer of aerospace-grade fasteners and precision
+                            components, supported by Indo-European applied industrial
+                            R&D capabilities.
+                        </p>
 
-                    <p>
-                        NITHA Aerospace Private Limited is an engineering-driven
-                        manufacturer of aerospace-grade fasteners and precision
-                        components, supported by Indo-European applied industrial
-                        R&D capabilities.
-                    </p>
+                        <p>
+                            Powered by <strong>FASTENERS INTELLIGENCE SYSTEM™ (FIS™)</strong>,
+                            we deliver traceable, test-validated fasteners for Aerospace,
+                            Defence, Oil & Gas and other critical industries.
+                        </p>
 
-                    <p>
-                        Powered by <strong>FASTENERS INTELLIGENCE SYSTEM™ (FIS™)</strong>,
-                        we deliver traceable, test-validated fasteners for Aerospace,
-                        Defence, Oil & Gas and other critical industries.
-                    </p>
+                        <p>
+                            NAPL is a precision engineering company delivering
+                            high-performance fasteners and components to the Automotive,
+                            Aerospace, Defence, Oil & Gas, and Motorsport industries
+                            worldwide. Our products are renowned for their strength,
+                            reliability, and endurance—performing flawlessly under dynamic
+                            loads, vibration, and extreme temperatures.
+                        </p>
 
-                    <p>
-                        NAPL is a precision engineering company delivering
-                        high-performance fasteners and components to the Automotive,
-                        Aerospace, Defence, Oil & Gas, and Motorsport industries
-                        worldwide. Our products are renowned for their strength,
-                        reliability, and endurance—performing flawlessly under dynamic
-                        loads, vibration, and extreme temperatures.
-                    </p>
+                        <p>
+                            <strong>Our Indo-European R&D laboratories</strong> specialize
+                            in applied industrial research and the technological
+                            advancement of key metal sectors, including aluminium, copper,
+                            alloy steel, brass, composites, titanium, and zinc.
+                        </p>
 
-                    <p>
-                        <strong>Our Indo-European R&D laboratories</strong> specialize
-                        in applied industrial research and the technological
-                        advancement of key metal sectors, including aluminium, copper,
-                        alloy steel, brass, composites, titanium, and zinc.
-                    </p>
+                        <p>
+                            We offer cutting-edge R&D services and technical solutions for
+                            new product development, while also optimizing existing
+                            products, business operations, and plant production processes.
+                        </p>
 
-                    <p>
-                        We offer cutting-edge R&D services and technical solutions for
-                        new product development, while also optimizing existing
-                        products, business operations, and plant production processes.
-                    </p>
+                        <p>
+                            With deep expertise in precision threads, tensile strength
+                            (800–1200 MPa), and custom tolerances, we ensure every product
+                            meets rigorous international quality standards. Our advanced
+                            surface treatments—Zinc/Nickel Plating, Moly Coating, and
+                            Phosphate Passivation—enhance corrosion resistance and
+                            durability under demanding conditions.
+                        </p>
 
-                    <p>
-                        With deep expertise in precision threads, tensile strength
-                        (800–1200 MPa), and custom tolerances, we ensure every product
-                        meets rigorous international quality standards. Our advanced
-                        surface treatments—Zinc/Nickel Plating, Moly Coating, and
-                        Phosphate Passivation—enhance corrosion resistance and
-                        durability under demanding conditions.
-                    </p>
+                        <p>
+                            NAPL empowers OEMs and Tier-1 suppliers across the globe to
+                            build stronger, safer, and more efficient systems through
+                            engineering excellence.
+                        </p>
 
-                    <p>
-                        NAPL empowers OEMs and Tier-1 suppliers across the globe to
-                        build stronger, safer, and more efficient systems through
-                        engineering excellence.
-                    </p>
+                        <p>
+                            Our facilities unite Metallurgy, Machining, Heat Treatment,
+                            Thread Rolling, and Coating under one roof—delivering
+                            global-grade engineering materials and performance assurance.
+                        </p>
 
-                    <p>
-                        Our facilities unite Metallurgy, Machining, Heat Treatment,
-                        Thread Rolling, and Coating under one roof—delivering
-                        global-grade engineering materials and performance assurance.
-                    </p>
-
-                    <p class="text-center text-2xl font-semibold mt-6">
-                        “From melting to plating, we engineer the science behind every
-                        layer of metal.”
-                    </p>
-
+                    </div>
                 </div>
             </div>
 
         </section>
+
 
         <section class="bg-white overflow-hidden">
             <div class="py-20 flex flex-col items-center reveal-up">
@@ -1022,144 +1051,151 @@ overflow-hidden flex  justify-center items-center text-center text-white \">
                     </div>
 
                 </div>
-        </section>
-
-        <section class="py-20">
-            <div class="container px-6 mx-auto">
-                <div class="mb-16 text-center">
-                    <h2 class="text-4xl md:text-5xl font-extrabold text-brand-text-dark reveal">Forged
-                        with Passion, Built for
-                        India</h2>
-                </div>
-                <div class="grid max-w-6xl gap-16 mx-auto md:grid-cols-2">
-                    <div class="reveal-left">
-                        <p class="mb-4 text-2xl font-extrabold tracking-widest  text-brand-green-dark underline">
-                            Vision</p>
-                        <h3 class="text-2xl md:text-3xl font-semibold text-gray-500">
-                            To be the Leading Global Manufacturer of
-                            High-Quality Fasteners for
-                            <span class="italic font-bold text-brand-green-dark">Aviation,
-                                Space, Defence, Oil & Gas,
-                                Medical, Nuclear and other engineering
-                                industries </span>
-                            through Advanced Technology and Innovation.
-                        </h3>
-                    </div>
-
-                    <div class="space-y-6 text-brand-text-gray reveal-right">
-                        <h2 class="text-3xl font-bold text-brand-text-dark">The
-                            Minds Behind the Materials</h2>
-                        <p class="text-justify">At NITHA Aerospace Pvt
-                            Ltd,
-                            our team is the foundation of our
-                            engineering excellence.</p>
-                        <p class="text-justify">From material selection
-                            and
-                            process planning to machining, heat
-                            treatment, coating, and
-                            testing.</p>
-                        <p class="text-justify">Backed by a culture of
-                            continuous improvement, process innovation,
-                            and
-                            technical
-                            leadership.</p>
-                        <br>
-
-                    </div>
-
-                </div>
             </div>
         </section>
 
-        <section class="py-20 bg-gray-50/50">
-            <div class="container px-6 mx-auto">
-                <div class="grid max-w-6xl gap-16 mx-auto md:grid-cols-2">
+        <section class="w-full">
 
-                    <div class="space-y-10 text-brand-text-gray">
-                        <div class="reveal-left">
-                            <h2 class="mb-6 text-3xl font-bold text-brand-text-dark">What
-                                Defines Our Leadership?</h2>
-                            <ul class="space-y-3">
-                                <li class="flex items-start gap-3"><i
-                                        class="mt-1 text-xl fas fa-check-circle text-brand-green-dark"></i><span>Deep
-                                        domain knowledge in aerospace,
-                                        metallurgy, and
-                                        manufacturing</span></li>
-                                <li class="flex items-start gap-3"><i
-                                        class="mt-1 text-xl fas fa-check-circle text-brand-green-dark"></i><span>A
-                                        commitment to indigenization and
-                                        nation-building</span></li>
-                                <li class="flex items-start gap-3"><i
-                                        class="mt-1 text-xl fas fa-check-circle text-brand-green-dark"></i><span>Decision-making
-                                        grounded in technical data,
-                                        compliance, and
-                                        ethics</span></li>
-                                <li class="flex items-start gap-3"><i
-                                        class="mt-1 text-xl fas fa-check-circle text-brand-green-dark"></i><span>On-the-ground
-                                        leadership — not just boardroom
-                                        presence</span></li>
-                            </ul>
-                        </div>
-                    </div>
+            <!-- TITLE -->
+            <div class="py-20 text-center bg-white">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-brand-text-dark reveal">
+                    Forged with Passion, Built for India
+                </h2>
+            </div>
 
-                    <div class="flex gap-6 reveal-right">
+            <!-- FULL WIDTH ROW -->
+            <div class="grid grid-cols-1 md:grid-cols-2 w-full">
 
-                        <div class="w-1 bg-brand-green-dark/30"></div>
-                        <div>
-                            <p class="mb-4 text-2xl font-extrabold tracking-widest text-brand-green-dark underline">
-                                Mission
-                            </p>
-                            <p class="mb-6 text-2xl md:text-3xl font-semibold text-gray-500">
-                                To be a global leader in fasteners
-                                manufacturing by setting benchmarks for
-                                Quality and
-                                Service followed by
-                                <br>
-                                The principles of CPES
-                            </p>
-                            <ul class="space-y-4">
-                                <div class="flex ">
+                <!-- VISION – WHITE -->
+                <div class="bg-brand-gray-input/90 px-10 md:px-20 py-20 reveal-left ">
+                    <p class="mb-4 text-2xl font-extrabold tracking-widest text-brand-green-dark underline">
+                        Vision
+                    </p>
+                    <h3 class="text-2xl md:text-3xl font-semibold text-gray-500 leading-relaxed">
+                        To be the Leading Global Manufacturer of High-Quality Fasteners for
+                        <span class="italic font-bold text-brand-green-dark">
+                            Aviation, Space, Defence, Oil & Gas, Medical, Nuclear
+                        </span>
+                        and other engineering industries through Advanced Technology and Innovation.
+                    </h3>
+                </div>
 
-                                    <div class="mx-4 ">
-                                        <li class="flex items-center gap-4 my-2">
-                                            <div
-                                                class="flex items-center justify-center w-10 h-10 font-bold text-white bg-brand-green-dark hexagon-clip">
-                                                C</div><span
-                                                class="text-sm font-extrabold text-brand-text-gray">Customer
-                                                Satisfaction</span>
-                                        </li>
-                                        <li class="flex items-center gap-4">
-                                            <div
-                                                class="flex items-center justify-center w-10 h-10 font-bold text-white bg-brand-green-dark hexagon-clip">
-                                                P</div><span class="text-sm font-extrabold text-brand-text-gray">Process
-                                                Improvement</span>
-                                        </li>
-                                    </div>
-                                    <div>
-                                        <li class="flex items-center gap-4 my-2">
-                                            <div
-                                                class="flex items-center justify-center w-10 h-10 font-bold text-white bg-brand-green-dark hexagon-clip">
-                                                E</div><span
-                                                class="text-sm font-extrabold text-brand-text-gray">Employee
-                                                Involvement</span>
-                                        </li>
-                                        <li class="flex items-center gap-4">
-                                            <div
-                                                class="flex items-center justify-center w-10 h-10 font-bold text-white bg-brand-green-dark hexagon-clip">
-                                                S</div>
-                                            <span class="text-sm font-extrabold text-brand-text-gray">Social
-                                                Responsibility</span>
-                                        </li>
-                                    </div>
-                                </div>
-                            </ul>
+                <!-- MINDS – GREEN -->
+                <div class="bg-brand-green-dark/90
+            px-10 md:px-20 py-20
+            text-white reveal-left
+            rounded-tr-[30px]">
+                    <h2 class=" text-3xl font-bold mb-6">
+                        The Minds Behind the Materials
+                    </h2>
+
+                    <p class="mb-4 text-white text-justify">
+                        At NITHA Aerospace Pvt Ltd, our team is the foundation of our engineering excellence.
+                    </p>
+
+                    <p class="mb-4 text-white text-justify">
+                        From material selection and process planning to machining,
+                        heat treatment, coating, and testing.
+                    </p>
+
+                    <p class="text-white text-justify">
+                        Backed by a culture of continuous improvement, process innovation,
+                        and technical leadership.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+        <section class="w-full">
+
+            <!-- FULL WIDTH ROW -->
+            <div class="grid grid-cols-1 md:grid-cols-2 w-full">
+
+                <!-- LEADERSHIP – GREEN -->
+                <div class="bg-brand-green-dark/90
+            px-10 md:px-20 py-20
+            text-white reveal-left  rounded-bl-[30px]">
+
+                    <h2 class="mb-6 text-3xl font-bold">
+                        What Defines Our Leadership?
+                    </h2>
+
+                    <ul class="space-y-4 text-white">
+                        <li class="flex items-start gap-3">
+                            <i class="mt-1 text-xl fas fa-check-circle text-brand-lime-green"></i>
+                            <span>Deep domain knowledge in aerospace, metallurgy, and manufacturing</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="mt-1 text-xl fas fa-check-circle text-brand-lime-green"></i>
+                            <span>Commitment to indigenization and nation-building</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="mt-1 text-xl fas fa-check-circle text-brand-lime-green"></i>
+                            <span>Decision-making grounded in technical data, compliance, and ethics</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="mt-1 text-xl fas fa-check-circle text-brand-lime-green"></i>
+                            <span>On-the-ground leadership — not just boardroom presence</span>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <!-- MISSION – WHITE -->
+                <div class="bg-brand-gray-input/90 px-10 md:px-20 py-20 reveal-right flex">
+
+
+                    <div>
+                        <p class="mb-4 text-2xl font-extrabold tracking-widest text-brand-green-dark underline">
+                            Mission
+                        </p>
+
+                        <p class="mb-8 text-2xl md:text-3xl font-semibold text-gray-500 leading-relaxed">
+                            To be a global leader in fasteners manufacturing by setting benchmarks for
+                            Quality and Service followed by the principles of CPES.
+                        </p>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 bg-brand-green-dark text-white font-bold
+                        flex items-center justify-center hexagon-clip">C</div>
+                                <span class="text-sm font-extrabold text-brand-text-gray">
+                                    Customer Satisfaction
+                                </span>
+                            </div>
+
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 bg-brand-green-dark text-white font-bold
+                        flex items-center justify-center hexagon-clip">P</div>
+                                <span class="text-sm font-extrabold text-brand-text-gray">
+                                    Process Improvement
+                                </span>
+                            </div>
+
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 bg-brand-green-dark text-white font-bold
+                        flex items-center justify-center hexagon-clip">E</div>
+                                <span class="text-sm font-extrabold text-brand-text-gray">
+                                    Employee Involvement
+                                </span>
+                            </div>
+
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 bg-brand-green-dark text-white font-bold
+                        flex items-center justify-center hexagon-clip">S</div>
+                                <span class="text-sm font-extrabold text-brand-text-gray">
+                                    Social Responsibility
+                                </span>
+                            </div>
                         </div>
                     </div>
 
                 </div>
+
             </div>
         </section>
-        <div class="max-w-[1000px] mx-auto px-6 py-12 reveal-up">
+        <div class="max-w-[1000px] mx-auto px-6 py-12 reveal-up flex flex-col items-center ">
+            <img src="imgs/nitha_logo_top.jpg" alt="" style="width: 90px; height: 60px; margin-bottom: 4px;">
             <h2 class="mb-8 text-3xl font-bold text-brand-green-dark text-center underline">IMS-Policy</h2>
 
             <div class="flex flex-col items-center space-y-6 text-center">
@@ -1192,181 +1228,112 @@ overflow-hidden flex  justify-center items-center text-center text-white \">
                 </p>
             </div>
         </div>
-
-        <section class="bg-white text-brand-text-gray py-24">
-            <div class="container px-6 mx-auto ">
-
-                <!-- SECTION HEADER -->
-                <div class="max-w-3xl mx-auto mb-20 text-center reveal-up">
-                    <p class="mb-4 text-2xl underline font-extrabold tracking-tight text-brand-green-dark">
-                        Meet Our Leadership Team
-                    </p>
-
-                    <h2 class="text-4xl font-bold text-gray-900 md:text-5xl">
-                        Leading with Vision. Delivering with Precision.
-                    </h2>
-
-                    <p class="mt-6 text-lg text-gray-600">
-                        At NAPL, our leadership blends deep technical expertise...
-                    </p>
-                </div>
-
-                <!-- LEADERS -->
-                <div class="max-w-7xl mx-auto space-y-24">
-
-                    <!-- PERSON 1 -->
-                    <div class="grid items-center gap-12 md:grid-cols-3 md:gap-16 group reveal-left">
-
-                        <!-- IMAGE -->
-                        <div class="flex justify-center md:justify-end">
-                            <div
-                                class="w-64 h-64 md:w-80 md:h-80 bg-brand-green-dark  p-1 hexagon-clip shadow-xl group-hover:shadow-2xl transition">
-                                <div class="w-full h-full bg-white hexagon-clip">
-                                    <img src="imgs/vasa.jpg" alt="Vasanth Murugan"
-                                        class="object-cover w-full h-full hexagon-clip">
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- CONTENT -->
-                        <div class="md:col-span-2 text-center md:text-left">
-                            <h3 class="text-3xl font-extrabold text-brand-green-dark tracking-tight">
-                                Vasanth Murugan
-                                <span class="text-xl align-middle opacity-60">,</span>
-                                <span class="text-lg font-semibold text-gray-600">
-                                    M.E., MBA (India)
-                                </span>
-                            </h3>
-
-                            <div class="w-16 h-[3px] bg-brand-green-dark mx-auto md:mx-0 my-3"></div>
-
-                            <p class="text-gray-800 font-semibold">
-                                Founder & CEO
-                            </p>
-
-                            <p class="mt-3 text-gray-600 leading-relaxed max-w-xl mx-auto md:mx-0">
-                                Excellence in heat treatment and metallurgical engineering solutions.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- PERSON 2 -->
-                    <div class="grid items-center gap-12 md:grid-cols-3 md:gap-16 group reveal-right">
-
-                        <!-- IMAGE -->
-                        <div class="flex justify-center md:justify-end">
-                            <div
-                                class="w-64 h-64 md:w-80 md:h-80 bg-brand-green-dark p-1 hexagon-clip shadow-xl group-hover:shadow-2xl transition">
-                                <div class="w-full h-full bg-white hexagon-clip">
-                                    <img src="imgs/karthik_ashogan.jpg" alt="Karthick Asokan"
-                                        class="object-cover w-full h-full hexagon-clip">
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- CONTENT -->
-                        <div class="md:col-span-2 text-center md:text-left">
-                            <h3 class="text-2xl md:text-3xl font-extrabold text-brand-green-dark tracking-tight">
-                                Mr. Karthick Asokan
-                                <span class="text-lg align-middle opacity-60">,</span>
-                                <span class="text-base md:text-lg font-semibold text-gray-600">
-                                    M.S (The Netherlands), MBA (Defence & Aerospace)
-                                </span>
-                            </h3>
-
-                            <div class="w-16 h-[3px] bg-brand-green-dark mx-auto md:mx-0 my-3"></div>
-
-                            <p class="font-semibold text-gray-800">
-                                VP – NAPL
-                            </p>
-
-                            <p class="mt-3 text-gray-600 max-w-xl mx-auto md:mx-0">
-                                Former Country Head (Torpedo Division), Leonardo S.p.A – Italy
-                            </p>
-
-                            <p class="mt-2 text-gray-600 max-w-xl mx-auto md:mx-0">
-                                Philips Innovation Award Winner – The Netherlands
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
         <section class="bg-white py-24">
-            <div class="max-w-7xl mx-auto px-6">
+            <!-- HEADER -->
+            <div class="max-w-4xl mx-auto px-6 text-center reveal-up">
+                <img src="imgs/nithaa-.png" alt="NITHA Logo" class="mx-auto w-28 h-auto">
 
-                <!-- GRID WRAPPER -->
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+                <h2 class="mb-20 text-4xl md:text-5xl text-brand-dark-green/90
+                   font-extrabold tracking-widest leading-tight">
+                    Leading with Vision<br />
+                    Delivering with Precision
+                </h2>
+            </div>
 
-                    <!-- LEFT TITLE -->
-                    <div class="lg:col-span-4">
-                        <h2 class="text-5xl md:text-6xl font-extrabold tracking-widest leading-tight">
-                            BOARD OF<br />DIRECTORS
-                        </h2>
+            <!-- LEADERS -->
+            <div class="max-w-7xl mx-auto space-y-24 px-6">
+
+                <!-- LEADER BLOCK -->
+                <div class="flex items-center">
+
+                    <!-- IMAGE -->
+                    <div class="relative w-[300px] h-[360px] flex-shrink-0 reveal-left">
+                        <img src="imgs/vasa-removebg-preview.png" alt="Vasanth Murugan"
+                            class="w-full h-full object-cover mx-auto">
+
+                        <!-- CAMERA CORNERS -->
+                        <span
+                            class="absolute -top-3 -left-3 w-6 h-6 border-t-2 border-l-2 border-brand-green-light"></span>
+                        <span
+                            class="absolute -top-3 -right-3 w-6 h-6 border-t-2 border-r-2 border-brand-green-light"></span>
+                        <span
+                            class="absolute -bottom-3 -left-3 w-6 h-6 border-b-2 border-l-2 border-brand-green-light"></span>
+                        <span
+                            class="absolute -bottom-3 -right-3 w-6 h-6 border-b-2 border-r-2 border-brand-green-light"></span>
                     </div>
 
-                    <!-- RIGHT CONTENT -->
-                    <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-16">
+                    <!-- TEXT -->
+                    <div class="ml-10 flex flex-col justify-center reveal-right
+                       bg-gray-100 h-[300px] 
+                       w-[830px] text-center p-6 rounded-xl">
 
-                        <!-- DIRECTOR 1 -->
-                        <div class="text-center">
+                        <!-- NAME + DEGREE -->
+                        <h3 class="text-3xl font-extrabold text-brand-green-dark">
+                            Vasanth Murugan
+                            <span class="text-lg font-semibold text-gray-500">
+                                , M.E., MBA
+                            </span>
+                        </h3>
 
-                            <!-- IMAGE FRAME -->
-                            <div class="relative mx-auto w-[280px] h-[360px] bg-black">
-                                <img src="imgs/vasa.jpg" alt="Vasanth Murugan" class="w-full h-full object-cover" />
+                        <!-- POSITION -->
+                        <p class="mt-3 text-2xl font-bold text-brand-green-dark/80">
+                            Founder &amp; Chief Executive Officer
+                        </p>
 
-                                <!-- CORNER BRACKETS -->
-                                <span class="absolute -top-3 -left-3 w-6 h-6 border-t-2 border-l-2 border-black"></span>
-                                <span
-                                    class="absolute -top-3 -right-3 w-6 h-6 border-t-2 border-r-2 border-black"></span>
-                                <span
-                                    class="absolute -bottom-3 -left-3 w-6 h-6 border-b-2 border-l-2 border-black"></span>
-                                <span
-                                    class="absolute -bottom-3 -right-3 w-6 h-6 border-b-2 border-r-2 border-black"></span>
-                            </div>
-
-                            <!-- TEXT -->
-                            <h3 class="mt-8 text-2xl font-bold text-gray-900">
-                                Vasanth Murugan
-                            </h3>
-                            <p class="mt-2 text-gray-600 font-medium">
-                                Founder &amp; CEO
-                            </p>
-                        </div>
-
-                        <!-- DIRECTOR 2 -->
-                        <div class="text-center">
-
-                            <!-- IMAGE FRAME -->
-                            <div class="relative mx-auto w-[280px] h-[360px] bg-black">
-                                <img src="imgs/karthik_ashogan.jpg" alt="Karthick Asokan"
-                                    class="w-full h-full object-cover" />
-
-                                <!-- CORNER BRACKETS -->
-                                <span class="absolute -top-3 -left-3 w-6 h-6 border-t-2 border-l-2 border-black"></span>
-                                <span
-                                    class="absolute -top-3 -right-3 w-6 h-6 border-t-2 border-r-2 border-black"></span>
-                                <span
-                                    class="absolute -bottom-3 -left-3 w-6 h-6 border-b-2 border-l-2 border-black"></span>
-                                <span
-                                    class="absolute -bottom-3 -right-3 w-6 h-6 border-b-2 border-r-2 border-black"></span>
-                            </div>
-
-                            <!-- TEXT -->
-                            <h3 class="mt-8 text-2xl font-bold text-gray-900">
-                                Karthick Asokan
-                            </h3>
-                            <p class="mt-2 text-gray-600 font-medium">
-                                VP – NAPL
-                            </p>
-                        </div>
-
+                        <!-- DESCRIPTION -->
+                        <p class="mt-4 text-black font-semibold leading-relaxed">
+                            Excellence in Metallurgical Engineering Solutions.
+                        </p>
                     </div>
+
                 </div>
+
+                <!-- LEADER BLOCK -->
+                <div class="flex items-center">
+
+                    <!-- IMAGE -->
+                    <div class="relative w-[300px] h-[360px] flex-shrink-0 reveal-left">
+                        <img src="imgs/karthik_ashogan.jpg" alt="Karthick Asokan" class="w-full h-full object-cover mx-auto">
+                        <!-- CAMERA CORNERS -->
+                        <span
+                            class="absolute -top-3 -left-3 w-6 h-6 border-t-2 border-l-2 border-brand-green-light"></span>
+                        <span
+                            class="absolute -top-3 -right-3 w-6 h-6 border-t-2 border-r-2 border-brand-green-light"></span>
+                        <span
+                            class="absolute -bottom-3 -left-3 w-6 h-6 border-b-2 border-l-2 border-brand-green-light"></span>
+                        <span
+                            class="absolute -bottom-3 -right-3 w-6 h-6 border-b-2 border-r-2 border-brand-green-light"></span>
+                    </div>
+
+                    <!-- TEXT -->
+                    <div class="ml-10 flex flex-col justify-center reveal-right
+                       bg-gray-100 h-[300px] mx-10
+                       w-[830px] text-center p-6 rounded-xl">
+
+                        <!-- NAME + DEGREE -->
+                        <h3 class="text-3xl font-extrabold text-brand-green-dark">
+                            Karthick Asokan
+                            <span class="text-lg font-semibold text-gray-500">
+                                , M.S (The Netherlands), MBA (Defence & Aerospace)
+                            </span>
+                        </h3>
+
+                        <!-- POSITION -->
+                        <p class="mt-3 text-2xl font-bold text-brand-green-dark/80">
+                            Vice President – International Sales &amp; Marketing
+                        </p>
+
+                        <!-- DESCRIPTION -->
+                        <p class="mt-4 text-black font-semibold leading-relaxed">
+                            Former Country Head (Torpedo Division), Leonardo S.p.A – Italy
+                        </p>
+                    </div>
+
+                </div>
+
             </div>
         </section>
+
 
 
         <section class="relative text-white bg-dots overflow-hidden py-20 lg:py-24"
@@ -1840,48 +1807,20 @@ background-position: center;">
             </div>
         </footer>
 
-        <div class="relative z-20 py-4 text-gray-400" style="background: #0b180d; border-top: 1px solid white;">
+        <div class="relative z-20 py-4 text-gray-400 " style="background: #0b180d; border-top: 1px solid white;">
             <div class="container flex flex-col items-center justify-between px-6 mx-auto text-sm md:flex-row">
                 <p class="mb-4 md:mb-0">
-                    www.nithaaerospace.in © Copyright and Private Limited.
-                    All Rights Reserved |
-                    <a href="Terms.html" id="terms" class="hover:text-white">
-                        Terms of Access
-                    </a>
+                    www.nithaaerospace.in © Copyright and private limited. All Rights Reserved | <a href="Terms.html"
+                        id="terms">Terms of Access</a>
                 </p>
-
-                <!-- Social Media Icons -->
-                <div class="flex space-x-4 text-base">
-                    <!-- Facebook -->
-                    <a href="#" class="w-9 h-9 flex items-center justify-center rounded-full
-                       text-white hover:bg-blue-600
-                       transition-all duration-200">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-
-                    <!-- Twitter (X) -->
-                    <a href="#" class="w-9 h-9 flex items-center justify-center rounded-full
-                       text-white hover:bg-black
-                       transition-all duration-200">
+                <div class="flex space-x-6 text-base">
+                    <a href="#" class="transition-colors hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="transition-colors hover:text-white"><i class="fab fa-google-plus-g"></i></a><a
+                        href="#" class="transition-colors hover:text-white">
                         <i class="fa-brands fa-x-twitter"></i>
                     </a>
-
-                    <!-- Instagram -->
-                    <!-- Instagram -->
-                    <a href="#" class="w-9 h-9 flex items-center justify-center rounded-full
-          text-white
-          hover:bg-[radial-gradient(circle_at_30%_107%,#fdf497_0%,#fdf497_5%,#fd5949_45%,#d6249f_60%,#285AEB_90%)]
-          transition-all duration-200">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-
-
-                    <!-- LinkedIn -->
-                    <a href="#" class="w-9 h-9 flex items-center justify-center rounded-full
-                       text-white hover:bg-blue-700
-                       transition-all duration-200">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
+                    <a href="#" class="transition-colors hover:text-white"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="transition-colors hover:text-white"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
         </div>
