@@ -3326,14 +3326,23 @@ background-position: center;">
             const preloader = document.getElementById("preloader");
             const main = document.getElementById("main-content");
 
-            // lock scroll
+            // If already visited in this session, skip preloader
+            if (sessionStorage.getItem("preloaderShown") === "true") {
+                preloader.remove();
+                main.style.display = "block";
+                return;
+            }
+
+            // Mark preloader as shown for this session
+            sessionStorage.setItem("preloaderShown", "true");
+
+            // Lock scroll
             document.documentElement.style.overflow = "hidden";
             document.body.style.overflow = "hidden";
 
-            // safety: ensure main content hidden
             main.style.display = "none";
 
-            // remove preloader after 5s
+            // Hide preloader after delay
             setTimeout(() => {
                 preloader.style.transition = "opacity 0.6s ease";
                 preloader.style.opacity = "0";
@@ -3342,7 +3351,7 @@ background-position: center;">
                     preloader.remove();
                     main.style.display = "block";
 
-                    // unlock scroll
+                    // Unlock scroll
                     document.documentElement.style.overflow = "";
                     document.body.style.overflow = "";
                 }, 600);
