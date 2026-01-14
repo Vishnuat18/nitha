@@ -1,1 +1,1500 @@
-<h1>This page is under Development</h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NITHA Aerospace - Contact Page</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="imgs/nithaa-removebg-preview.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script type="text/javascript">
+        function redirectMobile() {
+            // Check browser window width
+            if (window.innerWidth <= 768) {
+                window.location.href = "mobileContact.html";
+            }
+        }
+
+        // 1. Check immediately when the page loads
+        redirectMobile();
+
+        // 2. Check whenever the window is resized
+        window.addEventListener('resize', redirectMobile);
+    </script>
+
+    <style>
+        /* ===============================
+   SCROLL REVEAL BASE
+================================ */
+        .reveal {
+            opacity: 0;
+            transition:
+                opacity 0.9s ease,
+                transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+            will-change: transform, opacity;
+        }
+
+        /* ===============================
+   DIRECTION VARIANTS
+================================ */
+        .reveal-up {
+            transform: translateY(60px);
+        }
+
+        .reveal-left {
+            transform: translateX(-60px);
+        }
+
+        .reveal-right {
+            transform: translateX(60px);
+        }
+
+        .reveal-zoom {
+            transform: scale(0.92);
+        }
+
+        /* ===============================
+   ACTIVE STATE
+================================ */
+        .reveal.active {
+            opacity: 1;
+            transform: translate(0, 0) scale(1);
+        }
+
+        /* ===============================
+   DELAYS
+================================ */
+        .delay-1 {
+            transition-delay: 0.15s;
+        }
+
+        .delay-2 {
+            transition-delay: 0.3s;
+        }
+
+        .delay-3 {
+            transition-delay: 0.45s;
+        }
+
+        .delay-4 {
+            transition-delay: 0.6s;
+        }
+
+        .delay-5 {
+            transition-delay: 0.75s;
+        }
+
+        .delay-6 {
+            transition-delay: 0.9s;
+        }
+
+        .delay-7 {
+            transition-delay: 1.05s;
+        }
+
+        .delay-8 {
+            transition-delay: 1.2s;
+        }
+
+        /* ===============================
+   REDUCED MOTION
+================================ */
+        @media (prefers-reduced-motion: reduce) {
+            .reveal {
+                opacity: 1;
+                transform: none;
+                transition: none;
+            }
+        }
+    </style>
+
+    <style>
+        .curve-item {
+            position: absolute;
+            width: 120px;
+
+            /* LOWER CURVE PATH */
+            offset-path: path("M -100 90 Q 720 270 1640 90");
+            offset-rotate: auto;
+
+            animation: moveLowerCurve 26s linear infinite;
+        }
+
+        @keyframes moveLowerCurve {
+            from {
+                offset-distance: 0%;
+            }
+
+            to {
+                offset-distance: 100%;
+            }
+        }
+    </style>
+
+
+    <script>
+        // MERGED Tailwind config from all parts
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-topbar-green': '#6a9b5f',
+
+                        'brand-green-light': '#a7c739',
+                        'brand-green-dark': '#6a9b5f',
+                        'brand-text-dark': '#2a2a2a',
+                        'brand-text-gray': '#4a4a4a',
+
+                        'brand-green-bg': '#6a9b5f',
+                        'brand-green-title': '#a7c739',
+                        'brand-text-light': '#f0f3ef',
+                        'brand-text-dim': '#d0d6d3',
+
+                        'brand-green-bg-stats': '#344a40',
+                        'brand-icon-bg': '#546b5a',
+                        'brand-dark-text-stats': '#c3c9c2',
+
+
+                        'brand-dark-green': '#344a40',
+                        'brand-lime-green': '#a7c739',
+                        'brand-gradient-start': '#2a3a31',
+
+                        'brand-green-career': '#a8c63a',
+                        'cert-bg': '#f8fcf3',
+
+                        'brand-green-light': '#5E8C43',
+                        'brand-gray-input': '#F0F0F0',
+
+                        'brand-text-light': '#d0d6d3',
+                        'brand-medium-green': '#6A8A61',
+
+                        'brand-deep-green': '#334C2D',
+                    }
+                }
+            }
+        }
+    </script>
+
+</head>
+
+<body class="bg-white">
+    <div class="custom-cursor">
+        <img src="imgs/new/cursor-white-black2.png" alt="Custom Cursor">
+    </div>
+
+    <div class="hidden bg-brand-topbar-green text-white text-[13px] py-2 px-6 md:flex justify-between items-center"
+        style="font-family: 'Montserrat';">
+        <div class="flex items-center space-x-4">
+            <div class="flex items-center">
+                <i class="fas fa-phone mr-2"></i>
+                <span>Call Us On: <a href="tel:+919578420672" class="hover:underline">+91 95784 20672</a></span>
+            </div>
+            <div class="flex items-center">
+                <i class="fas fa-envelope mr-2"></i>
+                <span><a href="mailto:marketing@nithaeroespace.in"
+                        class="hover:underline">marketing@nithaaeroespace.in</a></span>
+            </div>
+        </div>
+        <div class="flex items-center space-x-4 z-50">
+            <a href="blogs.html" class="hover:underline">Blogs</a>
+            <span>|</span>
+            <a href="solution.html" class="hover:underline">Careers</a>
+        </div>
+    </div>
+    <header class="relative">
+
+
+        <nav class="w-full absolute bg-white font-extrabold text-brand-topbar-green top-0 py-4 z-50 shadow-sm"
+            style="font-family: 'Montserrat', sans-serif;">
+            <div class="w-full max-w-screen-2xl mx-auto flex items-center justify-between px-6 xl:px-4 2xl:px-2">
+
+
+
+                <div class="flex items-center">
+                    <img src="imgs/Screenshot 2025-11-04 120806.png" alt="NITHA Logo" class="h-16 w-20 object-contain">
+                </div>
+
+                <div class="hidden md:flex items-center gap-6 lg:gap-8 text-[14px] lg:text-[15px] font-bold">
+
+                    <a href="index.html" class="transition-colors duration-100 hover:text-black">Home</a>
+                    <a href="aboutus.html" class="transition-colors duration-100 hover:text-black">About</a>
+                    <div class="relative group py-2">
+                        <button class="flex items-center gap-1 cursor-pointer
+        transition-colors duration-100
+        hover:text-black focus:outline-none">
+                            Capabilities <i class="fas fa-chevron-down text-[10px]"></i>
+                        </button>
+
+                        <!-- DROPDOWN -->
+                        <div class="absolute top-full left-0 pt-2 hidden group-hover:block z-[60]">
+                            <div class="bg-white shadow-xl rounded-md w-72
+            border-t-4 border-brand-topbar-green
+            py-2 overflow-hidden">
+
+                                <a href="fasteners.html" class="block px-4 py-2 text-gray-700
+                hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
+                                    Melting
+                                </a>
+
+                                <a href="fasteners.html" class="block px-4 py-2 text-gray-700
+                hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
+                                    Casting
+                                </a>
+
+                                <a href="fasteners.html" class="block px-4 py-2 text-gray-700
+                hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
+                                    Forging
+                                </a>
+
+                                <a href="fasteners.html" class="block px-4 py-2 text-gray-700
+                hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
+                                    Precision Machining
+                                </a>
+
+                                <a href="fasteners.html" class="block px-4 py-2 text-gray-700
+                hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
+                                    Thread Rolling
+                                </a>
+
+                                <a href="fasteners.html" class="block px-4 py-2 text-gray-700
+                hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
+                                    Heat Treatment
+                                </a>
+
+                                <a href="fasteners.html" class="block px-4 py-2 text-gray-700
+                hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
+                                    Surface Treatment
+                                </a>
+
+                                <a href="fasteners.html" class="block px-4 py-2 text-gray-700
+                hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
+                                    Testing & QA
+                                </a>
+
+                                <a href="fasteners.html" class="block px-4 py-2 text-gray-700
+                hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
+                                    Engineering
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="relative group py-2">
+                        <button class="flex items-center gap-1 cursor-pointer
+           transition-colors duration-100
+           hover:text-black focus:outline-none">
+                            FIS/R&D <i class="fas fa-chevron-down text-[10px]"></i>
+                        </button>
+
+                        <div class="absolute top-full left-0 pt-2 hidden group-hover:block z-[60]">
+                            <div class="bg-white shadow-xl rounded-md w-64 border-t-4 border-brand-topbar-green py-2">
+                                <a href="fasteners.html"
+                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
+                                    Fasteners Intelligence System
+                                </a>
+                                <a href="r&d.html"
+                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
+                                    Research & Development
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative group py-2">
+                        <div class="relative group inline-block ">
+                            <button class="flex items-center gap-1 cursor-pointer
+           transition-colors duration-100
+           hover:text-black focus:outline-none">
+                                Products
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+
+
+                            <div
+                                class="absolute left-0 hidden group-hover:block bg-white shadow-xl rounded-md w-72 border-t-4 border-brand-topbar-green py-2 z-50">
+
+                                <div class="relative group/sub">
+                                    <a href=""
+                                        class="flex justify-between items-center px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
+                                        Critical Industries
+                                        <span
+                                            class="text-xs ml-2 opacity-50 group-hover:opacity-100 transition-opacity">
+                                            <i class="fa-solid fa-chevron-right"></i>
+                                        </span>
+                                    </a>
+                                    <div
+                                        class="absolute left-full top-0 hidden group-hover/sub:block bg-white shadow-xl rounded-md w-72 border-l-2 border-brand-topbar-green py-2 -ml-1">
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Aerospace
+                                            Fasteners</a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Defence
+                                            Fasteners</a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Nuclear
+                                            / Energy Fasteners</a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Oil
+                                            & Gas Bolting Solutions</a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Medical
+                                            & Precision Fasteners</a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Railway
+                                            & Metro Fasteners</a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Power
+                                            Plant & Thermal Fasteners</a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Renewable
+                                            Energy Fasteners</a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Shipbuilding
+                                            & Marine Fasteners</a>
+                                    </div>
+                                </div>
+
+                                <div class="relative group/sub">
+                                    <a href="#"
+                                        class="flex justify-between items-center px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
+                                        Industrial & General Engineering
+                                        <span
+                                            class="text-xs ml-2 opacity-50 group-hover:opacity-100 transition-opacity">
+                                            <i class="fa-solid fa-chevron-right"></i>
+                                        </span>
+                                    </a>
+                                    <div
+                                        class="absolute left-full top-0 hidden group-hover/sub:block bg-white shadow-xl rounded-md w-72 border-l-2 border-brand-topbar-green py-2 -ml-1">
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Automotive
+                                            Fasteners</a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Construction
+                                            & Infrastructure Fasteners</a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Electrical
+                                            & Electronics Fasteners</a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Heavy
+                                            Engineering & Industrial Fasteners</a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Chemical
+                                            & Process Industry Fasteners</a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Mining
+                                            & Earthmoving Fasteners</a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">HVAC
+                                            & Building Services Fasteners</a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Agricultural
+                                            & Off-Highway Fasteners</a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">General
+                                            Engineering Fasteners</a>
+                                    </div>
+                                </div>
+
+                                <div class="relative group/sub">
+                                    <a href="#"
+                                        class="flex justify-between items-center px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
+                                        Specialised Engineering
+                                        <span
+                                            class="text-xs ml-2 opacity-50 group-hover:opacity-100 transition-opacity">
+                                            <i class="fa-solid fa-chevron-right"></i>
+                                        </span>
+                                    </a>
+                                    <div
+                                        class="absolute left-full top-0 hidden group-hover/sub:block bg-white shadow-xl rounded-md w-72 border-l-2 border-brand-topbar-green py-2 -ml-1">
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Custom
+                                            & Prototype Fasteners</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="transition-colors duration-100 hover:text-black">Contact</a>
+                </div>
+                <div class="hidden md:block">
+                    <a href="#" class="bg-brand-topbar-green text-white
+              px-5 lg:px-6 py-2
+              rounded-md
+              text-xs lg:text-sm
+              font-bold
+              hover:brightness-110
+              transition
+              shadow-md
+              whitespace-nowrap">
+                        Become A Partner
+                    </a>
+                </div>
+
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-brand-topbar-green text-2xl focus:outline-none">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+
+        </nav>
+
+        <div class="relative w-full h-[560px] overflow-hidden flex items-center justify-center text-center text-white">
+
+            <img src="imgs/Blogg.png" alt="Industrial pouring molten metal"
+                class="absolute inset-0 w-full h-full object-cover z-0">
+
+            <div class="absolute inset-0 bg-black opacity-50 z-10"></div>
+
+            <div class="relative z-20 text-white max-6xl px-6 pt-10 text-center reveal">
+                <h1 class="text-[35px] leading-[1.05] tracking-tight  font-extrabold  max-w-1xl mb-4">
+                    AEROSPACE GRADE SELF-LOCKING NUTS – ENGINEERED FOR FLIGHT
+                </h1>
+                <h1 class="text-[35px] leading-[1.05] tracking-tight  font-extrabold  max-w-1xl mb-4">
+                    BUILT FOR THE EXTREME.
+                </h1>
+
+            </div>
+        </div>
+    </header>
+
+
+    <section class="bg-white mt-10">
+        <div class="max-w-5xl mx-auto px-6 py-10 ">
+
+            <!-- COMPANY NAME -->
+            <div class="flex items-start gap-4 ">
+                <!-- GREEN VERTICAL LINE -->
+                <div class="w-[6px] h-[203px] bg-brand-green-light mt-1 
+            rounded-tl-2xl rounded-bl-2xl reveal reveal-left ">
+                </div>
+
+
+                <div class="reveal reveal-left delay-2">
+                    <img src="imgs/nitha_logo_top.jpg" alt="" style="width: 75px; height: 50px; margin-bottom: 6px;">
+
+                    <p class="text-xs tracking-widest font-semibold text-black  uppercase mb-3">
+                        NITHA AEROSPACE PRIVATE LIMITED
+                    </p>
+
+                    <!-- MAIN HEADING -->
+                    <h1 class="text-[40px] leading-[1.05] tracking-tight  font-extrabold text-[#7DA06D] max-w-1xl mb-4">
+                        Aerospace Grade Self-Locking Nuts – Engineered for Flight. Built for the Extreme.
+                    </h1>
+
+                    <!-- SUBTITLE -->
+                    <p class="mt-2 text-[18px] text-gray-600 font-semibold font-medium">
+                        By Nitha Aerospace Private Limited – Pioneering Indigenization in Critical Fasteners
+                    </p>
+                </div>
+            </div>
+
+            <!-- INTRODUCTION -->
+            <div class="mt-12 reveal reveal-up">
+                <h2 class="text-lg font-extrabold tracking-wide uppercase scale-y-110
+ text-black mb-4">
+                    INTRODUCTION
+                </h2>
+
+                <p class="text-gray-700 text-[16px] leading-relaxed mb-5">
+                    In aerospace, every component matters – but the smallest can often be the most critical.
+                    Self-locking nuts may seem simple, yet they are trusted to secure engines, fuselage assemblies,
+                    and spacecraft systems where failure is not an option.
+                </p>
+
+                <p class="text-gray-700 text-[16px] leading-relaxed">
+                    At <span class="font-semibold text-black">Nitha Aerospace Pvt Ltd</span>, we design and manufacture
+                    <span class="font-semibold"> aerospace-grade self-locking nuts</span> that perform under
+                    <span class="font-semibold"> extreme vibration, thermal cycling, and high dynamic loads</span>.
+                    Made in India, trusted globally, our locknuts are precision-engineered from aerospace superalloys
+                    like <span class="font-semibold">Titanium, Inconel, and A286 stainless steel</span>, and
+                    manufactured to <span class="font-semibold">AS, NASM, MS, and MIL-SPEC standards</span>.
+                </p>
+            </div>
+
+            <div class="bg-white reveal reveal-up">
+                <h2 class="text-lg font-extrabold tracking-wide my-10 scale-y-110 
+ text-black mb-4">
+                    Stats
+                </h2>
+                <div class="max-w-4xl mx-auto  bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="text-xl font-bold mb-4 text-gray-800">
+                        Aerospace Locknut Materials – Performance Comparison
+                    </h3>
+                    <canvas id="locknutChart" class="w-full h-[320px]"></canvas>
+                </div>
+            </div>
+
+            <!-- DIVIDER -->
+            <div class="mb-8 mt-8 border-t border-gray-300"></div>
+
+            <!-- NEXT SECTION -->
+            <div class=" reveal reveal-up">
+                <h2 class="text-[26px] tracking-tight tracking-tight  font-extrabold text-black mb-4">
+                    What Are Aerospace-Grade Self-Locking Nuts?
+                </h2>
+
+                <p class="text-gray-700 text-[16px] leading-relaxed mb-5">
+                    Self-locking nuts (or locknuts) feature an integrated locking mechanism – metallic or
+                    non-metallic – that prevents loosening due to vibration or torque. Unlike standard nuts,
+                    they maintain preload even under
+                    <span class="font-semibold">
+                        turbulent flight conditions, high temperatures, and repeated load cycles
+                    </span>.
+                </p>
+
+                <p class="text-gray-700 text-[16px] leading-relaxed">
+                    In aerospace manufacturing, these nuts are produced with
+                    <span class="font-semibold">
+                        tight tolerances, certified materials, and advanced coatings
+                    </span>
+                    to ensure long-term performance and reliability.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="bg-white">
+        <div class="max-w-5xl mx-auto px-6  ">
+
+            <!-- DIVIDER -->
+            <div class=" border-t border-gray-300 reveal reveal-up"></div>
+
+            <!-- MATERIALS SECTION -->
+            <div class="reveal reveal-up">
+                <h2 class="text-[26px] tracking-tight tracking-tight font-extrabold text-black mb-2 mt-8">
+                    Materials We Use – Built for Harsh Environments
+                </h2>
+
+                <p class="text-gray-600 text-[16px] mb-6">
+                    Aerospace locknuts demand materials that
+                    <span class="font-semibold text-gray-700">
+                        combine strength, temperature resistance, and corrosion protection.
+                    </span>
+                </p>
+
+                <!-- COMMON ALLOYS -->
+                <h3 class="text-[18px] font-extrabold text-black mb-4">
+                    Common Alloys:
+                </h3>
+
+                <ul class="space-y-3 mb-8">
+                    <li class="flex items-start gap-3">
+                        <span class="flex items-center justify-center 
+               w-5 h-5 rounded-full 
+               bg-[#7DA06D] text-white 
+               text-xs font-bold mt-1">
+                            ✓
+                        </span>
+                        <p class="text-gray-700 text-[16px]">
+                            <span class="font-semibold">Titanium Grade 5 (Ti-6Al-4V)</span> – Lightweight, high
+                            strength, corrosion-resistant
+                        </p>
+                    </li>
+
+                    <li class="flex items-start gap-3">
+                        <span class="flex items-center justify-center 
+               w-5 h-5 rounded-full 
+               bg-[#7DA06D] text-white 
+               text-xs font-bold mt-1">
+                            ✓
+                        </span>
+                        <p class="text-gray-700 text-[16px]">
+                            <span class="font-semibold">Inconel 718 / 625</span> – Exceptional at 700°C+, ideal for
+                            engines
+                        </p>
+                    </li>
+
+                    <li class="flex items-start gap-3">
+                        <span class="flex items-center justify-center 
+               w-5 h-5 rounded-full 
+               bg-[#7DA06D] text-white 
+               text-xs font-bold mt-1">
+                            ✓
+                        </span>
+                        <p class="text-gray-700 text-[16px]">
+                            <span class="font-semibold">A286 Stainless Steel</span> – Excellent high-temperature
+                            capability
+                        </p>
+                    </li>
+
+                    <li class="flex items-start gap-3">
+                        <span class="flex items-center justify-center 
+               w-5 h-5 rounded-full 
+               bg-[#7DA06D] text-white 
+               text-xs font-bold mt-1">
+                            ✓
+                        </span>
+                        <p class="text-gray-700 text-[16px]">
+                            <span class="font-semibold">Alloy Steel (Plated)</span> – High strength with protective
+                            coatings
+                        </p>
+                    </li>
+                </ul>
+
+                <!-- PROTECTIVE FINISHES -->
+                <h3 class="text-[18px] font-extrabold text-black mb-4">
+                    Protective Finishes:
+                </h3>
+
+                <ul class="space-y-3">
+                    <li class="flex items-start gap-3">
+                        <span class="flex items-center justify-center 
+               w-5 h-5 rounded-full 
+               bg-[#7DA06D] text-white 
+               text-xs font-bold mt-1">
+                            ✓
+                        </span>
+                        <p class="text-gray-700 text-[16px]">
+                            <span class="font-semibold">Cadmium Plating</span> – Corrosion protection in marine &
+                            aerospace environments
+                            <span class="text-gray-500">(restricted in some regions)</span>
+                        </p>
+                    </li>
+
+                    <li class="flex items-start gap-3">
+                        <span class="flex items-center justify-center 
+               w-5 h-5 rounded-full 
+               bg-[#7DA06D] text-white 
+               text-xs font-bold mt-1">
+                            ✓
+                        </span>
+                        <p class="text-gray-700 text-[16px]">
+                            <span class="font-semibold">Dry Film Lubricants (MoS₂)</span> – Reduce friction & galling in
+                            high-torque assembly
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- DIVIDER -->
+            <div class="my-12 border-t border-gray-300 reveal reveal-up"></div>
+
+            <!-- LOCKING MECHANISMS -->
+            <div class="reveal reveal-up">
+                <h2 class="text-[26px] tracking-tight font-extrabold text-black mb-2 ">
+                    Locking Mechanisms – The Science Behind Security
+                </h2>
+
+                <p class="text-gray-600 text-[16px] mb-6">
+                    Aerospace-grade locknuts fall into two main categories:
+                </p>
+
+                <!-- NYLON INSERT -->
+                <h3 class="text-[20px] font-extrabold text-black mb-3">
+                    Nylon Insert Lock Nuts
+                </h3>
+
+                <ul class="space-y-3 mb-8">
+                    <li class="flex items-start gap-3">
+                        <span class="flex items-center justify-center 
+               w-5 h-5 rounded-full 
+               bg-[#7DA06D] text-white 
+               text-xs font-bold mt-1">
+                            ✓
+                        </span>
+                        <p class="text-gray-700 text-[16px]">
+                            Nylon collar provides thread grip
+                        </p>
+                    </li>
+
+                    <li class="flex items-start gap-3">
+                        <span class="flex items-center justify-center 
+               w-5 h-5 rounded-full 
+               bg-[#7DA06D] text-white 
+               text-xs font-bold mt-1">
+                            ✓
+                        </span>
+                        <p class="text-gray-700 text-[16px]">
+                            Limited to low-heat applications
+                        </p>
+                    </li>
+                </ul>
+
+                <!-- ALL METAL -->
+                <h3 class="text-[20px] font-extrabold text-black mb-3">
+                    All-Metal Lock Nuts <span class="font-semibold">(Preferred in aerospace)</span>
+                </h3>
+
+                <ul class="space-y-3">
+                    <li class="flex items-start gap-3">
+                        <span class="flex items-center justify-center 
+               w-5 h-5 rounded-full 
+               bg-[#7DA06D] text-white 
+               text-xs font-bold mt-1">
+                            ✓
+                        </span>
+                        <p class="text-gray-700 text-[16px]">
+                            <span class="font-semibold">Distorted Thread Type</span> – Interference fit for vibration
+                            resistance
+                        </p>
+                    </li>
+
+                    <li class="flex items-start gap-3">
+                        <span class="flex items-center justify-center 
+               w-5 h-5 rounded-full 
+               bg-[#7DA06D] text-white 
+               text-xs font-bold mt-1">
+                            ✓
+                        </span>
+                        <p class="text-gray-700 text-[16px]">
+                            <span class="font-semibold">Elliptical / Crown Lock Nuts</span> – Engineered deformation for
+                            secure fit
+                        </p>
+                    </li>
+
+                    <li class="flex items-start gap-3">
+                        <span class="flex items-center justify-center 
+               w-5 h-5 rounded-full 
+               bg-[#7DA06D] text-white 
+               text-xs font-bold mt-1">
+                            ✓
+                        </span>
+                        <p class="text-gray-700 text-[16px]">
+                            <span class="font-semibold">Collar Nuts</span> – Used in high-heat engine zones
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- FINAL DIVIDER -->
+            <div class="mt-12 border-t border-gray-300 reveal reveal-up"></div>
+
+        </div>
+    </section>
+
+    <section class="bg-white">
+        <div class="max-w-5xl mx-auto px-6 py-4 ">
+
+            <!-- APPLICATIONS -->
+            <div class="reveal reveal-up">
+                <h2 class="text-[26px] tracking-tight font-extrabold text-black mb-6">
+                    Applications – Where Performance Matters Most
+                </h2>
+
+                <!-- TABLE -->
+                <div class="overflow-hidden rounded-xl border border-gray-200">
+                    <!-- TABLE HEADER -->
+                    <div class="grid grid-cols-2 bg-[#7DA06D] text-white font-semibold text-[16px]">
+                        <div class="px-6 py-3">Application Area</div>
+                        <div class="px-6 py-3">Examples</div>
+                    </div>
+
+                    <!-- ROWS -->
+                    <div class="grid grid-cols-2 bg-[#EEF6EE] text-gray-800">
+                        <div class="px-6 py-3 font-semibold">Aircraft Structures</div>
+                        <div class="px-6 py-3">Wings, fuselage frames, landing gear</div>
+                    </div>
+
+                    <div class="grid grid-cols-2 bg-[#F6FBF6] text-gray-800">
+                        <div class="px-6 py-3 font-semibold">Jet Engines</div>
+                        <div class="px-6 py-3">Turbine sections, exhaust casings</div>
+                    </div>
+
+                    <div class="grid grid-cols-2 bg-[#EEF6EE] text-gray-800">
+                        <div class="px-6 py-3 font-semibold">Avionics</div>
+                        <div class="px-6 py-3">Vibration-proof electronics mounting</div>
+                    </div>
+
+                    <div class="grid grid-cols-2 bg-[#F6FBF6] text-gray-800">
+                        <div class="px-6 py-3 font-semibold">Spacecraft & Satellites</div>
+                        <div class="px-6 py-3">Cryogenic and vacuum-rated locknuts</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DIVIDER -->
+            <div class="my-12 border-t border-gray-300 reveal reveal-up"></div>
+
+            <!-- INDUSTRY STANDARDS -->
+            <div class="reveal reveal-up">
+                <h2 class="text-[26px] tracking-tight font-extrabold text-black mb-2 ">
+                    Industry Standards We Follow
+                </h2>
+
+                <p class="text-gray-600 text-[16px] mb-4">
+                    We manufacture in full compliance with:
+                </p>
+
+                <ul class="space-y-3">
+                    <li class="flex items-start gap-3">
+                        <span class="flex items-center justify-center 
+               w-5 h-5 rounded-full 
+               bg-[#7DA06D] text-white 
+               text-xs font-bold mt-1">
+                            ✓
+                        </span>
+                        <p class="text-gray-700 text-[16px] font-semibold">
+                            AS (Aerospace Standard)
+                        </p>
+                    </li>
+
+                    <li class="flex items-start gap-3">
+                        <span class="flex items-center justify-center 
+               w-5 h-5 rounded-full 
+               bg-[#7DA06D] text-white 
+               text-xs font-bold mt-1">
+                            ✓
+                        </span>
+                        <p class="text-gray-700 text-[16px] font-semibold">
+                            NASM (National Aerospace Standard Metric)
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- DIVIDER -->
+            <div class="my-12 border-t border-gray-300 reveal reveal-up"></div>
+
+            <!-- WHY CHOOSE -->
+            <div class="reveal reveal-up">
+                <h2 class="text-[26px] tracking-tight font-extrabold text-black mb-2">
+                    Why Choose Nitha Aerospace Locknuts?
+                </h2>
+
+                <p class="text-gray-600 text-[16px] mb-6">
+                    We manufacture in full compliance with:
+                </p>
+
+                <ul class="space-y-4">
+                    <li class="flex items-start gap-3">
+                        <span class="flex items-center justify-center 
+               w-5 h-5 rounded-full 
+               bg-[#7DA06D] text-white 
+               text-xs font-bold mt-1">
+                            ✓
+                        </span>
+                        <p class="text-gray-700 text-[16px]">
+                            <span class="font-semibold">Vibration Resistance</span> – Maintain preload in the harshest
+                            conditions
+                        </p>
+                    </li>
+
+                    <li class="flex items-start gap-3">
+                        <span class="flex items-center justify-center 
+               w-5 h-5 rounded-full 
+               bg-[#7DA06D] text-white 
+               text-xs font-bold mt-1">
+                            ✓
+                        </span>
+                        <p class="text-gray-700 text-[16px]">
+                            <span class="font-semibold">Thermal Stability</span> – Operate flawlessly above 700°C
+                        </p>
+                    </li>
+
+                    <li class="flex items-start gap-3">
+                        <span class="flex items-center justify-center 
+               w-5 h-5 rounded-full 
+               bg-[#7DA06D] text-white 
+               text-xs font-bold mt-1">
+                            ✓
+                        </span>
+                        <p class="text-gray-700 text-[16px]">
+                            <span class="font-semibold">Weight Efficiency</span> – Titanium versions reduce aircraft
+                            mass without compromise
+                        </p>
+                    </li>
+
+                    <li class="flex items-start gap-3">
+                        <span class="flex items-center justify-center 
+               w-5 h-5 rounded-full 
+               bg-[#7DA06D] text-white 
+               text-xs font-bold mt-1">
+                            ✓
+                        </span>
+                        <p class="text-gray-700 text-[16px]">
+                            <span class="font-semibold">Corrosion Protection</span> – Built to survive marine & tropical
+                            climates
+                        </p>
+                    </li>
+
+                    <li class="flex items-start gap-3">
+                        <span class="flex items-center justify-center 
+               w-5 h-5 rounded-full 
+               bg-[#7DA06D] text-white 
+               text-xs font-bold mt-1">
+                            ✓
+                        </span>
+                        <p class="text-gray-700 text-[16px]">
+                            <span class="font-semibold">Zero Re-Torque Design</span> – All-metal designs remain secure
+                            for the long term
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
+    </section>
+
+    <section class="bg-white">
+        <div class="max-w-5xl mx-auto px-6 py-16 ">
+
+            <!-- DIVIDER -->
+            <div class="mb-12 border-t border-gray-300 reveal reveal-up"></div>
+
+            <!-- KEY FACTORS -->
+            <div class="reveal reveal-up">
+                <h2 class="text-[26px] tracking-tight font-extrabold text-black mb-2">
+                    Selecting the Right Locknut – Key Factors
+                </h2>
+
+                <p class="text-gray-600 text-[16px] mb-6">
+                    Before choosing, consider:
+                </p>
+
+                <ul class="space-y-3 mb-6">
+                    <li class="flex items-start gap-3">
+                        <span class="flex items-center justify-center 
+               w-5 h-5 rounded-full 
+               bg-[#7DA06D] text-white 
+               text-xs font-bold mt-1">
+                            ✓
+                        </span>
+                        <p class="text-gray-700 text-[16px]">Application temperature range</p>
+                    </li>
+
+                    <li class="flex items-start gap-3">
+                        <span class="flex items-center justify-center 
+               w-5 h-5 rounded-full 
+               bg-[#7DA06D] text-white 
+               text-xs font-bold mt-1">
+                            ✓
+                        </span>
+                        <p class="text-gray-700 text-[16px]">Frequency of disassembly</p>
+                    </li>
+
+                    <li class="flex items-start gap-3">
+                        <span class="flex items-center justify-center 
+               w-5 h-5 rounded-full 
+               bg-[#7DA06D] text-white 
+               text-xs font-bold mt-1">
+                            ✓
+                        </span>
+                        <p class="text-gray-700 text-[16px]">
+                            Material compatibility <span class="text-gray-500">(avoid galvanic corrosion)</span>
+                        </p>
+                    </li>
+
+                    <li class="flex items-start gap-3">
+                        <span class="flex items-center justify-center 
+               w-5 h-5 rounded-full 
+               bg-[#7DA06D] text-white 
+               text-xs font-bold mt-1">
+                            ✓
+                        </span>
+                        <p class="text-gray-700 text-[16px]">Required preload & torque</p>
+                    </li>
+
+                    <li class="flex items-start gap-3">
+                        <span class="flex items-center justify-center 
+               w-5 h-5 rounded-full 
+               bg-[#7DA06D] text-white 
+               text-xs font-bold mt-1">
+                            ✓
+                        </span>
+                        <p class="text-gray-700 text-[16px]">Applicable aerospace standards</p>
+                    </li>
+                </ul>
+
+                <!-- PRO TIP -->
+                <p class="text-gray-700 text-[16px]">
+                    <span class="font-semibold">Pro Tip:</span>
+                    Avoid nylon insert nuts in high-heat or fuel-exposed zones —
+                    choose all-metal variants instead.
+                </p>
+            </div>
+
+            <!-- CONCLUSION CARD -->
+            <div class="mt-14 rounded-2xl overflow-hidden shadow-lg reveal reveal-up">
+
+                <!-- DARK CONTENT -->
+                <div class="bg-gradient-to-br from-[#0F160C] to-[#1C2515] px-8 py-10 text-white">
+                    <h2 class="text-[32px] font-extrabold mb-4">
+                        Conclusion
+                    </h2>
+
+                    <p class="text-[16px] text-gray-200 leading-relaxed mb-4">
+                        At <span class="font-semibold text-white">Nitha Aerospace Pvt Ltd</span>, we manufacture
+                        <span class="font-semibold text-white"> mission-critical aerospace fasteners</span>
+                        designed for <span class="font-semibold text-white">absolute reliability</span>.
+                        From fighter jets to satellites, our self-locking nuts are
+                        <span class="font-semibold text-white">
+                            precision-engineered in India for global aerospace performance.
+                        </span>
+                    </p>
+
+                    <p class="text-[16px] text-gray-200 leading-relaxed font-semibold">
+                        When your assembly depends on the smallest component, choose a partner who understands that
+                        <span class="text-white"> in aerospace, there are no second chances.</span>
+                    </p>
+                </div>
+
+                <!-- CTA STRIP -->
+                <div class="bg-[#7DA06D] px-8 py-5 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+
+                    <!-- ENQUIRE -->
+                    <div class="flex items-center gap-4 text-white reveal reveal-left">
+                        <div class="w-12 h-12 rounded-full bg-[#F5C32C] flex items-center justify-center text-xl">
+                            ✉
+                        </div>
+                        <p class="text-[15px]">
+                            <a href="mailto:ceo@nithaaerospace.in" class="hover:opacity-80">
+                                ceo@nithaaerospace.in
+                            </a>,
+                            <a href="mailto:marketing@nithaaerospace.in" class=" hover:opacity-80">
+                                marketing@nithaaerospace.in
+                            </a>
+                        </p>
+
+                    </div>
+
+                    <!-- VISIT -->
+                    <div class="flex items-center gap-4 text-white reveal reveal-right">
+                        <div class="w-12 h-12 rounded-full bg-[#F5C32C] flex items-center justify-center text-xl">
+                            🌐
+                        </div>
+                        <p class="text-[15px] font-semibold">
+                            Visit – www.nithaaerospace.in
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <section class="top_box relative z-[90] overflow-hidden bg-[#6a9b5f] pb-0 text-white bg-dots responsive-out "
+        style="border-radius:10px; width: 80%; height: 250px; z-index: 99; position: relative; left: 9%; box-shadow: 0px 20px 9px black; margin-top: 20px;">
+
+        <div class="absolute inset-0 z-0 bg-right bg-no-repeat bg-cover opacity-70 mix-blend-multiply responsive" style="background-image: url('imgs/wwu-copy.png'); background-size: cover;      /* make it fill the screen */
+background-repeat: no-repeat;  /* prevent tiling */
+background-position: center;">
+        </div>
+
+        <div class="top_box container relative z-2 px-6 py-20 mx-auto lg:py-20">
+            <div style="position:absolute;top:13% ;">
+                <div class="max-w-2xl">
+                    <p class=" text-sm  py-3 font-semibold tracking-wider ">One Platform For All
+                        Your Fasteners Requirements</p>
+                    <h2 class=" text-3xl mb-2 font-extrabold tracking-tight">Which
+                        products are you looking to buy?</h2>
+                    <p class="mb-4 mt-1  text-1 font-bold">Single window for end-to-end steel sourcing</p>
+                    <a href="products.html"
+                        class="inline-flex items-center px-8 py-3 text-sm font-bold text-[#6a9b5f]  bg-white rounded-md shadow-lg transition-transform hover:scale-105">
+                        Explore Now
+                        <i class="ml-3  fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="relative z-10 bg-gradient-to-t from-[#0b180d] via-[#172c19] to-[#1a471c] text-gray-300">
+
+        <!-- Curve -->
+        <div class="absolute top-0 left-0 w-full h-24 bg-[#1a471c] rounded-[50%] -translate-y-1/2"></div>
+
+        <div class="relative max-w-7xl mx-auto px-6 py-16 pt-32 pb-32">
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6 items-start">
+
+                <!-- LOGO -->
+                <div>
+                    <img src="imgs/Screenshot 2025-11-04 120806.png" class="w-[100px] h-auto mb-6" alt="Logo">
+                </div>
+
+                <!-- ADDRESS -->
+                <div>
+                    <h3 class="mb-4 text-lg font-semibold text-white">Head Office & Factory</h3>
+
+                    <p class="text-sm leading-relaxed">
+                        Plot no. 140 SIDCO Women Industrial Estate,<br>
+                        Karuppur, Salem – 636011
+                    </p>
+
+                    <h3 class="mt-4 text-sm font-semibold">Call Us</h3>
+
+                    <a href="tel:+918220538534" class="block text-sm hover:text-white transition">
+                        +91 82205 38534
+                    </a>
+
+                    <a href="tel:+919578420672" class="block text-sm hover:text-white transition">
+                        +91 95784 20672
+                    </a>
+
+                    <h3 class="mt-4 text-sm font-semibold">Mail</h3>
+
+                    <a href="mailto:marketing@nithaaerospace.in" class="block text-sm hover:text-white transition">
+                        marketing@nithaaerospace.in
+                    </a>
+
+                    <a href="mailto:support@nithaaerospace.in" class="block text-sm hover:text-white transition">
+                        support@nithaaerospace.in
+                    </a>
+                </div>
+
+
+                <!-- COMPANY -->
+                <div>
+                    <h3 class="mb-4 text-lg font-semibold text-white">Company</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="aboutus.html">About</a></li>
+                        <li><a href="#">Capabilities</a></li>
+                        <li><a href="#">FIS/R&D</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- PRODUCTS -->
+                <div>
+                    <h3 class="mb-4 text-lg font-semibold text-white">Products</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li class="hover:text-white cursor-pointer">
+                            <a href="solution.html" class="block w-full">Aerospace Fasteners</a>
+                        </li>
+
+                        <li class="hover:text-white cursor-pointer">
+                            <a href="solution.html" class="block w-full">Oil & Gas Bolting</a>
+                        </li>
+
+                        <li class="hover:text-white cursor-pointer">
+                            <a href="solution.html" class="block w-full">Defence Fasteners</a>
+                        </li>
+
+                        <li class="hover:text-white cursor-pointer">
+                            <a href="solution.html" class="block w-full">Shipbuilding Fasteners</a>
+                        </li>
+
+                        <li class="hover:text-white cursor-pointer">
+                            <a href="solution.html" class="block w-full">Automotive Fasteners</a>
+                        </li>
+
+                        <li class="hover:text-white cursor-pointer">
+                            <a href="solution.html" class="block w-full">Nuclear & Energy Fasteners</a>
+                        </li>
+
+                        <li class="hover:text-white cursor-pointer">
+                            <a href="solution.html" class="block w-full">Medical Fasteners</a>
+                        </li>
+
+                        <li class="hover:text-white cursor-pointer">
+                            <a href="solution.html" class="block w-full">Custom & Prototype Fasteners</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <!-- FACILITIES -->
+                <div>
+                    <h3 class="mb-4 text-lg font-semibold text-white">Capabilities</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li class="hover:text-white cursor-pointer">
+                            <a href="fasteners.html" class="block w-full">Melting</a>
+                        </li>
+
+                        <li class="hover:text-white cursor-pointer">
+                            <a href="fasteners.html" class="block w-full">Casting</a>
+                        </li>
+
+                        <li class="hover:text-white cursor-pointer">
+                            <a href="fasteners.html" class="block w-full">Forging</a>
+                        </li>
+
+                        <li class="hover:text-white cursor-pointer">
+                            <a href="fasteners.html" class="block w-full">Precision Machining</a>
+                        </li>
+
+                        <li class="hover:text-white cursor-pointer">
+                            <a href="fasteners.html" class="block w-full">Thread Rolling</a>
+                        </li>
+
+                        <li class="hover:text-white cursor-pointer">
+                            <a href="fasteners.html" class="block w-full">Heat Treatment</a>
+                        </li>
+
+                        <li class="hover:text-white cursor-pointer">
+                            <a href="fasteners.html" class="block w-full">Surface Treatment</a>
+                        </li>
+
+                        <li class="hover:text-white cursor-pointer">
+                            <a href="fasteners.html" class="block w-full">Testing & QA</a>
+                        </li>
+
+                        <li class="hover:text-white cursor-pointer">
+                            <a href="fasteners.html" class="block w-full">Engineering</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <!-- CONTACT -->
+                <div class="w-full">
+                    <h3 class="mb-3 text-lg font-semibold text-white text-center sm:text-left">
+                        Connect With Us
+                    </h3>
+                    <p class="mt-3 mb-3 text-white/90 text-sm  tracking-tight max-w-xl mx-auto md:mx-0">
+                        For Advanced Engineering <span class="opacity-70 mx-1"></span> Fastening Solutions
+                    </p>
+                    <div class="flex flex-col gap-4 items-center sm:items-start">
+
+                        <!-- WHATSAPP BUTTON -->
+                        <a href="https://wa.me/919578420672" target="_blank" class="group flex items-center gap-4
+                  w-full max-w-[280px] sm:max-w-[260px] lg:max-w-[280px] 
+                  px-5 py-1 rounded-full
+                  bg-white/80
+                  border border-brand-deep-green/40
+                  transition-all duration-300 ease-out
+                  shadow-md hover:shadow-xl
+                  hover:bg-brand-medium-green">
+
+                            <!-- ICON -->
+                            <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-full
+                        bg-white/50
+                        border border-brand-deep-green/50
+                        flex items-center justify-center
+                        transition-all duration-300
+                        group-hover:bg-brand-deep-green
+                        group-hover:border-brand-deep-green">
+
+                                <i class="fab fa-whatsapp
+                          text-brand-deep-green text-lg sm:text-xl
+                          transition-colors duration-300
+                          group-hover:text-white"></i>
+                            </div>
+
+                            <!-- TEXT -->
+                            <span class="font-bold text-sm tracking-wide
+                         text-brand-deep-green
+                         transition-colors duration-300
+                         group-hover:text-white">
+                                WhatsApp
+                            </span>
+                        </a>
+
+                        <!-- EMAIL BUTTON -->
+                        <a href="mailto:marketing@nithaaerospace.in" class="group flex items-center gap-4
+                  w-full max-w-[280px] sm:max-w-[260px] lg:max-w-[280px]
+                  px-5 py-1 rounded-full
+                  bg-white/80
+                  border border-brand-deep-green/40
+                  transition-all duration-300 ease-out
+                  shadow-md hover:shadow-xl
+                  hover:bg-brand-medium-green">
+
+                            <!-- ICON -->
+                            <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-full
+                        bg-white/60
+                        border border-brand-deep-green/50
+                        flex items-center justify-center
+                        transition-all duration-300
+                        group-hover:bg-brand-deep-green
+                        group-hover:border-brand-deep-green">
+
+                                <i class="fas fa-envelope
+                          text-brand-deep-green text-base sm:text-lg
+                          transition-colors duration-300
+                          group-hover:text-white"></i>
+                            </div>
+
+                            <!-- TEXT -->
+                            <span class="font-bold text-sm tracking-wide
+                         text-brand-deep-green
+                         transition-colors duration-300
+                         group-hover:text-white">
+                                Email Us
+                            </span>
+                        </a>
+
+
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </footer>
+
+    <div class="relative z-20 py-4 text-gray-400" style="background: #0b180d; border-top: 1px solid white;">
+        <div class="container flex flex-col items-center justify-between px-6 mx-auto text-sm md:flex-row">
+            <p class="mb-4 md:mb-0">
+                www.nithaaerospace.in © Copyright and Private Limited.
+                All Rights Reserved |
+                <a href="Terms.html" id="terms" class="hover:text-white">
+                    Terms of Access
+                </a>
+            </p>
+
+            <!-- Social Media Icons -->
+            <div class="flex space-x-4 text-base">
+                <!-- Facebook -->
+                <a href="#" class="w-9 h-9 flex items-center justify-center rounded-full
+                       text-white hover:bg-blue-600
+                       transition-all duration-200">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+
+                <!-- Twitter (X) -->
+                <a href="#" class="w-9 h-9 flex items-center justify-center rounded-full
+                       text-white hover:bg-black
+                       transition-all duration-200">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+
+                <!-- Instagram -->
+                <a href="#" class="w-9 h-9 flex items-center justify-center rounded-full
+          text-white
+          hover:bg-[radial-gradient(circle_at_30%_107%,#fdf497_0%,#fdf497_5%,#fd5949_45%,#d6249f_60%,#285AEB_90%)]
+          transition-all duration-200">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+
+                <!-- LinkedIn -->
+                <a href="#" class="w-9 h-9 flex items-center justify-center rounded-full
+                       text-white hover:bg-blue-700
+                       transition-all duration-200">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const revealElements = document.querySelectorAll(
+                ".reveal, .reveal-left, .reveal-right, .reveal-up, .reveal-zoom"
+            );
+
+            const observer = new IntersectionObserver(
+                (entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("active");
+                            observer.unobserve(entry.target); // animate once
+                        }
+                    });
+                },
+                {
+                    threshold: 0.15,
+                    rootMargin: "0px 0px -80px 0px"
+                }
+            );
+
+            revealElements.forEach(el => observer.observe(el));
+        });
+    </script>
+
+    <script>
+        const ctx = document.getElementById('locknutChart').getContext('2d');
+
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: [
+                    'Titanium',
+                    'Inconel',
+                    'A286 Stainless',
+                    'Alloy Steel'
+                ],
+                datasets: [{
+                    label: 'Relative Performance Score',
+                    data: [85, 95, 90, 70], // dummy data
+                    backgroundColor: [
+                        '#7DA06D',
+                        '#5E8C61',
+                        '#8FBF88',
+                        '#A3C9A8'
+                    ],
+                    borderRadius: 6
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function (context) {
+                                return ` Score: ${context.parsed.y}`;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+                        ticks: {
+                            stepSize: 20
+                        },
+                        title: {
+                            display: true,
+                            text: 'Performance Index (Dummy)'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Material Type'
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const cursor = document.querySelector(".custom-cursor");
+
+            // Follow mouse
+            document.addEventListener("mousemove", (e) => {
+                cursor.style.left = e.clientX + "px";
+                cursor.style.top = e.clientY + "px";
+            });
+
+            // Hover detection (NO magnetic pull)
+            const hoverTargets = document.querySelectorAll("a, button, input, textarea, select");
+
+            hoverTargets.forEach(el => {
+                el.addEventListener("mouseenter", () => {
+                    cursor.classList.add("is-hover");
+                });
+
+                el.addEventListener("mouseleave", () => {
+                    cursor.classList.remove("is-hover");
+                });
+            });
+        });
+    </script>
+
+
+
+
+
+</body>
+
+</html>
