@@ -326,6 +326,40 @@
         }
     </style>
 
+    <style>
+        /* Remove system cursor everywhere */
+        html,
+        body,
+        * {
+            cursor: none !important;
+        }
+
+        /* Custom cursor wrapper */
+        .custom-cursor {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 28px;
+            height: 28px;
+            pointer-events: none;
+            z-index: 2147483647;
+            transform: translate(-50%, -50%) scale(1);
+            transition: transform 0.2s ease;
+        }
+
+        /* Hover state (same image, visual change only) */
+        .custom-cursor.is-hover {
+            transform: translate(-50%, -50%) scale(1.2);
+        }
+
+        /* Cursor image */
+        .custom-cursor img {
+            width: 28px;
+            height: 40px;
+            transform: rotate(333deg);
+        }
+    </style>
+
     <script>
         // MERGED Tailwind config from all parts
         tailwind.config = {
@@ -416,9 +450,58 @@
         }
     </style>
 
+    <style>
+        .leader-card-unified {
+            position: relative;
+            background-color: #3b5833;
+            overflow: hidden;
+        }
+
+        /* ROTATED WATERMARK */
+        .leader-card-unified::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 70%;
+
+            width: 320px;
+            height: 320px;
+
+            background-image: url('imgs/whitenitha-removebg-preview.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+
+            /* ROTATE 90 DEGREE */
+            transform: translateY(-50%) rotate(270deg);
+
+            /* WATERMARK LOOK */
+            opacity: 0.12;
+
+            pointer-events: none;
+        }
+
+        /* CONTENT ABOVE IMAGE */
+        .leader-card-unified>* {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* PREVENT TEXT OVERLAP */
+        @media (min-width: 1024px) {
+            .leader-card-unified {
+                padding-right: 260px;
+            }
+        }
+    </style>
+
 </head>
 
 <body class="bg-white">
+
+    <div class="custom-cursor">
+        <img src="imgs/new/cursor-white-black2.png" alt="Custom Cursor">
+    </div>
 
     <div class="hidden bg-brand-topbar-green text-white text-[13px] py-2 px-6 md:flex justify-between items-center">
         <div class="flex items-center space-x-4">
@@ -517,25 +600,38 @@
                         </div>
                     </div>
 
-                    <div class="relative group py-2">
-                        <button class="flex items-center gap-1 cursor-pointer
-           transition-colors duration-100
-           hover:text-black focus:outline-none">
-                            FIS/R&D <i class="fas fa-chevron-down text-[10px]"></i>
-                        </button>
+                    <div class="flex gap-8 text-lg font-semibold">
 
-                        <div class="absolute top-full left-0 pt-2 hidden group-hover:block z-[60]">
-                            <div class="bg-white shadow-xl rounded-md w-64 border-t-4 border-brand-topbar-green py-2">
-                                <a href="fasteners.html"
-                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
-                                    Fasteners Intelligence System
-                                </a>
-                                <a href="r&d.html"
-                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
-                                    Research & Development
-                                </a>
-                            </div>
-                        </div>
+                        <!-- FIS -->
+                        <a href="index.html" class="relative group transition-colors duration-150 hover:text-black">
+                            FIS
+
+                            <!-- Tooltip -->
+                            <span class="absolute left-1/2 bottom-full mb-3 -translate-x-1/2
+             whitespace-nowrap rounded-md px-4 py-1 text-sm font-semibold
+             bg-black/75 text-white
+             opacity-0 group-hover:opacity-100
+             translate-y-2 group-hover:translate-y-0
+             transition-all duration-200 shadow-lg">
+                                Fasteners Intelligence System
+                            </span>
+                        </a>
+
+                        <!-- R&D -->
+                        <a href="aboutus.html" class="relative group transition-colors duration-150 hover:text-black">
+                            R&amp;D
+
+                            <!-- Tooltip -->
+                            <span class="absolute left-1/2 bottom-full mb-3 -translate-x-1/2
+             whitespace-nowrap rounded-md px-4 py-1 text-sm font-semibold
+             bg-black/75 text-white
+             opacity-0 group-hover:opacity-100
+             translate-y-2 group-hover:translate-y-0
+             transition-all duration-200 shadow-lg">
+                                Research &amp; Development
+                            </span>
+                        </a>
+
                     </div>
 
                     <div class="relative group py-2">
@@ -1241,98 +1337,62 @@ overflow-hidden flex  justify-center items-center text-center text-white \">
             </div>
 
             <!-- LEADERS -->
-            <div class="max-w-7xl mx-auto space-y-24 px-6">
-
-                <!-- LEADER BLOCK -->
-                <div class="flex items-center">
-
-                    <!-- IMAGE -->
-                    <div class="relative w-[300px] h-[360px] flex-shrink-0 reveal-left">
+            <div class="max-w-7xl mx-auto px-6 py-12">
+                <div class="grid grid-cols-1 md:grid-cols-[300px_1fr] items-center gap-12">
+                    <div class="relative w-[300px] h-[360px] flex-shrink-0">
                         <img src="imgs/vasa-removebg-preview.png" alt="Vasanth Murugan"
-                            class="w-full h-full object-cover mx-auto">
-
-                        <!-- CAMERA CORNERS -->
-                        <span
-                            class="absolute -top-3 -left-3 w-6 h-6 border-t-2 border-l-2 border-brand-green-light"></span>
-                        <span
-                            class="absolute -top-3 -right-3 w-6 h-6 border-t-2 border-r-2 border-brand-green-light"></span>
-                        <span
-                            class="absolute -bottom-3 -left-3 w-6 h-6 border-b-2 border-l-2 border-brand-green-light"></span>
-                        <span
-                            class="absolute -bottom-3 -right-3 w-6 h-6 border-b-2 border-r-2 border-brand-green-light"></span>
+                            class="w-full h-full object-cover mx-auto z-10 relative">
+                        <span class="absolute -top-3 -left-3 w-6 h-6 border-t-2 border-l-2 border-[#a8c69f]"></span>
+                        <span class="absolute -top-3 -right-3 w-6 h-6 border-t-2 border-r-2 border-[#a8c69f]"></span>
+                        <span class="absolute -bottom-3 -left-3 w-6 h-6 border-b-2 border-l-2 border-[#a8c69f]"></span>
+                        <span class="absolute -bottom-3 -right-3 w-6 h-6 border-b-2 border-r-2 border-[#a8c69f]"></span>
                     </div>
 
-                    <!-- TEXT -->
-                    <div class="ml-10 flex flex-col justify-center reveal-right
-                       bg-gray-100 h-[300px] 
-                       w-[830px] text-center p-6 rounded-xl">
-
-                        <!-- NAME + DEGREE -->
-                        <h3 class="text-3xl font-extrabold text-brand-green-dark">
-                            Vasanth Murugan
-                            <span class="text-lg font-semibold text-gray-500">
-                                , M.E., MBA
-                            </span>
+                    <div
+                        class="leader-card-unified h-[300px] flex flex-col justify-center p-12 rounded-2xl relative overflow-hidden shadow-2xl">
+                        <h3 class="text-4xl font-black text-white leading-tight">
+                            Vasanth Murugan <span class="text-sm font-medium text-white/60">, M.E., MBA(India)</span>
                         </h3>
-
-                        <!-- POSITION -->
-                        <p class="mt-3 text-2xl font-bold text-brand-green-dark/80">
-                            Founder &amp; Chief Executive Officer
+                        <p class="mt-4 text-xl font-bold text-[#a8c69f] uppercase tracking-wider">
+                            Founder & Chief Executive Officer
                         </p>
-
-                        <!-- DESCRIPTION -->
-                        <p class="mt-4 text-black font-semibold leading-relaxed">
+                        <p
+                            class="mt-4 text-white/80 font-semibold text-lg leading-relaxed border-l-4 border-[#a8c69f] pl-6">
                             Excellence in Metallurgical Engineering Solutions.
                         </p>
                     </div>
-
                 </div>
+            </div>
 
-                <!-- LEADER BLOCK -->
-                <div class="flex items-center">
-
-                    <!-- IMAGE -->
-                    <div class="relative w-[300px] h-[360px] flex-shrink-0 reveal-left">
-                        <img src="imgs/karthik_ashogan.jpg" alt="Karthick Asokan" class="w-full h-full object-cover mx-auto">
-                        <!-- CAMERA CORNERS -->
-                        <span
-                            class="absolute -top-3 -left-3 w-6 h-6 border-t-2 border-l-2 border-brand-green-light"></span>
-                        <span
-                            class="absolute -top-3 -right-3 w-6 h-6 border-t-2 border-r-2 border-brand-green-light"></span>
-                        <span
-                            class="absolute -bottom-3 -left-3 w-6 h-6 border-b-2 border-l-2 border-brand-green-light"></span>
-                        <span
-                            class="absolute -bottom-3 -right-3 w-6 h-6 border-b-2 border-r-2 border-brand-green-light"></span>
+            <div class="max-w-7xl mx-auto px-6 py-12">
+                <div class="grid grid-cols-1 md:grid-cols-[300px_1fr] items-center gap-12">
+                    <div class="relative w-[300px] h-[360px] flex-shrink-0">
+                        <img src="imgs/karthik_ashogan.jpg" alt="Karthick Asokan"
+                            class="w-full h-full object-cover mx-auto z-10 relative rounded-lg">
+                        <span class="absolute -top-3 -left-3 w-6 h-6 border-t-2 border-l-2 border-[#a8c69f]"></span>
+                        <span class="absolute -top-3 -right-3 w-6 h-6 border-t-2 border-r-2 border-[#a8c69f]"></span>
+                        <span class="absolute -bottom-3 -left-3 w-6 h-6 border-b-2 border-l-2 border-[#a8c69f]"></span>
+                        <span class="absolute -bottom-3 -right-3 w-6 h-6 border-b-2 border-r-2 border-[#a8c69f]"></span>
                     </div>
 
-                    <!-- TEXT -->
-                    <div class="ml-10 flex flex-col justify-center reveal-right
-                       bg-gray-100 h-[300px] mx-10
-                       w-[830px] text-center p-6 rounded-xl">
-
-                        <!-- NAME + DEGREE -->
-                        <h3 class="text-3xl font-extrabold text-brand-green-dark">
-                            Karthick Asokan
-                            <span class="text-lg font-semibold text-gray-500">
-                                , M.S (The Netherlands), MBA (Defence & Aerospace)
-                            </span>
+                    <div
+                        class="leader-card-unified h-[300px] flex flex-col justify-center p-12 rounded-2xl relative overflow-hidden shadow-2xl">
+                        <h3 class="text-4xl font-black text-white leading-tight">
+                            Karthick Asokan <span class="text-sm font-medium text-white/60">, M.S (The Netherlands), MBA (Defence & Aerospace)</span>
                         </h3>
-
-                        <!-- POSITION -->
-                        <p class="mt-3 text-2xl font-bold text-brand-green-dark/80">
-                            Vice President – International Sales &amp; Marketing
+                        <p class="mt-4 text-xl font-bold text-[#a8c69f] uppercase tracking-wider">
+                            Vice President – International Sales & Marketing
                         </p>
-
-                        <!-- DESCRIPTION -->
-                        <p class="mt-4 text-black font-semibold leading-relaxed">
+                        <p
+                            class="mt-4 text-white/80 font-semibold text-lg leading-relaxed border-l-4 border-[#a8c69f] pl-6">
                             Former Country Head (Torpedo Division), Leonardo S.p.A – Italy
                         </p>
                     </div>
-
                 </div>
-
             </div>
         </section>
+
+
 
 
 
@@ -1825,44 +1885,70 @@ background-position: center;">
             </div>
         </div>
     </main>
-</body>
 
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const items = document.querySelectorAll(".curve-item");
-        const duration = 26; // must match CSS animation time
-        const total = items.length;
 
-        items.forEach((item, index) => {
-            item.style.animationDelay = `${-(duration / total) * index}s`;
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const items = document.querySelectorAll(".curve-item");
+            const duration = 26; // must match CSS animation time
+            const total = items.length;
+
+            items.forEach((item, index) => {
+                item.style.animationDelay = `${-(duration / total) * index}s`;
+            });
         });
-    });
-</script>
+    </script>
 
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const reveals = document.querySelectorAll(
-            ".reveal, .reveal-left, .reveal-right, .reveal-up"
-        );
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const reveals = document.querySelectorAll(
+                ".reveal, .reveal-left, .reveal-right, .reveal-up"
+            );
 
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("active");
-                        observer.unobserve(entry.target); // animate once
-                    }
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("active");
+                            observer.unobserve(entry.target); // animate once
+                        }
+                    });
+                },
+                {
+                    threshold: 0.2,
+                    rootMargin: "0px 0px -80px 0px"
+                }
+            );
+
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const cursor = document.querySelector(".custom-cursor");
+
+            // Follow mouse
+            document.addEventListener("mousemove", (e) => {
+                cursor.style.left = e.clientX + "px";
+                cursor.style.top = e.clientY + "px";
+            });
+
+            // Hover detection (NO magnetic pull)
+            const hoverTargets = document.querySelectorAll("a, button, input, textarea, select");
+
+            hoverTargets.forEach(el => {
+                el.addEventListener("mouseenter", () => {
+                    cursor.classList.add("is-hover");
                 });
-            },
-            {
-                threshold: 0.2,
-                rootMargin: "0px 0px -80px 0px"
-            }
-        );
 
-        reveals.forEach(el => observer.observe(el));
-    });
-</script>
+                el.addEventListener("mouseleave", () => {
+                    cursor.classList.remove("is-hover");
+                });
+            });
+        });
+    </script>
 
+</body>
 
 </html>
