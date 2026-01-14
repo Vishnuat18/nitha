@@ -1,22 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NITHA Aerospace - Contact Page</title>
-
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-    <link rel="shortcut icon" href="imgs/nithaa-removebg-preview.png">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <script type="text/javascript">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>NITHA Aerospace - Contact Page</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" href="imgs/nithaa-removebg-preview.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <script type="text/javascript">
         function redirectMobile() {
             // Check browser window width
             if (window.innerWidth <= 768) {
@@ -29,10 +23,8 @@
 
         // 2. Check whenever the window is resized
         window.addEventListener('resize', redirectMobile);
-    </script>
-
-
-    <style>
+        </script>
+        <style>
         html,
         body {
             max-width: 100%;
@@ -394,9 +386,8 @@
                 opacity: 1;
             }
         }
-    </style>
-
-    <style>
+        </style>
+        <style>
         :root {
             --napl-navy: #0a192f;
             --napl-gold: #c5a059;
@@ -514,9 +505,8 @@
             background-size: 40px 40px;
             pointer-events: none;
         }
-    </style>
-
-    <style>
+        </style>
+        <style>
         :root {
             --green-primary: #6A9B5F;
             --green-dark: #5B7941;
@@ -972,8 +962,41 @@
                 transform: translateX(250px);
             }
         }
-    </style>
-    <script>
+        </style>
+        <style>
+        /* Remove system cursor everywhere */
+        html,
+        body,
+        * {
+            cursor: none !important;
+        }
+
+        /* Custom cursor wrapper */
+        .custom-cursor {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 28px;
+            height: 28px;
+            pointer-events: none;
+            z-index: 2147483647;
+            transform: translate(-50%, -50%) scale(1);
+            transition: transform 0.2s ease;
+        }
+
+        /* Hover state (same image, visual change only) */
+        .custom-cursor.is-hover {
+            transform: translate(-50%, -50%) scale(1.2);
+        }
+
+        /* Cursor image */
+        .custom-cursor img {
+            width: 28px;
+            height: 40px;
+            transform: rotate(333deg);
+        }
+        </style>
+        <script>
         // MERGED Tailwind config from all parts
         tailwind.config = {
             theme: {
@@ -1014,229 +1037,225 @@
                 }
             }
         }
-    </script>
-
-</head>
-
-<body class="bg-white">
-
-    <div class="hidden bg-brand-topbar-green text-white text-[13px] py-2 px-6 md:flex justify-between items-center"
-        style="font-family: 'Montserrat';">
-        <div class="flex items-center space-x-4">
-            <div class="flex items-center">
-                <i class="fas fa-phone mr-2"></i>
-                <span>Call Us On: <a href="tel:+919578420672" class="hover:underline">+91 95784 20672</a></span>
-            </div>
-            <div class="flex items-center">
-                <i class="fas fa-envelope mr-2"></i>
-                <span><a href="mailto:marketing@nithaeroespace.in"
-                        class="hover:underline">marketing@nithaaeroespace.in</a></span>
-            </div>
+        </script>
+    </head>
+    <body class="bg-white">
+        <div class="custom-cursor">
+            <img src="imgs/new/cursor-white-black2.png" alt="Custom Cursor">
         </div>
-        <div class="flex items-center space-x-4 z-50">
-            <a href="blogs.html" class="hover:underline">Blogs</a>
-            <span>|</span>
-            <a href="solution.html" class="hover:underline">Careers</a>
-        </div>
-    </div>
-    <header class="relative">
-
-        <nav class="w-full absolute bg-white font-extrabold text-brand-topbar-green top-0 py-4 px-6 z-50 shadow-sm"
-            style="font-family: 'Montserrat', sans-serif;">
-            <div class="w-full max-w-screen-2xl mx-auto flex items-center justify-between xl:px-4 2xl:px-2">
-
-
-
+        <div class="hidden bg-brand-topbar-green text-white text-[13px] py-2 px-6 md:flex justify-between items-center" style="font-family: 'Montserrat';">
+            <div class="flex items-center space-x-4">
                 <div class="flex items-center">
-                    <img src="imgs/Screenshot 2025-11-04 120806.png" alt="NITHA Logo" class="h-16 w-20 object-contain">
+                    <i class="fas fa-phone mr-2"></i>
+                    <span>
+                        Call Us On:
+                        <a href="tel:+919578420672" class="hover:underline">+91 95784 20672</a>
+                    </span>
                 </div>
-
-                <div class="hidden md:flex items-center gap-6 lg:gap-8 text-[14px] lg:text-[15px] font-bold">
-
-                    <a href="index.html" class="transition-colors duration-100 hover:text-black">Home</a>
-                    <a href="aboutus.html" class="transition-colors duration-100 hover:text-black">About</a>
-                    <div class="relative group py-2">
-                        <button class="flex items-center gap-1 cursor-pointer
+                <div class="flex items-center">
+                    <i class="fas fa-envelope mr-2"></i>
+                    <span>
+                        <a href="mailto:marketing@nithaeroespace.in" class="hover:underline">marketing@nithaaeroespace.in</a>
+                    </span>
+                </div>
+            </div>
+            <div class="flex items-center space-x-4 z-50">
+                <a href="blogs.html" class="hover:underline">Blogs</a>
+                <span>|</span>
+                <a href="solution.html" class="hover:underline">Careers</a>
+            </div>
+        </div>
+        <header class="relative">
+            <nav class="w-full absolute bg-white font-extrabold text-brand-topbar-green top-0 py-4 px-6 z-50 shadow-sm" style="font-family: 'Montserrat', sans-serif;">
+                <div class="w-full max-w-screen-2xl mx-auto flex items-center justify-between xl:px-4 2xl:px-2">
+                    <div class="flex items-center">
+                        <img src="imgs/Screenshot 2025-11-04 120806.png" alt="NITHA Logo" class="h-16 w-20 object-contain">
+                    </div>
+                    <div class="hidden md:flex items-center gap-6 lg:gap-8 text-[14px] lg:text-[15px] font-bold">
+                        <a href="index.html" class="transition-colors duration-100 hover:text-black">Home</a>
+                        <a href="aboutus.html" class="transition-colors duration-100 hover:text-black">About</a>
+                        <div class="relative group py-2">
+                            <button class="flex items-center gap-1 cursor-pointer
         transition-colors duration-100
         hover:text-black focus :outline-none">
-                            Capabilities <i class="fas fa-chevron-down text-[10px]"></i>
-                        </button>
-
-                        <!-- DROPDOWN -->
-                        <div class="absolute top-full left-0 pt-2 hidden group-hover:block z-[60]">
-                            <div class="bg-white shadow-xl rounded-md w-72
+                                Capabilities
+                                <i class="fas fa-chevron-down text-[10px]"></i>
+                            </button>
+                            <!-- DROPDOWN -->
+                            <div class="absolute top-full left-0 pt-2 hidden group-hover:block z-[60]">
+                                <div class="bg-white shadow-xl rounded-md w-72
             border-t-4 border-brand-topbar-green
             py-2 overflow-hidden">
-
-                                <a href="fasteners.html" class="block px-4 py-2 text-gray-700
+                                    <a href="fasteners.html" class="block px-4 py-2 text-gray-700
                 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
-                                    Melting
-                                </a>
-
-                                <a href="fasteners.html" class="block px-4 py-2 text-gray-700
+                                        Melting
+                                    </a>
+                                    <a href="fasteners.html" class="block px-4 py-2 text-gray-700
                 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
-                                    Casting
-                                </a>
-
-                                <a href="fasteners.html" class="block px-4 py-2 text-gray-700
+                                        Casting
+                                    </a>
+                                    <a href="fasteners.html" class="block px-4 py-2 text-gray-700
                 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
-                                    Forging
-                                </a>
-
-                                <a href="fasteners.html" class="block px-4 py-2 text-gray-700
+                                        Forging
+                                    </a>
+                                    <a href="fasteners.html" class="block px-4 py-2 text-gray-700
                 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
-                                    Precision Machining
-                                </a>
-
-                                <a href="fasteners.html" class="block px-4 py-2 text-gray-700
+                                        Precision Machining
+                                    </a>
+                                    <a href="fasteners.html" class="block px-4 py-2 text-gray-700
                 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
-                                    Thread Rolling
-                                </a>
-
-                                <a href="fasteners.html" class="block px-4 py-2 text-gray-700
+                                        Thread Rolling
+                                    </a>
+                                    <a href="fasteners.html" class="block px-4 py-2 text-gray-700
                 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
-                                    Heat Treatment
-                                </a>
-
-                                <a href="fasteners.html" class="block px-4 py-2 text-gray-700
+                                        Heat Treatment
+                                    </a>
+                                    <a href="fasteners.html" class="block px-4 py-2 text-gray-700
                 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
-                                    Surface Treatment
-                                </a>
-
-                                <a href="fasteners.html" class="block px-4 py-2 text-gray-700
+                                        Surface Treatment
+                                    </a>
+                                    <a href="fasteners.html" class="block px-4 py-2 text-gray-700
                 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
-                                    Testing & QA
-                                </a>
-
-                                <a href="fasteners.html" class="block px-4 py-2 text-gray-700
+                                        Testing & QA
+                                    </a>
+                                    <a href="fasteners.html" class="block px-4 py-2 text-gray-700
                 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
-                                    Engineering
-                                </a>
+                                        Engineering
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="relative group py-2">
-                        <div class="relative group inline-block ">
-                            <button class="flex items-center gap-1 cursor-pointer
+                        <div class="relative group py-2">
+                            <div class="relative group inline-block ">
+                                <button class="flex items-center gap-1 cursor-pointer
            transition-colors duration-100
            hover:text-black focus:outline-none">
-                                Products
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 9l-7 7-7-7"></path>
-                                </svg>
-                            </button>
-
-
-                            <div
-                                class="absolute left-0 hidden group-hover:block bg-white shadow-xl rounded-md w-72 border-t-4 border-brand-topbar-green py-2 z-50">
-
-                                <div class="relative group/sub">
-                                    <a href=""
-                                        class="flex justify-between items-center px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
-                                        Critical Industries
-                                        <span
-                                            class="text-xs ml-2 opacity-50 group-hover:opacity-100 transition-opacity">
-                                            <i class="fa-solid fa-chevron-right"></i>
-                                        </span>
-                                    </a>
-                                    <div
-                                        class="absolute left-full top-0 hidden group-hover/sub:block bg-white shadow-xl rounded-md w-72 border-l-2 border-brand-topbar-green py-2 -ml-1">
-                                        <a href="products.html"
-                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Aerospace
-                                            Fasteners</a>
-                                        <a href="products.html"
-                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Defence
-                                            Fasteners</a>
-                                        <a href="products.html"
-                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Nuclear
-                                            / Energy Fasteners</a>
-                                        <a href="products.html"
-                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Oil
-                                            & Gas Bolting Solutions</a>
-                                        <a href="products.html"
-                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Medical
-                                            & Precision Fasteners</a>
-                                        <a href="products.html"
-                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Railway
-                                            & Metro Fasteners</a>
-                                        <a href="products.html"
-                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Power
-                                            Plant & Thermal Fasteners</a>
-                                        <a href="products.html"
-                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Renewable
-                                            Energy Fasteners</a>
-                                        <a href="products.html"
-                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Shipbuilding
-                                            & Marine Fasteners</a>
+                                    Products
+                                    <svg
+                                        class="w-4 h-4"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M19 9l-7 7-7-7"
+                                        ></path>
+                                    </svg>
+                                </button>
+                                <div class="absolute left-0 hidden group-hover:block bg-white shadow-xl rounded-md w-72 border-t-4 border-brand-topbar-green py-2 z-50">
+                                    <div class="relative group/sub">
+                                        <a href="" class="flex justify-between items-center px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
+                                            Critical Industries
+                                            <span class="text-xs ml-2 opacity-50 group-hover:opacity-100 transition-opacity">
+                                                <i class="fa-solid fa-chevron-right"></i>
+                                            </span>
+                                        </a>
+                                        <div class="absolute left-full top-0 hidden group-hover/sub:block bg-white shadow-xl rounded-md w-72 border-l-2 border-brand-topbar-green py-2 -ml-1">
+                                            <a href="products.html" class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">
+                                                Aerospace
+                                            Fasteners
+                                            </a>
+                                            <a href="products.html" class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">
+                                                Defence
+                                            Fasteners
+                                            </a>
+                                            <a href="products.html" class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">
+                                                Nuclear
+                                            / Energy Fasteners
+                                            </a>
+                                            <a href="products.html" class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">
+                                                Oil
+                                            & Gas Bolting Solutions
+                                            </a>
+                                            <a href="products.html" class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">
+                                                Medical
+                                            & Precision Fasteners
+                                            </a>
+                                            <a href="products.html" class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">
+                                                Railway
+                                            & Metro Fasteners
+                                            </a>
+                                            <a href="products.html" class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">
+                                                Power
+                                            Plant & Thermal Fasteners
+                                            </a>
+                                            <a href="products.html" class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">
+                                                Renewable
+                                            Energy Fasteners
+                                            </a>
+                                            <a href="products.html" class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">
+                                                Shipbuilding
+                                            & Marine Fasteners
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="relative group/sub">
+                                        <a href="#" class="flex justify-between items-center px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
+                                            Industrial & General Engineering
+                                            <span class="text-xs ml-2 opacity-50 group-hover:opacity-100 transition-opacity">
+                                                <i class="fa-solid fa-chevron-right"></i>
+                                            </span>
+                                        </a>
+                                        <div class="absolute left-full top-0 hidden group-hover/sub:block bg-white shadow-xl rounded-md w-72 border-l-2 border-brand-topbar-green py-2 -ml-1">
+                                            <a href="products.html" class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">
+                                                Automotive
+                                            Fasteners
+                                            </a>
+                                            <a href="products.html" class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">
+                                                Construction
+                                            & Infrastructure Fasteners
+                                            </a>
+                                            <a href="products.html" class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">
+                                                Electrical
+                                            & Electronics Fasteners
+                                            </a>
+                                            <a href="products.html" class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">
+                                                Heavy
+                                            Engineering & Industrial Fasteners
+                                            </a>
+                                            <a href="products.html" class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">
+                                                Chemical
+                                            & Process Industry Fasteners
+                                            </a>
+                                            <a href="products.html" class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">
+                                                Mining
+                                            & Earthmoving Fasteners
+                                            </a>
+                                            <a href="products.html" class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">
+                                                HVAC
+                                            & Building Services Fasteners
+                                            </a>
+                                            <a href="products.html" class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">
+                                                Agricultural
+                                            & Off-Highway Fasteners
+                                            </a>
+                                            <a href="products.html" class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">
+                                                General
+                                            Engineering Fasteners
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="relative group/sub">
+                                        <a href="#" class="flex justify-between items-center px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
+                                            Specialised Engineering
+                                            <span class="text-xs ml-2 opacity-50 group-hover:opacity-100 transition-opacity">
+                                                <i class="fa-solid fa-chevron-right"></i>
+                                            </span>
+                                        </a>
+                                        <div class="absolute left-full top-0 hidden group-hover/sub:block bg-white shadow-xl rounded-md w-72 border-l-2 border-brand-topbar-green py-2 -ml-1">
+                                            <a href="products.html" class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">
+                                                Custom
+                                            & Prototype Fasteners
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-
-                                <div class="relative group/sub">
-                                    <a href="#"
-                                        class="flex justify-between items-center px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
-                                        Industrial & General Engineering
-                                        <span
-                                            class="text-xs ml-2 opacity-50 group-hover:opacity-100 transition-opacity">
-                                            <i class="fa-solid fa-chevron-right"></i>
-                                        </span>
-                                    </a>
-                                    <div
-                                        class="absolute left-full top-0 hidden group-hover/sub:block bg-white shadow-xl rounded-md w-72 border-l-2 border-brand-topbar-green py-2 -ml-1">
-                                        <a href="products.html"
-                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Automotive
-                                            Fasteners</a>
-                                        <a href="products.html"
-                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Construction
-                                            & Infrastructure Fasteners</a>
-                                        <a href="products.html"
-                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Electrical
-                                            & Electronics Fasteners</a>
-                                        <a href="products.html"
-                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Heavy
-                                            Engineering & Industrial Fasteners</a>
-                                        <a href="products.html"
-                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Chemical
-                                            & Process Industry Fasteners</a>
-                                        <a href="products.html"
-                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Mining
-                                            & Earthmoving Fasteners</a>
-                                        <a href="products.html"
-                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">HVAC
-                                            & Building Services Fasteners</a>
-                                        <a href="products.html"
-                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Agricultural
-                                            & Off-Highway Fasteners</a>
-                                        <a href="products.html"
-                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">General
-                                            Engineering Fasteners</a>
-                                    </div>
-                                </div>
-
-                                <div class="relative group/sub">
-                                    <a href="#"
-                                        class="flex justify-between items-center px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
-                                        Specialised Engineering
-                                        <span
-                                            class="text-xs ml-2 opacity-50 group-hover:opacity-100 transition-opacity">
-                                            <i class="fa-solid fa-chevron-right"></i>
-                                        </span>
-                                    </a>
-                                    <div
-                                        class="absolute left-full top-0 hidden group-hover/sub:block bg-white shadow-xl rounded-md w-72 border-l-2 border-brand-topbar-green py-2 -ml-1">
-                                        <a href="products.html"
-                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Custom
-                                            & Prototype Fasteners</a>
-                                    </div>
-                                </div>
-
                             </div>
                         </div>
-                    </div>
-
-
-                    <!-- <div class="relative group py-2">
+                        <!-- <div class="relative group py-2">
                         <button class="flex items-center gap-1 cursor-pointer
            transition-colors duration-100
            hover:text-black focus:outline-none">
@@ -1256,46 +1275,38 @@
                             </div>
                         </div>
                     </div> -->
-                    <div class="flex gap-8 text-lg font-semibold">
-
-                        <!-- FIS -->
-                        <a href="index.html" class="relative group transition-colors duration-150 hover:text-black">
-                            FIS
-
-                            <!-- Tooltip -->
-                            <span class="absolute left-1/2 bottom-full mb-3 -translate-x-1/2
+                        <div class="flex gap-8 text-lg font-semibold">
+                            <!-- FIS -->
+                            <a href="index.html" class="relative group transition-colors duration-150 hover:text-black">
+                                FIS
+                                <!-- Tooltip -->
+                                <span class="absolute left-1/2 bottom-full mb-3 -translate-x-1/2
              whitespace-nowrap rounded-md px-4 py-1 text-sm font-semibold
              bg-black/75 text-white
              opacity-0 group-hover:opacity-100
              translate-y-2 group-hover:translate-y-0
              transition-all duration-200 shadow-lg">
-                                Fasteners Intelligence System
-                            </span>
-                        </a>
-
-                        <!-- R&D -->
-                        <a href="aboutus.html" class="relative group transition-colors duration-150 hover:text-black">
-                            R&amp;D
-
-                            <!-- Tooltip -->
-                            <span class="absolute left-1/2 bottom-full mb-3 -translate-x-1/2
+                                    Fasteners Intelligence System
+                                </span>
+                            </a>
+                            <!-- R&D -->
+                            <a href="aboutus.html" class="relative group transition-colors duration-150 hover:text-black">
+                                R&amp;D
+                                <!-- Tooltip -->
+                                <span class="absolute left-1/2 bottom-full mb-3 -translate-x-1/2
              whitespace-nowrap rounded-md px-4 py-1 text-sm font-semibold
              bg-black/75 text-white
              opacity-0 group-hover:opacity-100
              translate-y-2 group-hover:translate-y-0
              transition-all duration-200 shadow-lg">
-                                Research &amp; Development
-                            </span>
-                        </a>
-
+                                    Research &amp; Development
+                                </span>
+                            </a>
+                        </div>
+                        <a href="contact.html" class="transition-colors duration-100 hover:text-black">Contact</a>
                     </div>
-
-
-
-                    <a href="contact.html" class="transition-colors duration-100 hover:text-black">Contact</a>
-                </div>
-                <div class="hidden md:block">
-                    <a href="#" class="bg-brand-topbar-green text-white
+                    <div class="hidden md:block">
+                        <a href="#" class="bg-brand-topbar-green text-white
               px-5 lg:px-6 py-2
               rounded-md
               text-xs lg:text-sm
@@ -1304,535 +1315,536 @@
               transition
               shadow-md
               whitespace-nowrap">
-                        Become A Partner
-                    </a>
-                </div>
-
-                <div class="md:hidden">
-                    <button id="mobile-menu-btn" class="text-brand-topbar-green text-2xl focus:outline-none">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                </div>
-            </div>
-        </nav>
-
-
-    </header>
-    <main>
-        <section class="hero-integrated mt-[96px]">
-            <div class="hero-overlay-img" style="background-image: url('imgs/new/career-homt.png');"></div>
-            <div class="hero-pattern"></div>
-
-            <div class="container-xl">
-                <div class="grid-hero">
-                    <div style="border-right: 1px solid var(--napl-gold-dim); padding-right: 2rem; "
-                        class="reveal reveal-left">
-                        <span
-                            style="color: var(--napl-gold); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase;">Inspiration</span>
-                        <blockquote
-                            style="font-size: 2.5rem; font-weight: 200; color: white; margin: 2rem 0; font-style: italic; line-height: 1.2;">
-                            “Dream, dream, dream. <br>
-                            Dreams transform into <span
-                                style="color: var(--napl-gold); font-weight: 400;">thoughts</span>
-                            <br>
-                            and thoughts result in <span
-                                style="color: var(--napl-gold); font-weight: 700;">action.</span>”
-
-                        </blockquote>
-                        <p
-                            style="color: var(--napl-gold); font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em;">
-                            — Dr. A. P. J. Abdul Kalam</p>
+                            Become A Partner
+                        </a>
                     </div>
-
-                    <div class="reveal reveal-right">
-                        <span
-                            style="color: var(--napl-gold); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase;">The
-                            NAPL Way</span>
-                        <div style="color: white; margin: 2rem 0; font-size: 1.25rem;">
-                            <p>Dream, dream, dream—<br><strong>but do not stop at dreaming.</strong></p>
-                            <p
-                                style="border-left: 2px solid var(--napl-gold); padding-left: 1.5rem; opacity: 0.8; font-weight: 200; margin: 2rem 0;">
-                                Let the dream become a question,<br>let thoughts be refined into <span
-                                    style="color: var(--napl-gold);">calculation.</span>
+                    <div class="md:hidden">
+                        <button id="mobile-menu-btn" class="text-brand-topbar-green text-2xl focus:outline-none">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <section class="hero-integrated mt-[96px]">
+                <div class="hero-overlay-img" style="background-image: url('imgs/new/career-homt.png');"></div>
+                <div class="hero-pattern"></div>
+                <div class="container-xl">
+                    <div class="grid-hero">
+                        <div style="border-right: 1px solid var(--napl-gold-dim); padding-right: 2rem; " class="reveal reveal-left">
+                            <span style="color: var(--napl-gold); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase;">Inspiration</span>
+                            <blockquote style="font-size: 2.5rem; font-weight: 200; color: white; margin: 2rem 0; font-style: italic; line-height: 1.2;">
+                                “Dream, dream, dream.
+                                <br>
+                                Dreams transform into
+                                <span style="color: var(--napl-gold); font-weight: 400;">thoughts</span>
+                                <br>
+                                and thoughts result in
+                                <span style="color: var(--napl-gold); font-weight: 700;">action.</span>
+                                ”
+                            </blockquote>
+                            <p style="color: var(--napl-gold); font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em;">
+                                — Dr. A. P. J. Abdul Kalam
                             </p>
-                            <p>Action, action, action—<br><em>Guided by method,</em> strengthened by discipline,
-                                delivering
-                                results.</p>
                         </div>
-                        <a href="#jobExplorer" class="btn-gold">Explore Opportunities</a>
+                        <div class="reveal reveal-right">
+                            <span style="color: var(--napl-gold); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase;">
+                                The
+                            NAPL Way
+                            </span>
+                            <div style="color: white; margin: 2rem 0; font-size: 1.25rem;">
+                                <p>
+                                    Dream, dream, dream—
+                                    <br>
+                                    <strong>but do not stop at dreaming.</strong>
+                                </p>
+                                <p style="border-left: 2px solid var(--napl-gold); padding-left: 1.5rem; opacity: 0.8; font-weight: 200; margin: 2rem 0;">
+                                    Let the dream become a question,
+                                    <br>
+                                    let thoughts be refined into
+                                    <span style="color: var(--napl-gold);">calculation.</span>
+                                </p>
+                                <p>
+                                    Action, action, action—
+                                    <br>
+                                    <em>Guided by method,</em>
+                                    strengthened by discipline,
+                                delivering
+                                results.
+                                </p>
+                            </div>
+                            <a href="#jobExplorer" class="btn-gold">Explore Opportunities</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <section class="hero-container">
-
-            <div class="grid-overlay">
-
-            </div>
-
-            <div class="hero-content reveal">
-
-                <div class="main-headline">Careers at NITHA Aerospace Private Limited (NAPL)</div>
-
-                <h1 class="sub-headline">Engineering the Material Foundations of Aerospace & Critical Systems</h1>
-
-                <p class="philosophy-text">
-                    At NAPL, dreams are encouraged—but never left unstructured. Aspirations are shaped through learning,
+            </section>
+            <section class="hero-container">
+                <div class="grid-overlay"></div>
+                <div class="hero-content reveal">
+                    <div class="main-headline">Careers at NITHA Aerospace Private Limited (NAPL)</div>
+                    <h1 class="sub-headline">Engineering the Material Foundations of Aerospace & Critical Systems</h1>
+                    <p class="philosophy-text">
+                        At NAPL, dreams are encouraged—but never left unstructured. Aspirations are shaped through learning,
                     mentorship, and disciplined execution.
-                </p>
-
-                <div class="quote-box">
-                    [cite_start]<span class="quote-text">“Dream, dream, dream. Dreams transform into thoughts, and
+                    </p>
+                    <div class="quote-box">
+                        [cite_start]
+                        <span class="quote-text">
+                            “Dream, dream, dream. Dreams transform into thoughts, and
                         thoughts
-                        result in action.”</span> [cite: 1]
-                    [cite_start]<span class="quote-author">— Dr. A. P. J. Abdul Kalam</span> [cite: 2]
+                        result in action.”
+                        </span>
+                        [cite: 1]
+                    [cite_start]
+                        <span class="quote-author">— Dr. A. P. J. Abdul Kalam</span>
+                        [cite: 2]
+                    </div>
+                    <div class="reveal reveal-left">
+                        <a href="#careers" class="explore-btn">Explore Careers</a>
+                    </div>
                 </div>
-
-                <div class="reveal reveal-left">
-                    <a href="#careers" class="explore-btn">Explore Careers</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="container" style="margin-bottom: 80px;">
-            <header style="margin-bottom: 40px; border-left: 6px solid var(--green-dark); padding-left: 20px;"
-                class="reveal reveal-left">
-                <h1
-                    style="margin: 0; font-size: 32px; color: var(--green-darker); text-transform: uppercase; font-weight: 800;">
-                    Why Join at NAPL?</h1>
-                <p
-                    style="margin: 10px 0 0; color: var(--grey-medium); font-weight: 500; max-width: 800px; line-height: 1.6;">
-                    Joining NAPL means committing to responsibility, discipline, continuous learning, and professional
+            </section>
+            <section class="container" style="margin-bottom: 80px;">
+                <header style="margin-bottom: 40px; border-left: 6px solid var(--green-dark); padding-left: 20px;" class="reveal reveal-left">
+                    <h1 style="margin: 0; font-size: 32px; color: var(--green-darker); text-transform: uppercase; font-weight: 800;">
+                        Why Join at NAPL?
+                    </h1>
+                    <p style="margin: 10px 0 0; color: var(--grey-medium); font-weight: 500; max-width: 800px; line-height: 1.6;">
+                        Joining NAPL means committing to responsibility, discipline, continuous learning, and professional
                     growth within strong systems. Every employee contributes to organizational learning and benefits
                     from
                     it.
-                </p>
-            </header>
-
-            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px;">
-
-                <div class=" reveal-up"
-                    style="background: var(--green-mint); padding: 40px 30px; border-radius: 15px; border: 1px solid var(--green-primary); transition: transform 0.3s; position: relative; overflow: hidden;">
-                    <div style="color: var(--green-darker); font-size: 28px; margin-bottom: 20px;"><i
-                            class="fa-solid fa-microchip"></i></div>
-                    <h3
-                        style="color: var(--green-darker); font-size: 18px; font-weight: 800; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 0.5px;">
-                        System-Driven Excellence</h3>
-                    <p style="color: var(--grey-dark); font-size: 14px; margin: 0;">
-                        NAPL is an aerospace and critical manufacturing organization where materials, processes, and
+                    </p>
+                </header>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px;">
+                    <div class=" reveal-up" style="background: var(--green-mint); padding: 40px 30px; border-radius: 15px; border: 1px solid var(--green-primary); transition: transform 0.3s; position: relative; overflow: hidden;">
+                        <div style="color: var(--green-darker); font-size: 28px; margin-bottom: 20px;">
+                            <i class="fa-solid fa-microchip"></i>
+                        </div>
+                        <h3 style="color: var(--green-darker); font-size: 18px; font-weight: 800; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 0.5px;">
+                            System-Driven Excellence
+                        </h3>
+                        <p style="color: var(--grey-dark); font-size: 14px; margin: 0;">
+                            NAPL is an aerospace and critical manufacturing organization where materials, processes, and
                         people
-                        are supported by <strong>strong systems</strong> and clear ways of working.
-                    </p>
-                </div>
-
-                <div class="reveal-up delay-1"
-                    style="background: var(--white); padding: 40px 30px; border-radius: 15px; border: 1px solid var(--grey-light); box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: transform 0.3s;">
-                    <div style="color: var(--green-dark); font-size: 28px; margin-bottom: 20px;"><i
-                            class="fa-solid fa-screwdriver-wrench"></i></div>
-                    <h3
-                        style="color: var(--green-darker); font-size: 18px; font-weight: 800; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 0.5px;">
-                        Real Capability</h3>
-                    <p style="color: var(--grey-medium); font-size: 14px; line-height: 1.7; margin: 0;">
-                        We design, manufacture, and validate materials, components, and processes for aerospace and
+                        are supported by
+                            <strong>strong systems</strong>
+                            and clear ways of working.
+                        </p>
+                    </div>
+                    <div class="reveal-up delay-1" style="background: var(--white); padding: 40px 30px; border-radius: 15px; border: 1px solid var(--grey-light); box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: transform 0.3s;">
+                        <div style="color: var(--green-dark); font-size: 28px; margin-bottom: 20px;">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                        </div>
+                        <h3 style="color: var(--green-darker); font-size: 18px; font-weight: 800; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 0.5px;">
+                            Real Capability
+                        </h3>
+                        <p style="color: var(--grey-medium); font-size: 14px; line-height: 1.7; margin: 0;">
+                            We design, manufacture, and validate materials, components, and processes for aerospace and
                         defense
-                        where <strong>quality and safety</strong> matter deeply.
-                    </p>
+                        where
+                            <strong>quality and safety</strong>
+                            matter deeply.
+                        </p>
+                    </div>
+                    <div class="reveal-up delay-2" style="background: var(--green-darker); padding: 40px 30px; border-radius: 15px; color: white; transition: transform 0.3s;">
+                        <div style="color: var(--green-mint); font-size: 28px; margin-bottom: 20px;">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <h3 style="color: var(--white); font-size: 18px; font-weight: 800; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 0.5px;">
+                            Growth Environment
+                        </h3>
+                        <p style="color: var(--green-mint); font-size: 14px; line-height: 1.7; margin: 0; opacity: 0.9;">
+                            Joining NAPL means becoming part of a purpose-driven organization where your
+                            <strong>
+                                skills
+                            matter
+                            </strong>
+                            and your career can grow rapidly.
+                        </p>
+                    </div>
                 </div>
-
-                <div class="reveal-up delay-2"
-                    style="background: var(--green-darker); padding: 40px 30px; border-radius: 15px; color: white; transition: transform 0.3s;">
-                    <div style="color: var(--green-mint); font-size: 28px; margin-bottom: 20px;"><i
-                            class="fa-solid fa-chart-line"></i></div>
-                    <h3
-                        style="color: var(--white); font-size: 18px; font-weight: 800; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 0.5px;">
-                        Growth Environment</h3>
-                    <p style="color: var(--green-mint); font-size: 14px; line-height: 1.7; margin: 0; opacity: 0.9;">
-                        Joining NAPL means becoming part of a purpose-driven organization where your <strong>skills
-                            matter</strong> and your career can grow rapidly.
-                    </p>
-                </div>
-
-            </div>
-
-            <div class="reveal"
-                style="margin-top: 40px; background: var(--off-white); padding: 25px; border-radius: 12px; border: 1px dashed var(--green-medium); text-align: center;">
-                <p style="color: var(--green-darker); font-weight: 600; margin: 0; font-size: 15px;">
-                    <i class="fa-solid fa-circle-info" style="margin-right: 10px;"></i>
-                    NAPL is a place for serious professionals who are willing to learn, improve, and earn trust over
+                <div class="reveal" style="margin-top: 40px; background: var(--off-white); padding: 25px; border-radius: 12px; border: 1px dashed var(--green-medium); text-align: center;">
+                    <p style="color: var(--green-darker); font-weight: 600; margin: 0; font-size: 15px;">
+                        <i class="fa-solid fa-circle-info" style="margin-right: 10px;"></i>
+                        NAPL is a place for serious professionals who are willing to learn, improve, and earn trust over
                     time.
-                </p>
-            </div>
-        </section>
-
-        <section class="container" style="margin-bottom: 80px;">
-            <div
-                style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; background: var(--white); padding: 50px; border-radius: 20px; border: 1px solid var(--grey-light);">
-
-                <div style="position: relative;" class="reveal-left">
-                    <div
-                        style="width: 100%; height: 350px; background: url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80') center/cover; border-radius: 12px; box-shadow: 0 15px 35px rgba(0,0,0,0.1);">
-                    </div>
-                    <div
-                        style="position: absolute; top: -20px; right: -20px; width: 100px; height: 100px; border-top: 8px solid var(--green-primary); border-right: 8px solid var(--green-primary); border-radius: 0 12px 0 0;">
-                    </div>
-                </div>
-
-                <div class="reveal-right">
-                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
-                        <h2
-                            style="margin: 0; font-size: 28px; color: var(--green-darker); text-transform: uppercase; font-weight: 800;">
-                            Research & Development</h2>
-                        <div style="width: 8px; height: 40px; background: var(--green-dark); border-radius: 4px;"></div>
-                    </div>
-
-                    <p
-                        style="color: var(--grey-dark); font-size: 16px; font-weight: 600; line-height: 1.6; margin-bottom: 25px;">
-                        R&D at NAPL transforms ideas into certified, high-performance aerospace solutions.
                     </p>
-
-                    <ul style="list-style: none; padding: 0; margin: 0; display: grid; gap: 15px;">
-                        <li
-                            style="display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: var(--grey-medium);">
-                            <i class="fa-solid fa-flask" style="color: var(--green-primary); margin-top: 4px;"></i>
-                            <span><strong>Material Development:</strong> Engineering the foundations for critical
+                </div>
+            </section>
+            <section class="container" style="margin-bottom: 80px;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; background: var(--white); padding: 50px; border-radius: 20px; border: 1px solid var(--grey-light);">
+                    <div style="position: relative;" class="reveal-left">
+                        <div style="width: 100%; height: 350px; background: url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80') center/cover; border-radius: 12px; box-shadow: 0 15px 35px rgba(0,0,0,0.1);"></div>
+                        <div style="position: absolute; top: -20px; right: -20px; width: 100px; height: 100px; border-top: 8px solid var(--green-primary); border-right: 8px solid var(--green-primary); border-radius: 0 12px 0 0;"></div>
+                    </div>
+                    <div class="reveal-right">
+                        <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+                            <h2 style="margin: 0; font-size: 28px; color: var(--green-darker); text-transform: uppercase; font-weight: 800;">
+                                Research & Development
+                            </h2>
+                            <div style="width: 8px; height: 40px; background: var(--green-dark); border-radius: 4px;"></div>
+                        </div>
+                        <p style="color: var(--grey-dark); font-size: 16px; font-weight: 600; line-height: 1.6; margin-bottom: 25px;">
+                            R&D at NAPL transforms ideas into certified, high-performance aerospace solutions.
+                        </p>
+                        <ul style="list-style: none; padding: 0; margin: 0; display: grid; gap: 15px;">
+                            <li style="display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: var(--grey-medium);">
+                                <i class="fa-solid fa-flask" style="color: var(--green-primary); margin-top: 4px;"></i>
+                                <span>
+                                    <strong>Material Development:</strong>
+                                    Engineering the foundations for critical
                                 aerospace
-                                systems.</span>
-                        </li>
-                        <li
-                            style="display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: var(--grey-medium);">
-                            <i class="fa-solid fa-compass-drafting"
-                                style="color: var(--green-primary); margin-top: 4px;"></i>
-                            <span><strong>Design for Reliability:</strong> Refining concepts into repeatable, certified
-                                calculations.</span>
-                        </li>
-                        <li
-                            style="display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: var(--grey-medium);">
-                            <i class="fa-solid fa-microscope" style="color: var(--green-primary); margin-top: 4px;"></i>
-                            <span><strong>Certification Readiness:</strong> Data-informed experimentation and process
-                                qualification.</span>
-                        </li>
-                    </ul>
-
-                    <div style="margin-top: 35px;">
-                        <a href="rd-initiatives.html"
-                            style="display: inline-block; background: var(--green-dark); color: white; padding: 14px 35px; border-radius: 8px; font-weight: 800; text-transform: uppercase; text-decoration: none; font-size: 13px; transition: 0.3s; letter-spacing: 0.5px;">
-                            Explore R&D Initiatives <i class="fa-solid fa-arrow-right" style="margin-left: 10px;"></i>
-                        </a>
+                                systems.
+                                </span>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: var(--grey-medium);">
+                                <i class="fa-solid fa-compass-drafting" style="color: var(--green-primary); margin-top: 4px;"></i>
+                                <span>
+                                    <strong>Design for Reliability:</strong>
+                                    Refining concepts into repeatable, certified
+                                calculations.
+                                </span>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: var(--grey-medium);">
+                                <i class="fa-solid fa-microscope" style="color: var(--green-primary); margin-top: 4px;"></i>
+                                <span>
+                                    <strong>Certification Readiness:</strong>
+                                    Data-informed experimentation and process
+                                qualification.
+                                </span>
+                            </li>
+                        </ul>
+                        <div style="margin-top: 35px;">
+                            <a href="rd-initiatives.html" style="display: inline-block; background: var(--green-dark); color: white; padding: 14px 35px; border-radius: 8px; font-weight: 800; text-transform: uppercase; text-decoration: none; font-size: 13px; transition: 0.3s; letter-spacing: 0.5px;">
+                                Explore R&D Initiatives
+                                <i class="fa-solid fa-arrow-right" style="margin-left: 10px;"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <section class="container" style="margin-bottom: 80px;">
-            <div style="text-align: center; margin-bottom: 50px;" class="reveal">
-                <!-- <div
+            </section>
+            <section class="container" style="margin-bottom: 80px;">
+                <div style="text-align: center; margin-bottom: 50px;" class="reveal">
+                    <!-- <div
                 style="display: inline-block; width: 50px; height: 50px; line-height: 50px; border-radius: 50%; border: 2px solid var(--green-primary); color: var(--green-primary); font-weight: 800; font-size: 20px; margin-bottom: 15px;">
                 2</div> -->
-                <h2
-                    style="margin: 0; font-size: 32px; color: var(--green-darker); text-transform: uppercase; font-weight: 800;">
-                    Skill & Operational Culture</h2>
-                <div style="width: 400px; height: 4px; background: var(--green-primary); margin: 15px auto;"></div>
-                <p
-                    style="color: var(--grey-medium); font-size: 16px; max-width: 600px; margin: 20px auto; font-weight: 500;">
-                    We value demonstrated capability and a culture where failures are the foundation of shared learning.
-                </p>
-                <p style="color: var(--grey-medium); font-size: 14px; max-width: 720px; margin: 12px auto 0;">
-                    At NAPL, culture is defined by both how people are evaluated and how engineering work is executed.
-                </p>
-
-            </div>
-
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: stretch; ">
-
-                <div class="reveal-left"
-                    style="background: var(--green-mint); border-radius: 12px; overflow: hidden; border: 1px solid var(--green-primary); display: flex; flex-direction: column;">
-                    <div style="background: var(--green-primary); padding: 20px; color: white;">
-                        <h3 style="margin: 0; font-size: 18px; font-weight: 800; text-transform: uppercase;">
-                            Inclusivity:
-                            Skill Over Certificate</h3>
-
-                    </div>
-                    <div style="padding: 30px; flex-grow: 1;">
-                        <ul style="list-style: none; padding: 0; margin: 0; display: grid; gap: 20px;">
-                            <li
-                                style="display: flex; align-items: flex-start; gap: 12px; font-size: 14px; color: var(--grey-dark); line-height: 1.5;">
-                                <i class="fa-solid fa-circle-check"
-                                    style="color: var(--green-dark); margin-top: 4px;"></i>
-                                <span>Academic performance doesn't always reflect real-world competence.</span>
-                            </li>
-                            <li
-                                style="display: flex; align-items: flex-start; gap: 12px; font-size: 14px; color: var(--grey-dark); line-height: 1.5;">
-                                <i class="fa-solid fa-circle-check"
-                                    style="color: var(--green-dark); margin-top: 4px;"></i>
-                                <span>Capability grows through feedback and hands-on responsibility.</span>
-                            </li>
-                            <li
-                                style="display: flex; align-items: flex-start; gap: 12px; font-size: 14px; color: var(--grey-dark); line-height: 1.5;">
-                                <i class="fa-solid fa-circle-check"
-                                    style="color: var(--green-dark); margin-top: 4px;"></i>
-                                <span>We welcome individuals who demonstrate discipline and curiosity over formal
-                                    labels.</span>
-                            </li>
-                        </ul>
-                    </div>
+                    <h2 style="margin: 0; font-size: 32px; color: var(--green-darker); text-transform: uppercase; font-weight: 800;">
+                        Skill & Operational Culture
+                    </h2>
+                    <div style="width: 400px; height: 4px; background: var(--green-primary); margin: 15px auto;"></div>
+                    <p style="color: var(--grey-medium); font-size: 16px; max-width: 600px; margin: 20px auto; font-weight: 500;">
+                        We value demonstrated capability and a culture where failures are the foundation of shared learning.
+                    </p>
+                    <p style="color: var(--grey-medium); font-size: 14px; max-width: 720px; margin: 12px auto 0;">
+                        At NAPL, culture is defined by both how people are evaluated and how engineering work is executed.
+                    </p>
                 </div>
-
-                <div class="reveal-right"
-                    style="background: white; border-radius: 12px; border: 1px solid var(--grey-light); box-shadow: 0 10px 30px rgba(0,0,0,0.05); overflow: hidden; display: flex; flex-direction: column;">
-                    <div style="background: var(--green-darker); padding: 20px; color: white;">
-                        <h3 style="margin: 0; font-size: 18px; font-weight: 800; text-transform: uppercase;">Engineering
-                            &
-                            Operational Culture</h3>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: stretch; ">
+                    <div class="reveal-left" style="background: var(--green-mint); border-radius: 12px; overflow: hidden; border: 1px solid var(--green-primary); display: flex; flex-direction: column;">
+                        <div style="background: var(--green-primary); padding: 20px; color: white;">
+                            <h3 style="margin: 0; font-size: 18px; font-weight: 800; text-transform: uppercase;">
+                                Inclusivity:
+                            Skill Over Certificate
+                            </h3>
+                        </div>
+                        <div style="padding: 30px; flex-grow: 1;">
+                            <ul style="list-style: none; padding: 0; margin: 0; display: grid; gap: 20px;">
+                                <li style="display: flex; align-items: flex-start; gap: 12px; font-size: 14px; color: var(--grey-dark); line-height: 1.5;">
+                                    <i class="fa-solid fa-circle-check" style="color: var(--green-dark); margin-top: 4px;"></i>
+                                    <span>Academic performance doesn't always reflect real-world competence.</span>
+                                </li>
+                                <li style="display: flex; align-items: flex-start; gap: 12px; font-size: 14px; color: var(--grey-dark); line-height: 1.5;">
+                                    <i class="fa-solid fa-circle-check" style="color: var(--green-dark); margin-top: 4px;"></i>
+                                    <span>Capability grows through feedback and hands-on responsibility.</span>
+                                </li>
+                                <li style="display: flex; align-items: flex-start; gap: 12px; font-size: 14px; color: var(--grey-dark); line-height: 1.5;">
+                                    <i class="fa-solid fa-circle-check" style="color: var(--green-dark); margin-top: 4px;"></i>
+                                    <span>
+                                        We welcome individuals who demonstrate discipline and curiosity over formal
+                                    labels.
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-
-                    <div style="padding: 30px; flex-grow: 1;">
-                        <p style="color: var(--green-darker); font-weight: 700; font-size: 14px; margin-bottom: 15px;">
-                            Ownership of Failure:</p>
-                        <p style="color: var(--grey-medium); font-size: 14px; line-height: 1.6; margin-bottom: 20px;">
-                            Failures are not hidden; they are examined, understood, and corrected through structured
+                    <div class="reveal-right" style="background: white; border-radius: 12px; border: 1px solid var(--grey-light); box-shadow: 0 10px 30px rgba(0,0,0,0.05); overflow: hidden; display: flex; flex-direction: column;">
+                        <div style="background: var(--green-darker); padding: 20px; color: white;">
+                            <h3 style="margin: 0; font-size: 18px; font-weight: 800; text-transform: uppercase;">
+                                Engineering
+                            &
+                            Operational Culture
+                            </h3>
+                        </div>
+                        <div style="padding: 30px; flex-grow: 1;">
+                            <p style="color: var(--green-darker); font-weight: 700; font-size: 14px; margin-bottom: 15px;">
+                                Ownership of Failure:
+                            </p>
+                            <p style="color: var(--grey-medium); font-size: 14px; line-height: 1.6; margin-bottom: 20px;">
+                                Failures are not hidden; they are examined, understood, and corrected through structured
                             review
                             and shared accountability.
-                        </p>
-                        <ul style="list-style: none; padding: 0; margin: 0; display: grid; gap: 12px;">
-                            <li
-                                style="display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--grey-dark);">
-                                <div
-                                    style="width: 6px; height: 6px; background: var(--green-primary); border-radius: 50%;">
-                                </div>
-                                Standards-driven processes and clear documentation.
-                            </li>
-                            <li
-                                style="display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--grey-dark);">
-                                <div
-                                    style="width: 6px; height: 6px; background: var(--green-primary); border-radius: 50%;">
-                                </div>
-                                Validation and inspection as shared responsibilities.
-                            </li>
-                            <li
-                                style="display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--grey-dark);">
-                                <div
-                                    style="width: 6px; height: 6px; background: var(--green-primary); border-radius: 50%;">
-                                </div>
-                                Early identification of risks through respectful discussion.
-                            </li>
-                            <li
-                                style="display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--grey-dark);">
-                                <div
-                                    style="width: 6px; height: 6px; background: var(--green-primary); border-radius: 50%;">
-                                </div>
-                                A strong quality mindset supported by mutual accountability.
-                            </li>
-                        </ul>
+                            </p>
+                            <ul style="list-style: none; padding: 0; margin: 0; display: grid; gap: 12px;">
+                                <li style="display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--grey-dark);">
+                                    <div style="width: 6px; height: 6px; background: var(--green-primary); border-radius: 50%;"></div>
+                                    Standards-driven processes and clear documentation.
+                                </li>
+                                <li style="display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--grey-dark);">
+                                    <div style="width: 6px; height: 6px; background: var(--green-primary); border-radius: 50%;"></div>
+                                    Validation and inspection as shared responsibilities.
+                                </li>
+                                <li style="display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--grey-dark);">
+                                    <div style="width: 6px; height: 6px; background: var(--green-primary); border-radius: 50%;"></div>
+                                    Early identification of risks through respectful discussion.
+                                </li>
+                                <li style="display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--grey-dark);">
+                                    <div style="width: 6px; height: 6px; background: var(--green-primary); border-radius: 50%;"></div>
+                                    A strong quality mindset supported by mutual accountability.
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <div class="container">
-            <header class="reveal-left">
-                <h1>Careers at NAPL</h1>
-                <p>Aerospace Fasteners & Critical Systems Manufacturing</p>
-            </header>
-
-            <div class="grid">
-                <div id="jobExplorer" class="reveal-left "></div>
-
-                <div class="portal-glass reveal-right">
-                    <div id="emptyPortal" class="portal-empty">
-                        <svg width="100" height="100" viewBox="0 0 24 24">
-                            <path
-                                d="M20 6h-4V4c0-1.1-.9-2-2-2h-4c-1.1 0-2 .9-2 2v2H4c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zM10 4h4v2h-4V4zm10 15H4V8h16v11z" />
-                        </svg>
-                        <h2>Select a Role to Apply</h2>
-                        <p>Explore the categories on the left. Once you find a role, click "Apply for this job" to
+            </section>
+            <div class="container">
+                <header class="reveal-left">
+                    <h1>Careers at NAPL</h1>
+                    <p>Aerospace Fasteners & Critical Systems Manufacturing</p>
+                </header>
+                <div class="grid">
+                    <div id="jobExplorer" class="reveal-left "></div>
+                    <div class="portal-glass reveal-right">
+                        <div id="emptyPortal" class="portal-empty">
+                            <svg width="100" height="100" viewBox="0 0 24 24">
+                                <path d="M20 6h-4V4c0-1.1-.9-2-2-2h-4c-1.1 0-2 .9-2 2v2H4c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zM10 4h4v2h-4V4zm10 15H4V8h16v11z"/>
+                            </svg>
+                            <h2>Select a Role to Apply</h2>
+                            <p>
+                                Explore the categories on the left. Once you find a role, click "Apply for this job" to
                             begin.
-                        </p>
-                    </div>
-
-                    <div id="formPortal" class="portal-form-view">
-                        <div class="portal-header">
-                            <p id="subCategoryLabel">Recruitment Portal</p>
-                            <h3 id="formRoleName">Role Name</h3>
+                            </p>
                         </div>
-
-                        <div class="form-content">
-                            <div class="p-dots" id="progressDots"></div>
-                            <form id="naplCareerForm">
-                                <div class="form-step active">
-                                    <label>Verify Official Email</label>
-                                    <input type="email" id="verEmail" placeholder="Enter your email" required>
-                                    <label style="text-transform:none; font-weight:400; display:flex; gap:10px;">
-                                        <input type="checkbox" id="vTerms" style="width:auto; margin:0;">
-                                        I agree to the NAPL Data Privacy & Verification Policies.
-                                    </label>
-                                </div>
-
-                                <div class="form-step">
-                                    <label>Title</label>
-                                    <select>
-                                        <option>Mr.</option>
-                                        <option>Ms.</option>
-                                        <option>Mrs.</option>
-                                        <option>Dr.</option>
-                                    </select>
-                                    <div class="grid-2">
-                                        <div><label>First Name</label><input type="text" placeholder="First Name"></div>
-                                        <div><label>Last Name</label><input type="text" placeholder="Last Name"></div>
+                        <div id="formPortal" class="portal-form-view">
+                            <div class="portal-header">
+                                <p id="subCategoryLabel">Recruitment Portal</p>
+                                <h3 id="formRoleName">Role Name</h3>
+                            </div>
+                            <div class="form-content">
+                                <div class="p-dots" id="progressDots"></div>
+                                <form id="naplCareerForm">
+                                    <div class="form-step active">
+                                        <label>Verify Official Email</label>
+                                        <input
+                                            type="email"
+                                            id="verEmail"
+                                            placeholder="Enter your email"
+                                            required
+                                        >
+                                        <label style="text-transform:none; font-weight:400; display:flex; gap:10px;">
+                                            <input type="checkbox" id="vTerms" style="width:auto; margin:0;">
+                                            I agree to the NAPL Data Privacy & Verification Policies.
+                                        </label>
                                     </div>
-                                    <div class="grid-2">
-                                        <div><label>Gender</label><select>
-                                                <option>Male</option>
-                                                <option>Female</option>
-                                                <option>Non-Binary</option>
-                                                <option>Prefer not to say</option>
-                                            </select></div>
-                                        <div><label>Phone Number</label><input type="tel" placeholder="+91 00000 00000">
+                                    <div class="form-step">
+                                        <label>Title</label>
+                                        <select>
+                                            <option>Mr.</option>
+                                            <option>Ms.</option>
+                                            <option>Mrs.</option>
+                                            <option>Dr.</option>
+                                        </select>
+                                        <div class="grid-2">
+                                            <div>
+                                                <label>First Name</label>
+                                                <input type="text" placeholder="First Name">
+                                            </div>
+                                            <div>
+                                                <label>Last Name</label>
+                                                <input type="text" placeholder="Last Name">
+                                            </div>
+                                        </div>
+                                        <div class="grid-2">
+                                            <div>
+                                                <label>Gender</label>
+                                                <select>
+                                                    <option>Male</option>
+                                                    <option>Female</option>
+                                                    <option>Non-Binary</option>
+                                                    <option>Prefer not to say</option>
+                                                </select>
+                                            </div>
+                                            <div>
+                                                <label>Phone Number</label>
+                                                <input type="tel" placeholder="+91 00000 00000">
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-
-                                <div class="form-step">
-                                    <div class="grid-2">
-                                        <div><label>Country</label><select id="countrySel">
-                                                <option>India</option>
-                                                <option>United Kingdom</option>
-                                                <option>Germany</option>
-                                                <option>France</option>
-                                            </select></div>
-                                        <div><label>State</label><select id="stateSel">
-                                                <option>Tamil Nadu</option>
-                                                <option>Karnataka</option>
-                                                <option>Maharashtra</option>
-                                                <option>Delhi</option>
-                                            </select></div>
+                                    <div class="form-step">
+                                        <div class="grid-2">
+                                            <div>
+                                                <label>Country</label>
+                                                <select id="countrySel">
+                                                    <option>India</option>
+                                                    <option>United Kingdom</option>
+                                                    <option>Germany</option>
+                                                    <option>France</option>
+                                                </select>
+                                            </div>
+                                            <div>
+                                                <label>State</label>
+                                                <select id="stateSel">
+                                                    <option>Tamil Nadu</option>
+                                                    <option>Karnataka</option>
+                                                    <option>Maharashtra</option>
+                                                    <option>Delhi</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="grid-2">
+                                            <div>
+                                                <label>City or Town</label>
+                                                <input type="text" placeholder="City">
+                                            </div>
+                                            <div>
+                                                <label>Pincode</label>
+                                                <input type="text" placeholder="600001">
+                                            </div>
+                                        </div>
+                                        <label>Address Line 1</label>
+                                        <input type="text" placeholder="Street name, door no.">
+                                        <label>Address Line 2</label>
+                                        <input type="text" placeholder="Area, Landmark">
                                     </div>
-                                    <div class="grid-2">
-                                        <div><label>City or Town</label><input type="text" placeholder="City"></div>
-                                        <div><label>Pincode</label><input type="text" placeholder="600001"></div>
+                                    <div class="form-step">
+                                        <div class="grid-2">
+                                            <div>
+                                                <label>Highest Education</label>
+                                                <input type="text" placeholder="B.E / B.Tech / M.Sc">
+                                            </div>
+                                            <div>
+                                                <label>Experience</label>
+                                                <select>
+                                                    <option>Fresher</option>
+                                                    <option>1-3 Years</option>
+                                                    <option>3-5 Years</option>
+                                                    <option>5-10 Years</option>
+                                                    <option>10+ Years</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <label>Skills</label>
+                                        <div class="skill-tag-container" id="skillTags"></div>
+                                        <div style="position:relative; display:flex; gap:10px;">
+                                            <input
+                                                type="text"
+                                                id="skillInput"
+                                                placeholder="Add skills (e.g. AutoCAD, Metrology)"
+                                                style="margin-bottom:0;"
+                                            >
+                                            <button
+                                                type="button"
+                                                onclick="addSkill()"
+                                                class="btn-n"
+                                                style="padding:0 20px; font-size:12px;"
+                                            >Add</button>
+                                            <div class="suggestion-box" id="suggBox"></div>
+                                        </div>
+                                        <p style="font-size:10px; color:var(--grey-medium); margin-top:5px; margin-bottom:15px;">
+                                            Suggested: Metallurgy, Aerospace Standards, Quality Control, SAP ABAP
+                                        </p>
+                                        <label>Area of Interest</label>
+                                        <input type="text" placeholder="Specific domain interest">
+                                        <label>Share Experience</label>
+                                        <textarea placeholder="Describe your relevant work history..."></textarea>
                                     </div>
-                                    <label>Address Line 1</label><input type="text" placeholder="Street name, door no.">
-                                    <label>Address Line 2</label><input type="text" placeholder="Area, Landmark">
-                                </div>
-
-                                <div class="form-step">
-                                    <div class="grid-2">
-                                        <div><label>Highest Education</label><input type="text"
-                                                placeholder="B.E / B.Tech / M.Sc"></div>
-                                        <div><label>Experience</label><select>
-                                                <option>Fresher</option>
-                                                <option>1-3 Years</option>
-                                                <option>3-5 Years</option>
-                                                <option>5-10 Years</option>
-                                                <option>10+ Years</option>
-                                            </select></div>
-                                    </div>
-
-                                    <label>Skills</label>
-                                    <div class="skill-tag-container" id="skillTags"></div>
-                                    <div style="position:relative; display:flex; gap:10px;">
-                                        <input type="text" id="skillInput"
-                                            placeholder="Add skills (e.g. AutoCAD, Metrology)" style="margin-bottom:0;">
-                                        <button type="button" onclick="addSkill()" class="btn-n"
-                                            style="padding:0 20px; font-size:12px;">Add</button>
-                                        <div class="suggestion-box" id="suggBox"></div>
-                                    </div>
-                                    <p
-                                        style="font-size:10px; color:var(--grey-medium); margin-top:5px; margin-bottom:15px;">
-                                        Suggested: Metallurgy, Aerospace Standards, Quality Control, SAP ABAP</p>
-
-                                    <label>Area of Interest</label><input type="text"
-                                        placeholder="Specific domain interest">
-                                    <label>Share Experience</label><textarea
-                                        placeholder="Describe your relevant work history..."></textarea>
-                                </div>
-
-                                <div class="form-step">
-                                    <label>Upload CV/Resume (PDF Format)</label>
-                                    <div
-                                        style="border:2px dashed var(--green-mint); padding:30px; text-align:center; border-radius:12px; background:var(--off-white); margin-bottom:20px;">
-                                        <i class="fa fa-cloud-upload"
-                                            style="font-size:24px; color:var(--green-medium); margin-bottom:10px;"></i><br>
-                                        <input type="file" accept=".pdf"
-                                            style="border:none; cursor:pointer; width:auto; font-size:12px;">
-                                    </div>
-
-                                    <div
-                                        style="background:var(--off-white); padding:15px; border-radius:8px; margin-bottom:20px;">
-                                        <label style="text-transform:none;">Why do you want to join NAPL?</label>
-                                        <textarea style="background:#fff; height:80px;"></textarea>
-                                    </div>
-
-                                    <label
-                                        style="text-transform:none; font-weight:400; display:flex; gap:10px; margin-bottom:10px;">
-                                        <input type="checkbox" style="width:auto; margin:0;" required> I confirm all
+                                    <div class="form-step">
+                                        <label>Upload CV/Resume (PDF Format)</label>
+                                        <div style="border:2px dashed var(--green-mint); padding:30px; text-align:center; border-radius:12px; background:var(--off-white); margin-bottom:20px;">
+                                            <i class="fa fa-cloud-upload" style="font-size:24px; color:var(--green-medium); margin-bottom:10px;"></i>
+                                            <br>
+                                            <input type="file" accept=".pdf" style="border:none; cursor:pointer; width:auto; font-size:12px;">
+                                        </div>
+                                        <div style="background:var(--off-white); padding:15px; border-radius:8px; margin-bottom:20px;">
+                                            <label style="text-transform:none;">Why do you want to join NAPL?</label>
+                                            <textarea style="background:#fff; height:80px;"></textarea>
+                                        </div>
+                                        <label style="text-transform:none; font-weight:400; display:flex; gap:10px; margin-bottom:10px;">
+                                            <input type="checkbox" style="width:auto; margin:0;" required>
+                                            I confirm all
                                         information provided is accurate and true.
-                                    </label>
-                                    <label style="text-transform:none; font-weight:400; display:flex; gap:10px;">
-                                        <input type="checkbox" style="width:auto; margin:0;" required> I agree to
+                                        </label>
+                                        <label style="text-transform:none; font-weight:400; display:flex; gap:10px;">
+                                            <input type="checkbox" style="width:auto; margin:0;" required>
+                                            I agree to
                                         background
                                         verification and company policies.
-                                    </label>
-                                </div>
-
-                                <div class="action-btns">
-                                    <button type="button" class="btn-b" id="backBtn" onclick="step(-1)">Back</button>
-                                    <button type="button" class="btn-n" id="nextBtn" onclick="step(1)">Next
-                                        Step</button>
-                                </div>
-                            </form>
+                                        </label>
+                                    </div>
+                                    <div class="action-btns">
+                                        <button
+                                            type="button"
+                                            class="btn-b"
+                                            id="backBtn"
+                                            onclick="step(-1)"
+                                        >Back</button>
+                                        <button
+                                            type="button"
+                                            class="btn-n"
+                                            id="nextBtn"
+                                            onclick="step(1)"
+                                        >
+                                            Next
+                                        Step
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="modal-overlay" id="modalOverlay">
-            <div class="modal-card">
-                <i class="fa-solid fa-circle-check" id="modalIcon"></i>
-                <h2 id="modalTitle">Title</h2>
-                <p id="modalMsg">Message goes here.</p>
-                <button class="modal-btn" onclick="closePopup()">OK</button>
-            </div>
-        </div>
-
-        <section class="container" style="margin-bottom: 100px;">
-
-            <div
-                style="display: flex; flex-wrap: wrap; gap: 0; border-radius: 20px; overflow: hidden; border: 1px solid var(--grey-light); background: var(--white);">
-
-                <div style="flex: 1; min-width: 300px; padding: 60px; border-right: 1px solid var(--grey-light);"
-                    class="reveal-left ">
-                    <h2
-                        style="color: var(--green-darker); font-size: 26px; font-weight: 800; text-transform: uppercase; margin-bottom: 30px;">
-                        Support & Stability
-                    </h2>
-
-                    <div style="margin-bottom: 40px;">
-                        <h4
-                            style="color: var(--green-dark); text-transform: uppercase; font-size: 13px; letter-spacing: 1px; margin-bottom: 10px;">
-                            Authority to Act</h4>
-                        <p style="color: var(--grey-medium); font-size: 15px; line-height: 1.8; margin: 0;">
-                            Technical decisions are owned by qualified roles; any employee has the <strong>authority to
-                                stop
-                                work</strong> if quality is at risk. Escalation is a responsibility, not a failure.
-                        </p>
-                    </div>
-
-                    <div>
-                        <h4
-                            style="color: var(--green-dark); text-transform: uppercase; font-size: 13px; letter-spacing: 1px; margin-bottom: 10px;">
-                            Family & Well-being</h4>
-                        <p style="color: var(--grey-medium); font-size: 15px; line-height: 1.8; margin: 0;">
-                            We support our employees and their families through a stable environment, encouragement of
-                            education, and a lasting commitment to well-being.
-                        </p>
-                    </div>
+            <div class="modal-overlay" id="modalOverlay">
+                <div class="modal-card">
+                    <i class="fa-solid fa-circle-check" id="modalIcon"></i>
+                    <h2 id="modalTitle">Title</h2>
+                    <p id="modalMsg">Message goes here.</p>
+                    <button class="modal-btn" onclick="closePopup()">OK</button>
                 </div>
-
-                <div class="reveal-right"
-                    style="flex: 1; min-width: 300px; background: var(--green-darker); display: flex; align-items: center; padding: 60px; position: relative;">
-                    <div style="
+            </div>
+            <section class="container" style="margin-bottom: 100px;">
+                <div style="display: flex; flex-wrap: wrap; gap: 0; border-radius: 20px; overflow: hidden; border: 1px solid var(--grey-light); background: var(--white);">
+                    <div style="flex: 1; min-width: 300px; padding: 60px; border-right: 1px solid var(--grey-light);" class="reveal-left ">
+                        <h2 style="color: var(--green-darker); font-size: 26px; font-weight: 800; text-transform: uppercase; margin-bottom: 30px;">
+                            Support & Stability
+                        </h2>
+                        <div style="margin-bottom: 40px;">
+                            <h4 style="color: var(--green-dark); text-transform: uppercase; font-size: 13px; letter-spacing: 1px; margin-bottom: 10px;">
+                                Authority to Act
+                            </h4>
+                            <p style="color: var(--grey-medium); font-size: 15px; line-height: 1.8; margin: 0;">
+                                Technical decisions are owned by qualified roles; any employee has the
+                                <strong>
+                                    authority to
+                                stop
+                                work
+                                </strong>
+                                if quality is at risk. Escalation is a responsibility, not a failure.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 style="color: var(--green-dark); text-transform: uppercase; font-size: 13px; letter-spacing: 1px; margin-bottom: 10px;">
+                                Family & Well-being
+                            </h4>
+                            <p style="color: var(--grey-medium); font-size: 15px; line-height: 1.8; margin: 0;">
+                                We support our employees and their families through a stable environment, encouragement of
+                            education, and a lasting commitment to well-being.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="reveal-right" style="flex: 1; min-width: 300px; background: var(--green-darker); display: flex; align-items: center; padding: 60px; position: relative;">
+                        <div style="
     position: absolute;
     inset: 0;
     display: flex;
@@ -1841,44 +1853,39 @@
     opacity: 0.1;
     pointer-events: none;
 ">
-                        <img src="imgs/whitenitha-removebg-preview.png" alt="" width="800" height="800">
-                    </div>
-
-                    <div style="position: relative; z-index: 2;">
-                        <i class="fa-solid fa-quote-left"
-                            style="font-size: 40px; color: var(--green-primary); margin-bottom: 20px;"></i>
-                        <p
-                            style="color: var(--white); font-size: 22px; font-weight: 500; line-height: 1.5; font-style: italic;">
-                            "We believe real skill is revealed not by the absence of mistakes, but by how individuals
+                            <img
+                                src="imgs/whitenitha-removebg-preview.png"
+                                alt=""
+                                width="800"
+                                height="800"
+                            >
+                        </div>
+                        <div style="position: relative; z-index: 2;">
+                            <i class="fa-solid fa-quote-left" style="font-size: 40px; color: var(--green-primary); margin-bottom: 20px;"></i>
+                            <p style="color: var(--white); font-size: 22px; font-weight: 500; line-height: 1.5; font-style: italic;">
+                                "We believe real skill is revealed not by the absence of mistakes, but by how individuals
                             respond to them—through ownership, analysis, and improvement".
-                        </p>
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="reveal"
-                style="margin-top: 60px; text-align: center; padding: 60px 20px; border-top: 1px solid var(--grey-light);">
-                <h3 style="color: var(--green-darker); font-size: 32px; font-weight: 800; margin-bottom: 15px;">IS NAPL
-                    RIGHT FOR YOU?</h3>
-                <p
-                    style="color: var(--grey-medium); font-size: 16px; max-width: 650px; margin: 0 auto 35px; line-height: 1.6;">
-                    If you seek responsibility and purposeful work, you will find alignment here. Joining means
+                <div class="reveal" style="margin-top: 60px; text-align: center; padding: 60px 20px; border-top: 1px solid var(--grey-light);">
+                    <h3 style="color: var(--green-darker); font-size: 32px; font-weight: 800; margin-bottom: 15px;">
+                        IS NAPL
+                    RIGHT FOR YOU?
+                    </h3>
+                    <p style="color: var(--grey-medium); font-size: 16px; max-width: 650px; margin: 0 auto 35px; line-height: 1.6;">
+                        If you seek responsibility and purposeful work, you will find alignment here. Joining means
                     committing
                     to discipline and growth within strong systems.
-                </p>
-
-                <a href="#jobExplorer"
-                    style="display: inline-block; padding: 16px 45px; background: var(--green-dark); color: white; text-decoration: none; border-radius: 4px; font-weight: 800; text-transform: uppercase; font-size: 14px; letter-spacing: 1px; transition: 0.3s; border-bottom: 4px solid var(--green-deep);">
-                    Apply to NAPL
-                </a>
-            </div>
-        </section>
-
-    </main>
-
-
-
-    <section class="relative z-[90] overflow-hidden bg-[#6a9b5f] text-white" style="
+                    </p>
+                    <a href="#jobExplorer" style="display: inline-block; padding: 16px 45px; background: var(--green-dark); color: white; text-decoration: none; border-radius: 4px; font-weight: 800; text-transform: uppercase; font-size: 14px; letter-spacing: 1px; transition: 0.3s; border-bottom: 4px solid var(--green-deep);">
+                        Apply to NAPL
+                    </a>
+                </div>
+            </section>
+        </main>
+        <section class="relative z-[90] overflow-hidden bg-[#6a9b5f] text-white" style="
         border-radius:10px;
         width: 80%;
         height: 250px;
@@ -1886,187 +1893,161 @@
         margin-top: 20px;
         box-shadow: 0px 20px 9px black;
     ">
-        <!-- BACKGROUND IMAGE -->
-        <div class="absolute inset-0 z-0 bg-no-repeat bg-cover opacity-70 mix-blend-multiply"
-            style="background-image: url('imgs/wwu-copy.png'); background-position: center;"></div>
-
-        <!-- CONTENT WRAPPER (VERTICAL CENTER) -->
-        <div class="relative z-10 h-full flex items-center">
-            <div class="container px-6 mx-auto">
-                <div class="max-w-2xl">
-                    <p class="text-sm py-3 font-semibold tracking-wider">
-                        One Platform For All Your Fasteners Requirements
-                    </p>
-
-                    <h2 class="text-3xl mb-2 font-extrabold tracking-tight">
-                        Which products are you looking to buy?
-                    </h2>
-
-                    <p class="mb-4 mt-1 text-base font-bold">
-                        Single window for end-to-end steel sourcing
-                    </p>
-
-                    <a href="products.html"
-                        class="inline-flex items-center px-8 py-3 text-sm font-bold text-[#6a9b5f] bg-white rounded-md shadow-lg transition-transform hover:scale-105">
-                        Explore Now
-                        <i class="ml-3 fas fa-arrow-right"></i>
-                    </a>
+            <!-- BACKGROUND IMAGE -->
+            <div class="absolute inset-0 z-0 bg-no-repeat bg-cover opacity-70 mix-blend-multiply" style="background-image: url('imgs/wwu-copy.png'); background-position: center;"></div>
+            <!-- CONTENT WRAPPER (VERTICAL CENTER) -->
+            <div class="relative z-10 h-full flex items-center">
+                <div class="container px-6 mx-auto">
+                    <div class="max-w-2xl">
+                        <p class="text-sm py-3 font-semibold tracking-wider">
+                            One Platform For All Your Fasteners Requirements
+                        </p>
+                        <h2 class="text-3xl mb-2 font-extrabold tracking-tight">
+                            Which products are you looking to buy?
+                        </h2>
+                        <p class="mb-4 mt-1 text-base font-bold">
+                            Single window for end-to-end steel sourcing
+                        </p>
+                        <a href="products.html" class="inline-flex items-center px-8 py-3 text-sm font-bold text-[#6a9b5f] bg-white rounded-md shadow-lg transition-transform hover:scale-105">
+                            Explore Now
+                            <i class="ml-3 fas fa-arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <footer class="relative z-10 bg-gradient-to-t from-[#0b180d] via-[#172c19] to-[#1a471c] text-gray-300">
-
-        <!-- Curve -->
-        <div class="absolute top-0 left-0 w-full h-24 bg-[#1a471c] rounded-[50%] -translate-y-1/2"></div>
-
-        <div class="relative max-w-7xl mx-auto px-6 py-16 pt-32 pb-32">
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6 items-start">
-
-                <!-- LOGO -->
-                <div>
-                    <img src="imgs/Screenshot 2025-11-04 120806.png" class="w-[100px] h-auto mb-6" alt="Logo">
-                </div>
-
-                <!-- ADDRESS -->
-                <div>
-                    <h3 class="mb-4 text-lg font-semibold text-white">Head Office & Factory</h3>
-
-                    <p class="text-sm leading-relaxed">
-                        Plot no. 140 SIDCO Women Industrial Estate,<br>
-                        Karuppur, Salem – 636011
-                    </p>
-
-                    <h3 class="mt-4 text-sm font-semibold">Call Us</h3>
-
-                    <a href="tel:+918220538534" class="block text-sm hover:text-white transition">
-                        +91 82205 38534
-                    </a>
-
-                    <a href="tel:+919578420672" class="block text-sm hover:text-white transition">
-                        +91 95784 20672
-                    </a>
-
-                    <h3 class="mt-4 text-sm font-semibold">Mail</h3>
-
-                    <a href="mailto:marketing@nithaaerospace.in" class="block text-sm hover:text-white transition">
-                        marketing@nithaaerospace.in
-                    </a>
-
-                    <a href="mailto:support@nithaaerospace.in" class="block text-sm hover:text-white transition">
-                        support@nithaaerospace.in
-                    </a>
-                </div>
-
-
-                <!-- COMPANY -->
-                <div>
-                    <h3 class="mb-4 text-lg font-semibold text-white">Company</h3>
-                    <ul class="space-y-3 text-sm">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="aboutus.html">About</a></li>
-                        <li><a href="#">Capabilities</a></li>
-                        <li><a href="#">FIS/R&D</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <!-- PRODUCTS -->
-                <div>
-                    <h3 class="mb-4 text-lg font-semibold text-white">Products</h3>
-                    <ul class="space-y-3 text-sm">
-                        <li class="hover:text-white cursor-pointer">
-                            <a href="solution.html" class="block w-full">Aerospace Fasteners</a>
-                        </li>
-
-                        <li class="hover:text-white cursor-pointer">
-                            <a href="solution.html" class="block w-full">Oil & Gas Bolting</a>
-                        </li>
-
-                        <li class="hover:text-white cursor-pointer">
-                            <a href="solution.html" class="block w-full">Defence Fasteners</a>
-                        </li>
-
-                        <li class="hover:text-white cursor-pointer">
-                            <a href="solution.html" class="block w-full">Shipbuilding Fasteners</a>
-                        </li>
-
-                        <li class="hover:text-white cursor-pointer">
-                            <a href="solution.html" class="block w-full">Automotive Fasteners</a>
-                        </li>
-
-                        <li class="hover:text-white cursor-pointer">
-                            <a href="solution.html" class="block w-full">Nuclear & Energy Fasteners</a>
-                        </li>
-
-                        <li class="hover:text-white cursor-pointer">
-                            <a href="solution.html" class="block w-full">Medical Fasteners</a>
-                        </li>
-
-                        <li class="hover:text-white cursor-pointer">
-                            <a href="solution.html" class="block w-full">Custom & Prototype Fasteners</a>
-                        </li>
-
-                    </ul>
-                </div>
-
-                <!-- FACILITIES -->
-                <div>
-                    <h3 class="mb-4 text-lg font-semibold text-white">Capabilities</h3>
-                    <ul class="space-y-3 text-sm">
-                        <li class="hover:text-white cursor-pointer">
-                            <a href="fasteners.html" class="block w-full">Melting</a>
-                        </li>
-
-                        <li class="hover:text-white cursor-pointer">
-                            <a href="fasteners.html" class="block w-full">Casting</a>
-                        </li>
-
-                        <li class="hover:text-white cursor-pointer">
-                            <a href="fasteners.html" class="block w-full">Forging</a>
-                        </li>
-
-                        <li class="hover:text-white cursor-pointer">
-                            <a href="fasteners.html" class="block w-full">Precision Machining</a>
-                        </li>
-
-                        <li class="hover:text-white cursor-pointer">
-                            <a href="fasteners.html" class="block w-full">Thread Rolling</a>
-                        </li>
-
-                        <li class="hover:text-white cursor-pointer">
-                            <a href="fasteners.html" class="block w-full">Heat Treatment</a>
-                        </li>
-
-                        <li class="hover:text-white cursor-pointer">
-                            <a href="fasteners.html" class="block w-full">Surface Treatment</a>
-                        </li>
-
-                        <li class="hover:text-white cursor-pointer">
-                            <a href="fasteners.html" class="block w-full">Testing & QA</a>
-                        </li>
-
-                        <li class="hover:text-white cursor-pointer">
-                            <a href="fasteners.html" class="block w-full">Engineering</a>
-                        </li>
-
-                    </ul>
-                </div>
-
-                <!-- CONTACT -->
-                <div class="w-full">
-                    <h3 class="mb-3 text-lg font-semibold text-white text-center sm:text-left">
-                        Connect With Us
-                    </h3>
-                    <p class="mt-3 mb-3 text-white/90 text-sm  tracking-tight max-w-xl mx-auto md:mx-0">
-                        For Advanced Engineering <span class="opacity-70 mx-1"></span> Fastening Solutions
-                    </p>
-                    <div class="flex flex-col gap-4 items-center sm:items-start">
-
-                        <!-- WHATSAPP BUTTON -->
-                        <a href="https://wa.me/919578420672" target="_blank" class="group flex items-center gap-4
+        </section>
+        <footer class="relative z-10 bg-gradient-to-t from-[#0b180d] via-[#172c19] to-[#1a471c] text-gray-300">
+            <!-- Curve -->
+            <div class="absolute top-0 left-0 w-full h-24 bg-[#1a471c] rounded-[50%] -translate-y-1/2"></div>
+            <div class="relative max-w-7xl mx-auto px-6 py-16 pt-32 pb-32">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6 items-start">
+                    <!-- LOGO -->
+                    <div>
+                        <img src="imgs/Screenshot 2025-11-04 120806.png" class="w-[100px] h-auto mb-6" alt="Logo">
+                    </div>
+                    <!-- ADDRESS -->
+                    <div>
+                        <h3 class="mb-4 text-lg font-semibold text-white">Head Office & Factory</h3>
+                        <p class="text-sm leading-relaxed">
+                            Plot no. 140 SIDCO Women Industrial Estate,
+                            <br>
+                            Karuppur, Salem – 636011
+                        </p>
+                        <h3 class="mt-4 text-sm font-semibold">Call Us</h3>
+                        <a href="tel:+918220538534" class="block text-sm hover:text-white transition">
+                            +91 82205 38534
+                        </a>
+                        <a href="tel:+919578420672" class="block text-sm hover:text-white transition">
+                            +91 95784 20672
+                        </a>
+                        <h3 class="mt-4 text-sm font-semibold">Mail</h3>
+                        <a href="mailto:marketing@nithaaerospace.in" class="block text-sm hover:text-white transition">
+                            marketing@nithaaerospace.in
+                        </a>
+                        <a href="mailto:support@nithaaerospace.in" class="block text-sm hover:text-white transition">
+                            support@nithaaerospace.in
+                        </a>
+                    </div>
+                    <!-- COMPANY -->
+                    <div>
+                        <h3 class="mb-4 text-lg font-semibold text-white">Company</h3>
+                        <ul class="space-y-3 text-sm">
+                            <li>
+                                <a href="index.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="aboutus.html">About</a>
+                            </li>
+                            <li>
+                                <a href="#">Capabilities</a>
+                            </li>
+                            <li>
+                                <a href="#">FIS/R&D</a>
+                            </li>
+                            <li>
+                                <a href="products.html">Products</a>
+                            </li>
+                            <li>
+                                <a href="contact.html">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- PRODUCTS -->
+                    <div>
+                        <h3 class="mb-4 text-lg font-semibold text-white">Products</h3>
+                        <ul class="space-y-3 text-sm">
+                            <li class="hover:text-white cursor-pointer">
+                                <a href="solution.html" class="block w-full">Aerospace Fasteners</a>
+                            </li>
+                            <li class="hover:text-white cursor-pointer">
+                                <a href="solution.html" class="block w-full">Oil & Gas Bolting</a>
+                            </li>
+                            <li class="hover:text-white cursor-pointer">
+                                <a href="solution.html" class="block w-full">Defence Fasteners</a>
+                            </li>
+                            <li class="hover:text-white cursor-pointer">
+                                <a href="solution.html" class="block w-full">Shipbuilding Fasteners</a>
+                            </li>
+                            <li class="hover:text-white cursor-pointer">
+                                <a href="solution.html" class="block w-full">Automotive Fasteners</a>
+                            </li>
+                            <li class="hover:text-white cursor-pointer">
+                                <a href="solution.html" class="block w-full">Nuclear & Energy Fasteners</a>
+                            </li>
+                            <li class="hover:text-white cursor-pointer">
+                                <a href="solution.html" class="block w-full">Medical Fasteners</a>
+                            </li>
+                            <li class="hover:text-white cursor-pointer">
+                                <a href="solution.html" class="block w-full">Custom & Prototype Fasteners</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- FACILITIES -->
+                    <div>
+                        <h3 class="mb-4 text-lg font-semibold text-white">Capabilities</h3>
+                        <ul class="space-y-3 text-sm">
+                            <li class="hover:text-white cursor-pointer">
+                                <a href="fasteners.html" class="block w-full">Melting</a>
+                            </li>
+                            <li class="hover:text-white cursor-pointer">
+                                <a href="fasteners.html" class="block w-full">Casting</a>
+                            </li>
+                            <li class="hover:text-white cursor-pointer">
+                                <a href="fasteners.html" class="block w-full">Forging</a>
+                            </li>
+                            <li class="hover:text-white cursor-pointer">
+                                <a href="fasteners.html" class="block w-full">Precision Machining</a>
+                            </li>
+                            <li class="hover:text-white cursor-pointer">
+                                <a href="fasteners.html" class="block w-full">Thread Rolling</a>
+                            </li>
+                            <li class="hover:text-white cursor-pointer">
+                                <a href="fasteners.html" class="block w-full">Heat Treatment</a>
+                            </li>
+                            <li class="hover:text-white cursor-pointer">
+                                <a href="fasteners.html" class="block w-full">Surface Treatment</a>
+                            </li>
+                            <li class="hover:text-white cursor-pointer">
+                                <a href="fasteners.html" class="block w-full">Testing & QA</a>
+                            </li>
+                            <li class="hover:text-white cursor-pointer">
+                                <a href="fasteners.html" class="block w-full">Engineering</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- CONTACT -->
+                    <div class="w-full">
+                        <h3 class="mb-3 text-lg font-semibold text-white text-center sm:text-left">
+                            Connect With Us
+                        </h3>
+                        <p class="mt-3 mb-3 text-white/90 text-sm  tracking-tight max-w-xl mx-auto md:mx-0">
+                            For Advanced Engineering
+                            <span class="opacity-70 mx-1"></span>
+                            Fastening Solutions
+                        </p>
+                        <div class="flex flex-col gap-4 items-center sm:items-start">
+                            <!-- WHATSAPP BUTTON -->
+                            <a href="https://wa.me/919578420672" target="_blank" class="group flex items-center gap-4
                   w-full max-w-[280px] sm:max-w-[260px] lg:max-w-[280px] 
                   px-5 py-1 rounded-full
                   bg-white/80
@@ -2074,33 +2055,29 @@
                   transition-all duration-300 ease-out
                   shadow-md hover:shadow-xl
                   hover:bg-brand-medium-green">
-
-                            <!-- ICON -->
-                            <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-full
+                                <!-- ICON -->
+                                <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-full
                         bg-white/50
                         border border-brand-deep-green/50
                         flex items-center justify-center
                         transition-all duration-300
                         group-hover:bg-brand-deep-green
                         group-hover:border-brand-deep-green">
-
-                                <i class="fab fa-whatsapp
+                                    <i class="fab fa-whatsapp
                           text-brand-deep-green text-lg sm:text-xl
                           transition-colors duration-300
                           group-hover:text-white"></i>
-                            </div>
-
-                            <!-- TEXT -->
-                            <span class="font-bold text-sm tracking-wide
+                                </div>
+                                <!-- TEXT -->
+                                <span class="font-bold text-sm tracking-wide
                          text-brand-deep-green
                          transition-colors duration-300
                          group-hover:text-white">
-                                WhatsApp
-                            </span>
-                        </a>
-
-                        <!-- EMAIL BUTTON -->
-                        <a href="mailto:marketing@nithaaerospace.in" class="group flex items-center gap-4
+                                    WhatsApp
+                                </span>
+                            </a>
+                            <!-- EMAIL BUTTON -->
+                            <a href="mailto:marketing@nithaaerospace.in" class="group flex items-center gap-4
                   w-full max-w-[280px] sm:max-w-[260px] lg:max-w-[280px]
                   px-5 py-1 rounded-full
                   bg-white/80
@@ -2108,87 +2085,72 @@
                   transition-all duration-300 ease-out
                   shadow-md hover:shadow-xl
                   hover:bg-brand-medium-green">
-
-                            <!-- ICON -->
-                            <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-full
+                                <!-- ICON -->
+                                <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-full
                         bg-white/60
                         border border-brand-deep-green/50
                         flex items-center justify-center
                         transition-all duration-300
                         group-hover:bg-brand-deep-green
                         group-hover:border-brand-deep-green">
-
-                                <i class="fas fa-envelope
+                                    <i class="fas fa-envelope
                           text-brand-deep-green text-base sm:text-lg
                           transition-colors duration-300
                           group-hover:text-white"></i>
-                            </div>
-
-                            <!-- TEXT -->
-                            <span class="font-bold text-sm tracking-wide
+                                </div>
+                                <!-- TEXT -->
+                                <span class="font-bold text-sm tracking-wide
                          text-brand-deep-green
                          transition-colors duration-300
                          group-hover:text-white">
-                                Email Us
-                            </span>
-                        </a>
-
-
+                                    Email Us
+                                </span>
+                            </a>
+                        </div>
                     </div>
                 </div>
-
-
-
             </div>
-        </div>
-    </footer>
-
-    <div class="relative z-20 py-4 text-gray-400" style="background: #0b180d; border-top: 1px solid white;">
-        <div class="container flex flex-col items-center justify-between px-6 mx-auto text-sm md:flex-row">
-            <p class="mb-4 md:mb-0">
-                www.nithaaerospace.in © Copyright and Private Limited.
+        </footer>
+        <div class="relative z-20 py-4 text-gray-400" style="background: #0b180d; border-top: 1px solid white;">
+            <div class="container flex flex-col items-center justify-between px-6 mx-auto text-sm md:flex-row">
+                <p class="mb-4 md:mb-0">
+                    www.nithaaerospace.in © Copyright and Private Limited.
                 All Rights Reserved |
-                <a href="Terms.html" id="terms" class="hover:text-white">
-                    Terms of Access
-                </a>
-            </p>
-
-            <!-- Social Media Icons -->
-            <div class="flex space-x-4 text-base">
-                <!-- Facebook -->
-                <a href="#" class="w-9 h-9 flex items-center justify-center rounded-full
+                    <a href="Terms.html" id="terms" class="hover:text-white">
+                        Terms of Access
+                    </a>
+                </p>
+                <!-- Social Media Icons -->
+                <div class="flex space-x-4 text-base">
+                    <!-- Facebook -->
+                    <a href="#" class="w-9 h-9 flex items-center justify-center rounded-full
                        text-white hover:bg-blue-600
                        transition-all duration-200">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-
-                <!-- Twitter (X) -->
-                <a href="#" class="w-9 h-9 flex items-center justify-center rounded-full
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <!-- Twitter (X) -->
+                    <a href="#" class="w-9 h-9 flex items-center justify-center rounded-full
                        text-white hover:bg-black
                        transition-all duration-200">
-                    <i class="fa-brands fa-x-twitter"></i>
-                </a>
-
-                <!-- Instagram -->
-                <a href="#" class="w-9 h-9 flex items-center justify-center rounded-full
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <!-- Instagram -->
+                    <a href="#" class="w-9 h-9 flex items-center justify-center rounded-full
           text-white
           hover:bg-[radial-gradient(circle_at_30%_107%,#fdf497_0%,#fdf497_5%,#fd5949_45%,#d6249f_60%,#285AEB_90%)]
           transition-all duration-200">
-                    <i class="fab fa-instagram"></i>
-                </a>
-
-
-                <!-- LinkedIn -->
-                <a href="#" class="w-9 h-9 flex items-center justify-center rounded-full
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <!-- LinkedIn -->
+                    <a href="#" class="w-9 h-9 flex items-center justify-center rounded-full
                        text-white hover:bg-blue-700
                        transition-all duration-200">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
-
-    <script>
+        <script>
         document.addEventListener("DOMContentLoaded", () => {
             const reveals = document.querySelectorAll(
                 ".reveal, .reveal-left, .reveal-right, .reveal-up"
@@ -2223,12 +2185,8 @@
 
             reveals.forEach(el => observer.observe(el));
         });
-    </script>
-
-
-
-
-    <script>
+        </script>
+        <script>
         /* DATA STRUCTURE FOR NAPL */
         const jobData = {
             "Engineering & Technical": [
@@ -2469,12 +2427,31 @@
 
         // Enter key support for skills
         skillInput.addEventListener("keypress", (e) => { if (e.key === "Enter") { e.preventDefault(); addSkill(); } });
-    </script>
+        </script>
+        <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const cursor = document.querySelector(".custom-cursor");
 
+            // Follow mouse
+            document.addEventListener("mousemove", (e) => {
+                cursor.style.left = e.clientX + "px";
+                cursor.style.top = e.clientY + "px";
+            });
 
+            // Hover detection (NO magnetic pull)
+            const hoverTargets = document.querySelectorAll("a, button, input, textarea, select");
 
+            hoverTargets.forEach(el => {
+                el.addEventListener("mouseenter", () => {
+                    cursor.classList.add("is-hover");
+                });
 
-
-</body>
-
+                el.addEventListener("mouseleave", () => {
+                    cursor.classList.remove("is-hover");
+                });
+            });
+        });
+        </script>
+        
+    </body>
 </html>
