@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NITHA Aerospace - Excellence in Fasteners</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="shortcut icon" href="imgs/nithaa-.png" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>NITHA Aerospace - Excellence in Fasteners</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="shortcut icon" href="imgs/nithaa-.png" type="image/x-icon">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
         tailwind.config = {
             theme: {
                 extend: {
@@ -34,8 +32,8 @@
                 }
             }
         };
-    </script>
-    <style>
+        </script>
+        <style>
         .dotted-bg {
             background-image: radial-gradient(#d0d0d0 1px, transparent 1px);
             background-size: 20px 20px;
@@ -143,251 +141,289 @@
                 opacity: 1;
             }
         }
-    </style>
-</head>
+        </style>
+        <style>
+        /* Remove system cursor everywhere */
+        html,
+        body,
+        * {
+            cursor: none !important;
+        }
 
-<body class="bg-white ">
-    <div class="hidden bg-brand-topbar-green text-white text-[13px] py-2 px-6 md:flex justify-between items-center"
-        style="font-family: 'Montserrat', sans-serif;">
-        <div class="flex items-center space-x-4">
-            <div class="flex items-center">
-                <i class="fas fa-phone mr-2"></i>
-                <span>Call Us On: <a href="tel:+919578420672" class="hover:underline">+91 95784 20672</a></span>
-            </div>
-            <div class="flex items-center">
-                <i class="fas fa-envelope mr-2"></i>
-                <span><a href="mailto:marketing@nithaeroespace.in"
-                        class="hover:underline">marketing@nithaaeroespace.in</a></span>
-            </div>
+        /* Custom cursor wrapper */
+        .custom-cursor {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 28px;
+            height: 28px;
+            pointer-events: none;
+            z-index: 2147483647;
+            transform: translate(-50%, -50%) scale(1);
+            transition: transform 0.2s ease;
+        }
+
+        /* Hover state (same image, visual change only) */
+        .custom-cursor.is-hover {
+            transform: translate(-50%, -50%) scale(1.2);
+        }
+
+        /* Cursor image */
+        .custom-cursor img {
+            width: 28px;
+            height: 40px;
+            transform: rotate(333deg);
+        }
+        </style>
+    </head>
+    <body class="bg-white ">
+        <div class="custom-cursor">
+            <img src="imgs/new/cursor-white-black2.png" alt="Custom Cursor">
         </div>
-        <div class="flex items-center space-x-4">
-            <a href="blogs.html" class="hover:underline">Blogs</a>
-            <span>|</span>
-            <a href="solution.html" class="hover:underline">Careers</a>
-        </div>
-    </div>
-
-    <header class="relative">
-
-        <nav class="w-full absolute bg-white font-extrabold text-brand-topbar-green top-0 py-4 z-50 shadow-sm"
-            style="font-family: 'Montserrat';">
-            <div class="w-full max-w-screen-2xl mx-auto flex items-center justify-between px-6 xl:px-4 2xl:px-2">
-
-
-
+        <div class="hidden bg-brand-topbar-green text-white text-[13px] py-2 px-6 md:flex justify-between items-center" style="font-family: 'Montserrat', sans-serif;">
+            <div class="flex items-center space-x-4">
                 <div class="flex items-center">
-                    <img src="imgs/Screenshot 2025-11-04 120806.png" alt="NITHA Logo" class="h-16 w-20 object-contain">
+                    <i class="fas fa-phone mr-2"></i>
+                    <span>
+                        Call Us On:
+                        <a href="tel:+919578420672" class="hover:underline">+91 95784 20672</a>
+                    </span>
                 </div>
-
-                <div class="hidden md:flex items-center gap-6 lg:gap-8 text-[14px] lg:text-[15px] font-bold">
-
-                    <a href="index.html" class="transition-colors duration-100 hover:text-black">Home</a>
-                    <a href="aboutus.html" class="transition-colors duration-100 hover:text-black">About</a>
-                    <div class="relative group py-2">
-                        <button class="flex items-center gap-1 cursor-pointer
+                <div class="flex items-center">
+                    <i class="fas fa-envelope mr-2"></i>
+                    <span>
+                        <a href="mailto:marketing@nithaeroespace.in" class="hover:underline">marketing@nithaaeroespace.in</a>
+                    </span>
+                </div>
+            </div>
+            <div class="flex items-center space-x-4 z-50">
+                <a href="blogs.html" class="hover:underline">Blogs</a>
+                <span>|</span>
+                <a href="careers.html" class="hover:underline">Careers</a>
+            </div>
+        </div>
+        <header class="relative">
+            <nav class="w-full absolute bg-white font-extrabold text-brand-topbar-green top-0 py-4 z-50 shadow-sm" style="font-family: 'Montserrat', sans-serif;">
+                <div class="w-full max-w-screen-2xl mx-auto flex items-center justify-between px-6 xl:px-4 2xl:px-2">
+                    <div class="flex items-center">
+                        <img src="imgs/Screenshot 2025-11-04 120806.png" alt="NITHA Logo" class="h-16 w-20 object-contain">
+                    </div>
+                    <div class="hidden md:flex items-center gap-6 lg:gap-8 text-[14px] lg:text-[15px] font-bold">
+                        <a href="index.html" class="transition-colors duration-100 hover:text-black">Home</a>
+                        <a href="aboutus.html" class="transition-colors duration-100 hover:text-black">About</a>
+                        <div class="relative group py-2">
+                            <a href="fasteners.html" class="flex items-center gap-1 cursor-pointer
         transition-colors duration-100
         hover:text-black focus:outline-none">
-                            Capabilities <i class="fas fa-chevron-down text-[10px]"></i>
-                        </button>
-
-                        <!-- DROPDOWN -->
-                        <div class="absolute top-full left-0 pt-2 hidden group-hover:block z-[60]">
-                            <div class="bg-white shadow-xl rounded-md w-72
+                                Capabilities
+                                <i class="fas fa-chevron-down text-[10px]"></i>
+                            </a>
+                            <!-- DROPDOWN -->
+                            <div class="absolute top-full left-0 pt-2 hidden group-hover:block z-[60]">
+                                <div class="bg-white shadow-xl rounded-md w-72
             border-t-4 border-brand-topbar-green
             py-2 overflow-hidden">
-
-                                <a href="fasteners.html" class="block px-4 py-2 text-gray-700
+                                    <a href="fasteners.html" class="block px-4 py-2 text-gray-700
                 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
-                                    Melting
-                                </a>
-
-                                <a href="fasteners.html" class="block px-4 py-2 text-gray-700
+                                        Melting
+                                    </a>
+                                    <a href="fasteners.html" class="block px-4 py-2 text-gray-700
                 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
-                                    Casting
-                                </a>
-
-                                <a href="fasteners.html" class="block px-4 py-2 text-gray-700
+                                        Casting
+                                    </a>
+                                    <a href="fasteners.html" class="block px-4 py-2 text-gray-700
                 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
-                                    Forging
-                                </a>
-
-                                <a href="fasteners.html" class="block px-4 py-2 text-gray-700
+                                        Forging
+                                    </a>
+                                    <a href="fasteners.html" class="block px-4 py-2 text-gray-700
                 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
-                                    Precision Machining
-                                </a>
-
-                                <a href="fasteners.html" class="block px-4 py-2 text-gray-700
+                                        Precision Machining
+                                    </a>
+                                    <a href="fasteners.html" class="block px-4 py-2 text-gray-700
                 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
-                                    Thread Rolling
-                                </a>
-
-                                <a href="fasteners.html" class="block px-4 py-2 text-gray-700
+                                        Thread Rolling
+                                    </a>
+                                    <a href="fasteners.html" class="block px-4 py-2 text-gray-700
                 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
-                                    Heat Treatment
-                                </a>
-
-                                <a href="fasteners.html" class="block px-4 py-2 text-gray-700
+                                        Heat Treatment
+                                    </a>
+                                    <a href="fasteners.html" class="block px-4 py-2 text-gray-700
                 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
-                                    Surface Treatment
-                                </a>
-
-                                <a href="fasteners.html" class="block px-4 py-2 text-gray-700
+                                        Surface Treatment
+                                    </a>
+                                    <a href="fasteners.html" class="block px-4 py-2 text-gray-700
                 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
-                                    Testing & QA
-                                </a>
-
-                                <a href="fasteners.html" class="block px-4 py-2 text-gray-700
+                                        Testing & QA
+                                    </a>
+                                    <a href="fasteners.html" class="block px-4 py-2 text-gray-700
                 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
-                                    Engineering
-                                </a>
+                                        Engineering
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-
-                    <div class="relative group py-2">
-                        <button class="flex items-center gap-1 cursor-pointer
+                        <div class="relative group py-2">
+                            <div class="relative group inline-block ">
+                                <a href="products.html" class="flex items-center gap-1 cursor-pointer
            transition-colors duration-100
            hover:text-black focus:outline-none">
-                            FIS/R&D <i class="fas fa-chevron-down text-[10px]"></i>
-                        </button>
-
-                        <div class="absolute top-full left-0 pt-2 hidden group-hover:block z-[60]">
-                            <div class="bg-white shadow-xl rounded-md w-64 border-t-4 border-brand-topbar-green py-2">
-                                <a href="fasteners.html"
-                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
+                                    Products
+                                    <svg
+                                        class="w-4 h-4"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M19 9l-7 7-7-7"
+                                        ></path>
+                                    </svg>
+                                </a>
+                                <div class="absolute left-0 hidden group-hover:block bg-white shadow-xl rounded-md w-72 border-t-4 border-brand-topbar-green py-2 z-50">
+                                    <div class="relative group/sub">
+                                        <a href="" class="flex justify-between items-center px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
+                                            Critical Industries
+                                            <span class="text-xs ml-2 opacity-50 group-hover:opacity-100 transition-opacity">
+                                                <i class="fa-solid fa-chevron-right"></i>
+                                            </span>
+                                        </a>
+                                        <div class="absolute left-full top-0 hidden group-hover/sub:block bg-white shadow-xl rounded-md w-72 border-l-2 border-brand-topbar-green py-2 -ml-1">
+                                            <a href="products.html" class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">
+                                                Aerospace
+                                            Fasteners
+                                            </a>
+                                            <a href="products.html" class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">
+                                                Defence
+                                            Fasteners
+                                            </a>
+                                            <a href="products.html" class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">
+                                                Nuclear
+                                            / Energy Fasteners
+                                            </a>
+                                            <a href="products.html" class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">
+                                                Oil
+                                            & Gas Bolting Solutions
+                                            </a>
+                                            <a href="products.html" class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">
+                                                Medical
+                                            & Precision Fasteners
+                                            </a>
+                                            <a href="products.html" class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">
+                                                Railway
+                                            & Metro Fasteners
+                                            </a>
+                                            <a href="products.html" class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">
+                                                Power
+                                            Plant & Thermal Fasteners
+                                            </a>
+                                            <a href="products.html" class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">
+                                                Renewable
+                                            Energy Fasteners
+                                            </a>
+                                            <a href="products.html" class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">
+                                                Shipbuilding
+                                            & Marine Fasteners
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="relative group/sub">
+                                        <a href="#" class="flex justify-between items-center px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
+                                            Industrial & General Engineering
+                                            <span class="text-xs ml-2 opacity-50 group-hover:opacity-100 transition-opacity">
+                                                <i class="fa-solid fa-chevron-right"></i>
+                                            </span>
+                                        </a>
+                                        <div class="absolute left-full top-0 hidden group-hover/sub:block bg-white shadow-xl rounded-md w-72 border-l-2 border-brand-topbar-green py-2 -ml-1">
+                                            <a href="products.html" class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">
+                                                Automotive
+                                            Fasteners
+                                            </a>
+                                            <a href="products.html" class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">
+                                                Construction
+                                            & Infrastructure Fasteners
+                                            </a>
+                                            <a href="products.html" class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">
+                                                Electrical
+                                            & Electronics Fasteners
+                                            </a>
+                                            <a href="products.html" class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">
+                                                Heavy
+                                            Engineering & Industrial Fasteners
+                                            </a>
+                                            <a href="products.html" class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">
+                                                Chemical
+                                            & Process Industry Fasteners
+                                            </a>
+                                            <a href="products.html" class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">
+                                                Mining
+                                            & Earthmoving Fasteners
+                                            </a>
+                                            <a href="products.html" class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">
+                                                HVAC
+                                            & Building Services Fasteners
+                                            </a>
+                                            <a href="products.html" class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">
+                                                Agricultural
+                                            & Off-Highway Fasteners
+                                            </a>
+                                            <a href="products.html" class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">
+                                                General
+                                            Engineering Fasteners
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="relative group/sub">
+                                        <a href="#" class="flex justify-between items-center px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
+                                            Specialised Engineering
+                                            <span class="text-xs ml-2 opacity-50 group-hover:opacity-100 transition-opacity">
+                                                <i class="fa-solid fa-chevron-right"></i>
+                                            </span>
+                                        </a>
+                                        <div class="absolute left-full top-0 hidden group-hover/sub:block bg-white shadow-xl rounded-md w-72 border-l-2 border-brand-topbar-green py-2 -ml-1">
+                                            <a href="products.html" class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">
+                                                Custom
+                                            & Prototype Fasteners
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex gap-8 text-lg font-semibold">
+                            <!-- FIS -->
+                            <a href="fis.html" class="relative group transition-colors duration-150 hover:text-black">
+                                FIS
+                                <!-- Tooltip -->
+                                <span class="absolute left-1/2 bottom-full mb-3 -translate-x-1/2
+             whitespace-nowrap rounded-md px-4 py-1 text-sm font-semibold
+             bg-black/75 text-white
+             opacity-0 group-hover:opacity-100
+             translate-y-2 group-hover:translate-y-0
+             transition-all d   uration-200 shadow-lg">
                                     Fasteners Intelligence System
-                                </a>
-                                <a href="r&d.html"
-                                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
-                                    Research & Development
-                                </a>
-                            </div>
+                                </span>
+                            </a>
+                            <!-- R&D -->
+                            <a href="r&d.html" class="relative group transition-colors duration-150 hover:text-black">
+                                R&amp;D
+                                <!-- Tooltip -->
+                                <span class="absolute left-1/2 bottom-full mb-3 -translate-x-1/2
+             whitespace-nowrap rounded-md px-4 py-1 text-sm font-semibold
+             bg-black/75 text-white
+             opacity-0 group-hover:opacity-100
+             translate-y-2 group-hover:translate-y-0
+             transition-all duration-200 shadow-lg">
+                                    Research &amp; Development
+                                </span>
+                            </a>
                         </div>
+                        <a href="contact.html" class="transition-colors duration-100 hover:text-black">Contact</a>
                     </div>
-
-                    <div class="relative group py-2">
-                        <div class="relative group inline-block ">
-                            <button class="flex items-center gap-1 cursor-pointer
-           transition-colors duration-100
-           hover:text-black focus:outline-none">
-                                Products
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 9l-7 7-7-7"></path>
-                                </svg>
-                            </button>
-
-
-                            <div
-                                class="absolute left-0 hidden group-hover:block bg-white shadow-xl rounded-md w-72 border-t-4 border-brand-topbar-green py-2 z-50">
-
-                                <div class="relative group/sub">
-                                    <a href=""
-                                        class="flex justify-between items-center px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
-                                        Critical Industries
-                                        <span
-                                            class="text-xs ml-2 opacity-50 group-hover:opacity-100 transition-opacity">
-                                            <i class="fa-solid fa-chevron-right"></i>
-                                        </span>
-                                    </a>
-                                    <div
-                                        class="absolute left-full top-0 hidden group-hover/sub:block bg-white shadow-xl rounded-md w-72 border-l-2 border-brand-topbar-green py-2 -ml-1">
-                                        <a href="products.html"
-                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Aerospace
-                                            Fasteners</a>
-                                        <a href="products.html"
-                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Defence
-                                            Fasteners</a>
-                                        <a href="products.html"
-                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Nuclear
-                                            / Energy Fasteners</a>
-                                        <a href="products.html"
-                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Oil
-                                            & Gas Bolting Solutions</a>
-                                        <a href="products.html"
-                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Medical
-                                            & Precision Fasteners</a>
-                                        <a href="products.html"
-                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Railway
-                                            & Metro Fasteners</a>
-                                        <a href="products.html"
-                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Power
-                                            Plant & Thermal Fasteners</a>
-                                        <a href="products.html"
-                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Renewable
-                                            Energy Fasteners</a>
-                                        <a href="products.html"
-                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Shipbuilding
-                                            & Marine Fasteners</a>
-                                    </div>
-                                </div>
-
-                                <div class="relative group/sub">
-                                    <a href="#"
-                                        class="flex justify-between items-center px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
-                                        Industrial & General Engineering
-                                        <span
-                                            class="text-xs ml-2 opacity-50 group-hover:opacity-100 transition-opacity">
-                                            <i class="fa-solid fa-chevron-right"></i>
-                                        </span>
-                                    </a>
-                                    <div
-                                        class="absolute left-full top-0 hidden group-hover/sub:block bg-white shadow-xl rounded-md w-72 border-l-2 border-brand-topbar-green py-2 -ml-1">
-                                        <a href="products.html"
-                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Automotive
-                                            Fasteners</a>
-                                        <a href="products.html"
-                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Construction
-                                            & Infrastructure Fasteners</a>
-                                        <a href="products.html"
-                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Electrical
-                                            & Electronics Fasteners</a>
-                                        <a href="products.html"
-                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Heavy
-                                            Engineering & Industrial Fasteners</a>
-                                        <a href="products.html"
-                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Chemical
-                                            & Process Industry Fasteners</a>
-                                        <a href="products.html"
-                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Mining
-                                            & Earthmoving Fasteners</a>
-                                        <a href="products.html"
-                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">HVAC
-                                            & Building Services Fasteners</a>
-                                        <a href="products.html"
-                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Agricultural
-                                            & Off-Highway Fasteners</a>
-                                        <a href="products.html"
-                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">General
-                                            Engineering Fasteners</a>
-                                    </div>
-                                </div>
-
-                                <div class="relative group/sub">
-                                    <a href="#"
-                                        class="flex justify-between items-center px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
-                                        Specialised Engineering
-                                        <span
-                                            class="text-xs ml-2 opacity-50 group-hover:opacity-100 transition-opacity">
-                                            <i class="fa-solid fa-chevron-right"></i>
-                                        </span>
-                                    </a>
-                                    <div
-                                        class="absolute left-full top-0 hidden group-hover/sub:block bg-white shadow-xl rounded-md w-72 border-l-2 border-brand-topbar-green py-2 -ml-1">
-                                        <a href="products.html"
-                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">Custom
-                                            & Prototype Fasteners</a>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <a href="contact.html" class="transition-colors duration-100 hover:text-black">Contact</a>
-                </div>
-                <div class="hidden md:block">
-                    <a href="#" class="bg-brand-topbar-green text-white
+                    <div class="hidden md:block">
+                        <a href="careers.html" class="bg-brand-topbar-green text-white
               px-5 lg:px-6 py-2
               rounded-md
               text-xs lg:text-sm
@@ -396,574 +432,624 @@
               transition
               shadow-md
               whitespace-nowrap">
-                        Become A Partner
-                    </a>
-                </div>
-
-                <div class="md:hidden">
-                    <button id="mobile-menu-btn" class="text-brand-topbar-green text-2xl focus:outline-none">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                </div>
-
-        </nav>
-        <div class="relative  h-[920px] overflow-hidden flex items-center justify-center text-center p-20 text-white">
-
-            <!-- Background Image -->
-            <img src="imgs/Rectangle22.png" alt="Aerospace background"
-                class="absolute inset-0 w-full h-full object-cover z-0">
-
-            <!-- Overlay Content -->
-            <div class="absolute inset-0 z-10 flex items-center justify-center reveal-right" style="left: 50%;">
-                <div class="container mx-auto px-4 text-white">
-                    <div class="max-w-3xl text-left" id="hero-container">
-
-                        <p class="text-2xl tracking-widest font-bold mb-4 mt-16"
-                            style="font-family: 'Montserrat', sans-serif; ">
-                            NITHA Aerospace Private Limited
-                        </p>
-
-                        <p class="text-5xl font-extrabold leading-tight"
-                            style="letter-spacing: -2px; line-height: 45px;">
-                            Built for Aerospace, Defence
-                        </p>
-
-                        <p class="text-5xl font-extrabold leading-tight" style="letter-spacing: -1px;">
-                            Energy & Precision Engineering
-                        </p>
-
-                        <p class="text-lg opacity-90 py-5">
-                            Advanced Materials Expertise · Product & Process Excellence · Indo-European Advanced
-                            Solutions
-                        </p>
-
-                        <a href="#"
-                            class="inline-flex items-center px-8 py-3 bg-white text-gray-800 font-semibold rounded-md shadow-lg hover:bg-gray-300 transition-colors mb-32">
-                            VIEW MORE PRODUCTS
-                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
-                                </path>
-                            </svg>
+                            Become A Partner
                         </a>
-
+                    </div>
+                    <div class="md:hidden">
+                        <button id="mobile-menu-btn" class="text-brand-topbar-green text-2xl focus:outline-none">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+            <div class="relative  h-[920px] overflow-hidden flex items-center justify-center text-center p-20 text-white">
+                <!-- Background Image -->
+                <img src="imgs/Rectangle22.png" alt="Aerospace background" class="absolute inset-0 w-full h-full object-cover z-0">
+                <!-- Overlay Content -->
+                <div class="absolute inset-0 z-10 flex items-center justify-center reveal-right" style="left: 50%;">
+                    <div class="container mx-auto px-4 text-white">
+                        <div class="max-w-3xl text-left" id="hero-container">
+                            <p class="text-2xl tracking-widest font-bold mb-4 mt-16" style="font-family: 'Montserrat', sans-serif; ">
+                                NITHA Aerospace Private Limited
+                            </p>
+                            <p class="text-5xl font-extrabold leading-tight" style="letter-spacing: -2px; line-height: 45px;">
+                                Built for Aerospace, Defence
+                            </p>
+                            <p class="text-5xl font-extrabold leading-tight" style="letter-spacing: -1px;">
+                                Energy & Precision Engineering
+                            </p>
+                            <p class="text-lg opacity-90 py-5">
+                                Advanced Materials Expertise · Product & Process Excellence · Indo-European Advanced
+                            Solutions
+                            </p>
+                            <a href="#" class="inline-flex items-center px-8 py-3 bg-white text-gray-800 font-semibold rounded-md shadow-lg hover:bg-gray-300 transition-colors mb-32">
+                                VIEW MORE PRODUCTS
+                                <svg
+                                    class="w-4 h-4 ml-2"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M9 5l7 7-7 7"
+                                    ></path>
+                                </svg>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-    </header>
-
-
-    <section class="relative py-2 px-4 overflow-hidden">
-        <div class="dotted-bg absolute top-0 right-0 w-1/3 h-full opacity-60 pointer-events-none"></div>
-
-        <div class="max-w-7xl mx-auto relative z-10">
-            <div class="text-center mb-16">
-                <div class="flex justify-center items-center  reveal-up">
-                    <img src="imgs/nithaa-removebg-preview.png" alt="NITHA Aerospace Logo"
-                        class="w-20 h-20 object-contain" />
-                </div>
-                <h3 class="text-sm font-extrabold text-brand-topbar-green tracking-widest uppercase mb-4 reveal-up">What We Do
-                </h3>
-                <h1 class="text-5xl lg:text-5xl text-black font-extrabold leading-tight mb-8 reveal-up ">
-                    Precision Fasteners.<br>Engineered to Perform.
-                </h1>
-                <div class="max-w-4xl mx-auto space-y-6 text-brand-medium-grey text-lg  reveal-up ">
-                    <p>At NITHA Aerospace Pvt Ltd, we don't just manufacture fasteners — we engineer confidence in every
-                        connection. Specializing in superalloy fasteners for aerospace, oil & gas, energy, and space
+        </header>
+        <section class="relative py-2 px-4 overflow-hidden">
+            <div class="dotted-bg absolute top-0 right-0 w-1/3 h-full opacity-60 pointer-events-none"></div>
+            <div class="max-w-7xl mx-auto relative z-10">
+                <div class="text-center mb-16">
+                    <div class="flex justify-center items-center  reveal-up">
+                        <img src="imgs/nithaa-removebg-preview.png" alt="NITHA Aerospace Logo" class="w-20 h-20 object-contain">
+                    </div>
+                    <h3 class="text-sm font-extrabold text-brand-topbar-green tracking-widest uppercase mb-4 reveal-up">
+                        What
+                    We Do
+                    </h3>
+                    <h1 class="text-5xl lg:text-5xl text-black font-extrabold leading-tight mb-8 reveal-up ">
+                        Precision Fasteners
+                        <br>
+                        Engineered to Perform
+                    </h1>
+                    <div class="max-w-4xl mx-auto space-y-6 text-brand-medium-grey text-lg  reveal-up ">
+                        <p>
+                            At NAPL, we don't just manufacture fasteners — we engineer confidence in every
+                        connection. Specializing in super alloy fasteners for aerospace, oil & gas, energy, and space
                         systems, we design and produce components that meet the world's most demanding engineering
-                        standards.</p>
-                    <p>Our solutions are built for environments where failure isn't an option — from high-vibration jet
+                        standards.
+                        </p>
+                        <p>
+                            Our solutions are built for environments where failure isn't an option — from high-vibration jet
                         engines to corrosive deep-sea rigs and thermal extremes in space. Whether it's a bolt, nut,
-                        stud, or custom component, every fastener is purpose-built for performance.</p>
+                        stud, or custom component, every fastener is purpose-built for performance.
+                        </p>
+                    </div>
                 </div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div
-                    class="bg-brand-light-mint p-8 rounded-2xl flex flex-col items-start  reveal-up">
-                    <i class="fa-solid fa-bullseye text-5xl text-brand-medium-green mb-6"></i>
-                    <h4 class="text-xl font-bold text-brand-medium-green uppercase leading-tight mb-4">Driven
-                        by<br>Precision</h4>
-                    <p class="text-brand-medium-grey text-sm">Our advanced Industry 4.0-enabled manufacturing facility
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-brand-light-mint p-8 rounded-2xl flex flex-col items-start  reveal-up">
+                        <i class="fa-solid fa-bullseye text-5xl text-brand-medium-green mb-6"></i>
+                        <h4 class="text-xl font-bold text-brand-medium-green uppercase leading-tight mb-4">
+                            Driven
+                        by
+                            <br>
+                            Precision
+                        </h4>
+                        <p class="text-brand-medium-grey text-sm">
+                            Our advanced Industries 4.0-enabled manufacturing facility
                         integrates smart processes, real-time quality monitoring, and precision machining. Every product
                         is crafted to meet tight tolerances, exacting thread profiles (MJ, UNJF, etc.), and stringent
-                        material specifications.</p>
-                </div>
-                <div
-                    class="bg-brand-light-mint p-8 rounded-2xl flex flex-col items-start  reveal-up delay-1">
-                    <i class="fa-solid fa-atom text-5xl text-brand-medium-green mb-6"></i>
-                    <h4 class="text-xl font-bold text-brand-medium-green uppercase leading-tight mb-4">
-                        Material<br>Matters</h4>
-                    <p class="text-brand-medium-grey text-sm">We work with some of the world's most trusted
+                        material specifications.
+                        </p>
+                    </div>
+                    <div class="bg-brand-light-mint p-8 rounded-2xl flex flex-col items-start  reveal-up delay-1">
+                        <i class="fa-solid fa-atom text-5xl text-brand-medium-green mb-6"></i>
+                        <h4 class="text-xl font-bold text-brand-medium-green uppercase leading-tight mb-4">
+                            Materials
+                            <br>
+                            Matters
+                        </h4>
+                        <p class="text-brand-medium-grey text-sm">
+                            We work with some of the world's most trusted
                         high-performance materials — Titanium, Inconel, A286, Monel, and more. These superalloys offer
                         unmatched strength, corrosion resistance, and thermal stability — qualities essential for
-                        critical industries.</p>
-                </div>
-                <div
-                    class="bg-brand-light-mint p-8 rounded-2xl flex flex-col items-start reveal-up delay-2">
-                    <i class="fa-solid fa-industry text-5xl text-brand-medium-green mb-6"></i>
-                    <h4 class="text-xl font-bold text-brand-medium-green uppercase leading-tight mb-4">
-                        End-to-End<br>Manufacturing</h4>
-                    <p class="text-brand-medium-grey text-sm">From design, casting, and forging to CNC machining, heat
+                        critical industries.
+                        </p>
+                    </div>
+                    <div class="bg-brand-light-mint p-8 rounded-2xl flex flex-col items-start reveal-up delay-2">
+                        <i class="fa-solid fa-industry text-5xl text-brand-medium-green mb-6"></i>
+                        <h4 class="text-xl font-bold text-brand-medium-green uppercase leading-tight mb-4">
+                            End-to-End
+                            <br>
+                            Manufacturing
+                        </h4>
+                        <p class="text-brand-medium-grey text-sm">
+                            From design, casting, and forging to CNC machining, heat
                         treatment, surface finishing, and final inspection — we control the entire manufacturing
-                        lifecycle in-house. This allows us to guarantee both performance and traceability.</p>
-                </div>
-                <div
-                    class="bg-brand-light-mint p-8 rounded-2xl flex flex-col items-start reveal-up delay-3">
-                    <i class="fa-solid fa-globe text-5xl text-brand-medium-green mb-6"></i>
-                    <h4 class="text-xl font-bold text-brand-medium-green uppercase leading-tight mb-4">Built in
-                        India.<br>Trusted Globally.</h4>
-                    <p class="text-brand-medium-grey text-sm">As a metallurgy-driven startup, we proudly contribute to
+                        lifecycle in-house. This allows us to guarantee both performance and traceability.
+                        </p>
+                    </div>
+                    <div class="bg-brand-light-mint p-8 rounded-2xl flex flex-col items-start reveal-up delay-3">
+                        <i class="fa-solid fa-globe text-5xl text-brand-medium-green mb-6"></i>
+                        <h4 class="text-xl font-bold text-brand-medium-green uppercase leading-tight mb-4">
+                            Built in
+                        India
+                            <br>
+                            Trusted Globally
+                        </h4>
+                        <p class="text-brand-medium-grey text-sm">
+                            As a metallurgy-driven startup, we proudly contribute to
                         India's strategic manufacturing ecosystem. Our mission is to indigenize high-precision fastening
-                        solutions that match global aerospace standards.</p>
+                        solutions that match global aerospace standards.
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!--   <hr class="border-brand-light-grey mx-auto max-w-7xl">
+        </section>
+        <!--   <hr class="border-brand-light-grey mx-auto max-w-7xl">
  -->
-    <section class="relative px-4 overflow-hidden mt-2">
-        <div class="dotted-bg absolute top-0 left-20 w-1/4 h-1/2 opacity-40 pointer-events-none"></div>
-
-        <div class="px-6 max-w-7xl mx-auto">
-            <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
-
-                <div class="lg:w-1/2 order-2 lg:order-1 reveal-left">
-                    <img src="imgs/mainNitha.png" alt="Industries Icon" class="mx-auto h-20 w-20"
-                        style="margin-left: 1px; padding-top: 5px;">
-                    <h2 class="section-title text-5xl font-extrabold text-brand-dark-grey tracking-wide mb-2">Casting
-                    </h2>
-                    <h3 class="brand-subhead text-theme-green text-lg mb-4">Precision Begins at the Mold.</h3>
-
-                    <p class="text-brand-medium-grey leading-relaxed mb-8">
-                        At NITHA Aerospace, casting is the foundation of strength. We produce ingots through controlled
+        <section class="relative px-4 overflow-hidden mt-2">
+            <div class="dotted-bg absolute top-0 left-20 w-1/4 h-1/2 opacity-40 pointer-events-none"></div>
+            <div class="px-6 max-w-7xl mx-auto">
+                <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+                    <div class="lg:w-1/2 order-2 lg:order-1 reveal-left">
+                        <img
+                            src="imgs/mainNitha.png"
+                            alt="Industries Icon"
+                            class="mx-auto h-20 w-20"
+                            style="margin-left: 1px; padding-top: 5px;"
+                        >
+                        <h2 class="section-title text-5xl font-extrabold text-brand-dark-grey tracking-wide mb-2">
+                            Casting
+                        </h2>
+                        <h3 class="brand-subhead text-theme-green text-lg mb-4">Precision Begins at the Mold.</h3>
+                        <p class="text-brand-medium-grey leading-relaxed mb-8">
+                            At NITHA Aerospace, casting is the foundation of strength. We produce ingots through controlled
                         casting processes using ferrous, non-ferrous, and superalloy materials. Our casting capabilities
                         are tailored for critical industries such as aerospace, oil & gas, where dimensional consistency
                         and internal soundness are essential. With a focus on net-shape accuracy and material purity,
                         our casting process ensures optimal grain structure and reduces downstream machining.
-                    </p>
-
-                    <div class="mb-10">
-                        <h4 class="text-lg font-bold text-brand-dark-grey mb-4">Material</h4>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-6">
-                            <div class="flex items-center space-x-3"><i
-                                    class="fa-solid fa-circle-check text-theme-green"></i> <span
-                                    class="text-brand-medium-grey text-sm">Carbon steel</span></div>
-                            <div class="flex items-center space-x-3"><i
-                                    class="fa-solid fa-circle-check text-theme-green"></i> <span
-                                    class="text-brand-medium-grey text-sm">Duplex Stainless steel</span></div>
-                            <div class="flex items-center space-x-3"><i
-                                    class="fa-solid fa-circle-check text-theme-green"></i> <span
-                                    class="text-brand-medium-grey text-sm">Alloy steel</span></div>
-                            <div class="flex items-center space-x-3"><i
-                                    class="fa-solid fa-circle-check text-theme-green"></i> <span
-                                    class="text-brand-medium-grey text-sm">Nickel Alloy</span></div>
-                            <div class="flex items-center space-x-3"><i
-                                    class="fa-solid fa-circle-check text-theme-green"></i> <span
-                                    class="text-brand-medium-grey text-sm">Tool steel</span></div>
-                            <div class="flex items-center space-x-3"><i
-                                    class="fa-solid fa-circle-check text-theme-green"></i> <span
-                                    class="text-brand-medium-grey text-sm">Monel</span></div>
-                            <div class="flex items-center space-x-3"><i
-                                    class="fa-solid fa-circle-check text-theme-green"></i> <span
-                                    class="text-brand-medium-grey text-sm">Titanium alloy</span></div>
-                            <div class="flex items-center space-x-3"><i
-                                    class="fa-solid fa-circle-check text-theme-green"></i> <span
-                                    class="text-brand-medium-grey text-sm">Aluminium alloy</span></div>
+                        </p>
+                        <div class="mb-10">
+                            <h4 class="text-lg font-bold text-brand-dark-grey mb-4">Materials</h4>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-6">
+                                <div class="flex items-center space-x-3">
+                                    <i class="fa-solid fa-circle-check text-theme-green"></i>
+                                    <span class="text-brand-medium-grey text-sm">Carbon steel</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <i class="fa-solid fa-circle-check text-theme-green"></i>
+                                    <span class="text-brand-medium-grey text-sm">Duplex Stainless steel</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <i class="fa-solid fa-circle-check text-theme-green"></i>
+                                    <span class="text-brand-medium-grey text-sm">Alloy steel</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <i class="fa-solid fa-circle-check text-theme-green"></i>
+                                    <span class="text-brand-medium-grey text-sm">Nickel Alloy</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <i class="fa-solid fa-circle-check text-theme-green"></i>
+                                    <span class="text-brand-medium-grey text-sm">Tool steel</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <i class="fa-solid fa-circle-check text-theme-green"></i>
+                                    <span class="text-brand-medium-grey text-sm">Monel</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <i class="fa-solid fa-circle-check text-theme-green"></i>
+                                    <span class="text-brand-medium-grey text-sm">Titanium alloy</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <i class="fa-solid fa-circle-check text-theme-green"></i>
+                                    <span class="text-brand-medium-grey text-sm">Aluminium alloy</span>
+                                </div>
+                            </div>
                         </div>
+                        <button class="px-8 py-2 border-2 border-black font-bold hover:bg-black hover:text-white transition-all rounded-md">
+                            Get
+                        a Quote
+                        </button>
                     </div>
-
-                    <button
-                        class="px-8 py-2 border-2 border-black font-bold hover:bg-black hover:text-white transition-all rounded-md">Get
-                        a Quote</button>
-                </div>
-
-                <div class="lg:w-1/2 order-1 lg:order-2 reveal-right
+                    <div class="lg:w-1/2 order-1 lg:order-2 reveal-right
                 ">
-                    <img src="imgs/casting_fastners.png" alt="">
+                        <img src="imgs/casting_fastners.png" alt="">
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section class="py-16 px-6 max-w-7xl mx-auto">
-        <div class="flex flex-col lg:flex-row items-center gap-12">
-            <div class="lg:w-1/2 order-2 lg:order-1 reveal-left">
-                <img src="imgs/forging_fasteners.png" alt="">
-            </div>
-
-            <div class="lg:w-1/2 order-1 lg:order-2 reveal-right">
-                <div class="mb-4">
-                    <img src="imgs/mainNitha.png" alt="Industries Icon" class="mx-auto h-20 w-20"
-                        style="margin-left: 1px; padding-top: 5px;">
-                    <h2 class="section-title text-5xl font-extrabold text-brand-dark-grey tracking-wide mb-2">Forging
-                    </h2>
-                    <p class="brand-subhead text-theme-green text-lg mb-4">Strength Forged Under Pressure.</p>
+        </section>
+        <section class="py-16 px-6 max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2 order-2 lg:order-1 reveal-left">
+                    <img src="imgs/forging_fasteners.png" alt="">
                 </div>
-
-                <p class="text-brand-medium-grey text-sm leading-relaxed mb-8">
-                    We utilize closed-die forging to shape fasteners with superior grain orientation and mechanical
+                <div class="lg:w-1/2 order-1 lg:order-2 reveal-right">
+                    <div class="mb-4">
+                        <img
+                            src="imgs/mainNitha.png"
+                            alt="Industries Icon"
+                            class="mx-auto h-20 w-20"
+                            style="margin-left: 1px; padding-top: 5px;"
+                        >
+                        <h2 class="section-title text-5xl font-extrabold text-brand-dark-grey tracking-wide mb-2">
+                            Forging
+                        </h2>
+                        <p class="brand-subhead text-theme-green text-lg mb-4">Strength Forged Under Pressure.</p>
+                    </div>
+                    <p class="text-brand-medium-grey text-sm leading-relaxed mb-8">
+                        We utilize closed-die forging to shape fasteners with superior grain orientation and mechanical
                     strength. This process is ideal for components that operate under high load, temperature, or
                     vibration — such as aerospace bolts, studs, and structural connectors. Forging enhances fatigue
                     resistance, impact tolerance, and material efficiency. At NITHA Aerospace, we forge with Titanium,
                     Inconel, and other high-performance alloys, ensuring that every fastener is as strong as the mission
                     it supports.
-                </p>
-
-                <button
-                    class="px-8 py-2 border-2 border-black font-bold hover:bg-black hover:text-white transition-all rounded-md">Get
-                    a Quote</button>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-16 px-6 max-w-7xl mx-auto">
-        <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
-            <div class="lg:w-1/2">
-                <div class="mb-6 reveal-left">
-                    <img src="imgs/mainNitha.png" alt="Industries Icon" class="mx-auto h-20 w-20"
-                        style="margin-left: 1px; padding-top: 5px;">
-                    <h2 class="section-title text-5xl font-extrabold text-brand-dark-grey tracking-wide mb-2">Precision
-                        Machining</h2>
-                    <p class="brand-subhead text-theme-green text-lg mb-4">Where Tolerance Meets Perfection.</p>
+                    </p>
+                    <button class="px-8 py-2 border-2 border-black font-bold hover:bg-black hover:text-white transition-all rounded-md">
+                        Get
+                    a Quote
+                    </button>
                 </div>
-
-                <p class="text-brand-medium-grey text-base leading-relaxed mb-6">
-                    Our in-house CNC machining and multi-axis turning centers allow us to produce fasteners with
+            </div>
+        </section>
+        <section class="py-16 px-6 max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+                <div class="lg:w-1/2">
+                    <div class="mb-6 reveal-left">
+                        <img
+                            src="imgs/mainNitha.png"
+                            alt="Industries Icon"
+                            class="mx-auto h-20 w-20"
+                            style="margin-left: 1px; padding-top: 5px;"
+                        >
+                        <h2 class="section-title text-5xl font-extrabold text-brand-dark-grey tracking-wide mb-2">
+                            Precision
+                        Machining
+                        </h2>
+                        <p class="brand-subhead text-theme-green text-lg mb-4">Where Tolerance Meets Perfection.</p>
+                    </div>
+                    <p class="text-brand-medium-grey text-base leading-relaxed mb-6">
+                        Our in-house CNC machining and multi-axis turning centers allow us to produce fasteners with
                     extremely tight tolerances and complex geometries — including MJ, UNJF, UNR threads and more. We
                     specialize in machining superalloys and exotic materials, meeting aerospace and standards for thread
                     integrity, surface finish, and dimensional precision.
-                </p>
-
-                <p class="text-brand-medium-grey text-base leading-relaxed mb-10">
-                    Each part is digitally validated through real-time inspection systems — because in critical
+                    </p>
+                    <p class="text-brand-medium-grey text-base leading-relaxed mb-10">
+                        Each part is digitally validated through real-time inspection systems — because in critical
                     applications, perfection is the only tolerance we accept.
-                </p>
-
-                <button
-                    class="px-8 py-2 border-2 border-black font-bold hover:bg-black hover:text-white transition-all rounded-md">Get
-                    a Quote</button>
+                    </p>
+                    <button class="px-8 py-2 border-2 border-black font-bold hover:bg-black hover:text-white transition-all rounded-md">
+                        Get
+                    a Quote
+                    </button>
+                </div>
+                <div class="lg:w-1/2 reveal-right">
+                    <img src="imgs/precision_fasteners.png" alt="">
+                </div>
             </div>
-
-            <div class="lg:w-1/2 reveal-right">
-                <img src="imgs/precision_fasteners.png" alt="">
-            </div>
-        </div>
-    </section>
-
-    <section class="py-12 px-6 max-w-7xl mx-auto">
-        <div class="flex flex-col lg:flex-row items-center gap-10">
-            <div class="lg:w-1/2 order-2 lg:order-1 reveal-left">
-                <img src="imgs/heat_fasteners.png" alt="">
-            </div>
-            <div class="lg:w-1/2 order-1 lg:order-2 reveal-right">
-                <img src="imgs/mainNitha.png" alt="Industries Icon" class="mx-auto h-20 w-20"
-                    style="margin-left: 1px; padding-top: 5px;">
-                <h2 class="section-title text-5xl font-extrabold text-brand-dark-grey tracking-wide mb-2">Heat Treatment
-                </h2>
-                <p class="brand-subhead text-theme-green text-lg mb-4">Performance You Can Feel — Engineered at the
-                    Molecular Level.</p>
-                <p class="text-brand-medium-grey text-sm leading-relaxed mb-6">
-                    Through controlled heat treatment processes, we enhance the hardness, tensile strength, and fatigue
+        </section>
+        <section class="py-12 px-6 max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row items-center gap-10">
+                <div class="lg:w-1/2 order-2 lg:order-1 reveal-left">
+                    <img src="imgs/heat_fasteners.png" alt="">
+                </div>
+                <div class="lg:w-1/2 order-1 lg:order-2 reveal-right">
+                    <img
+                        src="imgs/mainNitha.png"
+                        alt="Industries Icon"
+                        class="mx-auto h-20 w-20"
+                        style="margin-left: 1px; padding-top: 5px;"
+                    >
+                    <h2 class="section-title text-5xl font-extrabold text-brand-dark-grey tracking-wide mb-2">
+                        Heat Treatment
+                    </h2>
+                    <p class="brand-subhead text-theme-green text-lg mb-4">
+                        Performance You Can Feel — Engineered at the
+                    Molecular Level.
+                    </p>
+                    <p class="text-brand-medium-grey text-sm leading-relaxed mb-6">
+                        Through controlled heat treatment processes, we enhance the hardness, tensile strength, and fatigue
                     resistance of our fasteners. Whether it's solution annealing, age hardening, or stress relieving,
                     our thermal treatment cycles are tailored to each alloy and application.
-                </p>
-                <h4 class="font-bold text-black mb-3">Services</h4>
-                <div class="info-grid mb-8">
-                    <div class="text-brand-medium-grey text-xs flex items-center"><i
-                            class="fa-solid fa-circle-check text-theme-green mr-2"></i> Annealing</div>
-                    <div class="text-brand-medium-grey text-xs flex items-center"><i
-                            class="fa-solid fa-circle-check text-theme-green mr-2"></i> Gas Carburizing</div>
-                    <div class="text-brand-medium-grey text-xs flex items-center"><i
-                            class="fa-solid fa-circle-check text-theme-green mr-2"></i> Normalizing</div>
-                    <div class="text-brand-medium-grey text-xs flex items-center"><i
-                            class="fa-solid fa-circle-check text-theme-green mr-2"></i> Salt bath Nitriding</div>
-                    <div class="text-brand-medium-grey text-xs flex items-center"><i
-                            class="fa-solid fa-circle-check text-theme-green mr-2"></i> Hardening & tempering</div>
-                    <div class="text-brand-medium-grey text-xs flex items-center"><i
-                            class="fa-solid fa-circle-check text-theme-green mr-2"></i> QPQ</div>
+                    </p>
+                    <h4 class="font-bold text-black mb-3">Services</h4>
+                    <div class="info-grid mb-8">
+                        <div class="text-brand-medium-grey text-xs flex items-center">
+                            <i class="fa-solid fa-circle-check text-theme-green mr-2"></i>
+                            Annealing
+                        </div>
+                        <div class="text-brand-medium-grey text-xs flex items-center">
+                            <i class="fa-solid fa-circle-check text-theme-green mr-2"></i>
+                            Gas Carburizing
+                        </div>
+                        <div class="text-brand-medium-grey text-xs flex items-center">
+                            <i class="fa-solid fa-circle-check text-theme-green mr-2"></i>
+                            Normalizing
+                        </div>
+                        <div class="text-brand-medium-grey text-xs flex items-center">
+                            <i class="fa-solid fa-circle-check text-theme-green mr-2"></i>
+                            Salt bath Nitriding
+                        </div>
+                        <div class="text-brand-medium-grey text-xs flex items-center">
+                            <i class="fa-solid fa-circle-check text-theme-green mr-2"></i>
+                            Hardening & tempering
+                        </div>
+                        <div class="text-brand-medium-grey text-xs flex items-center">
+                            <i class="fa-solid fa-circle-check text-theme-green mr-2"></i>
+                            QPQ
+                        </div>
+                    </div>
+                    <button class="px-8 py-2 border-2 border-black font-bold hover:bg-black hover:text-white transition-all rounded-md">
+                        Get
+                    a Quote
+                    </button>
                 </div>
-                <button
-                    class="px-8 py-2 border-2 border-black font-bold hover:bg-black hover:text-white transition-all rounded-md">Get
-                    a Quote</button>
             </div>
-        </div>
-    </section>
-
-    <section class="py-12 px-6 max-w-7xl mx-auto">
-        <div class="flex flex-col lg:flex-row items-center gap-10">
-            <div class="lg:w-1/2 reveal-left">
-                <img src="imgs/mainNitha.png" alt="Industries Icon" class="mx-auto h-20 w-20"
-                    style="margin-left: 1px; padding-top: 5px;">
-                <h2 class="section-title text-5xl font-extrabold text-brand-dark-grey tracking-wide mb-2">Surface
-                    Treatment</h2>
-                <p class="brand-subhead text-theme-green text-lg mb-4">Engineered Finishes. Real-World Endurance.</p>
-
-                <p class="text-brand-medium-grey text-sm leading-relaxed mb-4">
-                    Our surface treatment division protects fasteners against corrosion, wear, and environmental stress.
+        </section>
+        <section class="py-12 px-6 max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row items-center gap-10">
+                <div class="lg:w-1/2 reveal-left">
+                    <img
+                        src="imgs/mainNitha.png"
+                        alt="Industries Icon"
+                        class="mx-auto h-20 w-20"
+                        style="margin-left: 1px; padding-top: 5px;"
+                    >
+                    <h2 class="section-title text-5xl font-extrabold text-brand-dark-grey tracking-wide mb-2">
+                        Surface
+                    Treatment
+                    </h2>
+                    <p class="brand-subhead text-theme-green text-lg mb-4">Engineered Finishes. Real-World Endurance.</p>
+                    <p class="text-brand-medium-grey text-sm leading-relaxed mb-4">
+                        Our surface treatment division protects fasteners against corrosion, wear, and environmental stress.
                     We offer passivation, plating, anodizing, and protective coatings compliant with aerospace and
                     military specifications.
-                </p>
-                <p class="text-brand-medium-grey text-sm leading-relaxed mb-6">
-                    From space-bound satellites to deep-sea rigs, our surface engineering ensures fasteners remain
+                    </p>
+                    <p class="text-brand-medium-grey text-sm leading-relaxed mb-6">
+                        From space-bound satellites to deep-sea rigs, our surface engineering ensures fasteners remain
                     reliable in the harshest conditions — with perfect adherence, surface uniformity, and coating
                     thickness.
-                </p>
-
-                <h4 class="font-bold text-black mb-3">Capability</h4>
-                <div class="info-grid mb-8">
-                    <div class="text-brand-medium-grey text-xs flex items-center"><i
-                            class="fa-solid fa-circle-check text-theme-green mr-2"></i> Cadmium plating</div>
-                    <div class="text-brand-medium-grey text-xs flex items-center"><i
-                            class="fa-solid fa-circle-check text-theme-green mr-2"></i> Nickel plating</div>
-                    <div class="text-brand-medium-grey text-xs flex items-center"><i
-                            class="fa-solid fa-circle-check text-theme-green mr-2"></i> Moly coating</div>
-                    <div class="text-brand-medium-grey text-xs flex items-center"><i
-                            class="fa-solid fa-circle-check text-theme-green mr-2"></i> Chromium plating</div>
-                    <div class="text-brand-medium-grey text-xs flex items-center"><i
-                            class="fa-solid fa-circle-check text-theme-green mr-2"></i> Galvanizing – Hot dip &
-                        Mechanical</div>
-                    <div class="text-brand-medium-grey text-xs flex items-center"><i
-                            class="fa-solid fa-circle-check text-theme-green mr-2"></i> Blackening</div>
-                    <div class="text-brand-medium-grey text-xs flex items-center"><i
-                            class="fa-solid fa-circle-check text-theme-green mr-2"></i> Zinc plating – Blue, white,
-                        Black, yellow, Trivalent</div>
+                    </p>
+                    <h4 class="font-bold text-black mb-3">Capability</h4>
+                    <div class="info-grid mb-8">
+                        <div class="text-brand-medium-grey text-xs flex items-center">
+                            <i class="fa-solid fa-circle-check text-theme-green mr-2"></i>
+                            Cadmium plating
+                        </div>
+                        <div class="text-brand-medium-grey text-xs flex items-center">
+                            <i class="fa-solid fa-circle-check text-theme-green mr-2"></i>
+                            Nickel plating
+                        </div>
+                        <div class="text-brand-medium-grey text-xs flex items-center">
+                            <i class="fa-solid fa-circle-check text-theme-green mr-2"></i>
+                            Moly coating
+                        </div>
+                        <div class="text-brand-medium-grey text-xs flex items-center">
+                            <i class="fa-solid fa-circle-check text-theme-green mr-2"></i>
+                            Chromium plating
+                        </div>
+                        <div class="text-brand-medium-grey text-xs flex items-center">
+                            <i class="fa-solid fa-circle-check text-theme-green mr-2"></i>
+                            Galvanizing – Hot dip &
+                        Mechanical
+                        </div>
+                        <div class="text-brand-medium-grey text-xs flex items-center">
+                            <i class="fa-solid fa-circle-check text-theme-green mr-2"></i>
+                            Blackening
+                        </div>
+                        <div class="text-brand-medium-grey text-xs flex items-center">
+                            <i class="fa-solid fa-circle-check text-theme-green mr-2"></i>
+                            Zinc plating – Blue, white,
+                        Black, yellow, Trivalent
+                        </div>
+                    </div>
+                    <button class="px-8 py-2 border-2 border-black font-bold hover:bg-black hover:text-white transition-all rounded-md">
+                        Get
+                    a Quote
+                    </button>
                 </div>
-
-                <button
-                    class="px-8 py-2 border-2 border-black font-bold hover:bg-black hover:text-white transition-all rounded-md">Get
-                    a Quote</button>
+                <div class="lg:w-1/2 reveal-right">
+                    <img src="imgs/surface_fasteners.png" alt="">
+                </div>
             </div>
-
-            <div class="lg:w-1/2 reveal-right">
-                <img src="imgs/surface_fasteners.png" alt="">
-            </div>
-        </div>
-    </section>
-
-    <section class="py-12 px-6 max-w-7xl mx-auto">
-        <div class="flex flex-col lg:flex-row items-center gap-10">
-            <div class="lg:w-1/2 order-2 lg:order-1 reveal-left">
-                <img src="imgs/r&d_fasteners.png" alt="">
-            </div>
-
-            <div class="lg:w-1/2 order-1 lg:order-2 reveal-right">
-                <img src="imgs/mainNitha.png" alt="Industries Icon" class="mx-auto h-20 w-20"
-                    style="margin-left: 1px; padding-top: 5px;">
-                <h2 class="section-title text-5xl font-extrabold text-brand-dark-grey tracking-wide mb-2">R&D and
-                    Testing</h2>
-                <p class="brand-subhead text-theme-green text-lg mb-4">Every Fastener Proven. Every Performance
-                    Measured.</p>
-
-                <p class="text-brand-medium-grey text-sm leading-relaxed mb-6">
-                    Innovation begins in the lab. Our R&D and testing facility supports design optimization, material
+        </section>
+        <section class="py-12 px-6 max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row items-center gap-10">
+                <div class="lg:w-1/2 order-2 lg:order-1 reveal-left">
+                    <img src="imgs/r&d_fasteners.png" alt="">
+                </div>
+                <div class="lg:w-1/2 order-1 lg:order-2 reveal-right">
+                    <img
+                        src="imgs/mainNitha.png"
+                        alt="Industries Icon"
+                        class="mx-auto h-20 w-20"
+                        style="margin-left: 1px; padding-top: 5px;"
+                    >
+                    <h2 class="section-title text-5xl font-extrabold text-brand-dark-grey tracking-wide mb-2">
+                        R&D and
+                    Testing
+                    </h2>
+                    <p class="brand-subhead text-theme-green text-lg mb-4">
+                        Every Fastener Proven. Every Performance
+                    Measured.
+                    </p>
+                    <p class="text-brand-medium-grey text-sm leading-relaxed mb-6">
+                        Innovation begins in the lab. Our R&D and testing facility supports design optimization, material
                     validation, and quality control through:
-                </p>
-
-                <div class="space-y-2 mb-8">
-                    <div class="text-brand-medium-grey text-xs font-medium flex items-center"><i
-                            class="fa-solid fa-circle-check text-theme-green mr-2"></i> Tensile, Proof load, shear, and
-                        fatigue testing</div>
-                    <div class="text-brand-medium-grey text-xs font-medium flex items-center"><i
-                            class="fa-solid fa-circle-check text-theme-green mr-2"></i> Metallurgical & microstructural
-                        analysis</div>
-                    <div class="text-brand-medium-grey text-xs font-medium flex items-center"><i
-                            class="fa-solid fa-circle-check text-theme-green mr-2"></i> Dimensional inspection & thread
-                        gauging</div>
-                </div>
-
-                <p class="text-brand-medium-grey text-sm leading-relaxed mb-8">
-                    Our commitment to testing ensures every fastener not only meets — but exceeds — its intended
+                    </p>
+                    <div class="space-y-2 mb-8">
+                        <div class="text-brand-medium-grey text-xs font-medium flex items-center">
+                            <i class="fa-solid fa-circle-check text-theme-green mr-2"></i>
+                            Tensile, Proof load, shear, and
+                        fatigue testing
+                        </div>
+                        <div class="text-brand-medium-grey text-xs font-medium flex items-center">
+                            <i class="fa-solid fa-circle-check text-theme-green mr-2"></i>
+                            Metallurgical & microstructural
+                        analysis
+                        </div>
+                        <div class="text-brand-medium-grey text-xs font-medium flex items-center">
+                            <i class="fa-solid fa-circle-check text-theme-green mr-2"></i>
+                            Dimensional inspection & thread
+                        gauging
+                        </div>
+                    </div>
+                    <p class="text-brand-medium-grey text-sm leading-relaxed mb-8">
+                        Our commitment to testing ensures every fastener not only meets — but exceeds — its intended
                     purpose.
-                </p>
-
-                <button
-                    class="px-8 py-2 border-2 border-black font-bold hover:bg-black hover:text-white transition-all rounded-md">Get
-                    a Quote</button>
+                    </p>
+                    <button class="px-8 py-2 border-2 border-black font-bold hover:bg-black hover:text-white transition-all rounded-md">
+                        Get
+                    a Quote
+                    </button>
+                </div>
             </div>
-        </div>
-    </section>
-
-
-    <section class="top_box relative z-[90] overflow-hidden bg-[#6a9b5f] pb-0 text-white bg-dots responsive-out reveal-up"
-        style="border-radius:10px; width: 80%; height: 250px; z-index: 99; position: relative; left: 9%; box-shadow: 0px 20px 9px black; margin-top: 20px;">
-
-        <div class="absolute inset-0 z-0 bg-right bg-no-repeat bg-cover opacity-70 mix-blend-multiply responsive" style="background-image: url('imgs/wwu-copy.png'); background-size: cover;      /* make it fill the screen */
+        </section>
+        <section class="top_box relative z-[90] overflow-hidden bg-[#6a9b5f] pb-0 text-white bg-dots responsive-out reveal-up" style="border-radius:10px; width: 80%; height: 250px; z-index: 99; position: relative; left: 9%; box-shadow: 0px 20px 9px black; margin-top: 20px;">
+            <div class="absolute inset-0 z-0 bg-right bg-no-repeat bg-cover opacity-70 mix-blend-multiply responsive" style="background-image: url('imgs/wwu-copy.png'); background-size: cover;      /* make it fill the screen */
 background-repeat: no-repeat;  /* prevent tiling */
-background-position: center;">
-        </div>
-
-        <div class="top_box container relative z-2 px-6 py-20 mx-auto lg:py-20">
-            <div style="position:absolute;top:13% ;">
-                <div class="max-w-2xl">
-                    <p class=" text-sm  py-3 font-semibold tracking-wider ">One Platform For All
-                        Your Fasteners Requirements</p>
-                    <h2 class=" text-3xl mb-2 font-extrabold tracking-tight">Which
-                        products are you looking to buy?</h2>
-                    <p class="mb-4 mt-1  text-1 font-bold">Single window for end-to-end steel sourcing</p>
-                    <a href="products.html"
-                        class="inline-flex items-center px-8 py-3 text-sm font-bold text-[#6a9b5f]  bg-white rounded-md shadow-lg transition-transform hover:scale-105">
-                        Explore Now
-                        <i class="ml-3  fas fa-arrow-right"></i>
-                    </a>
+background-position: center;"></div>
+            <div class="top_box container relative z-2 px-6 py-20 mx-auto lg:py-20">
+                <div style="position:absolute;top:13% ;">
+                    <div class="max-w-2xl">
+                        <p class=" text-sm  py-3 font-semibold tracking-wider ">
+                            One Platform For All
+                            Your Fasteners Requirements
+                        </p>
+                        <h2 class=" text-3xl mb-2 font-extrabold tracking-tight">
+                            Which
+                            products are you looking to buy?
+                        </h2>
+                        <p class="mb-4 mt-1  text-1 font-bold">Single window for end-to-end steel sourcing</p>
+                        <a href="products.html" class="inline-flex items-center px-8 py-3 text-sm font-bold text-[#6a9b5f]  bg-white rounded-md shadow-lg transition-transform hover:scale-105">
+                            Explore Now
+                            <i class="ml-3  fas fa-arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <footer class="relative z-10 bg-gradient-to-t from-[#0b180d] via-[#172c19] to-[#1a471c] text-gray-300">
-
-        <!-- Curve -->
-        <div class="absolute top-0 left-0 w-full h-24 bg-[#1a471c] rounded-[50%] -translate-y-1/2"></div>
-
-        <div class="relative max-w-7xl mx-auto px-6 py-16 pt-32 pb-32">
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6 items-start">
-
-                <!-- LOGO -->
-                <div>
-                    <img src="imgs/Screenshot 2025-11-04 120806.png" class="w-[100px] h-auto mb-6" alt="Logo">
-                </div>
-
-                <!-- ADDRESS -->
-                <div>
-                    <h3 class="mb-4 text-lg font-semibold text-white">Head Office & Factory</h3>
-
-                    <p class="text-sm leading-relaxed">
-                        Plot no. 140 SIDCO Women Industrial Estate,<br>
-                        Karuppur, Salem – 636011
-                    </p>
-
-                    <h3 class="mt-4 text-sm font-semibold">Call Us</h3>
-
-                    <a href="tel:+918220538534" class="block text-sm hover:text-white transition">
-                        +91 82205 38534
-                    </a>
-
-                    <a href="tel:+919578420672" class="block text-sm hover:text-white transition">
-                        +91 95784 20672
-                    </a>
-
-                    <h3 class="mt-4 text-sm font-semibold">Mail</h3>
-
-                    <a href="mailto:marketing@nithaaerospace.in" class="block text-sm hover:text-white transition">
-                        marketing@nithaaerospace.in
-                    </a>
-
-                    <a href="mailto:support@nithaaerospace.in" class="block text-sm hover:text-white transition">
-                        support@nithaaerospace.in
-                    </a>
-                </div>
-
-
-                <!-- COMPANY -->
-                <div>
-                    <h3 class="mb-4 text-lg font-semibold text-white">Company</h3>
-                    <ul class="space-y-3 text-sm">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="aboutus.html">About</a></li>
-                        <li><a href="#">Capabilities</a></li>
-                        <li><a href="#">FIS/R&D</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <!-- PRODUCTS -->
-                <div>
-                    <h3 class="mb-4 text-lg font-semibold text-white">Products</h3>
-                    <ul class="space-y-3 text-sm">
-                        <li class="hover:text-white cursor-pointer">
-                            <a href="solution.html" class="block w-full">Aerospace Fasteners</a>
-                        </li>
-
-                        <li class="hover:text-white cursor-pointer">
-                            <a href="solution.html" class="block w-full">Oil & Gas Bolting</a>
-                        </li>
-
-                        <li class="hover:text-white cursor-pointer">
-                            <a href="solution.html" class="block w-full">Defence Fasteners</a>
-                        </li>
-
-                        <li class="hover:text-white cursor-pointer">
-                            <a href="solution.html" class="block w-full">Shipbuilding Fasteners</a>
-                        </li>
-
-                        <li class="hover:text-white cursor-pointer">
-                            <a href="solution.html" class="block w-full">Automotive Fasteners</a>
-                        </li>
-
-                        <li class="hover:text-white cursor-pointer">
-                            <a href="solution.html" class="block w-full">Nuclear & Energy Fasteners</a>
-                        </li>
-
-                        <li class="hover:text-white cursor-pointer">
-                            <a href="solution.html" class="block w-full">Medical Fasteners</a>
-                        </li>
-
-                        <li class="hover:text-white cursor-pointer">
-                            <a href="solution.html" class="block w-full">Custom & Prototype Fasteners</a>
-                        </li>
-
-                    </ul>
-                </div>
-
-                <!-- FACILITIES -->
-                <div>
-                    <h3 class="mb-4 text-lg font-semibold text-white">Capabilities</h3>
-                    <ul class="space-y-3 text-sm">
-                        <li class="hover:text-white cursor-pointer">
-                            <a href="fasteners.html" class="block w-full">Melting</a>
-                        </li>
-
-                        <li class="hover:text-white cursor-pointer">
-                            <a href="fasteners.html" class="block w-full">Casting</a>
-                        </li>
-
-                        <li class="hover:text-white cursor-pointer">
-                            <a href="fasteners.html" class="block w-full">Forging</a>
-                        </li>
-
-                        <li class="hover:text-white cursor-pointer">
-                            <a href="fasteners.html" class="block w-full">Precision Machining</a>
-                        </li>
-
-                        <li class="hover:text-white cursor-pointer">
-                            <a href="fasteners.html" class="block w-full">Thread Rolling</a>
-                        </li>
-
-                        <li class="hover:text-white cursor-pointer">
-                            <a href="fasteners.html" class="block w-full">Heat Treatment</a>
-                        </li>
-
-                        <li class="hover:text-white cursor-pointer">
-                            <a href="fasteners.html" class="block w-full">Surface Treatment</a>
-                        </li>
-
-                        <li class="hover:text-white cursor-pointer">
-                            <a href="fasteners.html" class="block w-full">Testing & QA</a>
-                        </li>
-
-                        <li class="hover:text-white cursor-pointer">
-                            <a href="fasteners.html" class="block w-full">Engineering</a>
-                        </li>
-
-                    </ul>
-                </div>
-
-                <!-- CONTACT -->
-                <div class="w-full">
-                    <h3 class="mb-3 text-lg font-semibold text-white text-center sm:text-left">
-                        Connect With Us
-                    </h3>
-                    <p class="mt-3 mb-3 text-white/90 text-sm  tracking-tight max-w-xl mx-auto md:mx-0">
-                        For Advanced Engineering <span class="opacity-70 mx-1"></span> Fastening Solutions
-                    </p>
-                    <div class="flex flex-col gap-4 items-center sm:items-start">
-
-                        <!-- WHATSAPP BUTTON -->
-                        <a href="https://wa.me/919578420672" target="_blank" class="group flex items-center gap-4
+        </section>
+        <footer class="relative z-10 bg-gradient-to-t from-[#0b180d] via-[#172c19] to-[#1a471c] text-gray-300">
+            <!-- Curve -->
+            <div class="absolute top-0 left-0 w-full h-24 bg-[#1a471c] rounded-[50%] -translate-y-1/2"></div>
+            <div class="relative max-w-7xl mx-auto px-6 py-16 pt-32 pb-32">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6 items-start">
+                    <!-- LOGO -->
+                    <div>
+                        <img src="imgs/Screenshot 2025-11-04 120806.png" class="w-[100px] h-auto mb-6" alt="Logo">
+                    </div>
+                    <!-- ADDRESS -->
+                    <div>
+                        <h3 class="mb-4 text-lg font-semibold text-white">Head Office & Factory</h3>
+                        <p class="text-sm leading-relaxed">
+                            Plot no. 140 SIDCO Women Industrial Estate,
+                            <br>
+                            Karuppur, Salem – 636011
+                        </p>
+                        <h3 class="mt-4 text-sm font-semibold">Call Us</h3>
+                        <a href="tel:+918220538534" class="block text-sm hover:text-white transition">
+                            +91 82205 38534
+                        </a>
+                        <a href="tel:+919578420672" class="block text-sm hover:text-white transition">
+                            +91 95784 20672
+                        </a>
+                        <h3 class="mt-4 text-sm font-semibold">Mail</h3>
+                        <a href="mailto:marketing@nithaaerospace.in" class="block text-sm hover:text-white transition">
+                            marketing@nithaaerospace.in
+                        </a>
+                        <a href="mailto:support@nithaaerospace.in" class="block text-sm hover:text-white transition">
+                            support@nithaaerospace.in
+                        </a>
+                    </div>
+                    <!-- COMPANY -->
+                    <div>
+                        <h3 class="mb-4 text-lg font-semibold text-white">Company</h3>
+                        <ul class="space-y-3 text-sm">
+                            <li>
+                                <a href="index.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="aboutus.html">About</a>
+                            </li>
+                            <li>
+                                <a href="fasteners.html">Capabilities</a>
+                            </li>
+                            <li>
+                                <a href="fis.html">FIS</a>
+                            </li>
+                            <li>
+                                <a href="r&d.html">R&D</a>
+                            </li>
+                            <li>
+                                <a href="products.html">Products</a>
+                            </li>
+                            <li>
+                                <a href="contact.html">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- PRODUCTS -->
+                    <div>
+                        <h3 class="mb-4 text-lg font-semibold text-white">Products</h3>
+                        <ul class="space-y-3 text-sm">
+                            <li class="hover:text-white cursor-pointer">
+                                <a href="solution.html" class="block w-full">Aerospace Fasteners</a>
+                            </li>
+                            <li class="hover:text-white cursor-pointer">
+                                <a href="solution.html" class="block w-full">Oil & Gas Bolting</a>
+                            </li>
+                            <li class="hover:text-white cursor-pointer">
+                                <a href="solution.html" class="block w-full">Defence Fasteners</a>
+                            </li>
+                            <li class="hover:text-white cursor-pointer">
+                                <a href="solution.html" class="block w-full">Shipbuilding Fasteners</a>
+                            </li>
+                            <li class="hover:text-white cursor-pointer">
+                                <a href="solution.html" class="block w-full">Automotive Fasteners</a>
+                            </li>
+                            <li class="hover:text-white cursor-pointer">
+                                <a href="solution.html" class="block w-full">Nuclear & Energy Fasteners</a>
+                            </li>
+                            <li class="hover:text-white cursor-pointer">
+                                <a href="solution.html" class="block w-full">Medical Fasteners</a>
+                            </li>
+                            <li class="hover:text-white cursor-pointer">
+                                <a href="solution.html" class="block w-full">Custom & Prototype Fasteners</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- FACILITIES -->
+                    <div>
+                        <h3 class="mb-4 text-lg font-semibold text-white">Capabilities</h3>
+                        <ul class="space-y-3 text-sm">
+                            <li class="hover:text-white cursor-pointer">
+                                <a href="fasteners.html" class="block w-full">Melting</a>
+                            </li>
+                            <li class="hover:text-white cursor-pointer">
+                                <a href="fasteners.html" class="block w-full">Casting</a>
+                            </li>
+                            <li class="hover:text-white cursor-pointer">
+                                <a href="fasteners.html" class="block w-full">Forging</a>
+                            </li>
+                            <li class="hover:text-white cursor-pointer">
+                                <a href="fasteners.html" class="block w-full">Precision Machining</a>
+                            </li>
+                            <li class="hover:text-white cursor-pointer">
+                                <a href="fasteners.html" class="block w-full">Thread Rolling</a>
+                            </li>
+                            <li class="hover:text-white cursor-pointer">
+                                <a href="fasteners.html" class="block w-full">Heat Treatment</a>
+                            </li>
+                            <li class="hover:text-white cursor-pointer">
+                                <a href="fasteners.html" class="block w-full">Surface Treatment</a>
+                            </li>
+                            <li class="hover:text-white cursor-pointer">
+                                <a href="fasteners.html" class="block w-full">Testing & QA</a>
+                            </li>
+                            <li class="hover:text-white cursor-pointer">
+                                <a href="fasteners.html" class="block w-full">Engineering</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- CONTACT -->
+                    <div class="w-full">
+                        <h3 class="mb-3 text-lg font-semibold text-white text-center sm:text-left">
+                            Connect With Us
+                        </h3>
+                        <p class="mt-3 mb-3 text-white/90 text-sm  tracking-tight max-w-xl mx-auto md:mx-0">
+                            For Advanced Engineering
+                            <span class="opacity-70 mx-1"></span>
+                            Fastening Solutions
+                        </p>
+                        <div class="flex flex-col gap-4 items-center sm:items-start">
+                            <a href="https://wa.me/919578420672" target="_blank" class="group flex items-center gap-4
                   w-full max-w-[280px] sm:max-w-[260px] lg:max-w-[280px] 
                   px-5 py-1 rounded-full
                   bg-white/80
@@ -971,33 +1057,29 @@ background-position: center;">
                   transition-all duration-300 ease-out
                   shadow-md hover:shadow-xl
                   hover:bg-brand-medium-green">
-
-                            <!-- ICON -->
-                            <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-full
+                                <!-- ICON -->
+                                <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-full
                         bg-white/50
                         border border-brand-deep-green/50
                         flex items-center justify-center
                         transition-all duration-300
                         group-hover:bg-brand-deep-green
                         group-hover:border-brand-deep-green">
-
-                                <i class="fab fa-whatsapp
+                                    <i class="fab fa-whatsapp
                           text-brand-deep-green text-lg sm:text-xl
                           transition-colors duration-300
                           group-hover:text-white"></i>
-                            </div>
-
-                            <!-- TEXT -->
-                            <span class="font-bold text-sm tracking-wide
+                                </div>
+                                <!-- TEXT -->
+                                <span class="font-bold text-sm tracking-wide
                          text-brand-deep-green
                          transition-colors duration-300
                          group-hover:text-white">
-                                WhatsApp
-                            </span>
-                        </a>
-
-                        <!-- EMAIL BUTTON -->
-                        <a href="mailto:marketing@nithaaerospace.in" class="group flex items-center gap-4
+                                    WhatsApp
+                                </span>
+                            </a>
+                            <!-- EMAIL BUTTON -->
+                            <a href="mailto:marketing@nithaaerospace.in" class="group flex items-center gap-4
                   w-full max-w-[280px] sm:max-w-[260px] lg:max-w-[280px]
                   px-5 py-1 rounded-full
                   bg-white/80
@@ -1005,85 +1087,73 @@ background-position: center;">
                   transition-all duration-300 ease-out
                   shadow-md hover:shadow-xl
                   hover:bg-brand-medium-green">
-
-                            <!-- ICON -->
-                            <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-full
+                                <!-- ICON -->
+                                <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-full
                         bg-white/60
                         border border-brand-deep-green/50
                         flex items-center justify-center
                         transition-all duration-300
                         group-hover:bg-brand-deep-green
                         group-hover:border-brand-deep-green">
-
-                                <i class="fas fa-envelope
+                                    <i class="fas fa-envelope
                           text-brand-deep-green text-base sm:text-lg
                           transition-colors duration-300
                           group-hover:text-white"></i>
-                            </div>
-
-                            <!-- TEXT -->
-                            <span class="font-bold text-sm tracking-wide
+                                </div>
+                                <!-- TEXT -->
+                                <span class="font-bold text-sm tracking-wide
                          text-brand-deep-green
                          transition-colors duration-300
                          group-hover:text-white">
-                                Email Us
-                            </span>
-                        </a>
-
+                                    Email Us
+                                </span>
+                            </a>
+                        </div>
                     </div>
                 </div>
-
-
-
             </div>
-        </div>
-    </footer>
-
-    <div class="relative z-20 py-4 text-gray-400" style="background: #0b180d; border-top: 1px solid white;">
-        <div class="container flex flex-col items-center justify-between px-6 mx-auto text-sm md:flex-row">
-            <p class="mb-4 md:mb-0">
-                www.nithaaerospace.in © Copyright and Private Limited.
-                All Rights Reserved |
-                <a href="Terms.html" id="terms" class="hover:text-white">
-                    Terms of Access
-                </a>
-            </p>
-
-            <!-- Social Media Icons -->
-            <div class="flex space-x-4 text-base">
-                <!-- Facebook -->
-                <a href="#" class="w-9 h-9 flex items-center justify-center rounded-full
+        </footer>
+        <div class="relative z-20 py-4 text-gray-400" style="background: #0b180d; border-top: 1px solid white;">
+            <div class="container flex flex-col items-center justify-between px-6 mx-auto text-sm md:flex-row">
+                <p class="mb-4 md:mb-0">
+                    www.nithaaerospace.in © Copyright and Private Limited.
+                    All Rights Reserved |
+                    <a href="Terms.html" id="terms" class="hover:text-white">
+                        Terms of Access
+                    </a>
+                </p>
+                <!-- Social Media Icons -->
+                <div class="flex space-x-4 text-base">
+                    <!-- Facebook -->
+                    <a href="#" class="w-9 h-9 flex items-center justify-center rounded-full
                        text-white hover:bg-blue-600
                        transition-all duration-200">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-
-                <!-- Twitter (X) -->
-                <a href="#" class="w-9 h-9 flex items-center justify-center rounded-full
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <!-- Twitter (X) -->
+                    <a href="#" class="w-9 h-9 flex items-center justify-center rounded-full
                        text-white hover:bg-black
                        transition-all duration-200">
-                    <i class="fa-brands fa-x-twitter"></i>
-                </a>
-
-                <!-- Instagram -->
-                <a href="#" class="w-9 h-9 flex items-center justify-center rounded-full
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <!-- Instagram -->
+                    <a href="#" class="w-9 h-9 flex items-center justify-center rounded-full
           text-white
           hover:bg-[radial-gradient(circle_at_30%_107%,#fdf497_0%,#fdf497_5%,#fd5949_45%,#d6249f_60%,#285AEB_90%)]
           transition-all duration-200">
-                    <i class="fab fa-instagram"></i>
-                </a>
-
-
-                <!-- LinkedIn -->
-                <a href="#" class="w-9 h-9 flex items-center justify-center rounded-full
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <!-- LinkedIn -->
+                    <a href="#" class="w-9 h-9 flex items-center justify-center rounded-full
                        text-white hover:bg-blue-700
                        transition-all duration-200">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
-
+    
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const reveals = document.querySelectorAll(
@@ -1108,7 +1178,29 @@ background-position: center;">
             reveals.forEach(el => observer.observe(el));
         });
     </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const cursor = document.querySelector(".custom-cursor");
 
+            // Follow mouse
+            document.addEventListener("mousemove", (e) => {
+                cursor.style.left = e.clientX + "px";
+                cursor.style.top = e.clientY + "px";
+            });
+
+            // Hover detection (NO magnetic pull)
+            const hoverTargets = document.querySelectorAll("a, button, input, textarea, select");
+
+            hoverTargets.forEach(el => {
+                el.addEventListener("mouseenter", () => {
+                    cursor.classList.add("is-hover");
+                });
+
+                el.addEventListener("mouseleave", () => {
+                    cursor.classList.remove("is-hover");
+                });
+            });
+        });
+    </script>
 </body>
-
 </html>
