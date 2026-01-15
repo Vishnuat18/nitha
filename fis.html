@@ -1,0 +1,1981 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NITHA Aerospace - Contact Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="imgs/nithaa-removebg-preview.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script type="text/javascript">
+        function redirectMobile() {
+            // Check browser window width
+            if (window.innerWidth <= 768) {
+                window.location.href = "mobileContact.html";
+            }
+        }
+
+        // 1. Check immediately when the page loads
+        redirectMobile();
+
+        // 2. Check whenever the window is resized
+        window.addEventListener('resize', redirectMobile);
+    </script>
+    <style>
+        /* ===============================
+   SCROLL REVEAL ANIMATIONS
+================================ */
+
+        /* Base hidden state */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+            will-change: opacity, transform;
+        }
+
+        /* When visible */
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Variants */
+        .reveal-left {
+            transform: translateX(-60px);
+        }
+
+        .reveal-right {
+            transform: translateX(60px);
+        }
+
+        .reveal-zoom {
+            transform: scale(0.92);
+        }
+
+        .reveal.active.reveal-left,
+        .reveal.active.reveal-right,
+        .reveal.active.reveal-zoom {
+            transform: translate(0) scale(1);
+        }
+
+        /* Delay helpers */
+        .delay-1 {
+            transition-delay: 0.15s;
+        }
+
+        .delay-2 {
+            transition-delay: 0.3s;
+        }
+
+        .delay-3 {
+            transition-delay: 0.45s;
+        }
+
+        .delay-4 {
+            transition-delay: 0.6s;
+        }
+    </style>
+    <style>
+        /* Remove system cursor everywhere */
+        html,
+        body,
+        * {
+            cursor: none !important;
+        }
+
+        /* Custom cursor wrapper */
+        .custom-cursor {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 28px;
+            height: 28px;
+            pointer-events: none;
+            z-index: 2147483647;
+            transform: translate(-50%, -50%) scale(1);
+            transition: transform 0.2s ease;
+        }
+
+        /* Hover state (same image, visual change only) */
+        .custom-cursor.is-hover {
+            transform: translate(-50%, -50%) scale(1.2);
+        }
+
+        /* Cursor image */
+        .custom-cursor img {
+            width: 28px;
+            height: 40px;
+            transform: rotate(333deg);
+        }
+    </style>
+    <!-- ===== CUSTOM STYLES ===== -->
+    <style>
+        .step-circle {
+            width: 80px;
+            height: 80px;
+            border-radius: 9999px;
+            background: #ffffff;
+            border: 2px solid #6A8A61;
+            color: #333;
+            font-size: 12px;
+            font-weight: 800;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            line-height: 1.2;
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+        }
+
+        .step-card {
+            width: 260px;
+            background: #6fb44e;
+            color: #ffffff;
+            padding: 18px 20px;
+            border-radius: 10px;
+            font-size: 13px;
+            line-height: 1.45;
+            box-shadow: 0 18px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .step-card h4 {
+            font-weight: 800;
+            margin-bottom: 6px;
+            font-size: 14px;
+        }
+
+        /* ===============================
+   SCROLL REVEAL ANIMATIONS
+================================ */
+
+        /* Base hidden state */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+            will-change: opacity, transform;
+        }
+
+        /* When visible */
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Variants */
+        .reveal-left {
+            transform: translateX(-60px);
+        }
+
+        .reveal-right {
+            transform: translateX(60px);
+        }
+
+        .reveal-zoom {
+            transform: scale(0.92);
+        }
+
+        .reveal.active.reveal-left,
+        .reveal.active.reveal-right,
+        .reveal.active.reveal-zoom {
+            transform: translate(0) scale(1);
+        }
+
+
+
+        /* ===============================
+   SCROLL REVEAL BASE
+================================ */
+        .reveal,
+        .reveal-left,
+        .reveal-right,
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition:
+                opacity 0.9s ease,
+                transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+            will-change: transform, opacity;
+        }
+
+        /* ===============================
+   DIRECTION VARIANTS
+================================ */
+        .reveal-left {
+            transform: translateX(-60px);
+        }
+
+        .reveal-right {
+            transform: translateX(60px);
+        }
+
+        .reveal-up {
+            transform: translateY(60px);
+        }
+
+        /* ===============================
+   ACTIVE STATE
+================================ */
+        .reveal.active,
+        .reveal-left.active,
+        .reveal-right.active,
+        .reveal-up.active {
+            opacity: 1;
+            transform: translateX(0) translateY(0);
+        }
+
+        .delay-1 {
+            transition-delay: 0.15s;
+        }
+
+        .delay-2 {
+            transition-delay: 0.3s;
+        }
+
+        .delay-3 {
+            transition-delay: 0.45s;
+        }
+
+        .delay-4 {
+            transition-delay: 0.6s;
+        }
+
+        .delay-5 {
+            transition-delay: 0.75s;
+        }
+
+        .delay-6 {
+            transition-delay: 0.9s;
+        }
+
+        .delay-7 {
+            transition-delay: 1.05s;
+        }
+
+        .delay-8 {
+            transition-delay: 1.2s;
+        }
+
+        /* ===============================
+   REDUCED MOTION SUPPORT
+================================ */
+        @media (prefers-reduced-motion: reduce) {
+
+            .reveal,
+            .reveal-left,
+            .reveal-right,
+            .reveal-up {
+                transition: none;
+                transform: none;
+                opacity: 1;
+            }
+        }
+    </style>
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Custom Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        /* Original */
+                        'form-dark-green': '#6b8d4e',
+                        'brand-topbar-green': '#6a9b5f',
+
+                        /* Greens */
+                        'brand-dark-green': '#3B5833',      // Footer, icon bar, headings
+                        'brand-medium-green': '#6A8A61',    // Split section
+                        'brand-deep-green': '#334C2D',      // Sub-footer
+                        'brand-light-mint': '#DDE6DA',      // Light mint banner
+                        'brand-gradient-from': '#4A6D41',   // Gradient section
+
+                        /* Greys & Neutrals */
+                        'brand-dark-grey': '#333333',       // Headings
+                        'brand-medium-grey': '#666666',     // Paragraphs
+                        'brand-light-grey': '#E0E0E0',      // Footer links
+                        'brand-off-white': '#F9F9F9',       // Light backgrounds
+
+                        /* Accent */
+                        'text-orange': '#ff7f50'
+                    }
+                }
+            }
+        }
+    </script>
+
+</head>
+
+<body class="bg-white">
+    <div class="custom-cursor">
+        <img src="imgs/new/cursor-white-black2.png" alt="Custom Cursor">
+    </div>
+    <div class="hidden bg-brand-topbar-green text-white text-[13px] py-2 px-6 md:flex justify-between items-center"
+        style="font-family: 'Montserrat', sans-serif;">
+        <div class="flex items-center space-x-4">
+            <div class="flex items-center">
+                <i class="fas fa-phone mr-2"></i>
+                <span>
+                    Call Us On:
+                    <a href="tel:+919578420672" class="hover:underline">+91 95784 20672</a>
+                </span>
+            </div>
+            <div class="flex items-center">
+                <i class="fas fa-envelope mr-2"></i>
+                <span>
+                    <a href="mailto:marketing@nithaeroespace.in"
+                        class="hover:underline">marketing@nithaaeroespace.in</a>
+                </span>
+            </div>
+        </div>
+        <div class="flex items-center space-x-4 z-50">
+            <a href="blogs.html" class="hover:underline">Blogs</a>
+            <span>|</span>
+            <a href="careers.html" class="hover:underline">Careers</a>
+        </div>
+    </div>
+    <header class="relative">
+        <nav class="w-full absolute bg-white font-extrabold text-brand-topbar-green top-0 py-4 z-50 shadow-sm"
+            style="font-family: 'Montserrat', sans-serif;">
+            <div class="w-full max-w-screen-2xl mx-auto flex items-center justify-between px-6 xl:px-4 2xl:px-2">
+                <div class="flex items-center">
+                    <img src="imgs/Screenshot 2025-11-04 120806.png" alt="NITHA Logo" class="h-16 w-20 object-contain">
+                </div>
+                <div class="hidden md:flex items-center gap-6 lg:gap-8 text-[14px] lg:text-[15px] font-bold">
+                    <a href="index.html" class="transition-colors duration-100 hover:text-black">Home</a>
+                    <a href="aboutus.html" class="transition-colors duration-100 hover:text-black">About</a>
+                    <div class="relative group py-2">
+                        <a href="fasteners.html" class="flex items-center gap-1 cursor-pointer
+        transition-colors duration-100
+        hover:text-black focus:outline-none">
+                            Capabilities
+                            <i class="fas fa-chevron-down text-[10px]"></i>
+                        </a>
+                        <!-- DROPDOWN -->
+                        <div class="absolute top-full left-0 pt-2 hidden group-hover:block z-[60]">
+                            <div class="bg-white shadow-xl rounded-md w-72
+            border-t-4 border-brand-topbar-green
+            py-2 overflow-hidden">
+                                <a href="fasteners.html" class="block px-4 py-2 text-gray-700
+                hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
+                                    Melting
+                                </a>
+                                <a href="fasteners.html" class="block px-4 py-2 text-gray-700
+                hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
+                                    Casting
+                                </a>
+                                <a href="fasteners.html" class="block px-4 py-2 text-gray-700
+                hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
+                                    Forging
+                                </a>
+                                <a href="fasteners.html" class="block px-4 py-2 text-gray-700
+                hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
+                                    Precision Machining
+                                </a>
+                                <a href="fasteners.html" class="block px-4 py-2 text-gray-700
+                hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
+                                    Thread Rolling
+                                </a>
+                                <a href="fasteners.html" class="block px-4 py-2 text-gray-700
+                hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
+                                    Heat Treatment
+                                </a>
+                                <a href="fasteners.html" class="block px-4 py-2 text-gray-700
+                hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
+                                    Surface Treatment
+                                </a>
+                                <a href="fasteners.html" class="block px-4 py-2 text-gray-700
+                hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
+                                    Testing & QA
+                                </a>
+                                <a href="fasteners.html" class="block px-4 py-2 text-gray-700
+                hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
+                                    Engineering
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative group py-2">
+                        <div class="relative group inline-block ">
+                            <a href="products.html" class="flex items-center gap-1 cursor-pointer
+           transition-colors duration-100
+           hover:text-black focus:outline-none">
+                                Products
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </a>
+                            <div
+                                class="absolute left-0 hidden group-hover:block bg-white shadow-xl rounded-md w-72 border-t-4 border-brand-topbar-green py-2 z-50">
+                                <div class="relative group/sub">
+                                    <a href=""
+                                        class="flex justify-between items-center px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
+                                        Critical Industries
+                                        <span
+                                            class="text-xs ml-2 opacity-50 group-hover:opacity-100 transition-opacity">
+                                            <i class="fa-solid fa-chevron-right"></i>
+                                        </span>
+                                    </a>
+                                    <div
+                                        class="absolute left-full top-0 hidden group-hover/sub:block bg-white shadow-xl rounded-md w-72 border-l-2 border-brand-topbar-green py-2 -ml-1">
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">
+                                            Aerospace
+                                            Fasteners
+                                        </a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">
+                                            Defence
+                                            Fasteners
+                                        </a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">
+                                            Nuclear
+                                            / Energy Fasteners
+                                        </a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">
+                                            Oil
+                                            & Gas Bolting Solutions
+                                        </a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">
+                                            Medical
+                                            & Precision Fasteners
+                                        </a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">
+                                            Railway
+                                            & Metro Fasteners
+                                        </a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">
+                                            Power
+                                            Plant & Thermal Fasteners
+                                        </a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">
+                                            Renewable
+                                            Energy Fasteners
+                                        </a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">
+                                            Shipbuilding
+                                            & Marine Fasteners
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="relative group/sub">
+                                    <a href="#"
+                                        class="flex justify-between items-center px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
+                                        Industrial & General Engineering
+                                        <span
+                                            class="text-xs ml-2 opacity-50 group-hover:opacity-100 transition-opacity">
+                                            <i class="fa-solid fa-chevron-right"></i>
+                                        </span>
+                                    </a>
+                                    <div
+                                        class="absolute left-full top-0 hidden group-hover/sub:block bg-white shadow-xl rounded-md w-72 border-l-2 border-brand-topbar-green py-2 -ml-1">
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">
+                                            Automotive
+                                            Fasteners
+                                        </a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">
+                                            Construction
+                                            & Infrastructure Fasteners
+                                        </a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">
+                                            Electrical
+                                            & Electronics Fasteners
+                                        </a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">
+                                            Heavy
+                                            Engineering & Industrial Fasteners
+                                        </a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">
+                                            Chemical
+                                            & Process Industry Fasteners
+                                        </a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">
+                                            Mining
+                                            & Earthmoving Fasteners
+                                        </a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">
+                                            HVAC
+                                            & Building Services Fasteners
+                                        </a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">
+                                            Agricultural
+                                            & Off-Highway Fasteners
+                                        </a>
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">
+                                            General
+                                            Engineering Fasteners
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="relative group/sub">
+                                    <a href="#"
+                                        class="flex justify-between items-center px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-brand-topbar-green transition-colors">
+                                        Specialised Engineering
+                                        <span
+                                            class="text-xs ml-2 opacity-50 group-hover:opacity-100 transition-opacity">
+                                            <i class="fa-solid fa-chevron-right"></i>
+                                        </span>
+                                    </a>
+                                    <div
+                                        class="absolute left-full top-0 hidden group-hover/sub:block bg-white shadow-xl rounded-md w-72 border-l-2 border-brand-topbar-green py-2 -ml-1">
+                                        <a href="products.html"
+                                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-brand-topbar-green">
+                                            Custom
+                                            & Prototype Fasteners
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex gap-8 text-lg font-semibold">
+                        <!-- FIS -->
+                        <a href="fis.html" class="relative group transition-colors duration-150 hover:text-black">
+                            FIS
+                            <!-- Tooltip -->
+                            <span class="absolute left-1/2 bottom-full mb-3 -translate-x-1/2
+             whitespace-nowrap rounded-md px-4 py-1 text-sm font-semibold
+             bg-black/75 text-white
+             opacity-0 group-hover:opacity-100
+             translate-y-2 group-hover:translate-y-0
+             transition-all d   uration-200 shadow-lg">
+                                Fasteners Intelligence System
+                            </span>
+                        </a>
+                        <!-- R&D -->
+                        <a href="r&d.html" class="relative group transition-colors duration-150 hover:text-black">
+                            R&amp;D
+                            <!-- Tooltip -->
+                            <span class="absolute left-1/2 bottom-full mb-3 -translate-x-1/2
+             whitespace-nowrap rounded-md px-4 py-1 text-sm font-semibold
+             bg-black/75 text-white
+             opacity-0 group-hover:opacity-100
+             translate-y-2 group-hover:translate-y-0
+             transition-all duration-200 shadow-lg">
+                                Research &amp; Development
+                            </span>
+                        </a>
+                    </div>
+                    <a href="contact.html" class="transition-colors duration-100 hover:text-black">Contact</a>
+                </div>
+                <div class="hidden md:block">
+                    <a href="careers.html" class="bg-brand-topbar-green text-white
+              px-5 lg:px-6 py-2
+              rounded-md
+              text-xs lg:text-sm
+              font-bold
+              hover:brightness-110
+              transition
+              shadow-md
+              whitespace-nowrap">
+                        Become A Partner
+                    </a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-brand-topbar-green text-2xl focus:outline-none">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <!-- =========================
+ FIS HERO SECTION
+========================= -->
+        <section
+            class="relative bg-gradient-to-br from-brand-gradient-from to-brand-dark-green text-white overflow-hidden">
+
+            <!-- Optional background grid (engineering feel) -->
+            <div
+                class="absolute inset-0 opacity-[0.08] bg-[linear-gradient(to_right,white_1px,transparent_1px),linear-gradient(to_bottom,white_1px,transparent_1px)] bg-[size:40px_40px]">
+            </div>
+
+            <div
+                class="relative max-w-7xl mx-auto px-6 py-28 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mt-12 reveal-left">
+
+                <!-- LEFT CONTENT -->
+                <div>
+                    <img src="imgs/whitenitha-removebg-preview.png" alt="NITHA Logo"
+                        class="h-[80px] w-[80px] object-contain">
+                    <p class="text-sm tracking-widest uppercase font-semibold text-brand-light-mint">
+                        Proprietary Engineering Framework
+                    </p>
+                    <!-- SYSTEM LABEL -->
+                    <div class="space-y-4">
+
+
+
+
+                        <!-- MAIN TITLE -->
+                        <h1
+                            class="text-1xl text-brand-light-mint sm:text-1xl lg:text-2xl mt-1 font-extrabold leading-[1.05]">
+                      
+                        
+                            <span class="text-white text-4xl sm:text-3xl lg:text-4xl">
+                                Fasteners Intelligence System<span class="align-super text-2xl"></span>
+                            </span>
+                        </h1>
+
+                        <!-- TAGLINE -->
+                        <p class="text-xl sm:text-2xl font-semibold text-brand-light-mint">
+                            Engineering Intelligence for Critical Bolted Joints
+                        </p>
+
+                        <!-- CORE VALUE -->
+                        <p class="max-w-xl text-base sm:text-lg text-brand-light-grey leading-relaxed">
+                            FIS<span class="align-super text-xs"></span> is NAPL’s proprietary engineering framework
+                            that
+                            governs the
+                            <span class="font-semibold text-white">
+                                design, validation, manufacture, inspection, and traceability
+                            </span>
+                            of safety-critical bolted joints.
+                        </p>
+
+                        <!-- AUTHORITY STATEMENT -->
+                        <div class="border-l-4 border-brand-light-mint pl-5 mt-6">
+                            <p class="text-base sm:text-lg font-semibold">
+                                Under FIS<span class="align-super text-xs"></span>, NAPL assumes engineering
+                                responsibility
+                                for bolted joint validation —
+                                <span class="text-brand-light-mint">
+                                    not merely manufacturing compliance.
+                                </span>
+                            </p>
+                        </div>
+
+                        <!-- CTA -->
+                        <div class="pt-6">
+                            <a href="#contact" class="inline-flex items-center gap-3 px-8 py-4 rounded-md
+                 bg-brand-light-mint text-brand-dark-green
+                 font-bold text-sm tracking-wide
+                 hover:brightness-105 transition">
+                                Talk to an FIS<span class="align-super text-xs"></span> Engineer
+                                <span class="text-lg">→</span>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="relative hidden lg:flex items-center justify-center reveal">
+
+                    <div class="w-full max-w-md h-[380px]
+                border border-white/30
+                rounded-xl
+                overflow-hidden
+                shadow-lg
+                bg-black/10">
+
+                        <img src="imgs/wmremove-transformed.jpeg" alt="FIS Engineering Lifecycle Diagram"
+                            class="w-full h-full object-contain " />
+
+                    </div>
+
+                </div>
+
+
+            </div>
+        </section>
+
+    </header>
+
+
+    <!-- =========================
+ WHY FIS EXISTS
+========================= -->
+    <section class="relative px-6 py-20 overflow-hidden bg-brand-off-white">
+
+        <!-- Decorative dots -->
+        <div class="dotted-bg absolute top-0 right-0 w-1/3 h-full opacity-40 pointer-events-none"></div>
+
+        <div class="relative max-w-7xl mx-auto">
+
+            <!-- LOGO / VISUAL PLACEHOLDER -->
+            <div class="flex justify-center reveal-up">
+                <!-- Replace with FIS / NAPL logo or system icon -->
+                <div class="flex mb-2 items-center justify-center ">
+                    <img src="imgs/nitha_logo_top-removebg-preview.png" height="80" width="80">
+                </div>
+            </div>
+
+
+            <!-- SECTION LABEL -->
+            <p class="text-lg font-bold text-brand-medium-green text-center mb-2 reveal-up">
+                Engineering Rationale
+            </p>
+
+            <!-- TITLE -->
+            <h2
+                class="text-4xl lg:text-5xl font-extrabold text-brand-dark-grey text-center tracking-tight leading-tight mb-4 reveal-up">
+                Why FIS<span class="align-super text-xs"></span> Exists
+            </h2>
+
+            <!-- INTRO STATEMENT -->
+            <p class="max-w-4xl mx-auto text-center text-lg text-brand-medium-grey leading-relaxed mb-10 reveal-up">
+                In safety-critical industries, failures rarely originate from the fastener alone.
+                <br class="hidden sm:block">
+                <span class="font-semibold text-brand-dark-grey">
+                    They arise from unvalidated assumptions.
+                </span>
+            </p>
+
+            <!-- CORE PROBLEM GRID -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-24">
+
+                <!-- CARD 1 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg reveal-up">
+                    <h4 class="text-lg font-bold text-brand-dark-green mb-3">
+                        Hidden Engineering Assumptions
+                    </h4>
+                    <p class="text-brand-medium-grey text-justify text-sm leading-relaxed">
+                        Preload, friction, stiffness, fatigue behaviour, and joint compliance
+                        are often assumed — not validated — during fastener selection.
+                    </p>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg reveal-up delay-1">
+                    <h4 class="text-lg font-bold text-brand-dark-green mb-3">
+                        Compliance ≠ Validation
+                    </h4>
+                    <p class="text-brand-medium-grey text-justify text-sm leading-relaxed">
+                        Meeting a manufacturing standard does not guarantee joint integrity
+                        under real service conditions.
+                    </p>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg reveal-up delay-2">
+                    <h4 class="text-lg font-bold text-brand-dark-green mb-3">
+                        Failure Happens Systemically
+                    </h4>
+                    <p class="text-brand-medium-grey text-sm text-justify leading-relaxed">
+                        Most failures occur due to system-level gaps — not material defects alone.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- PHILOSOPHY STATEMENT -->
+            <div class="bg-brand-light-mint rounded-3xl px-10 py-10 text-center max-w-5xl mx-auto reveal-up">
+
+                <p class="text-2xl lg:text-3xl font-extrabold text-brand-dark-green leading-snug mb-6">
+                    Without validation, design is intent.
+                    <br>
+                    With FIS<span class="align-super text-xs"></span>, design becomes compliance.
+                </p>
+
+                <p class="text-brand-medium-grey text-base leading-relaxed max-w-3xl mx-auto">
+                    FIS<span class="align-super text-xs"></span> exists to eliminate assumption-driven risk
+                    by enforcing engineering responsibility for bolted joint validation —
+                    before failure can occur in service.
+                </p>
+            </div>
+
+            <!-- FAILURE PREVENTION LIST -->
+            <div class="mt-20 max-w-6xl mx-auto reveal-up">
+                <h3 class="text-xl font-extrabold text-brand-dark-grey mb-8 text-center">
+                    FIS<span class="align-super text-xs"></span> is explicitly designed to prevent:
+                </h3>
+
+                <div class="grid grid-cols-1 font-semibold sm:grid-cols-2 lg:grid-cols-3 gap-6 text-m">
+                    <div class="bg-white p-6 rounded-xl shadow">
+                        • Preload loss
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow">
+                        • Fatigue failure
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow">
+                        • Thread stripping
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow">
+                        • Self-loosening
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow">
+                        • Joint separation
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow">
+                        • In-service compliance failure
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- =========================
+ FIS LIFECYCLE FRAMEWORK
+========================= -->
+    <section class="relative px-6 py-20 overflow-hidden bg-white">
+
+        <!-- Decorative dots -->
+        <div class="dotted-bg absolute top-0 left-0 w-1/3 h-full opacity-30 pointer-events-none"></div>
+
+        <div class="relative max-w-7xl mx-auto">
+
+            <!-- LOGO / SYSTEM MARK -->
+            <div class="flex justify-center  reveal-up">
+                    <div>
+                        <img src="imgs/nitha_logo_top-removebg-preview.png " height="80" width="80">
+                    </div>
+                
+            </div>
+
+            <!-- SECTION LABEL -->
+            <p class="text-lg font-bold  font-bold text-brand-medium-green text-center reveal-up">
+                System Framework
+            </p>
+
+            <!-- TITLE -->
+            <h2
+                class="text-4xl lg:text-5xl font-extrabold text-brand-dark-grey text-center tracking-tight leading-tight mb-4 reveal-up">
+                FIS<span class="align-super text-xl"></span> Lifecycle Framework
+            </h2>
+
+            <!-- SUBTITLE -->
+            <p class="max-w-4xl mx-auto text-center text-lg text-brand-medium-grey leading-relaxed mb-10 reveal-up">
+                A closed-loop engineering framework governing design, validation,
+                manufacture, inspection, and traceability of critical bolted joints.
+            </p>
+
+            <!-- IMAGE CONTAINER -->
+            <div class="relative reveal-up">
+
+                <!-- PLACE YOUR IMAGE HERE -->
+                <div class="w-full flex justify-center">
+                    <img src="imgs/Frame 1 (4).png" alt="FIS Lifecycle Framework" class="max-w-full h-auto">
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- =========================
+ WHAT MAKES FIS DIFFERENT
+========================= -->
+    <section class="relative px-6 py-20 bg-brand-off-white overflow-hidden">
+
+        <!-- Decorative dots -->
+        <div class="dotted-bg absolute right-0 top-0 w-1/3 h-full opacity-30 pointer-events-none"></div>
+
+        <div class="relative max-w-7xl mx-auto">
+
+            <!-- LOGO / MARK -->
+            <div class="flex justify-center  reveal-up">
+                    <div>
+                        <img src="imgs/nitha_logo_top-removebg-preview.png " height="80" width="80">
+                    </div>
+                
+            </div>
+            <!-- SECTION LABEL -->
+            <p class="text-lg font-bold text-brand-medium-green text-center  reveal-up">
+                Engineering Differentiation
+            </p>
+
+            <!-- TITLE -->
+            <h2
+                class="text-4xl lg:text-5xl font-extrabold text-brand-dark-grey text-center leading-tight mb-4 reveal-up">
+                What Makes FIS<span class="align-super text-xl"></span> Different
+            </h2>
+
+            <!-- INTRO -->
+            <p class="max-w-4xl mx-auto text-center text-lg text-brand-medium-grey leading-relaxed mb-20 reveal-up">
+                Most fastener suppliers comply with a single standard.
+                <br class="hidden sm:block">
+                <span class="font-semibold text-brand-dark-grey">
+                    FIS<span class="align-super text-xs"></span> integrates many — into one validated engineering
+                    outcome.
+                </span>
+            </p>
+
+            <!-- TIMELINE -->
+            <div class="relative max-w-4xl mx-auto">
+
+                <!-- Vertical line -->
+                <div class="absolute left-4 top-0 h-full w-[2px] bg-brand-light-mint"></div>
+
+                <!-- ITEM 1 -->
+                <div class="relative flex gap-8 mb-8 reveal-up">
+                    <div
+                        class="w-8 h-8 rounded-full text-white text-lg font-bold bg-brand-dark-green flex items-center justify-center shrink-0 mt-1">
+
+                        ✓
+
+                    </div>
+                    <p class="text-brand-medium-grey text-lg leading-relaxed">
+                        FIS<span class="align-super text-xs"></span> maps and translates multiple global standards into
+                        a
+                        single, unified engineering validation framework.
+                    </p>
+                </div>
+
+                <!-- ITEM 2 -->
+                <div class="relative flex gap-8 mb-8 reveal-up delay-1">
+                    <div
+                        class="w-8 h-8 rounded-full text-white text-lg font-bold bg-brand-dark-green flex items-center justify-center shrink-0 mt-1">
+
+                        ✓
+
+                    </div>
+                    <p class="text-brand-medium-grey text-lg leading-relaxed">
+                        Eliminates conflicting assumptions between standards, calculation tools, manufacturing
+                        processes,
+                        and inspection methods.
+                    </p>
+                </div>
+
+                <!-- ITEM 3 -->
+                <div class="relative flex gap-8 mb-12 reveal-up delay-2">
+                    <div
+                        class="w-8 h-8 rounded-full text-white text-lg font-bold bg-brand-dark-green flex items-center justify-center shrink-0 mt-1">
+
+                        ✓
+
+                    </div>
+                    <p class="text-brand-medium-grey text-lg leading-relaxed">
+                        Prevents late-stage compliance failures, redesign loops, and costly program delays
+                        <span class="font-semibold text-brand-dark-grey">before they occur</span>.
+                    </p>
+                </div>
+
+                <!-- ITEM 4 -->
+                <div class="relative flex gap-8 reveal-up delay-3">
+                    <div
+                        class="w-8 h-8 rounded-full text-white text-lg font-bold bg-brand-dark-green flex items-center justify-center shrink-0 mt-1">
+
+                        ✓
+
+                    </div>
+                    <p class="text-brand-medium-grey text-lg leading-relaxed">
+                        Methodology-driven and tool-independent — ensuring robustness beyond any single software
+                        platform
+                        or calculation approach.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- =========================
+ STANDARDS INTELLIGENCE INSIDE FIS
+========================= -->
+    <section class="relative px-6 py-28 bg-white overflow-hidden">
+
+        <!-- Decorative dots -->
+        <div class="dotted-bg absolute left-0 top-0 w-1/3 h-full opacity-30 pointer-events-none"></div>
+
+        <div class="relative max-w-7xl mx-auto">
+
+            <!-- LOGO / SYSTEM MARK -->
+            <div class="flex justify-center  reveal-up">
+                    <div>
+                        <img src="imgs/nitha_logo_top-removebg-preview.png " height="80" width="80">
+                    </div>
+                
+            </div>
+
+            <!-- SECTION LABEL -->
+            <p class="text-lg font-bold text-brand-medium-green text-center reveal-up">
+                Standards Intelligence
+            </p>
+
+            <!-- TITLE -->
+            <h2
+                class="text-4xl lg:text-5xl font-extrabold text-brand-dark-grey text-center leading-tight mb-2 reveal-up">
+                Standards Intelligence Inside FIS<span class="align-super text-xl"></span>
+            </h2>
+
+            <!-- INTRO -->
+            <p class="max-w-4xl mx-auto text-center text-lg text-brand-medium-grey leading-relaxed mb-20 reveal-up">
+                FIS<span class="align-super text-xs"></span> does not replace standards.
+                <br class="hidden sm:block">
+                <span class="font-semibold text-brand-dark-grey">
+                    It aligns, cross-references, and connects them into one validated engineering framework.
+                </span>
+            </p>
+
+            <!-- STANDARDS MATRIX -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto mb-20">
+
+                <!-- VDI 2230 -->
+                <div class="bg-brand-off-white rounded-2xl p-8 border-l-8 border-brand-dark-green shadow-md reveal-up">
+                    <h3 class="text-xl font-extrabold text-brand-dark-green mb-3">
+                        VDI 2230
+                    </h3>
+                    <p class="text-brand-medium-grey leading-relaxed">
+                        Core bolted joint calculation and validation, including preload determination,
+                        joint stiffness, fatigue safety, and failure mode analysis.
+                    </p>
+                </div>
+
+                <!-- NASA-STD-5020 -->
+                <div
+                    class="bg-brand-off-white rounded-2xl p-8 border-l-8 border-brand-dark-green shadow-md reveal-up delay-1">
+                    <h3 class="text-xl font-extrabold text-brand-dark-green mb-3">
+                        NASA-STD-5020
+                    </h3>
+                    <p class="text-brand-medium-grey leading-relaxed">
+                        Aerospace-grade bolted joint integrity requirements addressing
+                        margin of safety, verification rigor, and mission-critical reliability.
+                    </p>
+                </div>
+
+                <!-- ASME -->
+                <div
+                    class="bg-brand-off-white rounded-2xl p-8 border-l-8 border-brand-dark-green shadow-md reveal-up delay-2">
+                    <h3 class="text-xl font-extrabold text-brand-dark-green mb-3">
+                        ASME PCC-1 / ASME Section VIII
+                    </h3>
+                    <p class="text-brand-medium-grey leading-relaxed">
+                        Flanged joint assembly, pressure boundary integrity,
+                        gasket behavior, and bolting practices for high-risk systems.
+                    </p>
+                </div>
+
+                <!-- ISO / EN -->
+                <div
+                    class="bg-brand-off-white rounded-2xl p-8 border-l-8 border-brand-dark-green shadow-md reveal-up delay-3">
+                    <h3 class="text-xl font-extrabold text-brand-dark-green mb-3">
+                        ISO / EN Standards
+                    </h3>
+                    <p class="text-brand-medium-grey leading-relaxed">
+                        International alignment for fatigue behavior, preload consistency,
+                        thread geometry, tolerances, and material compliance.
+                    </p>
+                </div>
+
+                <!-- JSME / SAE -->
+                <div
+                    class="bg-brand-off-white rounded-2xl p-8 border-l-8 border-brand-dark-green shadow-md reveal-up delay-4 md:col-span-2">
+                    <h3 class="text-xl font-extrabold text-brand-dark-green mb-3">
+                        JSME / SAE Aerospace Standards
+                    </h3>
+                    <p class="text-brand-medium-grey leading-relaxed max-w-4xl">
+                        Regional and program-specific aerospace requirements integrated into FIS<span
+                            class="align-super text-xs"></span>
+                        to ensure global OEM acceptance and audit readiness.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- CLOSING STATEMENT -->
+            <div class="bg-brand-light-mint rounded-2xl p-10 max-w-4xl mx-auto text-center reveal-up">
+                <p class="text-lg text-brand-dark-grey leading-relaxed">
+                    FIS<span class="align-super text-xs"></span> does not replace standards.
+                    <br class="hidden sm:block">
+                    <span class="font-extrabold text-brand-dark-green">
+                        It connects them intelligently — eliminating gaps, conflicts, and hidden assumptions.
+                    </span>
+                </p>
+            </div>
+
+        </div>
+    </section>
+    <!-- =========================
+ WITH FIS VS WITHOUT FIS
+========================= -->
+    <section class="relative px-6 mb-20 bg-white overflow-hidden">
+
+        <!-- Decorative dots -->
+        <div class="dotted-bg absolute right-0 top-0 w-1/3 h-full opacity-30 pointer-events-none"></div>
+
+        <div class="relative max-w-7xl mx-auto ">
+
+            <!-- LOGO / SYSTEM MARK -->
+            <div class="flex justify-center  reveal-up">
+
+                <div class=" flex items-center mb-2 justify-center ">
+                    <img src="imgs/nitha_logo_top-removebg-preview.png" height="80" width="80">
+                </div>
+
+            </div>
+
+            <!-- SECTION LABEL -->
+            <p class="text-lg font-bold text-brand-medium-green text-center  reveal-up">
+                Comparative Outcome
+            </p>
+
+            <!-- TITLE -->
+            <h2
+                class="text-4xl lg:text-5xl font-extrabold text-brand-dark-grey text-center leading-tight mb-16 reveal-up">
+                With FIS<span class="align-super text-xs"></span> vs Without FIS<span
+                    class="align-super text-xl"></span>
+            </h2>
+
+            <!-- COMPARISON GRID -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 items-stretch">
+
+                <!-- WITH FIS -->
+                <div class="relative bg-brand-off-white rounded-3xl p-10 shadow-lg reveal-left">
+                    <!-- Accent bar -->
+                    <div class="absolute left-0 top-0 h-full w-2 bg-brand-dark-green rounded-l-3xl"></div>
+
+                    <h3 class="text-2xl font-extrabold text-brand-dark-green mb-8 pl-4">
+                        With FIS<span class="align-super text-xs"></span> (NAPL)
+                    </h3>
+
+                    <ul class="space-y-6 pl-4">
+                        <li class="flex items-start gap-4">
+                            <span class="flex items-center justify-center 
+               w-5 h-5 rounded-full 
+               bg-brand-dark-green text-brand-dark-green text-xs font-bold text-white mt-1">
+                                ✓
+                            </span>
+                            <p class="text-brand-medium-grey text-lg">
+                                Engineering-driven design basis
+                            </p>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span class="flex items-center justify-center 
+               w-5 h-5 rounded-full 
+               bg-brand-dark-green text-brand-dark-green text-white text-xs font-bold mt-1">
+                                ✓
+                            </span>
+                            <p class="text-brand-medium-grey text-lg">
+                                Calculated and verified validation
+                            </p>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span class="flex items-center justify-center 
+               w-5 h-5 rounded-full 
+               bg-brand-dark-green text-brand-dark-green text-white text-xs font-bold mt-1">
+                                ✓
+                            </span>
+                            <p class="text-brand-medium-grey text-lg">
+                                Multi-standard alignment (VDI, NASA, ASME, ISO, EN)
+                            </p>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span class="flex items-center justify-center 
+               w-5 h-5 rounded-full 
+               bg-brand-dark-green text-brand-dark-green text-white text-xs font-bold mt-1">
+                                ✓
+                            </span>
+                            <p class="text-brand-medium-grey text-lg">
+                                Early risk identification and mitigation
+                            </p>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span class="flex items-center justify-center 
+               w-5 h-5 rounded-full 
+               bg-brand-dark-green text-brand-dark-green text-white text-xs font-bold mt-1">
+                                ✓
+                            </span>
+                            <p class="text-brand-medium-grey text-lg">
+                                Built-in audit readiness
+                            </p>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span class="flex items-center justify-center 
+               w-5 h-5 rounded-full 
+               bg-brand-dark-green text-brand-dark-green text-white text-xs font-bold mt-1">
+                                ✓
+                            </span>
+                            <p class="text-brand-medium-grey text-lg font-semibold text-brand-dark-grey">
+                                High OEM confidence
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- WITHOUT FIS -->
+                <div class="relative bg-white rounded-3xl p-10 border border-brand-light-mint shadow-sm reveal-right">
+                    <!-- Subtle accent bar -->
+                    <div class="absolute left-0 top-0 h-full w-2 bg-brand-light-mint rounded-l-3xl"></div>
+
+                    <h3 class="text-2xl font-extrabold text-brand-dark-grey mb-8 pl-4">
+                        Without FIS<span class="align-super text-xs"></span>
+                    </h3>
+
+                    <ul class="space-y-6 pl-4">
+                        <li class="flex items-start gap-4">
+
+                            <span
+                                class="flex items-center justify-center font-bold w-5 h-5 rounded-full bg-brand-light-grey text-black text-xs font-bold mt-1">
+                                ✓
+                            </span>
+                            <p class="text-brand-medium-grey text-lg">
+                                Catalogue-driven selection
+                            </p>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span
+                                class="flex items-center justify-center font-bold w-5 h-5 rounded-full bg-brand-light-grey text-black text-xs font-bold mt-1">
+                                ✓
+                            </span>
+                            <p class="text-brand-medium-grey text-lg">
+                                Assumed validation
+                            </p>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span
+                                class="flex items-center justify-center font-bold w-5 h-5 rounded-full bg-brand-light-grey text-black text-xs font-bold mt-1">
+                                ✓
+                            </span>
+                            <p class="text-brand-medium-grey text-lg">
+                                Single-standard focus
+                            </p>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span
+                                class="flex items-center justify-center font-bold w-5 h-5 rounded-full bg-brand-light-grey text-black text-xs font-bold mt-1">
+                                ✓
+                            </span>
+                            <p class="text-brand-medium-grey text-lg">
+                                Late risk discovery
+                            </p>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span
+                                class="flex items-center justify-center font-bold w-5 h-5 rounded-full bg-brand-light-grey text-black text-xs font-bold mt-1">
+                                ✓
+                            </span>
+                            <p class="text-brand-medium-grey text-lg">
+                                Reactive audits
+                            </p>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span
+                                class="flex items-center justify-center font-bold w-5 h-5 rounded-full bg-brand-light-grey text-black text-xs font-bold mt-1">
+                                ✓
+                            </span>
+                            <p class="text-brand-medium-grey text-lg">
+                                Conditional OEM confidence
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- =========================
+ WHAT FIS IS NOT
+========================= -->
+    <section class="relative px-6 py-20 bg-brand-off-white overflow-hidden">
+
+        <!-- Decorative dots -->
+        <div class="dotted-bg absolute left-0 top-0 w-1/3 h-full opacity-25 pointer-events-none"></div>
+
+        <div class="relative max-w-6xl mx-auto">
+
+            <!-- LOGO / SYSTEM MARK -->
+            <div class="flex justify-center  reveal-up">
+                    <div>
+                        <img src="imgs/nitha_logo_top-removebg-preview.png " height="80" width="80">
+                    </div>
+                
+            </div>
+
+            <!-- SECTION LABEL -->
+            <p class="text-lg font-bold text-brand-medium-green text-center reveal-up">
+                Clarifying Scope
+            </p>
+
+            <!-- TITLE -->
+            <h2
+                class="text-4xl lg:text-5xl font-extrabold text-brand-dark-grey text-center tracking-tight leading-tight mb-10 reveal-up">
+                What FIS<span class="align-super text-xs"></span> Is Not
+            </h2>
+
+            <!-- NEGATIVE DEFINITIONS -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-14">
+
+                <!-- NOT 1 -->
+                <div class="bg-white rounded-2xl p-8 font-semibold border border-brand-light-mint shadow-sm reveal-up">
+                    <p class="text-brand-medium-grey text-lg leading-relaxed">
+                        Not catalogue-based fastener selection
+                    </p>
+                </div>
+
+                <!-- NOT 2 -->
+                <div
+                    class="bg-white rounded-2xl p-8 border font-semibold border-brand-light-mint shadow-sm reveal-up delay-1">
+                    <p class="text-brand-medium-grey text-lg leading-relaxed">
+                        Not a single-standard checklist
+                    </p>
+                </div>
+
+                <!-- NOT 3 -->
+                <div
+                    class="bg-white rounded-2xl p-8 border font-semibold border-brand-light-mint shadow-sm reveal-up delay-2">
+                    <p class="text-brand-medium-grey text-lg leading-relaxed">
+                        Not a post-failure justification exercise
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- POSITIVE CLOSING -->
+            <div class="bg-brand-light-mint rounded-2xl p-10 max-w-4xl mx-auto text-center reveal-up">
+                <p class="text-xl text-brand-dark-grey leading-relaxed">
+                    FIS<span class="align-super text-xs"></span> is
+                    <span class="font-extrabold text-brand-dark-green">
+                        proactive engineering intelligence
+                    </span>
+                    — designed to prevent failure, not explain it after the fact.
+                </p>
+            </div>
+
+        </div>
+    </section>
+    <!-- =========================
+ WHO FIS IS BUILT FOR
+========================= -->
+    <section class="relative px-6 py-28 bg-white overflow-hidden">
+
+        <!-- Decorative dots -->
+        <div class="dotted-bg absolute right-0 top-0 w-1/3 h-full opacity-25 pointer-events-none"></div>
+
+        <div class="relative max-w-7xl mx-auto">
+
+            <!-- LOGO / SYSTEM MARK -->
+            <div class="flex justify-center  reveal-up">
+                    <div>
+                        <img src="imgs/nitha_logo_top-removebg-preview.png " height="80" width="80">
+                    </div>
+                
+            </div>
+            <!-- SECTION LABEL -->
+            <p class="text-xl  font-bold text-brand-medium-green text-center reveal-up">
+                Intended Audience
+            </p>
+
+            <!-- TITLE -->
+            <h2
+                class="text-4xl lg:text-5xl font-extrabold text-brand-dark-grey text-center tracking-tight mb-6 reveal-up">
+                Who FIS<span class="align-super text-xs"></span> Is Built For
+            </h2>
+
+            <!-- INTRO -->
+            <p class="max-w-4xl mx-auto text-center text-lg text-brand-medium-grey leading-relaxed mb-20 reveal-up">
+                FIS<span class="align-super text-xs"></span> is engineered for programs where
+                <span class="font-semibold text-brand-dark-grey">joint integrity is mission-critical</span>
+                and validation cannot be assumed.
+            </p>
+
+            <!-- AUDIENCE GRID -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+
+                <!-- Aerospace & Defence OEMs -->
+                <div class="bg-brand-off-white rounded-2xl p-8 shadow-md reveal-up">
+                    <h3 class="text-xl font-extrabold text-brand-dark-green mb-4">
+                        Aerospace & Defence OEMs
+                    </h3>
+                    <p class="text-brand-medium-grey leading-relaxed">
+                        Programs requiring rigorous joint validation, margin accountability,
+                        and audit-ready engineering documentation.
+                    </p>
+                </div>
+
+                <!-- Tier-1 Suppliers -->
+                <div class="bg-brand-off-white rounded-2xl p-8 shadow-md reveal-up delay-1">
+                    <h3 class="text-xl font-extrabold text-brand-dark-green mb-4">
+                        Tier-1 Suppliers
+                    </h3>
+                    <p class="text-brand-medium-grey leading-relaxed">
+                        Suppliers accountable for subsystem integrity, compliance flow-down,
+                        and multi-standard alignment.
+                    </p>
+                </div>
+
+                <!-- Safety-Critical Applications -->
+                <div class="bg-brand-off-white rounded-2xl p-8 shadow-md reveal-up delay-2">
+                    <h3 class="text-xl font-extrabold text-brand-dark-green mb-4">
+                        Safety-Critical Applications
+                    </h3>
+                    <p class="text-brand-medium-grey leading-relaxed">
+                        High-load, fatigue-sensitive, vibration-prone, or failure-intolerant
+                        bolted joint environments.
+                    </p>
+                </div>
+
+                <!-- Audit-Driven Programs -->
+                <div class="bg-brand-off-white rounded-2xl p-8 shadow-md reveal-up delay-3">
+                    <h3 class="text-xl font-extrabold text-brand-dark-green mb-4">
+                        Audit-Driven Programs
+                    </h3>
+                    <p class="text-brand-medium-grey leading-relaxed">
+                        Programs demanding traceable engineering evidence across the
+                        full product and service lifecycle.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- QUALIFICATION STATEMENT -->
+            <div class="bg-brand-light-mint rounded-2xl p-10 max-w-4xl mx-auto text-center mt-20 reveal-up">
+                <p class="text-xl text-brand-dark-grey leading-relaxed">
+                    If your program cannot tolerate
+                    <span class="font-semibold">assumptions</span>,
+                    undocumented decisions, or late-stage compliance risk —
+                    <br class="hidden sm:block">
+                    <span class="font-extrabold text-brand-dark-green">
+                        FIS<span class="align-super text-xs"></span> was built for you.
+                    </span>
+                </p>
+            </div>
+
+        </div>
+    </section>
+    <!-- =========================
+ FIS DELIVERABLES
+========================= -->
+    <section class="relative px-6 py-28 bg-brand-off-white overflow-hidden">
+
+        <!-- Decorative dots -->
+        <div class="dotted-bg absolute left-0 top-0 w-1/3 h-full opacity-25 pointer-events-none"></div>
+
+        <div class="relative max-w-5xl mx-auto">
+
+            <!-- LOGO / SYSTEM MARK -->
+            <div class="flex justify-center  reveal-up">
+                    <div>
+                        <img src="imgs/nitha_logo_top-removebg-preview.png " height="80" width="80">
+                    </div>
+                
+            </div>
+
+            <!-- SECTION LABEL -->
+            <p class="text-sm uppercase tracking-widest font-bold text-brand-medium-green text-center  reveal-up">
+                Engineering Outputs
+            </p>
+
+            <!-- TITLE -->
+            <h2
+                class="text-4xl lg:text-5xl font-extrabold text-brand-dark-grey text-center leading-tight mb-4  reveal-up">
+                FIS<span class="align-super text-xs"></span> Deliverables
+            </h2>
+
+            <!-- INTRO -->
+            <p class="max-w-4xl mx-auto text-center text-lg text-brand-medium-grey leading-relaxed mb-10 reveal-up">
+                FIS<span class="align-super text-xs"></span> produces
+                <span class="font-semibold text-brand-dark-grey">engineering evidence</span>,
+                not assumptions — delivered in formats aligned with OEM, regulatory,
+                and program requirements.
+            </p>
+
+            <!-- DELIVERABLES GRID -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-center">
+
+
+                <!-- Deliverable 1 -->
+                <div class="bg-white rounded-2xl p-8 shadow-md reveal-up">
+                    <h3 class="text-xl font-extrabold text-brand-dark-green mb-4">
+                        Joint Validation Calculations
+                    </h3>
+                    <p class="text-brand-medium-grey leading-relaxed">
+                        Complete bolted joint analysis including preload determination,
+                        stiffness evaluation, fatigue safety, and failure mode verification.
+                    </p>
+                </div>
+
+                <!-- Deliverable 2 -->
+                <div class="bg-white rounded-2xl p-8 shadow-md reveal-up delay-1">
+                    <h3 class="text-xl font-extrabold text-brand-dark-green mb-4">
+                        Safety Factor Summaries
+                    </h3>
+                    <p class="text-brand-medium-grey leading-relaxed">
+                        Clear, auditable safety margin documentation aligned with
+                        aerospace, defence, and high-reliability program expectations.
+                    </p>
+                </div>
+
+                <!-- Deliverable 3 -->
+                <div class="bg-white rounded-2xl p-8 shadow-md reveal-up delay-2">
+                    <h3 class="text-xl font-extrabold text-brand-dark-green mb-4">
+                        Cross-Standard Compliance Mapping
+                    </h3>
+                    <p class="text-brand-medium-grey leading-relaxed">
+                        Structured mapping between VDI, NASA, ASME, ISO, EN, and
+                        program-specific standards to eliminate compliance gaps.
+                    </p>
+                </div>
+
+                <!-- Deliverable 4 -->
+                <div class="bg-white rounded-2xl p-8 shadow-md reveal-up delay-3">
+                    <h3 class="text-xl font-extrabold text-brand-dark-green mb-4">
+                        Manufacturing & Inspection Linkage
+                    </h3>
+                    <p class="text-brand-medium-grey leading-relaxed">
+                        Traceable linkage between validated engineering assumptions,
+                        production processes, inspection plans, and acceptance criteria.
+                    </p>
+                </div>
+
+                <!-- Deliverable 5 -->
+                <div class="bg-white rounded-2xl p-8 shadow-md reveal-up delay-4 md:col-span-2">
+                    <h3 class="text-xl font-extrabold text-brand-dark-green mb-4">
+                        Complete Traceability Documentation
+                    </h3>
+                    <p class="text-brand-medium-grey leading-relaxed max-w-3xl">
+                        End-to-end batch, lot, material, and process traceability records
+                        retained in accordance with customer, regulatory, and full program
+                        lifecycle requirements.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- CLOSING STATEMENT -->
+            <div class="bg-brand-light-mint rounded-2xl p-10 max-w-4xl mx-auto text-center mt-20 reveal-up">
+                <p class="text-xl text-brand-dark-grey leading-relaxed">
+                    Every FIS<span class="align-super text-xs"></span> deliverable is designed to
+                    <span class="font-extrabold text-brand-dark-green">
+                        withstand technical scrutiny, audits, and real-world service conditions.
+                    </span>
+                </p>
+            </div>
+
+        </div>
+    </section>
+    <!-- =========================
+         NAPL + FIS SECTION
+    ========================== -->
+    <section class="relative py-24 bg-white overflow-hidden">
+
+        <!-- Decorative dots -->
+        <div class="dotted-bg absolute right-0 top-0 w-1/3 h-full opacity-20 pointer-events-none"></div>
+
+        <div class="relative max-w-6xl mx-auto px-6">
+
+            <!-- LOGO -->
+            
+            <div class="flex justify-center reveal mb-2">
+                <img src="imgs/nitha_logo_top-removebg-preview.png" alt="NAPL Logo" height="80" width="80">
+            </div>
+
+
+            <!-- SYSTEM BADGE -->
+            <div class="flex justify-center mb-10 reveal">
+                <div class="inline-flex items-center gap-4 px-6 py-3 rounded-full
+                            bg-brand-light-mint border border-brand-medium-green/40 shadow-sm">
+                    <span class="text-sm font-extrabold tracking-widest text-brand-dark-green">
+                        ENGINEERING SYSTEM
+                    </span>
+                    <span class="w-1 h-1 rounded-full bg-brand-dark-green"></span>
+                    <span class="text-sm font-extrabold tracking-widest text-brand-dark-green">
+                        FIS
+                    </span>
+                </div>
+            </div>
+
+            <!-- MAIN GRID (REDUCED GAP) -->
+            <div class="grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-x-6 gap-y-16 items-center">
+
+                <!-- LEFT CONTENT -->
+                <div class="max-w-lg reveal-left">
+
+                    <h2 class="text-5xl lg:text-6xl font-extrabold text-brand-dark-grey leading-tight mb-6">
+                        NAPL<span class="text-brand-medium-green"> + </span>FIS<span
+                            class="align-super text-xs"></span>
+                    </h2>
+
+                    <p class="text-2xl text-brand-medium-grey leading-relaxed mb-8">
+                        From melting to plating.<br>
+                        From intent to assurance.<br>
+                        From components to confidence.
+                    </p>
+
+                    <p class="text-lg text-brand-medium-grey leading-relaxed">
+                        NAPL is a
+                        <span class="font-semibold text-brand-dark-grey">
+                            Precision Metallurgical Engineering Company.
+                        </span>
+                        <br class="hidden sm:block">
+                        FIS<span class="align-super text-xs"></span> is the system that transforms
+                        metallurgical capability into
+                        <span class="font-extrabold text-brand-dark-green">
+                            validated engineering assurance.
+                        </span>
+                    </p>
+
+                </div>
+
+                <!-- RIGHT CTA CARD -->
+                <div class="reveal-right">
+
+                    <div class="bg-brand-light-mint rounded-3xl p-10 shadow-2xl">
+
+                        <p class="text-sm uppercase tracking-widest font-bold text-brand-medium-green mb-3">
+                            Next Step
+                        </p>
+
+                        <h3 class="text-3xl font-extrabold text-brand-dark-grey leading-tight mb-6">
+                            Reduce Joint Risk<br>
+                            Before It Reaches Service
+                        </h3>
+
+                        <p class="text-lg text-brand-medium-grey leading-relaxed mb-10">
+                            Engage with an FIS<span class="align-super text-xs"></span> engineer to
+                            understand how validated joint intelligence accelerates OEM approvals,
+                            strengthens audit readiness, and eliminates assumption-driven failures.
+                        </p>
+
+                        <a href="contact.html" class="inline-flex items-center justify-center
+                                   px-10 py-4
+                                   bg-brand-dark-green
+                                   text-white font-extrabold tracking-wide
+                                   rounded-md
+                                   shadow-lg
+                                   hover:brightness-110
+                                   transition-all duration-200">
+                            Talk to an FIS Engineer
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="top_box relative z-[90] overflow-hidden bg-[#6a9b5f] pb-0 text-white bg-dots responsive-out "
+        style="border-radius:10px; width: 80%; height: 250px; z-index: 99; position: relative; left: 9%; box-shadow: 0px 20px 9px black; margin-top: 20px;">
+        <div class="absolute inset-0 z-0 bg-right bg-no-repeat bg-cover opacity-70 mix-blend-multiply responsive" style="background-image: url('imgs/wwu-copy.png'); background-size: cover;      /* make it fill the screen */
+background-repeat: no-repeat;  /* prevent tiling */
+background-position: center;"></div>
+        <div class="top_box container relative z-2 px-6 py-20 mx-auto lg:py-20">
+            <div style="position:absolute;top:13% ;">
+                <div class="max-w-2xl">
+                    <p class=" text-sm  py-3 font-semibold tracking-wider ">
+                        One Platform For All
+                        Your Fasteners Requirements
+                    </p>
+                    <h2 class=" text-3xl mb-2 font-extrabold tracking-tight">
+                        Which
+                        products are you looking to buy?
+                    </h2>
+                    <p class="mb-4 mt-1  text-1 font-bold">Single window for end-to-end steel sourcing</p>
+                    <a href="products.html"
+                        class="inline-flex items-center px-8 py-3 text-sm font-bold text-[#6a9b5f]  bg-white rounded-md shadow-lg transition-transform hover:scale-105">
+                        Explore Now
+                        <i class="ml-3  fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="relative z-10 bg-gradient-to-t from-[#0b180d] via-[#172c19] to-[#1a471c] text-gray-300">
+        <!-- Curve -->
+        <div class="absolute top-0 left-0 w-full h-24 bg-[#1a471c] rounded-[50%] -translate-y-1/2"></div>
+        <div class="relative max-w-7xl mx-auto px-6 py-16 pt-32 pb-32">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6 items-start">
+                <!-- LOGO -->
+                <div>
+                    <img src="imgs/Screenshot 2025-11-04 120806.png" class="w-[100px] h-auto mb-6" alt="Logo">
+                </div>
+                <!-- ADDRESS -->
+                <div>
+                    <h3 class="mb-4 text-lg font-semibold text-white">Head Office & Factory</h3>
+                    <p class="text-sm leading-relaxed">
+                        Plot no. 140 SIDCO Women Industrial Estate,
+                        <br>
+                        Karuppur, Salem – 636011
+                    </p>
+                    <h3 class="mt-4 text-sm font-semibold">Call Us</h3>
+                    <a href="tel:+918220538534" class="block text-sm hover:text-white transition">
+                        +91 82205 38534
+                    </a>
+                    <a href="tel:+919578420672" class="block text-sm hover:text-white transition">
+                        +91 95784 20672
+                    </a>
+                    <h3 class="mt-4 text-sm font-semibold">Mail</h3>
+                    <a href="mailto:marketing@nithaaerospace.in" class="block text-sm hover:text-white transition">
+                        marketing@nithaaerospace.in
+                    </a>
+                    <a href="mailto:support@nithaaerospace.in" class="block text-sm hover:text-white transition">
+                        support@nithaaerospace.in
+                    </a>
+                </div>
+                <!-- COMPANY -->
+                <div>
+                    <h3 class="mb-4 text-lg font-semibold text-white">Company</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="aboutus.html">About</a>
+                        </li>
+                        <li>
+                            <a href="fasteners.html">Capabilities</a>
+                        </li>
+                        <li>
+                            <a href="fis.html">FIS</a>
+                        </li>
+                        <li>
+                            <a href="r&d.html">R&D</a>
+                        </li>
+                        <li>
+                            <a href="products.html">Products</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- PRODUCTS -->
+                <div>
+                    <h3 class="mb-4 text-lg font-semibold text-white">Products</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li class="hover:text-white cursor-pointer">
+                            <a href="solution.html" class="block w-full">Aerospace Fasteners</a>
+                        </li>Fasteners Intelligence System
+                        <li class="hover:text-white cursor-pointer">
+                            <a href="solution.html" class="block w-full">Oil & Gas Bolting</a>
+                        </li>
+                        <li class="hover:text-white cursor-pointer">
+                            <a href="solution.html" class="block w-full">Defence Fasteners</a>
+                        </li>
+                        <li class="hover:text-white cursor-pointer">
+                            <a href="solution.html" class="block w-full">Shipbuilding Fasteners</a>
+                        </li>
+                        <li class="hover:text-white cursor-pointer">
+                            <a href="solution.html" class="block w-full">Automotive Fasteners</a>
+                        </li>
+                        <li class="hover:text-white cursor-pointer">
+                            <a href="solution.html" class="block w-full">Nuclear & Energy Fasteners</a>
+                        </li>
+                        <li class="hover:text-white cursor-pointer">
+                            <a href="solution.html" class="block w-full">Medical Fasteners</a>
+                        </li>
+                        <li class="hover:text-white cursor-pointer">
+                            <a href="solution.html" class="block w-full">Custom & Prototype Fasteners</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- FACILITIES -->
+                <div>
+                    <h3 class="mb-4 text-lg font-semibold text-white">Capabilities</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li class="hover:text-white cursor-pointer">
+                            <a href="fasteners.html" class="block w-full">Melting</a>
+                        </li>
+                        <li class="hover:text-white cursor-pointer">
+                            <a href="fasteners.html" class="block w-full">Casting</a>
+                        </li>
+                        <li class="hover:text-white cursor-pointer">
+                            <a href="fasteners.html" class="block w-full">Forging</a>
+                        </li>
+                        <li class="hover:text-white cursor-pointer">
+                            <a href="fasteners.html" class="block w-full">Precision Machining</a>
+                        </li>
+                        <li class="hover:text-white cursor-pointer">
+                            <a href="fasteners.html" class="block w-full">Thread Rolling</a>
+                        </li>
+                        <li class="hover:text-white cursor-pointer">
+                            <a href="fasteners.html" class="block w-full">Heat Treatment</a>
+                        </li>
+                        <li class="hover:text-white cursor-pointer">
+                            <a href="fasteners.html" class="block w-full">Surface Treatment</a>
+                        </li>
+                        <li class="hover:text-white cursor-pointer">
+                            <a href="fasteners.html" class="block w-full">Testing & QA</a>
+                        </li>
+                        <li class="hover:text-white cursor-pointer">
+                            <a href="fasteners.html" class="block w-full">Engineering</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- CONTACT -->
+                <div class="w-full">
+                    <h3 class="mb-3 text-lg font-semibold text-white text-center sm:text-left">
+                        Connect With Us
+                    </h3>
+                    <p class="mt-3 mb-3 text-white/90 text-sm  tracking-tight max-w-xl mx-auto md:mx-0">
+                        For Advanced Engineering
+                        <span class="opacity-70 mx-1"></span>
+                        Fastening Solutions
+                    </p>
+                    <div class="flex flex-col gap-4 items-center sm:items-start">
+                        <a href="https://wa.me/919578420672" target="_blank" class="group flex items-center gap-4
+                  w-full max-w-[280px] sm:max-w-[260px] lg:max-w-[280px] 
+                  px-5 py-1 rounded-full
+                  bg-white/80
+                  border border-brand-deep-green/40
+                  transition-all duration-300 ease-out
+                  shadow-md hover:shadow-xl
+                  hover:bg-brand-medium-green">
+                            <!-- ICON -->
+                            <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-full
+                        bg-white/50
+                        border border-brand-deep-green/50
+                        flex items-center justify-center
+                        transition-all duration-300
+                        group-hover:bg-brand-deep-green
+                        group-hover:border-brand-deep-green">
+                                <i class="fab fa-whatsapp
+                          text-brand-deep-green text-lg sm:text-xl
+                          transition-colors duration-300
+                          group-hover:text-white"></i>
+                            </div>
+                            <!-- TEXT -->
+                            <span class="font-bold text-sm tracking-wide
+                         text-brand-deep-green
+                         transition-colors duration-300
+                         group-hover:text-white">
+                                WhatsApp
+                            </span>
+                        </a>
+                        <!-- EMAIL BUTTON -->
+                        <a href="mailto:marketing@nithaaerospace.in" class="group flex items-center gap-4
+                  w-full max-w-[280px] sm:max-w-[260px] lg:max-w-[280px]
+                  px-5 py-1 rounded-full
+                  bg-white/80
+                  border border-brand-deep-green/40
+                  transition-all duration-300 ease-out
+                  shadow-md hover:shadow-xl
+                  hover:bg-brand-medium-green">
+                            <!-- ICON -->
+                            <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-full
+                        bg-white/60
+                        border border-brand-deep-green/50
+                        flex items-center justify-center
+                        transition-all duration-300
+                        group-hover:bg-brand-deep-green
+                        group-hover:border-brand-deep-green">
+                                <i class="fas fa-envelope
+                          text-brand-deep-green text-base sm:text-lg
+                          transition-colors duration-300
+                          group-hover:text-white"></i>
+                            </div>
+                            <!-- TEXT -->
+                            <span class="font-bold text-sm tracking-wide
+                         text-brand-deep-green
+                         transition-colors duration-300
+                         group-hover:text-white">
+                                Email Us
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="relative z-20 py-4 text-gray-400" style="background: #0b180d; border-top: 1px solid white;">
+        <div class="container flex flex-col items-center justify-between px-6 mx-auto text-sm md:flex-row">
+            <p class="mb-4 md:mb-0">
+                www.nithaaerospace.in © Copyright and Private Limited.
+                All Rights Reserved |
+                <a href="Terms.html" id="terms" class="hover:text-white">
+                    Terms of Access
+                </a>
+            </p>
+            <!-- Social Media Icons -->
+            <div class="flex space-x-4 text-base">
+                <!-- Facebook -->
+                <a href="#" class="w-9 h-9 flex items-center justify-center rounded-full
+                       text-white hover:bg-blue-600
+                       transition-all duration-200">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <!-- Twitter (X) -->
+                <a href="#" class="w-9 h-9 flex items-center justify-center rounded-full
+                       text-white hover:bg-black
+                       transition-all duration-200">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+                <!-- Instagram -->
+                <a href="#" class="w-9 h-9 flex items-center justify-center rounded-full
+          text-white
+          hover:bg-[radial-gradient(circle_at_30%_107%,#fdf497_0%,#fdf497_5%,#fd5949_45%,#d6249f_60%,#285AEB_90%)]
+          transition-all duration-200">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <!-- LinkedIn -->
+                <a href="#" class="w-9 h-9 flex items-center justify-center rounded-full
+                       text-white hover:bg-blue-700
+                       transition-all duration-200">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const reveals = document.querySelectorAll(
+                ".reveal, .reveal-left, .reveal-right, .reveal-up"
+            );
+
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("active");
+                            observer.unobserve(entry.target); // animate once
+                        }
+                    });
+                },
+                {
+                    threshold: 0.2,
+                    rootMargin: "0px 0px -80px 0px"
+                }
+            );
+
+            reveals.forEach(el => observer.observe(el));
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const cursor = document.querySelector(".custom-cursor");
+
+            // Follow mouse
+            document.addEventListener("mousemove", (e) => {
+                cursor.style.left = e.clientX + "px";
+                cursor.style.top = e.clientY + "px";
+            });
+
+            // Hover detection (NO magnetic pull)
+            const hoverTargets = document.querySelectorAll("a, button, input, textarea, select");
+
+            hoverTargets.forEach(el => {
+                el.addEventListener("mouseenter", () => {
+                    cursor.classList.add("is-hover");
+                });
+
+                el.addEventListener("mouseleave", () => {
+                    cursor.classList.remove("is-hover");
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
