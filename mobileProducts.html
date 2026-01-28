@@ -447,14 +447,17 @@
         </div>
     </section>
 
-    <footer
-        class="relative z-0 pt-32 pb-16 text-gray-300 bg-gradient-to-t from-[#0b180d] via-[#172c19] to-[#1a471c] w-full">
+    <footer class="relative z-0 pt-32  text-gray-300 bg-gradient-to-t from-[#0b180d] via-[#172c19] to-[#1a471c] w-full">
+        <!-- Top curve shape -->
         <div class="absolute top-0 left-0 w-full h-24 bg-transparent">
             <div class="w-full h-full bg-[#1a471c] rounded-t-[50%] transform scale-x-150"></div>
         </div>
 
         <div class="container px-6 mx-auto relative z-10">
+            <!-- Grid for mobile: stack everything -->
             <div class="grid grid-cols-1 gap-8">
+
+                <!-- Column 1: Logo & Address -->
                 <div>
                     <div class="flex items-center mb-4">
                         <img src="imgs/Screenshot 2025-11-04 120806.png" alt="Nitha Aerospace Logo"
@@ -465,42 +468,53 @@
                         Salem, Tamilnadu, India - 636 011
                     </p>
 
-                    <h3 class="mt-4 mb-2 text-sm font-semibold text-white">Call Us On</h3>
+                    <h3 class="mt-4 mb-2 text-sm font-semibold text-white uppercase">Call Us On</h3>
                     <p class="text-sm leading-relaxed"><a href="tel:+918220538534">+91 82205 38534</a></p>
                     <p class="text-sm leading-relaxed"><a href="tel:+919578420672">+91 95784 20672</a></p>
 
-                    <h3 class="mt-4 mb-2 text-sm font-semibold text-white ">Our Mailbox</h3>
+                    <h3 class="mt-4 mb-2 text-sm font-semibold text-white">Our Mailbox</h3>
                     <p class="text-sm leading-relaxed"><a
                             href="mailto:marketing@nithaaerospace.in">marketing@nithaaerospace.in</a></p>
                     <p class="text-sm leading-relaxed"><a
                             href="mailto:support@nithaaerospace.in">support@nithaaerospace.in</a></p>
                 </div>
 
+                <!-- Link Columns: Use 2-col grid for links -->
+
                 <div class="grid grid-cols-2 gap-8">
                     <div>
                         <h3 class="mb-6 text-md font-semibold text-white">Company</h3>
                         <ul class="space-y-2 text-sm">
                             <li><a href="index.html" class="transition-colors hover:text-white">Home</a></li>
-                            <li><a href="aboutus.html" class="transition-colors hover:text-white">About Us</a></li>
-                            <li><a href="#" class="transition-colors hover:text-white">Fasteners</a></li>
-                            <li><a href="#" class="transition-colors hover:text-white">Downloads</a></li>
+                            <li><a href="aboutus.html" class="transition-colors hover:text-white">About</a></li>
+                            <li><a href="fasteners.html" class="transition-colors hover:text-white">Capabilities</a>
+                            </li>
+                            <li><a href="#" class="transition-colors hover:text-white">FIS/R&D</a></li>
                             <li><a href="products.html" class="transition-colors hover:text-white">Products</a></li>
-                            <li><a href="contact.html" class="transition-colors hover:text-white">Contact us</a></li>
+                            <li><a href="contact.html" class="transition-colors hover:text-white">Contact</a></li>
                         </ul>
                     </div>
 
                     <div>
-                        <h3 class="mb-6 text-md font-semibold text-white ">Facilities</h3>
+                        <h3 class="mb-6 text-md font-semibold text-white ">Capabilities</h3>
                         <ul class="grid grid-cols-1 gap-y-1 text-sm">
-                            <li><a href="#" class="transition-colors hover:text-white">Melting</a></li>
-                            <li><a href="#" class="transition-colors hover:text-white">Casting</a></li>
-                            <li><a href="#" class="transition-colors hover:text-white">Forging</a></li>
-                            <li><a href="#" class="transition-colors hover:text-white">Precision Machining</a></li>
-                            <li><a href="#" class="transition-colors hover:text-white">Thread Rolling</a></li>
-                            <li><a href="#" class="transition-colors hover:text-white">Heat Treatment</a></li>
-                            <li><a href="#" class="transition-colors hover:text-white">Surface Treatment</a></li>
-                            <li><a href="#" class="transition-colors hover:text-white">Testing & QA</a></li>
-                            <li><a href="#" class="transition-colors hover:text-white">Design & Engineering</a></li>
+
+
+                            <li><a href="solution.html" class="transition-colors hover:text-white">Melting</a></li>
+                            <li><a href="solution.html" class="transition-colors hover:text-white">Casting</a></li>
+                            <li><a href="solution.html" class="transition-colors hover:text-white">Forging</a></li>
+                            <li><a href="solution.html" class="transition-colors hover:text-white">Precision
+                                    Machining</a></li>
+
+                            <li><a href="solution.html" class="transition-colors hover:text-white">Thread Rolling</a>
+                            </li>
+                            <li><a href="solution.html" class="transition-colors hover:text-white">Heat Treatment</a>
+                            </li>
+                            <li><a href="solution.html" class="transition-colors hover:text-white">Surface Treatment</a>
+                            </li>
+                            <li><a href="solution.html" class="transition-colors hover:text-white">Testing & QA</a></li>
+                            <li><a href="solution.html" class="transition-colors hover:text-white">Design &
+                                    Engineering</a></li>
                         </ul>
                     </div>
                 </div>
@@ -508,262 +522,345 @@
                 <div>
                     <h3 class="mb-6 text-md font-semibold text-white">Products</h3>
                     <ul class="grid grid-cols-2 gap-x-4 gap-y-1 text-sm">
-                        <li><a href="#" class="transition-colors hover:text-white">Aerospace Fasteners</a></li>
-                        <li><a href="#" class="transition-colors hover:text-white">Oil & Gas Bolting</a></li>
-                        <li><a href="#" class="transition-colors hover:text-white">Circlips</a></li>
-                        <li><a href="#" class="transition-colors hover:text-white">Defence Fasteners</a></li>
-                        <li><a href="#" class="transition-colors hover:text-white">Shipbuilding Fasteners</a></li>
-                        <li><a href="#" class="transition-colors hover:text-white">Automotive Fasteners</a></li>
-                        <li><a href="#" class="transition-colors hover:text-white">Nuclear & Energy Fasteners</a></li>
-                        <li><a href="#" class="transition-colors hover:text-white">Medical Fasteners</a></li>
-                        <li><a href="#" class="transition-colors hover:text-white">Custom & Prototype Fasteners</a></li>
+                        <li><a href="fasteners.html" class="transition-colors hover:text-white">Aerospace Fasteners</a>
+                        </li>
+                        <li><a href="fasteners.html" class="transition-colors hover:text-white">Oil & Gas Bolting</a>
+                        </li>
+                        <li><a href="fasteners.html" class="transition-colors hover:text-white">Circlips</a></li>
+                        <li><a href="fasteners.html" class="transition-colors hover:text-white">Defence Fasteners</a>
+                        </li>
+                        <li><a href="fasteners.html" class="transition-colors hover:text-white">Shipbuilding
+                                Fasteners</a></li>
+
+                        <li><a href="fasteners.html" class="transition-colors hover:text-white">Automotive Fasteners</a>
+                        </li>
+                        <li><a href="fasteners.html" class="transition-colors hover:text-white">Nuclear & Energy
+                                Fasteners</a></li>
+                        <li><a href="fasteners.html" class="transition-colors hover:text-white">Medical Fasteners</a>
+                        </li>
+                        <li><a href="fasteners.html" class="transition-colors hover:text-white">Custom & Prototype
+                                Fasteners</a></li>
                     </ul>
                 </div>
 
+
+                <!-- Column 5: Subscribe -->
                 <footer class="pt-4 pb-8 px-6 text-gray-300 relative overflow-hidden">
-
                     <div class="container mx-auto">
+
                         <div class="flex flex-col items-center text-center mb-12">
+                            <!-- Logo -->
                             <img src="imgs/whitenitha-removebg-preview.png" alt="Nitha Logo"
-                                class="w-16 h-16 mb-6 drop-shadow-md">
+                                class="w-16 h-10 drop-shadow-md">
 
-                            <h3 class="text-xl font-bold text-white uppercase tracking-widest mb-6">Connect With Us</h3>
+                            <!-- Heading -->
+                            <h3 class="text-xl font-bold text-white uppercase tracking-widest mb-6">
+                                Connect With Us
+                            </h3>
 
-                            <div class="flex flex-col gap-4 w-full max-w-[280px]">
-                                <a href="https://wa.me/919578420672" target="_blank"
-                                    class="flex items-center justify-center gap-4 py-3 rounded-xl bg-green-600 hover:bg-green-700 transition-all duration-300 shadow-xl active:scale-95 group">
-                                    <div
-                                        class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center transition-transform group-hover:rotate-12">
-                                        <i class="fab fa-whatsapp text-white text-lg"></i>
+                            <!-- CONTACT BUTTONS (SAME DESIGN AS ABOVE) -->
+                            <div class="flex flex-col gap-4 items-center w-full">
+
+                                <!-- WhatsApp -->
+                                <a href="https://wa.me/919578420672" target="_blank" class="group flex items-center gap-4
+                          w-full max-w-[280px]
+                          px-5 py-2 rounded-full
+                          bg-white/80
+                          border border-brand-deep-green/40
+                          shadow-md transition-all duration-300
+                          hover:bg-brand-medium-green">
+
+                                    <!-- Icon -->
+                                    <div class="w-10 h-10 rounded-full
+                                bg-white/50
+                                border border-brand-deep-green/50
+                                flex items-center justify-center
+                                transition-all duration-300
+                                group-hover:bg-brand-deep-green
+                                group-hover:border-brand-deep-green">
+                                        <i class="fab fa-whatsapp
+                                  text-brand-deep-green text-lg
+                                  group-hover:text-white"></i>
                                     </div>
-                                    <span class="text-white font-black text-xs uppercase tracking-widest">
-                                        Chat on WhatsApp
+
+                                    <!-- Text -->
+                                    <span class="font-extrabold text-lg tracking-wide
+                                 text-brand-deep-green
+                                 group-hover:text-white">
+                                        WhatsApp
                                     </span>
                                 </a>
 
-                                <a href="tel:+919578420672"
-                                    class="flex items-center justify-center gap-4 py-3 rounded-xl bg-orange-500 hover:bg-orange-600 transition-all duration-300 shadow-xl active:scale-95 group">
-                                    <div
-                                        class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center transition-transform group-hover:scale-110">
-                                        <i class="fas fa-phone-alt text-white text-sm"></i>
+                                <!-- Email -->
+                                <a href="mailto:marketing@nithaaerospace.in" class="group flex items-center gap-4
+                          w-full max-w-[280px]
+                          px-5 py-2 rounded-full
+                          bg-white/80
+                          border border-brand-deep-green/40
+                          shadow-md transition-all duration-300
+                          hover:bg-brand-medium-green">
+
+                                    <!-- Icon -->
+                                    <div class="w-10 h-10 rounded-full
+                                bg-white/60
+                                border border-brand-deep-green/50
+                                flex items-center justify-center
+                                transition-all duration-300
+                                group-hover:bg-brand-deep-green
+                                group-hover:border-brand-deep-green">
+                                        <i class="fas fa-envelope
+                                  text-brand-deep-green text-base
+                                  group-hover:text-white"></i>
                                     </div>
-                                    <span class="text-white font-black text-xs uppercase tracking-widest">
-                                        Call Our Experts
+
+                                    <!-- Text -->
+                                    <span class="font-extrabold text-lg tracking-wide
+                                 text-brand-deep-green
+                                 group-hover:text-white">
+                                        Email Us
                                     </span>
                                 </a>
+
                             </div>
                         </div>
+                    </div>
                 </footer>
-            </div>
-        </div>
-    </footer>
 
-    <div class="relative z-20 py-4 text-gray-400 text-center" style="background: #0b180d; border-top: 1px solid #334;">
-        <div class="container px-6 mx-auto text-xs">
-            <p class="mb-4">
-                www.nithaaerospace.in © Copyright and private limited. | <a href="Terms.html" id="terms"
-                    class="hover:text-white underline">Terms of Access</a>
-            </p>
-            <div class="flex space-x-6 text-base justify-center">
-                <a href="#" class="transition-colors hover:text-white"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="transition-colors hover:text-white"><i class="fab fa-google-plus-g"></i></a>
-                <a href="#" class="transition-colors hover:text-white"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="transition-colors hover:text-white"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="transition-colors hover:text-white"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-        </div>
-    </div>
+                <!-- Copyright Bar -->
+                <div class="relative z-20 py-4 text-gray-400" style="background: #0b180d; border-top: 1px solid white;">
+                    <div class="container flex flex-col items-center justify-between px-6 mx-auto text-sm md:flex-row">
+                        <p class="mb-4 md:mb-0">
+                            www.nithaaerospace.in © Copyright and Private Limited.
+                            All Rights Reserved |
+                            <a href="Terms.html" id="terms" class="hover:text-white">
+                                Terms of Access
+                            </a>
+                        </p>
+
+                        <!-- Social Media Icons -->
+                        <div class="flex space-x-4 text-base">
+                            <!-- Facebook -->
+                            <a href="#" class="w-9 h-9 flex items-center justify-center rounded-full
+                       text-white hover:bg-blue-600
+                       transition-all duration-200">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+
+                            <!-- Twitter (X) -->
+                            <a href="#" class="w-9 h-9 flex items-center justify-center rounded-full
+                       text-white hover:bg-black
+                       transition-all duration-200">
+                                <i class="fa-brands fa-x-twitter"></i>
+                            </a>
+
+                            <!-- Instagram -->
+                            <!-- Instagram -->
+                            <a href="#" class="w-9 h-9 flex items-center justify-center rounded-full
+          text-white
+          hover:bg-[radial-gradient(circle_at_30%_107%,#fdf497_0%,#fdf497_5%,#fd5949_45%,#d6249f_60%,#285AEB_90%)]
+          transition-all duration-200">
+                                <i class="fab fa-instagram"></i>
+                            </a>
 
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const dropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
-            dropdownToggles.forEach(toggle => {
-                toggle.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const content = toggle.nextElementSibling;
-                    const icon = toggle.querySelector('.fa-chevron-down');
-                    content.classList.toggle('hidden');
-                    icon.classList.toggle('rotate-180');
-                });
-            });
-        });
+                            <!-- LinkedIn -->
+                            <a href="#" class="w-9 h-9 flex items-center justify-center rounded-full
+                       text-white hover:bg-blue-700
+                       transition-all duration-200">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    document.addEventListener('DOMContentLoaded', () => {
+                        const dropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
+                        dropdownToggles.forEach(toggle => {
+                            toggle.addEventListener('click', (e) => {
+                                e.preventDefault();
+                                const content = toggle.nextElementSibling;
+                                const icon = toggle.querySelector('.fa-chevron-down');
+                                content.classList.toggle('hidden');
+                                icon.classList.toggle('rotate-180');
+                            });
+                        });
+                    });
 
-        document.addEventListener('DOMContentLoaded', function () {
-            const menuBtn = document.getElementById('menu-btn');
-            const closeMenuBtn = document.getElementById('close-menu-btn');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const menuOverlay = document.getElementById('menu-overlay');
+                    document.addEventListener('DOMContentLoaded', function () {
+                        const menuBtn = document.getElementById('menu-btn');
+                        const closeMenuBtn = document.getElementById('close-menu-btn');
+                        const mobileMenu = document.getElementById('mobile-menu');
+                        const menuOverlay = document.getElementById('menu-overlay');
 
-            function toggleMenu() {
-                mobileMenu.classList.toggle('open');
-                if (mobileMenu.classList.contains('open')) {
-                    menuOverlay.classList.remove('hidden');
-                    document.body.style.overflow = 'hidden';
-                } else {
-                    menuOverlay.classList.add('hidden');
-                    document.body.style.overflow = '';
-                }
-            }
+                        function toggleMenu() {
+                            mobileMenu.classList.toggle('open');
+                            if (mobileMenu.classList.contains('open')) {
+                                menuOverlay.classList.remove('hidden');
+                                document.body.style.overflow = 'hidden';
+                            } else {
+                                menuOverlay.classList.add('hidden');
+                                document.body.style.overflow = '';
+                            }
+                        }
 
-            if (menuBtn) menuBtn.addEventListener('click', toggleMenu);
-            if (closeMenuBtn) closeMenuBtn.addEventListener('click', toggleMenu);
-            if (menuOverlay) menuOverlay.addEventListener('click', toggleMenu);
-        });
+                        if (menuBtn) menuBtn.addEventListener('click', toggleMenu);
+                        if (closeMenuBtn) closeMenuBtn.addEventListener('click', toggleMenu);
+                        if (menuOverlay) menuOverlay.addEventListener('click', toggleMenu);
+                    });
 
-        function toggleSidebar() {
-            const sidebar = document.getElementById('sidebar');
-            const overlay = document.getElementById('sidebarOverlay');
-            const arrowBtn = document.getElementById('mobileFilterBtn');
+                    function toggleSidebar() {
+                        const sidebar = document.getElementById('sidebar');
+                        const overlay = document.getElementById('sidebarOverlay');
+                        const arrowBtn = document.getElementById('mobileFilterBtn');
 
-            const isClosed = sidebar.classList.contains('-translate-x-full');
+                        const isClosed = sidebar.classList.contains('-translate-x-full');
 
-            if (isClosed) {
-                sidebar.classList.remove('-translate-x-full');
-                overlay.classList.remove('hidden');
-                arrowBtn.classList.add('hidden');
-                document.body.style.overflow = 'hidden';
-            } else {
-                sidebar.classList.add('-translate-x-full');
-                overlay.classList.add('hidden');
-                arrowBtn.classList.remove('hidden');
-                document.body.style.overflow = 'auto';
-            }
-        }
+                        if (isClosed) {
+                            sidebar.classList.remove('-translate-x-full');
+                            overlay.classList.remove('hidden');
+                            arrowBtn.classList.add('hidden');
+                            document.body.style.overflow = 'hidden';
+                        } else {
+                            sidebar.classList.add('-translate-x-full');
+                            overlay.classList.add('hidden');
+                            arrowBtn.classList.remove('hidden');
+                            document.body.style.overflow = 'auto';
+                        }
+                    }
 
-        const productData = [
-            {
-                name: 'Bolt', code: 'A001', display_name: 'BOLT', count: 503, image_alt: 'Bolt Fastener', subcategories: [
-                    { name: 'Anchor Bolt (133)', code: 'A001-10', link: '#' },
-                    { name: 'Cup Square Bolt (133)', code: 'A001-20', link: '#' },
-                    { name: 'Eye Bolt (133)', code: 'A001-30', link: '#' },
-                    { name: 'Flange Bolt (133)', code: 'A001-40', link: '#' },
-                    { name: 'Hex Socket Head Capital Screw (133)', code: 'A001-50', link: '#' },
-                    { name: 'High Tensile Bolt (133)', code: 'A001-60', link: '#' },
-                    { name: 'J Bolt (133)', code: 'A001-70', link: '#' },
-                    { name: 'Serrated Flange Bolt (133)', code: 'A001-80', link: '#' },
-                    { name: 'Square Head Bolt (133)', code: 'A001-90', link: '#' },
-                    { name: 'Structural Bolt (133)', code: 'A001-91', link: '#' },
-                    { name: 'U Bolt (133)', code: 'A001-92', link: '#' },
-                ], image_url: "imgs/bolt.png"
-            },
-            {
-                name: 'Bush', code: 'A002', display_name: 'BUSH', count: 503, image_alt: 'Bush Bearing', subcategories: [
-                    { name: 'Plain Bush (10)', code: 'A002-10', link: '#' },
-                    { name: 'Flanged Bush (20)', code: 'A002-20', link: '#' },
-                    { name: 'Split Bush (30)', code: 'A002-30', link: '#' },
-                ], image_url: "imgs/bush.png"
-            },
-            {
-                name: 'Circlips', code: 'A003', display_name: 'CIRCLIPS', count: 503, image_alt: 'Circlips Retaining Ring', subcategories: [
-                    { name: 'External Circlips (10)', code: 'A003-10', link: '#' },
-                    { name: 'Internal Circlips (20)', code: 'A003-20', link: '#' },
-                    { name: 'E-Clips (30)', code: 'A003-30', link: '#' },
-                ], image_url: "imgs/circlip.png"
-            },
-            {
-                name: 'Nail', code: 'A004', display_name: 'NAIL', count: 503, image_alt: 'Nail Fastener', subcategories: [
-                    { name: 'Common Nail (10)', code: 'A004-10', link: '#' },
-                    { name: 'Finishing Nail (20)', code: 'A004-20', link: '#' },
-                    { name: 'Roofing- Nail (30)', code: 'A004-30', link: '#' },
-                ], image_url: "imgs/nail.png"
-            },
-            {
-                name: 'Nut', code: 'A005', display_name: 'NUT', count: 503, image_alt: 'Nut Fastener', subcategories: [
-                    { name: 'Hex Nut (10)', code: 'A005-10', link: '#' },
-                    { name: 'Lock Nut (20)', code: 'A005-20', link: '#' },
-                    { name: 'Wing Nut (30)', code: 'A005-30', link: '#' },
-                ], image_url: "imgs/nnuts.png"
-            },
-            {
-                name: 'Pin & Keys', code: 'A006', display_name: 'PIN & KEYS', count: 503, image_alt: 'Pin and Key Fastener', subcategories: [
-                    { name: 'Dowel Pin (10)', code: 'A006-10', link: '#' },
-                    { name: 'Cotter Pin (20)', code: 'A006-20', link: '#' },
-                    { name: 'Woodruff Key (30)', code: 'A006-30', link: '#' },
-                ], image_url: "imgs/pins.png"
-            },
-            {
-                name: 'Rivet', code: 'A008', display_name: 'RIVET', count: 503, image_alt: 'Rivet Fastener', subcategories: [
-                    { name: 'Blind Rivet (10)', code: 'A008-10', link: '#' },
-                    { name: 'Solid Rivet (20)', code: 'A008-20', link: '#' },
-                    { name: 'Tubular Rivet (30)', code: 'A008-30', link: '#' },
-                ], image_url: "imgs/rivert.png"
-            },
-            {
-                name: 'Screw', code: 'A009', display_name: 'SCREW', count: 503, image_alt: 'Screw Fastener', subcategories: [
-                    { name: 'Machine Screw (10)', code: 'A009-10', link: '#' },
-                    { name: 'Wood Screw (20)', code: 'A009-20', link: '#' },
-                    { name: 'Self-Tapping Screw (30)', code: 'A009-30', link: '#' },
-                ], image_url: "imgs/screw.png"
-            },
-            {
-                name: 'Spacer & Standoff', code: 'A010', display_name: 'SPACER', count: 503, image_alt: 'Spacer', subcategories: [
-                    { name: 'Nylon Spacer (10)', code: 'A010-10', link: '#' },
-                    { name: 'Brass Standoff (20)', code: 'A010-20', link: '#' },
-                    { name: 'Aluminum Spacer (30)', code: 'A010-30', link: '#' },
-                ], image_url: "imgs/spacer.png"
-            },
-            {
-                name: 'Stud & Rod', code: 'A011', display_name: 'STUD & ROD', count: 503, image_alt: 'Stud', subcategories: [
-                    { name: 'Threaded Rod (10)', code: 'A011-10', link: '#' },
-                    { name: 'Welding Stud (20)', code: 'A011-20', link: '#' },
-                    { name: 'Double End Stud (30)', code: 'A011-30', link: '#' },
-                ], image_url: "imgs/stud.png"
-            },
-            {
-                name: 'Washer', code: 'A012', display_name: 'WASHER', count: 503, image_alt: 'Washer', subcategories: [
-                    { name: 'Flat Washer (10)', code: 'A012-10', link: '#' },
-                    { name: 'Lock Washer (20)', code: 'A012-20', link: '#' },
-                    { name: 'Fender Washer (30)', code: 'A012-30', link: '#' },
-                ], image_url: "imgs/washer.png"
-            },
-            {
-                name: 'Wires', code: 'A013', display_name: 'WIRES', count: 503, image_alt: 'Wires', subcategories: [
-                    { name: 'Steel Wire (10)', code: 'A013-10', link: '#' },
-                    { name: 'Copper Wire (20)', code: 'A013-20', link: '#' },
-                    { name: 'Tie Wire (30)', code: 'A013-30', link: '#' },
-                ], image_url: "imgs/wire.png"
-            },
-            {
-                name: 'Hinge', code: 'A014', display_name: 'HINGE', count: 503, image_alt: 'Hinge', subcategories: [
-                    { name: 'Piano Hinge (10)', code: 'A014-10', link: '#' },
-                    { name: 'Butt Hinge (20)', code: 'A014-20', link: '#' },
-                    { name: 'Strap Hinge (30)', code: 'A014-30', link: '#' },
-                ], image_url: "imgs/hinge.png"
-            },
-            {
-                name: 'Clamp', code: 'A015', display_name: 'CLAMP', count: 503, image_alt: 'Clamp', subcategories: [
-                    { name: 'Pipe Clamp (10)', code: 'A015-10', link: '#' },
-                    { name: 'Toggle Clamp (20)', code: 'A015-20', link: '#' },
-                    { name: 'Hose Clamp (30)', code: 'A015-30', link: '#' },
-                ], image_url: "imgs/clamp.png"
-            },
-            {
-                name: 'Latch', code: 'A016', display_name: 'LATCH', count: 503, image_alt: 'Latch', subcategories: [
-                    { name: 'Toggle Latch (10)', code: 'A016-10', link: '#' },
-                    { name: 'Compression Latch (20)', code: 'A016-20', link: '#' },
-                    { name: 'Slam Latch (30)', code: 'A016-30', link: '#' },
-                ], image_url: "imgs/latch.png"
-            }
-        ];
+                    const productData = [
+                        {
+                            name: 'Bolt', code: 'A001', display_name: 'BOLT', count: 503, image_alt: 'Bolt Fastener', subcategories: [
+                                { name: 'Anchor Bolt (133)', code: 'A001-10', link: '#' },
+                                { name: 'Cup Square Bolt (133)', code: 'A001-20', link: '#' },
+                                { name: 'Eye Bolt (133)', code: 'A001-30', link: '#' },
+                                { name: 'Flange Bolt (133)', code: 'A001-40', link: '#' },
+                                { name: 'Hex Socket Head Capital Screw (133)', code: 'A001-50', link: '#' },
+                                { name: 'High Tensile Bolt (133)', code: 'A001-60', link: '#' },
+                                { name: 'J Bolt (133)', code: 'A001-70', link: '#' },
+                                { name: 'Serrated Flange Bolt (133)', code: 'A001-80', link: '#' },
+                                { name: 'Square Head Bolt (133)', code: 'A001-90', link: '#' },
+                                { name: 'Structural Bolt (133)', code: 'A001-91', link: '#' },
+                                { name: 'U Bolt (133)', code: 'A001-92', link: '#' },
+                            ], image_url: "imgs/bolt.png"
+                        },
+                        {
+                            name: 'Bush', code: 'A002', display_name: 'BUSH', count: 503, image_alt: 'Bush Bearing', subcategories: [
+                                { name: 'Plain Bush (10)', code: 'A002-10', link: '#' },
+                                { name: 'Flanged Bush (20)', code: 'A002-20', link: '#' },
+                                { name: 'Split Bush (30)', code: 'A002-30', link: '#' },
+                            ], image_url: "imgs/bush.png"
+                        },
+                        {
+                            name: 'Circlips', code: 'A003', display_name: 'CIRCLIPS', count: 503, image_alt: 'Circlips Retaining Ring', subcategories: [
+                                { name: 'External Circlips (10)', code: 'A003-10', link: '#' },
+                                { name: 'Internal Circlips (20)', code: 'A003-20', link: '#' },
+                                { name: 'E-Clips (30)', code: 'A003-30', link: '#' },
+                            ], image_url: "imgs/circlip.png"
+                        },
+                        {
+                            name: 'Nail', code: 'A004', display_name: 'NAIL', count: 503, image_alt: 'Nail Fastener', subcategories: [
+                                { name: 'Common Nail (10)', code: 'A004-10', link: '#' },
+                                { name: 'Finishing Nail (20)', code: 'A004-20', link: '#' },
+                                { name: 'Roofing- Nail (30)', code: 'A004-30', link: '#' },
+                            ], image_url: "imgs/nail.png"
+                        },
+                        {
+                            name: 'Nut', code: 'A005', display_name: 'NUT', count: 503, image_alt: 'Nut Fastener', subcategories: [
+                                { name: 'Hex Nut (10)', code: 'A005-10', link: '#' },
+                                { name: 'Lock Nut (20)', code: 'A005-20', link: '#' },
+                                { name: 'Wing Nut (30)', code: 'A005-30', link: '#' },
+                            ], image_url: "imgs/nnuts.png"
+                        },
+                        {
+                            name: 'Pin & Keys', code: 'A006', display_name: 'PIN & KEYS', count: 503, image_alt: 'Pin and Key Fastener', subcategories: [
+                                { name: 'Dowel Pin (10)', code: 'A006-10', link: '#' },
+                                { name: 'Cotter Pin (20)', code: 'A006-20', link: '#' },
+                                { name: 'Woodruff Key (30)', code: 'A006-30', link: '#' },
+                            ], image_url: "imgs/pins.png"
+                        },
+                        {
+                            name: 'Rivet', code: 'A008', display_name: 'RIVET', count: 503, image_alt: 'Rivet Fastener', subcategories: [
+                                { name: 'Blind Rivet (10)', code: 'A008-10', link: '#' },
+                                { name: 'Solid Rivet (20)', code: 'A008-20', link: '#' },
+                                { name: 'Tubular Rivet (30)', code: 'A008-30', link: '#' },
+                            ], image_url: "imgs/rivert.png"
+                        },
+                        {
+                            name: 'Screw', code: 'A009', display_name: 'SCREW', count: 503, image_alt: 'Screw Fastener', subcategories: [
+                                { name: 'Machine Screw (10)', code: 'A009-10', link: '#' },
+                                { name: 'Wood Screw (20)', code: 'A009-20', link: '#' },
+                                { name: 'Self-Tapping Screw (30)', code: 'A009-30', link: '#' },
+                            ], image_url: "imgs/screw.png"
+                        },
+                        {
+                            name: 'Spacer & Standoff', code: 'A010', display_name: 'SPACER', count: 503, image_alt: 'Spacer', subcategories: [
+                                { name: 'Nylon Spacer (10)', code: 'A010-10', link: '#' },
+                                { name: 'Brass Standoff (20)', code: 'A010-20', link: '#' },
+                                { name: 'Aluminum Spacer (30)', code: 'A010-30', link: '#' },
+                            ], image_url: "imgs/spacer.png"
+                        },
+                        {
+                            name: 'Stud & Rod', code: 'A011', display_name: 'STUD & ROD', count: 503, image_alt: 'Stud', subcategories: [
+                                { name: 'Threaded Rod (10)', code: 'A011-10', link: '#' },
+                                { name: 'Welding Stud (20)', code: 'A011-20', link: '#' },
+                                { name: 'Double End Stud (30)', code: 'A011-30', link: '#' },
+                            ], image_url: "imgs/stud.png"
+                        },
+                        {
+                            name: 'Washer', code: 'A012', display_name: 'WASHER', count: 503, image_alt: 'Washer', subcategories: [
+                                { name: 'Flat Washer (10)', code: 'A012-10', link: '#' },
+                                { name: 'Lock Washer (20)', code: 'A012-20', link: '#' },
+                                { name: 'Fender Washer (30)', code: 'A012-30', link: '#' },
+                            ], image_url: "imgs/washer.png"
+                        },
+                        {
+                            name: 'Wires', code: 'A013', display_name: 'WIRES', count: 503, image_alt: 'Wires', subcategories: [
+                                { name: 'Steel Wire (10)', code: 'A013-10', link: '#' },
+                                { name: 'Copper Wire (20)', code: 'A013-20', link: '#' },
+                                { name: 'Tie Wire (30)', code: 'A013-30', link: '#' },
+                            ], image_url: "imgs/wire.png"
+                        },
+                        {
+                            name: 'Hinge', code: 'A014', display_name: 'HINGE', count: 503, image_alt: 'Hinge', subcategories: [
+                                { name: 'Piano Hinge (10)', code: 'A014-10', link: '#' },
+                                { name: 'Butt Hinge (20)', code: 'A014-20', link: '#' },
+                                { name: 'Strap Hinge (30)', code: 'A014-30', link: '#' },
+                            ], image_url: "imgs/hinge.png"
+                        },
+                        {
+                            name: 'Clamp', code: 'A015', display_name: 'CLAMP', count: 503, image_alt: 'Clamp', subcategories: [
+                                { name: 'Pipe Clamp (10)', code: 'A015-10', link: '#' },
+                                { name: 'Toggle Clamp (20)', code: 'A015-20', link: '#' },
+                                { name: 'Hose Clamp (30)', code: 'A015-30', link: '#' },
+                            ], image_url: "imgs/clamp.png"
+                        },
+                        {
+                            name: 'Latch', code: 'A016', display_name: 'LATCH', count: 503, image_alt: 'Latch', subcategories: [
+                                { name: 'Toggle Latch (10)', code: 'A016-10', link: '#' },
+                                { name: 'Compression Latch (20)', code: 'A016-20', link: '#' },
+                                { name: 'Slam Latch (30)', code: 'A016-30', link: '#' },
+                            ], image_url: "imgs/latch.png"
+                        }
+                    ];
 
-        let activeCategory = 'Bolt';
+                    let activeCategory = 'Bolt';
 
-        function renderCategoryList(filter = '') {
-            const listContainer = document.getElementById('categoryList');
-            if (!listContainer) return;
-            const upperFilter = filter.toUpperCase();
-            listContainer.innerHTML = productData.map(category => {
-                const matchesMain = category.name.toUpperCase().includes(upperFilter) || category.code.toUpperCase().includes(upperFilter);
-                const matchesSub = category.subcategories.some(sub =>
-                    sub.name.toUpperCase().includes(upperFilter) || (sub.code && sub.code.toUpperCase().includes(upperFilter))
-                );
-                const shouldShow = filter === '' || matchesMain || matchesSub;
-                if (!shouldShow) return '';
-                const isActive = category.name === activeCategory;
-                const btnClasses = isActive ? 'bg-brand-partner-btn text-white shadow-md' : 'text-gray-700 hover:bg-gray-100 hover:text-brand-green-light';
-                const subMenuId = `sub-${category.name.replace(/\s/g, '')}`;
-                let html = `
+                    function renderCategoryList(filter = '') {
+                        const listContainer = document.getElementById('categoryList');
+                        if (!listContainer) return;
+                        const upperFilter = filter.toUpperCase();
+                        listContainer.innerHTML = productData.map(category => {
+                            const matchesMain = category.name.toUpperCase().includes(upperFilter) || category.code.toUpperCase().includes(upperFilter);
+                            const matchesSub = category.subcategories.some(sub =>
+                                sub.name.toUpperCase().includes(upperFilter) || (sub.code && sub.code.toUpperCase().includes(upperFilter))
+                            );
+                            const shouldShow = filter === '' || matchesMain || matchesSub;
+                            if (!shouldShow) return '';
+                            const isActive = category.name === activeCategory;
+                            const btnClasses = isActive ? 'bg-brand-partner-btn text-white shadow-md' : 'text-gray-700 hover:bg-gray-100 hover:text-brand-green-light';
+                            const subMenuId = `sub-${category.name.replace(/\s/g, '')}`;
+                            let html = `
                 <div class="mb-2">
                     <button onclick="toggleCategory('${category.name}')"
                         class="flex justify-between items-center w-full p-3 text-sm font-semibold rounded-lg transition-all duration-200 ${btnClasses}">
@@ -772,41 +869,41 @@
                     </button>
                 </div>
             `;
-                if (category.subcategories && category.subcategories.length > 0) {
-                    const subList = category.subcategories.map(sub => {
-                        const subMatches = sub.name.toUpperCase().includes(upperFilter) || (sub.code && sub.code.toUpperCase().includes(upperFilter));
-                        if (filter !== '' && !subMatches && !matchesMain) return '';
-                        return `
+                            if (category.subcategories && category.subcategories.length > 0) {
+                                const subList = category.subcategories.map(sub => {
+                                    const subMatches = sub.name.toUpperCase().includes(upperFilter) || (sub.code && sub.code.toUpperCase().includes(upperFilter));
+                                    if (filter !== '' && !subMatches && !matchesMain) return '';
+                                    return `
                         <a href="${sub.link}" class="block py-2 pl-4 text-xs text-gray-500 hover:text-brand-green-light border-l-2 border-gray-200 hover:border-brand-green-light transition-all ml-4">
                             ${sub.name}
                         </a>
                     `;
-                    }).join('');
-                    const isOpen = isActive || (filter !== '' && (matchesMain || matchesSub));
-                    html += `
+                                }).join('');
+                                const isOpen = isActive || (filter !== '' && (matchesMain || matchesSub));
+                                html += `
                     <div id="${subMenuId}" class="sub-menu overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-[500px] opacity-100 mb-4' : 'max-h-0 opacity-0'}">
                         ${subList}
                     </div>
                 `;
-                }
-                return html;
-            }).join('');
-        }
+                            }
+                            return html;
+                        }).join('');
+                    }
 
-        function renderProductGrid(productsToDisplay) {
-            const gridContainer = document.getElementById('productGrid');
-            const noResults = document.getElementById('noResults');
-            if (!gridContainer || !noResults) return;
-            if (productsToDisplay.length === 0) {
-                gridContainer.innerHTML = '';
-                noResults.classList.remove('hidden');
-                return;
-            }
-            noResults.classList.add('hidden');
-            const productsHtml = productsToDisplay.map(product => {
-                const imageUrl = product.image_url;
-                const placeholderUrl = `https://placehold.co/112x128/f3f4f6/1f2937?text=${product.name.substring(0, 4)}`;
-                return `
+                    function renderProductGrid(productsToDisplay) {
+                        const gridContainer = document.getElementById('productGrid');
+                        const noResults = document.getElementById('noResults');
+                        if (!gridContainer || !noResults) return;
+                        if (productsToDisplay.length === 0) {
+                            gridContainer.innerHTML = '';
+                            noResults.classList.remove('hidden');
+                            return;
+                        }
+                        noResults.classList.add('hidden');
+                        const productsHtml = productsToDisplay.map(product => {
+                            const imageUrl = product.image_url;
+                            const placeholderUrl = `https://placehold.co/112x128/f3f4f6/1f2937?text=${product.name.substring(0, 4)}`;
+                            return `
                 <a href="#" class="product-card flex flex-col items-center p-2 sm:p-4 rounded-xl bg-white shadow-lg hover:shadow-2xl transition-all duration-300 w-full sm:w-48 border border-gray-100 group">
                     <div class="relative w-20 h-24 sm:w-28 sm:h-32 p-0.5 bg-gray-200 hexagon-clip flex items-center justify-center group-hover:bg-brand-partner-btn transition-colors">
                         <div class="w-full h-full hexagon-clip flex items-center justify-center bg-white p-1">
@@ -822,42 +919,42 @@
                     </div>
                 </a>
             `;
-            }).join('');
-            gridContainer.innerHTML = productsHtml;
-        }
+                        }).join('');
+                        gridContainer.innerHTML = productsHtml;
+                    }
 
-        function handleSearchAndFilter() {
-            const searchInput = document.getElementById('productSearch');
-            const filter = searchInput.value.trim();
-            const upperFilter = filter.toUpperCase();
-            renderCategoryList(filter);
-            let filteredProducts = [];
-            if (filter === '') {
-                filteredProducts = productData;
-            } else {
-                filteredProducts = productData.filter(product => {
-                    const matchesMain = product.name.toUpperCase().includes(upperFilter) || product.code.toUpperCase().includes(upperFilter);
-                    const matchesSub = product.subcategories.some(sub =>
-                        sub.name.toUpperCase().includes(upperFilter) || (sub.code && sub.code.toUpperCase().includes(upperFilter))
-                    );
-                    return matchesMain || matchesSub;
-                });
-            }
-            renderProductGrid(filteredProducts);
-        }
+                    function handleSearchAndFilter() {
+                        const searchInput = document.getElementById('productSearch');
+                        const filter = searchInput.value.trim();
+                        const upperFilter = filter.toUpperCase();
+                        renderCategoryList(filter);
+                        let filteredProducts = [];
+                        if (filter === '') {
+                            filteredProducts = productData;
+                        } else {
+                            filteredProducts = productData.filter(product => {
+                                const matchesMain = product.name.toUpperCase().includes(upperFilter) || product.code.toUpperCase().includes(upperFilter);
+                                const matchesSub = product.subcategories.some(sub =>
+                                    sub.name.toUpperCase().includes(upperFilter) || (sub.code && sub.code.toUpperCase().includes(upperFilter))
+                                );
+                                return matchesMain || matchesSub;
+                            });
+                        }
+                        renderProductGrid(filteredProducts);
+                    }
 
-        function toggleCategory(categoryName) {
-            const isTogglingOff = activeCategory === categoryName;
-            activeCategory = isTogglingOff ? null : categoryName;
-            const searchInput = document.getElementById('productSearch');
-            if (searchInput) searchInput.value = '';
-            handleSearchAndFilter();
-        }
+                    function toggleCategory(categoryName) {
+                        const isTogglingOff = activeCategory === categoryName;
+                        activeCategory = isTogglingOff ? null : categoryName;
+                        const searchInput = document.getElementById('productSearch');
+                        if (searchInput) searchInput.value = '';
+                        handleSearchAndFilter();
+                    }
 
-        document.addEventListener('DOMContentLoaded', () => {
-            handleSearchAndFilter();
-        });
-    </script>
+                    document.addEventListener('DOMContentLoaded', () => {
+                        handleSearchAndFilter();
+                    });
+                </script>
 
 </body>
 
