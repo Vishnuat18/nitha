@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FIS Lifecycle – Responsive & Precise</title>
+        <style>
+        :root {
+            --brand-green: #58a64d;
+            --design-w: 1200;
+            --design-h: 800;
+            --radius: 235;
+            --centerX: 600;
+            --centerY: 400;
+        }
+
+        * { box-sizing: border-box; }
+        
+        html, body { 
+            width: 100%; height: 100%; margin: 0; 
+            overflow: hidden; background: #fff; 
+            font-family: 'Segoe UI', Tahoma, sans-serif; 
+        }
+
+        /* VIEWPORT WRAPPER */
+        .viewport { 
+            width: 100vw; height: 100vh; 
+            display: flex; justify-content: center; align-items: center; 
+        }
+
+        /* SCALING CONTAINER */
+        .container { 
+            position: relative; 
+            width: calc(var(--design-w) * 1px); 
+            height: calc(var(--design-h) * 1px); 
+            transform-origin: center center; 
+        }
+
+        /* CENTER HUB */
+        .hub {
+            position: absolute;
+            top: calc(var(--centerY) * 1px);
+            left: calc(var(--centerX) * 1px);
+            transform: translate(-50%, -50%);
+            width: 140px; height: 140px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 30% 30%, #76c669, #4a8c41);
+            color: #fff; font-weight: 800; font-size: 20px;
+            display: flex; justify-content: center; align-items: center; text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,.15); z-index: 100;
+        }
+
+        /* STEPS */
+        .step-group { position: absolute; display: flex; align-items: center; opacity: 0; transition: opacity .5s ease; z-index: 50; }
+        
+        .circle {
+            width: 105px; height: 105px; border-radius: 50%; background: #fff; border: 2.2px solid #222;
+            display: flex; justify-content: center; align-items: center; flex-direction: column;
+            font-size: 14px; font-weight: 700; text-align: center;
+        }
+
+        /* COORDINATES */
+        #s1 { top: calc((var(--centerY) - var(--radius)) * 1px); left: calc(var(--centerX) * 1px); transform: translate(-50%, -50%); }
+        #s2 { top: calc((var(--centerY) - var(--radius)*0.309) * 1px); left: calc((var(--centerX) + var(--radius)*0.951) * 1px); transform: translate(-50%, -50%); }
+        #s3 { top: calc((var(--centerY) + var(--radius)*0.809) * 1px); left: calc((var(--centerX) + var(--radius)*0.587) * 1px); transform: translate(-50%, -50%); }
+        #s4 { top: calc((var(--centerY) + var(--radius)*0.809) * 1px); left: calc((var(--centerX) - var(--radius)*0.587) * 1px); transform: translate(-50%, -50%); flex-direction: row-reverse; }
+        #s5 { top: calc((var(--centerY) - var(--radius)*0.309) * 1px); left: calc((var(--centerX) - var(--radius)*0.951) * 1px); transform: translate(-50%, -50%); flex-direction: row-reverse; }
+
+        /* INFO BLOCKS */
+        .info-box { position: absolute; width: 340px; }
+        #s1 .info-box { left: 125px; top: -130px; }
+        #s2 .info-box { left: 125px; top: -10px; }
+        #s3 .info-box { left: 125px; top: 40px; }
+        #s4 .info-box { right: 125px; top: 40px; text-align: right; }
+        #s5 .info-box { right: 125px; top: -130px; text-align: right; }
+
+        .box-header { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+        #s4 .box-header, #s5 .box-header { flex-direction: row-reverse; }
+
+        .leaf-icon { width: 35px; height: 25px; fill: var(--brand-green); }
+        .divider { width: 2px; height: 22px; background: #ccc; }
+        .box-title { font-weight: 800; font-size: 22px; color: #1a1a1a; }
+
+        .green-card { 
+            background: var(--brand-green); color: #fff; padding: 20px; 
+            border-radius: 12px; font-size: 14px; line-height: 1.5; 
+            box-shadow: 8px 8px 20px rgba(0,0,0,.18); 
+        }
+
+        /* ARROWS */
+        .arrows-svg { position: absolute; inset: 0; pointer-events: none; }
+        .arrow-main { stroke: var(--brand-green); stroke-width: 4.5; fill: none; opacity: 0; transition: opacity .4s ease; stroke-linecap: round; }
+        
+        .visible { opacity: 1 !important; }
+        </style>
+    </head>
+    <body>
+        <div class="viewport">
+            <div class="container" id="container">
+                <div class="hub">
+                    FIS™
+                    <br>
+                    <span style="font-size:14px;font-weight:400">LIFECYCLE</span>
+                </div>
+                <svg class="arrows-svg" id="arrows" viewBox="0 0 1200 800">
+                    <defs>
+                        <marker
+                            id="head"
+                            viewBox="0 0 10 10"
+                            refX="8"
+                            refY="5"
+                            markerWidth="5"
+                            markerHeight="5"
+                            orient="auto"
+                        >
+                            <path d="M0 0 L10 5 L0 10Z" fill="#58a64d"/>
+                        </marker>
+                    </defs>
+                </svg>
+                <div class="step-group" id="s1">
+                    <div class="circle">
+                        01
+                        <br>
+                        Design
+                    </div>
+                    <div class="info-box">
+                        <div class="box-header">
+                            <img src="imgs/nithaa-.png" alt="" height="40" width="40">
+                            <div class="divider"></div>
+                            <div class="box-title">Design</div>
+                        </div>
+                        <div class="green-card">Application-driven joint design including material selection, thread geometry, tolerances, and service conditions.</div>
+                    </div>
+                </div>
+                <div class="step-group" id="s2">
+                    <div class="circle">
+                        02
+                        <br>
+                        Validate
+                    </div>
+                    <div class="info-box">
+                        <div class="box-header">
+                            <img src="imgs/nithaa-.png" alt="" height="40" width="40">
+                            <div class="divider"></div>
+                            <div class="box-title">Validate</div>
+                        </div>
+                        <div class="green-card">Engineering validation using globally accepted standards such as VDI 2230, NASA-STD-5020, ASME, ISO, and EN, including analytical calculations, DFMEA / PFMEA, control plans, and safety factor verification.</div>
+                    </div>
+                </div>
+                <div class="step-group" id="s3">
+                    <div class="circle">
+                        03
+                        <br>
+                        Manufacture
+                    </div>
+                    <div class="info-box">
+                        <div class="box-header">
+                            <img src="imgs/nithaa-.png" alt="" height="40" width="40">
+                            <div class="divider"></div>
+                            <div class="box-title">Manufacture</div>
+                        </div>
+                        <div class="green-card">Process-controlled production covering melting, forming, machining, heat treatment, and surface finishing.</div>
+                    </div>
+                </div>
+                <div class="step-group" id="s4">
+                    <div class="circle">
+                        04
+                        <br>
+                        Inspect
+                    </div>
+                    <div class="info-box">
+                        <div class="box-header">
+                            <img src="imgs/nithaa-.png" alt="" height="40" width="40">
+                            <div class="divider"></div>
+                            <div class="box-title">Inspect</div>
+                        </div>
+                        <div class="green-card">Dimensional, mechanical, and metallurgical inspection aligned with customer, regulatory, and program requirements.</div>
+                    </div>
+                </div>
+                <div class="step-group" id="s5">
+                    <div class="circle">
+                        05
+                        <br>
+                        Trace
+                    </div>
+                    <div class="info-box">
+                        <div class="box-header">
+                            <img src="imgs/nithaa-.png" alt="" height="40" width="40">
+                            <div class="divider"></div>
+                            <div class="box-title">Trace</div>
+                        </div>
+                        <div class="green-card">End-to-end batch, lot, and process traceability with documented evidence. All FIS™ records are retained in accordance with customer, regulatory, and full program lifecycle requirements.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+        /* AUTO-SCALE FUNCTION */
+        function resizeStage() {
+            const container = document.getElementById('container');
+            const scale = Math.min(window.innerWidth / 1200, window.innerHeight / 800);
+            container.style.transform = `scale(${scale})`;
+        }
+        window.addEventListener('resize', resizeStage);
+        resizeStage();
+
+        /* DRAW CURVED ARROWS */
+        const cx=600, cy=400, r=235, gap = 16;
+        const angles=[-90, -18, 54, 126, 198]; 
+        const svg=document.getElementById('arrows');
+        const toRad = (d) => d * Math.PI / 180;
+
+        angles.forEach((startAngle, i) => {
+            const endAngle = angles[(i + 1) % angles.length];
+            const sA = startAngle + gap;
+            const eA = (i === 4) ? endAngle + 360 - gap : endAngle - gap;
+            const x1 = cx + r * Math.cos(toRad(sA)), y1 = cy + r * Math.sin(toRad(sA));
+            const x2 = cx + r * Math.cos(toRad(eA)), y2 = cy + r * Math.sin(toRad(eA));
+            const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+            path.setAttribute("d", `M ${x1} ${y1} A ${r} ${r} 0 0 1 ${x2} ${y2}`);
+            path.setAttribute("class", "arrow-main");
+            path.setAttribute("marker-end", "url(#head)");
+            path.setAttribute("id", `a${i+1}`);
+            svg.appendChild(path);
+        });
+
+        /* REVEAL LOGIC */
+        const sequence = [["#s1","#a1"], ["#s2","#a2"], ["#s3","#a3"], ["#s4","#a4"], ["#s5","#a5"]];
+        let t = 30;
+        sequence.forEach(pair => {
+            setTimeout(() => document.querySelector(pair[0]).classList.add('visible'), t);
+            t += 600; 
+            setTimeout(() => document.querySelector(pair[1]).classList.add('visible'), t);
+            t += 300;
+        });
+        </script>
+    </body>
+</html>
