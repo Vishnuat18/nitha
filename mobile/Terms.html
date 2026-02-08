@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>NITHA Aerospace - Legal & Policies</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="shortcut icon" href="../imgs/nithaa-.png">
+
+    <script type="text/javascript">
+        function redirectDesktop() {
+            if (window.innerWidth > 768) {
+                window.location.href = "../Terms.html";
+            }
+        }
+        redirectDesktop();
+        window.addEventListener('resize', redirectDesktop);
+    </script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-dark-green': '#3B5833',
+                        'brand-medium-green': '#6A8A61',
+                        'brand-deep-green': '#334C2D',
+                        'brand-light-mint': '#DDE6DA',
+                        'brand-off-white': '#F9F9F9',
+                    },
+                    fontFamily: {
+                        'mona': ['Mona Sans', 'sans-serif'],
+                    }
+                }
+            }
+        };
+    </script>
+    <style>
+        body {
+            font-family: 'Monteserat', sans-serif;
+            font-stretch: 75%;
+            font-weight: 400;
+            overflow-x: hidden;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Mona Sans', sans-serif;
+            font-stretch: 75%;
+            font-weight: 800;
+        }
+
+        #mobile-menu {
+            transition: transform 0.3s ease-in-out;
+            transform: translateX(-100%);
+        }
+
+        #mobile-menu.open {
+            transform: translateX(0);
+        }
+
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
+
+        .reveal-up.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-800">
+    <!-- Header -->
+    <header class="fixed w-full top-0 z-50 bg-white shadow-md">
+        <div class="bg-brand-dark-green text-white text-[10px] py-2 px-4 flex justify-between items-center">
+            <a href="tel:+919578420672" class="inline-flex items-center"><i class="fas fa-phone-alt mr-2"></i> +91 95784
+                20672</a>
+            <a href="mailto:marketing@nithaeroespace.in" class="inline-flex items-center"><i
+                    class="fas fa-envelope mr-2"></i> marketing@nithaaeroespace.in</a>
+        </div>
+        <div class="flex justify-between items-center px-4 py-3">
+            <a href="index.html" class="flex items-center"><img src="../imgs/Screenshot 2025-11-04 120806.png"
+                    alt="NITHA Logo" class="h-10 object-contain"></a>
+            <button id="menu-btn" class="text-brand-dark-green focus:outline-none"><i
+                    class="fas fa-bars text-2xl"></i></button>
+        </div>
+
+        <div id="mobile-menu"
+            class="fixed inset-0 bg-white z-50 flex flex-col h-screen w-[80%] shadow-2xl border-r border-gray-200">
+            <div class="p-4 flex justify-between items-center border-b">
+                <span class="font-bold text-lg text-brand-dark-green">Menu</span>
+                <button id="close-menu-btn" class="text-gray-500 text-2xl">&times;</button>
+            </div>
+            <div class="flex flex-col p-4 space-y-4 overflow-y-auto flex-grow">
+                <a href="index.html" class="text-lg font-semibold text-gray-800 border-b pb-2">Home</a>
+                <a href="aboutus.html" class="text-lg font-semibold text-gray-800 border-b pb-2">About Us</a>
+
+                <div class="flex flex-col">
+                    <p
+                        class="mobile-dropdown-toggle text-lg border-b font-semibold text-gray-800 pb-2 flex justify-between items-center">
+                        Capabilities <i class="fas fa-chevron-down text-sm transition-transform"></i>
+                    </p>
+                    <div class="mobile-dropdown-content hidden flex flex-col pl-4 border-l ml-2 space-y-2 mb-4">
+                        <a href="fasteners.html" class="text-base text-gray-600">Melting</a>
+                        <a href="fasteners.html" class="text-base text-gray-600">Casting</a>
+                        <a href="fasteners.html" class="text-base text-gray-600">Forging</a>
+                        <a href="fasteners.html" class="text-base text-gray-600">Precision Machining</a>
+                        <a href="fasteners.html" class="text-base text-gray-600">Thread Rolling</a>
+                        <a href="fasteners.html" class="text-base text-gray-600">Heat Treatment</a>
+                        <a href="fasteners.html" class="text-base text-gray-600">Surface Treatment</a>
+                        <a href="fasteners.html" class="text-base text-gray-600">Testing & QA</a>
+                        <a href="fasteners.html" class="text-base text-gray-600">Engineering</a>
+                    </div>
+                </div>
+
+                <div class="flex flex-col">
+                    <p
+                        class="mobile-dropdown-toggle text-lg border-b font-semibold text-gray-800 pb-2 flex justify-between items-center">
+                        Products <i class="fas fa-chevron-down text-sm transition-transform"></i>
+                    </p>
+                    <div class="mobile-dropdown-content hidden flex flex-col pl-4 border-l ml-2 space-y-2 mb-4">
+                        <p class="text-sm font-bold text-brand-dark-green mt-2 uppercase">Critical Industries</p>
+                        <a href="products.html" class="text-sm text-gray-600">Aerospace Fasteners</a>
+                        <a href="products.html" class="text-sm text-gray-600">Defence Fasteners</a>
+                        <a href="products.html" class="text-sm text-gray-600">Nuclear / Energy Fasteners</a>
+                        <a href="products.html" class="text-sm text-gray-600">Oil & Gas Bolting Solutions</a>
+                        <a href="products.html" class="text-sm text-gray-600">Medical & Precision Fasteners</a>
+                        <a href="products.html" class="text-sm text-gray-600">Railway & Metro Fasteners</a>
+                        <a href="products.html" class="text-sm text-gray-600">Power Plant & Thermal Fasteners</a>
+                        <a href="products.html" class="text-sm text-gray-600">Renewable Energy Fasteners</a>
+                        <a href="products.html" class="text-sm text-gray-600">Shipbuilding & Marine Fasteners</a>
+
+                        <p class="text-sm font-bold text-brand-dark-green mt-4 uppercase">Industrial & General</p>
+                        <a href="products.html" class="text-sm text-gray-600">Automotive Fasteners</a>
+                        <a href="products.html" class="text-sm text-gray-600">Construction Fasteners</a>
+                        <a href="products.html" class="text-sm text-gray-600">Electrical & Electronics</a>
+                        <a href="products.html" class="text-sm text-gray-600">Heavy Engineering</a>
+                        <a href="products.html" class="text-sm text-gray-600">Chemical & Process</a>
+                        <a href="products.html" class="text-sm text-gray-600">Mining & Earthmoving</a>
+                        <a href="products.html" class="text-sm text-gray-600">HVAC & Building Services</a>
+                        <a href="products.html" class="text-sm text-gray-600">Agricultural Fasteners</a>
+                        <a href="products.html" class="text-sm text-gray-600">General Engineering</a>
+
+                        <p class="text-sm font-bold text-brand-dark-green mt-4 uppercase">Specialised</p>
+                        <a href="products.html" class="text-sm text-gray-600">Custom & Prototype</a>
+                    </div>
+                </div>
+
+                <a href="fis.html" class="text-lg font-semibold text-gray-800 border-b pb-2">FIS</a>
+                <a href="r&d.html" class="text-lg font-semibold text-gray-800 border-b pb-2">R&D</a>
+                <a href="contact.html" class="text-lg font-semibold text-gray-800 border-b pb-2">Contact Us</a>
+                <a href="Terms.html" class="text-lg font-semibold text-gray-800 border-b pb-2">Terms</a>
+                <a href="careers.html" class="text-lg font-semibold text-gray-800 border-b pb-2">Careers</a>
+
+                <a href="careers.html"
+                    class="bg-brand-topbar-green text-white text-center py-3 rounded-md font-bold mt-4 shadow-md active:scale-95 transition-all">
+                    Become A Partner
+                </a>
+            </div>
+        </div>
+        <div id="menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden"></div>
+    </header>
+
+    <!-- Page Title -->
+    <section class="pt-[140px] pb-12 px-6 bg-brand-off-white">
+        <div class="reveal-up">
+            <h1 class="text-3xl font-black text-brand-dark-green uppercase mb-4">Legal &<br>Policies</h1>
+            <div class="w-16 h-1.5 bg-brand-medium-green mb-6"></div>
+            <p class="text-[10px] text-gray-500 font-bold uppercase tracking-widest mb-2">Last Updated: Jan 13, 2026</p>
+            <p class="text-xs text-gray-600 leading-relaxed">Legal terms, privacy practices, and disclaimers for NITHA
+                Aerospace Private Limited (NAPL).</p>
+        </div>
+    </section>
+
+    <!-- Content Sections -->
+    <section class="py-12 px-6 space-y-12 bg-white">
+        <!-- 01 Terms -->
+        <div class="reveal-up">
+            <div class="flex items-center gap-3 mb-4">
+                <span
+                    class="w-8 h-8 rounded-full bg-brand-dark-green text-white flex items-center justify-center font-black text-xs">01</span>
+                <h2 class="text-lg font-black text-brand-dark-green uppercase">Terms & Conditions</h2>
+            </div>
+            <p class="text-[11px] text-gray-600 leading-relaxed mb-4">Content provided for informational purposes only.
+                By using this site, you agree to:</p>
+            <ul class="text-[10px] space-y-3">
+                <li class="flex items-start gap-2"><i class="fas fa-check-circle text-brand-medium-green mt-0.5"></i>
+                    <span>Use only for lawful purposes.</span>
+                </li>
+                <li class="flex items-start gap-2"><i class="fas fa-check-circle text-brand-medium-green mt-0.5"></i>
+                    <span>No unauthorized access or disruption.</span>
+                </li>
+                <li class="flex items-start gap-2"><i class="fas fa-check-circle text-brand-medium-green mt-0.5"></i>
+                    <span>No commercial reproduction without permit.</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 02 Privacy -->
+        <div class="reveal-up">
+            <div class="flex items-center gap-3 mb-4">
+                <span
+                    class="w-8 h-8 rounded-full bg-brand-dark-green text-white flex items-center justify-center font-black text-xs">02</span>
+                <h2 class="text-lg font-black text-brand-dark-green uppercase">Privacy Protection</h2>
+            </div>
+            <div class="grid grid-cols-1 gap-6">
+                <div class="bg-brand-off-white p-5 rounded-2xl border border-gray-100">
+                    <h3 class="text-[10px] font-black uppercase text-brand-dark-green mb-2">Data Collection</h3>
+                    <p class="text-[10px] text-gray-500 leading-relaxed">We collect info voluntarily provided via forms
+                        (Name, Email, Phone). We do not collect sensitive data unless required.</p>
+                </div>
+                <div class="bg-brand-off-white p-5 rounded-2xl border border-gray-100">
+                    <h3 class="text-[10px] font-black uppercase text-brand-dark-green mb-2">Data Usage</h3>
+                    <p class="text-[10px] text-gray-500 leading-relaxed">Used to respond to enquiries and comply with
+                        law. <span class="font-bold">NAPL does not sell personal information.</span></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Disclaimer -->
+        <div class="reveal-up bg-brand-dark-green p-8 rounded-3xl text-white">
+            <h2 class="text-lg font-black uppercase mb-4 flex items-center gap-3">
+                <i class="fas fa-exclamation-triangle text-[#c5a059]"></i> Disclaimer
+            </h2>
+            <p class="text-[10px] opacity-80 leading-relaxed mb-6">Information is provided "as is". NAPL makes
+                reasonable efforts for accuracy but:</p>
+            <ul class="text-[10px] space-y-4">
+                <li class="flex items-start gap-3"><i class="fas fa-minus text-[#c5a059] mt-1"></i> <span>Info may
+                        change without notice.</span></li>
+                <li class="flex items-start gap-3"><i class="fas fa-minus text-[#c5a059] mt-1"></i> <span>No warranties
+                        for completeness.</span></li>
+                <li class="flex items-start gap-3"><i class="fas fa-minus text-[#c5a059] mt-1"></i> <span>Not intended
+                        as technical advice.</span></li>
+            </ul>
+        </div>
+
+        <!-- Cookies & IP -->
+        <div class="grid grid-cols-1 gap-6 reveal-up">
+            <div class="p-6 border border-gray-100 rounded-3xl">
+                <h2 class="text-sm font-black uppercase text-brand-dark-green mb-2">Cookie Policy</h2>
+                <p class="text-[10px] text-gray-500 leading-relaxed">We use cookies to improve performance. You can
+                    disable them in your browser settings anytime.</p>
+            </div>
+            <div class="p-6 border border-gray-100 rounded-3xl">
+                <h2 class="text-sm font-black uppercase text-brand-dark-green mb-2">Intellectual Property</h2>
+                <p class="text-[10px] text-gray-500 leading-relaxed">All text, images, and logos are properties of NAPL.
+                    Unauthorized use is prohibited.</p>
+            </div>
+        </div>
+
+        <!-- Governing Law -->
+        <div class="text-center reveal-up pt-8 border-t border-gray-100">
+            <h2 class="text-sm font-black uppercase text-brand-dark-green mb-2">Governing Law</h2>
+            <p class="text-[10px] text-gray-400 italic">Governed by the laws of India. Disputes subject to exclusive
+                jurisdiction of Indian courts.</p>
+        </div>
+    </section>
+
+    <section
+        class="relative z-10 overflow-hidden bg-[#6a9b5f] text-white py-12 px-6 text-center -mb-16 w-[90%] mx-auto rounded-lg shadow-xl mt-12">
+        <div class="absolute inset-0 z-0 bg-right bg-no-repeat bg-cover opacity-30 mix-blend-multiply"
+            style="background-image: url('imgs/civil7-1.jpg');">
+        </div>
+        <div class="relative z-2">
+            <p class="text-xs font-semibold tracking-wider uppercase">ONE PLATFORM FOR ALL REQUIREMENTS</p>
+            <h2 class="text-2xl font-extrabold tracking-tight uppercase my-3">Which products are you looking for?</h2>
+            <a href="products.html"
+                class="inline-flex items-center px-6 py-3 text-sm font-bold text-[#6a9b5f] uppercase bg-white rounded-md shadow-lg">
+                Explore Now
+                <i class="ml-3 fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- 13. FULL Responsive Footer -->
+    <footer class="relative z-0 pt-32 text-gray-300 bg-gradient-to-t from-[#0b180d] via-[#172c19] to-[#1a471c] w-full">
+        <!-- Top curve shape -->
+        <div class="absolute top-0 left-0 w-full h-24 bg-transparent">
+            <div class="w-full h-full bg-[#1a471c] rounded-t-[50%] transform scale-x-150"></div>
+        </div>
+
+        <div class="container px-6 mx-auto relative z-10">
+            <!-- Grid for mobile: stack everything -->
+            <div class="grid grid-cols-1 gap-8">
+
+                <!-- Column 1: Logo & Address -->
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="../imgs/Screenshot 2025-11-04 120806.png" alt="Nitha Aerospace Logo"
+                            class="h-16 object-contain">
+                    </div>
+                    <h3 class="mb-4 text-md font-semibold text-white">Head Office & Factory</h3>
+                    <p class="text-sm leading-relaxed">Plot no. 140 SIDCO Women Industrial Estate Karuppur,
+                        Salem, Tamilnadu, India - 636 011
+                    </p>
+
+                    <h3 class="mt-4 mb-2 text-sm font-semibold text-white uppercase">Call Us On</h3>
+                    <p class="text-sm leading-relaxed"><a href="tel:+918220538534">+91 82205 38534</a></p>
+                    <p class="text-sm leading-relaxed"><a href="tel:+919578420672">+91 95784 20672</a></p>
+
+                    <h3 class="mt-4 mb-2 text-sm font-semibold text-white">Our Mailbox</h3>
+                    <p class="text-sm leading-relaxed"><a
+                            href="mailto:marketing@nithaaerospace.in">marketing@nithaaerospace.in</a></p>
+                    <p class="text-sm leading-relaxed"><a
+                            href="mailto:support@nithaaerospace.in">support@nithaaerospace.in</a></p>
+                </div>
+
+                <!-- Link Columns -->
+                <div class="grid grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="mb-6 text-md font-semibold text-white">Company</h3>
+                        <ul class="space-y-2 text-sm">
+                            <li><a href="index.html" class="transition-colors hover:text-white">Home</a></li>
+                            <li><a href="aboutus.html" class="transition-colors hover:text-white">About Us</a></li>
+                            <li><a href="fasteners.html" class="transition-colors hover:text-white">Capabilities</a>
+                            </li>
+                            <li><a href="fis.html" class="transition-colors hover:text-white">FIS</a></li>
+                            <li><a href="r&d.html" class="transition-colors hover:text-white">R&D</a></li>
+                            <li><a href="products.html" class="transition-colors hover:text-white">Products</a></li>
+                            <li><a href="contact.html" class="transition-colors hover:text-white">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="mb-6 text-md font-semibold text-white ">Capabilities</h3>
+                        <ul class="grid grid-cols-1 gap-y-1 text-sm">
+                            <li><a href="fasteners.html" class="transition-colors hover:text-white">Melting</a></li>
+                            <li><a href="fasteners.html" class="transition-colors hover:text-white">Casting</a></li>
+                            <li><a href="fasteners.html" class="transition-colors hover:text-white">Forging</a></li>
+                            <li><a href="fasteners.html" class="transition-colors hover:text-white">Precision
+                                    Machining</a></li>
+                            <li><a href="fasteners.html" class="transition-colors hover:text-white">Thread Rolling</a>
+                            </li>
+                            <li><a href="fasteners.html" class="transition-colors hover:text-white">Heat Treatment</a>
+                            </li>
+                            <li><a href="fasteners.html" class="transition-colors hover:text-white">Surface
+                                    Treatment</a></li>
+                            <li><a href="fasteners.html" class="transition-colors hover:text-white">Testing & QA</a>
+                            </li>
+                            <li><a href="fasteners.html" class="transition-colors hover:text-white">Design &
+                                    Engineering</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="mb-6 text-md font-semibold text-white">Products</h3>
+                    <ul class="grid grid-cols-2 gap-x-4 gap-y-1 text-sm">
+                        <li><a href="products.html" class="transition-colors hover:text-white">Aerospace Fasteners</a>
+                        </li>
+                        <li><a href="products.html" class="transition-colors hover:text-white">Oil & Gas Bolting</a>
+                        </li>
+                        <li><a href="products.html" class="transition-colors hover:text-white">Circlips</a></li>
+                        <li><a href="products.html" class="transition-colors hover:text-white">Defence Fasteners</a>
+                        </li>
+                        <li><a href="products.html" class="transition-colors hover:text-white">Shipbuilding
+                                Fasteners</a></li>
+                        <li><a href="products.html" class="transition-colors hover:text-white">Automotive Fasteners</a>
+                        </li>
+                        <li><a href="products.html" class="transition-colors hover:text-white">Nuclear & Energy
+                                Fasteners</a></li>
+                        <li><a href="products.html" class="transition-colors hover:text-white">Medical Fasteners</a>
+                        </li>
+                        <li><a href="products.html" class="transition-colors hover:text-white">Custom & Prototype</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Connect With Us -->
+                <div class="flex flex-col items-center text-center mb-12">
+                    <img src="../imgs/whitenitha-removebg-preview.png" alt="Nitha Logo"
+                        class="w-16 h-10 drop-shadow-md mb-4">
+                    <h3 class="text-xl font-bold text-white uppercase tracking-widest mb-6">Connect With Us</h3>
+                    <div class="flex flex-col gap-4 items-center w-full">
+                        <!-- WhatsApp -->
+                        <a href="https://wa.me/919578420672" target="_blank"
+                            class="group flex items-center gap-4 w-full max-w-[280px] px-5 py-2 rounded-full bg-white/80 border border-brand-deep-green/40 shadow-md transition-all duration-300 hover:bg-brand-medium-green">
+                            <div
+                                class="w-10 h-10 rounded-full bg-white/50 border border-brand-deep-green/50 flex items-center justify-center transition-all duration-300 group-hover:bg-brand-deep-green group-hover:border-brand-deep-green">
+                                <i class="fab fa-whatsapp text-brand-deep-green text-lg group-hover:text-white"></i>
+                            </div>
+                            <span
+                                class="font-extrabold text-lg tracking-wide text-brand-deep-green group-hover:text-white">WhatsApp</span>
+                        </a>
+                        <!-- Email -->
+                        <a href="mailto:marketing@nithaaerospace.in"
+                            class="group flex items-center gap-4 w-full max-w-[280px] px-5 py-2 rounded-full bg-white/80 border border-brand-deep-green/40 shadow-md transition-all duration-300 hover:bg-brand-medium-green">
+                            <div
+                                class="w-10 h-10 rounded-full bg-white/60 border border-brand-deep-green/50 flex items-center justify-center transition-all duration-300 group-hover:bg-brand-deep-green group-hover:border-brand-deep-green">
+                                <i class="fas fa-envelope text-brand-deep-green text-base group-hover:text-white"></i>
+                            </div>
+                            <span
+                                class="font-extrabold text-lg tracking-wide text-brand-deep-green group-hover:text-white">Email
+                                Us</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright Bar -->
+        <div class="relative z-20 py-4 text-gray-400" style="background: #0b180d; border-top: 1px solid white;">
+            <div class="container flex flex-col items-center justify-between px-6 mx-auto text-sm md:flex-row">
+                <p class="mb-4 md:mb-0 text-center md:text-left">
+                    www.nithaaerospace.in © Copyright and Private Limited.<br>All Rights Reserved |
+                    <a href="Terms.html" id="terms" class="hover:text-white">Terms of Access</a>
+                </p>
+
+                <!-- Social Media Icons -->
+                <div class="flex space-x-4 text-base mt-4 md:mt-0">
+                    <a href="#"
+                        class="w-9 h-9 flex items-center justify-center rounded-full text-white hover:bg-blue-600 transition-all duration-200">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#"
+                        class="w-9 h-9 flex items-center justify-center rounded-full text-white hover:bg-black transition-all duration-200">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a href="#"
+                        class="w-9 h-9 flex items-center justify-center rounded-full text-white hover:bg-[radial-gradient(circle_at_30%_107%,#fdf497_0%,#fdf497_5%,#fd5949_45%,#d6249f_60%,#285AEB_90%)] transition-all duration-200">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#"
+                        class="w-9 h-9 flex items-center justify-center rounded-full text-white hover:bg-blue-700 transition-all duration-200">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // --- Mobile Menu Toggle ---
+            const menuBtn = document.getElementById('menu-btn');
+            const closeMenuBtn = document.getElementById('close-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuOverlay = document.getElementById('menu-overlay');
+
+            function toggleMenu() {
+                if (mobileMenu) mobileMenu.classList.toggle('open');
+                if (menuOverlay) {
+                    if (mobileMenu && mobileMenu.classList.contains('open')) {
+                        menuOverlay.classList.remove('hidden');
+                        document.body.style.overflow = 'hidden';
+                    } else {
+                        menuOverlay.classList.add('hidden');
+                        document.body.style.overflow = '';
+                    }
+                }
+            }
+
+            if (menuBtn) menuBtn.addEventListener('click', toggleMenu);
+            if (closeMenuBtn) closeMenuBtn.addEventListener('click', toggleMenu);
+            if (menuOverlay) menuOverlay.addEventListener('click', toggleMenu);
+
+            // --- Mobile Dropdown Logic ---
+            const dropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
+            dropdownToggles.forEach(toggle => {
+                toggle.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const content = this.nextElementSibling;
+                    const icon = this.querySelector('i.fa-chevron-down');
+                    if (content) content.classList.toggle('hidden');
+                    if (icon) icon.classList.toggle('rotate-180');
+                });
+            });
+
+            // Reveal animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.reveal-up').forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

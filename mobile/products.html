@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Viewport for responsive design, disabling user zoom to prevent issues on layout -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Nitha Aerospace - Products</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="shortcut icon" href="../imgs/nithaa-.png">
+
+    <script type="text/javascript">
+        function redirectDesktop() {
+            // Check browser window width
+            if (window.innerWidth > 768) {
+                window.location.href = "../products.html"; // Change this to your actual desktop filename
+            }
+        }
+
+        // 1. Check immediately when the page loads
+        redirectDesktop();
+
+        // 2. Check whenever the window is resized
+        window.addEventListener('resize', redirectDesktop);
+    </script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-partner-btn': '#6A8A61',
+                        'form-dark-green': '#6b8d4e',
+                        'brand-dark-green': '#3B5833',
+                        'brand-medium-green': '#6A8A61',
+                        'brand-deep-green': '#334C2D',
+                        'brand-light-mint': '#DDE6DA',
+                        'text-theme-green': '#6b8d4e',
+                        'bg-dark-green': '#5b7941',
+                        'bg-light-green': '#718d58',
+                    },
+                    fontFamily: {
+                        'mona': ['Mona Sans', 'sans-serif'],
+                    }
+                }
+            }
+        };
+    </script>
+
+    <style>
+        /* Mobile Specific Global Styles */
+        body {
+            font-family: 'Monteserat', sans-serif;
+            font-stretch: 75%;
+            font-weight: 400;
+            overflow-x: hidden;
+            /* Prevent horizontal scroll */
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Mona Sans', sans-serif;
+            font-stretch: 75%;
+            font-weight: 800;
+        }
+
+        /* Mobile Menu Transition */
+        #mobile-menu {
+            transition: transform 0.3s ease-in-out;
+            transform: translateX(-100%);
+        }
+
+        #mobile-menu.open {
+            transform: translateX(0);
+        }
+
+        /* Hexagon Clip for Mobile */
+        .hexagon-clip {
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        }
+
+        /* Custom Form Styles */
+        .form-container-bg {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .custom-input {
+            background-color: rgba(255, 255, 255, 0.9);
+            /* More opaque for mobile legibility */
+            color: #333;
+            border: 1px solid #ccc;
+        }
+
+        /* Text Shadows for better readability on images */
+        .text-shadow {
+            text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Helper to prevent scrollbar on horizontal scroll sections */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
+        }
+
+        /* Ensure marquee speed matches desktop for branding consistency */
+        .animate-marquee {
+            animation: marquee 30s linear infinite;
+        }
+
+        /* New: Lifecycle Scroll Support */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Unique Card Hover for Mobile */
+        .cert-card {
+            transition: transform 0.3s ease;
+            background: #eff7f1;
+        }
+
+        .cert-card:active {
+            transform: scale(0.95);
+        }
+    </style>
+    <style>
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .animate-scroll {
+            animation: scroll 20s linear infinite;
+            width: max-content;
+        }
+    </style>
+
+</head>
+
+<body class="bg-white text-gray-800">
+
+    <!-- 1. Mobile Header & Navigation -->
+    <header class="fixed w-full top-0 z-50 bg-white shadow-md">
+        <!-- Top Bar (Simplified for Mobile) -->
+        <div class="bg-brand-dark-green text-white text-[10px] py-2 px-4 flex justify-between items-center">
+            <a href="tel:+919578420672" class="inline-flex items-center">
+                <i class="fas fa-phone-alt mr-2"></i> +91 95784 20672
+            </a>
+            <a href="mailto:marketing@nithaeroespace.in" class="inline-flex items-center">
+                <i class="fas fa-envelope mr-2"></i> marketing@nithaaeroespace.in
+            </a>
+        </div>
+
+        <!-- Main Nav Bar -->
+        <div class="flex justify-between items-center px-4 py-3">
+            <!-- Logo -->
+            <a href="#" class="flex items-center">
+                <img src="../imgs/Screenshot 2025-11-04 120806.png" alt="NITHA Logo" class="h-12 object-contain">
+            </a>
+
+            <!-- Hamburger Button -->
+            <button id="menu-btn" class="text-brand-dark-green focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Slide-out Mobile Menu -->
+        <div id="mobile-menu"
+            class="fixed inset-0 bg-white z-50 flex flex-col h-screen w-[80%] shadow-2xl border-r border-gray-200">
+            <div class="p-4 flex justify-between items-center border-b">
+                <span class="font-bold text-lg text-brand-dark-green">Menu</span>
+                <button id="close-menu-btn" class="text-gray-500 text-2xl">&times;</button>
+            </div>
+            <div class="flex flex-col p-4 space-y-4 overflow-y-auto flex-grow">
+                <a href="index.html" class="text-lg font-semibold text-gray-800 border-b pb-2">Home</a>
+                <a href="aboutus.html" class="text-lg font-semibold text-gray-800 border-b pb-2">About Us</a>
+
+                <div class="flex flex-col">
+                    <p
+                        class="mobile-dropdown-toggle text-lg border-b font-semibold text-gray-800 pb-2 flex justify-between items-center">
+                        Capabilities <i class="fas fa-chevron-down text-sm transition-transform"></i>
+                    </p>
+                    <div class="mobile-dropdown-content hidden flex flex-col pl-4 border-l ml-2 space-y-2 mb-4">
+                        <a href="fasteners.html" class="text-base text-gray-600">Melting</a>
+                        <a href="fasteners.html" class="text-base text-gray-600">Casting</a>
+                        <a href="fasteners.html" class="text-base text-gray-600">Forging</a>
+                        <a href="fasteners.html" class="text-base text-gray-600">Precision Machining</a>
+                        <a href="fasteners.html" class="text-base text-gray-600">Thread Rolling</a>
+                        <a href="fasteners.html" class="text-base text-gray-600">Heat Treatment</a>
+                        <a href="fasteners.html" class="text-base text-gray-600">Surface Treatment</a>
+                        <a href="fasteners.html" class="text-base text-gray-600">Testing & QA</a>
+                        <a href="fasteners.html" class="text-base text-gray-600">Engineering</a>
+                    </div>
+                </div>
+
+                <div class="flex flex-col">
+                    <p
+                        class="mobile-dropdown-toggle text-lg border-b font-semibold text-gray-800 pb-2 flex justify-between items-center">
+                        Products <i class="fas fa-chevron-down text-sm transition-transform"></i>
+                    </p>
+                    <div class="mobile-dropdown-content hidden flex flex-col pl-4 border-l ml-2 space-y-2 mb-4">
+                        <p class="text-sm font-bold text-brand-dark-green mt-2 uppercase">Critical Industries</p>
+                        <a href="products.html" class="text-sm text-gray-600">Aerospace Fasteners</a>
+                        <a href="products.html" class="text-sm text-gray-600">Defence Fasteners</a>
+                        <a href="products.html" class="text-sm text-gray-600">Nuclear / Energy Fasteners</a>
+                        <a href="products.html" class="text-sm text-gray-600">Oil & Gas Bolting Solutions</a>
+                        <a href="products.html" class="text-sm text-gray-600">Medical & Precision Fasteners</a>
+                        <a href="products.html" class="text-sm text-gray-600">Railway & Metro Fasteners</a>
+                        <a href="products.html" class="text-sm text-gray-600">Power Plant & Thermal Fasteners</a>
+                        <a href="products.html" class="text-sm text-gray-600">Renewable Energy Fasteners</a>
+                        <a href="products.html" class="text-sm text-gray-600">Shipbuilding & Marine Fasteners</a>
+
+                        <p class="text-sm font-bold text-brand-dark-green mt-4 uppercase">Industrial & General</p>
+                        <a href="products.html" class="text-sm text-gray-600">Automotive Fasteners</a>
+                        <a href="products.html" class="text-sm text-gray-600">Construction Fasteners</a>
+                        <a href="products.html" class="text-sm text-gray-600">Electrical & Electronics</a>
+                        <a href="products.html" class="text-sm text-gray-600">Heavy Engineering</a>
+                        <a href="products.html" class="text-sm text-gray-600">Chemical & Process</a>
+                        <a href="products.html" class="text-sm text-gray-600">Mining & Earthmoving</a>
+                        <a href="products.html" class="text-sm text-gray-600">HVAC & Building Services</a>
+                        <a href="products.html" class="text-sm text-gray-600">Agricultural Fasteners</a>
+                        <a href="products.html" class="text-sm text-gray-600">General Engineering</a>
+
+                        <p class="text-sm font-bold text-brand-dark-green mt-4 uppercase">Specialised</p>
+                        <a href="products.html" class="text-sm text-gray-600">Custom & Prototype</a>
+                    </div>
+                </div>
+
+                <a href="fis.html" class="text-lg font-semibold text-gray-800 border-b pb-2">FIS</a>
+                <a href="r&d.html" class="text-lg font-semibold text-gray-800 border-b pb-2">R&D</a>
+                <a href="contact.html" class="text-lg font-semibold text-gray-800 border-b pb-2">Contact Us</a>
+                <a href="Terms.html" class="text-lg font-semibold text-gray-800 border-b pb-2">Terms</a>
+                <a href="careers.html" class="text-lg font-semibold text-gray-800 border-b pb-2">Careers</a>
+
+                <a href="careers.html"
+                    class="bg-brand-topbar-green text-white text-center py-3 rounded-md font-bold mt-4 shadow-md active:scale-95 transition-all">
+                    Become A Partner
+                </a>
+            </div>
+        </div>
+        <!-- Overlay for menu -->
+        <div id="menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden"></div>
+    </header>
+
+    <!-- 2. Mobile Hero Section -->
+    <section class="relative w-full h-[60vh] mt-[88px] flex items-center justify-center text-white overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('../imgs/product header.png')">
+        </div>
+        <div class="absolute inset-0 bg-black/40"></div>
+        <div class="relative z-10 text-center px-4">
+            <h1 class="text-4xl font-extrabold uppercase mb-2 tracking-tight">Our Products</h1>
+            <p class="text-sm font-medium opacity-90">One Platform For All Your Fastener Requirements</p>
+        </div>
+    </section>
+
+    <!-- 3. Search & Main Content Area -->
+    <section id="products-section" class="bg-white py-12 px-4">
+        <!-- Search Bar -->
+        <div class="mb-8">
+            <div class="relative max-w-md mx-auto">
+                <input id="productSearch" type="text" placeholder="Search products (e.g. Bolt, Nut)..."
+                    onkeyup="handleSearch(this.value)"
+                    class="w-full pl-4 pr-10 py-3 rounded-full border border-gray-300 focus:ring-2 focus:ring-brand-medium-green focus:outline-none text-sm transition-all shadow-sm">
+                <i class="fas fa-search absolute right-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+            </div>
+            <div id="breadcrumbContainer"
+                class="mt-4 flex flex-wrap gap-2 text-[10px] font-bold uppercase tracking-wider text-gray-400 justify-center">
+            </div>
+        </div>
+
+        <div class="container mx-auto">
+            <!-- Grid Title -->
+            <div id="gridHeader" class="text-center mb-10">
+                <h2 id="gridTitle" class="text-2xl font-black text-gray-900 uppercase tracking-tight">Industry Groups
+                </h2>
+                <div class="w-12 h-1 bg-brand-medium-green mx-auto mt-2 rounded-full"></div>
+            </div>
+
+            <!-- Main Display Grid -->
+            <div id="materialHeader" class="hidden mb-8"></div>
+            <div id="productGrid" class="grid grid-cols-2 gap-4">
+                <!-- Dynamically filled -->
+            </div>
+
+            <!-- Product Detail Section -->
+            <div id="productDetailSection" class="hidden mt-8">
+                <div id="productDetailTop" class="space-y-8"></div>
+                <div id="productDetailBelow" class="mt-12"></div>
+            </div>
+
+            <!-- Reset Button -->
+            <div class="text-center mt-12">
+                <button onclick="resetAll()"
+                    class="inline-flex items-center text-xs font-bold text-gray-400 uppercase hover:text-brand-medium-green transition-colors">
+                    <i class="fas fa-sync-alt mr-2"></i> Reset Filters
+                </button>
+            </div>
+        </div>
+    </section>
+    <section
+        class="relative z-10 overflow-hidden bg-[#6a9b5f] text-white py-12 px-6 text-center -mb-16 w-[90%] mx-auto rounded-lg shadow-xl mt-12">
+        <div class="absolute inset-0 z-0 bg-right bg-no-repeat bg-cover opacity-30 mix-blend-multiply"
+            style="background-image: url('imgs/civil7-1.jpg');">
+        </div>
+        <div class="relative z-2">
+            <p class="text-xs font-semibold tracking-wider uppercase">ONE PLATFORM FOR ALL REQUIREMENTS</p>
+            <h2 class="text-2xl font-extrabold tracking-tight uppercase my-3">Which products are you looking for?</h2>
+            <a href="products.html"
+                class="inline-flex items-center px-6 py-3 text-sm font-bold text-[#6a9b5f] uppercase bg-white rounded-md shadow-lg">
+                Explore Now
+                <i class="ml-3 fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- 13. FULL Responsive Footer -->
+    <footer class="relative z-0 pt-32 text-gray-300 bg-gradient-to-t from-[#0b180d] via-[#172c19] to-[#1a471c] w-full">
+        <!-- Top curve shape -->
+        <div class="absolute top-0 left-0 w-full h-24 bg-transparent">
+            <div class="w-full h-full bg-[#1a471c] rounded-t-[50%] transform scale-x-150"></div>
+        </div>
+
+        <div class="container px-6 mx-auto relative z-10">
+            <!-- Grid for mobile: stack everything -->
+            <div class="grid grid-cols-1 gap-8">
+
+                <!-- Column 1: Logo & Address -->
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="../imgs/Screenshot 2025-11-04 120806.png" alt="Nitha Aerospace Logo"
+                            class="h-16 object-contain">
+                    </div>
+                    <h3 class="mb-4 text-md font-semibold text-white">Head Office & Factory</h3>
+                    <p class="text-sm leading-relaxed">Plot no. 140 SIDCO Women Industrial Estate Karuppur,
+                        Salem, Tamilnadu, India - 636 011
+                    </p>
+
+                    <h3 class="mt-4 mb-2 text-sm font-semibold text-white uppercase">Call Us On</h3>
+                    <p class="text-sm leading-relaxed"><a href="tel:+918220538534">+91 82205 38534</a></p>
+                    <p class="text-sm leading-relaxed"><a href="tel:+919578420672">+91 95784 20672</a></p>
+
+                    <h3 class="mt-4 mb-2 text-sm font-semibold text-white">Our Mailbox</h3>
+                    <p class="text-sm leading-relaxed"><a
+                            href="mailto:marketing@nithaaerospace.in">marketing@nithaaerospace.in</a></p>
+                    <p class="text-sm leading-relaxed"><a
+                            href="mailto:support@nithaaerospace.in">support@nithaaerospace.in</a></p>
+                </div>
+
+                <!-- Link Columns -->
+                <div class="grid grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="mb-6 text-md font-semibold text-white">Company</h3>
+                        <ul class="space-y-2 text-sm">
+                            <li><a href="index.html" class="transition-colors hover:text-white">Home</a></li>
+                            <li><a href="aboutus.html" class="transition-colors hover:text-white">About Us</a></li>
+                            <li><a href="fasteners.html" class="transition-colors hover:text-white">Capabilities</a>
+                            </li>
+                            <li><a href="fis.html" class="transition-colors hover:text-white">FIS</a></li>
+                            <li><a href="r&d.html" class="transition-colors hover:text-white">R&D</a></li>
+                            <li><a href="products.html" class="transition-colors hover:text-white">Products</a></li>
+                            <li><a href="contact.html" class="transition-colors hover:text-white">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="mb-6 text-md font-semibold text-white ">Capabilities</h3>
+                        <ul class="grid grid-cols-1 gap-y-1 text-sm">
+                            <li><a href="fasteners.html" class="transition-colors hover:text-white">Melting</a></li>
+                            <li><a href="fasteners.html" class="transition-colors hover:text-white">Casting</a></li>
+                            <li><a href="fasteners.html" class="transition-colors hover:text-white">Forging</a></li>
+                            <li><a href="fasteners.html" class="transition-colors hover:text-white">Precision
+                                    Machining</a></li>
+                            <li><a href="fasteners.html" class="transition-colors hover:text-white">Thread Rolling</a>
+                            </li>
+                            <li><a href="fasteners.html" class="transition-colors hover:text-white">Heat Treatment</a>
+                            </li>
+                            <li><a href="fasteners.html" class="transition-colors hover:text-white">Surface
+                                    Treatment</a></li>
+                            <li><a href="fasteners.html" class="transition-colors hover:text-white">Testing & QA</a>
+                            </li>
+                            <li><a href="fasteners.html" class="transition-colors hover:text-white">Design &
+                                    Engineering</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="mb-6 text-md font-semibold text-white">Products</h3>
+                    <ul class="grid grid-cols-2 gap-x-4 gap-y-1 text-sm">
+                        <li><a href="products.html" class="transition-colors hover:text-white">Aerospace Fasteners</a>
+                        </li>
+                        <li><a href="products.html" class="transition-colors hover:text-white">Oil & Gas Bolting</a>
+                        </li>
+                        <li><a href="products.html" class="transition-colors hover:text-white">Circlips</a></li>
+                        <li><a href="products.html" class="transition-colors hover:text-white">Defence Fasteners</a>
+                        </li>
+                        <li><a href="products.html" class="transition-colors hover:text-white">Shipbuilding
+                                Fasteners</a></li>
+                        <li><a href="products.html" class="transition-colors hover:text-white">Automotive Fasteners</a>
+                        </li>
+                        <li><a href="products.html" class="transition-colors hover:text-white">Nuclear & Energy
+                                Fasteners</a></li>
+                        <li><a href="products.html" class="transition-colors hover:text-white">Medical Fasteners</a>
+                        </li>
+                        <li><a href="products.html" class="transition-colors hover:text-white">Custom & Prototype</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Connect With Us -->
+                <div class="flex flex-col items-center text-center mb-12">
+                    <img src="../imgs/whitenitha-removebg-preview.png" alt="Nitha Logo"
+                        class="w-16 h-10 drop-shadow-md mb-4">
+                    <h3 class="text-xl font-bold text-white uppercase tracking-widest mb-6">Connect With Us</h3>
+                    <div class="flex flex-col gap-4 items-center w-full">
+                        <!-- WhatsApp -->
+                        <a href="https://wa.me/919578420672" target="_blank"
+                            class="group flex items-center gap-4 w-full max-w-[280px] px-5 py-2 rounded-full bg-white/80 border border-brand-deep-green/40 shadow-md transition-all duration-300 hover:bg-brand-medium-green">
+                            <div
+                                class="w-10 h-10 rounded-full bg-white/50 border border-brand-deep-green/50 flex items-center justify-center transition-all duration-300 group-hover:bg-brand-deep-green group-hover:border-brand-deep-green">
+                                <i class="fab fa-whatsapp text-brand-deep-green text-lg group-hover:text-white"></i>
+                            </div>
+                            <span
+                                class="font-extrabold text-lg tracking-wide text-brand-deep-green group-hover:text-white">WhatsApp</span>
+                        </a>
+                        <!-- Email -->
+                        <a href="mailto:marketing@nithaaerospace.in"
+                            class="group flex items-center gap-4 w-full max-w-[280px] px-5 py-2 rounded-full bg-white/80 border border-brand-deep-green/40 shadow-md transition-all duration-300 hover:bg-brand-medium-green">
+                            <div
+                                class="w-10 h-10 rounded-full bg-white/60 border border-brand-deep-green/50 flex items-center justify-center transition-all duration-300 group-hover:bg-brand-deep-green group-hover:border-brand-deep-green">
+                                <i class="fas fa-envelope text-brand-deep-green text-base group-hover:text-white"></i>
+                            </div>
+                            <span
+                                class="font-extrabold text-lg tracking-wide text-brand-deep-green group-hover:text-white">Email
+                                Us</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright Bar -->
+        <div class="relative z-20 py-4 text-gray-400" style="background: #0b180d; border-top: 1px solid white;">
+            <div class="container flex flex-col items-center justify-between px-6 mx-auto text-sm md:flex-row">
+                <p class="mb-4 md:mb-0 text-center md:text-left">
+                    www.nithaaerospace.in © Copyright and Private Limited.<br>All Rights Reserved |
+                    <a href="Terms.html" id="terms" class="hover:text-white">Terms of Access</a>
+                </p>
+
+                <!-- Social Media Icons -->
+                <div class="flex space-x-4 text-base mt-4 md:mt-0">
+                    <a href="#"
+                        class="w-9 h-9 flex items-center justify-center rounded-full text-white hover:bg-blue-600 transition-all duration-200">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#"
+                        class="w-9 h-9 flex items-center justify-center rounded-full text-white hover:bg-black transition-all duration-200">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a href="#"
+                        class="w-9 h-9 flex items-center justify-center rounded-full text-white hover:bg-[radial-gradient(circle_at_30%_107%,#fdf497_0%,#fdf497_5%,#fd5949_45%,#d6249f_60%,#285AEB_90%)] transition-all duration-200">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#"
+                        class="w-9 h-9 flex items-center justify-center rounded-full text-white hover:bg-blue-700 transition-all duration-200">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        /* =========================================================
+           DATA (Mirroring Desktop)
+        ========================================================= */
+        const groupImages = {
+            "Critical Industries": "../imgs/products/critical-industries.png",
+            "Industrial & General Engineering": "../imgs/products/industrial-engineering.png",
+            "Specialised Engineering": "../imgs/products/specialized-engg.jpg",
+        };
+
+        const productImages = {
+            "Aerospace Fasteners": "../imgs/products/aerospace-fasteners.webp",
+            "Defence Fasteners": "../imgs/products/defence-fasteners.webp",
+            "Medical & Precision Fasteners": "../imgs/products/medical-fasteners.jpg",
+            "Nuclear & Energy Fasteners": "../imgs/products/nuclear&energy-fasteners.avif",
+            "Oil & Gas Bolting Solutions": "../imgs/products/oil&gasbolting-fasteners.png",
+            "Power Plant & Thermal Fasteners": "../imgs/products/powerplant.jpg",
+            "Railway & Metro Fasteners": "../imgs/products/railway-metro.png",
+            "Renewable Energy Fasteners": "../imgs/products/renewable-energy.webp",
+            "Shipbuilding & Marine Fasteners": "../imgs/products/shipbuilding.jpg",
+            "Specialised Engineering": "../imgs/products/specialized-engg.jpg",
+
+            "Automotive Fasteners": "../imgs/products/automotive-fasteners.webp",
+            "Construction & Infrastructure Fasteners": "../imgs/products/construction-fasteners.png",
+            "Electrical & Electronics Fasteners": "../imgs/products/electrical-fasteners.jpg",
+            "Heavy Engineering & Industrial Fasteners": "../imgs/products/heavyengineering.jpg",
+            "Chemical & Process Industry Fasteners": "../imgs/products/chemical-fasteners.jpg",
+            "Mining & Earthmoving Fasteners": "../imgs/products/mining-fasteners.jpeg",
+            "HVAC & Building Services Fasteners": "../imgs/products/hvac-building.jpeg",
+            "Agricultural & Off-Highway Fasteners": "../imgs/products/agricultural.jpg",
+            "General Engineering Fasteners": "../imgs/products/general-fasteners.webp",
+
+            "Custom & Prototype Fasteners": "../imgs/products/custom-prototype.jpg"
+        };
+
+        const industryGroups = [
+            {
+                groupName: "Critical Industries",
+                products: [
+                    { name: "Aerospace Fasteners", sub: ["Hex Bolts", "Flange Bolts", "NAS Bolts", "AN Bolts", "Hi-Lok Fasteners", "Structural Rivets"] },
+                    { name: "Defence Fasteners", sub: ["Taper Pins", "Dowel Pins", "Clevis Pins", "Military Grade Studs"] },
+                    { name: "Nuclear & Energy Fasteners", sub: ["B7 / B16 Studs", "Pressure Vessel Bolting", "Reactor Grade Fasteners"] },
+                    { name: "Oil & Gas Bolting Solutions", sub: ["API Stud Bolts", "Heavy Hex Nuts", "Xylan Coated Bolts"] },
+                    { name: "Medical & Precision Fasteners", sub: ["Micro Screws", "Titanium Screws", "Dental Screws"] },
+                    { name: "Railway & Metro Fasteners", sub: ["Track Bolts", "Fish Bolts", "Elastic Rail Clips"] },
+                    { name: "Power Plant & Thermal Fasteners", sub: ["High Temp Studs", "Boiler Fasteners"] },
+                    { name: "Renewable Energy Fasteners", sub: ["Wind Tower Bolts", "Solar Mounting Fasteners"] },
+                    { name: "Shipbuilding & Marine Fasteners", sub: ["Marine Grade Bolts", "Monel Fasteners", "Deck Nails"] }
+                ]
+            },
+            {
+                groupName: "Industrial & General Engineering",
+                products: [
+                    { name: "Automotive Fasteners", sub: ["Wheel Bolts", "Engine Bolts", "Suspension Bolting"] },
+                    { name: "Construction & Infrastructure Fasteners", sub: ["Anchor Bolts", "Structural Bolts", "Foundation Bolts"] },
+                    { name: "Electrical & Electronics Fasteners", sub: ["Brass Screws", "Insulated Bushes", "PCB Standoffs"] },
+                    { name: "Heavy Engineering & Industrial Fasteners", sub: ["Structural Bolting", "Machinery Foundation Bolts"] },
+                    { name: "Chemical & Process Industry Fasteners", sub: ["PTFE Coated Fasteners", "Corrosion Resistant Bolts"] },
+                    { name: "Mining & Earthmoving Fasteners", sub: ["Heavy Duty Studs", "Wear Resistant Fasteners"] },
+                    { name: "HVAC & Building Services Fasteners", sub: ["Duct Fasteners", "Vibration Resistant Bolts"] },
+                    { name: "Agricultural & Off-Highway Fasteners", sub: ["Tractor Bolts", "High Tensile Fasteners"] },
+                    { name: "General Engineering Fasteners", sub: ["Hex Bolts", "Nuts", "Washers", "Studs"] }
+                ]
+            },
+            {
+                groupName: "Specialised Engineering",
+                products: [
+                    { name: "Custom & Prototype Fasteners", sub: ["CNC Machined Parts", "Special Thread Forms", "Prototype Fasteners"] }
+                ]
+            }
+        ];
+
+        const productData = [
+            { name: "Bolt", image: "../imgs/bolt.png", sub: [{ name: "Anchor Bolt", image: "../imgs/bolt.png" }, { name: "Cup Square Bolt", image: "../imgs/bolt.png" }, { name: "Eye Bolt", image: "../imgs/bolt.png" }, { name: "Flange Bolt", image: "../imgs/bolt.png" }, { name: "Hex Bolt", image: "../imgs/bolt.png" }, { name: "High Tensile Bolt", image: "../imgs/bolt.png" }, { name: "U Bolt", image: "../imgs/bolt.png" }] },
+            { name: "Bush", image: "../imgs/bush.png", sub: [{ name: "External Threaded Bush", image: "../imgs/bush.png" }, { name: "Flanged Bush", image: "../imgs/bush.png" }, { name: "Plain Bush", image: "../imgs/bush.png" }, { name: "Round Euro", image: "../imgs/bush.png" }] },
+            { name: "Circlips", image: "../imgs/circlip.png", sub: [{ name: "External Circlips", image: "../imgs/circlip.png" }, { name: "Internal Circlips", image: "../imgs/circlip.png" }, { name: "E-Clips", image: "../imgs/circlip.png" }] },
+            { name: "Clamp", image: "../imgs/clamp.png", sub: [{ name: "Cable Clamp", image: "../imgs/clamp.png" }, { name: "U Clamp", image: "../imgs/clamp.png" }] },
+            { name: "Nut", image: "../imgs/nnuts.png", sub: [{ name: "Cage Nut", image: "../imgs/nnuts.png" }, { name: "Dome Nut", image: "../imgs/nnuts.png" }, { name: "Flange Nut", image: "../imgs/nnuts.png" }, { name: "Hexagon Nut", image: "../imgs/nnuts.png" }] },
+            { name: "Pin & Keys", image: "../imgs/pins.png", sub: [{ name: "Clevis Pin", image: "../imgs/pins.png" }, { name: "Cotter Pin", image: "../imgs/pins.png" }, { name: "Dowel Pin", image: "../imgs/pins.png" }] },
+            { name: "Rivet", image: "../imgs/rivert.png", sub: [{ name: "Blind Rivet", image: "../imgs/rivert.png" }, { name: "Solid Rivet", image: "../imgs/rivert.png" }] },
+            { name: "Screw", image: "../imgs/screw.png", sub: [{ name: "Button Head Screw", image: "../imgs/screw.png" }, { name: "Grub Screw", image: "../imgs/screw.png" }, { name: "Pan Head Screw", image: "../imgs/screw.png" }] },
+            { name: "Washer", image: "../imgs/washer.png", sub: [{ name: "Plain Washer", image: "../imgs/washer.png" }, { name: "Spring Washer", image: "../imgs/washer.png" }, { name: "Wave Washer", image: "../imgs/washer.png" }] },
+            { name: "Wires", image: "../imgs/wire.png", sub: [{ name: "Aluminium Wires", image: "../imgs/wire.png" }, { name: "Copper Wires", image: "../imgs/wire.png" }] },
+        ];
+
+        /* =========================================================
+           STATE & LOGIC
+        ========================================================= */
+        let view = "home";
+        let searchTerm = "";
+        let selectedGroup = null;
+        let selectedMaterial = null;
+        let selectedSub = null;
+
+        const IG = industryGroups;
+        const MD = productData;
+
+        function refresh() {
+            updateBreadcrumbs();
+            renderContent();
+        }
+
+        function updateBreadcrumbs() {
+            const bc = document.getElementById("breadcrumbContainer");
+            let html = `<span onclick="resetAll()" class="hover:text-brand-medium-green cursor-pointer">Products</span>`;
+            if (selectedGroup) html += `<span class="mx-1 text-gray-300">/</span><span onclick="openGroup('${selectedGroup}')" class="hover:text-brand-medium-green cursor-pointer">${selectedGroup}</span>`;
+            if (selectedMaterial) html += `<span class="mx-1 text-gray-300">/</span><span onclick="openMaterial('${selectedMaterial}')" class="hover:text-brand-medium-green cursor-pointer">${selectedMaterial}</span>`;
+            if (selectedSub) html += `<span class="mx-1 text-gray-300">/</span><span class="text-brand-medium-green">${selectedSub}</span>`;
+            bc.innerHTML = html;
+        }
+
+        function renderContent() {
+            const grid = document.getElementById("productGrid");
+            const title = document.getElementById("gridTitle");
+            const detail = document.getElementById("productDetailSection");
+            const materialHeader = document.getElementById("materialHeader");
+
+            grid.innerHTML = "";
+            grid.classList.remove("hidden");
+            detail.classList.add("hidden");
+            materialHeader.classList.add("hidden");
+
+            if (view === "home") {
+                title.innerText = "Industry Groups";
+                grid.className = "grid grid-cols-1 gap-6";
+                grid.innerHTML = IG.map(g => `
+                    <div onclick="openGroup('${g.groupName}')" class="relative rounded-xl overflow-hidden h-40 shadow-lg active:scale-95 transition-transform">
+                        <img src="${groupImages[g.groupName] || '../imgs/products/industrial-engineering.png'}" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black/50 flex items-center justify-center p-4">
+                            <h3 class="text-white font-extrabold text-center uppercase tracking-wider">${g.groupName}</h3>
+                        </div>
+                    </div>
+                `).join("") + `
+                    <div class="mt-8 mb-4 col-span-full text-center">
+                        <h2 class="text-2xl font-black text-gray-900 uppercase tracking-tight">Browse by Material</h2>
+                        <div class="w-12 h-1 bg-brand-medium-green mx-auto mt-2 rounded-full"></div>
+                    </div>
+                    <div class="grid grid-cols-3 gap-4 col-span-full">
+                        ${MD.map(m => `
+                            <div onclick="openMaterial('${m.name}')" class="flex flex-col items-center group active:scale-90 transition-transform">
+                                <div class="w-20 h-20 hexagon-clip bg-brand-medium-green flex items-center justify-center">
+                                    <div class="w-[76px] h-[76px] hexagon-clip bg-white flex items-center justify-center overflow-hidden">
+                                        <img src="${m.image}" alt="${m.name}" class="w-full h-full object-cover">
+                                    </div>
+                                </div>
+                                <span class="text-[10px] font-bold uppercase mt-2 text-center text-gray-700">${m.name}</span>
+                            </div>
+                        `).join("")}
+                    </div>
+                `;
+            } else if (view === "group") {
+                const group = IG.find(g => g.groupName === selectedGroup);
+                title.innerText = group.groupName;
+                grid.className = "grid grid-cols-1 gap-4";
+                grid.innerHTML = group.products.map(p => `
+                    <div onclick="openDetail('${p.name}')" class="flex items-center gap-4 bg-gray-50 p-4 rounded-lg border border-gray-100 active:bg-gray-200 transition-colors">
+                        <div class="w-16 h-16 bg-white rounded-md flex items-center justify-center flex-shrink-0">
+                            <img src="${productImages[p.name] || '../imgs/products/aerospace-fasteners.webp'}" class="w-12 h-12 object-cover rounded">
+                        </div>
+                        <div class="flex-grow">
+                            <h4 class="text-sm font-bold text-gray-800 uppercase">${p.name}</h4>
+                            <p class="text-[10px] text-gray-400 uppercase">${p.sub ? p.sub.length : 0} Types</p>
+                        </div>
+                        <i class="fas fa-chevron-right text-gray-300 text-xs"></i>
+                    </div>
+                `).join("");
+            } else if (view === "material") {
+                const material = MD.find(m => m.name === selectedMaterial);
+                title.innerText = material.name;
+                grid.className = "grid grid-cols-2 gap-4";
+                grid.innerHTML = material.sub.map(s => `
+                    <div onclick="openDetail('${s.name}')" class="bg-white border border-gray-100 rounded-xl p-3 flex flex-col items-center shadow-sm active:shadow-md active:scale-95 transition-all">
+                        <div class="w-full aspect-square bg-gray-50 rounded-lg flex items-center justify-center mb-2 overflow-hidden">
+                            <img src="${s.image}" alt="${s.name}" class="w-full h-full object-contain p-2">
+                        </div>
+                        <h4 class="text-[10px] font-bold text-gray-800 text-center uppercase leading-tight">${s.name}</h4>
+                    </div>
+                `).join("");
+            } else if (view === "detail") {
+                grid.classList.add("hidden");
+                detail.classList.remove("hidden");
+                renderDetail();
+            } else if (view === "search") {
+                title.innerText = "Results for: " + searchTerm;
+                grid.className = "grid grid-cols-2 gap-4";
+
+                let results = [];
+                MD.forEach(m => {
+                    if (m.name.toLowerCase().includes(searchTerm)) results.push({ name: m.name, image: m.image, type: 'material' });
+                    m.sub.forEach(s => {
+                        if (s.name.toLowerCase().includes(searchTerm)) results.push({ name: s.name, image: s.image, type: 'sub' });
+                    });
+                });
+
+                if (results.length === 0) {
+                    grid.innerHTML = `<div class="col-span-2 py-20 text-center text-gray-400 uppercase font-bold text-sm">No matches found</div>`;
+                } else {
+                    grid.innerHTML = results.map(r => `
+                        <div onclick="${r.type === 'material' ? `openMaterial('${r.name}')` : `openDetail('${r.name}')`}" class="bg-white border rounded-lg p-3 active:scale-95 transition-transform flex flex-col items-center">
+                            <img src="${r.image}" class="w-16 h-16 object-contain mb-2">
+                            <span class="text-[10px] font-bold text-center uppercase text-gray-700">${r.name}</span>
+                        </div>
+                    `).join("");
+                }
+            }
+        }
+
+        function renderDetail() {
+            const top = document.getElementById("productDetailTop");
+            const below = document.getElementById("productDetailBelow");
+
+            let currentItem = null;
+            MD.forEach(m => m.sub.forEach(s => { if (s.name === selectedSub) currentItem = s; }));
+            if (!currentItem) { // Check if it's one of the industry products
+                currentItem = { name: selectedSub, image: productImages[selectedSub] || '../imgs/products/aerospace-fasteners.webp' };
+            }
+
+            top.innerHTML = `
+                <div class="bg-gray-50 rounded-2xl p-6 flex flex-col items-center shadow-inner">
+                    <img src="${currentItem.image}" class="max-h-60 object-contain drop-shadow-lg">
+                </div>
+                <div class="px-2">
+                    <h1 class="text-2xl font-black uppercase text-gray-900 border-l-4 border-brand-medium-green pl-4">${currentItem.name}</h1>
+                    <p class="text-xs text-gray-500 mt-4 leading-relaxed">Precision-engineered solutions for advanced aerospace, automotive, and industrial applications. Our ${currentItem.name} is manufactured to meet the highest global quality standards.</p>
+                </div>
+                <div class="grid grid-cols-2 gap-4 mt-8">
+                    <div class="bg-white border rounded-xl p-4 shadow-sm">
+                        <span class="block text-[8px] font-bold text-gray-400 uppercase tracking-widest mb-1">Standard</span>
+                        <span class="text-xs font-bold text-gray-800 uppercase">AS9100 / DIN</span>
+                    </div>
+                    <div class="bg-white border rounded-xl p-4 shadow-sm">
+                        <span class="block text-[8px] font-bold text-gray-400 uppercase tracking-widest mb-1">Material</span>
+                        <span class="text-xs font-bold text-gray-800 uppercase">Titanium / Alloy</span>
+                    </div>
+                </div>
+                <a href="tel:+919578420672" class="mt-8 w-full bg-brand-medium-green text-white text-center py-4 rounded-xl font-black uppercase tracking-widest shadow-lg active:scale-95 transition-all flex items-center justify-center gap-3">
+                    <i class="fas fa-phone-alt"></i> Enquire Now
+                </a>
+            `;
+
+            below.innerHTML = `
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-sm font-black uppercase mb-4 text-gray-900 flex items-center gap-2">
+                            <div class="w-1 h-4 bg-brand-medium-green"></div> Specifications
+                        </h3>
+                        <div class="space-y-2">
+                            <div class="flex justify-between border-b pb-2 text-[10px]"><span class="text-gray-400">Tolerance</span><span class="font-bold">ISO 2768</span></div>
+                            <div class="flex justify-between border-b pb-2 text-[10px]"><span class="text-gray-400">Diameter</span><span class="font-bold">M1.6 - M100</span></div>
+                            <div class="flex justify-between border-b pb-2 text-[10px]"><span class="text-gray-400">Finish</span><span class="font-bold">Zinc / Blackened</span></div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-black uppercase mb-4 text-gray-900 flex items-center gap-2">
+                            <div class="w-1 h-4 bg-brand-medium-green"></div> Downloads
+                        </h3>
+                        <div class="grid grid-cols-1 gap-3">
+                            <div class="flex items-center gap-4 border p-3 rounded-lg active:bg-gray-50">
+                                <i class="fas fa-file-pdf text-red-500 text-xl"></i>
+                                <span class="text-[10px] font-bold uppercase">Technical Datasheet</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        /* Controllers */
+        function openGroup(g) { view = "group"; selectedGroup = g; selectedMaterial = selectedSub = null; refresh(); window.scrollTo({ top: 0, behavior: 'smooth' }); }
+        function openMaterial(m) { view = "material"; selectedMaterial = m; selectedGroup = selectedSub = null; refresh(); window.scrollTo({ top: 0, behavior: 'smooth' }); }
+        function openDetail(s) { view = "detail"; selectedSub = s; refresh(); window.scrollTo({ top: 0, behavior: 'smooth' }); }
+        function handleSearch(val) { searchTerm = val.toLowerCase().trim(); if (!searchTerm) { resetAll(); return; } view = "search"; selectedGroup = selectedMaterial = selectedSub = null; refresh(); }
+        function resetAll() { view = "home"; searchTerm = ""; selectedGroup = selectedMaterial = selectedSub = null; const input = document.getElementById("productSearch"); if (input) input.value = ""; refresh(); }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            refresh();
+            // --- Mobile Menu Toggle ---
+            const menuBtn = document.getElementById('menu-btn');
+            const closeMenuBtn = document.getElementById('close-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuOverlay = document.getElementById('menu-overlay');
+
+            function toggleMenu() {
+                if (mobileMenu) mobileMenu.classList.toggle('open');
+                if (menuOverlay) {
+                    if (mobileMenu && mobileMenu.classList.contains('open')) {
+                        menuOverlay.classList.remove('hidden');
+                        document.body.style.overflow = 'hidden';
+                    } else {
+                        menuOverlay.classList.add('hidden');
+                        document.body.style.overflow = '';
+                    }
+                }
+            }
+
+            if (menuBtn) menuBtn.addEventListener('click', toggleMenu);
+            if (closeMenuBtn) closeMenuBtn.addEventListener('click', toggleMenu);
+            if (menuOverlay) menuOverlay.addEventListener('click', toggleMenu);
+
+            // --- Mobile Dropdown Logic ---
+            const dropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
+            dropdownToggles.forEach(toggle => {
+                toggle.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const content = this.nextElementSibling;
+                    const icon = this.querySelector('i.fa-chevron-down');
+                    if (content) content.classList.toggle('hidden');
+                    if (icon) icon.classList.toggle('rotate-180');
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
